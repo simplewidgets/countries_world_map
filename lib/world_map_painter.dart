@@ -2,11 +2,11 @@ import 'package:countries_world_map/countries_colors.dart';
 import 'package:flutter/material.dart';
 
 class WorldMapPainter extends CustomPainter {
-  final Color backgroundColor;
+  final Color defaultCountryColor;
   final CountryColors countryColors;
 
   const WorldMapPainter(
-      {required this.backgroundColor, required this.countryColors});
+      {required this.defaultCountryColor, required this.countryColors});
 
   @override
   void paint(Canvas canvas, Size size) {
@@ -83,7 +83,7 @@ class WorldMapPainter extends CustomPainter {
     path0.close();
 
     Paint paint0fill = Paint()..style = PaintingStyle.fill;
-    paint0fill.color = countryColors.aF ?? backgroundColor;
+    paint0fill.color = countryColors.aF ?? defaultCountryColor;
     canvas.drawPath(path0, paint0fill);
 
     Path path1 = Path();
@@ -156,7 +156,7 @@ class WorldMapPainter extends CustomPainter {
     path1.close();
 
     Paint paint1fill = Paint()..style = PaintingStyle.fill;
-    paint1fill.color = countryColors.aO ?? backgroundColor;
+    paint1fill.color = countryColors.aO ?? defaultCountryColor;
     canvas.drawPath(path1, paint1fill);
 
     Path path2 = Path();
@@ -172,7 +172,7 @@ class WorldMapPainter extends CustomPainter {
     path2.close();
 
     Paint paint2fill = Paint()..style = PaintingStyle.fill;
-    paint2fill.color = countryColors.aO ?? backgroundColor;
+    paint2fill.color = countryColors.aO ?? defaultCountryColor;
     canvas.drawPath(path2, paint2fill);
 
     Path path3 = Path();
@@ -201,7 +201,7 @@ class WorldMapPainter extends CustomPainter {
     path3.close();
 
     Paint paint3fill = Paint()..style = PaintingStyle.fill;
-    paint3fill.color = countryColors.aL ?? backgroundColor;
+    paint3fill.color = countryColors.aL ?? defaultCountryColor;
     canvas.drawPath(path3, paint3fill);
 
     Path path4 = Path();
@@ -230,7 +230,7 @@ class WorldMapPainter extends CustomPainter {
     path4.close();
 
     Paint paint4fill = Paint()..style = PaintingStyle.fill;
-    paint4fill.color = countryColors.aE ?? backgroundColor;
+    paint4fill.color = countryColors.aE ?? defaultCountryColor;
     canvas.drawPath(path4, paint4fill);
 
     Path path5 = Path();
@@ -248,7 +248,7 @@ class WorldMapPainter extends CustomPainter {
     path5.close();
 
     Paint paint5fill = Paint()..style = PaintingStyle.fill;
-    paint5fill.color = countryColors.aR ?? backgroundColor;
+    paint5fill.color = countryColors.aR ?? defaultCountryColor;
     canvas.drawPath(path5, paint5fill);
 
     Path path6 = Path();
@@ -365,7 +365,7 @@ class WorldMapPainter extends CustomPainter {
     path6.close();
 
     Paint paint6fill = Paint()..style = PaintingStyle.fill;
-    paint6fill.color = countryColors.aR ?? backgroundColor;
+    paint6fill.color = countryColors.aR ?? defaultCountryColor;
     canvas.drawPath(path6, paint6fill);
 
     Path path7 = Path();
@@ -392,7 +392,7 @@ class WorldMapPainter extends CustomPainter {
     path7.close();
 
     Paint paint7fill = Paint()..style = PaintingStyle.fill;
-    paint7fill.color = countryColors.aM ?? backgroundColor;
+    paint7fill.color = countryColors.aM ?? defaultCountryColor;
     canvas.drawPath(path7, paint7fill);
 
     Path path8 = Path();
@@ -416,7 +416,7 @@ class WorldMapPainter extends CustomPainter {
     path8.close();
 
     Paint paint8fill = Paint()..style = PaintingStyle.fill;
-    paint8fill.color = countryColors.aU ?? backgroundColor;
+    paint8fill.color = countryColors.aU ?? defaultCountryColor;
     canvas.drawPath(path8, paint8fill);
 
     Path path9 = Path();
@@ -647,7 +647,7 @@ class WorldMapPainter extends CustomPainter {
     path9.close();
 
     Paint paint9fill = Paint()..style = PaintingStyle.fill;
-    paint9fill.color = countryColors.aU ?? backgroundColor;
+    paint9fill.color = countryColors.aU ?? defaultCountryColor;
     canvas.drawPath(path9, paint9fill);
 
     Path path10 = Path();
@@ -691,7 +691,7 @@ class WorldMapPainter extends CustomPainter {
     path10.close();
 
     Paint paint10fill = Paint()..style = PaintingStyle.fill;
-    paint10fill.color = countryColors.aT ?? backgroundColor;
+    paint10fill.color = countryColors.aT ?? defaultCountryColor;
     canvas.drawPath(path10, paint10fill);
 
     Path path11 = Path();
@@ -707,7 +707,7 @@ class WorldMapPainter extends CustomPainter {
     path11.close();
 
     Paint paint11fill = Paint()..style = PaintingStyle.fill;
-    paint11fill.color = countryColors.aZ ?? backgroundColor;
+    paint11fill.color = countryColors.aZ ?? defaultCountryColor;
     canvas.drawPath(path11, paint11fill);
 
     Path path12 = Path();
@@ -749,7 +749,7 @@ class WorldMapPainter extends CustomPainter {
     path12.close();
 
     Paint paint12fill = Paint()..style = PaintingStyle.fill;
-    paint12fill.color = countryColors.aZ ?? backgroundColor;
+    paint12fill.color = countryColors.aZ ?? defaultCountryColor;
     canvas.drawPath(path12, paint12fill);
 
     Path path13 = Path();
@@ -772,7 +772,7 @@ class WorldMapPainter extends CustomPainter {
     path13.close();
 
     Paint paint13fill = Paint()..style = PaintingStyle.fill;
-    paint13fill.color = countryColors.bI ?? backgroundColor;
+    paint13fill.color = countryColors.bI ?? defaultCountryColor;
     canvas.drawPath(path13, paint13fill);
 
     Path path14 = Path();
@@ -794,7 +794,7 @@ class WorldMapPainter extends CustomPainter {
     path14.close();
 
     Paint paint14fill = Paint()..style = PaintingStyle.fill;
-    paint14fill.color = countryColors.bE ?? backgroundColor;
+    paint14fill.color = countryColors.bE ?? defaultCountryColor;
     canvas.drawPath(path14, paint14fill);
 
     Path path15 = Path();
@@ -826,7 +826,7 @@ class WorldMapPainter extends CustomPainter {
     path15.close();
 
     Paint paint15fill = Paint()..style = PaintingStyle.fill;
-    paint15fill.color = countryColors.bJ ?? backgroundColor;
+    paint15fill.color = countryColors.bJ ?? defaultCountryColor;
     canvas.drawPath(path15, paint15fill);
 
     Path path16 = Path();
@@ -872,7 +872,7 @@ class WorldMapPainter extends CustomPainter {
     path16.close();
 
     Paint paint16fill = Paint()..style = PaintingStyle.fill;
-    paint16fill.color = countryColors.bF ?? backgroundColor;
+    paint16fill.color = countryColors.bF ?? defaultCountryColor;
     canvas.drawPath(path16, paint16fill);
 
     Path path17 = Path();
@@ -915,7 +915,7 @@ class WorldMapPainter extends CustomPainter {
     path17.close();
 
     Paint paint17fill = Paint()..style = PaintingStyle.fill;
-    paint17fill.color = countryColors.bD ?? backgroundColor;
+    paint17fill.color = countryColors.bD ?? defaultCountryColor;
     canvas.drawPath(path17, paint17fill);
 
     Path path18 = Path();
@@ -950,7 +950,7 @@ class WorldMapPainter extends CustomPainter {
     path18.close();
 
     Paint paint18fill = Paint()..style = PaintingStyle.fill;
-    paint18fill.color = countryColors.bG ?? backgroundColor;
+    paint18fill.color = countryColors.bG ?? defaultCountryColor;
     canvas.drawPath(path18, paint18fill);
 
     Path path19 = Path();
@@ -979,7 +979,7 @@ class WorldMapPainter extends CustomPainter {
     path19.close();
 
     Paint paint19fill = Paint()..style = PaintingStyle.fill;
-    paint19fill.color = countryColors.bA ?? backgroundColor;
+    paint19fill.color = countryColors.bA ?? defaultCountryColor;
     canvas.drawPath(path19, paint19fill);
 
     Path path20 = Path();
@@ -1030,7 +1030,7 @@ class WorldMapPainter extends CustomPainter {
     path20.close();
 
     Paint paint20fill = Paint()..style = PaintingStyle.fill;
-    paint20fill.color = countryColors.bY ?? backgroundColor;
+    paint20fill.color = countryColors.bY ?? defaultCountryColor;
     canvas.drawPath(path20, paint20fill);
 
     Path path21 = Path();
@@ -1057,7 +1057,7 @@ class WorldMapPainter extends CustomPainter {
     path21.close();
 
     Paint paint21fill = Paint()..style = PaintingStyle.fill;
-    paint21fill.color = countryColors.bZ ?? backgroundColor;
+    paint21fill.color = countryColors.bZ ?? defaultCountryColor;
     canvas.drawPath(path21, paint21fill);
 
     Path path22 = Path();
@@ -1124,7 +1124,7 @@ class WorldMapPainter extends CustomPainter {
     path22.close();
 
     Paint paint22fill = Paint()..style = PaintingStyle.fill;
-    paint22fill.color = countryColors.bO ?? backgroundColor;
+    paint22fill.color = countryColors.bO ?? defaultCountryColor;
     canvas.drawPath(path22, paint22fill);
 
     Path path23 = Path();
@@ -1334,7 +1334,7 @@ class WorldMapPainter extends CustomPainter {
     path23.close();
 
     Paint paint23fill = Paint()..style = PaintingStyle.fill;
-    paint23fill.color = countryColors.bR ?? backgroundColor;
+    paint23fill.color = countryColors.bR ?? defaultCountryColor;
     canvas.drawPath(path23, paint23fill);
 
     Path path24 = Path();
@@ -1349,7 +1349,7 @@ class WorldMapPainter extends CustomPainter {
     path24.close();
 
     Paint paint24fill = Paint()..style = PaintingStyle.fill;
-    paint24fill.color = countryColors.bN ?? backgroundColor;
+    paint24fill.color = countryColors.bN ?? defaultCountryColor;
     canvas.drawPath(path24, paint24fill);
 
     Path path25 = Path();
@@ -1369,7 +1369,7 @@ class WorldMapPainter extends CustomPainter {
     path25.close();
 
     Paint paint25fill = Paint()..style = PaintingStyle.fill;
-    paint25fill.color = countryColors.bT ?? backgroundColor;
+    paint25fill.color = countryColors.bT ?? defaultCountryColor;
     canvas.drawPath(path25, paint25fill);
 
     Path path26 = Path();
@@ -1416,7 +1416,7 @@ class WorldMapPainter extends CustomPainter {
     path26.close();
 
     Paint paint26fill = Paint()..style = PaintingStyle.fill;
-    paint26fill.color = countryColors.bW ?? backgroundColor;
+    paint26fill.color = countryColors.bW ?? defaultCountryColor;
     canvas.drawPath(path26, paint26fill);
 
     Path path27 = Path();
@@ -1486,7 +1486,7 @@ class WorldMapPainter extends CustomPainter {
     path27.close();
 
     Paint paint27fill = Paint()..style = PaintingStyle.fill;
-    paint27fill.color = countryColors.cF ?? backgroundColor;
+    paint27fill.color = countryColors.cF ?? defaultCountryColor;
     canvas.drawPath(path27, paint27fill);
 
     Path path28 = Path();
@@ -1502,7 +1502,7 @@ class WorldMapPainter extends CustomPainter {
     path28.close();
 
     Paint paint28fill = Paint()..style = PaintingStyle.fill;
-    paint28fill.color = countryColors.cA ?? backgroundColor;
+    paint28fill.color = countryColors.cA ?? defaultCountryColor;
     canvas.drawPath(path28, paint28fill);
 
     Path path29 = Path();
@@ -1517,7 +1517,7 @@ class WorldMapPainter extends CustomPainter {
     path29.close();
 
     Paint paint29fill = Paint()..style = PaintingStyle.fill;
-    paint29fill.color = countryColors.cA ?? backgroundColor;
+    paint29fill.color = countryColors.cA ?? defaultCountryColor;
     canvas.drawPath(path29, paint29fill);
 
     Path path30 = Path();
@@ -1540,7 +1540,7 @@ class WorldMapPainter extends CustomPainter {
     path30.close();
 
     Paint paint30fill = Paint()..style = PaintingStyle.fill;
-    paint30fill.color = countryColors.cA ?? backgroundColor;
+    paint30fill.color = countryColors.cA ?? defaultCountryColor;
     canvas.drawPath(path30, paint30fill);
 
     Path path31 = Path();
@@ -1580,7 +1580,7 @@ class WorldMapPainter extends CustomPainter {
     path31.close();
 
     Paint paint31fill = Paint()..style = PaintingStyle.fill;
-    paint31fill.color = countryColors.cA ?? backgroundColor;
+    paint31fill.color = countryColors.cA ?? defaultCountryColor;
     canvas.drawPath(path31, paint31fill);
 
     Path path32 = Path();
@@ -1598,7 +1598,7 @@ class WorldMapPainter extends CustomPainter {
     path32.close();
 
     Paint paint32fill = Paint()..style = PaintingStyle.fill;
-    paint32fill.color = countryColors.cA ?? backgroundColor;
+    paint32fill.color = countryColors.cA ?? defaultCountryColor;
     canvas.drawPath(path32, paint32fill);
 
     Path path33 = Path();
@@ -1613,7 +1613,7 @@ class WorldMapPainter extends CustomPainter {
     path33.close();
 
     Paint paint33fill = Paint()..style = PaintingStyle.fill;
-    paint33fill.color = countryColors.cA ?? backgroundColor;
+    paint33fill.color = countryColors.cA ?? defaultCountryColor;
     canvas.drawPath(path33, paint33fill);
 
     Path path34 = Path();
@@ -1627,7 +1627,7 @@ class WorldMapPainter extends CustomPainter {
     path34.close();
 
     Paint paint34fill = Paint()..style = PaintingStyle.fill;
-    paint34fill.color = countryColors.cA ?? backgroundColor;
+    paint34fill.color = countryColors.cA ?? defaultCountryColor;
     canvas.drawPath(path34, paint34fill);
 
     Path path35 = Path();
@@ -1654,7 +1654,7 @@ class WorldMapPainter extends CustomPainter {
     path35.close();
 
     Paint paint35fill = Paint()..style = PaintingStyle.fill;
-    paint35fill.color = countryColors.cA ?? backgroundColor;
+    paint35fill.color = countryColors.cA ?? defaultCountryColor;
     canvas.drawPath(path35, paint35fill);
 
     Path path36 = Path();
@@ -1670,7 +1670,7 @@ class WorldMapPainter extends CustomPainter {
     path36.close();
 
     Paint paint36fill = Paint()..style = PaintingStyle.fill;
-    paint36fill.color = countryColors.cA ?? backgroundColor;
+    paint36fill.color = countryColors.cA ?? defaultCountryColor;
     canvas.drawPath(path36, paint36fill);
 
     Path path37 = Path();
@@ -1688,7 +1688,7 @@ class WorldMapPainter extends CustomPainter {
     path37.close();
 
     Paint paint37fill = Paint()..style = PaintingStyle.fill;
-    paint37fill.color = countryColors.cA ?? backgroundColor;
+    paint37fill.color = countryColors.cA ?? defaultCountryColor;
     canvas.drawPath(path37, paint37fill);
 
     Path path38 = Path();
@@ -1984,7 +1984,7 @@ class WorldMapPainter extends CustomPainter {
     path38.close();
 
     Paint paint38fill = Paint()..style = PaintingStyle.fill;
-    paint38fill.color = countryColors.cA ?? backgroundColor;
+    paint38fill.color = countryColors.cA ?? defaultCountryColor;
     canvas.drawPath(path38, paint38fill);
 
     Path path39 = Path();
@@ -2036,7 +2036,7 @@ class WorldMapPainter extends CustomPainter {
     path39.close();
 
     Paint paint39fill = Paint()..style = PaintingStyle.fill;
-    paint39fill.color = countryColors.cA ?? backgroundColor;
+    paint39fill.color = countryColors.cA ?? defaultCountryColor;
     canvas.drawPath(path39, paint39fill);
 
     Path path40 = Path();
@@ -2049,7 +2049,7 @@ class WorldMapPainter extends CustomPainter {
     path40.close();
 
     Paint paint40fill = Paint()..style = PaintingStyle.fill;
-    paint40fill.color = countryColors.cA ?? backgroundColor;
+    paint40fill.color = countryColors.cA ?? defaultCountryColor;
     canvas.drawPath(path40, paint40fill);
 
     Path path41 = Path();
@@ -2067,7 +2067,7 @@ class WorldMapPainter extends CustomPainter {
     path41.close();
 
     Paint paint41fill = Paint()..style = PaintingStyle.fill;
-    paint41fill.color = countryColors.cA ?? backgroundColor;
+    paint41fill.color = countryColors.cA ?? defaultCountryColor;
     canvas.drawPath(path41, paint41fill);
 
     Path path42 = Path();
@@ -2147,7 +2147,7 @@ class WorldMapPainter extends CustomPainter {
     path42.close();
 
     Paint paint42fill = Paint()..style = PaintingStyle.fill;
-    paint42fill.color = countryColors.cA ?? backgroundColor;
+    paint42fill.color = countryColors.cA ?? defaultCountryColor;
     canvas.drawPath(path42, paint42fill);
 
     Path path43 = Path();
@@ -2169,7 +2169,7 @@ class WorldMapPainter extends CustomPainter {
     path43.close();
 
     Paint paint43fill = Paint()..style = PaintingStyle.fill;
-    paint43fill.color = countryColors.cA ?? backgroundColor;
+    paint43fill.color = countryColors.cA ?? defaultCountryColor;
     canvas.drawPath(path43, paint43fill);
 
     Path path44 = Path();
@@ -2187,7 +2187,7 @@ class WorldMapPainter extends CustomPainter {
     path44.close();
 
     Paint paint44fill = Paint()..style = PaintingStyle.fill;
-    paint44fill.color = countryColors.cA ?? backgroundColor;
+    paint44fill.color = countryColors.cA ?? defaultCountryColor;
     canvas.drawPath(path44, paint44fill);
 
     Path path45 = Path();
@@ -2211,7 +2211,7 @@ class WorldMapPainter extends CustomPainter {
     path45.close();
 
     Paint paint45fill = Paint()..style = PaintingStyle.fill;
-    paint45fill.color = countryColors.cA ?? backgroundColor;
+    paint45fill.color = countryColors.cA ?? defaultCountryColor;
     canvas.drawPath(path45, paint45fill);
 
     Path path46 = Path();
@@ -2226,7 +2226,7 @@ class WorldMapPainter extends CustomPainter {
     path46.close();
 
     Paint paint46fill = Paint()..style = PaintingStyle.fill;
-    paint46fill.color = countryColors.cA ?? backgroundColor;
+    paint46fill.color = countryColors.cA ?? defaultCountryColor;
     canvas.drawPath(path46, paint46fill);
 
     Path path47 = Path();
@@ -2246,7 +2246,7 @@ class WorldMapPainter extends CustomPainter {
     path47.close();
 
     Paint paint47fill = Paint()..style = PaintingStyle.fill;
-    paint47fill.color = countryColors.cA ?? backgroundColor;
+    paint47fill.color = countryColors.cA ?? defaultCountryColor;
     canvas.drawPath(path47, paint47fill);
 
     Path path48 = Path();
@@ -2275,7 +2275,7 @@ class WorldMapPainter extends CustomPainter {
     path48.close();
 
     Paint paint48fill = Paint()..style = PaintingStyle.fill;
-    paint48fill.color = countryColors.cA ?? backgroundColor;
+    paint48fill.color = countryColors.cA ?? defaultCountryColor;
     canvas.drawPath(path48, paint48fill);
 
     Path path49 = Path();
@@ -2310,7 +2310,7 @@ class WorldMapPainter extends CustomPainter {
     path49.close();
 
     Paint paint49fill = Paint()..style = PaintingStyle.fill;
-    paint49fill.color = countryColors.cA ?? backgroundColor;
+    paint49fill.color = countryColors.cA ?? defaultCountryColor;
     canvas.drawPath(path49, paint49fill);
 
     Path path50 = Path();
@@ -2328,7 +2328,7 @@ class WorldMapPainter extends CustomPainter {
     path50.close();
 
     Paint paint50fill = Paint()..style = PaintingStyle.fill;
-    paint50fill.color = countryColors.cA ?? backgroundColor;
+    paint50fill.color = countryColors.cA ?? defaultCountryColor;
     canvas.drawPath(path50, paint50fill);
 
     Path path51 = Path();
@@ -2342,7 +2342,7 @@ class WorldMapPainter extends CustomPainter {
     path51.close();
 
     Paint paint51fill = Paint()..style = PaintingStyle.fill;
-    paint51fill.color = countryColors.cA ?? backgroundColor;
+    paint51fill.color = countryColors.cA ?? defaultCountryColor;
     canvas.drawPath(path51, paint51fill);
 
     Path path52 = Path();
@@ -2356,7 +2356,7 @@ class WorldMapPainter extends CustomPainter {
     path52.close();
 
     Paint paint52fill = Paint()..style = PaintingStyle.fill;
-    paint52fill.color = countryColors.cA ?? backgroundColor;
+    paint52fill.color = countryColors.cA ?? defaultCountryColor;
     canvas.drawPath(path52, paint52fill);
 
     Path path53 = Path();
@@ -2370,7 +2370,7 @@ class WorldMapPainter extends CustomPainter {
     path53.close();
 
     Paint paint53fill = Paint()..style = PaintingStyle.fill;
-    paint53fill.color = countryColors.cA ?? backgroundColor;
+    paint53fill.color = countryColors.cA ?? defaultCountryColor;
     canvas.drawPath(path53, paint53fill);
 
     Path path54 = Path();
@@ -2386,7 +2386,7 @@ class WorldMapPainter extends CustomPainter {
     path54.close();
 
     Paint paint54fill = Paint()..style = PaintingStyle.fill;
-    paint54fill.color = countryColors.cA ?? backgroundColor;
+    paint54fill.color = countryColors.cA ?? defaultCountryColor;
     canvas.drawPath(path54, paint54fill);
 
     Path path55 = Path();
@@ -2404,7 +2404,7 @@ class WorldMapPainter extends CustomPainter {
     path55.close();
 
     Paint paint55fill = Paint()..style = PaintingStyle.fill;
-    paint55fill.color = countryColors.cA ?? backgroundColor;
+    paint55fill.color = countryColors.cA ?? defaultCountryColor;
     canvas.drawPath(path55, paint55fill);
 
     Path path56 = Path();
@@ -2432,7 +2432,7 @@ class WorldMapPainter extends CustomPainter {
     path56.close();
 
     Paint paint56fill = Paint()..style = PaintingStyle.fill;
-    paint56fill.color = countryColors.cA ?? backgroundColor;
+    paint56fill.color = countryColors.cA ?? defaultCountryColor;
     canvas.drawPath(path56, paint56fill);
 
     Path path57 = Path();
@@ -2504,7 +2504,7 @@ class WorldMapPainter extends CustomPainter {
     path57.close();
 
     Paint paint57fill = Paint()..style = PaintingStyle.fill;
-    paint57fill.color = countryColors.cA ?? backgroundColor;
+    paint57fill.color = countryColors.cA ?? defaultCountryColor;
     canvas.drawPath(path57, paint57fill);
 
     Path path58 = Path();
@@ -2535,7 +2535,7 @@ class WorldMapPainter extends CustomPainter {
     path58.close();
 
     Paint paint58fill = Paint()..style = PaintingStyle.fill;
-    paint58fill.color = countryColors.cH ?? backgroundColor;
+    paint58fill.color = countryColors.cH ?? defaultCountryColor;
     canvas.drawPath(path58, paint58fill);
 
     Path path59 = Path();
@@ -2552,7 +2552,7 @@ class WorldMapPainter extends CustomPainter {
     path59.close();
 
     Paint paint59fill = Paint()..style = PaintingStyle.fill;
-    paint59fill.color = countryColors.cN ?? backgroundColor;
+    paint59fill.color = countryColors.cN ?? defaultCountryColor;
     canvas.drawPath(path59, paint59fill);
 
     Path path60 = Path();
@@ -2789,7 +2789,7 @@ class WorldMapPainter extends CustomPainter {
     path60.close();
 
     Paint paint60fill = Paint()..style = PaintingStyle.fill;
-    paint60fill.color = countryColors.cN ?? backgroundColor;
+    paint60fill.color = countryColors.cN ?? defaultCountryColor;
     canvas.drawPath(path60, paint60fill);
 
     Path path61 = Path();
@@ -2842,7 +2842,7 @@ class WorldMapPainter extends CustomPainter {
     path61.close();
 
     Paint paint61fill = Paint()..style = PaintingStyle.fill;
-    paint61fill.color = countryColors.cI ?? backgroundColor;
+    paint61fill.color = countryColors.cI ?? defaultCountryColor;
     canvas.drawPath(path61, paint61fill);
 
     Path path62 = Path();
@@ -2910,7 +2910,7 @@ class WorldMapPainter extends CustomPainter {
     path62.close();
 
     Paint paint62fill = Paint()..style = PaintingStyle.fill;
-    paint62fill.color = countryColors.cM ?? backgroundColor;
+    paint62fill.color = countryColors.cM ?? defaultCountryColor;
     canvas.drawPath(path62, paint62fill);
 
     Path path63 = Path();
@@ -3042,7 +3042,7 @@ class WorldMapPainter extends CustomPainter {
     path63.close();
 
     Paint paint63fill = Paint()..style = PaintingStyle.fill;
-    paint63fill.color = countryColors.cD ?? backgroundColor;
+    paint63fill.color = countryColors.cD ?? defaultCountryColor;
     canvas.drawPath(path63, paint63fill);
 
     Path path64 = Path();
@@ -3098,7 +3098,7 @@ class WorldMapPainter extends CustomPainter {
     path64.close();
 
     Paint paint64fill = Paint()..style = PaintingStyle.fill;
-    paint64fill.color = countryColors.cG ?? backgroundColor;
+    paint64fill.color = countryColors.cG ?? defaultCountryColor;
     canvas.drawPath(path64, paint64fill);
 
     Path path65 = Path();
@@ -3205,7 +3205,7 @@ class WorldMapPainter extends CustomPainter {
     path65.close();
 
     Paint paint65fill = Paint()..style = PaintingStyle.fill;
-    paint65fill.color = countryColors.cO ?? backgroundColor;
+    paint65fill.color = countryColors.cO ?? defaultCountryColor;
     canvas.drawPath(path65, paint65fill);
 
     Path path66 = Path();
@@ -3248,7 +3248,7 @@ class WorldMapPainter extends CustomPainter {
     path66.close();
 
     Paint paint66fill = Paint()..style = PaintingStyle.fill;
-    paint66fill.color = countryColors.cR ?? backgroundColor;
+    paint66fill.color = countryColors.cR ?? defaultCountryColor;
     canvas.drawPath(path66, paint66fill);
 
     Path path67 = Path();
@@ -3297,7 +3297,7 @@ class WorldMapPainter extends CustomPainter {
     path67.close();
 
     Paint paint67fill = Paint()..style = PaintingStyle.fill;
-    paint67fill.color = countryColors.cU ?? backgroundColor;
+    paint67fill.color = countryColors.cU ?? defaultCountryColor;
     canvas.drawPath(path67, paint67fill);
 
     Path path68 = Path();
@@ -3339,7 +3339,7 @@ class WorldMapPainter extends CustomPainter {
     path68.close();
 
     Paint paint68fill = Paint()..style = PaintingStyle.fill;
-    paint68fill.color = countryColors.cZ ?? backgroundColor;
+    paint68fill.color = countryColors.cZ ?? defaultCountryColor;
     canvas.drawPath(path68, paint68fill);
 
     Path path69 = Path();
@@ -3404,7 +3404,7 @@ class WorldMapPainter extends CustomPainter {
     path69.close();
 
     Paint paint69fill = Paint()..style = PaintingStyle.fill;
-    paint69fill.color = countryColors.dE ?? backgroundColor;
+    paint69fill.color = countryColors.dE ?? defaultCountryColor;
     canvas.drawPath(path69, paint69fill);
 
     Path path70 = Path();
@@ -3426,7 +3426,7 @@ class WorldMapPainter extends CustomPainter {
     path70.close();
 
     Paint paint70fill = Paint()..style = PaintingStyle.fill;
-    paint70fill.color = countryColors.dJ ?? backgroundColor;
+    paint70fill.color = countryColors.dJ ?? defaultCountryColor;
     canvas.drawPath(path70, paint70fill);
 
     Path path71 = Path();
@@ -3439,7 +3439,7 @@ class WorldMapPainter extends CustomPainter {
     path71.close();
 
     Paint paint71fill = Paint()..style = PaintingStyle.fill;
-    paint71fill.color = countryColors.dK ?? backgroundColor;
+    paint71fill.color = countryColors.dK ?? defaultCountryColor;
     canvas.drawPath(path71, paint71fill);
 
     Path path72 = Path();
@@ -3464,7 +3464,7 @@ class WorldMapPainter extends CustomPainter {
     path72.close();
 
     Paint paint72fill = Paint()..style = PaintingStyle.fill;
-    paint72fill.color = countryColors.dK ?? backgroundColor;
+    paint72fill.color = countryColors.dK ?? defaultCountryColor;
     canvas.drawPath(path72, paint72fill);
 
     Path path73 = Path();
@@ -3497,7 +3497,7 @@ class WorldMapPainter extends CustomPainter {
     path73.close();
 
     Paint paint73fill = Paint()..style = PaintingStyle.fill;
-    paint73fill.color = countryColors.dO ?? backgroundColor;
+    paint73fill.color = countryColors.dO ?? defaultCountryColor;
     canvas.drawPath(path73, paint73fill);
 
     Path path74 = Path();
@@ -3566,7 +3566,7 @@ class WorldMapPainter extends CustomPainter {
     path74.close();
 
     Paint paint74fill = Paint()..style = PaintingStyle.fill;
-    paint74fill.color = countryColors.dZ ?? backgroundColor;
+    paint74fill.color = countryColors.dZ ?? defaultCountryColor;
     canvas.drawPath(path74, paint74fill);
 
     Path path75 = Path();
@@ -3606,7 +3606,7 @@ class WorldMapPainter extends CustomPainter {
     path75.close();
 
     Paint paint75fill = Paint()..style = PaintingStyle.fill;
-    paint75fill.color = countryColors.eC ?? backgroundColor;
+    paint75fill.color = countryColors.eC ?? defaultCountryColor;
     canvas.drawPath(path75, paint75fill);
 
     Path path76 = Path();
@@ -3656,7 +3656,7 @@ class WorldMapPainter extends CustomPainter {
     path76.close();
 
     Paint paint76fill = Paint()..style = PaintingStyle.fill;
-    paint76fill.color = countryColors.eG ?? backgroundColor;
+    paint76fill.color = countryColors.eG ?? defaultCountryColor;
     canvas.drawPath(path76, paint76fill);
 
     Path path77 = Path();
@@ -3691,7 +3691,7 @@ class WorldMapPainter extends CustomPainter {
     path77.close();
 
     Paint paint77fill = Paint()..style = PaintingStyle.fill;
-    paint77fill.color = countryColors.eR ?? backgroundColor;
+    paint77fill.color = countryColors.eR ?? defaultCountryColor;
     canvas.drawPath(path77, paint77fill);
 
     Path path78 = Path();
@@ -3715,7 +3715,7 @@ class WorldMapPainter extends CustomPainter {
     path78.close();
 
     Paint paint78fill = Paint()..style = PaintingStyle.fill;
-    paint78fill.color = countryColors.eE ?? backgroundColor;
+    paint78fill.color = countryColors.eE ?? defaultCountryColor;
     canvas.drawPath(path78, paint78fill);
 
     Path path79 = Path();
@@ -3782,7 +3782,7 @@ class WorldMapPainter extends CustomPainter {
     path79.close();
 
     Paint paint79fill = Paint()..style = PaintingStyle.fill;
-    paint79fill.color = countryColors.eT ?? backgroundColor;
+    paint79fill.color = countryColors.eT ?? defaultCountryColor;
     canvas.drawPath(path79, paint79fill);
 
     Path path80 = Path();
@@ -3827,7 +3827,7 @@ class WorldMapPainter extends CustomPainter {
     path80.close();
 
     Paint paint80fill = Paint()..style = PaintingStyle.fill;
-    paint80fill.color = countryColors.fI ?? backgroundColor;
+    paint80fill.color = countryColors.fI ?? defaultCountryColor;
     canvas.drawPath(path80, paint80fill);
 
     Path path81 = Path();
@@ -3865,7 +3865,7 @@ class WorldMapPainter extends CustomPainter {
     path81.close();
 
     Paint paint81fill = Paint()..style = PaintingStyle.fill;
-    paint81fill.color = countryColors.gA ?? backgroundColor;
+    paint81fill.color = countryColors.gA ?? defaultCountryColor;
     canvas.drawPath(path81, paint81fill);
 
     Path path82 = Path();
@@ -3880,7 +3880,7 @@ class WorldMapPainter extends CustomPainter {
     path82.close();
 
     Paint paint82fill = Paint()..style = PaintingStyle.fill;
-    paint82fill.color = countryColors.gB ?? backgroundColor;
+    paint82fill.color = countryColors.gB ?? defaultCountryColor;
     canvas.drawPath(path82, paint82fill);
 
     Path path83 = Path();
@@ -3933,7 +3933,7 @@ class WorldMapPainter extends CustomPainter {
     path83.close();
 
     Paint paint83fill = Paint()..style = PaintingStyle.fill;
-    paint83fill.color = countryColors.gB ?? backgroundColor;
+    paint83fill.color = countryColors.gB ?? defaultCountryColor;
     canvas.drawPath(path83, paint83fill);
 
     Path path84 = Path();
@@ -3964,7 +3964,7 @@ class WorldMapPainter extends CustomPainter {
     path84.close();
 
     Paint paint84fill = Paint()..style = PaintingStyle.fill;
-    paint84fill.color = countryColors.gE ?? backgroundColor;
+    paint84fill.color = countryColors.gE ?? defaultCountryColor;
     canvas.drawPath(path84, paint84fill);
 
     Path path85 = Path();
@@ -3996,7 +3996,7 @@ class WorldMapPainter extends CustomPainter {
     path85.close();
 
     Paint paint85fill = Paint()..style = PaintingStyle.fill;
-    paint85fill.color = countryColors.gH ?? backgroundColor;
+    paint85fill.color = countryColors.gH ?? defaultCountryColor;
     canvas.drawPath(path85, paint85fill);
 
     Path path86 = Path();
@@ -4073,7 +4073,7 @@ class WorldMapPainter extends CustomPainter {
     path86.close();
 
     Paint paint86fill = Paint()..style = PaintingStyle.fill;
-    paint86fill.color = countryColors.gN ?? backgroundColor;
+    paint86fill.color = countryColors.gN ?? defaultCountryColor;
     canvas.drawPath(path86, paint86fill);
 
     Path path87 = Path();
@@ -4096,7 +4096,7 @@ class WorldMapPainter extends CustomPainter {
     path87.close();
 
     Paint paint87fill = Paint()..style = PaintingStyle.fill;
-    paint87fill.color = countryColors.gM ?? backgroundColor;
+    paint87fill.color = countryColors.gM ?? defaultCountryColor;
     canvas.drawPath(path87, paint87fill);
 
     Path path88 = Path();
@@ -4122,7 +4122,7 @@ class WorldMapPainter extends CustomPainter {
     path88.close();
 
     Paint paint88fill = Paint()..style = PaintingStyle.fill;
-    paint88fill.color = countryColors.gW ?? backgroundColor;
+    paint88fill.color = countryColors.gW ?? defaultCountryColor;
     canvas.drawPath(path88, paint88fill);
 
     Path path89 = Path();
@@ -4136,7 +4136,7 @@ class WorldMapPainter extends CustomPainter {
     path89.close();
 
     Paint paint89fill = Paint()..style = PaintingStyle.fill;
-    paint89fill.color = countryColors.gQ ?? backgroundColor;
+    paint89fill.color = countryColors.gQ ?? defaultCountryColor;
     canvas.drawPath(path89, paint89fill);
 
     Path path90 = Path();
@@ -4154,7 +4154,7 @@ class WorldMapPainter extends CustomPainter {
     path90.close();
 
     Paint paint90fill = Paint()..style = PaintingStyle.fill;
-    paint90fill.color = countryColors.gR ?? backgroundColor;
+    paint90fill.color = countryColors.gR ?? defaultCountryColor;
     canvas.drawPath(path90, paint90fill);
 
     Path path91 = Path();
@@ -4204,7 +4204,7 @@ class WorldMapPainter extends CustomPainter {
     path91.close();
 
     Paint paint91fill = Paint()..style = PaintingStyle.fill;
-    paint91fill.color = countryColors.gR ?? backgroundColor;
+    paint91fill.color = countryColors.gR ?? defaultCountryColor;
     canvas.drawPath(path91, paint91fill);
 
     Path path92 = Path();
@@ -4343,7 +4343,7 @@ class WorldMapPainter extends CustomPainter {
     path92.close();
 
     Paint paint92fill = Paint()..style = PaintingStyle.fill;
-    paint92fill.color = countryColors.gL ?? backgroundColor;
+    paint92fill.color = countryColors.gL ?? defaultCountryColor;
     canvas.drawPath(path92, paint92fill);
 
     Path path93 = Path();
@@ -4385,7 +4385,7 @@ class WorldMapPainter extends CustomPainter {
     path93.close();
 
     Paint paint93fill = Paint()..style = PaintingStyle.fill;
-    paint93fill.color = countryColors.gT ?? backgroundColor;
+    paint93fill.color = countryColors.gT ?? defaultCountryColor;
     canvas.drawPath(path93, paint93fill);
 
     Path path94 = Path();
@@ -4432,7 +4432,7 @@ class WorldMapPainter extends CustomPainter {
     path94.close();
 
     Paint paint94fill = Paint()..style = PaintingStyle.fill;
-    paint94fill.color = countryColors.gY ?? backgroundColor;
+    paint94fill.color = countryColors.gY ?? defaultCountryColor;
     canvas.drawPath(path94, paint94fill);
 
     Path path95 = Path();
@@ -4496,7 +4496,7 @@ class WorldMapPainter extends CustomPainter {
     path95.close();
 
     Paint paint95fill = Paint()..style = PaintingStyle.fill;
-    paint95fill.color = countryColors.hN ?? backgroundColor;
+    paint95fill.color = countryColors.hN ?? defaultCountryColor;
     canvas.drawPath(path95, paint95fill);
 
     Path path96 = Path();
@@ -4545,7 +4545,7 @@ class WorldMapPainter extends CustomPainter {
     path96.close();
 
     Paint paint96fill = Paint()..style = PaintingStyle.fill;
-    paint96fill.color = countryColors.hR ?? backgroundColor;
+    paint96fill.color = countryColors.hR ?? defaultCountryColor;
     canvas.drawPath(path96, paint96fill);
 
     Path path97 = Path();
@@ -4573,7 +4573,7 @@ class WorldMapPainter extends CustomPainter {
     path97.close();
 
     Paint paint97fill = Paint()..style = PaintingStyle.fill;
-    paint97fill.color = countryColors.hT ?? backgroundColor;
+    paint97fill.color = countryColors.hT ?? defaultCountryColor;
     canvas.drawPath(path97, paint97fill);
 
     Path path98 = Path();
@@ -4611,7 +4611,7 @@ class WorldMapPainter extends CustomPainter {
     path98.close();
 
     Paint paint98fill = Paint()..style = PaintingStyle.fill;
-    paint98fill.color = countryColors.hU ?? backgroundColor;
+    paint98fill.color = countryColors.hU ?? defaultCountryColor;
     canvas.drawPath(path98, paint98fill);
 
     Path path99 = Path();
@@ -4625,7 +4625,7 @@ class WorldMapPainter extends CustomPainter {
     path99.close();
 
     Paint paint99fill = Paint()..style = PaintingStyle.fill;
-    paint99fill.color = countryColors.iD ?? backgroundColor;
+    paint99fill.color = countryColors.iD ?? defaultCountryColor;
     canvas.drawPath(path99, paint99fill);
 
     Path path100 = Path();
@@ -4641,7 +4641,7 @@ class WorldMapPainter extends CustomPainter {
     path100.close();
 
     Paint paint100fill = Paint()..style = PaintingStyle.fill;
-    paint100fill.color = countryColors.iD ?? backgroundColor;
+    paint100fill.color = countryColors.iD ?? defaultCountryColor;
     canvas.drawPath(path100, paint100fill);
 
     Path path101 = Path();
@@ -4658,7 +4658,7 @@ class WorldMapPainter extends CustomPainter {
     path101.close();
 
     Paint paint101fill = Paint()..style = PaintingStyle.fill;
-    paint101fill.color = countryColors.iD ?? backgroundColor;
+    paint101fill.color = countryColors.iD ?? defaultCountryColor;
     canvas.drawPath(path101, paint101fill);
 
     Path path102 = Path();
@@ -4674,7 +4674,7 @@ class WorldMapPainter extends CustomPainter {
     path102.close();
 
     Paint paint102fill = Paint()..style = PaintingStyle.fill;
-    paint102fill.color = countryColors.iD ?? backgroundColor;
+    paint102fill.color = countryColors.iD ?? defaultCountryColor;
     canvas.drawPath(path102, paint102fill);
 
     Path path103 = Path();
@@ -4704,7 +4704,7 @@ class WorldMapPainter extends CustomPainter {
     path103.close();
 
     Paint paint103fill = Paint()..style = PaintingStyle.fill;
-    paint103fill.color = countryColors.iD ?? backgroundColor;
+    paint103fill.color = countryColors.iD ?? defaultCountryColor;
     canvas.drawPath(path103, paint103fill);
 
     Path path104 = Path();
@@ -4718,7 +4718,7 @@ class WorldMapPainter extends CustomPainter {
     path104.close();
 
     Paint paint104fill = Paint()..style = PaintingStyle.fill;
-    paint104fill.color = countryColors.iD ?? backgroundColor;
+    paint104fill.color = countryColors.iD ?? defaultCountryColor;
     canvas.drawPath(path104, paint104fill);
 
     Path path105 = Path();
@@ -4731,7 +4731,7 @@ class WorldMapPainter extends CustomPainter {
     path105.close();
 
     Paint paint105fill = Paint()..style = PaintingStyle.fill;
-    paint105fill.color = countryColors.iD ?? backgroundColor;
+    paint105fill.color = countryColors.iD ?? defaultCountryColor;
     canvas.drawPath(path105, paint105fill);
 
     Path path106 = Path();
@@ -4747,7 +4747,7 @@ class WorldMapPainter extends CustomPainter {
     path106.close();
 
     Paint paint106fill = Paint()..style = PaintingStyle.fill;
-    paint106fill.color = countryColors.iD ?? backgroundColor;
+    paint106fill.color = countryColors.iD ?? defaultCountryColor;
     canvas.drawPath(path106, paint106fill);
 
     Path path107 = Path();
@@ -4792,7 +4792,7 @@ class WorldMapPainter extends CustomPainter {
     path107.close();
 
     Paint paint107fill = Paint()..style = PaintingStyle.fill;
-    paint107fill.color = countryColors.iD ?? backgroundColor;
+    paint107fill.color = countryColors.iD ?? defaultCountryColor;
     canvas.drawPath(path107, paint107fill);
 
     Path path108 = Path();
@@ -4844,7 +4844,7 @@ class WorldMapPainter extends CustomPainter {
     path108.close();
 
     Paint paint108fill = Paint()..style = PaintingStyle.fill;
-    paint108fill.color = countryColors.iD ?? backgroundColor;
+    paint108fill.color = countryColors.iD ?? defaultCountryColor;
     canvas.drawPath(path108, paint108fill);
 
     Path path109 = Path();
@@ -4864,7 +4864,7 @@ class WorldMapPainter extends CustomPainter {
     path109.close();
 
     Paint paint109fill = Paint()..style = PaintingStyle.fill;
-    paint109fill.color = countryColors.iD ?? backgroundColor;
+    paint109fill.color = countryColors.iD ?? defaultCountryColor;
     canvas.drawPath(path109, paint109fill);
 
     Path path110 = Path();
@@ -4910,7 +4910,7 @@ class WorldMapPainter extends CustomPainter {
     path110.close();
 
     Paint paint110fill = Paint()..style = PaintingStyle.fill;
-    paint110fill.color = countryColors.iD ?? backgroundColor;
+    paint110fill.color = countryColors.iD ?? defaultCountryColor;
     canvas.drawPath(path110, paint110fill);
 
     Path path111 = Path();
@@ -4952,7 +4952,7 @@ class WorldMapPainter extends CustomPainter {
     path111.close();
 
     Paint paint111fill = Paint()..style = PaintingStyle.fill;
-    paint111fill.color = countryColors.iD ?? backgroundColor;
+    paint111fill.color = countryColors.iD ?? defaultCountryColor;
     canvas.drawPath(path111, paint111fill);
 
     Path path112 = Path();
@@ -5095,7 +5095,7 @@ class WorldMapPainter extends CustomPainter {
     path112.close();
 
     Paint paint112fill = Paint()..style = PaintingStyle.fill;
-    paint112fill.color = countryColors.iN ?? backgroundColor;
+    paint112fill.color = countryColors.iN ?? defaultCountryColor;
     canvas.drawPath(path112, paint112fill);
 
     Path path113 = Path();
@@ -5115,7 +5115,7 @@ class WorldMapPainter extends CustomPainter {
     path113.close();
 
     Paint paint113fill = Paint()..style = PaintingStyle.fill;
-    paint113fill.color = countryColors.iE ?? backgroundColor;
+    paint113fill.color = countryColors.iE ?? defaultCountryColor;
     canvas.drawPath(path113, paint113fill);
 
     Path path114 = Path();
@@ -5197,7 +5197,7 @@ class WorldMapPainter extends CustomPainter {
     path114.close();
 
     Paint paint114fill = Paint()..style = PaintingStyle.fill;
-    paint114fill.color = countryColors.iR ?? backgroundColor;
+    paint114fill.color = countryColors.iR ?? defaultCountryColor;
     canvas.drawPath(path114, paint114fill);
 
     Path path115 = Path();
@@ -5234,7 +5234,7 @@ class WorldMapPainter extends CustomPainter {
     path115.close();
 
     Paint paint115fill = Paint()..style = PaintingStyle.fill;
-    paint115fill.color = countryColors.iQ ?? backgroundColor;
+    paint115fill.color = countryColors.iQ ?? defaultCountryColor;
     canvas.drawPath(path115, paint115fill);
 
     Path path116 = Path();
@@ -5261,7 +5261,7 @@ class WorldMapPainter extends CustomPainter {
     path116.close();
 
     Paint paint116fill = Paint()..style = PaintingStyle.fill;
-    paint116fill.color = countryColors.iS ?? backgroundColor;
+    paint116fill.color = countryColors.iS ?? defaultCountryColor;
     canvas.drawPath(path116, paint116fill);
 
     Path path117 = Path();
@@ -5292,7 +5292,7 @@ class WorldMapPainter extends CustomPainter {
     path117.close();
 
     Paint paint117fill = Paint()..style = PaintingStyle.fill;
-    paint117fill.color = countryColors.iL ?? backgroundColor;
+    paint117fill.color = countryColors.iL ?? defaultCountryColor;
     canvas.drawPath(path117, paint117fill);
 
     Path path118 = Path();
@@ -5310,7 +5310,7 @@ class WorldMapPainter extends CustomPainter {
     path118.close();
 
     Paint paint118fill = Paint()..style = PaintingStyle.fill;
-    paint118fill.color = countryColors.iT ?? backgroundColor;
+    paint118fill.color = countryColors.iT ?? defaultCountryColor;
     canvas.drawPath(path118, paint118fill);
 
     Path path119 = Path();
@@ -5327,7 +5327,7 @@ class WorldMapPainter extends CustomPainter {
     path119.close();
 
     Paint paint119fill = Paint()..style = PaintingStyle.fill;
-    paint119fill.color = countryColors.iT ?? backgroundColor;
+    paint119fill.color = countryColors.iT ?? defaultCountryColor;
     canvas.drawPath(path119, paint119fill);
 
     Path path120 = Path();
@@ -5400,7 +5400,7 @@ class WorldMapPainter extends CustomPainter {
     path120.close();
 
     Paint paint120fill = Paint()..style = PaintingStyle.fill;
-    paint120fill.color = countryColors.iT ?? backgroundColor;
+    paint120fill.color = countryColors.iT ?? defaultCountryColor;
     canvas.drawPath(path120, paint120fill);
 
     Path path121 = Path();
@@ -5418,7 +5418,7 @@ class WorldMapPainter extends CustomPainter {
     path121.close();
 
     Paint paint121fill = Paint()..style = PaintingStyle.fill;
-    paint121fill.color = countryColors.jM ?? backgroundColor;
+    paint121fill.color = countryColors.jM ?? defaultCountryColor;
     canvas.drawPath(path121, paint121fill);
 
     Path path122 = Path();
@@ -5444,7 +5444,7 @@ class WorldMapPainter extends CustomPainter {
     path122.close();
 
     Paint paint122fill = Paint()..style = PaintingStyle.fill;
-    paint122fill.color = countryColors.jO ?? backgroundColor;
+    paint122fill.color = countryColors.jO ?? defaultCountryColor;
     canvas.drawPath(path122, paint122fill);
 
     Path path123 = Path();
@@ -5463,7 +5463,7 @@ class WorldMapPainter extends CustomPainter {
     path123.close();
 
     Paint paint123fill = Paint()..style = PaintingStyle.fill;
-    paint123fill.color = countryColors.jP ?? backgroundColor;
+    paint123fill.color = countryColors.jP ?? defaultCountryColor;
     canvas.drawPath(path123, paint123fill);
 
     Path path124 = Path();
@@ -5507,7 +5507,7 @@ class WorldMapPainter extends CustomPainter {
     path124.close();
 
     Paint paint124fill = Paint()..style = PaintingStyle.fill;
-    paint124fill.color = countryColors.jP ?? backgroundColor;
+    paint124fill.color = countryColors.jP ?? defaultCountryColor;
     canvas.drawPath(path124, paint124fill);
 
     Path path125 = Path();
@@ -5530,7 +5530,7 @@ class WorldMapPainter extends CustomPainter {
     path125.close();
 
     Paint paint125fill = Paint()..style = PaintingStyle.fill;
-    paint125fill.color = countryColors.jP ?? backgroundColor;
+    paint125fill.color = countryColors.jP ?? defaultCountryColor;
     canvas.drawPath(path125, paint125fill);
 
     Path path126 = Path();
@@ -5649,7 +5649,7 @@ class WorldMapPainter extends CustomPainter {
     path126.close();
 
     Paint paint126fill = Paint()..style = PaintingStyle.fill;
-    paint126fill.color = countryColors.kZ ?? backgroundColor;
+    paint126fill.color = countryColors.kZ ?? defaultCountryColor;
     canvas.drawPath(path126, paint126fill);
 
     Path path127 = Path();
@@ -5694,7 +5694,7 @@ class WorldMapPainter extends CustomPainter {
     path127.close();
 
     Paint paint127fill = Paint()..style = PaintingStyle.fill;
-    paint127fill.color = countryColors.kE ?? backgroundColor;
+    paint127fill.color = countryColors.kE ?? defaultCountryColor;
     canvas.drawPath(path127, paint127fill);
 
     Path path128 = Path();
@@ -5736,7 +5736,7 @@ class WorldMapPainter extends CustomPainter {
     path128.close();
 
     Paint paint128fill = Paint()..style = PaintingStyle.fill;
-    paint128fill.color = countryColors.kG ?? backgroundColor;
+    paint128fill.color = countryColors.kG ?? defaultCountryColor;
     canvas.drawPath(path128, paint128fill);
 
     Path path129 = Path();
@@ -5760,7 +5760,7 @@ class WorldMapPainter extends CustomPainter {
     path129.close();
 
     Paint paint129fill = Paint()..style = PaintingStyle.fill;
-    paint129fill.color = countryColors.kH ?? backgroundColor;
+    paint129fill.color = countryColors.kH ?? defaultCountryColor;
     canvas.drawPath(path129, paint129fill);
 
     Path path130 = Path();
@@ -5786,7 +5786,7 @@ class WorldMapPainter extends CustomPainter {
     path130.close();
 
     Paint paint130fill = Paint()..style = PaintingStyle.fill;
-    paint130fill.color = countryColors.kR ?? backgroundColor;
+    paint130fill.color = countryColors.kR ?? defaultCountryColor;
     canvas.drawPath(path130, paint130fill);
 
     Path path131 = Path();
@@ -5802,7 +5802,7 @@ class WorldMapPainter extends CustomPainter {
     path131.close();
 
     Paint paint131fill = Paint()..style = PaintingStyle.fill;
-    paint131fill.color = countryColors.kW ?? backgroundColor;
+    paint131fill.color = countryColors.kW ?? defaultCountryColor;
     canvas.drawPath(path131, paint131fill);
 
     Path path132 = Path();
@@ -5846,7 +5846,7 @@ class WorldMapPainter extends CustomPainter {
     path132.close();
 
     Paint paint132fill = Paint()..style = PaintingStyle.fill;
-    paint132fill.color = countryColors.lA ?? backgroundColor;
+    paint132fill.color = countryColors.lA ?? defaultCountryColor;
     canvas.drawPath(path132, paint132fill);
 
     Path path133 = Path();
@@ -5864,7 +5864,7 @@ class WorldMapPainter extends CustomPainter {
     path133.close();
 
     Paint paint133fill = Paint()..style = PaintingStyle.fill;
-    paint133fill.color = countryColors.lB ?? backgroundColor;
+    paint133fill.color = countryColors.lB ?? defaultCountryColor;
     canvas.drawPath(path133, paint133fill);
 
     Path path134 = Path();
@@ -5898,7 +5898,7 @@ class WorldMapPainter extends CustomPainter {
     path134.close();
 
     Paint paint134fill = Paint()..style = PaintingStyle.fill;
-    paint134fill.color = countryColors.lR ?? backgroundColor;
+    paint134fill.color = countryColors.lR ?? defaultCountryColor;
     canvas.drawPath(path134, paint134fill);
 
     Path path135 = Path();
@@ -5961,7 +5961,7 @@ class WorldMapPainter extends CustomPainter {
     path135.close();
 
     Paint paint135fill = Paint()..style = PaintingStyle.fill;
-    paint135fill.color = countryColors.lY ?? backgroundColor;
+    paint135fill.color = countryColors.lY ?? defaultCountryColor;
     canvas.drawPath(path135, paint135fill);
 
     Path path136 = Path();
@@ -5978,7 +5978,7 @@ class WorldMapPainter extends CustomPainter {
     path136.close();
 
     Paint paint136fill = Paint()..style = PaintingStyle.fill;
-    paint136fill.color = countryColors.lK ?? backgroundColor;
+    paint136fill.color = countryColors.lK ?? defaultCountryColor;
     canvas.drawPath(path136, paint136fill);
 
     Path path137 = Path();
@@ -5997,7 +5997,7 @@ class WorldMapPainter extends CustomPainter {
     path137.close();
 
     Paint paint137fill = Paint()..style = PaintingStyle.fill;
-    paint137fill.color = countryColors.lS ?? backgroundColor;
+    paint137fill.color = countryColors.lS ?? defaultCountryColor;
     canvas.drawPath(path137, paint137fill);
 
     Path path138 = Path();
@@ -6023,7 +6023,7 @@ class WorldMapPainter extends CustomPainter {
     path138.close();
 
     Paint paint138fill = Paint()..style = PaintingStyle.fill;
-    paint138fill.color = countryColors.lT ?? backgroundColor;
+    paint138fill.color = countryColors.lT ?? defaultCountryColor;
     canvas.drawPath(path138, paint138fill);
 
     Path path139 = Path();
@@ -6037,7 +6037,7 @@ class WorldMapPainter extends CustomPainter {
     path139.close();
 
     Paint paint139fill = Paint()..style = PaintingStyle.fill;
-    paint139fill.color = countryColors.lU ?? backgroundColor;
+    paint139fill.color = countryColors.lU ?? defaultCountryColor;
     canvas.drawPath(path139, paint139fill);
 
     Path path140 = Path();
@@ -6066,7 +6066,7 @@ class WorldMapPainter extends CustomPainter {
     path140.close();
 
     Paint paint140fill = Paint()..style = PaintingStyle.fill;
-    paint140fill.color = countryColors.lV ?? backgroundColor;
+    paint140fill.color = countryColors.lV ?? defaultCountryColor;
     canvas.drawPath(path140, paint140fill);
 
     Path path141 = Path();
@@ -6136,7 +6136,7 @@ class WorldMapPainter extends CustomPainter {
     path141.close();
 
     Paint paint141fill = Paint()..style = PaintingStyle.fill;
-    paint141fill.color = countryColors.mA ?? backgroundColor;
+    paint141fill.color = countryColors.mA ?? defaultCountryColor;
     canvas.drawPath(path141, paint141fill);
 
     Path path142 = Path();
@@ -6170,7 +6170,7 @@ class WorldMapPainter extends CustomPainter {
     path142.close();
 
     Paint paint142fill = Paint()..style = PaintingStyle.fill;
-    paint142fill.color = countryColors.mD ?? backgroundColor;
+    paint142fill.color = countryColors.mD ?? defaultCountryColor;
     canvas.drawPath(path142, paint142fill);
 
     Path path143 = Path();
@@ -6226,7 +6226,7 @@ class WorldMapPainter extends CustomPainter {
     path143.close();
 
     Paint paint143fill = Paint()..style = PaintingStyle.fill;
-    paint143fill.color = countryColors.mG ?? backgroundColor;
+    paint143fill.color = countryColors.mG ?? defaultCountryColor;
     canvas.drawPath(path143, paint143fill);
 
     Path path144 = Path();
@@ -6403,7 +6403,7 @@ class WorldMapPainter extends CustomPainter {
     path144.close();
 
     Paint paint144fill = Paint()..style = PaintingStyle.fill;
-    paint144fill.color = countryColors.mX ?? backgroundColor;
+    paint144fill.color = countryColors.mX ?? defaultCountryColor;
     canvas.drawPath(path144, paint144fill);
 
     Path path145 = Path();
@@ -6427,7 +6427,7 @@ class WorldMapPainter extends CustomPainter {
     path145.close();
 
     Paint paint145fill = Paint()..style = PaintingStyle.fill;
-    paint145fill.color = countryColors.mK ?? backgroundColor;
+    paint145fill.color = countryColors.mK ?? defaultCountryColor;
     canvas.drawPath(path145, paint145fill);
 
     Path path146 = Path();
@@ -6510,7 +6510,7 @@ class WorldMapPainter extends CustomPainter {
     path146.close();
 
     Paint paint146fill = Paint()..style = PaintingStyle.fill;
-    paint146fill.color = countryColors.mL ?? backgroundColor;
+    paint146fill.color = countryColors.mL ?? defaultCountryColor;
     canvas.drawPath(path146, paint146fill);
 
     Path path147 = Path();
@@ -6587,7 +6587,7 @@ class WorldMapPainter extends CustomPainter {
     path147.close();
 
     Paint paint147fill = Paint()..style = PaintingStyle.fill;
-    paint147fill.color = countryColors.mM ?? backgroundColor;
+    paint147fill.color = countryColors.mM ?? defaultCountryColor;
     canvas.drawPath(path147, paint147fill);
 
     Path path148 = Path();
@@ -6612,7 +6612,7 @@ class WorldMapPainter extends CustomPainter {
     path148.close();
 
     Paint paint148fill = Paint()..style = PaintingStyle.fill;
-    paint148fill.color = countryColors.mE ?? backgroundColor;
+    paint148fill.color = countryColors.mE ?? defaultCountryColor;
     canvas.drawPath(path148, paint148fill);
 
     Path path149 = Path();
@@ -6694,7 +6694,7 @@ class WorldMapPainter extends CustomPainter {
     path149.close();
 
     Paint paint149fill = Paint()..style = PaintingStyle.fill;
-    paint149fill.color = countryColors.mN ?? backgroundColor;
+    paint149fill.color = countryColors.mN ?? defaultCountryColor;
     canvas.drawPath(path149, paint149fill);
 
     Path path150 = Path();
@@ -6778,7 +6778,7 @@ class WorldMapPainter extends CustomPainter {
     path150.close();
 
     Paint paint150fill = Paint()..style = PaintingStyle.fill;
-    paint150fill.color = countryColors.mZ ?? backgroundColor;
+    paint150fill.color = countryColors.mZ ?? defaultCountryColor;
     canvas.drawPath(path150, paint150fill);
 
     Path path151 = Path();
@@ -6824,7 +6824,7 @@ class WorldMapPainter extends CustomPainter {
     path151.close();
 
     Paint paint151fill = Paint()..style = PaintingStyle.fill;
-    paint151fill.color = countryColors.mR ?? backgroundColor;
+    paint151fill.color = countryColors.mR ?? defaultCountryColor;
     canvas.drawPath(path151, paint151fill);
 
     Path path152 = Path();
@@ -6870,7 +6870,7 @@ class WorldMapPainter extends CustomPainter {
     path152.close();
 
     Paint paint152fill = Paint()..style = PaintingStyle.fill;
-    paint152fill.color = countryColors.mW ?? backgroundColor;
+    paint152fill.color = countryColors.mW ?? defaultCountryColor;
     canvas.drawPath(path152, paint152fill);
 
     Path path153 = Path();
@@ -6902,7 +6902,7 @@ class WorldMapPainter extends CustomPainter {
     path153.close();
 
     Paint paint153fill = Paint()..style = PaintingStyle.fill;
-    paint153fill.color = countryColors.mY ?? backgroundColor;
+    paint153fill.color = countryColors.mY ?? defaultCountryColor;
     canvas.drawPath(path153, paint153fill);
 
     Path path154 = Path();
@@ -6946,7 +6946,7 @@ class WorldMapPainter extends CustomPainter {
     path154.close();
 
     Paint paint154fill = Paint()..style = PaintingStyle.fill;
-    paint154fill.color = countryColors.mY ?? backgroundColor;
+    paint154fill.color = countryColors.mY ?? defaultCountryColor;
     canvas.drawPath(path154, paint154fill);
 
     Path path155 = Path();
@@ -6997,7 +6997,7 @@ class WorldMapPainter extends CustomPainter {
     path155.close();
 
     Paint paint155fill = Paint()..style = PaintingStyle.fill;
-    paint155fill.color = countryColors.nA ?? backgroundColor;
+    paint155fill.color = countryColors.nA ?? defaultCountryColor;
     canvas.drawPath(path155, paint155fill);
 
     Path path156 = Path();
@@ -7062,7 +7062,7 @@ class WorldMapPainter extends CustomPainter {
     path156.close();
 
     Paint paint156fill = Paint()..style = PaintingStyle.fill;
-    paint156fill.color = countryColors.nE ?? backgroundColor;
+    paint156fill.color = countryColors.nE ?? defaultCountryColor;
     canvas.drawPath(path156, paint156fill);
 
     Path path157 = Path();
@@ -7127,7 +7127,7 @@ class WorldMapPainter extends CustomPainter {
     path157.close();
 
     Paint paint157fill = Paint()..style = PaintingStyle.fill;
-    paint157fill.color = countryColors.nG ?? backgroundColor;
+    paint157fill.color = countryColors.nG ?? defaultCountryColor;
     canvas.drawPath(path157, paint157fill);
 
     Path path158 = Path();
@@ -7186,7 +7186,7 @@ class WorldMapPainter extends CustomPainter {
     path158.close();
 
     Paint paint158fill = Paint()..style = PaintingStyle.fill;
-    paint158fill.color = countryColors.nI ?? backgroundColor;
+    paint158fill.color = countryColors.nI ?? defaultCountryColor;
     canvas.drawPath(path158, paint158fill);
 
     Path path159 = Path();
@@ -7243,7 +7243,7 @@ class WorldMapPainter extends CustomPainter {
     path159.close();
 
     Paint paint159fill = Paint()..style = PaintingStyle.fill;
-    paint159fill.color = countryColors.nO ?? backgroundColor;
+    paint159fill.color = countryColors.nO ?? defaultCountryColor;
     canvas.drawPath(path159, paint159fill);
 
     Path path160 = Path();
@@ -7258,7 +7258,7 @@ class WorldMapPainter extends CustomPainter {
     path160.close();
 
     Paint paint160fill = Paint()..style = PaintingStyle.fill;
-    paint160fill.color = countryColors.sJ ?? backgroundColor;
+    paint160fill.color = countryColors.sJ ?? defaultCountryColor;
     canvas.drawPath(path160, paint160fill);
 
     Path path161 = Path();
@@ -7283,7 +7283,7 @@ class WorldMapPainter extends CustomPainter {
     path161.close();
 
     Paint paint161fill = Paint()..style = PaintingStyle.fill;
-    paint161fill.color = countryColors.sJ ?? backgroundColor;
+    paint161fill.color = countryColors.sJ ?? defaultCountryColor;
     canvas.drawPath(path161, paint161fill);
 
     Path path162 = Path();
@@ -7302,7 +7302,7 @@ class WorldMapPainter extends CustomPainter {
     path162.close();
 
     Paint paint162fill = Paint()..style = PaintingStyle.fill;
-    paint162fill.color = countryColors.sJ ?? backgroundColor;
+    paint162fill.color = countryColors.sJ ?? defaultCountryColor;
     canvas.drawPath(path162, paint162fill);
 
     Path path163 = Path();
@@ -7332,7 +7332,7 @@ class WorldMapPainter extends CustomPainter {
     path163.close();
 
     Paint paint163fill = Paint()..style = PaintingStyle.fill;
-    paint163fill.color = countryColors.nP ?? backgroundColor;
+    paint163fill.color = countryColors.nP ?? defaultCountryColor;
     canvas.drawPath(path163, paint163fill);
 
     Path path164 = Path();
@@ -7380,7 +7380,7 @@ class WorldMapPainter extends CustomPainter {
     path164.close();
 
     Paint paint164fill = Paint()..style = PaintingStyle.fill;
-    paint164fill.color = countryColors.oM ?? backgroundColor;
+    paint164fill.color = countryColors.oM ?? defaultCountryColor;
     canvas.drawPath(path164, paint164fill);
 
     Path path165 = Path();
@@ -7393,7 +7393,7 @@ class WorldMapPainter extends CustomPainter {
     path165.close();
 
     Paint paint165fill = Paint()..style = PaintingStyle.fill;
-    paint165fill.color = countryColors.oM ?? backgroundColor;
+    paint165fill.color = countryColors.oM ?? defaultCountryColor;
     canvas.drawPath(path165, paint165fill);
 
     Path path166 = Path();
@@ -7466,7 +7466,7 @@ class WorldMapPainter extends CustomPainter {
     path166.close();
 
     Paint paint166fill = Paint()..style = PaintingStyle.fill;
-    paint166fill.color = countryColors.pK ?? backgroundColor;
+    paint166fill.color = countryColors.pK ?? defaultCountryColor;
     canvas.drawPath(path166, paint166fill);
 
     Path path167 = Path();
@@ -7525,7 +7525,7 @@ class WorldMapPainter extends CustomPainter {
     path167.close();
 
     Paint paint167fill = Paint()..style = PaintingStyle.fill;
-    paint167fill.color = countryColors.pA ?? backgroundColor;
+    paint167fill.color = countryColors.pA ?? defaultCountryColor;
     canvas.drawPath(path167, paint167fill);
 
     Path path168 = Path();
@@ -7608,7 +7608,7 @@ class WorldMapPainter extends CustomPainter {
     path168.close();
 
     Paint paint168fill = Paint()..style = PaintingStyle.fill;
-    paint168fill.color = countryColors.pE ?? backgroundColor;
+    paint168fill.color = countryColors.pE ?? defaultCountryColor;
     canvas.drawPath(path168, paint168fill);
 
     Path path169 = Path();
@@ -7642,7 +7642,7 @@ class WorldMapPainter extends CustomPainter {
     path169.close();
 
     Paint paint169fill = Paint()..style = PaintingStyle.fill;
-    paint169fill.color = countryColors.pH ?? backgroundColor;
+    paint169fill.color = countryColors.pH ?? defaultCountryColor;
     canvas.drawPath(path169, paint169fill);
 
     Path path170 = Path();
@@ -7661,7 +7661,7 @@ class WorldMapPainter extends CustomPainter {
     path170.close();
 
     Paint paint170fill = Paint()..style = PaintingStyle.fill;
-    paint170fill.color = countryColors.pH ?? backgroundColor;
+    paint170fill.color = countryColors.pH ?? defaultCountryColor;
     canvas.drawPath(path170, paint170fill);
 
     Path path171 = Path();
@@ -7677,7 +7677,7 @@ class WorldMapPainter extends CustomPainter {
     path171.close();
 
     Paint paint171fill = Paint()..style = PaintingStyle.fill;
-    paint171fill.color = countryColors.pH ?? backgroundColor;
+    paint171fill.color = countryColors.pH ?? defaultCountryColor;
     canvas.drawPath(path171, paint171fill);
 
     Path path172 = Path();
@@ -7693,7 +7693,7 @@ class WorldMapPainter extends CustomPainter {
     path172.close();
 
     Paint paint172fill = Paint()..style = PaintingStyle.fill;
-    paint172fill.color = countryColors.pH ?? backgroundColor;
+    paint172fill.color = countryColors.pH ?? defaultCountryColor;
     canvas.drawPath(path172, paint172fill);
 
     Path path173 = Path();
@@ -7714,7 +7714,7 @@ class WorldMapPainter extends CustomPainter {
     path173.close();
 
     Paint paint173fill = Paint()..style = PaintingStyle.fill;
-    paint173fill.color = countryColors.pH ?? backgroundColor;
+    paint173fill.color = countryColors.pH ?? defaultCountryColor;
     canvas.drawPath(path173, paint173fill);
 
     Path path174 = Path();
@@ -7727,7 +7727,7 @@ class WorldMapPainter extends CustomPainter {
     path174.close();
 
     Paint paint174fill = Paint()..style = PaintingStyle.fill;
-    paint174fill.color = countryColors.pH ?? backgroundColor;
+    paint174fill.color = countryColors.pH ?? defaultCountryColor;
     canvas.drawPath(path174, paint174fill);
 
     Path path175 = Path();
@@ -7767,7 +7767,7 @@ class WorldMapPainter extends CustomPainter {
     path175.close();
 
     Paint paint175fill = Paint()..style = PaintingStyle.fill;
-    paint175fill.color = countryColors.pH ?? backgroundColor;
+    paint175fill.color = countryColors.pH ?? defaultCountryColor;
     canvas.drawPath(path175, paint175fill);
 
     Path path176 = Path();
@@ -7785,7 +7785,7 @@ class WorldMapPainter extends CustomPainter {
     path176.close();
 
     Paint paint176fill = Paint()..style = PaintingStyle.fill;
-    paint176fill.color = countryColors.pG ?? backgroundColor;
+    paint176fill.color = countryColors.pG ?? defaultCountryColor;
     canvas.drawPath(path176, paint176fill);
 
     Path path177 = Path();
@@ -7814,7 +7814,7 @@ class WorldMapPainter extends CustomPainter {
     path177.close();
 
     Paint paint177fill = Paint()..style = PaintingStyle.fill;
-    paint177fill.color = countryColors.pG ?? backgroundColor;
+    paint177fill.color = countryColors.pG ?? defaultCountryColor;
     canvas.drawPath(path177, paint177fill);
 
     Path path178 = Path();
@@ -7855,7 +7855,7 @@ class WorldMapPainter extends CustomPainter {
     path178.close();
 
     Paint paint178fill = Paint()..style = PaintingStyle.fill;
-    paint178fill.color = countryColors.pG ?? backgroundColor;
+    paint178fill.color = countryColors.pG ?? defaultCountryColor;
     canvas.drawPath(path178, paint178fill);
 
     Path path179 = Path();
@@ -7876,7 +7876,7 @@ class WorldMapPainter extends CustomPainter {
     path179.close();
 
     Paint paint179fill = Paint()..style = PaintingStyle.fill;
-    paint179fill.color = countryColors.pG ?? backgroundColor;
+    paint179fill.color = countryColors.pG ?? defaultCountryColor;
     canvas.drawPath(path179, paint179fill);
 
     Path path180 = Path();
@@ -7928,7 +7928,7 @@ class WorldMapPainter extends CustomPainter {
     path180.close();
 
     Paint paint180fill = Paint()..style = PaintingStyle.fill;
-    paint180fill.color = countryColors.pL ?? backgroundColor;
+    paint180fill.color = countryColors.pL ?? defaultCountryColor;
     canvas.drawPath(path180, paint180fill);
 
     Path path181 = Path();
@@ -7978,7 +7978,7 @@ class WorldMapPainter extends CustomPainter {
     path181.close();
 
     Paint paint181fill = Paint()..style = PaintingStyle.fill;
-    paint181fill.color = countryColors.kP ?? backgroundColor;
+    paint181fill.color = countryColors.kP ?? defaultCountryColor;
     canvas.drawPath(path181, paint181fill);
 
     Path path182 = Path();
@@ -8018,7 +8018,7 @@ class WorldMapPainter extends CustomPainter {
     path182.close();
 
     Paint paint182fill = Paint()..style = PaintingStyle.fill;
-    paint182fill.color = countryColors.pY ?? backgroundColor;
+    paint182fill.color = countryColors.pY ?? defaultCountryColor;
     canvas.drawPath(path182, paint182fill);
 
     Path path183 = Path();
@@ -8034,7 +8034,7 @@ class WorldMapPainter extends CustomPainter {
     path183.close();
 
     Paint paint183fill = Paint()..style = PaintingStyle.fill;
-    paint183fill.color = countryColors.pS ?? backgroundColor;
+    paint183fill.color = countryColors.pS ?? defaultCountryColor;
     canvas.drawPath(path183, paint183fill);
 
     Path path184 = Path();
@@ -8050,7 +8050,7 @@ class WorldMapPainter extends CustomPainter {
     path184.close();
 
     Paint paint184fill = Paint()..style = PaintingStyle.fill;
-    paint184fill.color = countryColors.qA ?? backgroundColor;
+    paint184fill.color = countryColors.qA ?? defaultCountryColor;
     canvas.drawPath(path184, paint184fill);
 
     Path path185 = Path();
@@ -8101,7 +8101,7 @@ class WorldMapPainter extends CustomPainter {
     path185.close();
 
     Paint paint185fill = Paint()..style = PaintingStyle.fill;
-    paint185fill.color = countryColors.rO ?? backgroundColor;
+    paint185fill.color = countryColors.rO ?? defaultCountryColor;
     canvas.drawPath(path185, paint185fill);
 
     Path path186 = Path();
@@ -8121,7 +8121,7 @@ class WorldMapPainter extends CustomPainter {
     path186.close();
 
     Paint paint186fill = Paint()..style = PaintingStyle.fill;
-    paint186fill.color = countryColors.rW ?? backgroundColor;
+    paint186fill.color = countryColors.rW ?? defaultCountryColor;
     canvas.drawPath(path186, paint186fill);
 
     Path path187 = Path();
@@ -8156,7 +8156,7 @@ class WorldMapPainter extends CustomPainter {
     path187.close();
 
     Paint paint187fill = Paint()..style = PaintingStyle.fill;
-    paint187fill.color = countryColors.eH ?? backgroundColor;
+    paint187fill.color = countryColors.eH ?? defaultCountryColor;
     canvas.drawPath(path187, paint187fill);
 
     Path path188 = Path();
@@ -8239,7 +8239,7 @@ class WorldMapPainter extends CustomPainter {
     path188.close();
 
     Paint paint188fill = Paint()..style = PaintingStyle.fill;
-    paint188fill.color = countryColors.sA ?? backgroundColor;
+    paint188fill.color = countryColors.sA ?? defaultCountryColor;
     canvas.drawPath(path188, paint188fill);
 
     Path path189 = Path();
@@ -8325,7 +8325,7 @@ class WorldMapPainter extends CustomPainter {
     path189.close();
 
     Paint paint189fill = Paint()..style = PaintingStyle.fill;
-    paint189fill.color = countryColors.sD ?? backgroundColor;
+    paint189fill.color = countryColors.sD ?? defaultCountryColor;
     canvas.drawPath(path189, paint189fill);
 
     Path path190 = Path();
@@ -8395,7 +8395,7 @@ class WorldMapPainter extends CustomPainter {
     path190.close();
 
     Paint paint190fill = Paint()..style = PaintingStyle.fill;
-    paint190fill.color = countryColors.sS ?? backgroundColor;
+    paint190fill.color = countryColors.sS ?? defaultCountryColor;
     canvas.drawPath(path190, paint190fill);
 
     Path path191 = Path();
@@ -8446,7 +8446,7 @@ class WorldMapPainter extends CustomPainter {
     path191.close();
 
     Paint paint191fill = Paint()..style = PaintingStyle.fill;
-    paint191fill.color = countryColors.sN ?? backgroundColor;
+    paint191fill.color = countryColors.sN ?? defaultCountryColor;
     canvas.drawPath(path191, paint191fill);
 
     Path path192 = Path();
@@ -8475,7 +8475,7 @@ class WorldMapPainter extends CustomPainter {
     path192.close();
 
     Paint paint192fill = Paint()..style = PaintingStyle.fill;
-    paint192fill.color = countryColors.sL ?? backgroundColor;
+    paint192fill.color = countryColors.sL ?? defaultCountryColor;
     canvas.drawPath(path192, paint192fill);
 
     Path path193 = Path();
@@ -8502,7 +8502,7 @@ class WorldMapPainter extends CustomPainter {
     path193.close();
 
     Paint paint193fill = Paint()..style = PaintingStyle.fill;
-    paint193fill.color = countryColors.sV ?? backgroundColor;
+    paint193fill.color = countryColors.sV ?? defaultCountryColor;
     canvas.drawPath(path193, paint193fill);
 
     Path path194 = Path();
@@ -8555,7 +8555,7 @@ class WorldMapPainter extends CustomPainter {
     path194.close();
 
     Paint paint194fill = Paint()..style = PaintingStyle.fill;
-    paint194fill.color = countryColors.rS ?? backgroundColor;
+    paint194fill.color = countryColors.rS ?? defaultCountryColor;
     canvas.drawPath(path194, paint194fill);
 
     Path path195 = Path();
@@ -8588,7 +8588,7 @@ class WorldMapPainter extends CustomPainter {
     path195.close();
 
     Paint paint195fill = Paint()..style = PaintingStyle.fill;
-    paint195fill.color = countryColors.sR ?? backgroundColor;
+    paint195fill.color = countryColors.sR ?? defaultCountryColor;
     canvas.drawPath(path195, paint195fill);
 
     Path path196 = Path();
@@ -8628,7 +8628,7 @@ class WorldMapPainter extends CustomPainter {
     path196.close();
 
     Paint paint196fill = Paint()..style = PaintingStyle.fill;
-    paint196fill.color = countryColors.sK ?? backgroundColor;
+    paint196fill.color = countryColors.sK ?? defaultCountryColor;
     canvas.drawPath(path196, paint196fill);
 
     Path path197 = Path();
@@ -8653,7 +8653,7 @@ class WorldMapPainter extends CustomPainter {
     path197.close();
 
     Paint paint197fill = Paint()..style = PaintingStyle.fill;
-    paint197fill.color = countryColors.sI ?? backgroundColor;
+    paint197fill.color = countryColors.sI ?? defaultCountryColor;
     canvas.drawPath(path197, paint197fill);
 
     Path path198 = Path();
@@ -8700,7 +8700,7 @@ class WorldMapPainter extends CustomPainter {
     path198.close();
 
     Paint paint198fill = Paint()..style = PaintingStyle.fill;
-    paint198fill.color = countryColors.sE ?? backgroundColor;
+    paint198fill.color = countryColors.sE ?? defaultCountryColor;
     canvas.drawPath(path198, paint198fill);
 
     Path path199 = Path();
@@ -8718,7 +8718,7 @@ class WorldMapPainter extends CustomPainter {
     path199.close();
 
     Paint paint199fill = Paint()..style = PaintingStyle.fill;
-    paint199fill.color = countryColors.sZ ?? backgroundColor;
+    paint199fill.color = countryColors.sZ ?? defaultCountryColor;
     canvas.drawPath(path199, paint199fill);
 
     Path path200 = Path();
@@ -8752,7 +8752,7 @@ class WorldMapPainter extends CustomPainter {
     path200.close();
 
     Paint paint200fill = Paint()..style = PaintingStyle.fill;
-    paint200fill.color = countryColors.sY ?? backgroundColor;
+    paint200fill.color = countryColors.sY ?? defaultCountryColor;
     canvas.drawPath(path200, paint200fill);
 
     Path path201 = Path();
@@ -8817,7 +8817,7 @@ class WorldMapPainter extends CustomPainter {
     path201.close();
 
     Paint paint201fill = Paint()..style = PaintingStyle.fill;
-    paint201fill.color = countryColors.tD ?? backgroundColor;
+    paint201fill.color = countryColors.tD ?? defaultCountryColor;
     canvas.drawPath(path201, paint201fill);
 
     Path path202 = Path();
@@ -8843,7 +8843,7 @@ class WorldMapPainter extends CustomPainter {
     path202.close();
 
     Paint paint202fill = Paint()..style = PaintingStyle.fill;
-    paint202fill.color = countryColors.tG ?? backgroundColor;
+    paint202fill.color = countryColors.tG ?? defaultCountryColor;
     canvas.drawPath(path202, paint202fill);
 
     Path path203 = Path();
@@ -8914,7 +8914,7 @@ class WorldMapPainter extends CustomPainter {
     path203.close();
 
     Paint paint203fill = Paint()..style = PaintingStyle.fill;
-    paint203fill.color = countryColors.tH ?? backgroundColor;
+    paint203fill.color = countryColors.tH ?? defaultCountryColor;
     canvas.drawPath(path203, paint203fill);
 
     Path path204 = Path();
@@ -8962,7 +8962,7 @@ class WorldMapPainter extends CustomPainter {
     path204.close();
 
     Paint paint204fill = Paint()..style = PaintingStyle.fill;
-    paint204fill.color = countryColors.tJ ?? backgroundColor;
+    paint204fill.color = countryColors.tJ ?? defaultCountryColor;
     canvas.drawPath(path204, paint204fill);
 
     Path path205 = Path();
@@ -9023,7 +9023,7 @@ class WorldMapPainter extends CustomPainter {
     path205.close();
 
     Paint paint205fill = Paint()..style = PaintingStyle.fill;
-    paint205fill.color = countryColors.tM ?? backgroundColor;
+    paint205fill.color = countryColors.tM ?? defaultCountryColor;
     canvas.drawPath(path205, paint205fill);
 
     Path path206 = Path();
@@ -9041,7 +9041,7 @@ class WorldMapPainter extends CustomPainter {
     path206.close();
 
     Paint paint206fill = Paint()..style = PaintingStyle.fill;
-    paint206fill.color = countryColors.tL ?? backgroundColor;
+    paint206fill.color = countryColors.tL ?? defaultCountryColor;
     canvas.drawPath(path206, paint206fill);
 
     Path path207 = Path();
@@ -9079,7 +9079,7 @@ class WorldMapPainter extends CustomPainter {
     path207.close();
 
     Paint paint207fill = Paint()..style = PaintingStyle.fill;
-    paint207fill.color = countryColors.tN ?? backgroundColor;
+    paint207fill.color = countryColors.tN ?? defaultCountryColor;
     canvas.drawPath(path207, paint207fill);
 
     Path path208 = Path();
@@ -9139,7 +9139,7 @@ class WorldMapPainter extends CustomPainter {
     path208.close();
 
     Paint paint208fill = Paint()..style = PaintingStyle.fill;
-    paint208fill.color = countryColors.tR ?? backgroundColor;
+    paint208fill.color = countryColors.tR ?? defaultCountryColor;
     canvas.drawPath(path208, paint208fill);
 
     Path path209 = Path();
@@ -9160,7 +9160,7 @@ class WorldMapPainter extends CustomPainter {
     path209.close();
 
     Paint paint209fill = Paint()..style = PaintingStyle.fill;
-    paint209fill.color = countryColors.tR ?? backgroundColor;
+    paint209fill.color = countryColors.tR ?? defaultCountryColor;
     canvas.drawPath(path209, paint209fill);
 
     Path path210 = Path();
@@ -9176,7 +9176,7 @@ class WorldMapPainter extends CustomPainter {
     path210.close();
 
     Paint paint210fill = Paint()..style = PaintingStyle.fill;
-    paint210fill.color = countryColors.tW ?? backgroundColor;
+    paint210fill.color = countryColors.tW ?? defaultCountryColor;
     canvas.drawPath(path210, paint210fill);
 
     Path path211 = Path();
@@ -9246,7 +9246,7 @@ class WorldMapPainter extends CustomPainter {
     path211.close();
 
     Paint paint211fill = Paint()..style = PaintingStyle.fill;
-    paint211fill.color = countryColors.tZ ?? backgroundColor;
+    paint211fill.color = countryColors.tZ ?? defaultCountryColor;
     canvas.drawPath(path211, paint211fill);
 
     Path path212 = Path();
@@ -9285,7 +9285,7 @@ class WorldMapPainter extends CustomPainter {
     path212.close();
 
     Paint paint212fill = Paint()..style = PaintingStyle.fill;
-    paint212fill.color = countryColors.uG ?? backgroundColor;
+    paint212fill.color = countryColors.uG ?? defaultCountryColor;
     canvas.drawPath(path212, paint212fill);
 
     Path path213 = Path();
@@ -9390,7 +9390,7 @@ class WorldMapPainter extends CustomPainter {
     path213.close();
 
     Paint paint213fill = Paint()..style = PaintingStyle.fill;
-    paint213fill.color = countryColors.uA ?? backgroundColor;
+    paint213fill.color = countryColors.uA ?? defaultCountryColor;
     canvas.drawPath(path213, paint213fill);
 
     Path path214 = Path();
@@ -9418,7 +9418,7 @@ class WorldMapPainter extends CustomPainter {
     path214.close();
 
     Paint paint214fill = Paint()..style = PaintingStyle.fill;
-    paint214fill.color = countryColors.uY ?? backgroundColor;
+    paint214fill.color = countryColors.uY ?? defaultCountryColor;
     canvas.drawPath(path214, paint214fill);
 
     Path path215 = Path();
@@ -9479,7 +9479,7 @@ class WorldMapPainter extends CustomPainter {
     path215.close();
 
     Paint paint215fill = Paint()..style = PaintingStyle.fill;
-    paint215fill.color = countryColors.uZ ?? backgroundColor;
+    paint215fill.color = countryColors.uZ ?? defaultCountryColor;
     canvas.drawPath(path215, paint215fill);
 
     Path path216 = Path();
@@ -9578,7 +9578,7 @@ class WorldMapPainter extends CustomPainter {
     path216.close();
 
     Paint paint216fill = Paint()..style = PaintingStyle.fill;
-    paint216fill.color = countryColors.vE ?? backgroundColor;
+    paint216fill.color = countryColors.vE ?? defaultCountryColor;
     canvas.drawPath(path216, paint216fill);
 
     Path path217 = Path();
@@ -9629,7 +9629,7 @@ class WorldMapPainter extends CustomPainter {
     path217.close();
 
     Paint paint217fill = Paint()..style = PaintingStyle.fill;
-    paint217fill.color = countryColors.vN ?? backgroundColor;
+    paint217fill.color = countryColors.vN ?? defaultCountryColor;
     canvas.drawPath(path217, paint217fill);
 
     Path path218 = Path();
@@ -9680,7 +9680,7 @@ class WorldMapPainter extends CustomPainter {
     path218.close();
 
     Paint paint218fill = Paint()..style = PaintingStyle.fill;
-    paint218fill.color = countryColors.yE ?? backgroundColor;
+    paint218fill.color = countryColors.yE ?? defaultCountryColor;
     canvas.drawPath(path218, paint218fill);
 
     Path path219 = Path();
@@ -9753,7 +9753,7 @@ class WorldMapPainter extends CustomPainter {
     path219.close();
 
     Paint paint219fill = Paint()..style = PaintingStyle.fill;
-    paint219fill.color = countryColors.zM ?? backgroundColor;
+    paint219fill.color = countryColors.zM ?? defaultCountryColor;
     canvas.drawPath(path219, paint219fill);
 
     Path path220 = Path();
@@ -9797,7 +9797,7 @@ class WorldMapPainter extends CustomPainter {
     path220.close();
 
     Paint paint220fill = Paint()..style = PaintingStyle.fill;
-    paint220fill.color = countryColors.zM ?? backgroundColor;
+    paint220fill.color = countryColors.zM ?? defaultCountryColor;
     canvas.drawPath(path220, paint220fill);
 
     Path path221 = Path();
@@ -9851,7 +9851,7 @@ class WorldMapPainter extends CustomPainter {
     path221.close();
 
     Paint paint221fill = Paint()..style = PaintingStyle.fill;
-    paint221fill.color = countryColors.sO ?? backgroundColor;
+    paint221fill.color = countryColors.sO ?? defaultCountryColor;
     canvas.drawPath(path221, paint221fill);
 
     Path path222 = Path();
@@ -9879,7 +9879,7 @@ class WorldMapPainter extends CustomPainter {
     path222.close();
 
     Paint paint222fill = Paint()..style = PaintingStyle.fill;
-    paint222fill.color = countryColors.xK ?? backgroundColor;
+    paint222fill.color = countryColors.xK ?? defaultCountryColor;
     canvas.drawPath(path222, paint222fill);
 
     Path path223 = Path();
@@ -9981,7 +9981,7 @@ class WorldMapPainter extends CustomPainter {
     path223.close();
 
     Paint paint223fill = Paint()..style = PaintingStyle.fill;
-    paint223fill.color = countryColors.zA ?? backgroundColor;
+    paint223fill.color = countryColors.zA ?? defaultCountryColor;
     canvas.drawPath(path223, paint223fill);
 
     Path path224 = Path();
@@ -10018,7 +10018,7 @@ class WorldMapPainter extends CustomPainter {
     path224.close();
 
     Paint paint224fill = Paint()..style = PaintingStyle.fill;
-    paint224fill.color = countryColors.nZ ?? backgroundColor;
+    paint224fill.color = countryColors.nZ ?? defaultCountryColor;
     canvas.drawPath(path224, paint224fill);
 
     Path path225 = Path();
@@ -10061,7 +10061,7 @@ class WorldMapPainter extends CustomPainter {
     path225.close();
 
     Paint paint225fill = Paint()..style = PaintingStyle.fill;
-    paint225fill.color = countryColors.nZ ?? backgroundColor;
+    paint225fill.color = countryColors.nZ ?? defaultCountryColor;
     canvas.drawPath(path225, paint225fill);
 
     Path path226 = Path();
@@ -10088,7 +10088,7 @@ class WorldMapPainter extends CustomPainter {
     path226.close();
 
     Paint paint226fill = Paint()..style = PaintingStyle.fill;
-    paint226fill.color = countryColors.cL ?? backgroundColor;
+    paint226fill.color = countryColors.cL ?? defaultCountryColor;
     canvas.drawPath(path226, paint226fill);
 
     Path path227 = Path();
@@ -10188,7 +10188,7 @@ class WorldMapPainter extends CustomPainter {
     path227.close();
 
     Paint paint227fill = Paint()..style = PaintingStyle.fill;
-    paint227fill.color = countryColors.cL ?? backgroundColor;
+    paint227fill.color = countryColors.cL ?? defaultCountryColor;
     canvas.drawPath(path227, paint227fill);
 
     Path path228 = Path();
@@ -10209,7 +10209,7 @@ class WorldMapPainter extends CustomPainter {
     path228.close();
 
     Paint paint228fill = Paint()..style = PaintingStyle.fill;
-    paint228fill.color = countryColors.nL ?? backgroundColor;
+    paint228fill.color = countryColors.nL ?? defaultCountryColor;
     canvas.drawPath(path228, paint228fill);
 
     Path path229 = Path();
@@ -10249,7 +10249,7 @@ class WorldMapPainter extends CustomPainter {
     path229.close();
 
     Paint paint229fill = Paint()..style = PaintingStyle.fill;
-    paint229fill.color = countryColors.pT ?? backgroundColor;
+    paint229fill.color = countryColors.pT ?? defaultCountryColor;
     canvas.drawPath(path229, paint229fill);
 
     Path path230 = Path();
@@ -10278,7 +10278,7 @@ class WorldMapPainter extends CustomPainter {
     path230.close();
 
     Paint paint230fill = Paint()..style = PaintingStyle.fill;
-    paint230fill.color = countryColors.rU ?? backgroundColor;
+    paint230fill.color = countryColors.rU ?? defaultCountryColor;
     canvas.drawPath(path230, paint230fill);
 
     Path path231 = Path();
@@ -10294,7 +10294,7 @@ class WorldMapPainter extends CustomPainter {
     path231.close();
 
     Paint paint231fill = Paint()..style = PaintingStyle.fill;
-    paint231fill.color = countryColors.rU ?? backgroundColor;
+    paint231fill.color = countryColors.rU ?? defaultCountryColor;
     canvas.drawPath(path231, paint231fill);
 
     Path path232 = Path();
@@ -10309,7 +10309,7 @@ class WorldMapPainter extends CustomPainter {
     path232.close();
 
     Paint paint232fill = Paint()..style = PaintingStyle.fill;
-    paint232fill.color = countryColors.rU ?? backgroundColor;
+    paint232fill.color = countryColors.rU ?? defaultCountryColor;
     canvas.drawPath(path232, paint232fill);
 
     Path path233 = Path();
@@ -10323,7 +10323,7 @@ class WorldMapPainter extends CustomPainter {
     path233.close();
 
     Paint paint233fill = Paint()..style = PaintingStyle.fill;
-    paint233fill.color = countryColors.rU ?? backgroundColor;
+    paint233fill.color = countryColors.rU ?? defaultCountryColor;
     canvas.drawPath(path233, paint233fill);
 
     Path path234 = Path();
@@ -10339,7 +10339,7 @@ class WorldMapPainter extends CustomPainter {
     path234.close();
 
     Paint paint234fill = Paint()..style = PaintingStyle.fill;
-    paint234fill.color = countryColors.rU ?? backgroundColor;
+    paint234fill.color = countryColors.rU ?? defaultCountryColor;
     canvas.drawPath(path234, paint234fill);
 
     Path path235 = Path();
@@ -10372,7 +10372,7 @@ class WorldMapPainter extends CustomPainter {
     path235.close();
 
     Paint paint235fill = Paint()..style = PaintingStyle.fill;
-    paint235fill.color = countryColors.rU ?? backgroundColor;
+    paint235fill.color = countryColors.rU ?? defaultCountryColor;
     canvas.drawPath(path235, paint235fill);
 
     Path path236 = Path();
@@ -10825,7 +10825,7 @@ class WorldMapPainter extends CustomPainter {
     path236.close();
 
     Paint paint236fill = Paint()..style = PaintingStyle.fill;
-    paint236fill.color = countryColors.rU ?? backgroundColor;
+    paint236fill.color = countryColors.rU ?? defaultCountryColor;
     canvas.drawPath(path236, paint236fill);
 
     Path path237 = Path();
@@ -10839,7 +10839,7 @@ class WorldMapPainter extends CustomPainter {
     path237.close();
 
     Paint paint237fill = Paint()..style = PaintingStyle.fill;
-    paint237fill.color = countryColors.rU ?? backgroundColor;
+    paint237fill.color = countryColors.rU ?? defaultCountryColor;
     canvas.drawPath(path237, paint237fill);
 
     Path path238 = Path();
@@ -10861,7 +10861,7 @@ class WorldMapPainter extends CustomPainter {
     path238.close();
 
     Paint paint238fill = Paint()..style = PaintingStyle.fill;
-    paint238fill.color = countryColors.rU ?? backgroundColor;
+    paint238fill.color = countryColors.rU ?? defaultCountryColor;
     canvas.drawPath(path238, paint238fill);
 
     Path path239 = Path();
@@ -10879,7 +10879,7 @@ class WorldMapPainter extends CustomPainter {
     path239.close();
 
     Paint paint239fill = Paint()..style = PaintingStyle.fill;
-    paint239fill.color = countryColors.rU ?? backgroundColor;
+    paint239fill.color = countryColors.rU ?? defaultCountryColor;
     canvas.drawPath(path239, paint239fill);
 
     Path path240 = Path();
@@ -10937,7 +10937,7 @@ class WorldMapPainter extends CustomPainter {
     path240.close();
 
     Paint paint240fill = Paint()..style = PaintingStyle.fill;
-    paint240fill.color = countryColors.eS ?? backgroundColor;
+    paint240fill.color = countryColors.eS ?? defaultCountryColor;
     canvas.drawPath(path240, paint240fill);
 
     Path path241 = Path();
@@ -10951,7 +10951,7 @@ class WorldMapPainter extends CustomPainter {
     path241.close();
 
     Paint paint241fill = Paint()..style = PaintingStyle.fill;
-    paint241fill.color = countryColors.fR ?? backgroundColor;
+    paint241fill.color = countryColors.fR ?? defaultCountryColor;
     canvas.drawPath(path241, paint241fill);
 
     Path path242 = Path();
@@ -11006,7 +11006,7 @@ class WorldMapPainter extends CustomPainter {
     path242.close();
 
     Paint paint242fill = Paint()..style = PaintingStyle.fill;
-    paint242fill.color = countryColors.fR ?? backgroundColor;
+    paint242fill.color = countryColors.fR ?? defaultCountryColor;
     canvas.drawPath(path242, paint242fill);
 
     Path path243 = Path();
@@ -11030,7 +11030,7 @@ class WorldMapPainter extends CustomPainter {
     path243.close();
 
     Paint paint243fill = Paint()..style = PaintingStyle.fill;
-    paint243fill.color = countryColors.uS ?? backgroundColor;
+    paint243fill.color = countryColors.uS ?? defaultCountryColor;
     canvas.drawPath(path243, paint243fill);
 
     Path path244 = Path();
@@ -11046,7 +11046,7 @@ class WorldMapPainter extends CustomPainter {
     path244.close();
 
     Paint paint244fill = Paint()..style = PaintingStyle.fill;
-    paint244fill.color = countryColors.uS ?? backgroundColor;
+    paint244fill.color = countryColors.uS ?? defaultCountryColor;
     canvas.drawPath(path244, paint244fill);
 
     Path path245 = Path();
@@ -11058,7 +11058,7 @@ class WorldMapPainter extends CustomPainter {
     path245.close();
 
     Paint paint245fill = Paint()..style = PaintingStyle.fill;
-    paint245fill.color = countryColors.uS ?? backgroundColor;
+    paint245fill.color = countryColors.uS ?? defaultCountryColor;
     canvas.drawPath(path245, paint245fill);
 
     Path path246 = Path();
@@ -11074,7 +11074,7 @@ class WorldMapPainter extends CustomPainter {
     path246.close();
 
     Paint paint246fill = Paint()..style = PaintingStyle.fill;
-    paint246fill.color = countryColors.uS ?? backgroundColor;
+    paint246fill.color = countryColors.uS ?? defaultCountryColor;
     canvas.drawPath(path246, paint246fill);
 
     Path path247 = Path();
@@ -11088,7 +11088,7 @@ class WorldMapPainter extends CustomPainter {
     path247.close();
 
     Paint paint247fill = Paint()..style = PaintingStyle.fill;
-    paint247fill.color = countryColors.uS ?? backgroundColor;
+    paint247fill.color = countryColors.uS ?? defaultCountryColor;
     canvas.drawPath(path247, paint247fill);
 
     Path path248 = Path();
@@ -11370,7 +11370,7 @@ class WorldMapPainter extends CustomPainter {
     path248.close();
 
     Paint paint248fill = Paint()..style = PaintingStyle.fill;
-    paint248fill.color = countryColors.uS ?? backgroundColor;
+    paint248fill.color = countryColors.uS ?? defaultCountryColor;
     canvas.drawPath(path248, paint248fill);
 
     Path path249 = Path();
@@ -11386,7 +11386,7 @@ class WorldMapPainter extends CustomPainter {
     path249.close();
 
     Paint paint249fill = Paint()..style = PaintingStyle.fill;
-    paint249fill.color = countryColors.uS ?? backgroundColor;
+    paint249fill.color = countryColors.uS ?? defaultCountryColor;
     canvas.drawPath(path249, paint249fill);
 
     Path path250 = Path();
@@ -11400,7 +11400,7 @@ class WorldMapPainter extends CustomPainter {
     path250.close();
 
     Paint paint250fill = Paint()..style = PaintingStyle.fill;
-    paint250fill.color = countryColors.uS ?? backgroundColor;
+    paint250fill.color = countryColors.uS ?? defaultCountryColor;
     canvas.drawPath(path250, paint250fill);
 
     Path path251 = Path();
@@ -11419,7 +11419,7 @@ class WorldMapPainter extends CustomPainter {
     path251.close();
 
     Paint paint251fill = Paint()..style = PaintingStyle.fill;
-    paint251fill.color = countryColors.uS ?? backgroundColor;
+    paint251fill.color = countryColors.uS ?? defaultCountryColor;
     canvas.drawPath(path251, paint251fill);
 
     Path path252 = Path();
@@ -11561,7 +11561,7 @@ class WorldMapPainter extends CustomPainter {
     path252.close();
 
     Paint paint252fill = Paint()..style = PaintingStyle.fill;
-    paint252fill.color = countryColors.uS ?? backgroundColor;
+    paint252fill.color = countryColors.uS ?? defaultCountryColor;
     canvas.drawPath(path252, paint252fill);
 
     Path path253 = Path();
@@ -11587,7 +11587,7 @@ class WorldMapPainter extends CustomPainter {
     path253.close();
 
     Paint paint253fill = Paint()..style = PaintingStyle.fill;
-    paint253fill.color = countryColors.gF ?? backgroundColor;
+    paint253fill.color = countryColors.gF ?? defaultCountryColor;
     canvas.drawPath(path253, paint253fill);
 
     Path path254 = Path();
@@ -11602,7 +11602,7 @@ class WorldMapPainter extends CustomPainter {
     path254.close();
 
     Paint paint254fill = Paint()..style = PaintingStyle.fill;
-    paint254fill.color = countryColors.aW ?? backgroundColor;
+    paint254fill.color = countryColors.aW ?? defaultCountryColor;
     canvas.drawPath(path254, paint254fill);
 
     Path path255 = Path();
@@ -11615,7 +11615,7 @@ class WorldMapPainter extends CustomPainter {
     path255.close();
 
     Paint paint255fill = Paint()..style = PaintingStyle.fill;
-    paint255fill.color = countryColors.aI ?? backgroundColor;
+    paint255fill.color = countryColors.aI ?? defaultCountryColor;
     canvas.drawPath(path255, paint255fill);
 
     Path path256 = Path();
@@ -11631,7 +11631,7 @@ class WorldMapPainter extends CustomPainter {
     path256.close();
 
     Paint paint256fill = Paint()..style = PaintingStyle.fill;
-    paint256fill.color = countryColors.aS ?? backgroundColor;
+    paint256fill.color = countryColors.aS ?? defaultCountryColor;
     canvas.drawPath(path256, paint256fill);
 
     Path path257 = Path();
@@ -11643,7 +11643,7 @@ class WorldMapPainter extends CustomPainter {
     path257.close();
 
     Paint paint257fill = Paint()..style = PaintingStyle.fill;
-    paint257fill.color = countryColors.aS ?? backgroundColor;
+    paint257fill.color = countryColors.aS ?? defaultCountryColor;
     canvas.drawPath(path257, paint257fill);
 
     Path path258 = Path();
@@ -11661,7 +11661,7 @@ class WorldMapPainter extends CustomPainter {
     path258.close();
 
     Paint paint258fill = Paint()..style = PaintingStyle.fill;
-    paint258fill.color = countryColors.aG ?? backgroundColor;
+    paint258fill.color = countryColors.aG ?? defaultCountryColor;
     canvas.drawPath(path258, paint258fill);
 
     Path path259 = Path();
@@ -11678,7 +11678,7 @@ class WorldMapPainter extends CustomPainter {
     path259.close();
 
     Paint paint259fill = Paint()..style = PaintingStyle.fill;
-    paint259fill.color = backgroundColor;
+    paint259fill.color = countryColors.aG ?? defaultCountryColor;
     canvas.drawPath(path259, paint259fill);
 
     Path path260 = Path();
@@ -11699,7 +11699,7 @@ class WorldMapPainter extends CustomPainter {
     path260.close();
 
     Paint paint260fill = Paint()..style = PaintingStyle.fill;
-    paint260fill.color = countryColors.bH ?? backgroundColor;
+    paint260fill.color = countryColors.bH ?? defaultCountryColor;
     canvas.drawPath(path260, paint260fill);
 
     Path path261 = Path();
@@ -11730,7 +11730,7 @@ class WorldMapPainter extends CustomPainter {
     path261.close();
 
     Paint paint261fill = Paint()..style = PaintingStyle.fill;
-    paint261fill.color = countryColors.bS ?? backgroundColor;
+    paint261fill.color = countryColors.bS ?? defaultCountryColor;
     canvas.drawPath(path261, paint261fill);
 
     Path path262 = Path();
@@ -11744,7 +11744,7 @@ class WorldMapPainter extends CustomPainter {
     path262.close();
 
     Paint paint262fill = Paint()..style = PaintingStyle.fill;
-    paint262fill.color = countryColors.bS ?? backgroundColor;
+    paint262fill.color = countryColors.bS ?? defaultCountryColor;
     canvas.drawPath(path262, paint262fill);
 
     Path path263 = Path();
@@ -11767,7 +11767,7 @@ class WorldMapPainter extends CustomPainter {
     path263.close();
 
     Paint paint263fill = Paint()..style = PaintingStyle.fill;
-    paint263fill.color = countryColors.bS ?? backgroundColor;
+    paint263fill.color = countryColors.bS ?? defaultCountryColor;
     canvas.drawPath(path263, paint263fill);
 
     Path path264 = Path();
@@ -11798,7 +11798,7 @@ class WorldMapPainter extends CustomPainter {
     path264.close();
 
     Paint paint264fill = Paint()..style = PaintingStyle.fill;
-    paint264fill.color = countryColors.bS ?? backgroundColor;
+    paint264fill.color = countryColors.bS ?? defaultCountryColor;
     canvas.drawPath(path264, paint264fill);
 
     Path path265 = Path();
@@ -11818,7 +11818,7 @@ class WorldMapPainter extends CustomPainter {
     path265.close();
 
     Paint paint265fill = Paint()..style = PaintingStyle.fill;
-    paint265fill.color = countryColors.bS ?? backgroundColor;
+    paint265fill.color = countryColors.bS ?? defaultCountryColor;
     canvas.drawPath(path265, paint265fill);
 
     Path path266 = Path();
@@ -11836,7 +11836,7 @@ class WorldMapPainter extends CustomPainter {
     path266.close();
 
     Paint paint266fill = Paint()..style = PaintingStyle.fill;
-    paint266fill.color = countryColors.bS ?? backgroundColor;
+    paint266fill.color = countryColors.bS ?? defaultCountryColor;
     canvas.drawPath(path266, paint266fill);
 
     Path path267 = Path();
@@ -11869,7 +11869,7 @@ class WorldMapPainter extends CustomPainter {
     path267.close();
 
     Paint paint267fill = Paint()..style = PaintingStyle.fill;
-    paint267fill.color = countryColors.bS ?? backgroundColor;
+    paint267fill.color = countryColors.bS ?? defaultCountryColor;
     canvas.drawPath(path267, paint267fill);
 
     Path path268 = Path();
@@ -11882,7 +11882,7 @@ class WorldMapPainter extends CustomPainter {
     path268.close();
 
     Paint paint268fill = Paint()..style = PaintingStyle.fill;
-    paint268fill.color = countryColors.bS ?? backgroundColor;
+    paint268fill.color = countryColors.bS ?? defaultCountryColor;
     canvas.drawPath(path268, paint268fill);
 
     Path path269 = Path();
@@ -11894,7 +11894,7 @@ class WorldMapPainter extends CustomPainter {
     path269.close();
 
     Paint paint269fill = Paint()..style = PaintingStyle.fill;
-    paint269fill.color = countryColors.bS ?? backgroundColor;
+    paint269fill.color = countryColors.bS ?? defaultCountryColor;
     canvas.drawPath(path269, paint269fill);
 
     Path path270 = Path();
@@ -11909,7 +11909,7 @@ class WorldMapPainter extends CustomPainter {
     path270.close();
 
     Paint paint270fill = Paint()..style = PaintingStyle.fill;
-    paint270fill.color = countryColors.bS ?? backgroundColor;
+    paint270fill.color = countryColors.bS ?? defaultCountryColor;
     canvas.drawPath(path270, paint270fill);
 
     Path path271 = Path();
@@ -11922,7 +11922,7 @@ class WorldMapPainter extends CustomPainter {
     path271.close();
 
     Paint paint271fill = Paint()..style = PaintingStyle.fill;
-    paint271fill.color = countryColors.bS ?? backgroundColor;
+    paint271fill.color = countryColors.bS ?? defaultCountryColor;
     canvas.drawPath(path271, paint271fill);
 
     Path path272 = Path();
@@ -11963,7 +11963,7 @@ class WorldMapPainter extends CustomPainter {
     path272.close();
 
     Paint paint272fill = Paint()..style = PaintingStyle.fill;
-    paint272fill.color = countryColors.bS ?? backgroundColor;
+    paint272fill.color = countryColors.bS ?? defaultCountryColor;
     canvas.drawPath(path272, paint272fill);
 
     Path path273 = Path();
@@ -11994,7 +11994,7 @@ class WorldMapPainter extends CustomPainter {
     path273.close();
 
     Paint paint273fill = Paint()..style = PaintingStyle.fill;
-    paint273fill.color = countryColors.bS ?? backgroundColor;
+    paint273fill.color = countryColors.bS ?? defaultCountryColor;
     canvas.drawPath(path273, paint273fill);
 
     Path path274 = Path();
@@ -12010,7 +12010,7 @@ class WorldMapPainter extends CustomPainter {
     path274.close();
 
     Paint paint274fill = Paint()..style = PaintingStyle.fill;
-    paint274fill.color = countryColors.bS ?? backgroundColor;
+    paint274fill.color = countryColors.bS ?? defaultCountryColor;
     canvas.drawPath(path274, paint274fill);
 
     Path path275 = Path();
@@ -12059,7 +12059,7 @@ class WorldMapPainter extends CustomPainter {
     path275.close();
 
     Paint paint275fill = Paint()..style = PaintingStyle.fill;
-    paint275fill.color = countryColors.bS ?? backgroundColor;
+    paint275fill.color = countryColors.bS ?? defaultCountryColor;
     canvas.drawPath(path275, paint275fill);
 
     Path path276 = Path();
@@ -12102,7 +12102,7 @@ class WorldMapPainter extends CustomPainter {
     path276.close();
 
     Paint paint276fill = Paint()..style = PaintingStyle.fill;
-    paint276fill.color = countryColors.bS ?? backgroundColor;
+    paint276fill.color = countryColors.bS ?? defaultCountryColor;
     canvas.drawPath(path276, paint276fill);
 
     Path path277 = Path();
@@ -12140,7 +12140,7 @@ class WorldMapPainter extends CustomPainter {
     path277.close();
 
     Paint paint277fill = Paint()..style = PaintingStyle.fill;
-    paint277fill.color = countryColors.bS ?? backgroundColor;
+    paint277fill.color = countryColors.bS ?? defaultCountryColor;
     canvas.drawPath(path277, paint277fill);
 
     Path path278 = Path();
@@ -12191,7 +12191,7 @@ class WorldMapPainter extends CustomPainter {
     path278.close();
 
     Paint paint278fill = Paint()..style = PaintingStyle.fill;
-    paint278fill.color = countryColors.bS ?? backgroundColor;
+    paint278fill.color = countryColors.bS ?? defaultCountryColor;
     canvas.drawPath(path278, paint278fill);
 
     Path path279 = Path();
@@ -12202,7 +12202,7 @@ class WorldMapPainter extends CustomPainter {
     path279.close();
 
     Paint paint279fill = Paint()..style = PaintingStyle.fill;
-    paint279fill.color = countryColors.bL ?? backgroundColor;
+    paint279fill.color = countryColors.bL ?? defaultCountryColor;
     canvas.drawPath(path279, paint279fill);
 
     Path path280 = Path();
@@ -12220,7 +12220,7 @@ class WorldMapPainter extends CustomPainter {
     path280.close();
 
     Paint paint280fill = Paint()..style = PaintingStyle.fill;
-    paint280fill.color = countryColors.bM ?? backgroundColor;
+    paint280fill.color = countryColors.bM ?? defaultCountryColor;
     canvas.drawPath(path280, paint280fill);
 
     Path path281 = Path();
@@ -12237,7 +12237,7 @@ class WorldMapPainter extends CustomPainter {
     path281.close();
 
     Paint paint281fill = Paint()..style = PaintingStyle.fill;
-    paint281fill.color = countryColors.bB ?? backgroundColor;
+    paint281fill.color = countryColors.bB ?? defaultCountryColor;
     canvas.drawPath(path281, paint281fill);
 
     Path path282 = Path();
@@ -12251,7 +12251,7 @@ class WorldMapPainter extends CustomPainter {
     path282.close();
 
     Paint paint282fill = Paint()..style = PaintingStyle.fill;
-    paint282fill.color = countryColors.kM ?? backgroundColor;
+    paint282fill.color = countryColors.kM ?? defaultCountryColor;
     canvas.drawPath(path282, paint282fill);
 
     Path path283 = Path();
@@ -12274,7 +12274,7 @@ class WorldMapPainter extends CustomPainter {
     path283.close();
 
     Paint paint283fill = Paint()..style = PaintingStyle.fill;
-    paint283fill.color = countryColors.kM ?? backgroundColor;
+    paint283fill.color = countryColors.kM ?? defaultCountryColor;
     canvas.drawPath(path283, paint283fill);
 
     Path path284 = Path();
@@ -12299,7 +12299,7 @@ class WorldMapPainter extends CustomPainter {
     path284.close();
 
     Paint paint284fill = Paint()..style = PaintingStyle.fill;
-    paint284fill.color = countryColors.kM ?? backgroundColor;
+    paint284fill.color = countryColors.kM ?? defaultCountryColor;
     canvas.drawPath(path284, paint284fill);
 
     Path path285 = Path();
@@ -12312,7 +12312,7 @@ class WorldMapPainter extends CustomPainter {
     path285.close();
 
     Paint paint285fill = Paint()..style = PaintingStyle.fill;
-    paint285fill.color = countryColors.cV ?? backgroundColor;
+    paint285fill.color = countryColors.cV ?? defaultCountryColor;
     canvas.drawPath(path285, paint285fill);
 
     Path path286 = Path();
@@ -12330,7 +12330,7 @@ class WorldMapPainter extends CustomPainter {
     path286.close();
 
     Paint paint286fill = Paint()..style = PaintingStyle.fill;
-    paint286fill.color = countryColors.cV ?? backgroundColor;
+    paint286fill.color = countryColors.cV ?? defaultCountryColor;
     canvas.drawPath(path286, paint286fill);
 
     Path path287 = Path();
@@ -12359,7 +12359,7 @@ class WorldMapPainter extends CustomPainter {
     path287.close();
 
     Paint paint287fill = Paint()..style = PaintingStyle.fill;
-    paint287fill.color = countryColors.cV ?? backgroundColor;
+    paint287fill.color = countryColors.cV ?? defaultCountryColor;
     canvas.drawPath(path287, paint287fill);
 
     Path path288 = Path();
@@ -12375,7 +12375,7 @@ class WorldMapPainter extends CustomPainter {
     path288.close();
 
     Paint paint288fill = Paint()..style = PaintingStyle.fill;
-    paint288fill.color = countryColors.cV ?? backgroundColor;
+    paint288fill.color = countryColors.cV ?? defaultCountryColor;
     canvas.drawPath(path288, paint288fill);
 
     Path path289 = Path();
@@ -12396,7 +12396,7 @@ class WorldMapPainter extends CustomPainter {
     path289.close();
 
     Paint paint289fill = Paint()..style = PaintingStyle.fill;
-    paint289fill.color = countryColors.cV ?? backgroundColor;
+    paint289fill.color = countryColors.cV ?? defaultCountryColor;
     canvas.drawPath(path289, paint289fill);
 
     Path path290 = Path();
@@ -12418,7 +12418,7 @@ class WorldMapPainter extends CustomPainter {
     path290.close();
 
     Paint paint290fill = Paint()..style = PaintingStyle.fill;
-    paint290fill.color = countryColors.cV ?? backgroundColor;
+    paint290fill.color = countryColors.cV ?? defaultCountryColor;
     canvas.drawPath(path290, paint290fill);
 
     Path path291 = Path();
@@ -12437,7 +12437,7 @@ class WorldMapPainter extends CustomPainter {
     path291.close();
 
     Paint paint291fill = Paint()..style = PaintingStyle.fill;
-    paint291fill.color = countryColors.cV ?? backgroundColor;
+    paint291fill.color = countryColors.cV ?? defaultCountryColor;
     canvas.drawPath(path291, paint291fill);
 
     Path path292 = Path();
@@ -12452,7 +12452,7 @@ class WorldMapPainter extends CustomPainter {
     path292.close();
 
     Paint paint292fill = Paint()..style = PaintingStyle.fill;
-    paint292fill.color = countryColors.cV ?? backgroundColor;
+    paint292fill.color = countryColors.cV ?? defaultCountryColor;
     canvas.drawPath(path292, paint292fill);
 
     Path path293 = Path();
@@ -12476,7 +12476,7 @@ class WorldMapPainter extends CustomPainter {
     path293.close();
 
     Paint paint293fill = Paint()..style = PaintingStyle.fill;
-    paint293fill.color = countryColors.cV ?? backgroundColor;
+    paint293fill.color = countryColors.cV ?? defaultCountryColor;
     canvas.drawPath(path293, paint293fill);
 
     Path path294 = Path();
@@ -12500,7 +12500,7 @@ class WorldMapPainter extends CustomPainter {
     path294.close();
 
     Paint paint294fill = Paint()..style = PaintingStyle.fill;
-    paint294fill.color = countryColors.cW ?? backgroundColor;
+    paint294fill.color = countryColors.cW ?? defaultCountryColor;
     canvas.drawPath(path294, paint294fill);
 
     Path path295 = Path();
@@ -12519,7 +12519,7 @@ class WorldMapPainter extends CustomPainter {
     path295.close();
 
     Paint paint295fill = Paint()..style = PaintingStyle.fill;
-    paint295fill.color = countryColors.kY ?? backgroundColor;
+    paint295fill.color = countryColors.kY ?? defaultCountryColor;
     canvas.drawPath(path295, paint295fill);
 
     Path path296 = Path();
@@ -12530,7 +12530,7 @@ class WorldMapPainter extends CustomPainter {
     path296.close();
 
     Paint paint296fill = Paint()..style = PaintingStyle.fill;
-    paint296fill.color = countryColors.kY ?? backgroundColor;
+    paint296fill.color = countryColors.kY ?? defaultCountryColor;
     canvas.drawPath(path296, paint296fill);
 
     Path path297 = Path();
@@ -12542,7 +12542,7 @@ class WorldMapPainter extends CustomPainter {
     path297.close();
 
     Paint paint297fill = Paint()..style = PaintingStyle.fill;
-    paint297fill.color = countryColors.kY ?? backgroundColor;
+    paint297fill.color = countryColors.kY ?? defaultCountryColor;
     canvas.drawPath(path297, paint297fill);
 
     Path path298 = Path();
@@ -12560,7 +12560,7 @@ class WorldMapPainter extends CustomPainter {
     path298.close();
 
     Paint paint298fill = Paint()..style = PaintingStyle.fill;
-    paint298fill.color = countryColors.cY ?? backgroundColor;
+    paint298fill.color = countryColors.cY ?? defaultCountryColor;
     canvas.drawPath(path298, paint298fill);
 
     Path path299 = Path();
@@ -12619,7 +12619,7 @@ class WorldMapPainter extends CustomPainter {
     path299.close();
 
     Paint paint299fill = Paint()..style = PaintingStyle.fill;
-    paint299fill.color = countryColors.cY ?? backgroundColor;
+    paint299fill.color = countryColors.cY ?? defaultCountryColor;
     canvas.drawPath(path299, paint299fill);
 
     Path path300 = Path();
@@ -12643,7 +12643,7 @@ class WorldMapPainter extends CustomPainter {
     path300.close();
 
     Paint paint300fill = Paint()..style = PaintingStyle.fill;
-    paint300fill.color = countryColors.dM ?? backgroundColor;
+    paint300fill.color = countryColors.dM ?? defaultCountryColor;
     canvas.drawPath(path300, paint300fill);
 
     Path path301 = Path();
@@ -12657,7 +12657,7 @@ class WorldMapPainter extends CustomPainter {
     path301.close();
 
     Paint paint301fill = Paint()..style = PaintingStyle.fill;
-    paint301fill.color = countryColors.fK ?? backgroundColor;
+    paint301fill.color = countryColors.fK ?? defaultCountryColor;
     canvas.drawPath(path301, paint301fill);
 
     Path path302 = Path();
@@ -12672,7 +12672,7 @@ class WorldMapPainter extends CustomPainter {
     path302.close();
 
     Paint paint302fill = Paint()..style = PaintingStyle.fill;
-    paint302fill.color = countryColors.fK ?? backgroundColor;
+    paint302fill.color = countryColors.fK ?? defaultCountryColor;
     canvas.drawPath(path302, paint302fill);
 
     Path path303 = Path();
@@ -12686,7 +12686,7 @@ class WorldMapPainter extends CustomPainter {
     path303.close();
 
     Paint paint303fill = Paint()..style = PaintingStyle.fill;
-    paint303fill.color = countryColors.fK ?? backgroundColor;
+    paint303fill.color = countryColors.fK ?? defaultCountryColor;
     canvas.drawPath(path303, paint303fill);
 
     Path path304 = Path();
@@ -12709,7 +12709,7 @@ class WorldMapPainter extends CustomPainter {
     path304.close();
 
     Paint paint304fill = Paint()..style = PaintingStyle.fill;
-    paint304fill.color = countryColors.fK ?? backgroundColor;
+    paint304fill.color = countryColors.fK ?? defaultCountryColor;
     canvas.drawPath(path304, paint304fill);
 
     Path path305 = Path();
@@ -12808,7 +12808,7 @@ class WorldMapPainter extends CustomPainter {
     path305.close();
 
     Paint paint305fill = Paint()..style = PaintingStyle.fill;
-    paint305fill.color = countryColors.fK ?? backgroundColor;
+    paint305fill.color = countryColors.fK ?? defaultCountryColor;
     canvas.drawPath(path305, paint305fill);
 
     Path path306 = Path();
@@ -12821,7 +12821,7 @@ class WorldMapPainter extends CustomPainter {
     path306.close();
 
     Paint paint306fill = Paint()..style = PaintingStyle.fill;
-    paint306fill.color = countryColors.fK ?? backgroundColor;
+    paint306fill.color = countryColors.fK ?? defaultCountryColor;
     canvas.drawPath(path306, paint306fill);
 
     Path path307 = Path();
@@ -12833,7 +12833,7 @@ class WorldMapPainter extends CustomPainter {
     path307.close();
 
     Paint paint307fill = Paint()..style = PaintingStyle.fill;
-    paint307fill.color = countryColors.fK ?? backgroundColor;
+    paint307fill.color = countryColors.fK ?? defaultCountryColor;
     canvas.drawPath(path307, paint307fill);
 
     Path path308 = Path();
@@ -12852,7 +12852,7 @@ class WorldMapPainter extends CustomPainter {
     path308.close();
 
     Paint paint308fill = Paint()..style = PaintingStyle.fill;
-    paint308fill.color = countryColors.fK ?? backgroundColor;
+    paint308fill.color = countryColors.fK ?? defaultCountryColor;
     canvas.drawPath(path308, paint308fill);
 
     Path path309 = Path();
@@ -12975,7 +12975,7 @@ class WorldMapPainter extends CustomPainter {
     path309.close();
 
     Paint paint309fill = Paint()..style = PaintingStyle.fill;
-    paint309fill.color = countryColors.fK ?? backgroundColor;
+    paint309fill.color = countryColors.fK ?? defaultCountryColor;
     canvas.drawPath(path309, paint309fill);
 
     Path path310 = Path();
@@ -12994,7 +12994,7 @@ class WorldMapPainter extends CustomPainter {
     path310.close();
 
     Paint paint310fill = Paint()..style = PaintingStyle.fill;
-    paint310fill.color = countryColors.fK ?? backgroundColor;
+    paint310fill.color = countryColors.fK ?? defaultCountryColor;
     canvas.drawPath(path310, paint310fill);
 
     Path path311 = Path();
@@ -13005,7 +13005,7 @@ class WorldMapPainter extends CustomPainter {
     path311.close();
 
     Paint paint311fill = Paint()..style = PaintingStyle.fill;
-    paint311fill.color = countryColors.fK ?? backgroundColor;
+    paint311fill.color = countryColors.fK ?? defaultCountryColor;
     canvas.drawPath(path311, paint311fill);
 
     Path path312 = Path();
@@ -13024,7 +13024,7 @@ class WorldMapPainter extends CustomPainter {
     path312.close();
 
     Paint paint312fill = Paint()..style = PaintingStyle.fill;
-    paint312fill.color = countryColors.fO ?? backgroundColor;
+    paint312fill.color = countryColors.fO ?? defaultCountryColor;
     canvas.drawPath(path312, paint312fill);
 
     Path path313 = Path();
@@ -13040,7 +13040,7 @@ class WorldMapPainter extends CustomPainter {
     path313.close();
 
     Paint paint313fill = Paint()..style = PaintingStyle.fill;
-    paint313fill.color = countryColors.fO ?? backgroundColor;
+    paint313fill.color = countryColors.fO ?? defaultCountryColor;
     canvas.drawPath(path313, paint313fill);
 
     Path path314 = Path();
@@ -13075,7 +13075,7 @@ class WorldMapPainter extends CustomPainter {
     path314.close();
 
     Paint paint314fill = Paint()..style = PaintingStyle.fill;
-    paint314fill.color = countryColors.fO ?? backgroundColor;
+    paint314fill.color = countryColors.fO ?? defaultCountryColor;
     canvas.drawPath(path314, paint314fill);
 
     Path path315 = Path();
@@ -13086,7 +13086,7 @@ class WorldMapPainter extends CustomPainter {
     path315.close();
 
     Paint paint315fill = Paint()..style = PaintingStyle.fill;
-    paint315fill.color = countryColors.fO ?? backgroundColor;
+    paint315fill.color = countryColors.fO ?? defaultCountryColor;
     canvas.drawPath(path315, paint315fill);
 
     Path path316 = Path();
@@ -13107,7 +13107,7 @@ class WorldMapPainter extends CustomPainter {
     path316.close();
 
     Paint paint316fill = Paint()..style = PaintingStyle.fill;
-    paint316fill.color = countryColors.fO ?? backgroundColor;
+    paint316fill.color = countryColors.fO ?? defaultCountryColor;
     canvas.drawPath(path316, paint316fill);
 
     Path path317 = Path();
@@ -13123,7 +13123,7 @@ class WorldMapPainter extends CustomPainter {
     path317.close();
 
     Paint paint317fill = Paint()..style = PaintingStyle.fill;
-    paint317fill.color = countryColors.fO ?? backgroundColor;
+    paint317fill.color = countryColors.fO ?? defaultCountryColor;
     canvas.drawPath(path317, paint317fill);
 
     Path path318 = Path();
@@ -13136,7 +13136,7 @@ class WorldMapPainter extends CustomPainter {
     path318.close();
 
     Paint paint318fill = Paint()..style = PaintingStyle.fill;
-    paint318fill.color = countryColors.fO ?? backgroundColor;
+    paint318fill.color = countryColors.fO ?? defaultCountryColor;
     canvas.drawPath(path318, paint318fill);
 
     Path path319 = Path();
@@ -13149,7 +13149,7 @@ class WorldMapPainter extends CustomPainter {
     path319.close();
 
     Paint paint319fill = Paint()..style = PaintingStyle.fill;
-    paint319fill.color = countryColors.fM ?? backgroundColor;
+    paint319fill.color = countryColors.fM ?? defaultCountryColor;
     canvas.drawPath(path319, paint319fill);
 
     Path path320 = Path();
@@ -13169,7 +13169,7 @@ class WorldMapPainter extends CustomPainter {
     path320.close();
 
     Paint paint320fill = Paint()..style = PaintingStyle.fill;
-    paint320fill.color = countryColors.fM ?? backgroundColor;
+    paint320fill.color = countryColors.fM ?? defaultCountryColor;
     canvas.drawPath(path320, paint320fill);
 
     Path path321 = Path();
@@ -13184,7 +13184,7 @@ class WorldMapPainter extends CustomPainter {
     path321.close();
 
     Paint paint321fill = Paint()..style = PaintingStyle.fill;
-    paint321fill.color = countryColors.fM ?? backgroundColor;
+    paint321fill.color = countryColors.fM ?? defaultCountryColor;
     canvas.drawPath(path321, paint321fill);
 
     Path path322 = Path();
@@ -13201,7 +13201,7 @@ class WorldMapPainter extends CustomPainter {
     path322.close();
 
     Paint paint322fill = Paint()..style = PaintingStyle.fill;
-    paint322fill.color = countryColors.gD ?? backgroundColor;
+    paint322fill.color = countryColors.gD ?? defaultCountryColor;
     canvas.drawPath(path322, paint322fill);
 
     Path path323 = Path();
@@ -13224,7 +13224,7 @@ class WorldMapPainter extends CustomPainter {
     path323.close();
 
     Paint paint323fill = Paint()..style = PaintingStyle.fill;
-    paint323fill.color = countryColors.gU ?? backgroundColor;
+    paint323fill.color = countryColors.gU ?? defaultCountryColor;
     canvas.drawPath(path323, paint323fill);
 
     Path path324 = Path();
@@ -13238,7 +13238,7 @@ class WorldMapPainter extends CustomPainter {
     path324.close();
 
     Paint paint324fill = Paint()..style = PaintingStyle.fill;
-    paint324fill.color = countryColors.kN ?? backgroundColor;
+    paint324fill.color = countryColors.kN ?? defaultCountryColor;
     canvas.drawPath(path324, paint324fill);
 
     Path path325 = Path();
@@ -13253,7 +13253,7 @@ class WorldMapPainter extends CustomPainter {
     path325.close();
 
     Paint paint325fill = Paint()..style = PaintingStyle.fill;
-    paint325fill.color = countryColors.kN ?? backgroundColor;
+    paint325fill.color = countryColors.kN ?? defaultCountryColor;
     canvas.drawPath(path325, paint325fill);
 
     Path path326 = Path();
@@ -13272,7 +13272,7 @@ class WorldMapPainter extends CustomPainter {
     path326.close();
 
     Paint paint326fill = Paint()..style = PaintingStyle.fill;
-    paint326fill.color = countryColors.lC ?? backgroundColor;
+    paint326fill.color = countryColors.lC ?? defaultCountryColor;
     canvas.drawPath(path326, paint326fill);
 
     Path path327 = Path();
@@ -13284,7 +13284,7 @@ class WorldMapPainter extends CustomPainter {
     path327.close();
 
     Paint paint327fill = Paint()..style = PaintingStyle.fill;
-    paint327fill.color = countryColors.mF ?? backgroundColor;
+    paint327fill.color = countryColors.mF ?? defaultCountryColor;
     canvas.drawPath(path327, paint327fill);
 
     Path path328 = Path();
@@ -13296,7 +13296,7 @@ class WorldMapPainter extends CustomPainter {
     path328.close();
 
     Paint paint328fill = Paint()..style = PaintingStyle.fill;
-    paint328fill.color = countryColors.mV ?? backgroundColor;
+    paint328fill.color = countryColors.mV ?? defaultCountryColor;
     canvas.drawPath(path328, paint328fill);
 
     Path path329 = Path();
@@ -13307,7 +13307,7 @@ class WorldMapPainter extends CustomPainter {
     path329.close();
 
     Paint paint329fill = Paint()..style = PaintingStyle.fill;
-    paint329fill.color = countryColors.mH ?? backgroundColor;
+    paint329fill.color = countryColors.mH ?? defaultCountryColor;
     canvas.drawPath(path329, paint329fill);
 
     Path path330 = Path();
@@ -13324,7 +13324,7 @@ class WorldMapPainter extends CustomPainter {
     path330.close();
 
     Paint paint330fill = Paint()..style = PaintingStyle.fill;
-    paint330fill.color = countryColors.mT ?? backgroundColor;
+    paint330fill.color = countryColors.mT ?? defaultCountryColor;
     canvas.drawPath(path330, paint330fill);
 
     Path path331 = Path();
@@ -13337,7 +13337,7 @@ class WorldMapPainter extends CustomPainter {
     path331.close();
 
     Paint paint331fill = Paint()..style = PaintingStyle.fill;
-    paint331fill.color = countryColors.mT ?? backgroundColor;
+    paint331fill.color = countryColors.mT ?? defaultCountryColor;
     canvas.drawPath(path331, paint331fill);
 
     Path path332 = Path();
@@ -13351,7 +13351,7 @@ class WorldMapPainter extends CustomPainter {
     path332.close();
 
     Paint paint332fill = Paint()..style = PaintingStyle.fill;
-    paint332fill.color = countryColors.mP ?? backgroundColor;
+    paint332fill.color = countryColors.mP ?? defaultCountryColor;
     canvas.drawPath(path332, paint332fill);
 
     Path path333 = Path();
@@ -13366,7 +13366,7 @@ class WorldMapPainter extends CustomPainter {
     path333.close();
 
     Paint paint333fill = Paint()..style = PaintingStyle.fill;
-    paint333fill.color = countryColors.mP ?? backgroundColor;
+    paint333fill.color = countryColors.mP ?? defaultCountryColor;
     canvas.drawPath(path333, paint333fill);
 
     Path path334 = Path();
@@ -13382,7 +13382,7 @@ class WorldMapPainter extends CustomPainter {
     path334.close();
 
     Paint paint334fill = Paint()..style = PaintingStyle.fill;
-    paint334fill.color = countryColors.mP ?? backgroundColor;
+    paint334fill.color = countryColors.mP ?? defaultCountryColor;
     canvas.drawPath(path334, paint334fill);
 
     Path path335 = Path();
@@ -13394,7 +13394,7 @@ class WorldMapPainter extends CustomPainter {
     path335.close();
 
     Paint paint335fill = Paint()..style = PaintingStyle.fill;
-    paint335fill.color = countryColors.mP ?? backgroundColor;
+    paint335fill.color = countryColors.mP ?? defaultCountryColor;
     canvas.drawPath(path335, paint335fill);
 
     Path path336 = Path();
@@ -13407,7 +13407,7 @@ class WorldMapPainter extends CustomPainter {
     path336.close();
 
     Paint paint336fill = Paint()..style = PaintingStyle.fill;
-    paint336fill.color = countryColors.mP ?? backgroundColor;
+    paint336fill.color = countryColors.mP ?? defaultCountryColor;
     canvas.drawPath(path336, paint336fill);
 
     Path path337 = Path();
@@ -13420,7 +13420,7 @@ class WorldMapPainter extends CustomPainter {
     path337.close();
 
     Paint paint337fill = Paint()..style = PaintingStyle.fill;
-    paint337fill.color = countryColors.mP ?? backgroundColor;
+    paint337fill.color = countryColors.mP ?? defaultCountryColor;
     canvas.drawPath(path337, paint337fill);
 
     Path path338 = Path();
@@ -13434,7 +13434,7 @@ class WorldMapPainter extends CustomPainter {
     path338.close();
 
     Paint paint338fill = Paint()..style = PaintingStyle.fill;
-    paint338fill.color = countryColors.mS ?? backgroundColor;
+    paint338fill.color = countryColors.mS ?? defaultCountryColor;
     canvas.drawPath(path338, paint338fill);
 
     Path path339 = Path();
@@ -13462,7 +13462,7 @@ class WorldMapPainter extends CustomPainter {
     path339.close();
 
     Paint paint339fill = Paint()..style = PaintingStyle.fill;
-    paint339fill.color = countryColors.mU ?? backgroundColor;
+    paint339fill.color = countryColors.mU ?? defaultCountryColor;
     canvas.drawPath(path339, paint339fill);
 
     Path path340 = Path();
@@ -13476,7 +13476,7 @@ class WorldMapPainter extends CustomPainter {
     path340.close();
 
     Paint paint340fill = Paint()..style = PaintingStyle.fill;
-    paint340fill.color = countryColors.mU ?? backgroundColor;
+    paint340fill.color = countryColors.mU ?? defaultCountryColor;
     canvas.drawPath(path340, paint340fill);
 
     Path path341 = Path();
@@ -13491,7 +13491,7 @@ class WorldMapPainter extends CustomPainter {
     path341.close();
 
     Paint paint341fill = Paint()..style = PaintingStyle.fill;
-    paint341fill.color = countryColors.nC ?? backgroundColor;
+    paint341fill.color = countryColors.nC ?? defaultCountryColor;
     canvas.drawPath(path341, paint341fill);
 
     Path path342 = Path();
@@ -13517,7 +13517,7 @@ class WorldMapPainter extends CustomPainter {
     path342.close();
 
     Paint paint342fill = Paint()..style = PaintingStyle.fill;
-    paint342fill.color = countryColors.nC ?? backgroundColor;
+    paint342fill.color = countryColors.nC ?? defaultCountryColor;
     canvas.drawPath(path342, paint342fill);
 
     Path path343 = Path();
@@ -13554,7 +13554,7 @@ class WorldMapPainter extends CustomPainter {
     path343.close();
 
     Paint paint343fill = Paint()..style = PaintingStyle.fill;
-    paint343fill.color = countryColors.nC ?? backgroundColor;
+    paint343fill.color = countryColors.nC ?? defaultCountryColor;
     canvas.drawPath(path343, paint343fill);
 
     Path path344 = Path();
@@ -13571,7 +13571,7 @@ class WorldMapPainter extends CustomPainter {
     path344.close();
 
     Paint paint344fill = Paint()..style = PaintingStyle.fill;
-    paint344fill.color = countryColors.nC ?? backgroundColor;
+    paint344fill.color = countryColors.nC ?? defaultCountryColor;
     canvas.drawPath(path344, paint344fill);
 
     Path path345 = Path();
@@ -13583,7 +13583,7 @@ class WorldMapPainter extends CustomPainter {
     path345.close();
 
     Paint paint345fill = Paint()..style = PaintingStyle.fill;
-    paint345fill.color = countryColors.nC ?? backgroundColor;
+    paint345fill.color = countryColors.nC ?? defaultCountryColor;
     canvas.drawPath(path345, paint345fill);
 
     Path path346 = Path();
@@ -13697,7 +13697,7 @@ class WorldMapPainter extends CustomPainter {
     path346.close();
 
     Paint paint346fill = Paint()..style = PaintingStyle.fill;
-    paint346fill.color = countryColors.nC ?? backgroundColor;
+    paint346fill.color = countryColors.nC ?? defaultCountryColor;
     canvas.drawPath(path346, paint346fill);
 
     Path path347 = Path();
@@ -13708,7 +13708,7 @@ class WorldMapPainter extends CustomPainter {
     path347.close();
 
     Paint paint347fill = Paint()..style = PaintingStyle.fill;
-    paint347fill.color = countryColors.nC ?? backgroundColor;
+    paint347fill.color = countryColors.nC ?? defaultCountryColor;
     canvas.drawPath(path347, paint347fill);
 
     Path path348 = Path();
@@ -13720,7 +13720,7 @@ class WorldMapPainter extends CustomPainter {
     path348.close();
 
     Paint paint348fill = Paint()..style = PaintingStyle.fill;
-    paint348fill.color = countryColors.nC ?? backgroundColor;
+    paint348fill.color = countryColors.nC ?? defaultCountryColor;
     canvas.drawPath(path348, paint348fill);
 
     Path path349 = Path();
@@ -13732,7 +13732,7 @@ class WorldMapPainter extends CustomPainter {
     path349.close();
 
     Paint paint349fill = Paint()..style = PaintingStyle.fill;
-    paint349fill.color = countryColors.nR ?? backgroundColor;
+    paint349fill.color = countryColors.nR ?? defaultCountryColor;
     canvas.drawPath(path349, paint349fill);
 
     Path path350 = Path();
@@ -13751,7 +13751,7 @@ class WorldMapPainter extends CustomPainter {
     path350.close();
 
     Paint paint350fill = Paint()..style = PaintingStyle.fill;
-    paint350fill.color = countryColors.pW ?? backgroundColor;
+    paint350fill.color = countryColors.pW ?? defaultCountryColor;
     canvas.drawPath(path350, paint350fill);
 
     Path path351 = Path();
@@ -13764,7 +13764,7 @@ class WorldMapPainter extends CustomPainter {
     path351.close();
 
     Paint paint351fill = Paint()..style = PaintingStyle.fill;
-    paint351fill.color = countryColors.pR ?? backgroundColor;
+    paint351fill.color = countryColors.pR ?? defaultCountryColor;
     canvas.drawPath(path351, paint351fill);
 
     Path path352 = Path();
@@ -13780,7 +13780,7 @@ class WorldMapPainter extends CustomPainter {
     path352.close();
 
     Paint paint352fill = Paint()..style = PaintingStyle.fill;
-    paint352fill.color = countryColors.pR ?? backgroundColor;
+    paint352fill.color = countryColors.pR ?? defaultCountryColor;
     canvas.drawPath(path352, paint352fill);
 
     Path path353 = Path();
@@ -13841,7 +13841,7 @@ class WorldMapPainter extends CustomPainter {
     path353.close();
 
     Paint paint353fill = Paint()..style = PaintingStyle.fill;
-    paint353fill.color = countryColors.pR ?? backgroundColor;
+    paint353fill.color = countryColors.pR ?? defaultCountryColor;
     canvas.drawPath(path353, paint353fill);
 
     Path path354 = Path();
@@ -13854,7 +13854,7 @@ class WorldMapPainter extends CustomPainter {
     path354.close();
 
     Paint paint354fill = Paint()..style = PaintingStyle.fill;
-    paint354fill.color = countryColors.pF ?? backgroundColor;
+    paint354fill.color = countryColors.pF ?? defaultCountryColor;
     canvas.drawPath(path354, paint354fill);
 
     Path path355 = Path();
@@ -13866,7 +13866,7 @@ class WorldMapPainter extends CustomPainter {
     path355.close();
 
     Paint paint355fill = Paint()..style = PaintingStyle.fill;
-    paint355fill.color = countryColors.pF ?? backgroundColor;
+    paint355fill.color = countryColors.pF ?? defaultCountryColor;
     canvas.drawPath(path355, paint355fill);
 
     Path path356 = Path();
@@ -13881,7 +13881,7 @@ class WorldMapPainter extends CustomPainter {
     path356.close();
 
     Paint paint356fill = Paint()..style = PaintingStyle.fill;
-    paint356fill.color = countryColors.pF ?? backgroundColor;
+    paint356fill.color = countryColors.pF ?? defaultCountryColor;
     canvas.drawPath(path356, paint356fill);
 
     Path path357 = Path();
@@ -13909,7 +13909,7 @@ class WorldMapPainter extends CustomPainter {
     path357.close();
 
     Paint paint357fill = Paint()..style = PaintingStyle.fill;
-    paint357fill.color = countryColors.pF ?? backgroundColor;
+    paint357fill.color = countryColors.pF ?? defaultCountryColor;
     canvas.drawPath(path357, paint357fill);
 
     Path path358 = Path();
@@ -13922,7 +13922,7 @@ class WorldMapPainter extends CustomPainter {
     path358.close();
 
     Paint paint358fill = Paint()..style = PaintingStyle.fill;
-    paint358fill.color = countryColors.pF ?? backgroundColor;
+    paint358fill.color = countryColors.pF ?? defaultCountryColor;
     canvas.drawPath(path358, paint358fill);
 
     Path path359 = Path();
@@ -13934,7 +13934,7 @@ class WorldMapPainter extends CustomPainter {
     path359.close();
 
     Paint paint359fill = Paint()..style = PaintingStyle.fill;
-    paint359fill.color = countryColors.pF ?? backgroundColor;
+    paint359fill.color = countryColors.pF ?? defaultCountryColor;
     canvas.drawPath(path359, paint359fill);
 
     Path path360 = Path();
@@ -13948,7 +13948,7 @@ class WorldMapPainter extends CustomPainter {
     path360.close();
 
     Paint paint360fill = Paint()..style = PaintingStyle.fill;
-    paint360fill.color = countryColors.pF ?? backgroundColor;
+    paint360fill.color = countryColors.pF ?? defaultCountryColor;
     canvas.drawPath(path360, paint360fill);
 
     Path path361 = Path();
@@ -13961,7 +13961,7 @@ class WorldMapPainter extends CustomPainter {
     path361.close();
 
     Paint paint361fill = Paint()..style = PaintingStyle.fill;
-    paint361fill.color = countryColors.pF ?? backgroundColor;
+    paint361fill.color = countryColors.pF ?? defaultCountryColor;
     canvas.drawPath(path361, paint361fill);
 
     Path path362 = Path();
@@ -13972,7 +13972,7 @@ class WorldMapPainter extends CustomPainter {
     path362.close();
 
     Paint paint362fill = Paint()..style = PaintingStyle.fill;
-    paint362fill.color = countryColors.pF ?? backgroundColor;
+    paint362fill.color = countryColors.pF ?? defaultCountryColor;
     canvas.drawPath(path362, paint362fill);
 
     Path path363 = Path();
@@ -13986,7 +13986,7 @@ class WorldMapPainter extends CustomPainter {
     path363.close();
 
     Paint paint363fill = Paint()..style = PaintingStyle.fill;
-    paint363fill.color = countryColors.pF ?? backgroundColor;
+    paint363fill.color = countryColors.pF ?? defaultCountryColor;
     canvas.drawPath(path363, paint363fill);
 
     Path path364 = Path();
@@ -14000,7 +14000,7 @@ class WorldMapPainter extends CustomPainter {
     path364.close();
 
     Paint paint364fill = Paint()..style = PaintingStyle.fill;
-    paint364fill.color = countryColors.pF ?? backgroundColor;
+    paint364fill.color = countryColors.pF ?? defaultCountryColor;
     canvas.drawPath(path364, paint364fill);
 
     Path path365 = Path();
@@ -14019,7 +14019,7 @@ class WorldMapPainter extends CustomPainter {
     path365.close();
 
     Paint paint365fill = Paint()..style = PaintingStyle.fill;
-    paint365fill.color = countryColors.pF ?? backgroundColor;
+    paint365fill.color = countryColors.pF ?? defaultCountryColor;
     canvas.drawPath(path365, paint365fill);
 
     Path path366 = Path();
@@ -14033,7 +14033,7 @@ class WorldMapPainter extends CustomPainter {
     path366.close();
 
     Paint paint366fill = Paint()..style = PaintingStyle.fill;
-    paint366fill.color = countryColors.pF ?? backgroundColor;
+    paint366fill.color = countryColors.pF ?? defaultCountryColor;
     canvas.drawPath(path366, paint366fill);
 
     Path path367 = Path();
@@ -14046,7 +14046,7 @@ class WorldMapPainter extends CustomPainter {
     path367.close();
 
     Paint paint367fill = Paint()..style = PaintingStyle.fill;
-    paint367fill.color = countryColors.pF ?? backgroundColor;
+    paint367fill.color = countryColors.pF ?? defaultCountryColor;
     canvas.drawPath(path367, paint367fill);
 
     Path path368 = Path();
@@ -14062,7 +14062,7 @@ class WorldMapPainter extends CustomPainter {
     path368.close();
 
     Paint paint368fill = Paint()..style = PaintingStyle.fill;
-    paint368fill.color = countryColors.pF ?? backgroundColor;
+    paint368fill.color = countryColors.pF ?? defaultCountryColor;
     canvas.drawPath(path368, paint368fill);
 
     Path path369 = Path();
@@ -14078,7 +14078,7 @@ class WorldMapPainter extends CustomPainter {
     path369.close();
 
     Paint paint369fill = Paint()..style = PaintingStyle.fill;
-    paint369fill.color = countryColors.sB ?? backgroundColor;
+    paint369fill.color = countryColors.sB ?? defaultCountryColor;
     canvas.drawPath(path369, paint369fill);
 
     Path path370 = Path();
@@ -14106,7 +14106,7 @@ class WorldMapPainter extends CustomPainter {
     path370.close();
 
     Paint paint370fill = Paint()..style = PaintingStyle.fill;
-    paint370fill.color = countryColors.sB ?? backgroundColor;
+    paint370fill.color = countryColors.sB ?? defaultCountryColor;
     canvas.drawPath(path370, paint370fill);
 
     Path path371 = Path();
@@ -14119,7 +14119,7 @@ class WorldMapPainter extends CustomPainter {
     path371.close();
 
     Paint paint371fill = Paint()..style = PaintingStyle.fill;
-    paint371fill.color = countryColors.sB ?? backgroundColor;
+    paint371fill.color = countryColors.sB ?? defaultCountryColor;
     canvas.drawPath(path371, paint371fill);
 
     Path path372 = Path();
@@ -14143,7 +14143,7 @@ class WorldMapPainter extends CustomPainter {
     path372.close();
 
     Paint paint372fill = Paint()..style = PaintingStyle.fill;
-    paint372fill.color = countryColors.sB ?? backgroundColor;
+    paint372fill.color = countryColors.sB ?? defaultCountryColor;
     canvas.drawPath(path372, paint372fill);
 
     Path path373 = Path();
@@ -14192,7 +14192,7 @@ class WorldMapPainter extends CustomPainter {
     path373.close();
 
     Paint paint373fill = Paint()..style = PaintingStyle.fill;
-    paint373fill.color = countryColors.sB ?? backgroundColor;
+    paint373fill.color = countryColors.sB ?? defaultCountryColor;
     canvas.drawPath(path373, paint373fill);
 
     Path path374 = Path();
@@ -14205,7 +14205,7 @@ class WorldMapPainter extends CustomPainter {
     path374.close();
 
     Paint paint374fill = Paint()..style = PaintingStyle.fill;
-    paint374fill.color = countryColors.sB ?? backgroundColor;
+    paint374fill.color = countryColors.sB ?? defaultCountryColor;
     canvas.drawPath(path374, paint374fill);
 
     Path path375 = Path();
@@ -14225,7 +14225,7 @@ class WorldMapPainter extends CustomPainter {
     path375.close();
 
     Paint paint375fill = Paint()..style = PaintingStyle.fill;
-    paint375fill.color = countryColors.sB ?? backgroundColor;
+    paint375fill.color = countryColors.sB ?? defaultCountryColor;
     canvas.drawPath(path375, paint375fill);
 
     Path path376 = Path();
@@ -14277,7 +14277,7 @@ class WorldMapPainter extends CustomPainter {
     path376.close();
 
     Paint paint376fill = Paint()..style = PaintingStyle.fill;
-    paint376fill.color = countryColors.sB ?? backgroundColor;
+    paint376fill.color = countryColors.sB ?? defaultCountryColor;
     canvas.drawPath(path376, paint376fill);
 
     Path path377 = Path();
@@ -14290,7 +14290,7 @@ class WorldMapPainter extends CustomPainter {
     path377.close();
 
     Paint paint377fill = Paint()..style = PaintingStyle.fill;
-    paint377fill.color = countryColors.sB ?? backgroundColor;
+    paint377fill.color = countryColors.sB ?? defaultCountryColor;
     canvas.drawPath(path377, paint377fill);
 
     Path path378 = Path();
@@ -14308,7 +14308,7 @@ class WorldMapPainter extends CustomPainter {
     path378.close();
 
     Paint paint378fill = Paint()..style = PaintingStyle.fill;
-    paint378fill.color = countryColors.sB ?? backgroundColor;
+    paint378fill.color = countryColors.sB ?? defaultCountryColor;
     canvas.drawPath(path378, paint378fill);
 
     Path path379 = Path();
@@ -14322,7 +14322,7 @@ class WorldMapPainter extends CustomPainter {
     path379.close();
 
     Paint paint379fill = Paint()..style = PaintingStyle.fill;
-    paint379fill.color = countryColors.sB ?? backgroundColor;
+    paint379fill.color = countryColors.sB ?? defaultCountryColor;
     canvas.drawPath(path379, paint379fill);
 
     Path path380 = Path();
@@ -14335,7 +14335,7 @@ class WorldMapPainter extends CustomPainter {
     path380.close();
 
     Paint paint380fill = Paint()..style = PaintingStyle.fill;
-    paint380fill.color = countryColors.sB ?? backgroundColor;
+    paint380fill.color = countryColors.sB ?? defaultCountryColor;
     canvas.drawPath(path380, paint380fill);
 
     Path path381 = Path();
@@ -14349,7 +14349,7 @@ class WorldMapPainter extends CustomPainter {
     path381.close();
 
     Paint paint381fill = Paint()..style = PaintingStyle.fill;
-    paint381fill.color = countryColors.sB ?? backgroundColor;
+    paint381fill.color = countryColors.sB ?? defaultCountryColor;
     canvas.drawPath(path381, paint381fill);
 
     Path path382 = Path();
@@ -14372,7 +14372,7 @@ class WorldMapPainter extends CustomPainter {
     path382.close();
 
     Paint paint382fill = Paint()..style = PaintingStyle.fill;
-    paint382fill.color = countryColors.sB ?? backgroundColor;
+    paint382fill.color = countryColors.sB ?? defaultCountryColor;
     canvas.drawPath(path382, paint382fill);
 
     Path path383 = Path();
@@ -14394,7 +14394,7 @@ class WorldMapPainter extends CustomPainter {
     path383.close();
 
     Paint paint383fill = Paint()..style = PaintingStyle.fill;
-    paint383fill.color = countryColors.sB ?? backgroundColor;
+    paint383fill.color = countryColors.sB ?? defaultCountryColor;
     canvas.drawPath(path383, paint383fill);
 
     Path path384 = Path();
@@ -14411,7 +14411,7 @@ class WorldMapPainter extends CustomPainter {
     path384.close();
 
     Paint paint384fill = Paint()..style = PaintingStyle.fill;
-    paint384fill.color = countryColors.sB ?? backgroundColor;
+    paint384fill.color = countryColors.sB ?? defaultCountryColor;
     canvas.drawPath(path384, paint384fill);
 
     Path path385 = Path();
@@ -14464,7 +14464,7 @@ class WorldMapPainter extends CustomPainter {
     path385.close();
 
     Paint paint385fill = Paint()..style = PaintingStyle.fill;
-    paint385fill.color = countryColors.sB ?? backgroundColor;
+    paint385fill.color = countryColors.sB ?? defaultCountryColor;
     canvas.drawPath(path385, paint385fill);
 
     Path path386 = Path();
@@ -14476,7 +14476,7 @@ class WorldMapPainter extends CustomPainter {
     path386.close();
 
     Paint paint386fill = Paint()..style = PaintingStyle.fill;
-    paint386fill.color = countryColors.sB ?? backgroundColor;
+    paint386fill.color = countryColors.sB ?? defaultCountryColor;
     canvas.drawPath(path386, paint386fill);
 
     Path path387 = Path();
@@ -14490,7 +14490,7 @@ class WorldMapPainter extends CustomPainter {
     path387.close();
 
     Paint paint387fill = Paint()..style = PaintingStyle.fill;
-    paint387fill.color = countryColors.sB ?? backgroundColor;
+    paint387fill.color = countryColors.sB ?? defaultCountryColor;
     canvas.drawPath(path387, paint387fill);
 
     Path path388 = Path();
@@ -14532,7 +14532,7 @@ class WorldMapPainter extends CustomPainter {
     path388.close();
 
     Paint paint388fill = Paint()..style = PaintingStyle.fill;
-    paint388fill.color = countryColors.sB ?? backgroundColor;
+    paint388fill.color = countryColors.sB ?? defaultCountryColor;
     canvas.drawPath(path388, paint388fill);
 
     Path path389 = Path();
@@ -14548,7 +14548,7 @@ class WorldMapPainter extends CustomPainter {
     path389.close();
 
     Paint paint389fill = Paint()..style = PaintingStyle.fill;
-    paint389fill.color = countryColors.sB ?? backgroundColor;
+    paint389fill.color = countryColors.sB ?? defaultCountryColor;
     canvas.drawPath(path389, paint389fill);
 
     Path path390 = Path();
@@ -14569,7 +14569,7 @@ class WorldMapPainter extends CustomPainter {
     path390.close();
 
     Paint paint390fill = Paint()..style = PaintingStyle.fill;
-    paint390fill.color = countryColors.sB ?? backgroundColor;
+    paint390fill.color = countryColors.sB ?? defaultCountryColor;
     canvas.drawPath(path390, paint390fill);
 
     Path path391 = Path();
@@ -14594,7 +14594,7 @@ class WorldMapPainter extends CustomPainter {
     path391.close();
 
     Paint paint391fill = Paint()..style = PaintingStyle.fill;
-    paint391fill.color = countryColors.sB ?? backgroundColor;
+    paint391fill.color = countryColors.sB ?? defaultCountryColor;
     canvas.drawPath(path391, paint391fill);
 
     Path path392 = Path();
@@ -14608,7 +14608,7 @@ class WorldMapPainter extends CustomPainter {
     path392.close();
 
     Paint paint392fill = Paint()..style = PaintingStyle.fill;
-    paint392fill.color = countryColors.sB ?? backgroundColor;
+    paint392fill.color = countryColors.sB ?? defaultCountryColor;
     canvas.drawPath(path392, paint392fill);
 
     Path path393 = Path();
@@ -14664,7 +14664,7 @@ class WorldMapPainter extends CustomPainter {
     path393.close();
 
     Paint paint393fill = Paint()..style = PaintingStyle.fill;
-    paint393fill.color = countryColors.sB ?? backgroundColor;
+    paint393fill.color = countryColors.sB ?? defaultCountryColor;
     canvas.drawPath(path393, paint393fill);
 
     Path path394 = Path();
@@ -14678,7 +14678,7 @@ class WorldMapPainter extends CustomPainter {
     path394.close();
 
     Paint paint394fill = Paint()..style = PaintingStyle.fill;
-    paint394fill.color = countryColors.sB ?? backgroundColor;
+    paint394fill.color = countryColors.sB ?? defaultCountryColor;
     canvas.drawPath(path394, paint394fill);
 
     Path path395 = Path();
@@ -14690,7 +14690,7 @@ class WorldMapPainter extends CustomPainter {
     path395.close();
 
     Paint paint395fill = Paint()..style = PaintingStyle.fill;
-    paint395fill.color = countryColors.sB ?? backgroundColor;
+    paint395fill.color = countryColors.sB ?? defaultCountryColor;
     canvas.drawPath(path395, paint395fill);
 
     Path path396 = Path();
@@ -14701,7 +14701,7 @@ class WorldMapPainter extends CustomPainter {
     path396.close();
 
     Paint paint396fill = Paint()..style = PaintingStyle.fill;
-    paint396fill.color = countryColors.sB ?? backgroundColor;
+    paint396fill.color = countryColors.sB ?? defaultCountryColor;
     canvas.drawPath(path396, paint396fill);
 
     Path path397 = Path();
@@ -14714,7 +14714,7 @@ class WorldMapPainter extends CustomPainter {
     path397.close();
 
     Paint paint397fill = Paint()..style = PaintingStyle.fill;
-    paint397fill.color = countryColors.sB ?? backgroundColor;
+    paint397fill.color = countryColors.sB ?? defaultCountryColor;
     canvas.drawPath(path397, paint397fill);
 
     Path path398 = Path();
@@ -14727,7 +14727,7 @@ class WorldMapPainter extends CustomPainter {
     path398.close();
 
     Paint paint398fill = Paint()..style = PaintingStyle.fill;
-    paint398fill.color = countryColors.sB ?? backgroundColor;
+    paint398fill.color = countryColors.sB ?? defaultCountryColor;
     canvas.drawPath(path398, paint398fill);
 
     Path path399 = Path();
@@ -14742,7 +14742,7 @@ class WorldMapPainter extends CustomPainter {
     path399.close();
 
     Paint paint399fill = Paint()..style = PaintingStyle.fill;
-    paint399fill.color = countryColors.sB ?? backgroundColor;
+    paint399fill.color = countryColors.sB ?? defaultCountryColor;
     canvas.drawPath(path399, paint399fill);
 
     Path path400 = Path();
@@ -14754,7 +14754,7 @@ class WorldMapPainter extends CustomPainter {
     path400.close();
 
     Paint paint400fill = Paint()..style = PaintingStyle.fill;
-    paint400fill.color = countryColors.sB ?? backgroundColor;
+    paint400fill.color = countryColors.sB ?? defaultCountryColor;
     canvas.drawPath(path400, paint400fill);
 
     Path path401 = Path();
@@ -14795,7 +14795,7 @@ class WorldMapPainter extends CustomPainter {
     path401.close();
 
     Paint paint401fill = Paint()..style = PaintingStyle.fill;
-    paint401fill.color = countryColors.sB ?? backgroundColor;
+    paint401fill.color = countryColors.sB ?? defaultCountryColor;
     canvas.drawPath(path401, paint401fill);
 
     Path path402 = Path();
@@ -14819,7 +14819,7 @@ class WorldMapPainter extends CustomPainter {
     path402.close();
 
     Paint paint402fill = Paint()..style = PaintingStyle.fill;
-    paint402fill.color = countryColors.sT ?? backgroundColor;
+    paint402fill.color = countryColors.sT ?? defaultCountryColor;
     canvas.drawPath(path402, paint402fill);
 
     Path path403 = Path();
@@ -14836,7 +14836,7 @@ class WorldMapPainter extends CustomPainter {
     path403.close();
 
     Paint paint403fill = Paint()..style = PaintingStyle.fill;
-    paint403fill.color = countryColors.sT ?? backgroundColor;
+    paint403fill.color = countryColors.sT ?? defaultCountryColor;
     canvas.drawPath(path403, paint403fill);
 
     Path path404 = Path();
@@ -14848,7 +14848,7 @@ class WorldMapPainter extends CustomPainter {
     path404.close();
 
     Paint paint404fill = Paint()..style = PaintingStyle.fill;
-    paint404fill.color = countryColors.sX ?? backgroundColor;
+    paint404fill.color = countryColors.sX ?? defaultCountryColor;
     canvas.drawPath(path404, paint404fill);
 
     Path path405 = Path();
@@ -14866,7 +14866,7 @@ class WorldMapPainter extends CustomPainter {
     path405.close();
 
     Paint paint405fill = Paint()..style = PaintingStyle.fill;
-    paint405fill.color = countryColors.sC ?? backgroundColor;
+    paint405fill.color = countryColors.sC ?? defaultCountryColor;
     canvas.drawPath(path405, paint405fill);
 
     Path path406 = Path();
@@ -14878,7 +14878,7 @@ class WorldMapPainter extends CustomPainter {
     path406.close();
 
     Paint paint406fill = Paint()..style = PaintingStyle.fill;
-    paint406fill.color = countryColors.sC ?? backgroundColor;
+    paint406fill.color = countryColors.sC ?? defaultCountryColor;
     canvas.drawPath(path406, paint406fill);
 
     Path path407 = Path();
@@ -14892,7 +14892,7 @@ class WorldMapPainter extends CustomPainter {
     path407.close();
 
     Paint paint407fill = Paint()..style = PaintingStyle.fill;
-    paint407fill.color = countryColors.sC ?? backgroundColor;
+    paint407fill.color = countryColors.sC ?? defaultCountryColor;
     canvas.drawPath(path407, paint407fill);
 
     Path path408 = Path();
@@ -14907,7 +14907,7 @@ class WorldMapPainter extends CustomPainter {
     path408.close();
 
     Paint paint408fill = Paint()..style = PaintingStyle.fill;
-    paint408fill.color = countryColors.tC ?? backgroundColor;
+    paint408fill.color = countryColors.tC ?? defaultCountryColor;
     canvas.drawPath(path408, paint408fill);
 
     Path path409 = Path();
@@ -14921,7 +14921,7 @@ class WorldMapPainter extends CustomPainter {
     path409.close();
 
     Paint paint409fill = Paint()..style = PaintingStyle.fill;
-    paint409fill.color = countryColors.tC ?? backgroundColor;
+    paint409fill.color = countryColors.tC ?? defaultCountryColor;
     canvas.drawPath(path409, paint409fill);
 
     Path path410 = Path();
@@ -14934,7 +14934,7 @@ class WorldMapPainter extends CustomPainter {
     path410.close();
 
     Paint paint410fill = Paint()..style = PaintingStyle.fill;
-    paint410fill.color = countryColors.tC ?? backgroundColor;
+    paint410fill.color = countryColors.tC ?? defaultCountryColor;
     canvas.drawPath(path410, paint410fill);
 
     Path path411 = Path();
@@ -14946,7 +14946,7 @@ class WorldMapPainter extends CustomPainter {
     path411.close();
 
     Paint paint411fill = Paint()..style = PaintingStyle.fill;
-    paint411fill.color = countryColors.tO ?? backgroundColor;
+    paint411fill.color = countryColors.tO ?? defaultCountryColor;
     canvas.drawPath(path411, paint411fill);
 
     Path path412 = Path();
@@ -14966,7 +14966,7 @@ class WorldMapPainter extends CustomPainter {
     path412.close();
 
     Paint paint412fill = Paint()..style = PaintingStyle.fill;
-    paint412fill.color = countryColors.tO ?? backgroundColor;
+    paint412fill.color = countryColors.tO ?? defaultCountryColor;
     canvas.drawPath(path412, paint412fill);
 
     Path path413 = Path();
@@ -14978,7 +14978,7 @@ class WorldMapPainter extends CustomPainter {
     path413.close();
 
     Paint paint413fill = Paint()..style = PaintingStyle.fill;
-    paint413fill.color = countryColors.tO ?? backgroundColor;
+    paint413fill.color = countryColors.tO ?? defaultCountryColor;
     canvas.drawPath(path413, paint413fill);
 
     Path path414 = Path();
@@ -14992,7 +14992,7 @@ class WorldMapPainter extends CustomPainter {
     path414.close();
 
     Paint paint414fill = Paint()..style = PaintingStyle.fill;
-    paint414fill.color = countryColors.tO ?? backgroundColor;
+    paint414fill.color = countryColors.tO ?? defaultCountryColor;
     canvas.drawPath(path414, paint414fill);
 
     Path path415 = Path();
@@ -15005,7 +15005,7 @@ class WorldMapPainter extends CustomPainter {
     path415.close();
 
     Paint paint415fill = Paint()..style = PaintingStyle.fill;
-    paint415fill.color = countryColors.tO ?? backgroundColor;
+    paint415fill.color = countryColors.tO ?? defaultCountryColor;
     canvas.drawPath(path415, paint415fill);
 
     Path path416 = Path();
@@ -15060,7 +15060,7 @@ class WorldMapPainter extends CustomPainter {
     path416.close();
 
     Paint paint416fill = Paint()..style = PaintingStyle.fill;
-    paint416fill.color = countryColors.tT ?? backgroundColor;
+    paint416fill.color = countryColors.tT ?? defaultCountryColor;
     canvas.drawPath(path416, paint416fill);
 
     Path path417 = Path();
@@ -15077,7 +15077,7 @@ class WorldMapPainter extends CustomPainter {
     path417.close();
 
     Paint paint417fill = Paint()..style = PaintingStyle.fill;
-    paint417fill.color = countryColors.tT ?? backgroundColor;
+    paint417fill.color = countryColors.tT ?? defaultCountryColor;
     canvas.drawPath(path417, paint417fill);
 
     Path path418 = Path();
@@ -15089,7 +15089,7 @@ class WorldMapPainter extends CustomPainter {
     path418.close();
 
     Paint paint418fill = Paint()..style = PaintingStyle.fill;
-    paint418fill.color = countryColors.tV ?? backgroundColor;
+    paint418fill.color = countryColors.tV ?? defaultCountryColor;
     canvas.drawPath(path418, paint418fill);
 
     Path path419 = Path();
@@ -15106,7 +15106,7 @@ class WorldMapPainter extends CustomPainter {
     path419.close();
 
     Paint paint419fill = Paint()..style = PaintingStyle.fill;
-    paint419fill.color = countryColors.vC ?? backgroundColor;
+    paint419fill.color = countryColors.vC ?? defaultCountryColor;
     canvas.drawPath(path419, paint419fill);
 
     Path path420 = Path();
@@ -15121,7 +15121,7 @@ class WorldMapPainter extends CustomPainter {
     path420.close();
 
     Paint paint420fill = Paint()..style = PaintingStyle.fill;
-    paint420fill.color = countryColors.vG ?? backgroundColor;
+    paint420fill.color = countryColors.vG ?? defaultCountryColor;
     canvas.drawPath(path420, paint420fill);
 
     Path path421 = Path();
@@ -15134,7 +15134,7 @@ class WorldMapPainter extends CustomPainter {
     path421.close();
 
     Paint paint421fill = Paint()..style = PaintingStyle.fill;
-    paint421fill.color = countryColors.vI ?? backgroundColor;
+    paint421fill.color = countryColors.vI ?? defaultCountryColor;
     canvas.drawPath(path421, paint421fill);
 
     Path path422 = Path();
@@ -15147,7 +15147,7 @@ class WorldMapPainter extends CustomPainter {
     path422.close();
 
     Paint paint422fill = Paint()..style = PaintingStyle.fill;
-    paint422fill.color = countryColors.vI ?? backgroundColor;
+    paint422fill.color = countryColors.vI ?? defaultCountryColor;
     canvas.drawPath(path422, paint422fill);
 
     Path path423 = Path();
@@ -15161,7 +15161,7 @@ class WorldMapPainter extends CustomPainter {
     path423.close();
 
     Paint paint423fill = Paint()..style = PaintingStyle.fill;
-    paint423fill.color = countryColors.vI ?? backgroundColor;
+    paint423fill.color = countryColors.vI ?? defaultCountryColor;
     canvas.drawPath(path423, paint423fill);
 
     Path path424 = Path();
@@ -15175,7 +15175,7 @@ class WorldMapPainter extends CustomPainter {
     path424.close();
 
     Paint paint424fill = Paint()..style = PaintingStyle.fill;
-    paint424fill.color = countryColors.vU ?? backgroundColor;
+    paint424fill.color = countryColors.vU ?? defaultCountryColor;
     canvas.drawPath(path424, paint424fill);
 
     Path path425 = Path();
@@ -15197,7 +15197,7 @@ class WorldMapPainter extends CustomPainter {
     path425.close();
 
     Paint paint425fill = Paint()..style = PaintingStyle.fill;
-    paint425fill.color = countryColors.vU ?? backgroundColor;
+    paint425fill.color = countryColors.vU ?? defaultCountryColor;
     canvas.drawPath(path425, paint425fill);
 
     Path path426 = Path();
@@ -15225,7 +15225,7 @@ class WorldMapPainter extends CustomPainter {
     path426.close();
 
     Paint paint426fill = Paint()..style = PaintingStyle.fill;
-    paint426fill.color = countryColors.vU ?? backgroundColor;
+    paint426fill.color = countryColors.vU ?? defaultCountryColor;
     canvas.drawPath(path426, paint426fill);
 
     Path path427 = Path();
@@ -15249,7 +15249,7 @@ class WorldMapPainter extends CustomPainter {
     path427.close();
 
     Paint paint427fill = Paint()..style = PaintingStyle.fill;
-    paint427fill.color = countryColors.vU ?? backgroundColor;
+    paint427fill.color = countryColors.vU ?? defaultCountryColor;
     canvas.drawPath(path427, paint427fill);
 
     Path path428 = Path();
@@ -15260,7 +15260,7 @@ class WorldMapPainter extends CustomPainter {
     path428.close();
 
     Paint paint428fill = Paint()..style = PaintingStyle.fill;
-    paint428fill.color = countryColors.vU ?? backgroundColor;
+    paint428fill.color = countryColors.vU ?? defaultCountryColor;
     canvas.drawPath(path428, paint428fill);
 
     Path path429 = Path();
@@ -15284,7 +15284,7 @@ class WorldMapPainter extends CustomPainter {
     path429.close();
 
     Paint paint429fill = Paint()..style = PaintingStyle.fill;
-    paint429fill.color = countryColors.vU ?? backgroundColor;
+    paint429fill.color = countryColors.vU ?? defaultCountryColor;
     canvas.drawPath(path429, paint429fill);
 
     Path path430 = Path();
@@ -15296,7 +15296,7 @@ class WorldMapPainter extends CustomPainter {
     path430.close();
 
     Paint paint430fill = Paint()..style = PaintingStyle.fill;
-    paint430fill.color = countryColors.vU ?? backgroundColor;
+    paint430fill.color = countryColors.vU ?? defaultCountryColor;
     canvas.drawPath(path430, paint430fill);
 
     Path path431 = Path();
@@ -15320,7 +15320,7 @@ class WorldMapPainter extends CustomPainter {
     path431.close();
 
     Paint paint431fill = Paint()..style = PaintingStyle.fill;
-    paint431fill.color = countryColors.vU ?? backgroundColor;
+    paint431fill.color = countryColors.vU ?? defaultCountryColor;
     canvas.drawPath(path431, paint431fill);
 
     Path path432 = Path();
@@ -15361,7 +15361,7 @@ class WorldMapPainter extends CustomPainter {
     path432.close();
 
     Paint paint432fill = Paint()..style = PaintingStyle.fill;
-    paint432fill.color = countryColors.vU ?? backgroundColor;
+    paint432fill.color = countryColors.vU ?? defaultCountryColor;
     canvas.drawPath(path432, paint432fill);
 
     Path path433 = Path();
@@ -15377,7 +15377,7 @@ class WorldMapPainter extends CustomPainter {
     path433.close();
 
     Paint paint433fill = Paint()..style = PaintingStyle.fill;
-    paint433fill.color = countryColors.vU ?? backgroundColor;
+    paint433fill.color = countryColors.vU ?? defaultCountryColor;
     canvas.drawPath(path433, paint433fill);
 
     Path path434 = Path();
@@ -15390,7 +15390,7 @@ class WorldMapPainter extends CustomPainter {
     path434.close();
 
     Paint paint434fill = Paint()..style = PaintingStyle.fill;
-    paint434fill.color = countryColors.vU ?? backgroundColor;
+    paint434fill.color = countryColors.vU ?? defaultCountryColor;
     canvas.drawPath(path434, paint434fill);
 
     Path path435 = Path();
@@ -15410,7 +15410,7 @@ class WorldMapPainter extends CustomPainter {
     path435.close();
 
     Paint paint435fill = Paint()..style = PaintingStyle.fill;
-    paint435fill.color = countryColors.vU ?? backgroundColor;
+    paint435fill.color = countryColors.vU ?? defaultCountryColor;
     canvas.drawPath(path435, paint435fill);
 
     Path path436 = Path();
@@ -15428,7 +15428,7 @@ class WorldMapPainter extends CustomPainter {
     path436.close();
 
     Paint paint436fill = Paint()..style = PaintingStyle.fill;
-    paint436fill.color = countryColors.vU ?? backgroundColor;
+    paint436fill.color = countryColors.vU ?? defaultCountryColor;
     canvas.drawPath(path436, paint436fill);
 
     Path path437 = Path();
@@ -15447,7 +15447,7 @@ class WorldMapPainter extends CustomPainter {
     path437.close();
 
     Paint paint437fill = Paint()..style = PaintingStyle.fill;
-    paint437fill.color = countryColors.vU ?? backgroundColor;
+    paint437fill.color = countryColors.vU ?? defaultCountryColor;
     canvas.drawPath(path437, paint437fill);
 
     Path path438 = Path();
@@ -15497,7 +15497,7 @@ class WorldMapPainter extends CustomPainter {
     path438.close();
 
     Paint paint438fill = Paint()..style = PaintingStyle.fill;
-    paint438fill.color = countryColors.vU ?? backgroundColor;
+    paint438fill.color = countryColors.vU ?? defaultCountryColor;
     canvas.drawPath(path438, paint438fill);
 
     Path path439 = Path();
@@ -15514,7 +15514,7 @@ class WorldMapPainter extends CustomPainter {
     path439.close();
 
     Paint paint439fill = Paint()..style = PaintingStyle.fill;
-    paint439fill.color = countryColors.vU ?? backgroundColor;
+    paint439fill.color = countryColors.vU ?? defaultCountryColor;
     canvas.drawPath(path439, paint439fill);
 
     Path path440 = Path();
@@ -15536,7 +15536,7 @@ class WorldMapPainter extends CustomPainter {
     path440.close();
 
     Paint paint440fill = Paint()..style = PaintingStyle.fill;
-    paint440fill.color = countryColors.vU ?? backgroundColor;
+    paint440fill.color = countryColors.vU ?? defaultCountryColor;
     canvas.drawPath(path440, paint440fill);
 
     Path path441 = Path();
@@ -15548,7 +15548,7 @@ class WorldMapPainter extends CustomPainter {
     path441.close();
 
     Paint paint441fill = Paint()..style = PaintingStyle.fill;
-    paint441fill.color = countryColors.vU ?? backgroundColor;
+    paint441fill.color = countryColors.vU ?? defaultCountryColor;
     canvas.drawPath(path441, paint441fill);
 
     Path path442 = Path();
@@ -15576,7 +15576,7 @@ class WorldMapPainter extends CustomPainter {
     path442.close();
 
     Paint paint442fill = Paint()..style = PaintingStyle.fill;
-    paint442fill.color = countryColors.wS ?? backgroundColor;
+    paint442fill.color = countryColors.wS ?? defaultCountryColor;
     canvas.drawPath(path442, paint442fill);
 
     Path path443 = Path();
@@ -15606,7 +15606,7 @@ class WorldMapPainter extends CustomPainter {
     path443.close();
 
     Paint paint443fill = Paint()..style = PaintingStyle.fill;
-    paint443fill.color = countryColors.wS ?? backgroundColor;
+    paint443fill.color = countryColors.wS ?? defaultCountryColor;
     canvas.drawPath(path443, paint443fill);
 
     Path path444 = Path();
@@ -15626,7 +15626,7 @@ class WorldMapPainter extends CustomPainter {
     path444.close();
 
     Paint paint444fill = Paint()..style = PaintingStyle.fill;
-    paint444fill.color = countryColors.bQ ?? backgroundColor;
+    paint444fill.color = countryColors.bQ ?? defaultCountryColor;
     canvas.drawPath(path444, paint444fill);
 
     Path path445 = Path();
@@ -15638,7 +15638,7 @@ class WorldMapPainter extends CustomPainter {
     path445.close();
 
     Paint paint445fill = Paint()..style = PaintingStyle.fill;
-    paint445fill.color = countryColors.bQ ?? backgroundColor;
+    paint445fill.color = countryColors.bQ ?? defaultCountryColor;
     canvas.drawPath(path445, paint445fill);
 
     Path path446 = Path();
@@ -15650,7 +15650,7 @@ class WorldMapPainter extends CustomPainter {
     path446.close();
 
     Paint paint446fill = Paint()..style = PaintingStyle.fill;
-    paint446fill.color = countryColors.bQ ?? backgroundColor;
+    paint446fill.color = countryColors.bQ ?? defaultCountryColor;
     canvas.drawPath(path446, paint446fill);
 
     Path path447 = Path();
@@ -15680,7 +15680,7 @@ class WorldMapPainter extends CustomPainter {
     path447.close();
 
     Paint paint447fill = Paint()..style = PaintingStyle.fill;
-    paint447fill.color = countryColors.mQ ?? backgroundColor;
+    paint447fill.color = countryColors.mQ ?? defaultCountryColor;
     canvas.drawPath(path447, paint447fill);
 
     Path path448 = Path();
@@ -15699,7 +15699,7 @@ class WorldMapPainter extends CustomPainter {
     path448.close();
 
     Paint paint448fill = Paint()..style = PaintingStyle.fill;
-    paint448fill.color = countryColors.eS ?? backgroundColor;
+    paint448fill.color = countryColors.eS ?? defaultCountryColor;
     canvas.drawPath(path448, paint448fill);
 
     Path path449 = Path();
@@ -15725,7 +15725,7 @@ class WorldMapPainter extends CustomPainter {
     path449.close();
 
     Paint paint449fill = Paint()..style = PaintingStyle.fill;
-    paint449fill.color = countryColors.eS ?? backgroundColor;
+    paint449fill.color = countryColors.eS ?? defaultCountryColor;
     canvas.drawPath(path449, paint449fill);
 
     Path path450 = Path();
@@ -15744,7 +15744,7 @@ class WorldMapPainter extends CustomPainter {
     path450.close();
 
     Paint paint450fill = Paint()..style = PaintingStyle.fill;
-    paint450fill.color = countryColors.eS ?? backgroundColor;
+    paint450fill.color = countryColors.eS ?? defaultCountryColor;
     canvas.drawPath(path450, paint450fill);
 
     Path path451 = Path();
@@ -15781,7 +15781,7 @@ class WorldMapPainter extends CustomPainter {
     path451.close();
 
     Paint paint451fill = Paint()..style = PaintingStyle.fill;
-    paint451fill.color = countryColors.eS ?? backgroundColor;
+    paint451fill.color = countryColors.eS ?? defaultCountryColor;
     canvas.drawPath(path451, paint451fill);
 
     Path path452 = Path();
@@ -15817,7 +15817,7 @@ class WorldMapPainter extends CustomPainter {
     path452.close();
 
     Paint paint452fill = Paint()..style = PaintingStyle.fill;
-    paint452fill.color = countryColors.eS ?? backgroundColor;
+    paint452fill.color = countryColors.eS ?? defaultCountryColor;
     canvas.drawPath(path452, paint452fill);
 
     Path path453 = Path();
@@ -15839,7 +15839,7 @@ class WorldMapPainter extends CustomPainter {
     path453.close();
 
     Paint paint453fill = Paint()..style = PaintingStyle.fill;
-    paint453fill.color = countryColors.eS ?? backgroundColor;
+    paint453fill.color = countryColors.eS ?? defaultCountryColor;
     canvas.drawPath(path453, paint453fill);
 
     Path path454 = Path();
@@ -15866,7 +15866,7 @@ class WorldMapPainter extends CustomPainter {
     path454.close();
 
     Paint paint454fill = Paint()..style = PaintingStyle.fill;
-    paint454fill.color = countryColors.eS ?? backgroundColor;
+    paint454fill.color = countryColors.eS ?? defaultCountryColor;
     canvas.drawPath(path454, paint454fill);
 
     Path path455 = Path();
@@ -15889,7 +15889,7 @@ class WorldMapPainter extends CustomPainter {
     path455.close();
 
     Paint paint455fill = Paint()..style = PaintingStyle.fill;
-    paint455fill.color = countryColors.yT ?? backgroundColor;
+    paint455fill.color = countryColors.yT ?? defaultCountryColor;
     canvas.drawPath(path455, paint455fill);
 
     Path path456 = Path();
@@ -15921,7 +15921,7 @@ class WorldMapPainter extends CustomPainter {
     path456.close();
 
     Paint paint456fill = Paint()..style = PaintingStyle.fill;
-    paint456fill.color = countryColors.rE ?? backgroundColor;
+    paint456fill.color = countryColors.rE ?? defaultCountryColor;
     canvas.drawPath(path456, paint456fill);
 
     Path path457 = Path();
@@ -15937,7 +15937,7 @@ class WorldMapPainter extends CustomPainter {
     path457.close();
 
     Paint paint457fill = Paint()..style = PaintingStyle.fill;
-    paint457fill.color = countryColors.gP ?? backgroundColor;
+    paint457fill.color = countryColors.gP ?? defaultCountryColor;
     canvas.drawPath(path457, paint457fill);
 
     Path path458 = Path();
@@ -15963,7 +15963,7 @@ class WorldMapPainter extends CustomPainter {
     path458.close();
 
     Paint paint458fill = Paint()..style = PaintingStyle.fill;
-    paint458fill.color = countryColors.gP ?? backgroundColor;
+    paint458fill.color = countryColors.gP ?? defaultCountryColor;
     canvas.drawPath(path458, paint458fill);
 
     Path path459 = Path();
@@ -15984,7 +15984,7 @@ class WorldMapPainter extends CustomPainter {
     path459.close();
 
     Paint paint459fill = Paint()..style = PaintingStyle.fill;
-    paint459fill.color = countryColors.gP ?? backgroundColor;
+    paint459fill.color = countryColors.gP ?? defaultCountryColor;
     canvas.drawPath(path459, paint459fill);
 
     Path path460 = Path();
@@ -15995,7 +15995,7 @@ class WorldMapPainter extends CustomPainter {
     path460.close();
 
     Paint paint460fill = Paint()..style = PaintingStyle.fill;
-    paint460fill.color = countryColors.fJ ?? backgroundColor;
+    paint460fill.color = countryColors.fJ ?? defaultCountryColor;
     canvas.drawPath(path460, paint460fill);
 
     Path path461 = Path();
@@ -16026,7 +16026,7 @@ class WorldMapPainter extends CustomPainter {
     path461.close();
 
     Paint paint461fill = Paint()..style = PaintingStyle.fill;
-    paint461fill.color = countryColors.fJ ?? backgroundColor;
+    paint461fill.color = countryColors.fJ ?? defaultCountryColor;
     canvas.drawPath(path461, paint461fill);
 
     Path path462 = Path();
@@ -16038,7 +16038,7 @@ class WorldMapPainter extends CustomPainter {
     path462.close();
 
     Paint paint462fill = Paint()..style = PaintingStyle.fill;
-    paint462fill.color = countryColors.fJ ?? backgroundColor;
+    paint462fill.color = countryColors.fJ ?? defaultCountryColor;
     canvas.drawPath(path462, paint462fill);
 
     Path path463 = Path();
@@ -16054,7 +16054,7 @@ class WorldMapPainter extends CustomPainter {
     path463.close();
 
     Paint paint463fill = Paint()..style = PaintingStyle.fill;
-    paint463fill.color = countryColors.fJ ?? backgroundColor;
+    paint463fill.color = countryColors.fJ ?? defaultCountryColor;
     canvas.drawPath(path463, paint463fill);
 
     Path path464 = Path();
@@ -16069,7 +16069,7 @@ class WorldMapPainter extends CustomPainter {
     path464.close();
 
     Paint paint464fill = Paint()..style = PaintingStyle.fill;
-    paint464fill.color = countryColors.fJ ?? backgroundColor;
+    paint464fill.color = countryColors.fJ ?? defaultCountryColor;
     canvas.drawPath(path464, paint464fill);
 
     Path path465 = Path();
@@ -16130,7 +16130,7 @@ class WorldMapPainter extends CustomPainter {
     path465.close();
 
     Paint paint465fill = Paint()..style = PaintingStyle.fill;
-    paint465fill.color = countryColors.fJ ?? backgroundColor;
+    paint465fill.color = countryColors.fJ ?? defaultCountryColor;
     canvas.drawPath(path465, paint465fill);
 
     Path path466 = Path();
@@ -16143,7 +16143,7 @@ class WorldMapPainter extends CustomPainter {
     path466.close();
 
     Paint paint466fill = Paint()..style = PaintingStyle.fill;
-    paint466fill.color = countryColors.fJ ?? backgroundColor;
+    paint466fill.color = countryColors.fJ ?? defaultCountryColor;
     canvas.drawPath(path466, paint466fill);
 
     Path path467 = Path();
@@ -16156,7 +16156,7 @@ class WorldMapPainter extends CustomPainter {
     path467.close();
 
     Paint paint467fill = Paint()..style = PaintingStyle.fill;
-    paint467fill.color = countryColors.fJ ?? backgroundColor;
+    paint467fill.color = countryColors.fJ ?? defaultCountryColor;
     canvas.drawPath(path467, paint467fill);
 
     Path path468 = Path();
@@ -16170,7 +16170,7 @@ class WorldMapPainter extends CustomPainter {
     path468.close();
 
     Paint paint468fill = Paint()..style = PaintingStyle.fill;
-    paint468fill.color = countryColors.fJ ?? backgroundColor;
+    paint468fill.color = countryColors.fJ ?? defaultCountryColor;
     canvas.drawPath(path468, paint468fill);
 
     Path path469 = Path();
@@ -16259,27 +16259,27 @@ class WorldMapPainter extends CustomPainter {
     path469.close();
 
     Paint paint469fill = Paint()..style = PaintingStyle.fill;
-    paint469fill.color = countryColors.fJ ?? backgroundColor;
+    paint469fill.color = countryColors.fJ ?? defaultCountryColor;
     canvas.drawPath(path469, paint469fill);
 
     Paint paint470fill = Paint()..style = PaintingStyle.fill;
-    paint470fill.color = backgroundColor;
+    paint470fill.color = defaultCountryColor;
     canvas.drawCircle(Offset(size.width * 0.4989500, size.height * 0.2206534),
         size.width * double.nan, paint470fill);
 
     Paint paint471fill = Paint()..style = PaintingStyle.fill;
-    paint471fill.color = backgroundColor;
+    paint471fill.color = defaultCountryColor;
     canvas.drawCircle(Offset(size.width * 0.3367500, size.height * 0.8449242),
         size.width * double.nan, paint471fill);
 
     Paint paint472fill = Paint()..style = PaintingStyle.fill;
-    paint472fill.color = backgroundColor;
+    paint472fill.color = defaultCountryColor;
     canvas.drawCircle(Offset(size.width * 0.8991000, size.height * 0.8393232),
         size.width * double.nan, paint472fill);
   }
 
   @override
   bool shouldRepaint(covariant CustomPainter oldDelegate) {
-    return true;
+    return false;
   }
 }
