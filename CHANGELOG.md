@@ -1,3 +1,6 @@
+## 0.0.2
+Added comments for documentation.
+
 ## 0.0.1
 
 First release. 
