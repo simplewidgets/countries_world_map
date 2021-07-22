@@ -1,5 +1,10 @@
 import 'package:flutter/material.dart';
 
+/// This class takes in 250 Colors to color each country in the [WorldMapPainter]
+///
+/// Each color is named with two letters. These letters represent a country based on the ISO-twoletter code.
+///
+/// For example: uS = United States, nL = Netherlands, jP = Japan.
 class CountryColors {
   final Color? aD;
   final Color? aE;

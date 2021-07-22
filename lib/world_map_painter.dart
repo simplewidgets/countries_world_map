@@ -1,8 +1,15 @@
 import 'package:countries_world_map/countries_colors.dart';
 import 'package:flutter/material.dart';
 
+/// This painter will paint a world map with all countries in it.
+///
+/// Giving countries a different color based on a data set can help visualize data.
+
 class WorldMapPainter extends CustomPainter {
+  /// This Color is used for all the countries that have no custom color
   final Color defaultCountryColor;
+
+  /// The CountryColors is basically a list of Countries and Colors to give a Countrie a color of choice.
   final CountryColors countryColors;
 
   const WorldMapPainter(
