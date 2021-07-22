@@ -1,7 +1,7 @@
 name: countries_world_map
-description: A new Flutter package project.
+description: A simple CustomPainter that draws a customizable world map on the screen.
 version: 0.0.1
-homepage:
+homepage: https://github.com/simplewidgets/countries_world_map
 
 environment:
   sdk: ">=2.12.0 <3.0.0"
