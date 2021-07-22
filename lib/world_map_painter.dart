@@ -10,6 +10,7 @@ class WorldMapPainter extends CustomPainter {
 
   @override
   void paint(Canvas canvas, Size size) {
+    print('Getting new paint');
     Path path0 = Path();
     path0.moveTo(size.width * 0.6915000, size.height * 0.3052509);
     path0.lineTo(size.width * 0.6922500, size.height * 0.3073512);
@@ -16279,7 +16280,6 @@ class WorldMapPainter extends CustomPainter {
   }
 
   @override
-  bool shouldRepaint(covariant CustomPainter oldDelegate) {
-    return false;
-  }
+  bool shouldRepaint(WorldMapPainter oldDelegate) =>
+      oldDelegate.countryColors != countryColors;
 }

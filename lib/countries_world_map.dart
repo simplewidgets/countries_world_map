@@ -24,11 +24,14 @@ class WorldMap extends StatelessWidget {
             width: constraints.maxWidth,
             height: constraints.maxHeight,
             color: backgroundColor ?? Colors.transparent,
-            child: CustomPaint(
-              size: Size(constraints.maxWidth, constraints.maxHeight),
-              painter: WorldMapPainter(
-                  countryColors: countryColors ?? new CountryColors(),
-                  defaultCountryColor: defaultCountryColor ?? Colors.grey),
+            child: RepaintBoundary(
+              child: CustomPaint(
+                isComplex: true,
+                size: Size(constraints.maxWidth, constraints.maxHeight),
+                painter: WorldMapPainter(
+                    countryColors: countryColors ?? CountryColors(),
+                    defaultCountryColor: defaultCountryColor ?? Colors.grey),
+              ),
             ),
           );
         },
