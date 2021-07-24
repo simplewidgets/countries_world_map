@@ -1,3 +1,6 @@
+## 0.0.3
+Added documentation comments to each country code. 
+
 ## 0.0.2
 Added comments for documentation.
 
