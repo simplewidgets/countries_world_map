@@ -23,7 +23,9 @@ On the iPad Pro 2018 there has been found some memory issues when re-painting th
 ## WorldMapPainter
 If the WorldMap widget does not give the results you would like to see, you can also use the WorldMapPainter in your own defined CustomPainter. This will give you all the paths with the option to custom color each country.
 
-
+## Example
+The sample app creates the map and give each country a random color from a list of 5 colors:
+![Example](https://simplewidgets.dev/wp-content/uploads/2021/07/countries_world_map.png)
 
 ## Like to contribute?
 Feel free to help us improve this package by creating issues, pull request etc. Together we can make a great map for data visualization and other use cases. For any questions you can email hello@simplewidgets.dev
