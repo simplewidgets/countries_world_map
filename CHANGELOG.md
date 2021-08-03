@@ -1,3 +1,6 @@
+## 0.0.4
+There is an online example available now at example.simplewidgets.dev. This has been added to the README.
+
 ## 0.0.3
 Added documentation comments to each country code. 
 

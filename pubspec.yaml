@@ -1,6 +1,6 @@
 name: countries_world_map
 description: A simple widget for a customizable world map. Uses a custompainter to paint all countries & islands, which can all be colored based on the ISO two-letter countrycodes.
-version: 0.0.3
+version: 0.0.4
 homepage: https://github.com/simplewidgets/countries_world_map
 
 environment:
