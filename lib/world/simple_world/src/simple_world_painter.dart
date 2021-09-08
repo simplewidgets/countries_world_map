@@ -1,23 +1,22 @@
-import 'package:countries_world_map/countries_colors.dart';
+import 'package:countries_world_map/world/simple_world/src/simple_world_colors.dart';
 import 'package:flutter/material.dart';
 
-/// This painter will paint a world map with all countries in it.
-///
+/// This painter will paint a world map with all///
 /// Giving countries a different color based on a data set can help visualize data.
 
-class WorldMapPainter extends CustomPainter {
+class SimpleWorldPainter extends CustomPainter {
   /// This Color is used for all the countries that have no custom color
   final Color defaultCountryColor;
 
   /// The CountryColors is basically a list of Countries and Colors to give a Countrie a color of choice.
-  final CountryColors countryColors;
+  final SimpleWorldCountryColors countryColors;
 
-  const WorldMapPainter(
+  const SimpleWorldPainter(
       {required this.defaultCountryColor, required this.countryColors});
 
   @override
   void paint(Canvas canvas, Size size) {
-    print('Getting new paint');
+    print('Repainting simple world map');
     Path path0 = Path();
     path0.moveTo(size.width * 0.6915000, size.height * 0.3052509);
     path0.lineTo(size.width * 0.6922500, size.height * 0.3073512);
@@ -16287,6 +16286,6 @@ class WorldMapPainter extends CustomPainter {
   }
 
   @override
-  bool shouldRepaint(WorldMapPainter oldDelegate) =>
+  bool shouldRepaint(SimpleWorldPainter oldDelegate) =>
       oldDelegate.countryColors != countryColors;
 }

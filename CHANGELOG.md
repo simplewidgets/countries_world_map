@@ -1,3 +1,8 @@
+## 0.0.5
+In this release the Netherlands has been added as a country map.
+With future releases more and more maps will be added.
+See the README.md to see all available maps at this moment.
+
 ## 0.0.4
 There is an online example available now at example.simplewidgets.dev. This has been added to the README.
 

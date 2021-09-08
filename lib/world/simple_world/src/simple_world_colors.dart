@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 /// Each color is named with two letters. These letters represent a country based on the ISO-twoletter code.
 ///
 /// For example: uS = United States, nL = Netherlands, jP = Japan.
-class CountryColors {
+class SimpleWorldCountryColors {
   /// Andorra
   final Color? aD;
 
@@ -758,7 +758,7 @@ class CountryColors {
   /// Zimbabwe
   final Color? zW;
 
-  const CountryColors({
+  const SimpleWorldCountryColors({
     this.aD,
     this.aE,
     this.aF,

@@ -3,21 +3,19 @@
 
 Online example is available at [example.simplewidgets.dev](https://examples.simplewidgets.dev "World Map Example | simplewidgets.dev")
 
+This package provides an easy to implement World Map (or any other country of choice) which is fully customizable. It started with only a simple world map but the goal is to create a customizable map for each country.
+In this case "customizable" means the ability to change the color of a country/ state.
+
 ## About this package
-This flutter package draws a world map using the CustomPainter. Over 450 different paths are used to paint all the borders. The widget "WorldMap" has as few inputFields.
+This flutter package draws a map of choice using the CustomPainter. These maps can be quite big so please read "Perfomance" below.
 
-- defaultCountryColor
-    This takes in a Color that will be the default color for all countries.
 
-- countryColors
-    This takes in a CountryColors class. In this class you can assign a custom Color to each country using the country codes. For example: 
-    - uS = United States
-    - nL = Netherlands etc.
-    
-    There are 250 different countries / islands to color.
+### Available maps
+| World Maps | Continents | Countries |
+|--|--|--|
+| <ul><li>[ ] Normal World Map </li><li>[x] Simple World Map</li> <li>[ ] Geo World Map</li></ul> | <ul><li>[ ] Africa </li><li>[ ] Asia </li> <li>[ ] Australia/Oceania </li> <li>[ ] Europe </li> <li>[ ] Middle East </li> <li>[ ] North America </li> <li>[ ] South America </li></ul> | <ul><li>[x] Netherlands </li></ul> |
 
-- backgroundColor
-    This is the color of the Canvas. By default, this will be transparent.
+
 
 
 ### WorldMapPainter
