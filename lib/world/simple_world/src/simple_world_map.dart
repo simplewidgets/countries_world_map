@@ -1,3 +1,4 @@
+import 'package:countries_world_map/canvas/src/canvas_touch_detector.dart';
 import 'package:countries_world_map/world/simple_world/src/simple_world_colors.dart';
 import 'package:countries_world_map/world/simple_world/src/simple_world_painter.dart';
 import 'package:flutter/material.dart';
@@ -22,11 +23,13 @@ class SimpleWorldMap extends StatelessWidget {
 
   /// This is the color behind the counties which will fill up all the blank space like oceans.
   final Color? backgroundColor;
+  final Function(String, dynamic)? callback;
 
   const SimpleWorldMap(
       {this.defaultCountryColor,
       this.backgroundColor,
       this.countryColors,
+      this.callback,
       Key? key})
       : super(key: key);
 
@@ -37,19 +40,27 @@ class SimpleWorldMap extends StatelessWidget {
       child: LayoutBuilder(
         builder: (context, constraints) {
           return Container(
-            width: constraints.maxWidth,
-            height: constraints.maxHeight,
-            color: backgroundColor ?? Colors.transparent,
-            child: RepaintBoundary(
-              child: CustomPaint(
-                isComplex: true,
-                size: Size(constraints.maxWidth, constraints.maxHeight),
-                painter: SimpleWorldPainter(
-                    countryColors: countryColors ?? SimpleWorldCountryColors(),
-                    defaultCountryColor: defaultCountryColor ?? Colors.grey),
-              ),
-            ),
-          );
+              width: constraints.maxWidth,
+              height: constraints.maxHeight,
+              color: backgroundColor ?? Colors.transparent,
+              child: RepaintBoundary(
+                child: CanvasTouchDetector(
+                  builder: (context) => CustomPaint(
+                    isComplex: true,
+                    size: Size(constraints.maxWidth, constraints.maxHeight),
+                    painter: SimpleWorldPainter(
+                        context: context,
+                        callback: (country, tapdetails) {
+                          if (callback != null) {
+                            callback!(country, tapdetails);
+                          }
+                        },
+                        countryColors:
+                            countryColors ?? SimpleWorldCountryColors(),
+                        defaultColor: defaultCountryColor ?? Colors.grey),
+                  ),
+                ),
+              ));
         },
       ),
     );

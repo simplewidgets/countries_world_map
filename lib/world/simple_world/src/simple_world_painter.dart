@@ -1,3 +1,4 @@
+import 'package:countries_world_map/canvas/touchable_canvas.dart';
 import 'package:countries_world_map/world/simple_world/src/simple_world_colors.dart';
 import 'package:flutter/material.dart';
 
@@ -6,16 +7,22 @@ import 'package:flutter/material.dart';
 
 class SimpleWorldPainter extends CustomPainter {
   /// This Color is used for all the countries that have no custom color
-  final Color defaultCountryColor;
+  final Color defaultColor;
+  final BuildContext context;
 
   /// The CountryColors is basically a list of Countries and Colors to give a Countrie a color of choice.
   final SimpleWorldCountryColors countryColors;
+  final Function(String, TapDownDetails) callback;
 
   const SimpleWorldPainter(
-      {required this.defaultCountryColor, required this.countryColors});
+      {required this.defaultColor,
+      required this.countryColors,
+      required this.context,
+      required this.callback});
 
   @override
   void paint(Canvas canvas, Size size) {
+    var worldCanvas = TouchyCanvas(context, canvas);
     print('Repainting simple world map');
     Path path0 = Path();
     path0.moveTo(size.width * 0.6915000, size.height * 0.3052509);
@@ -90,8 +97,10 @@ class SimpleWorldPainter extends CustomPainter {
     path0.close();
 
     Paint paint0fill = Paint()..style = PaintingStyle.fill;
-    paint0fill.color = countryColors.aF ?? defaultCountryColor;
-    canvas.drawPath(path0, paint0fill);
+    paint0fill.color = countryColors.aF ?? defaultColor;
+    worldCanvas.drawPath(path0, paint0fill, onTapDown: (tabdetail) {
+      callback('af', tabdetail);
+    });
 
     Path path1 = Path();
     path1.moveTo(size.width * 0.5606000, size.height * 0.6674446);
@@ -163,8 +172,10 @@ class SimpleWorldPainter extends CustomPainter {
     path1.close();
 
     Paint paint1fill = Paint()..style = PaintingStyle.fill;
-    paint1fill.color = countryColors.aO ?? defaultCountryColor;
-    canvas.drawPath(path1, paint1fill);
+    paint1fill.color = countryColors.aO ?? defaultColor;
+    worldCanvas.drawPath(path1, paint1fill, onTapDown: (tabdetail) {
+      callback('ao', tabdetail);
+    });
 
     Path path2 = Path();
     path2.moveTo(size.width * 0.5276500, size.height * 0.6289382);
@@ -179,8 +190,10 @@ class SimpleWorldPainter extends CustomPainter {
     path2.close();
 
     Paint paint2fill = Paint()..style = PaintingStyle.fill;
-    paint2fill.color = countryColors.aO ?? defaultCountryColor;
-    canvas.drawPath(path2, paint2fill);
+    paint2fill.color = countryColors.aO ?? defaultColor;
+    worldCanvas.drawPath(path2, paint2fill, onTapDown: (tabdetail) {
+      callback('ao', tabdetail);
+    });
 
     Path path3 = Path();
     path3.moveTo(size.width * 0.5440000, size.height * 0.2660443);
@@ -208,8 +221,10 @@ class SimpleWorldPainter extends CustomPainter {
     path3.close();
 
     Paint paint3fill = Paint()..style = PaintingStyle.fill;
-    paint3fill.color = countryColors.aL ?? defaultCountryColor;
-    canvas.drawPath(path3, paint3fill);
+    paint3fill.color = countryColors.aL ?? defaultColor;
+    worldCanvas.drawPath(path3, paint3fill, onTapDown: (tabdetail) {
+      callback('al', tabdetail);
+    });
 
     Path path4 = Path();
     path4.moveTo(size.width * 0.6481000, size.height * 0.3928821);
@@ -237,8 +252,10 @@ class SimpleWorldPainter extends CustomPainter {
     path4.close();
 
     Paint paint4fill = Paint()..style = PaintingStyle.fill;
-    paint4fill.color = countryColors.aE ?? defaultCountryColor;
-    canvas.drawPath(path4, paint4fill);
+    paint4fill.color = countryColors.aE ?? defaultColor;
+    worldCanvas.drawPath(path4, paint4fill, onTapDown: (tabdetail) {
+      callback('ae', tabdetail);
+    });
 
     Path path5 = Path();
     path5.moveTo(size.width * 0.3345500, size.height * 0.9938156);
@@ -255,8 +272,10 @@ class SimpleWorldPainter extends CustomPainter {
     path5.close();
 
     Paint paint5fill = Paint()..style = PaintingStyle.fill;
-    paint5fill.color = countryColors.aR ?? defaultCountryColor;
-    canvas.drawPath(path5, paint5fill);
+    paint5fill.color = countryColors.aR ?? defaultColor;
+    worldCanvas.drawPath(path5, paint5fill, onTapDown: (tabdetail) {
+      callback('ar', tabdetail);
+    });
 
     Path path6 = Path();
     path6.moveTo(size.width * 0.3193000, size.height * 0.7522754);
@@ -372,8 +391,10 @@ class SimpleWorldPainter extends CustomPainter {
     path6.close();
 
     Paint paint6fill = Paint()..style = PaintingStyle.fill;
-    paint6fill.color = countryColors.aR ?? defaultCountryColor;
-    canvas.drawPath(path6, paint6fill);
+    paint6fill.color = countryColors.aR ?? defaultColor;
+    worldCanvas.drawPath(path6, paint6fill, onTapDown: (tabdetail) {
+      callback('ar', tabdetail);
+    });
 
     Path path7 = Path();
     path7.moveTo(size.width * 0.6154000, size.height * 0.2952159);
@@ -399,8 +420,10 @@ class SimpleWorldPainter extends CustomPainter {
     path7.close();
 
     Paint paint7fill = Paint()..style = PaintingStyle.fill;
-    paint7fill.color = countryColors.aM ?? defaultCountryColor;
-    canvas.drawPath(path7, paint7fill);
+    paint7fill.color = countryColors.aM ?? defaultColor;
+    worldCanvas.drawPath(path7, paint7fill, onTapDown: (tabdetail) {
+      callback('am', tabdetail);
+    });
 
     Path path8 = Path();
     path8.moveTo(size.width * 0.8715000, size.height * 0.8910152);
@@ -423,8 +446,10 @@ class SimpleWorldPainter extends CustomPainter {
     path8.close();
 
     Paint paint8fill = Paint()..style = PaintingStyle.fill;
-    paint8fill.color = countryColors.aU ?? defaultCountryColor;
-    canvas.drawPath(path8, paint8fill);
+    paint8fill.color = countryColors.aU ?? defaultColor;
+    worldCanvas.drawPath(path8, paint8fill, onTapDown: (tabdetail) {
+      callback('au', tabdetail);
+    });
 
     Path path9 = Path();
     path9.moveTo(size.width * 0.8967500, size.height * 0.6886814);
@@ -654,8 +679,10 @@ class SimpleWorldPainter extends CustomPainter {
     path9.close();
 
     Paint paint9fill = Paint()..style = PaintingStyle.fill;
-    paint9fill.color = countryColors.aU ?? defaultCountryColor;
-    canvas.drawPath(path9, paint9fill);
+    paint9fill.color = countryColors.aU ?? defaultColor;
+    worldCanvas.drawPath(path9, paint9fill, onTapDown: (tabdetail) {
+      callback('au', tabdetail);
+    });
 
     Path path10 = Path();
     path10.moveTo(size.width * 0.5353000, size.height * 0.2226371);
@@ -698,8 +725,10 @@ class SimpleWorldPainter extends CustomPainter {
     path10.close();
 
     Paint paint10fill = Paint()..style = PaintingStyle.fill;
-    paint10fill.color = countryColors.aT ?? defaultCountryColor;
-    canvas.drawPath(path10, paint10fill);
+    paint10fill.color = countryColors.aT ?? defaultColor;
+    worldCanvas.drawPath(path10, paint10fill, onTapDown: (tabdetail) {
+      callback('at', tabdetail);
+    });
 
     Path path11 = Path();
     path11.moveTo(size.width * 0.6145000, size.height * 0.2954492);
@@ -714,8 +743,10 @@ class SimpleWorldPainter extends CustomPainter {
     path11.close();
 
     Paint paint11fill = Paint()..style = PaintingStyle.fill;
-    paint11fill.color = countryColors.aZ ?? defaultCountryColor;
-    canvas.drawPath(path11, paint11fill);
+    paint11fill.color = countryColors.aZ ?? defaultColor;
+    worldCanvas.drawPath(path11, paint11fill, onTapDown: (tabdetail) {
+      callback('az', tabdetail);
+    });
 
     Path path12 = Path();
     path12.moveTo(size.width * 0.6176500, size.height * 0.2756126);
@@ -756,8 +787,10 @@ class SimpleWorldPainter extends CustomPainter {
     path12.close();
 
     Paint paint12fill = Paint()..style = PaintingStyle.fill;
-    paint12fill.color = countryColors.aZ ?? defaultCountryColor;
-    canvas.drawPath(path12, paint12fill);
+    paint12fill.color = countryColors.aZ ?? defaultColor;
+    worldCanvas.drawPath(path12, paint12fill, onTapDown: (tabdetail) {
+      callback('az', tabdetail);
+    });
 
     Path path13 = Path();
     path13.moveTo(size.width * 0.5774500, size.height * 0.6189032);
@@ -779,8 +812,10 @@ class SimpleWorldPainter extends CustomPainter {
     path13.close();
 
     Paint paint13fill = Paint()..style = PaintingStyle.fill;
-    paint13fill.color = countryColors.bI ?? defaultCountryColor;
-    canvas.drawPath(path13, paint13fill);
+    paint13fill.color = countryColors.bI ?? defaultColor;
+    worldCanvas.drawPath(path13, paint13fill, onTapDown: (tabdetail) {
+      callback('bi', tabdetail);
+    });
 
     Path path14 = Path();
     path14.moveTo(size.width * 0.5082500, size.height * 0.2066511);
@@ -801,8 +836,10 @@ class SimpleWorldPainter extends CustomPainter {
     path14.close();
 
     Paint paint14fill = Paint()..style = PaintingStyle.fill;
-    paint14fill.color = countryColors.bE ?? defaultCountryColor;
-    canvas.drawPath(path14, paint14fill);
+    paint14fill.color = countryColors.bE ?? defaultColor;
+    worldCanvas.drawPath(path14, paint14fill, onTapDown: (tabdetail) {
+      callback('be', tabdetail);
+    });
 
     Path path15 = Path();
     path15.moveTo(size.width * 0.5033500, size.height * 0.4982497);
@@ -833,8 +870,10 @@ class SimpleWorldPainter extends CustomPainter {
     path15.close();
 
     Paint paint15fill = Paint()..style = PaintingStyle.fill;
-    paint15fill.color = countryColors.bJ ?? defaultCountryColor;
-    canvas.drawPath(path15, paint15fill);
+    paint15fill.color = countryColors.bJ ?? defaultColor;
+    worldCanvas.drawPath(path15, paint15fill, onTapDown: (tabdetail) {
+      callback('bj', tabdetail);
+    });
 
     Path path16 = Path();
     path16.moveTo(size.width * 0.4942500, size.height * 0.4737456);
@@ -879,8 +918,10 @@ class SimpleWorldPainter extends CustomPainter {
     path16.close();
 
     Paint paint16fill = Paint()..style = PaintingStyle.fill;
-    paint16fill.color = countryColors.bF ?? defaultCountryColor;
-    canvas.drawPath(path16, paint16fill);
+    paint16fill.color = countryColors.bF ?? defaultColor;
+    worldCanvas.drawPath(path16, paint16fill, onTapDown: (tabdetail) {
+      callback('bf', tabdetail);
+    });
 
     Path path17 = Path();
     path17.moveTo(size.width * 0.7503000, size.height * 0.4204201);
@@ -922,8 +963,10 @@ class SimpleWorldPainter extends CustomPainter {
     path17.close();
 
     Paint paint17fill = Paint()..style = PaintingStyle.fill;
-    paint17fill.color = countryColors.bD ?? defaultCountryColor;
-    canvas.drawPath(path17, paint17fill);
+    paint17fill.color = countryColors.bD ?? defaultColor;
+    worldCanvas.drawPath(path17, paint17fill, onTapDown: (tabdetail) {
+      callback('bd', tabdetail);
+    });
 
     Path path18 = Path();
     path18.moveTo(size.width * 0.5663000, size.height * 0.2585764);
@@ -957,8 +1000,10 @@ class SimpleWorldPainter extends CustomPainter {
     path18.close();
 
     Paint paint18fill = Paint()..style = PaintingStyle.fill;
-    paint18fill.color = countryColors.bG ?? defaultCountryColor;
-    canvas.drawPath(path18, paint18fill);
+    paint18fill.color = countryColors.bG ?? defaultColor;
+    worldCanvas.drawPath(path18, paint18fill, onTapDown: (tabdetail) {
+      callback('bg', tabdetail);
+    });
 
     Path path19 = Path();
     path19.moveTo(size.width * 0.5415000, size.height * 0.2500583);
@@ -986,8 +1031,10 @@ class SimpleWorldPainter extends CustomPainter {
     path19.close();
 
     Paint paint19fill = Paint()..style = PaintingStyle.fill;
-    paint19fill.color = countryColors.bA ?? defaultCountryColor;
-    canvas.drawPath(path19, paint19fill);
+    paint19fill.color = countryColors.bA ?? defaultColor;
+    worldCanvas.drawPath(path19, paint19fill, onTapDown: (tabdetail) {
+      callback('ba', tabdetail);
+    });
 
     Path path20 = Path();
     path20.moveTo(size.width * 0.5708000, size.height * 0.1898483);
@@ -1037,8 +1084,10 @@ class SimpleWorldPainter extends CustomPainter {
     path20.close();
 
     Paint paint20fill = Paint()..style = PaintingStyle.fill;
-    paint20fill.color = countryColors.bY ?? defaultCountryColor;
-    canvas.drawPath(path20, paint20fill);
+    paint20fill.color = countryColors.bY ?? defaultColor;
+    worldCanvas.drawPath(path20, paint20fill, onTapDown: (tabdetail) {
+      callback('by', tabdetail);
+    });
 
     Path path21 = Path();
     path21.moveTo(size.width * 0.2439000, size.height * 0.4665111);
@@ -1064,8 +1113,10 @@ class SimpleWorldPainter extends CustomPainter {
     path21.close();
 
     Paint paint21fill = Paint()..style = PaintingStyle.fill;
-    paint21fill.color = countryColors.bZ ?? defaultCountryColor;
-    canvas.drawPath(path21, paint21fill);
+    paint21fill.color = countryColors.bZ ?? defaultColor;
+    worldCanvas.drawPath(path21, paint21fill, onTapDown: (tabdetail) {
+      callback('bz', tabdetail);
+    });
 
     Path path22 = Path();
     path22.moveTo(size.width * 0.3312500, size.height * 0.7367561);
@@ -1131,8 +1182,10 @@ class SimpleWorldPainter extends CustomPainter {
     path22.close();
 
     Paint paint22fill = Paint()..style = PaintingStyle.fill;
-    paint22fill.color = countryColors.bO ?? defaultCountryColor;
-    canvas.drawPath(path22, paint22fill);
+    paint22fill.color = countryColors.bO ?? defaultColor;
+    worldCanvas.drawPath(path22, paint22fill, onTapDown: (tabdetail) {
+      callback('bo', tabdetail);
+    });
 
     Path path23 = Path();
     path23.moveTo(size.width * 0.3329000, size.height * 0.5712952);
@@ -1341,8 +1394,10 @@ class SimpleWorldPainter extends CustomPainter {
     path23.close();
 
     Paint paint23fill = Paint()..style = PaintingStyle.fill;
-    paint23fill.color = countryColors.bR ?? defaultCountryColor;
-    canvas.drawPath(path23, paint23fill);
+    paint23fill.color = countryColors.bR ?? defaultColor;
+    worldCanvas.drawPath(path23, paint23fill, onTapDown: (tabdetail) {
+      callback('br', tabdetail);
+    });
 
     Path path24 = Path();
     path24.moveTo(size.width * 0.8165500, size.height * 0.5516919);
@@ -1356,8 +1411,10 @@ class SimpleWorldPainter extends CustomPainter {
     path24.close();
 
     Paint paint24fill = Paint()..style = PaintingStyle.fill;
-    paint24fill.color = countryColors.bN ?? defaultCountryColor;
-    canvas.drawPath(path24, paint24fill);
+    paint24fill.color = countryColors.bN ?? defaultColor;
+    worldCanvas.drawPath(path24, paint24fill, onTapDown: (tabdetail) {
+      callback('bn', tabdetail);
+    });
 
     Path path25 = Path();
     path25.moveTo(size.width * 0.7444000, size.height * 0.3774796);
@@ -1376,8 +1433,10 @@ class SimpleWorldPainter extends CustomPainter {
     path25.close();
 
     Paint paint25fill = Paint()..style = PaintingStyle.fill;
-    paint25fill.color = countryColors.bT ?? defaultCountryColor;
-    canvas.drawPath(path25, paint25fill);
+    paint25fill.color = countryColors.bT ?? defaultColor;
+    worldCanvas.drawPath(path25, paint25fill, onTapDown: (tabdetail) {
+      callback('bt', tabdetail);
+    });
 
     Path path26 = Path();
     path26.moveTo(size.width * 0.5638000, size.height * 0.7184364);
@@ -1423,8 +1482,10 @@ class SimpleWorldPainter extends CustomPainter {
     path26.close();
 
     Paint paint26fill = Paint()..style = PaintingStyle.fill;
-    paint26fill.color = countryColors.bW ?? defaultCountryColor;
-    canvas.drawPath(path26, paint26fill);
+    paint26fill.color = countryColors.bW ?? defaultColor;
+    worldCanvas.drawPath(path26, paint26fill, onTapDown: (tabdetail) {
+      callback('bw', tabdetail);
+    });
 
     Path path27 = Path();
     path27.moveTo(size.width * 0.5606500, size.height * 0.5210035);
@@ -1493,8 +1554,10 @@ class SimpleWorldPainter extends CustomPainter {
     path27.close();
 
     Paint paint27fill = Paint()..style = PaintingStyle.fill;
-    paint27fill.color = countryColors.cF ?? defaultCountryColor;
-    canvas.drawPath(path27, paint27fill);
+    paint27fill.color = countryColors.cF ?? defaultColor;
+    worldCanvas.drawPath(path27, paint27fill, onTapDown: (tabdetail) {
+      callback('cf', tabdetail);
+    });
 
     Path path28 = Path();
     path28.moveTo(size.width * 0.3329500, size.height * 0.2375729);
@@ -1509,8 +1572,10 @@ class SimpleWorldPainter extends CustomPainter {
     path28.close();
 
     Paint paint28fill = Paint()..style = PaintingStyle.fill;
-    paint28fill.color = countryColors.cA ?? defaultCountryColor;
-    canvas.drawPath(path28, paint28fill);
+    paint28fill.color = countryColors.cA ?? defaultColor;
+    worldCanvas.drawPath(path28, paint28fill, onTapDown: (tabdetail) {
+      callback('ca', tabdetail);
+    });
 
     Path path29 = Path();
     path29.moveTo(size.width * 0.3401500, size.height * 0.2189032);
@@ -1524,8 +1589,10 @@ class SimpleWorldPainter extends CustomPainter {
     path29.close();
 
     Paint paint29fill = Paint()..style = PaintingStyle.fill;
-    paint29fill.color = countryColors.cA ?? defaultCountryColor;
-    canvas.drawPath(path29, paint29fill);
+    paint29fill.color = countryColors.cA ?? defaultColor;
+    worldCanvas.drawPath(path29, paint29fill, onTapDown: (tabdetail) {
+      callback('ca', tabdetail);
+    });
 
     Path path30 = Path();
     path30.moveTo(size.width * 0.1862000, size.height * 0.2232205);
@@ -1547,8 +1614,10 @@ class SimpleWorldPainter extends CustomPainter {
     path30.close();
 
     Paint paint30fill = Paint()..style = PaintingStyle.fill;
-    paint30fill.color = countryColors.cA ?? defaultCountryColor;
-    canvas.drawPath(path30, paint30fill);
+    paint30fill.color = countryColors.cA ?? defaultColor;
+    worldCanvas.drawPath(path30, paint30fill, onTapDown: (tabdetail) {
+      callback('ca', tabdetail);
+    });
 
     Path path31 = Path();
     path31.moveTo(size.width * 0.3557500, size.height * 0.2074679);
@@ -1587,8 +1656,10 @@ class SimpleWorldPainter extends CustomPainter {
     path31.close();
 
     Paint paint31fill = Paint()..style = PaintingStyle.fill;
-    paint31fill.color = countryColors.cA ?? defaultCountryColor;
-    canvas.drawPath(path31, paint31fill);
+    paint31fill.color = countryColors.cA ?? defaultColor;
+    worldCanvas.drawPath(path31, paint31fill, onTapDown: (tabdetail) {
+      callback('ca', tabdetail);
+    });
 
     Path path32 = Path();
     path32.moveTo(size.width * 0.1757500, size.height * 0.1824971);
@@ -1605,8 +1676,10 @@ class SimpleWorldPainter extends CustomPainter {
     path32.close();
 
     Paint paint32fill = Paint()..style = PaintingStyle.fill;
-    paint32fill.color = countryColors.cA ?? defaultCountryColor;
-    canvas.drawPath(path32, paint32fill);
+    paint32fill.color = countryColors.cA ?? defaultColor;
+    worldCanvas.drawPath(path32, paint32fill, onTapDown: (tabdetail) {
+      callback('ca', tabdetail);
+    });
 
     Path path33 = Path();
     path33.moveTo(size.width * 0.3174500, size.height * 0.1270712);
@@ -1620,8 +1693,10 @@ class SimpleWorldPainter extends CustomPainter {
     path33.close();
 
     Paint paint33fill = Paint()..style = PaintingStyle.fill;
-    paint33fill.color = countryColors.cA ?? defaultCountryColor;
-    canvas.drawPath(path33, paint33fill);
+    paint33fill.color = countryColors.cA ?? defaultColor;
+    worldCanvas.drawPath(path33, paint33fill, onTapDown: (tabdetail) {
+      callback('ca', tabdetail);
+    });
 
     Path path34 = Path();
     path34.moveTo(size.width * 0.3126000, size.height * 0.1233372);
@@ -1634,8 +1709,10 @@ class SimpleWorldPainter extends CustomPainter {
     path34.close();
 
     Paint paint34fill = Paint()..style = PaintingStyle.fill;
-    paint34fill.color = countryColors.cA ?? defaultCountryColor;
-    canvas.drawPath(path34, paint34fill);
+    paint34fill.color = countryColors.cA ?? defaultColor;
+    worldCanvas.drawPath(path34, paint34fill, onTapDown: (tabdetail) {
+      callback('ca', tabdetail);
+    });
 
     Path path35 = Path();
     path35.moveTo(size.width * 0.3110500, size.height * 0.1037340);
@@ -1661,8 +1738,10 @@ class SimpleWorldPainter extends CustomPainter {
     path35.close();
 
     Paint paint35fill = Paint()..style = PaintingStyle.fill;
-    paint35fill.color = countryColors.cA ?? defaultCountryColor;
-    canvas.drawPath(path35, paint35fill);
+    paint35fill.color = countryColors.cA ?? defaultColor;
+    worldCanvas.drawPath(path35, paint35fill, onTapDown: (tabdetail) {
+      callback('ca', tabdetail);
+    });
 
     Path path36 = Path();
     path36.moveTo(size.width * 0.3335000, size.height * 0.09404901);
@@ -1677,8 +1756,10 @@ class SimpleWorldPainter extends CustomPainter {
     path36.close();
 
     Paint paint36fill = Paint()..style = PaintingStyle.fill;
-    paint36fill.color = countryColors.cA ?? defaultCountryColor;
-    canvas.drawPath(path36, paint36fill);
+    paint36fill.color = countryColors.cA ?? defaultColor;
+    worldCanvas.drawPath(path36, paint36fill, onTapDown: (tabdetail) {
+      callback('ca', tabdetail);
+    });
 
     Path path37 = Path();
     path37.moveTo(size.width * 0.2962500, size.height * 0.08156359);
@@ -1695,8 +1776,10 @@ class SimpleWorldPainter extends CustomPainter {
     path37.close();
 
     Paint paint37fill = Paint()..style = PaintingStyle.fill;
-    paint37fill.color = countryColors.cA ?? defaultCountryColor;
-    canvas.drawPath(path37, paint37fill);
+    paint37fill.color = countryColors.cA ?? defaultColor;
+    worldCanvas.drawPath(path37, paint37fill, onTapDown: (tabdetail) {
+      callback('ca', tabdetail);
+    });
 
     Path path38 = Path();
     path38.moveTo(size.width * 0.3227500, size.height * 0.2479580);
@@ -1991,8 +2074,10 @@ class SimpleWorldPainter extends CustomPainter {
     path38.close();
 
     Paint paint38fill = Paint()..style = PaintingStyle.fill;
-    paint38fill.color = countryColors.cA ?? defaultCountryColor;
-    canvas.drawPath(path38, paint38fill);
+    paint38fill.color = countryColors.cA ?? defaultColor;
+    worldCanvas.drawPath(path38, paint38fill, onTapDown: (tabdetail) {
+      callback('ca', tabdetail);
+    });
 
     Path path39 = Path();
     path39.moveTo(size.width * 0.2695000, size.height * 0.05682614);
@@ -2043,8 +2128,10 @@ class SimpleWorldPainter extends CustomPainter {
     path39.close();
 
     Paint paint39fill = Paint()..style = PaintingStyle.fill;
-    paint39fill.color = countryColors.cA ?? defaultCountryColor;
-    canvas.drawPath(path39, paint39fill);
+    paint39fill.color = countryColors.cA ?? defaultColor;
+    worldCanvas.drawPath(path39, paint39fill, onTapDown: (tabdetail) {
+      callback('ca', tabdetail);
+    });
 
     Path path40 = Path();
     path40.moveTo(size.width * 0.2892500, size.height * 0.05507585);
@@ -2056,8 +2143,10 @@ class SimpleWorldPainter extends CustomPainter {
     path40.close();
 
     Paint paint40fill = Paint()..style = PaintingStyle.fill;
-    paint40fill.color = countryColors.cA ?? defaultCountryColor;
-    canvas.drawPath(path40, paint40fill);
+    paint40fill.color = countryColors.cA ?? defaultColor;
+    worldCanvas.drawPath(path40, paint40fill, onTapDown: (tabdetail) {
+      callback('ca', tabdetail);
+    });
 
     Path path41 = Path();
     path41.moveTo(size.width * 0.3435500, size.height * 0.05694282);
@@ -2074,8 +2163,10 @@ class SimpleWorldPainter extends CustomPainter {
     path41.close();
 
     Paint paint41fill = Paint()..style = PaintingStyle.fill;
-    paint41fill.color = countryColors.cA ?? defaultCountryColor;
-    canvas.drawPath(path41, paint41fill);
+    paint41fill.color = countryColors.cA ?? defaultColor;
+    worldCanvas.drawPath(path41, paint41fill, onTapDown: (tabdetail) {
+      callback('ca', tabdetail);
+    });
 
     Path path42 = Path();
     path42.moveTo(size.width * 0.3236500, size.height * 0.05659277);
@@ -2154,8 +2245,10 @@ class SimpleWorldPainter extends CustomPainter {
     path42.close();
 
     Paint paint42fill = Paint()..style = PaintingStyle.fill;
-    paint42fill.color = countryColors.cA ?? defaultCountryColor;
-    canvas.drawPath(path42, paint42fill);
+    paint42fill.color = countryColors.cA ?? defaultColor;
+    worldCanvas.drawPath(path42, paint42fill, onTapDown: (tabdetail) {
+      callback('ca', tabdetail);
+    });
 
     Path path43 = Path();
     path43.moveTo(size.width * 0.2984500, size.height * 0.05250875);
@@ -2176,8 +2269,10 @@ class SimpleWorldPainter extends CustomPainter {
     path43.close();
 
     Paint paint43fill = Paint()..style = PaintingStyle.fill;
-    paint43fill.color = countryColors.cA ?? defaultCountryColor;
-    canvas.drawPath(path43, paint43fill);
+    paint43fill.color = countryColors.cA ?? defaultColor;
+    worldCanvas.drawPath(path43, paint43fill, onTapDown: (tabdetail) {
+      callback('ca', tabdetail);
+    });
 
     Path path44 = Path();
     path44.moveTo(size.width * 0.3097500, size.height * 0.05892649);
@@ -2194,8 +2289,10 @@ class SimpleWorldPainter extends CustomPainter {
     path44.close();
 
     Paint paint44fill = Paint()..style = PaintingStyle.fill;
-    paint44fill.color = countryColors.cA ?? defaultCountryColor;
-    canvas.drawPath(path44, paint44fill);
+    paint44fill.color = countryColors.cA ?? defaultColor;
+    worldCanvas.drawPath(path44, paint44fill, onTapDown: (tabdetail) {
+      callback('ca', tabdetail);
+    });
 
     Path path45 = Path();
     path45.moveTo(size.width * 0.2518500, size.height * 0.06732789);
@@ -2218,8 +2315,10 @@ class SimpleWorldPainter extends CustomPainter {
     path45.close();
 
     Paint paint45fill = Paint()..style = PaintingStyle.fill;
-    paint45fill.color = countryColors.cA ?? defaultCountryColor;
-    canvas.drawPath(path45, paint45fill);
+    paint45fill.color = countryColors.cA ?? defaultColor;
+    worldCanvas.drawPath(path45, paint45fill, onTapDown: (tabdetail) {
+      callback('ca', tabdetail);
+    });
 
     Path path46 = Path();
     path46.moveTo(size.width * 0.3144500, size.height * 0.04585764);
@@ -2233,8 +2332,10 @@ class SimpleWorldPainter extends CustomPainter {
     path46.close();
 
     Paint paint46fill = Paint()..style = PaintingStyle.fill;
-    paint46fill.color = countryColors.cA ?? defaultCountryColor;
-    canvas.drawPath(path46, paint46fill);
+    paint46fill.color = countryColors.cA ?? defaultColor;
+    worldCanvas.drawPath(path46, paint46fill, onTapDown: (tabdetail) {
+      callback('ca', tabdetail);
+    });
 
     Path path47 = Path();
     path47.moveTo(size.width * 0.3100500, size.height * 0.03570595);
@@ -2253,8 +2354,10 @@ class SimpleWorldPainter extends CustomPainter {
     path47.close();
 
     Paint paint47fill = Paint()..style = PaintingStyle.fill;
-    paint47fill.color = countryColors.cA ?? defaultCountryColor;
-    canvas.drawPath(path47, paint47fill);
+    paint47fill.color = countryColors.cA ?? defaultColor;
+    worldCanvas.drawPath(path47, paint47fill, onTapDown: (tabdetail) {
+      callback('ca', tabdetail);
+    });
 
     Path path48 = Path();
     path48.moveTo(size.width * 0.2903500, size.height * 0.03873979);
@@ -2282,8 +2385,10 @@ class SimpleWorldPainter extends CustomPainter {
     path48.close();
 
     Paint paint48fill = Paint()..style = PaintingStyle.fill;
-    paint48fill.color = countryColors.cA ?? defaultCountryColor;
-    canvas.drawPath(path48, paint48fill);
+    paint48fill.color = countryColors.cA ?? defaultColor;
+    worldCanvas.drawPath(path48, paint48fill, onTapDown: (tabdetail) {
+      callback('ca', tabdetail);
+    });
 
     Path path49 = Path();
     path49.moveTo(size.width * 0.3182000, size.height * 0.03360560);
@@ -2317,8 +2422,10 @@ class SimpleWorldPainter extends CustomPainter {
     path49.close();
 
     Paint paint49fill = Paint()..style = PaintingStyle.fill;
-    paint49fill.color = countryColors.cA ?? defaultCountryColor;
-    canvas.drawPath(path49, paint49fill);
+    paint49fill.color = countryColors.cA ?? defaultColor;
+    worldCanvas.drawPath(path49, paint49fill, onTapDown: (tabdetail) {
+      callback('ca', tabdetail);
+    });
 
     Path path50 = Path();
     path50.moveTo(size.width * 0.2803500, size.height * 0.03057176);
@@ -2335,8 +2442,10 @@ class SimpleWorldPainter extends CustomPainter {
     path50.close();
 
     Paint paint50fill = Paint()..style = PaintingStyle.fill;
-    paint50fill.color = countryColors.cA ?? defaultCountryColor;
-    canvas.drawPath(path50, paint50fill);
+    paint50fill.color = countryColors.cA ?? defaultColor;
+    worldCanvas.drawPath(path50, paint50fill, onTapDown: (tabdetail) {
+      callback('ca', tabdetail);
+    });
 
     Path path51 = Path();
     path51.moveTo(size.width * 0.3209500, size.height * 0.03127188);
@@ -2349,8 +2458,10 @@ class SimpleWorldPainter extends CustomPainter {
     path51.close();
 
     Paint paint51fill = Paint()..style = PaintingStyle.fill;
-    paint51fill.color = countryColors.cA ?? defaultCountryColor;
-    canvas.drawPath(path51, paint51fill);
+    paint51fill.color = countryColors.cA ?? defaultColor;
+    worldCanvas.drawPath(path51, paint51fill, onTapDown: (tabdetail) {
+      callback('ca', tabdetail);
+    });
 
     Path path52 = Path();
     path52.moveTo(size.width * 0.2915500, size.height * 0.03022170);
@@ -2363,8 +2474,10 @@ class SimpleWorldPainter extends CustomPainter {
     path52.close();
 
     Paint paint52fill = Paint()..style = PaintingStyle.fill;
-    paint52fill.color = countryColors.cA ?? defaultCountryColor;
-    canvas.drawPath(path52, paint52fill);
+    paint52fill.color = countryColors.cA ?? defaultColor;
+    worldCanvas.drawPath(path52, paint52fill, onTapDown: (tabdetail) {
+      callback('ca', tabdetail);
+    });
 
     Path path53 = Path();
     path53.moveTo(size.width * 0.2954500, size.height * 0.02532089);
@@ -2377,8 +2490,10 @@ class SimpleWorldPainter extends CustomPainter {
     path53.close();
 
     Paint paint53fill = Paint()..style = PaintingStyle.fill;
-    paint53fill.color = countryColors.cA ?? defaultCountryColor;
-    canvas.drawPath(path53, paint53fill);
+    paint53fill.color = countryColors.cA ?? defaultColor;
+    worldCanvas.drawPath(path53, paint53fill, onTapDown: (tabdetail) {
+      callback('ca', tabdetail);
+    });
 
     Path path54 = Path();
     path54.moveTo(size.width * 0.3188500, size.height * 0.02823804);
@@ -2393,8 +2508,10 @@ class SimpleWorldPainter extends CustomPainter {
     path54.close();
 
     Paint paint54fill = Paint()..style = PaintingStyle.fill;
-    paint54fill.color = countryColors.cA ?? defaultCountryColor;
-    canvas.drawPath(path54, paint54fill);
+    paint54fill.color = countryColors.cA ?? defaultColor;
+    worldCanvas.drawPath(path54, paint54fill, onTapDown: (tabdetail) {
+      callback('ca', tabdetail);
+    });
 
     Path path55 = Path();
     path55.moveTo(size.width * 0.3119500, size.height * 0.02683781);
@@ -2411,8 +2528,10 @@ class SimpleWorldPainter extends CustomPainter {
     path55.close();
 
     Paint paint55fill = Paint()..style = PaintingStyle.fill;
-    paint55fill.color = countryColors.cA ?? defaultCountryColor;
-    canvas.drawPath(path55, paint55fill);
+    paint55fill.color = countryColors.cA ?? defaultColor;
+    worldCanvas.drawPath(path55, paint55fill, onTapDown: (tabdetail) {
+      callback('ca', tabdetail);
+    });
 
     Path path56 = Path();
     path56.moveTo(size.width * 0.3390000, size.height * 0.01971995);
@@ -2439,8 +2558,10 @@ class SimpleWorldPainter extends CustomPainter {
     path56.close();
 
     Paint paint56fill = Paint()..style = PaintingStyle.fill;
-    paint56fill.color = countryColors.cA ?? defaultCountryColor;
-    canvas.drawPath(path56, paint56fill);
+    paint56fill.color = countryColors.cA ?? defaultColor;
+    worldCanvas.drawPath(path56, paint56fill, onTapDown: (tabdetail) {
+      callback('ca', tabdetail);
+    });
 
     Path path57 = Path();
     path57.moveTo(size.width * 0.3786000, size.height * 0.003383897);
@@ -2511,8 +2632,10 @@ class SimpleWorldPainter extends CustomPainter {
     path57.close();
 
     Paint paint57fill = Paint()..style = PaintingStyle.fill;
-    paint57fill.color = countryColors.cA ?? defaultCountryColor;
-    canvas.drawPath(path57, paint57fill);
+    paint57fill.color = countryColors.cA ?? defaultColor;
+    worldCanvas.drawPath(path57, paint57fill, onTapDown: (tabdetail) {
+      callback('ca', tabdetail);
+    });
 
     Path path58 = Path();
     path58.moveTo(size.width * 0.5172000, size.height * 0.2304551);
@@ -2542,8 +2665,10 @@ class SimpleWorldPainter extends CustomPainter {
     path58.close();
 
     Paint paint58fill = Paint()..style = PaintingStyle.fill;
-    paint58fill.color = countryColors.cH ?? defaultCountryColor;
-    canvas.drawPath(path58, paint58fill);
+    paint58fill.color = countryColors.cH ?? defaultColor;
+    worldCanvas.drawPath(path58, paint58fill, onTapDown: (tabdetail) {
+      callback('ch', tabdetail);
+    });
 
     Path path59 = Path();
     path59.moveTo(size.width * 0.8011000, size.height * 0.4456243);
@@ -2559,8 +2684,10 @@ class SimpleWorldPainter extends CustomPainter {
     path59.close();
 
     Paint paint59fill = Paint()..style = PaintingStyle.fill;
-    paint59fill.color = countryColors.cN ?? defaultCountryColor;
-    canvas.drawPath(path59, paint59fill);
+    paint59fill.color = countryColors.cN ?? defaultColor;
+    worldCanvas.drawPath(path59, paint59fill, onTapDown: (tabdetail) {
+      callback('cn', tabdetail);
+    });
 
     Path path60 = Path();
     path60.moveTo(size.width * 0.8128000, size.height * 0.2164527);
@@ -2796,8 +2923,10 @@ class SimpleWorldPainter extends CustomPainter {
     path60.close();
 
     Paint paint60fill = Paint()..style = PaintingStyle.fill;
-    paint60fill.color = countryColors.cN ?? defaultCountryColor;
-    canvas.drawPath(path60, paint60fill);
+    paint60fill.color = countryColors.cN ?? defaultColor;
+    worldCanvas.drawPath(path60, paint60fill, onTapDown: (tabdetail) {
+      callback('cn', tabdetail);
+    });
 
     Path path61 = Path();
     path61.moveTo(size.width * 0.4779500, size.height * 0.5078180);
@@ -2849,8 +2978,10 @@ class SimpleWorldPainter extends CustomPainter {
     path61.close();
 
     Paint paint61fill = Paint()..style = PaintingStyle.fill;
-    paint61fill.color = countryColors.cI ?? defaultCountryColor;
-    canvas.drawPath(path61, paint61fill);
+    paint61fill.color = countryColors.cI ?? defaultColor;
+    worldCanvas.drawPath(path61, paint61fill, onTapDown: (tabdetail) {
+      callback('ci', tabdetail);
+    });
 
     Path path62 = Path();
     path62.moveTo(size.width * 0.5364000, size.height * 0.5299883);
@@ -2917,8 +3048,10 @@ class SimpleWorldPainter extends CustomPainter {
     path62.close();
 
     Paint paint62fill = Paint()..style = PaintingStyle.fill;
-    paint62fill.color = countryColors.cM ?? defaultCountryColor;
-    canvas.drawPath(path62, paint62fill);
+    paint62fill.color = countryColors.cM ?? defaultColor;
+    worldCanvas.drawPath(path62, paint62fill, onTapDown: (tabdetail) {
+      callback('cm', tabdetail);
+    });
 
     Path path63 = Path();
     path63.moveTo(size.width * 0.5706500, size.height * 0.5463244);
@@ -3049,8 +3182,10 @@ class SimpleWorldPainter extends CustomPainter {
     path63.close();
 
     Paint paint63fill = Paint()..style = PaintingStyle.fill;
-    paint63fill.color = countryColors.cD ?? defaultCountryColor;
-    canvas.drawPath(path63, paint63fill);
+    paint63fill.color = countryColors.cD ?? defaultColor;
+    worldCanvas.drawPath(path63, paint63fill, onTapDown: (tabdetail) {
+      callback('cd', tabdetail);
+    });
 
     Path path64 = Path();
     path64.moveTo(size.width * 0.5454500, size.height * 0.5592765);
@@ -3105,8 +3240,10 @@ class SimpleWorldPainter extends CustomPainter {
     path64.close();
 
     Paint paint64fill = Paint()..style = PaintingStyle.fill;
-    paint64fill.color = countryColors.cG ?? defaultCountryColor;
-    canvas.drawPath(path64, paint64fill);
+    paint64fill.color = countryColors.cG ?? defaultColor;
+    worldCanvas.drawPath(path64, paint64fill, onTapDown: (tabdetail) {
+      callback('cg', tabdetail);
+    });
 
     Path path65 = Path();
     path65.moveTo(size.width * 0.2922000, size.height * 0.4973162);
@@ -3212,8 +3349,10 @@ class SimpleWorldPainter extends CustomPainter {
     path65.close();
 
     Paint paint65fill = Paint()..style = PaintingStyle.fill;
-    paint65fill.color = countryColors.cO ?? defaultCountryColor;
-    canvas.drawPath(path65, paint65fill);
+    paint65fill.color = countryColors.cO ?? defaultColor;
+    worldCanvas.drawPath(path65, paint65fill, onTapDown: (tabdetail) {
+      callback('co', tabdetail);
+    });
 
     Path path66 = Path();
     path66.moveTo(size.width * 0.2573000, size.height * 0.5036173);
@@ -3255,8 +3394,10 @@ class SimpleWorldPainter extends CustomPainter {
     path66.close();
 
     Paint paint66fill = Paint()..style = PaintingStyle.fill;
-    paint66fill.color = countryColors.cR ?? defaultCountryColor;
-    canvas.drawPath(path66, paint66fill);
+    paint66fill.color = countryColors.cR ?? defaultColor;
+    worldCanvas.drawPath(path66, paint66fill, onTapDown: (tabdetail) {
+      callback('cr', tabdetail);
+    });
 
     Path path67 = Path();
     path67.moveTo(size.width * 0.2724000, size.height * 0.4150525);
@@ -3304,8 +3445,10 @@ class SimpleWorldPainter extends CustomPainter {
     path67.close();
 
     Paint paint67fill = Paint()..style = PaintingStyle.fill;
-    paint67fill.color = countryColors.cU ?? defaultCountryColor;
-    canvas.drawPath(path67, paint67fill);
+    paint67fill.color = countryColors.cU ?? defaultColor;
+    worldCanvas.drawPath(path67, paint67fill, onTapDown: (tabdetail) {
+      callback('cu', tabdetail);
+    });
 
     Path path68 = Path();
     path68.moveTo(size.width * 0.5298500, size.height * 0.2044341);
@@ -3346,8 +3489,10 @@ class SimpleWorldPainter extends CustomPainter {
     path68.close();
 
     Paint paint68fill = Paint()..style = PaintingStyle.fill;
-    paint68fill.color = countryColors.cZ ?? defaultCountryColor;
-    canvas.drawPath(path68, paint68fill);
+    paint68fill.color = countryColors.cZ ?? defaultColor;
+    worldCanvas.drawPath(path68, paint68fill, onTapDown: (tabdetail) {
+      callback('cz', tabdetail);
+    });
 
     Path path69 = Path();
     path69.moveTo(size.width * 0.5269500, size.height * 0.1854142);
@@ -3411,8 +3556,10 @@ class SimpleWorldPainter extends CustomPainter {
     path69.close();
 
     Paint paint69fill = Paint()..style = PaintingStyle.fill;
-    paint69fill.color = countryColors.dE ?? defaultCountryColor;
-    canvas.drawPath(path69, paint69fill);
+    paint69fill.color = countryColors.dE ?? defaultColor;
+    worldCanvas.drawPath(path69, paint69fill, onTapDown: (tabdetail) {
+      callback('de', tabdetail);
+    });
 
     Path path70 = Path();
     path70.moveTo(size.width * 0.6147500, size.height * 0.4996499);
@@ -3433,8 +3580,10 @@ class SimpleWorldPainter extends CustomPainter {
     path70.close();
 
     Paint paint70fill = Paint()..style = PaintingStyle.fill;
-    paint70fill.color = countryColors.dJ ?? defaultCountryColor;
-    canvas.drawPath(path70, paint70fill);
+    paint70fill.color = countryColors.dJ ?? defaultColor;
+    worldCanvas.drawPath(path70, paint70fill, onTapDown: (tabdetail) {
+      callback('dj', tabdetail);
+    });
 
     Path path71 = Path();
     path71.moveTo(size.width * 0.5230500, size.height * 0.1723454);
@@ -3446,8 +3595,10 @@ class SimpleWorldPainter extends CustomPainter {
     path71.close();
 
     Paint paint71fill = Paint()..style = PaintingStyle.fill;
-    paint71fill.color = countryColors.dK ?? defaultCountryColor;
-    canvas.drawPath(path71, paint71fill);
+    paint71fill.color = countryColors.dK ?? defaultColor;
+    worldCanvas.drawPath(path71, paint71fill, onTapDown: (tabdetail) {
+      callback('dk', tabdetail);
+    });
 
     Path path72 = Path();
     path72.moveTo(size.width * 0.5166500, size.height * 0.1767795);
@@ -3471,8 +3622,10 @@ class SimpleWorldPainter extends CustomPainter {
     path72.close();
 
     Paint paint72fill = Paint()..style = PaintingStyle.fill;
-    paint72fill.color = countryColors.dK ?? defaultCountryColor;
-    canvas.drawPath(path72, paint72fill);
+    paint72fill.color = countryColors.dK ?? defaultColor;
+    worldCanvas.drawPath(path72, paint72fill, onTapDown: (tabdetail) {
+      callback('dk', tabdetail);
+    });
 
     Path path73 = Path();
     path73.moveTo(size.width * 0.2928500, size.height * 0.4504084);
@@ -3504,8 +3657,10 @@ class SimpleWorldPainter extends CustomPainter {
     path73.close();
 
     Paint paint73fill = Paint()..style = PaintingStyle.fill;
-    paint73fill.color = countryColors.dO ?? defaultCountryColor;
-    canvas.drawPath(path73, paint73fill);
+    paint73fill.color = countryColors.dO ?? defaultColor;
+    worldCanvas.drawPath(path73, paint73fill, onTapDown: (tabdetail) {
+      callback('do', tabdetail);
+    });
 
     Path path74 = Path();
     path74.moveTo(size.width * 0.5155000, size.height * 0.3087515);
@@ -3573,8 +3728,10 @@ class SimpleWorldPainter extends CustomPainter {
     path74.close();
 
     Paint paint74fill = Paint()..style = PaintingStyle.fill;
-    paint74fill.color = countryColors.dZ ?? defaultCountryColor;
-    canvas.drawPath(path74, paint74fill);
+    paint74fill.color = countryColors.dZ ?? defaultColor;
+    worldCanvas.drawPath(path74, paint74fill, onTapDown: (tabdetail) {
+      callback('dz', tabdetail);
+    });
 
     Path path75 = Path();
     path75.moveTo(size.width * 0.2795000, size.height * 0.5866978);
@@ -3613,8 +3770,10 @@ class SimpleWorldPainter extends CustomPainter {
     path75.close();
 
     Paint paint75fill = Paint()..style = PaintingStyle.fill;
-    paint75fill.color = countryColors.eC ?? defaultCountryColor;
-    canvas.drawPath(path75, paint75fill);
+    paint75fill.color = countryColors.eC ?? defaultColor;
+    worldCanvas.drawPath(path75, paint75fill, onTapDown: (tabdetail) {
+      callback('ec', tabdetail);
+    });
 
     Path path76 = Path();
     path76.moveTo(size.width * 0.5860500, size.height * 0.3516919);
@@ -3663,8 +3822,10 @@ class SimpleWorldPainter extends CustomPainter {
     path76.close();
 
     Paint paint76fill = Paint()..style = PaintingStyle.fill;
-    paint76fill.color = countryColors.eG ?? defaultCountryColor;
-    canvas.drawPath(path76, paint76fill);
+    paint76fill.color = countryColors.eG ?? defaultColor;
+    worldCanvas.drawPath(path76, paint76fill, onTapDown: (tabdetail) {
+      callback('eg', tabdetail);
+    });
 
     Path path77 = Path();
     path77.moveTo(size.width * 0.6144500, size.height * 0.4904317);
@@ -3698,8 +3859,10 @@ class SimpleWorldPainter extends CustomPainter {
     path77.close();
 
     Paint paint77fill = Paint()..style = PaintingStyle.fill;
-    paint77fill.color = countryColors.eR ?? defaultCountryColor;
-    canvas.drawPath(path77, paint77fill);
+    paint77fill.color = countryColors.eR ?? defaultColor;
+    worldCanvas.drawPath(path77, paint77fill, onTapDown: (tabdetail) {
+      callback('er', tabdetail);
+    });
 
     Path path78 = Path();
     path78.moveTo(size.width * 0.5568500, size.height * 0.1453909);
@@ -3722,8 +3885,10 @@ class SimpleWorldPainter extends CustomPainter {
     path78.close();
 
     Paint paint78fill = Paint()..style = PaintingStyle.fill;
-    paint78fill.color = countryColors.eE ?? defaultCountryColor;
-    canvas.drawPath(path78, paint78fill);
+    paint78fill.color = countryColors.eE ?? defaultColor;
+    worldCanvas.drawPath(path78, paint78fill, onTapDown: (tabdetail) {
+      callback('ee', tabdetail);
+    });
 
     Path path79 = Path();
     path79.moveTo(size.width * 0.6036500, size.height * 0.4766628);
@@ -3789,8 +3954,10 @@ class SimpleWorldPainter extends CustomPainter {
     path79.close();
 
     Paint paint79fill = Paint()..style = PaintingStyle.fill;
-    paint79fill.color = countryColors.eT ?? defaultCountryColor;
-    canvas.drawPath(path79, paint79fill);
+    paint79fill.color = countryColors.eT ?? defaultColor;
+    worldCanvas.drawPath(path79, paint79fill, onTapDown: (tabdetail) {
+      callback('et', tabdetail);
+    });
 
     Path path80 = Path();
     path80.moveTo(size.width * 0.5520500, size.height * 0.08179697);
@@ -3834,8 +4001,10 @@ class SimpleWorldPainter extends CustomPainter {
     path80.close();
 
     Paint paint80fill = Paint()..style = PaintingStyle.fill;
-    paint80fill.color = countryColors.fI ?? defaultCountryColor;
-    canvas.drawPath(path80, paint80fill);
+    paint80fill.color = countryColors.fI ?? defaultColor;
+    worldCanvas.drawPath(path80, paint80fill, onTapDown: (tabdetail) {
+      callback('fi', tabdetail);
+    });
 
     Path path81 = Path();
     path81.moveTo(size.width * 0.5302500, size.height * 0.5686114);
@@ -3872,8 +4041,10 @@ class SimpleWorldPainter extends CustomPainter {
     path81.close();
 
     Paint paint81fill = Paint()..style = PaintingStyle.fill;
-    paint81fill.color = countryColors.gA ?? defaultCountryColor;
-    canvas.drawPath(path81, paint81fill);
+    paint81fill.color = countryColors.gA ?? defaultColor;
+    worldCanvas.drawPath(path81, paint81fill, onTapDown: (tabdetail) {
+      callback('ga', tabdetail);
+    });
 
     Path path82 = Path();
     path82.moveTo(size.width * 0.4783500, size.height * 0.1845974);
@@ -3887,8 +4058,10 @@ class SimpleWorldPainter extends CustomPainter {
     path82.close();
 
     Paint paint82fill = Paint()..style = PaintingStyle.fill;
-    paint82fill.color = countryColors.gB ?? defaultCountryColor;
-    canvas.drawPath(path82, paint82fill);
+    paint82fill.color = countryColors.gB ?? defaultColor;
+    worldCanvas.drawPath(path82, paint82fill, onTapDown: (tabdetail) {
+      callback('gb', tabdetail);
+    });
 
     Path path83 = Path();
     path83.moveTo(size.width * 0.4863000, size.height * 0.1511085);
@@ -3940,8 +4113,10 @@ class SimpleWorldPainter extends CustomPainter {
     path83.close();
 
     Paint paint83fill = Paint()..style = PaintingStyle.fill;
-    paint83fill.color = countryColors.gB ?? defaultCountryColor;
-    canvas.drawPath(path83, paint83fill);
+    paint83fill.color = countryColors.gB ?? defaultColor;
+    worldCanvas.drawPath(path83, paint83fill, onTapDown: (tabdetail) {
+      callback('gb', tabdetail);
+    });
 
     Path path84 = Path();
     path84.moveTo(size.width * 0.6078500, size.height * 0.2659277);
@@ -3971,8 +4146,10 @@ class SimpleWorldPainter extends CustomPainter {
     path84.close();
 
     Paint paint84fill = Paint()..style = PaintingStyle.fill;
-    paint84fill.color = countryColors.gE ?? defaultCountryColor;
-    canvas.drawPath(path84, paint84fill);
+    paint84fill.color = countryColors.gE ?? defaultColor;
+    worldCanvas.drawPath(path84, paint84fill, onTapDown: (tabdetail) {
+      callback('ge', tabdetail);
+    });
 
     Path path85 = Path();
     path85.moveTo(size.width * 0.4932500, size.height * 0.5030338);
@@ -4003,8 +4180,10 @@ class SimpleWorldPainter extends CustomPainter {
     path85.close();
 
     Paint paint85fill = Paint()..style = PaintingStyle.fill;
-    paint85fill.color = countryColors.gH ?? defaultCountryColor;
-    canvas.drawPath(path85, paint85fill);
+    paint85fill.color = countryColors.gH ?? defaultColor;
+    worldCanvas.drawPath(path85, paint85fill, onTapDown: (tabdetail) {
+      callback('gh', tabdetail);
+    });
 
     Path path86 = Path();
     path86.moveTo(size.width * 0.4607500, size.height * 0.4922987);
@@ -4080,8 +4259,10 @@ class SimpleWorldPainter extends CustomPainter {
     path86.close();
 
     Paint paint86fill = Paint()..style = PaintingStyle.fill;
-    paint86fill.color = countryColors.gN ?? defaultCountryColor;
-    canvas.drawPath(path86, paint86fill);
+    paint86fill.color = countryColors.gN ?? defaultColor;
+    worldCanvas.drawPath(path86, paint86fill, onTapDown: (tabdetail) {
+      callback('gn', tabdetail);
+    });
 
     Path path87 = Path();
     path87.moveTo(size.width * 0.4458000, size.height * 0.4870478);
@@ -4103,8 +4284,10 @@ class SimpleWorldPainter extends CustomPainter {
     path87.close();
 
     Paint paint87fill = Paint()..style = PaintingStyle.fill;
-    paint87fill.color = countryColors.gM ?? defaultCountryColor;
-    canvas.drawPath(path87, paint87fill);
+    paint87fill.color = countryColors.gM ?? defaultColor;
+    worldCanvas.drawPath(path87, paint87fill, onTapDown: (tabdetail) {
+      callback('gm', tabdetail);
+    });
 
     Path path88 = Path();
     path88.moveTo(size.width * 0.4546000, size.height * 0.4912485);
@@ -4129,8 +4312,10 @@ class SimpleWorldPainter extends CustomPainter {
     path88.close();
 
     Paint paint88fill = Paint()..style = PaintingStyle.fill;
-    paint88fill.color = countryColors.gW ?? defaultCountryColor;
-    canvas.drawPath(path88, paint88fill);
+    paint88fill.color = countryColors.gW ?? defaultColor;
+    worldCanvas.drawPath(path88, paint88fill, onTapDown: (tabdetail) {
+      callback('gw', tabdetail);
+    });
 
     Path path89 = Path();
     path89.moveTo(size.width * 0.5251500, size.height * 0.5686114);
@@ -4143,8 +4328,10 @@ class SimpleWorldPainter extends CustomPainter {
     path89.close();
 
     Paint paint89fill = Paint()..style = PaintingStyle.fill;
-    paint89fill.color = countryColors.gQ ?? defaultCountryColor;
-    canvas.drawPath(path89, paint89fill);
+    paint89fill.color = countryColors.gQ ?? defaultColor;
+    worldCanvas.drawPath(path89, paint89fill, onTapDown: (tabdetail) {
+      callback('gq', tabdetail);
+    });
 
     Path path90 = Path();
     path90.moveTo(size.width * 0.5563500, size.height * 0.3180863);
@@ -4161,8 +4348,10 @@ class SimpleWorldPainter extends CustomPainter {
     path90.close();
 
     Paint paint90fill = Paint()..style = PaintingStyle.fill;
-    paint90fill.color = countryColors.gR ?? defaultCountryColor;
-    canvas.drawPath(path90, paint90fill);
+    paint90fill.color = countryColors.gR ?? defaultColor;
+    worldCanvas.drawPath(path90, paint90fill, onTapDown: (tabdetail) {
+      callback('gr', tabdetail);
+    });
 
     Path path91 = Path();
     path91.moveTo(size.width * 0.5609500, size.height * 0.2799300);
@@ -4211,8 +4400,10 @@ class SimpleWorldPainter extends CustomPainter {
     path91.close();
 
     Paint paint91fill = Paint()..style = PaintingStyle.fill;
-    paint91fill.color = countryColors.gR ?? defaultCountryColor;
-    canvas.drawPath(path91, paint91fill);
+    paint91fill.color = countryColors.gR ?? defaultColor;
+    worldCanvas.drawPath(path91, paint91fill, onTapDown: (tabdetail) {
+      callback('gr', tabdetail);
+    });
 
     Path path92 = Path();
     path92.moveTo(size.width * 0.4481500, size.height * 0.001633606);
@@ -4350,8 +4541,10 @@ class SimpleWorldPainter extends CustomPainter {
     path92.close();
 
     Paint paint92fill = Paint()..style = PaintingStyle.fill;
-    paint92fill.color = countryColors.gL ?? defaultCountryColor;
-    canvas.drawPath(path92, paint92fill);
+    paint92fill.color = countryColors.gL ?? defaultColor;
+    worldCanvas.drawPath(path92, paint92fill, onTapDown: (tabdetail) {
+      callback('gl', tabdetail);
+    });
 
     Path path93 = Path();
     path93.moveTo(size.width * 0.2440500, size.height * 0.4521587);
@@ -4392,8 +4585,10 @@ class SimpleWorldPainter extends CustomPainter {
     path93.close();
 
     Paint paint93fill = Paint()..style = PaintingStyle.fill;
-    paint93fill.color = countryColors.gT ?? defaultCountryColor;
-    canvas.drawPath(path93, paint93fill);
+    paint93fill.color = countryColors.gT ?? defaultColor;
+    worldCanvas.drawPath(path93, paint93fill, onTapDown: (tabdetail) {
+      callback('gt', tabdetail);
+    });
 
     Path path94 = Path();
     path94.moveTo(size.width * 0.3314500, size.height * 0.5408401);
@@ -4439,8 +4634,10 @@ class SimpleWorldPainter extends CustomPainter {
     path94.close();
 
     Paint paint94fill = Paint()..style = PaintingStyle.fill;
-    paint94fill.color = countryColors.gY ?? defaultCountryColor;
-    canvas.drawPath(path94, paint94fill);
+    paint94fill.color = countryColors.gY ?? defaultColor;
+    worldCanvas.drawPath(path94, paint94fill, onTapDown: (tabdetail) {
+      callback('gy', tabdetail);
+    });
 
     Path path95 = Path();
     path95.moveTo(size.width * 0.2598000, size.height * 0.4731622);
@@ -4503,8 +4700,10 @@ class SimpleWorldPainter extends CustomPainter {
     path95.close();
 
     Paint paint95fill = Paint()..style = PaintingStyle.fill;
-    paint95fill.color = countryColors.hN ?? defaultCountryColor;
-    canvas.drawPath(path95, paint95fill);
+    paint95fill.color = countryColors.hN ?? defaultColor;
+    worldCanvas.drawPath(path95, paint95fill, onTapDown: (tabdetail) {
+      callback('hn', tabdetail);
+    });
 
     Path path96 = Path();
     path96.moveTo(size.width * 0.5407500, size.height * 0.2422404);
@@ -4552,8 +4751,10 @@ class SimpleWorldPainter extends CustomPainter {
     path96.close();
 
     Paint paint96fill = Paint()..style = PaintingStyle.fill;
-    paint96fill.color = countryColors.hR ?? defaultCountryColor;
-    canvas.drawPath(path96, paint96fill);
+    paint96fill.color = countryColors.hR ?? defaultColor;
+    worldCanvas.drawPath(path96, paint96fill, onTapDown: (tabdetail) {
+      callback('hr', tabdetail);
+    });
 
     Path path97 = Path();
     path97.moveTo(size.width * 0.2934000, size.height * 0.4379230);
@@ -4580,8 +4781,10 @@ class SimpleWorldPainter extends CustomPainter {
     path97.close();
 
     Paint paint97fill = Paint()..style = PaintingStyle.fill;
-    paint97fill.color = countryColors.hT ?? defaultCountryColor;
-    canvas.drawPath(path97, paint97fill);
+    paint97fill.color = countryColors.hT ?? defaultColor;
+    worldCanvas.drawPath(path97, paint97fill, onTapDown: (tabdetail) {
+      callback('ht', tabdetail);
+    });
 
     Path path98 = Path();
     path98.moveTo(size.width * 0.5481000, size.height * 0.2239207);
@@ -4618,8 +4821,10 @@ class SimpleWorldPainter extends CustomPainter {
     path98.close();
 
     Paint paint98fill = Paint()..style = PaintingStyle.fill;
-    paint98fill.color = countryColors.hU ?? defaultCountryColor;
-    canvas.drawPath(path98, paint98fill);
+    paint98fill.color = countryColors.hU ?? defaultColor;
+    worldCanvas.drawPath(path98, paint98fill, onTapDown: (tabdetail) {
+      callback('hu', tabdetail);
+    });
 
     Path path99 = Path();
     path99.moveTo(size.width * 0.8337500, size.height * 0.6623104);
@@ -4632,8 +4837,10 @@ class SimpleWorldPainter extends CustomPainter {
     path99.close();
 
     Paint paint99fill = Paint()..style = PaintingStyle.fill;
-    paint99fill.color = countryColors.iD ?? defaultCountryColor;
-    canvas.drawPath(path99, paint99fill);
+    paint99fill.color = countryColors.iD ?? defaultColor;
+    worldCanvas.drawPath(path99, paint99fill, onTapDown: (tabdetail) {
+      callback('id', tabdetail);
+    });
 
     Path path100 = Path();
     path100.moveTo(size.width * 0.8461500, size.height * 0.6521587);
@@ -4648,8 +4855,10 @@ class SimpleWorldPainter extends CustomPainter {
     path100.close();
 
     Paint paint100fill = Paint()..style = PaintingStyle.fill;
-    paint100fill.color = countryColors.iD ?? defaultCountryColor;
-    canvas.drawPath(path100, paint100fill);
+    paint100fill.color = countryColors.iD ?? defaultColor;
+    worldCanvas.drawPath(path100, paint100fill, onTapDown: (tabdetail) {
+      callback('id', tabdetail);
+    });
 
     Path path101 = Path();
     path101.moveTo(size.width * 0.8263500, size.height * 0.6462077);
@@ -4665,8 +4874,10 @@ class SimpleWorldPainter extends CustomPainter {
     path101.close();
 
     Paint paint101fill = Paint()..style = PaintingStyle.fill;
-    paint101fill.color = countryColors.iD ?? defaultCountryColor;
-    canvas.drawPath(path101, paint101fill);
+    paint101fill.color = countryColors.iD ?? defaultColor;
+    worldCanvas.drawPath(path101, paint101fill, onTapDown: (tabdetail) {
+      callback('id', tabdetail);
+    });
 
     Path path102 = Path();
     path102.moveTo(size.width * 0.8405000, size.height * 0.6462077);
@@ -4681,8 +4892,10 @@ class SimpleWorldPainter extends CustomPainter {
     path102.close();
 
     Paint paint102fill = Paint()..style = PaintingStyle.fill;
-    paint102fill.color = countryColors.iD ?? defaultCountryColor;
-    canvas.drawPath(path102, paint102fill);
+    paint102fill.color = countryColors.iD ?? defaultColor;
+    worldCanvas.drawPath(path102, paint102fill, onTapDown: (tabdetail) {
+      callback('id', tabdetail);
+    });
 
     Path path103 = Path();
     path103.moveTo(size.width * 0.8004000, size.height * 0.6362894);
@@ -4711,8 +4924,10 @@ class SimpleWorldPainter extends CustomPainter {
     path103.close();
 
     Paint paint103fill = Paint()..style = PaintingStyle.fill;
-    paint103fill.color = countryColors.iD ?? defaultCountryColor;
-    canvas.drawPath(path103, paint103fill);
+    paint103fill.color = countryColors.iD ?? defaultColor;
+    worldCanvas.drawPath(path103, paint103fill, onTapDown: (tabdetail) {
+      callback('id', tabdetail);
+    });
 
     Path path104 = Path();
     path104.moveTo(size.width * 0.8743500, size.height * 0.6320887);
@@ -4725,8 +4940,10 @@ class SimpleWorldPainter extends CustomPainter {
     path104.close();
 
     Paint paint104fill = Paint()..style = PaintingStyle.fill;
-    paint104fill.color = countryColors.iD ?? defaultCountryColor;
-    canvas.drawPath(path104, paint104fill);
+    paint104fill.color = countryColors.iD ?? defaultColor;
+    worldCanvas.drawPath(path104, paint104fill, onTapDown: (tabdetail) {
+      callback('id', tabdetail);
+    });
 
     Path path105 = Path();
     path105.moveTo(size.width * 0.8536500, size.height * 0.6114352);
@@ -4738,8 +4955,10 @@ class SimpleWorldPainter extends CustomPainter {
     path105.close();
 
     Paint paint105fill = Paint()..style = PaintingStyle.fill;
-    paint105fill.color = countryColors.iD ?? defaultCountryColor;
-    canvas.drawPath(path105, paint105fill);
+    paint105fill.color = countryColors.iD ?? defaultColor;
+    worldCanvas.drawPath(path105, paint105fill, onTapDown: (tabdetail) {
+      callback('id', tabdetail);
+    });
 
     Path path106 = Path();
     path106.moveTo(size.width * 0.8628500, size.height * 0.6087515);
@@ -4754,8 +4973,10 @@ class SimpleWorldPainter extends CustomPainter {
     path106.close();
 
     Paint paint106fill = Paint()..style = PaintingStyle.fill;
-    paint106fill.color = countryColors.iD ?? defaultCountryColor;
-    canvas.drawPath(path106, paint106fill);
+    paint106fill.color = countryColors.iD ?? defaultColor;
+    worldCanvas.drawPath(path106, paint106fill, onTapDown: (tabdetail) {
+      callback('id', tabdetail);
+    });
 
     Path path107 = Path();
     path107.moveTo(size.width * 0.8927500, size.height * 0.6050175);
@@ -4799,8 +5020,10 @@ class SimpleWorldPainter extends CustomPainter {
     path107.close();
 
     Paint paint107fill = Paint()..style = PaintingStyle.fill;
-    paint107fill.color = countryColors.iD ?? defaultCountryColor;
-    canvas.drawPath(path107, paint107fill);
+    paint107fill.color = countryColors.iD ?? defaultColor;
+    worldCanvas.drawPath(path107, paint107fill, onTapDown: (tabdetail) {
+      callback('id', tabdetail);
+    });
 
     Path path108 = Path();
     path108.moveTo(size.width * 0.8482000, size.height * 0.5749125);
@@ -4851,8 +5074,10 @@ class SimpleWorldPainter extends CustomPainter {
     path108.close();
 
     Paint paint108fill = Paint()..style = PaintingStyle.fill;
-    paint108fill.color = countryColors.iD ?? defaultCountryColor;
-    canvas.drawPath(path108, paint108fill);
+    paint108fill.color = countryColors.iD ?? defaultColor;
+    worldCanvas.drawPath(path108, paint108fill, onTapDown: (tabdetail) {
+      callback('id', tabdetail);
+    });
 
     Path path109 = Path();
     path109.moveTo(size.width * 0.8580000, size.height * 0.5771295);
@@ -4871,8 +5096,10 @@ class SimpleWorldPainter extends CustomPainter {
     path109.close();
 
     Paint paint109fill = Paint()..style = PaintingStyle.fill;
-    paint109fill.color = countryColors.iD ?? defaultCountryColor;
-    canvas.drawPath(path109, paint109fill);
+    paint109fill.color = countryColors.iD ?? defaultColor;
+    worldCanvas.drawPath(path109, paint109fill, onTapDown: (tabdetail) {
+      callback('id', tabdetail);
+    });
 
     Path path110 = Path();
     path110.moveTo(size.width * 0.8040000, size.height * 0.5704784);
@@ -4917,8 +5144,10 @@ class SimpleWorldPainter extends CustomPainter {
     path110.close();
 
     Paint paint110fill = Paint()..style = PaintingStyle.fill;
-    paint110fill.color = countryColors.iD ?? defaultCountryColor;
-    canvas.drawPath(path110, paint110fill);
+    paint110fill.color = countryColors.iD ?? defaultColor;
+    worldCanvas.drawPath(path110, paint110fill, onTapDown: (tabdetail) {
+      callback('id', tabdetail);
+    });
 
     Path path111 = Path();
     path111.moveTo(size.width * 0.7926000, size.height * 0.6294049);
@@ -4959,8 +5188,10 @@ class SimpleWorldPainter extends CustomPainter {
     path111.close();
 
     Paint paint111fill = Paint()..style = PaintingStyle.fill;
-    paint111fill.color = countryColors.iD ?? defaultCountryColor;
-    canvas.drawPath(path111, paint111fill);
+    paint111fill.color = countryColors.iD ?? defaultColor;
+    worldCanvas.drawPath(path111, paint111fill, onTapDown: (tabdetail) {
+      callback('id', tabdetail);
+    });
 
     Path path112 = Path();
     path112.moveTo(size.width * 0.7138000, size.height * 0.3593932);
@@ -5102,8 +5333,10 @@ class SimpleWorldPainter extends CustomPainter {
     path112.close();
 
     Paint paint112fill = Paint()..style = PaintingStyle.fill;
-    paint112fill.color = countryColors.iN ?? defaultCountryColor;
-    canvas.drawPath(path112, paint112fill);
+    paint112fill.color = countryColors.iN ?? defaultColor;
+    worldCanvas.drawPath(path112, paint112fill, onTapDown: (tabdetail) {
+      callback('in', tabdetail);
+    });
 
     Path path113 = Path();
     path113.moveTo(size.width * 0.4783500, size.height * 0.1845974);
@@ -5122,8 +5355,10 @@ class SimpleWorldPainter extends CustomPainter {
     path113.close();
 
     Paint paint113fill = Paint()..style = PaintingStyle.fill;
-    paint113fill.color = countryColors.iE ?? defaultCountryColor;
-    canvas.drawPath(path113, paint113fill);
+    paint113fill.color = countryColors.iE ?? defaultColor;
+    worldCanvas.drawPath(path113, paint113fill, onTapDown: (tabdetail) {
+      callback('ie', tabdetail);
+    });
 
     Path path114 = Path();
     path114.moveTo(size.width * 0.6145000, size.height * 0.2954492);
@@ -5204,8 +5439,10 @@ class SimpleWorldPainter extends CustomPainter {
     path114.close();
 
     Paint paint114fill = Paint()..style = PaintingStyle.fill;
-    paint114fill.color = countryColors.iR ?? defaultCountryColor;
-    canvas.drawPath(path114, paint114fill);
+    paint114fill.color = countryColors.iR ?? defaultColor;
+    worldCanvas.drawPath(path114, paint114fill, onTapDown: (tabdetail) {
+      callback('ir', tabdetail);
+    });
 
     Path path115 = Path();
     path115.moveTo(size.width * 0.6117500, size.height * 0.3071179);
@@ -5241,8 +5478,10 @@ class SimpleWorldPainter extends CustomPainter {
     path115.close();
 
     Paint paint115fill = Paint()..style = PaintingStyle.fill;
-    paint115fill.color = countryColors.iQ ?? defaultCountryColor;
-    canvas.drawPath(path115, paint115fill);
+    paint115fill.color = countryColors.iQ ?? defaultColor;
+    worldCanvas.drawPath(path115, paint115fill, onTapDown: (tabdetail) {
+      callback('iq', tabdetail);
+    });
 
     Path path116 = Path();
     path116.moveTo(size.width * 0.4624000, size.height * 0.09859977);
@@ -5268,8 +5507,10 @@ class SimpleWorldPainter extends CustomPainter {
     path116.close();
 
     Paint paint116fill = Paint()..style = PaintingStyle.fill;
-    paint116fill.color = countryColors.iS ?? defaultCountryColor;
-    canvas.drawPath(path116, paint116fill);
+    paint116fill.color = countryColors.iS ?? defaultColor;
+    worldCanvas.drawPath(path116, paint116fill, onTapDown: (tabdetail) {
+      callback('is', tabdetail);
+    });
 
     Path path117 = Path();
     path117.moveTo(size.width * 0.5895500, size.height * 0.3362894);
@@ -5299,8 +5540,10 @@ class SimpleWorldPainter extends CustomPainter {
     path117.close();
 
     Paint paint117fill = Paint()..style = PaintingStyle.fill;
-    paint117fill.color = countryColors.iL ?? defaultCountryColor;
-    canvas.drawPath(path117, paint117fill);
+    paint117fill.color = countryColors.iL ?? defaultColor;
+    worldCanvas.drawPath(path117, paint117fill, onTapDown: (tabdetail) {
+      callback('il', tabdetail);
+    });
 
     Path path118 = Path();
     path118.moveTo(size.width * 0.5341000, size.height * 0.2991832);
@@ -5317,8 +5560,10 @@ class SimpleWorldPainter extends CustomPainter {
     path118.close();
 
     Paint paint118fill = Paint()..style = PaintingStyle.fill;
-    paint118fill.color = countryColors.iT ?? defaultCountryColor;
-    canvas.drawPath(path118, paint118fill);
+    paint118fill.color = countryColors.iT ?? defaultColor;
+    worldCanvas.drawPath(path118, paint118fill, onTapDown: (tabdetail) {
+      callback('it', tabdetail);
+    });
 
     Path path119 = Path();
     path119.moveTo(size.width * 0.5171000, size.height * 0.2770128);
@@ -5334,8 +5579,10 @@ class SimpleWorldPainter extends CustomPainter {
     path119.close();
 
     Paint paint119fill = Paint()..style = PaintingStyle.fill;
-    paint119fill.color = countryColors.iT ?? defaultCountryColor;
-    canvas.drawPath(path119, paint119fill);
+    paint119fill.color = countryColors.iT ?? defaultColor;
+    worldCanvas.drawPath(path119, paint119fill, onTapDown: (tabdetail) {
+      callback('it', tabdetail);
+    });
 
     Path path120 = Path();
     path120.moveTo(size.width * 0.5279500, size.height * 0.2379230);
@@ -5407,8 +5654,10 @@ class SimpleWorldPainter extends CustomPainter {
     path120.close();
 
     Paint paint120fill = Paint()..style = PaintingStyle.fill;
-    paint120fill.color = countryColors.iT ?? defaultCountryColor;
-    canvas.drawPath(path120, paint120fill);
+    paint120fill.color = countryColors.iT ?? defaultColor;
+    worldCanvas.drawPath(path120, paint120fill, onTapDown: (tabdetail) {
+      callback('it', tabdetail);
+    });
 
     Path path121 = Path();
     path121.moveTo(size.width * 0.2782500, size.height * 0.4516919);
@@ -5425,8 +5674,10 @@ class SimpleWorldPainter extends CustomPainter {
     path121.close();
 
     Paint paint121fill = Paint()..style = PaintingStyle.fill;
-    paint121fill.color = countryColors.jM ?? defaultCountryColor;
-    canvas.drawPath(path121, paint121fill);
+    paint121fill.color = countryColors.jM ?? defaultColor;
+    worldCanvas.drawPath(path121, paint121fill, onTapDown: (tabdetail) {
+      callback('jm', tabdetail);
+    });
 
     Path path122 = Path();
     path122.moveTo(size.width * 0.5990500, size.height * 0.3445741);
@@ -5451,8 +5702,10 @@ class SimpleWorldPainter extends CustomPainter {
     path122.close();
 
     Paint paint122fill = Paint()..style = PaintingStyle.fill;
-    paint122fill.color = countryColors.jO ?? defaultCountryColor;
-    canvas.drawPath(path122, paint122fill);
+    paint122fill.color = countryColors.jO ?? defaultColor;
+    worldCanvas.drawPath(path122, paint122fill, onTapDown: (tabdetail) {
+      callback('jo', tabdetail);
+    });
 
     Path path123 = Path();
     path123.moveTo(size.width * 0.8542500, size.height * 0.3297550);
@@ -5470,8 +5723,10 @@ class SimpleWorldPainter extends CustomPainter {
     path123.close();
 
     Paint paint123fill = Paint()..style = PaintingStyle.fill;
-    paint123fill.color = countryColors.jP ?? defaultCountryColor;
-    canvas.drawPath(path123, paint123fill);
+    paint123fill.color = countryColors.jP ?? defaultColor;
+    worldCanvas.drawPath(path123, paint123fill, onTapDown: (tabdetail) {
+      callback('jp', tabdetail);
+    });
 
     Path path124 = Path();
     path124.moveTo(size.width * 0.8665500, size.height * 0.3073512);
@@ -5514,8 +5769,10 @@ class SimpleWorldPainter extends CustomPainter {
     path124.close();
 
     Paint paint124fill = Paint()..style = PaintingStyle.fill;
-    paint124fill.color = countryColors.jP ?? defaultCountryColor;
-    canvas.drawPath(path124, paint124fill);
+    paint124fill.color = countryColors.jP ?? defaultColor;
+    worldCanvas.drawPath(path124, paint124fill, onTapDown: (tabdetail) {
+      callback('jp', tabdetail);
+    });
 
     Path path125 = Path();
     path125.moveTo(size.width * 0.8606000, size.height * 0.2550758);
@@ -5537,8 +5794,10 @@ class SimpleWorldPainter extends CustomPainter {
     path125.close();
 
     Paint paint125fill = Paint()..style = PaintingStyle.fill;
-    paint125fill.color = countryColors.jP ?? defaultCountryColor;
-    canvas.drawPath(path125, paint125fill);
+    paint125fill.color = countryColors.jP ?? defaultColor;
+    worldCanvas.drawPath(path125, paint125fill, onTapDown: (tabdetail) {
+      callback('jp', tabdetail);
+    });
 
     Path path126 = Path();
     path126.moveTo(size.width * 0.6691500, size.height * 0.1872812);
@@ -5656,8 +5915,10 @@ class SimpleWorldPainter extends CustomPainter {
     path126.close();
 
     Paint paint126fill = Paint()..style = PaintingStyle.fill;
-    paint126fill.color = countryColors.kZ ?? defaultCountryColor;
-    canvas.drawPath(path126, paint126fill);
+    paint126fill.color = countryColors.kZ ?? defaultColor;
+    worldCanvas.drawPath(path126, paint126fill, onTapDown: (tabdetail) {
+      callback('kz', tabdetail);
+    });
 
     Path path127 = Path();
     path127.moveTo(size.width * 0.6117500, size.height * 0.5562427);
@@ -5701,8 +5962,10 @@ class SimpleWorldPainter extends CustomPainter {
     path127.close();
 
     Paint paint127fill = Paint()..style = PaintingStyle.fill;
-    paint127fill.color = countryColors.kE ?? defaultCountryColor;
-    canvas.drawPath(path127, paint127fill);
+    paint127fill.color = countryColors.kE ?? defaultColor;
+    worldCanvas.drawPath(path127, paint127fill, onTapDown: (tabdetail) {
+      callback('ke', tabdetail);
+    });
 
     Path path128 = Path();
     path128.moveTo(size.width * 0.7002500, size.height * 0.2686114);
@@ -5743,8 +6006,10 @@ class SimpleWorldPainter extends CustomPainter {
     path128.close();
 
     Paint paint128fill = Paint()..style = PaintingStyle.fill;
-    paint128fill.color = countryColors.kG ?? defaultCountryColor;
-    canvas.drawPath(path128, paint128fill);
+    paint128fill.color = countryColors.kG ?? defaultColor;
+    worldCanvas.drawPath(path128, paint128fill, onTapDown: (tabdetail) {
+      callback('kg', tabdetail);
+    });
 
     Path path129 = Path();
     path129.moveTo(size.width * 0.7949000, size.height * 0.4791132);
@@ -5767,8 +6032,10 @@ class SimpleWorldPainter extends CustomPainter {
     path129.close();
 
     Paint paint129fill = Paint()..style = PaintingStyle.fill;
-    paint129fill.color = countryColors.kH ?? defaultCountryColor;
-    canvas.drawPath(path129, paint129fill);
+    paint129fill.color = countryColors.kH ?? defaultColor;
+    worldCanvas.drawPath(path129, paint129fill, onTapDown: (tabdetail) {
+      callback('kh', tabdetail);
+    });
 
     Path path130 = Path();
     path130.moveTo(size.width * 0.8264500, size.height * 0.3028005);
@@ -5793,8 +6060,10 @@ class SimpleWorldPainter extends CustomPainter {
     path130.close();
 
     Paint paint130fill = Paint()..style = PaintingStyle.fill;
-    paint130fill.color = countryColors.kR ?? defaultCountryColor;
-    canvas.drawPath(path130, paint130fill);
+    paint130fill.color = countryColors.kR ?? defaultColor;
+    worldCanvas.drawPath(path130, paint130fill, onTapDown: (tabdetail) {
+      callback('kr', tabdetail);
+    });
 
     Path path131 = Path();
     path131.moveTo(size.width * 0.6237500, size.height * 0.3610268);
@@ -5809,8 +6078,10 @@ class SimpleWorldPainter extends CustomPainter {
     path131.close();
 
     Paint paint131fill = Paint()..style = PaintingStyle.fill;
-    paint131fill.color = countryColors.kW ?? defaultCountryColor;
-    canvas.drawPath(path131, paint131fill);
+    paint131fill.color = countryColors.kW ?? defaultColor;
+    worldCanvas.drawPath(path131, paint131fill, onTapDown: (tabdetail) {
+      callback('kw', tabdetail);
+    });
 
     Path path132 = Path();
     path132.moveTo(size.width * 0.7949000, size.height * 0.4791132);
@@ -5853,8 +6124,10 @@ class SimpleWorldPainter extends CustomPainter {
     path132.close();
 
     Paint paint132fill = Paint()..style = PaintingStyle.fill;
-    paint132fill.color = countryColors.lA ?? defaultCountryColor;
-    canvas.drawPath(path132, paint132fill);
+    paint132fill.color = countryColors.lA ?? defaultColor;
+    worldCanvas.drawPath(path132, paint132fill, onTapDown: (tabdetail) {
+      callback('la', tabdetail);
+    });
 
     Path path133 = Path();
     path133.moveTo(size.width * 0.5895500, size.height * 0.3362894);
@@ -5871,8 +6144,10 @@ class SimpleWorldPainter extends CustomPainter {
     path133.close();
 
     Paint paint133fill = Paint()..style = PaintingStyle.fill;
-    paint133fill.color = countryColors.lB ?? defaultCountryColor;
-    canvas.drawPath(path133, paint133fill);
+    paint133fill.color = countryColors.lB ?? defaultColor;
+    worldCanvas.drawPath(path133, paint133fill, onTapDown: (tabdetail) {
+      callback('lb', tabdetail);
+    });
 
     Path path134 = Path();
     path134.moveTo(size.width * 0.4693000, size.height * 0.5280047);
@@ -5905,8 +6180,10 @@ class SimpleWorldPainter extends CustomPainter {
     path134.close();
 
     Paint paint134fill = Paint()..style = PaintingStyle.fill;
-    paint134fill.color = countryColors.lR ?? defaultCountryColor;
-    canvas.drawPath(path134, paint134fill);
+    paint134fill.color = countryColors.lR ?? defaultColor;
+    worldCanvas.drawPath(path134, paint134fill, onTapDown: (tabdetail) {
+      callback('lr', tabdetail);
+    });
 
     Path path135 = Path();
     path135.moveTo(size.width * 0.5613000, size.height * 0.3490082);
@@ -5968,8 +6245,10 @@ class SimpleWorldPainter extends CustomPainter {
     path135.close();
 
     Paint paint135fill = Paint()..style = PaintingStyle.fill;
-    paint135fill.color = countryColors.lY ?? defaultCountryColor;
-    canvas.drawPath(path135, paint135fill);
+    paint135fill.color = countryColors.lY ?? defaultColor;
+    worldCanvas.drawPath(path135, paint135fill, onTapDown: (tabdetail) {
+      callback('ly', tabdetail);
+    });
 
     Path path136 = Path();
     path136.moveTo(size.width * 0.7229500, size.height * 0.5390898);
@@ -5985,8 +6264,10 @@ class SimpleWorldPainter extends CustomPainter {
     path136.close();
 
     Paint paint136fill = Paint()..style = PaintingStyle.fill;
-    paint136fill.color = countryColors.lK ?? defaultCountryColor;
-    canvas.drawPath(path136, paint136fill);
+    paint136fill.color = countryColors.lK ?? defaultColor;
+    worldCanvas.drawPath(path136, paint136fill, onTapDown: (tabdetail) {
+      callback('lk', tabdetail);
+    });
 
     Path path137 = Path();
     path137.moveTo(size.width * 0.5695500, size.height * 0.8143524);
@@ -6004,8 +6285,10 @@ class SimpleWorldPainter extends CustomPainter {
     path137.close();
 
     Paint paint137fill = Paint()..style = PaintingStyle.fill;
-    paint137fill.color = countryColors.lS ?? defaultCountryColor;
-    canvas.drawPath(path137, paint137fill);
+    paint137fill.color = countryColors.lS ?? defaultColor;
+    worldCanvas.drawPath(path137, paint137fill, onTapDown: (tabdetail) {
+      callback('ls', tabdetail);
+    });
 
     Path path138 = Path();
     path138.moveTo(size.width * 0.5555500, size.height * 0.1722287);
@@ -6030,8 +6313,10 @@ class SimpleWorldPainter extends CustomPainter {
     path138.close();
 
     Paint paint138fill = Paint()..style = PaintingStyle.fill;
-    paint138fill.color = countryColors.lT ?? defaultCountryColor;
-    canvas.drawPath(path138, paint138fill);
+    paint138fill.color = countryColors.lT ?? defaultColor;
+    worldCanvas.drawPath(path138, paint138fill, onTapDown: (tabdetail) {
+      callback('lt', tabdetail);
+    });
 
     Path path139 = Path();
     path139.moveTo(size.width * 0.5084500, size.height * 0.2163361);
@@ -6044,8 +6329,10 @@ class SimpleWorldPainter extends CustomPainter {
     path139.close();
 
     Paint paint139fill = Paint()..style = PaintingStyle.fill;
-    paint139fill.color = countryColors.lU ?? defaultCountryColor;
-    canvas.drawPath(path139, paint139fill);
+    paint139fill.color = countryColors.lU ?? defaultColor;
+    worldCanvas.drawPath(path139, paint139fill, onTapDown: (tabdetail) {
+      callback('lu', tabdetail);
+    });
 
     Path path140 = Path();
     path140.moveTo(size.width * 0.5564000, size.height * 0.1592765);
@@ -6073,8 +6360,10 @@ class SimpleWorldPainter extends CustomPainter {
     path140.close();
 
     Paint paint140fill = Paint()..style = PaintingStyle.fill;
-    paint140fill.color = countryColors.lV ?? defaultCountryColor;
-    canvas.drawPath(path140, paint140fill);
+    paint140fill.color = countryColors.lV ?? defaultColor;
+    worldCanvas.drawPath(path140, paint140fill, onTapDown: (tabdetail) {
+      callback('lv', tabdetail);
+    });
 
     Path path141 = Path();
     path141.moveTo(size.width * 0.4874000, size.height * 0.3220537);
@@ -6143,8 +6432,10 @@ class SimpleWorldPainter extends CustomPainter {
     path141.close();
 
     Paint paint141fill = Paint()..style = PaintingStyle.fill;
-    paint141fill.color = countryColors.mA ?? defaultCountryColor;
-    canvas.drawPath(path141, paint141fill);
+    paint141fill.color = countryColors.mA ?? defaultColor;
+    worldCanvas.drawPath(path141, paint141fill, onTapDown: (tabdetail) {
+      callback('ma', tabdetail);
+    });
 
     Path path142 = Path();
     path142.moveTo(size.width * 0.5647000, size.height * 0.2453909);
@@ -6177,8 +6468,10 @@ class SimpleWorldPainter extends CustomPainter {
     path142.close();
 
     Paint paint142fill = Paint()..style = PaintingStyle.fill;
-    paint142fill.color = countryColors.mD ?? defaultCountryColor;
-    canvas.drawPath(path142, paint142fill);
+    paint142fill.color = countryColors.mD ?? defaultColor;
+    worldCanvas.drawPath(path142, paint142fill, onTapDown: (tabdetail) {
+      callback('md', tabdetail);
+    });
 
     Path path143 = Path();
     path143.moveTo(size.width * 0.6339500, size.height * 0.6871645);
@@ -6233,8 +6526,10 @@ class SimpleWorldPainter extends CustomPainter {
     path143.close();
 
     Paint paint143fill = Paint()..style = PaintingStyle.fill;
-    paint143fill.color = countryColors.mG ?? defaultCountryColor;
-    canvas.drawPath(path143, paint143fill);
+    paint143fill.color = countryColors.mG ?? defaultColor;
+    worldCanvas.drawPath(path143, paint143fill, onTapDown: (tabdetail) {
+      callback('mg', tabdetail);
+    });
 
     Path path144 = Path();
     path144.moveTo(size.width * 0.2246500, size.height * 0.3919487);
@@ -6410,8 +6705,10 @@ class SimpleWorldPainter extends CustomPainter {
     path144.close();
 
     Paint paint144fill = Paint()..style = PaintingStyle.fill;
-    paint144fill.color = countryColors.mX ?? defaultCountryColor;
-    canvas.drawPath(path144, paint144fill);
+    paint144fill.color = countryColors.mX ?? defaultColor;
+    worldCanvas.drawPath(path144, paint144fill, onTapDown: (tabdetail) {
+      callback('mx', tabdetail);
+    });
 
     Path path145 = Path();
     path145.moveTo(size.width * 0.5527500, size.height * 0.2760793);
@@ -6434,8 +6731,10 @@ class SimpleWorldPainter extends CustomPainter {
     path145.close();
 
     Paint paint145fill = Paint()..style = PaintingStyle.fill;
-    paint145fill.color = countryColors.mK ?? defaultCountryColor;
-    canvas.drawPath(path145, paint145fill);
+    paint145fill.color = countryColors.mK ?? defaultColor;
+    worldCanvas.drawPath(path145, paint145fill, onTapDown: (tabdetail) {
+      callback('mk', tabdetail);
+    });
 
     Path path146 = Path();
     path146.moveTo(size.width * 0.5051000, size.height * 0.4420070);
@@ -6517,8 +6816,10 @@ class SimpleWorldPainter extends CustomPainter {
     path146.close();
 
     Paint paint146fill = Paint()..style = PaintingStyle.fill;
-    paint146fill.color = countryColors.mL ?? defaultCountryColor;
-    canvas.drawPath(path146, paint146fill);
+    paint146fill.color = countryColors.mL ?? defaultColor;
+    worldCanvas.drawPath(path146, paint146fill, onTapDown: (tabdetail) {
+      callback('ml', tabdetail);
+    });
 
     Path path147 = Path();
     path147.moveTo(size.width * 0.7742000, size.height * 0.4249708);
@@ -6594,8 +6895,10 @@ class SimpleWorldPainter extends CustomPainter {
     path147.close();
 
     Paint paint147fill = Paint()..style = PaintingStyle.fill;
-    paint147fill.color = countryColors.mM ?? defaultCountryColor;
-    canvas.drawPath(path147, paint147fill);
+    paint147fill.color = countryColors.mM ?? defaultColor;
+    worldCanvas.drawPath(path147, paint147fill, onTapDown: (tabdetail) {
+      callback('mm', tabdetail);
+    });
 
     Path path148 = Path();
     path148.moveTo(size.width * 0.5453000, size.height * 0.2651109);
@@ -6619,8 +6922,10 @@ class SimpleWorldPainter extends CustomPainter {
     path148.close();
 
     Paint paint148fill = Paint()..style = PaintingStyle.fill;
-    paint148fill.color = countryColors.mE ?? defaultCountryColor;
-    canvas.drawPath(path148, paint148fill);
+    paint148fill.color = countryColors.mE ?? defaultColor;
+    worldCanvas.drawPath(path148, paint148fill, onTapDown: (tabdetail) {
+      callback('me', tabdetail);
+    });
 
     Path path149 = Path();
     path149.moveTo(size.width * 0.7481000, size.height * 0.2117853);
@@ -6701,8 +7006,10 @@ class SimpleWorldPainter extends CustomPainter {
     path149.close();
 
     Paint paint149fill = Paint()..style = PaintingStyle.fill;
-    paint149fill.color = countryColors.mN ?? defaultCountryColor;
-    canvas.drawPath(path149, paint149fill);
+    paint149fill.color = countryColors.mN ?? defaultColor;
+    worldCanvas.drawPath(path149, paint149fill, onTapDown: (tabdetail) {
+      callback('mn', tabdetail);
+    });
 
     Path path150 = Path();
     path150.moveTo(size.width * 0.5833500, size.height * 0.7858810);
@@ -6785,8 +7092,10 @@ class SimpleWorldPainter extends CustomPainter {
     path150.close();
 
     Paint paint150fill = Paint()..style = PaintingStyle.fill;
-    paint150fill.color = countryColors.mZ ?? defaultCountryColor;
-    canvas.drawPath(path150, paint150fill);
+    paint150fill.color = countryColors.mZ ?? defaultColor;
+    worldCanvas.drawPath(path150, paint150fill, onTapDown: (tabdetail) {
+      callback('mz', tabdetail);
+    });
 
     Path path151 = Path();
     path151.moveTo(size.width * 0.4796000, size.height * 0.3984831);
@@ -6831,8 +7140,10 @@ class SimpleWorldPainter extends CustomPainter {
     path151.close();
 
     Paint paint151fill = Paint()..style = PaintingStyle.fill;
-    paint151fill.color = countryColors.mR ?? defaultCountryColor;
-    canvas.drawPath(path151, paint151fill);
+    paint151fill.color = countryColors.mR ?? defaultColor;
+    worldCanvas.drawPath(path151, paint151fill, onTapDown: (tabdetail) {
+      callback('mr', tabdetail);
+    });
 
     Path path152 = Path();
     path152.moveTo(size.width * 0.5911500, size.height * 0.6871645);
@@ -6877,8 +7188,10 @@ class SimpleWorldPainter extends CustomPainter {
     path152.close();
 
     Paint paint152fill = Paint()..style = PaintingStyle.fill;
-    paint152fill.color = countryColors.mW ?? defaultCountryColor;
-    canvas.drawPath(path152, paint152fill);
+    paint152fill.color = countryColors.mW ?? defaultColor;
+    worldCanvas.drawPath(path152, paint152fill, onTapDown: (tabdetail) {
+      callback('mw', tabdetail);
+    });
 
     Path path153 = Path();
     path153.moveTo(size.width * 0.7821500, size.height * 0.5389732);
@@ -6909,8 +7222,10 @@ class SimpleWorldPainter extends CustomPainter {
     path153.close();
 
     Paint paint153fill = Paint()..style = PaintingStyle.fill;
-    paint153fill.color = countryColors.mY ?? defaultCountryColor;
-    canvas.drawPath(path153, paint153fill);
+    paint153fill.color = countryColors.mY ?? defaultColor;
+    worldCanvas.drawPath(path153, paint153fill, onTapDown: (tabdetail) {
+      callback('my', tabdetail);
+    });
 
     Path path154 = Path();
     path154.moveTo(size.width * 0.8270500, size.height * 0.5546091);
@@ -6953,8 +7268,10 @@ class SimpleWorldPainter extends CustomPainter {
     path154.close();
 
     Paint paint154fill = Paint()..style = PaintingStyle.fill;
-    paint154fill.color = countryColors.mY ?? defaultCountryColor;
-    canvas.drawPath(path154, paint154fill);
+    paint154fill.color = countryColors.mY ?? defaultColor;
+    worldCanvas.drawPath(path154, paint154fill, onTapDown: (tabdetail) {
+      callback('my', tabdetail);
+    });
 
     Path path155 = Path();
     path155.moveTo(size.width * 0.5581000, size.height * 0.7168028);
@@ -7004,8 +7321,10 @@ class SimpleWorldPainter extends CustomPainter {
     path155.close();
 
     Paint paint155fill = Paint()..style = PaintingStyle.fill;
-    paint155fill.color = countryColors.nA ?? defaultCountryColor;
-    canvas.drawPath(path155, paint155fill);
+    paint155fill.color = countryColors.nA ?? defaultColor;
+    worldCanvas.drawPath(path155, paint155fill, onTapDown: (tabdetail) {
+      callback('na', tabdetail);
+    });
 
     Path path156 = Path();
     path156.moveTo(size.width * 0.5343000, size.height * 0.4142357);
@@ -7069,8 +7388,10 @@ class SimpleWorldPainter extends CustomPainter {
     path156.close();
 
     Paint paint156fill = Paint()..style = PaintingStyle.fill;
-    paint156fill.color = countryColors.nE ?? defaultCountryColor;
-    canvas.drawPath(path156, paint156fill);
+    paint156fill.color = countryColors.nE ?? defaultColor;
+    worldCanvas.drawPath(path156, paint156fill, onTapDown: (tabdetail) {
+      callback('ne', tabdetail);
+    });
 
     Path path157 = Path();
     path157.moveTo(size.width * 0.5331000, size.height * 0.4920653);
@@ -7134,8 +7455,10 @@ class SimpleWorldPainter extends CustomPainter {
     path157.close();
 
     Paint paint157fill = Paint()..style = PaintingStyle.fill;
-    paint157fill.color = countryColors.nG ?? defaultCountryColor;
-    canvas.drawPath(path157, paint157fill);
+    paint157fill.color = countryColors.nG ?? defaultColor;
+    worldCanvas.drawPath(path157, paint157fill, onTapDown: (tabdetail) {
+      callback('ng', tabdetail);
+    });
 
     Path path158 = Path();
     path158.moveTo(size.width * 0.2598000, size.height * 0.4731622);
@@ -7193,8 +7516,10 @@ class SimpleWorldPainter extends CustomPainter {
     path158.close();
 
     Paint paint158fill = Paint()..style = PaintingStyle.fill;
-    paint158fill.color = countryColors.nI ?? defaultCountryColor;
-    canvas.drawPath(path158, paint158fill);
+    paint158fill.color = countryColors.nI ?? defaultColor;
+    worldCanvas.drawPath(path158, paint158fill, onTapDown: (tabdetail) {
+      callback('ni', tabdetail);
+    });
 
     Path path159 = Path();
     path159.moveTo(size.width * 0.5568500, size.height * 0.07876313);
@@ -7250,8 +7575,10 @@ class SimpleWorldPainter extends CustomPainter {
     path159.close();
 
     Paint paint159fill = Paint()..style = PaintingStyle.fill;
-    paint159fill.color = countryColors.nO ?? defaultCountryColor;
-    canvas.drawPath(path159, paint159fill);
+    paint159fill.color = countryColors.nO ?? defaultColor;
+    worldCanvas.drawPath(path159, paint159fill, onTapDown: (tabdetail) {
+      callback('no', tabdetail);
+    });
 
     Path path160 = Path();
     path160.moveTo(size.width * 0.5383000, size.height * 0.02940490);
@@ -7265,8 +7592,10 @@ class SimpleWorldPainter extends CustomPainter {
     path160.close();
 
     Paint paint160fill = Paint()..style = PaintingStyle.fill;
-    paint160fill.color = countryColors.sJ ?? defaultCountryColor;
-    canvas.drawPath(path160, paint160fill);
+    paint160fill.color = countryColors.sJ ?? defaultColor;
+    worldCanvas.drawPath(path160, paint160fill, onTapDown: (tabdetail) {
+      callback('sj', tabdetail);
+    });
 
     Path path161 = Path();
     path161.moveTo(size.width * 0.5255000, size.height * 0.01948658);
@@ -7290,8 +7619,10 @@ class SimpleWorldPainter extends CustomPainter {
     path161.close();
 
     Paint paint161fill = Paint()..style = PaintingStyle.fill;
-    paint161fill.color = countryColors.sJ ?? defaultCountryColor;
-    canvas.drawPath(path161, paint161fill);
+    paint161fill.color = countryColors.sJ ?? defaultColor;
+    worldCanvas.drawPath(path161, paint161fill, onTapDown: (tabdetail) {
+      callback('sj', tabdetail);
+    });
 
     Path path162 = Path();
     path162.moveTo(size.width * 0.5377000, size.height * 0.01598600);
@@ -7309,8 +7640,10 @@ class SimpleWorldPainter extends CustomPainter {
     path162.close();
 
     Paint paint162fill = Paint()..style = PaintingStyle.fill;
-    paint162fill.color = countryColors.sJ ?? defaultCountryColor;
-    canvas.drawPath(path162, paint162fill);
+    paint162fill.color = countryColors.sJ ?? defaultColor;
+    worldCanvas.drawPath(path162, paint162fill, onTapDown: (tabdetail) {
+      callback('sj', tabdetail);
+    });
 
     Path path163 = Path();
     path163.moveTo(size.width * 0.7345000, size.height * 0.3767795);
@@ -7339,8 +7672,10 @@ class SimpleWorldPainter extends CustomPainter {
     path163.close();
 
     Paint paint163fill = Paint()..style = PaintingStyle.fill;
-    paint163fill.color = countryColors.nP ?? defaultCountryColor;
-    canvas.drawPath(path163, paint163fill);
+    paint163fill.color = countryColors.nP ?? defaultColor;
+    worldCanvas.drawPath(path163, paint163fill, onTapDown: (tabdetail) {
+      callback('np', tabdetail);
+    });
 
     Path path164 = Path();
     path164.moveTo(size.width * 0.6419000, size.height * 0.4607935);
@@ -7387,8 +7722,10 @@ class SimpleWorldPainter extends CustomPainter {
     path164.close();
 
     Paint paint164fill = Paint()..style = PaintingStyle.fill;
-    paint164fill.color = countryColors.oM ?? defaultCountryColor;
-    canvas.drawPath(path164, paint164fill);
+    paint164fill.color = countryColors.oM ?? defaultColor;
+    worldCanvas.drawPath(path164, paint164fill, onTapDown: (tabdetail) {
+      callback('om', tabdetail);
+    });
 
     Path path165 = Path();
     path165.moveTo(size.width * 0.6481000, size.height * 0.3928821);
@@ -7400,8 +7737,10 @@ class SimpleWorldPainter extends CustomPainter {
     path165.close();
 
     Paint paint165fill = Paint()..style = PaintingStyle.fill;
-    paint165fill.color = countryColors.oM ?? defaultCountryColor;
-    canvas.drawPath(path165, paint165fill);
+    paint165fill.color = countryColors.oM ?? defaultColor;
+    worldCanvas.drawPath(path165, paint165fill, onTapDown: (tabdetail) {
+      callback('om', tabdetail);
+    });
 
     Path path166 = Path();
     path166.moveTo(size.width * 0.7008000, size.height * 0.3196033);
@@ -7473,8 +7812,10 @@ class SimpleWorldPainter extends CustomPainter {
     path166.close();
 
     Paint paint166fill = Paint()..style = PaintingStyle.fill;
-    paint166fill.color = countryColors.pK ?? defaultCountryColor;
-    canvas.drawPath(path166, paint166fill);
+    paint166fill.color = countryColors.pK ?? defaultColor;
+    worldCanvas.drawPath(path166, paint166fill, onTapDown: (tabdetail) {
+      callback('pk', tabdetail);
+    });
 
     Path path167 = Path();
     path167.moveTo(size.width * 0.2746500, size.height * 0.5206534);
@@ -7532,8 +7873,10 @@ class SimpleWorldPainter extends CustomPainter {
     path167.close();
 
     Paint paint167fill = Paint()..style = PaintingStyle.fill;
-    paint167fill.color = countryColors.pA ?? defaultCountryColor;
-    canvas.drawPath(path167, paint167fill);
+    paint167fill.color = countryColors.pA ?? defaultColor;
+    worldCanvas.drawPath(path167, paint167fill, onTapDown: (tabdetail) {
+      callback('pa', tabdetail);
+    });
 
     Path path168 = Path();
     path168.moveTo(size.width * 0.2952500, size.height * 0.6177363);
@@ -7615,8 +7958,10 @@ class SimpleWorldPainter extends CustomPainter {
     path168.close();
 
     Paint paint168fill = Paint()..style = PaintingStyle.fill;
-    paint168fill.color = countryColors.pE ?? defaultCountryColor;
-    canvas.drawPath(path168, paint168fill);
+    paint168fill.color = countryColors.pE ?? defaultColor;
+    worldCanvas.drawPath(path168, paint168fill, onTapDown: (tabdetail) {
+      callback('pe', tabdetail);
+    });
 
     Path path169 = Path();
     path169.moveTo(size.width * 0.8502500, size.height * 0.5225204);
@@ -7649,8 +7994,10 @@ class SimpleWorldPainter extends CustomPainter {
     path169.close();
 
     Paint paint169fill = Paint()..style = PaintingStyle.fill;
-    paint169fill.color = countryColors.pH ?? defaultCountryColor;
-    canvas.drawPath(path169, paint169fill);
+    paint169fill.color = countryColors.pH ?? defaultColor;
+    worldCanvas.drawPath(path169, paint169fill, onTapDown: (tabdetail) {
+      callback('ph', tabdetail);
+    });
 
     Path path170 = Path();
     path170.moveTo(size.width * 0.8429500, size.height * 0.5085181);
@@ -7668,8 +8015,10 @@ class SimpleWorldPainter extends CustomPainter {
     path170.close();
 
     Paint paint170fill = Paint()..style = PaintingStyle.fill;
-    paint170fill.color = countryColors.pH ?? defaultCountryColor;
-    canvas.drawPath(path170, paint170fill);
+    paint170fill.color = countryColors.pH ?? defaultColor;
+    worldCanvas.drawPath(path170, paint170fill, onTapDown: (tabdetail) {
+      callback('ph', tabdetail);
+    });
 
     Path path171 = Path();
     path171.moveTo(size.width * 0.8278000, size.height * 0.5157526);
@@ -7684,8 +8033,10 @@ class SimpleWorldPainter extends CustomPainter {
     path171.close();
 
     Paint paint171fill = Paint()..style = PaintingStyle.fill;
-    paint171fill.color = countryColors.pH ?? defaultCountryColor;
-    canvas.drawPath(path171, paint171fill);
+    paint171fill.color = countryColors.pH ?? defaultColor;
+    worldCanvas.drawPath(path171, paint171fill, onTapDown: (tabdetail) {
+      callback('ph', tabdetail);
+    });
 
     Path path172 = Path();
     path172.moveTo(size.width * 0.8365500, size.height * 0.4964994);
@@ -7700,8 +8051,10 @@ class SimpleWorldPainter extends CustomPainter {
     path172.close();
 
     Paint paint172fill = Paint()..style = PaintingStyle.fill;
-    paint172fill.color = countryColors.pH ?? defaultCountryColor;
-    canvas.drawPath(path172, paint172fill);
+    paint172fill.color = countryColors.pH ?? defaultColor;
+    worldCanvas.drawPath(path172, paint172fill, onTapDown: (tabdetail) {
+      callback('ph', tabdetail);
+    });
 
     Path path173 = Path();
     path173.moveTo(size.width * 0.8466000, size.height * 0.4943991);
@@ -7721,8 +8074,10 @@ class SimpleWorldPainter extends CustomPainter {
     path173.close();
 
     Paint paint173fill = Paint()..style = PaintingStyle.fill;
-    paint173fill.color = countryColors.pH ?? defaultCountryColor;
-    canvas.drawPath(path173, paint173fill);
+    paint173fill.color = countryColors.pH ?? defaultColor;
+    worldCanvas.drawPath(path173, paint173fill, onTapDown: (tabdetail) {
+      callback('ph', tabdetail);
+    });
 
     Path path174 = Path();
     path174.moveTo(size.width * 0.8351000, size.height * 0.4876313);
@@ -7734,8 +8089,10 @@ class SimpleWorldPainter extends CustomPainter {
     path174.close();
 
     Paint paint174fill = Paint()..style = PaintingStyle.fill;
-    paint174fill.color = countryColors.pH ?? defaultCountryColor;
-    canvas.drawPath(path174, paint174fill);
+    paint174fill.color = countryColors.pH ?? defaultColor;
+    worldCanvas.drawPath(path174, paint174fill, onTapDown: (tabdetail) {
+      callback('ph', tabdetail);
+    });
 
     Path path175 = Path();
     path175.moveTo(size.width * 0.8318500, size.height * 0.4469078);
@@ -7774,8 +8131,10 @@ class SimpleWorldPainter extends CustomPainter {
     path175.close();
 
     Paint paint175fill = Paint()..style = PaintingStyle.fill;
-    paint175fill.color = countryColors.pH ?? defaultCountryColor;
-    canvas.drawPath(path175, paint175fill);
+    paint175fill.color = countryColors.pH ?? defaultColor;
+    worldCanvas.drawPath(path175, paint175fill, onTapDown: (tabdetail) {
+      callback('ph', tabdetail);
+    });
 
     Path path176 = Path();
     path176.moveTo(size.width * 0.9340500, size.height * 0.6366394);
@@ -7792,8 +8151,10 @@ class SimpleWorldPainter extends CustomPainter {
     path176.close();
 
     Paint paint176fill = Paint()..style = PaintingStyle.fill;
-    paint176fill.color = countryColors.pG ?? defaultCountryColor;
-    canvas.drawPath(path176, paint176fill);
+    paint176fill.color = countryColors.pG ?? defaultColor;
+    worldCanvas.drawPath(path176, paint176fill, onTapDown: (tabdetail) {
+      callback('pg', tabdetail);
+    });
 
     Path path177 = Path();
     path177.moveTo(size.width * 0.9233500, size.height * 0.6266044);
@@ -7821,8 +8182,10 @@ class SimpleWorldPainter extends CustomPainter {
     path177.close();
 
     Paint paint177fill = Paint()..style = PaintingStyle.fill;
-    paint177fill.color = countryColors.pG ?? defaultCountryColor;
-    canvas.drawPath(path177, paint177fill);
+    paint177fill.color = countryColors.pG ?? defaultColor;
+    worldCanvas.drawPath(path177, paint177fill, onTapDown: (tabdetail) {
+      callback('pg', tabdetail);
+    });
 
     Path path178 = Path();
     path178.moveTo(size.width * 0.8914500, size.height * 0.6539090);
@@ -7862,8 +8225,10 @@ class SimpleWorldPainter extends CustomPainter {
     path178.close();
 
     Paint paint178fill = Paint()..style = PaintingStyle.fill;
-    paint178fill.color = countryColors.pG ?? defaultCountryColor;
-    canvas.drawPath(path178, paint178fill);
+    paint178fill.color = countryColors.pG ?? defaultColor;
+    worldCanvas.drawPath(path178, paint178fill, onTapDown: (tabdetail) {
+      callback('pg', tabdetail);
+    });
 
     Path path179 = Path();
     path179.moveTo(size.width * 0.9268000, size.height * 0.6192532);
@@ -7883,8 +8248,10 @@ class SimpleWorldPainter extends CustomPainter {
     path179.close();
 
     Paint paint179fill = Paint()..style = PaintingStyle.fill;
-    paint179fill.color = countryColors.pG ?? defaultCountryColor;
-    canvas.drawPath(path179, paint179fill);
+    paint179fill.color = countryColors.pG ?? defaultColor;
+    worldCanvas.drawPath(path179, paint179fill, onTapDown: (tabdetail) {
+      callback('pg', tabdetail);
+    });
 
     Path path180 = Path();
     path180.moveTo(size.width * 0.5399500, size.height * 0.1806301);
@@ -7935,8 +8302,10 @@ class SimpleWorldPainter extends CustomPainter {
     path180.close();
 
     Paint paint180fill = Paint()..style = PaintingStyle.fill;
-    paint180fill.color = countryColors.pL ?? defaultCountryColor;
-    canvas.drawPath(path180, paint180fill);
+    paint180fill.color = countryColors.pL ?? defaultColor;
+    worldCanvas.drawPath(path180, paint180fill, onTapDown: (tabdetail) {
+      callback('pl', tabdetail);
+    });
 
     Path path181 = Path();
     path181.moveTo(size.width * 0.8301500, size.height * 0.2682614);
@@ -7985,8 +8354,10 @@ class SimpleWorldPainter extends CustomPainter {
     path181.close();
 
     Paint paint181fill = Paint()..style = PaintingStyle.fill;
-    paint181fill.color = countryColors.kP ?? defaultCountryColor;
-    canvas.drawPath(path181, paint181fill);
+    paint181fill.color = countryColors.kP ?? defaultColor;
+    worldCanvas.drawPath(path181, paint181fill, onTapDown: (tabdetail) {
+      callback('kp', tabdetail);
+    });
 
     Path path182 = Path();
     path182.moveTo(size.width * 0.3312500, size.height * 0.7367561);
@@ -8025,8 +8396,10 @@ class SimpleWorldPainter extends CustomPainter {
     path182.close();
 
     Paint paint182fill = Paint()..style = PaintingStyle.fill;
-    paint182fill.color = countryColors.pY ?? defaultCountryColor;
-    canvas.drawPath(path182, paint182fill);
+    paint182fill.color = countryColors.pY ?? defaultColor;
+    worldCanvas.drawPath(path182, paint182fill, onTapDown: (tabdetail) {
+      callback('py', tabdetail);
+    });
 
     Path path183 = Path();
     path183.moveTo(size.width * 0.5891500, size.height * 0.3428238);
@@ -8041,8 +8414,10 @@ class SimpleWorldPainter extends CustomPainter {
     path183.close();
 
     Paint paint183fill = Paint()..style = PaintingStyle.fill;
-    paint183fill.color = countryColors.pS ?? defaultCountryColor;
-    canvas.drawPath(path183, paint183fill);
+    paint183fill.color = countryColors.pS ?? defaultColor;
+    worldCanvas.drawPath(path183, paint183fill, onTapDown: (tabdetail) {
+      callback('ps', tabdetail);
+    });
 
     Path path184 = Path();
     path184.moveTo(size.width * 0.6350500, size.height * 0.4010502);
@@ -8057,8 +8432,10 @@ class SimpleWorldPainter extends CustomPainter {
     path184.close();
 
     Paint paint184fill = Paint()..style = PaintingStyle.fill;
-    paint184fill.color = countryColors.qA ?? defaultCountryColor;
-    canvas.drawPath(path184, paint184fill);
+    paint184fill.color = countryColors.qA ?? defaultColor;
+    worldCanvas.drawPath(path184, paint184fill, onTapDown: (tabdetail) {
+      callback('qa', tabdetail);
+    });
 
     Path path185 = Path();
     path185.moveTo(size.width * 0.5594500, size.height * 0.2253209);
@@ -8108,8 +8485,10 @@ class SimpleWorldPainter extends CustomPainter {
     path185.close();
 
     Paint paint185fill = Paint()..style = PaintingStyle.fill;
-    paint185fill.color = countryColors.rO ?? defaultCountryColor;
-    canvas.drawPath(path185, paint185fill);
+    paint185fill.color = countryColors.rO ?? defaultColor;
+    worldCanvas.drawPath(path185, paint185fill, onTapDown: (tabdetail) {
+      callback('ro', tabdetail);
+    });
 
     Path path186 = Path();
     path186.moveTo(size.width * 0.5794000, size.height * 0.5940490);
@@ -8128,8 +8507,10 @@ class SimpleWorldPainter extends CustomPainter {
     path186.close();
 
     Paint paint186fill = Paint()..style = PaintingStyle.fill;
-    paint186fill.color = countryColors.rW ?? defaultCountryColor;
-    canvas.drawPath(path186, paint186fill);
+    paint186fill.color = countryColors.rW ?? defaultColor;
+    worldCanvas.drawPath(path186, paint186fill, onTapDown: (tabdetail) {
+      callback('rw', tabdetail);
+    });
 
     Path path187 = Path();
     path187.moveTo(size.width * 0.4694500, size.height * 0.3784131);
@@ -8163,8 +8544,10 @@ class SimpleWorldPainter extends CustomPainter {
     path187.close();
 
     Paint paint187fill = Paint()..style = PaintingStyle.fill;
-    paint187fill.color = countryColors.eH ?? defaultCountryColor;
-    canvas.drawPath(path187, paint187fill);
+    paint187fill.color = countryColors.eH ?? defaultColor;
+    worldCanvas.drawPath(path187, paint187fill, onTapDown: (tabdetail) {
+      callback('eh', tabdetail);
+    });
 
     Path path188 = Path();
     path188.moveTo(size.width * 0.6202500, size.height * 0.3675613);
@@ -8246,8 +8629,10 @@ class SimpleWorldPainter extends CustomPainter {
     path188.close();
 
     Paint paint188fill = Paint()..style = PaintingStyle.fill;
-    paint188fill.color = countryColors.sA ?? defaultCountryColor;
-    canvas.drawPath(path188, paint188fill);
+    paint188fill.color = countryColors.sA ?? defaultColor;
+    worldCanvas.drawPath(path188, paint188fill, onTapDown: (tabdetail) {
+      callback('sa', tabdetail);
+    });
 
     Path path189 = Path();
     path189.moveTo(size.width * 0.5955000, size.height * 0.4774796);
@@ -8332,8 +8717,10 @@ class SimpleWorldPainter extends CustomPainter {
     path189.close();
 
     Paint paint189fill = Paint()..style = PaintingStyle.fill;
-    paint189fill.color = countryColors.sD ?? defaultCountryColor;
-    canvas.drawPath(path189, paint189fill);
+    paint189fill.color = countryColors.sD ?? defaultColor;
+    worldCanvas.drawPath(path189, paint189fill, onTapDown: (tabdetail) {
+      callback('sd', tabdetail);
+    });
 
     Path path190 = Path();
     path190.moveTo(size.width * 0.5890500, size.height * 0.5147025);
@@ -8402,8 +8789,10 @@ class SimpleWorldPainter extends CustomPainter {
     path190.close();
 
     Paint paint190fill = Paint()..style = PaintingStyle.fill;
-    paint190fill.color = countryColors.sS ?? defaultCountryColor;
-    canvas.drawPath(path190, paint190fill);
+    paint190fill.color = countryColors.sS ?? defaultColor;
+    worldCanvas.drawPath(path190, paint190fill, onTapDown: (tabdetail) {
+      callback('ss', tabdetail);
+    });
 
     Path path191 = Path();
     path191.moveTo(size.width * 0.4590000, size.height * 0.4760793);
@@ -8453,8 +8842,10 @@ class SimpleWorldPainter extends CustomPainter {
     path191.close();
 
     Paint paint191fill = Paint()..style = PaintingStyle.fill;
-    paint191fill.color = countryColors.sN ?? defaultCountryColor;
-    canvas.drawPath(path191, paint191fill);
+    paint191fill.color = countryColors.sN ?? defaultColor;
+    worldCanvas.drawPath(path191, paint191fill, onTapDown: (tabdetail) {
+      callback('sn', tabdetail);
+    });
 
     Path path192 = Path();
     path192.moveTo(size.width * 0.4642500, size.height * 0.5226371);
@@ -8482,8 +8873,10 @@ class SimpleWorldPainter extends CustomPainter {
     path192.close();
 
     Paint paint192fill = Paint()..style = PaintingStyle.fill;
-    paint192fill.color = countryColors.sL ?? defaultCountryColor;
-    canvas.drawPath(path192, paint192fill);
+    paint192fill.color = countryColors.sL ?? defaultColor;
+    worldCanvas.drawPath(path192, paint192fill, onTapDown: (tabdetail) {
+      callback('sl', tabdetail);
+    });
 
     Path path193 = Path();
     path193.moveTo(size.width * 0.2462500, size.height * 0.4852975);
@@ -8509,8 +8902,10 @@ class SimpleWorldPainter extends CustomPainter {
     path193.close();
 
     Paint paint193fill = Paint()..style = PaintingStyle.fill;
-    paint193fill.color = countryColors.sV ?? defaultCountryColor;
-    canvas.drawPath(path193, paint193fill);
+    paint193fill.color = countryColors.sV ?? defaultColor;
+    worldCanvas.drawPath(path193, paint193fill, onTapDown: (tabdetail) {
+      callback('sv', tabdetail);
+    });
 
     Path path194 = Path();
     path194.moveTo(size.width * 0.5510000, size.height * 0.2546091);
@@ -8562,8 +8957,10 @@ class SimpleWorldPainter extends CustomPainter {
     path194.close();
 
     Paint paint194fill = Paint()..style = PaintingStyle.fill;
-    paint194fill.color = countryColors.rS ?? defaultCountryColor;
-    canvas.drawPath(path194, paint194fill);
+    paint194fill.color = countryColors.rS ?? defaultColor;
+    worldCanvas.drawPath(path194, paint194fill, onTapDown: (tabdetail) {
+      callback('rs', tabdetail);
+    });
 
     Path path195 = Path();
     path195.moveTo(size.width * 0.3405000, size.height * 0.5424737);
@@ -8595,8 +8992,10 @@ class SimpleWorldPainter extends CustomPainter {
     path195.close();
 
     Paint paint195fill = Paint()..style = PaintingStyle.fill;
-    paint195fill.color = countryColors.sR ?? defaultCountryColor;
-    canvas.drawPath(path195, paint195fill);
+    paint195fill.color = countryColors.sR ?? defaultColor;
+    worldCanvas.drawPath(path195, paint195fill, onTapDown: (tabdetail) {
+      callback('sr', tabdetail);
+    });
 
     Path path196 = Path();
     path196.moveTo(size.width * 0.5490500, size.height * 0.2190198);
@@ -8635,8 +9034,10 @@ class SimpleWorldPainter extends CustomPainter {
     path196.close();
 
     Paint paint196fill = Paint()..style = PaintingStyle.fill;
-    paint196fill.color = countryColors.sK ?? defaultCountryColor;
-    canvas.drawPath(path196, paint196fill);
+    paint196fill.color = countryColors.sK ?? defaultColor;
+    worldCanvas.drawPath(path196, paint196fill, onTapDown: (tabdetail) {
+      callback('sk', tabdetail);
+    });
 
     Path path197 = Path();
     path197.moveTo(size.width * 0.5349000, size.height * 0.2379230);
@@ -8660,8 +9061,10 @@ class SimpleWorldPainter extends CustomPainter {
     path197.close();
 
     Paint paint197fill = Paint()..style = PaintingStyle.fill;
-    paint197fill.color = countryColors.sI ?? defaultCountryColor;
-    canvas.drawPath(path197, paint197fill);
+    paint197fill.color = countryColors.sI ?? defaultColor;
+    worldCanvas.drawPath(path197, paint197fill, onTapDown: (tabdetail) {
+      callback('si', tabdetail);
+    });
 
     Path path198 = Path();
     path198.moveTo(size.width * 0.5441000, size.height * 0.1015169);
@@ -8707,8 +9110,10 @@ class SimpleWorldPainter extends CustomPainter {
     path198.close();
 
     Paint paint198fill = Paint()..style = PaintingStyle.fill;
-    paint198fill.color = countryColors.sE ?? defaultCountryColor;
-    canvas.drawPath(path198, paint198fill);
+    paint198fill.color = countryColors.sE ?? defaultColor;
+    worldCanvas.drawPath(path198, paint198fill, onTapDown: (tabdetail) {
+      callback('se', tabdetail);
+    });
 
     Path path199 = Path();
     path199.moveTo(size.width * 0.5808500, size.height * 0.7791132);
@@ -8725,8 +9130,10 @@ class SimpleWorldPainter extends CustomPainter {
     path199.close();
 
     Paint paint199fill = Paint()..style = PaintingStyle.fill;
-    paint199fill.color = countryColors.sZ ?? defaultCountryColor;
-    canvas.drawPath(path199, paint199fill);
+    paint199fill.color = countryColors.sZ ?? defaultColor;
+    worldCanvas.drawPath(path199, paint199fill, onTapDown: (tabdetail) {
+      callback('sz', tabdetail);
+    });
 
     Path path200 = Path();
     path200.moveTo(size.width * 0.5975000, size.height * 0.3354726);
@@ -8759,8 +9166,10 @@ class SimpleWorldPainter extends CustomPainter {
     path200.close();
 
     Paint paint200fill = Paint()..style = PaintingStyle.fill;
-    paint200fill.color = countryColors.sY ?? defaultCountryColor;
-    canvas.drawPath(path200, paint200fill);
+    paint200fill.color = countryColors.sY ?? defaultColor;
+    worldCanvas.drawPath(path200, paint200fill, onTapDown: (tabdetail) {
+      callback('sy', tabdetail);
+    });
 
     Path path201 = Path();
     path201.moveTo(size.width * 0.5596000, size.height * 0.4388565);
@@ -8824,8 +9233,10 @@ class SimpleWorldPainter extends CustomPainter {
     path201.close();
 
     Paint paint201fill = Paint()..style = PaintingStyle.fill;
-    paint201fill.color = countryColors.tD ?? defaultCountryColor;
-    canvas.drawPath(path201, paint201fill);
+    paint201fill.color = countryColors.tD ?? defaultColor;
+    worldCanvas.drawPath(path201, paint201fill, onTapDown: (tabdetail) {
+      callback('td', tabdetail);
+    });
 
     Path path202 = Path();
     path202.moveTo(size.width * 0.4957000, size.height * 0.5031505);
@@ -8850,8 +9261,10 @@ class SimpleWorldPainter extends CustomPainter {
     path202.close();
 
     Paint paint202fill = Paint()..style = PaintingStyle.fill;
-    paint202fill.color = countryColors.tG ?? defaultCountryColor;
-    canvas.drawPath(path202, paint202fill);
+    paint202fill.color = countryColors.tG ?? defaultColor;
+    worldCanvas.drawPath(path202, paint202fill, onTapDown: (tabdetail) {
+      callback('tg', tabdetail);
+    });
 
     Path path203 = Path();
     path203.moveTo(size.width * 0.7887500, size.height * 0.4786464);
@@ -8921,8 +9334,10 @@ class SimpleWorldPainter extends CustomPainter {
     path203.close();
 
     Paint paint203fill = Paint()..style = PaintingStyle.fill;
-    paint203fill.color = countryColors.tH ?? defaultCountryColor;
-    canvas.drawPath(path203, paint203fill);
+    paint203fill.color = countryColors.tH ?? defaultColor;
+    worldCanvas.drawPath(path203, paint203fill, onTapDown: (tabdetail) {
+      callback('th', tabdetail);
+    });
 
     Path path204 = Path();
     path204.moveTo(size.width * 0.6785000, size.height * 0.2842474);
@@ -8969,8 +9384,10 @@ class SimpleWorldPainter extends CustomPainter {
     path204.close();
 
     Paint paint204fill = Paint()..style = PaintingStyle.fill;
-    paint204fill.color = countryColors.tJ ?? defaultCountryColor;
-    canvas.drawPath(path204, paint204fill);
+    paint204fill.color = countryColors.tJ ?? defaultColor;
+    worldCanvas.drawPath(path204, paint204fill, onTapDown: (tabdetail) {
+      callback('tj', tabdetail);
+    });
 
     Path path205 = Path();
     path205.moveTo(size.width * 0.6691500, size.height * 0.3057176);
@@ -9030,8 +9447,10 @@ class SimpleWorldPainter extends CustomPainter {
     path205.close();
 
     Paint paint205fill = Paint()..style = PaintingStyle.fill;
-    paint205fill.color = countryColors.tM ?? defaultCountryColor;
-    canvas.drawPath(path205, paint205fill);
+    paint205fill.color = countryColors.tM ?? defaultColor;
+    worldCanvas.drawPath(path205, paint205fill, onTapDown: (tabdetail) {
+      callback('tm', tabdetail);
+    });
 
     Path path206 = Path();
     path206.moveTo(size.width * 0.8463500, size.height * 0.6558926);
@@ -9048,8 +9467,10 @@ class SimpleWorldPainter extends CustomPainter {
     path206.close();
 
     Paint paint206fill = Paint()..style = PaintingStyle.fill;
-    paint206fill.color = countryColors.tL ?? defaultCountryColor;
-    canvas.drawPath(path206, paint206fill);
+    paint206fill.color = countryColors.tL ?? defaultColor;
+    worldCanvas.drawPath(path206, paint206fill, onTapDown: (tabdetail) {
+      callback('tl', tabdetail);
+    });
 
     Path path207 = Path();
     path207.moveTo(size.width * 0.5241000, size.height * 0.3373396);
@@ -9086,8 +9507,10 @@ class SimpleWorldPainter extends CustomPainter {
     path207.close();
 
     Paint paint207fill = Paint()..style = PaintingStyle.fill;
-    paint207fill.color = countryColors.tN ?? defaultCountryColor;
-    canvas.drawPath(path207, paint207fill);
+    paint207fill.color = countryColors.tN ?? defaultColor;
+    worldCanvas.drawPath(path207, paint207fill, onTapDown: (tabdetail) {
+      callback('tn', tabdetail);
+    });
 
     Path path208 = Path();
     path208.moveTo(size.width * 0.6008500, size.height * 0.2745624);
@@ -9146,8 +9569,10 @@ class SimpleWorldPainter extends CustomPainter {
     path208.close();
 
     Paint paint208fill = Paint()..style = PaintingStyle.fill;
-    paint208fill.color = countryColors.tR ?? defaultCountryColor;
-    canvas.drawPath(path208, paint208fill);
+    paint208fill.color = countryColors.tR ?? defaultColor;
+    worldCanvas.drawPath(path208, paint208fill, onTapDown: (tabdetail) {
+      callback('tr', tabdetail);
+    });
 
     Path path209 = Path();
     path209.moveTo(size.width * 0.5609500, size.height * 0.2799300);
@@ -9167,8 +9592,10 @@ class SimpleWorldPainter extends CustomPainter {
     path209.close();
 
     Paint paint209fill = Paint()..style = PaintingStyle.fill;
-    paint209fill.color = countryColors.tR ?? defaultCountryColor;
-    canvas.drawPath(path209, paint209fill);
+    paint209fill.color = countryColors.tR ?? defaultColor;
+    worldCanvas.drawPath(path209, paint209fill, onTapDown: (tabdetail) {
+      callback('tr', tabdetail);
+    });
 
     Path path210 = Path();
     path210.moveTo(size.width * 0.8289500, size.height * 0.4148191);
@@ -9183,8 +9610,10 @@ class SimpleWorldPainter extends CustomPainter {
     path210.close();
 
     Paint paint210fill = Paint()..style = PaintingStyle.fill;
-    paint210fill.color = countryColors.tW ?? defaultCountryColor;
-    canvas.drawPath(path210, paint210fill);
+    paint210fill.color = countryColors.tW ?? defaultColor;
+    worldCanvas.drawPath(path210, paint210fill, onTapDown: (tabdetail) {
+      callback('tw', tabdetail);
+    });
 
     Path path211 = Path();
     path211.moveTo(size.width * 0.5835000, size.height * 0.5932322);
@@ -9253,8 +9682,10 @@ class SimpleWorldPainter extends CustomPainter {
     path211.close();
 
     Paint paint211fill = Paint()..style = PaintingStyle.fill;
-    paint211fill.color = countryColors.tZ ?? defaultCountryColor;
-    canvas.drawPath(path211, paint211fill);
+    paint211fill.color = countryColors.tZ ?? defaultColor;
+    worldCanvas.drawPath(path211, paint211fill, onTapDown: (tabdetail) {
+      callback('tz', tabdetail);
+    });
 
     Path path212 = Path();
     path212.moveTo(size.width * 0.5895000, size.height * 0.5536756);
@@ -9292,8 +9723,10 @@ class SimpleWorldPainter extends CustomPainter {
     path212.close();
 
     Paint paint212fill = Paint()..style = PaintingStyle.fill;
-    paint212fill.color = countryColors.uG ?? defaultCountryColor;
-    canvas.drawPath(path212, paint212fill);
+    paint212fill.color = countryColors.uG ?? defaultColor;
+    worldCanvas.drawPath(path212, paint212fill, onTapDown: (tabdetail) {
+      callback('ug', tabdetail);
+    });
 
     Path path213 = Path();
     path213.moveTo(size.width * 0.5786000, size.height * 0.2037340);
@@ -9397,8 +9830,10 @@ class SimpleWorldPainter extends CustomPainter {
     path213.close();
 
     Paint paint213fill = Paint()..style = PaintingStyle.fill;
-    paint213fill.color = countryColors.uA ?? defaultCountryColor;
-    canvas.drawPath(path213, paint213fill);
+    paint213fill.color = countryColors.uA ?? defaultColor;
+    worldCanvas.drawPath(path213, paint213fill, onTapDown: (tabdetail) {
+      callback('ua', tabdetail);
+    });
 
     Path path214 = Path();
     path214.moveTo(size.width * 0.3498500, size.height * 0.8385064);
@@ -9425,8 +9860,10 @@ class SimpleWorldPainter extends CustomPainter {
     path214.close();
 
     Paint paint214fill = Paint()..style = PaintingStyle.fill;
-    paint214fill.color = countryColors.uY ?? defaultCountryColor;
-    canvas.drawPath(path214, paint214fill);
+    paint214fill.color = countryColors.uY ?? defaultColor;
+    worldCanvas.drawPath(path214, paint214fill, onTapDown: (tabdetail) {
+      callback('uy', tabdetail);
+    });
 
     Path path215 = Path();
     path215.moveTo(size.width * 0.6763500, size.height * 0.2691949);
@@ -9486,8 +9923,10 @@ class SimpleWorldPainter extends CustomPainter {
     path215.close();
 
     Paint paint215fill = Paint()..style = PaintingStyle.fill;
-    paint215fill.color = countryColors.uZ ?? defaultCountryColor;
-    canvas.drawPath(path215, paint215fill);
+    paint215fill.color = countryColors.uZ ?? defaultColor;
+    worldCanvas.drawPath(path215, paint215fill, onTapDown: (tabdetail) {
+      callback('uz', tabdetail);
+    });
 
     Path path216 = Path();
     path216.moveTo(size.width * 0.3243500, size.height * 0.5228705);
@@ -9585,8 +10024,10 @@ class SimpleWorldPainter extends CustomPainter {
     path216.close();
 
     Paint paint216fill = Paint()..style = PaintingStyle.fill;
-    paint216fill.color = countryColors.vE ?? defaultCountryColor;
-    canvas.drawPath(path216, paint216fill);
+    paint216fill.color = countryColors.vE ?? defaultColor;
+    worldCanvas.drawPath(path216, paint216fill, onTapDown: (tabdetail) {
+      callback('ve', tabdetail);
+    });
 
     Path path217 = Path();
     path217.moveTo(size.width * 0.7932500, size.height * 0.4241540);
@@ -9636,8 +10077,10 @@ class SimpleWorldPainter extends CustomPainter {
     path217.close();
 
     Paint paint217fill = Paint()..style = PaintingStyle.fill;
-    paint217fill.color = countryColors.vN ?? defaultCountryColor;
-    canvas.drawPath(path217, paint217fill);
+    paint217fill.color = countryColors.vN ?? defaultColor;
+    worldCanvas.drawPath(path217, paint217fill, onTapDown: (tabdetail) {
+      callback('vn', tabdetail);
+    });
 
     Path path218 = Path();
     path218.moveTo(size.width * 0.6419000, size.height * 0.4607935);
@@ -9687,8 +10130,10 @@ class SimpleWorldPainter extends CustomPainter {
     path218.close();
 
     Paint paint218fill = Paint()..style = PaintingStyle.fill;
-    paint218fill.color = countryColors.yE ?? defaultCountryColor;
-    canvas.drawPath(path218, paint218fill);
+    paint218fill.color = countryColors.yE ?? defaultColor;
+    worldCanvas.drawPath(path218, paint218fill, onTapDown: (tabdetail) {
+      callback('ye', tabdetail);
+    });
 
     Path path219 = Path();
     path219.moveTo(size.width * 0.5810500, size.height * 0.6497083);
@@ -9760,8 +10205,10 @@ class SimpleWorldPainter extends CustomPainter {
     path219.close();
 
     Paint paint219fill = Paint()..style = PaintingStyle.fill;
-    paint219fill.color = countryColors.zM ?? defaultCountryColor;
-    canvas.drawPath(path219, paint219fill);
+    paint219fill.color = countryColors.zM ?? defaultColor;
+    worldCanvas.drawPath(path219, paint219fill, onTapDown: (tabdetail) {
+      callback('zm', tabdetail);
+    });
 
     Path path220 = Path();
     path220.moveTo(size.width * 0.5797000, size.height * 0.7522754);
@@ -9804,8 +10251,10 @@ class SimpleWorldPainter extends CustomPainter {
     path220.close();
 
     Paint paint220fill = Paint()..style = PaintingStyle.fill;
-    paint220fill.color = countryColors.zM ?? defaultCountryColor;
-    canvas.drawPath(path220, paint220fill);
+    paint220fill.color = countryColors.zM ?? defaultColor;
+    worldCanvas.drawPath(path220, paint220fill, onTapDown: (tabdetail) {
+      callback('zm', tabdetail);
+    });
 
     Path path221 = Path();
     path221.moveTo(size.width * 0.6110500, size.height * 0.5981330);
@@ -9858,8 +10307,10 @@ class SimpleWorldPainter extends CustomPainter {
     path221.close();
 
     Paint paint221fill = Paint()..style = PaintingStyle.fill;
-    paint221fill.color = countryColors.sO ?? defaultCountryColor;
-    canvas.drawPath(path221, paint221fill);
+    paint221fill.color = countryColors.sO ?? defaultColor;
+    worldCanvas.drawPath(path221, paint221fill, onTapDown: (tabdetail) {
+      callback('so', tabdetail);
+    });
 
     Path path222 = Path();
     path222.moveTo(size.width * 0.5489000, size.height * 0.2693116);
@@ -9886,8 +10337,10 @@ class SimpleWorldPainter extends CustomPainter {
     path222.close();
 
     Paint paint222fill = Paint()..style = PaintingStyle.fill;
-    paint222fill.color = countryColors.xK ?? defaultCountryColor;
-    canvas.drawPath(path222, paint222fill);
+    paint222fill.color = countryColors.xK ?? defaultColor;
+    worldCanvas.drawPath(path222, paint222fill, onTapDown: (tabdetail) {
+      callback('xk', tabdetail);
+    });
 
     Path path223 = Path();
     path223.moveTo(size.width * 0.5797000, size.height * 0.7522754);
@@ -9988,8 +10441,10 @@ class SimpleWorldPainter extends CustomPainter {
     path223.close();
 
     Paint paint223fill = Paint()..style = PaintingStyle.fill;
-    paint223fill.color = countryColors.zA ?? defaultCountryColor;
-    canvas.drawPath(path223, paint223fill);
+    paint223fill.color = countryColors.zA ?? defaultColor;
+    worldCanvas.drawPath(path223, paint223fill, onTapDown: (tabdetail) {
+      callback('za', tabdetail);
+    });
 
     Path path224 = Path();
     path224.moveTo(size.width * 0.9431000, size.height * 0.8919487);
@@ -10025,8 +10480,10 @@ class SimpleWorldPainter extends CustomPainter {
     path224.close();
 
     Paint paint224fill = Paint()..style = PaintingStyle.fill;
-    paint224fill.color = countryColors.nZ ?? defaultCountryColor;
-    canvas.drawPath(path224, paint224fill);
+    paint224fill.color = countryColors.nZ ?? defaultColor;
+    worldCanvas.drawPath(path224, paint224fill, onTapDown: (tabdetail) {
+      callback('nz', tabdetail);
+    });
 
     Path path225 = Path();
     path225.moveTo(size.width * 0.9576000, size.height * 0.8563594);
@@ -10068,8 +10525,10 @@ class SimpleWorldPainter extends CustomPainter {
     path225.close();
 
     Paint paint225fill = Paint()..style = PaintingStyle.fill;
-    paint225fill.color = countryColors.nZ ?? defaultCountryColor;
-    canvas.drawPath(path225, paint225fill);
+    paint225fill.color = countryColors.nZ ?? defaultColor;
+    worldCanvas.drawPath(path225, paint225fill, onTapDown: (tabdetail) {
+      callback('nz', tabdetail);
+    });
 
     Path path226 = Path();
     path226.moveTo(size.width * 0.3275500, size.height * 0.9777130);
@@ -10095,8 +10554,10 @@ class SimpleWorldPainter extends CustomPainter {
     path226.close();
 
     Paint paint226fill = Paint()..style = PaintingStyle.fill;
-    paint226fill.color = countryColors.cL ?? defaultCountryColor;
-    canvas.drawPath(path226, paint226fill);
+    paint226fill.color = countryColors.cL ?? defaultColor;
+    worldCanvas.drawPath(path226, paint226fill, onTapDown: (tabdetail) {
+      callback('cl', tabdetail);
+    });
 
     Path path227 = Path();
     path227.moveTo(size.width * 0.3072000, size.height * 0.7558926);
@@ -10195,8 +10656,10 @@ class SimpleWorldPainter extends CustomPainter {
     path227.close();
 
     Paint paint227fill = Paint()..style = PaintingStyle.fill;
-    paint227fill.color = countryColors.cL ?? defaultCountryColor;
-    canvas.drawPath(path227, paint227fill);
+    paint227fill.color = countryColors.cL ?? defaultColor;
+    worldCanvas.drawPath(path227, paint227fill, onTapDown: (tabdetail) {
+      callback('cl', tabdetail);
+    });
 
     Path path228 = Path();
     path228.moveTo(size.width * 0.5082500, size.height * 0.2066511);
@@ -10216,8 +10679,10 @@ class SimpleWorldPainter extends CustomPainter {
     path228.close();
 
     Paint paint228fill = Paint()..style = PaintingStyle.fill;
-    paint228fill.color = countryColors.nL ?? defaultCountryColor;
-    canvas.drawPath(path228, paint228fill);
+    paint228fill.color = countryColors.nL ?? defaultColor;
+    worldCanvas.drawPath(path228, paint228fill, onTapDown: (tabdetail) {
+      callback('nl', tabdetail);
+    });
 
     Path path229 = Path();
     path229.moveTo(size.width * 0.4734500, size.height * 0.3077013);
@@ -10256,8 +10721,10 @@ class SimpleWorldPainter extends CustomPainter {
     path229.close();
 
     Paint paint229fill = Paint()..style = PaintingStyle.fill;
-    paint229fill.color = countryColors.pT ?? defaultCountryColor;
-    canvas.drawPath(path229, paint229fill);
+    paint229fill.color = countryColors.pT ?? defaultColor;
+    worldCanvas.drawPath(path229, paint229fill, onTapDown: (tabdetail) {
+      callback('pt', tabdetail);
+    });
 
     Path path230 = Path();
     path230.moveTo(size.width * 0.8447500, size.height * 0.2070012);
@@ -10285,8 +10752,10 @@ class SimpleWorldPainter extends CustomPainter {
     path230.close();
 
     Paint paint230fill = Paint()..style = PaintingStyle.fill;
-    paint230fill.color = countryColors.rU ?? defaultCountryColor;
-    canvas.drawPath(path230, paint230fill);
+    paint230fill.color = countryColors.rU ?? defaultColor;
+    worldCanvas.drawPath(path230, paint230fill, onTapDown: (tabdetail) {
+      callback('ru', tabdetail);
+    });
 
     Path path231 = Path();
     path231.moveTo(size.width * 0.5473000, size.height * 0.1813302);
@@ -10301,8 +10770,10 @@ class SimpleWorldPainter extends CustomPainter {
     path231.close();
 
     Paint paint231fill = Paint()..style = PaintingStyle.fill;
-    paint231fill.color = countryColors.rU ?? defaultCountryColor;
-    canvas.drawPath(path231, paint231fill);
+    paint231fill.color = countryColors.rU ?? defaultColor;
+    worldCanvas.drawPath(path231, paint231fill, onTapDown: (tabdetail) {
+      callback('ru', tabdetail);
+    });
 
     Path path232 = Path();
     path232.moveTo(size.width * 0.7742000, size.height * 0.05624271);
@@ -10316,8 +10787,10 @@ class SimpleWorldPainter extends CustomPainter {
     path232.close();
 
     Paint paint232fill = Paint()..style = PaintingStyle.fill;
-    paint232fill.color = countryColors.rU ?? defaultCountryColor;
-    canvas.drawPath(path232, paint232fill);
+    paint232fill.color = countryColors.rU ?? defaultColor;
+    worldCanvas.drawPath(path232, paint232fill, onTapDown: (tabdetail) {
+      callback('ru', tabdetail);
+    });
 
     Path path233 = Path();
     path233.moveTo(size.width * 0.7805000, size.height * 0.04515753);
@@ -10330,8 +10803,10 @@ class SimpleWorldPainter extends CustomPainter {
     path233.close();
 
     Paint paint233fill = Paint()..style = PaintingStyle.fill;
-    paint233fill.color = countryColors.rU ?? defaultCountryColor;
-    canvas.drawPath(path233, paint233fill);
+    paint233fill.color = countryColors.rU ?? defaultColor;
+    worldCanvas.drawPath(path233, paint233fill, onTapDown: (tabdetail) {
+      callback('ru', tabdetail);
+    });
 
     Path path234 = Path();
     path234.moveTo(size.width * 0.7677500, size.height * 0.04235706);
@@ -10346,8 +10821,10 @@ class SimpleWorldPainter extends CustomPainter {
     path234.close();
 
     Paint paint234fill = Paint()..style = PaintingStyle.fill;
-    paint234fill.color = countryColors.rU ?? defaultCountryColor;
-    canvas.drawPath(path234, paint234fill);
+    paint234fill.color = countryColors.rU ?? defaultColor;
+    worldCanvas.drawPath(path234, paint234fill, onTapDown: (tabdetail) {
+      callback('ru', tabdetail);
+    });
 
     Path path235 = Path();
     path235.moveTo(size.width * 0.6094000, size.height * 0.07152859);
@@ -10379,8 +10856,10 @@ class SimpleWorldPainter extends CustomPainter {
     path235.close();
 
     Paint paint235fill = Paint()..style = PaintingStyle.fill;
-    paint235fill.color = countryColors.rU ?? defaultCountryColor;
-    canvas.drawPath(path235, paint235fill);
+    paint235fill.color = countryColors.rU ?? defaultColor;
+    worldCanvas.drawPath(path235, paint235fill, onTapDown: (tabdetail) {
+      callback('ru', tabdetail);
+    });
 
     Path path236 = Path();
     path236.moveTo(size.width * 0.8308500, size.height * 0.2695449);
@@ -10832,8 +11311,10 @@ class SimpleWorldPainter extends CustomPainter {
     path236.close();
 
     Paint paint236fill = Paint()..style = PaintingStyle.fill;
-    paint236fill.color = countryColors.rU ?? defaultCountryColor;
-    canvas.drawPath(path236, paint236fill);
+    paint236fill.color = countryColors.rU ?? defaultColor;
+    worldCanvas.drawPath(path236, paint236fill, onTapDown: (tabdetail) {
+      callback('ru', tabdetail);
+    });
 
     Path path237 = Path();
     path237.moveTo(size.width * 0.6835500, size.height * 0.02695449);
@@ -10846,8 +11327,10 @@ class SimpleWorldPainter extends CustomPainter {
     path237.close();
 
     Paint paint237fill = Paint()..style = PaintingStyle.fill;
-    paint237fill.color = countryColors.rU ?? defaultCountryColor;
-    canvas.drawPath(path237, paint237fill);
+    paint237fill.color = countryColors.rU ?? defaultColor;
+    worldCanvas.drawPath(path237, paint237fill, onTapDown: (tabdetail) {
+      callback('ru', tabdetail);
+    });
 
     Path path238 = Path();
     path238.moveTo(size.width * 0.5824000, size.height * 0.01528588);
@@ -10868,8 +11351,10 @@ class SimpleWorldPainter extends CustomPainter {
     path238.close();
 
     Paint paint238fill = Paint()..style = PaintingStyle.fill;
-    paint238fill.color = countryColors.rU ?? defaultCountryColor;
-    canvas.drawPath(path238, paint238fill);
+    paint238fill.color = countryColors.rU ?? defaultColor;
+    worldCanvas.drawPath(path238, paint238fill, onTapDown: (tabdetail) {
+      callback('ru', tabdetail);
+    });
 
     Path path239 = Path();
     path239.moveTo(size.width * 0.6725500, size.height * 0.02380397);
@@ -10886,8 +11371,10 @@ class SimpleWorldPainter extends CustomPainter {
     path239.close();
 
     Paint paint239fill = Paint()..style = PaintingStyle.fill;
-    paint239fill.color = countryColors.rU ?? defaultCountryColor;
-    canvas.drawPath(path239, paint239fill);
+    paint239fill.color = countryColors.rU ?? defaultColor;
+    worldCanvas.drawPath(path239, paint239fill, onTapDown: (tabdetail) {
+      callback('ru', tabdetail);
+    });
 
     Path path240 = Path();
     path240.moveTo(size.width * 0.4883000, size.height * 0.2606768);
@@ -10944,8 +11431,10 @@ class SimpleWorldPainter extends CustomPainter {
     path240.close();
 
     Paint paint240fill = Paint()..style = PaintingStyle.fill;
-    paint240fill.color = countryColors.eS ?? defaultCountryColor;
-    canvas.drawPath(path240, paint240fill);
+    paint240fill.color = countryColors.eS ?? defaultColor;
+    worldCanvas.drawPath(path240, paint240fill, onTapDown: (tabdetail) {
+      callback('es', tabdetail);
+    });
 
     Path path241 = Path();
     path241.moveTo(size.width * 0.5178500, size.height * 0.2700117);
@@ -10958,8 +11447,10 @@ class SimpleWorldPainter extends CustomPainter {
     path241.close();
 
     Paint paint241fill = Paint()..style = PaintingStyle.fill;
-    paint241fill.color = countryColors.fR ?? defaultCountryColor;
-    canvas.drawPath(path241, paint241fill);
+    paint241fill.color = countryColors.fR ?? defaultColor;
+    worldCanvas.drawPath(path241, paint241fill, onTapDown: (tabdetail) {
+      callback('fr', tabdetail);
+    });
 
     Path path242 = Path();
     path242.moveTo(size.width * 0.5072000, size.height * 0.2158693);
@@ -11013,8 +11504,10 @@ class SimpleWorldPainter extends CustomPainter {
     path242.close();
 
     Paint paint242fill = Paint()..style = PaintingStyle.fill;
-    paint242fill.color = countryColors.fR ?? defaultCountryColor;
-    canvas.drawPath(path242, paint242fill);
+    paint242fill.color = countryColors.fR ?? defaultColor;
+    worldCanvas.drawPath(path242, paint242fill, onTapDown: (tabdetail) {
+      callback('fr', tabdetail);
+    });
 
     Path path243 = Path();
     path243.moveTo(size.width * 0.05940000, size.height * 0.4425904);
@@ -11037,8 +11530,10 @@ class SimpleWorldPainter extends CustomPainter {
     path243.close();
 
     Paint paint243fill = Paint()..style = PaintingStyle.fill;
-    paint243fill.color = countryColors.uS ?? defaultCountryColor;
-    canvas.drawPath(path243, paint243fill);
+    paint243fill.color = countryColors.uS ?? defaultColor;
+    worldCanvas.drawPath(path243, paint243fill, onTapDown: (tabdetail) {
+      callback('us', tabdetail);
+    });
 
     Path path244 = Path();
     path244.moveTo(size.width * 0.05905000, size.height * 0.4309218);
@@ -11053,8 +11548,10 @@ class SimpleWorldPainter extends CustomPainter {
     path244.close();
 
     Paint paint244fill = Paint()..style = PaintingStyle.fill;
-    paint244fill.color = countryColors.uS ?? defaultCountryColor;
-    canvas.drawPath(path244, paint244fill);
+    paint244fill.color = countryColors.uS ?? defaultColor;
+    worldCanvas.drawPath(path244, paint244fill, onTapDown: (tabdetail) {
+      callback('us', tabdetail);
+    });
 
     Path path245 = Path();
     path245.moveTo(size.width * 0.05755000, size.height * 0.4269545);
@@ -11065,8 +11562,10 @@ class SimpleWorldPainter extends CustomPainter {
     path245.close();
 
     Paint paint245fill = Paint()..style = PaintingStyle.fill;
-    paint245fill.color = countryColors.uS ?? defaultCountryColor;
-    canvas.drawPath(path245, paint245fill);
+    paint245fill.color = countryColors.uS ?? defaultColor;
+    worldCanvas.drawPath(path245, paint245fill, onTapDown: (tabdetail) {
+      callback('us', tabdetail);
+    });
 
     Path path246 = Path();
     path246.moveTo(size.width * 0.05520000, size.height * 0.4257876);
@@ -11081,8 +11580,10 @@ class SimpleWorldPainter extends CustomPainter {
     path246.close();
 
     Paint paint246fill = Paint()..style = PaintingStyle.fill;
-    paint246fill.color = countryColors.uS ?? defaultCountryColor;
-    canvas.drawPath(path246, paint246fill);
+    paint246fill.color = countryColors.uS ?? defaultColor;
+    worldCanvas.drawPath(path246, paint246fill, onTapDown: (tabdetail) {
+      callback('us', tabdetail);
+    });
 
     Path path247 = Path();
     path247.moveTo(size.width * 0.05100000, size.height * 0.4208868);
@@ -11095,8 +11596,10 @@ class SimpleWorldPainter extends CustomPainter {
     path247.close();
 
     Paint paint247fill = Paint()..style = PaintingStyle.fill;
-    paint247fill.color = countryColors.uS ?? defaultCountryColor;
-    canvas.drawPath(path247, paint247fill);
+    paint247fill.color = countryColors.uS ?? defaultColor;
+    worldCanvas.drawPath(path247, paint247fill, onTapDown: (tabdetail) {
+      callback('us', tabdetail);
+    });
 
     Path path248 = Path();
     path248.moveTo(size.width * 0.2697500, size.height * 0.2269545);
@@ -11377,8 +11880,10 @@ class SimpleWorldPainter extends CustomPainter {
     path248.close();
 
     Paint paint248fill = Paint()..style = PaintingStyle.fill;
-    paint248fill.color = countryColors.uS ?? defaultCountryColor;
-    canvas.drawPath(path248, paint248fill);
+    paint248fill.color = countryColors.uS ?? defaultColor;
+    worldCanvas.drawPath(path248, paint248fill, onTapDown: (tabdetail) {
+      callback('us', tabdetail);
+    });
 
     Path path249 = Path();
     path249.moveTo(size.width * 0.1375000, size.height * 0.1617270);
@@ -11393,8 +11898,10 @@ class SimpleWorldPainter extends CustomPainter {
     path249.close();
 
     Paint paint249fill = Paint()..style = PaintingStyle.fill;
-    paint249fill.color = countryColors.uS ?? defaultCountryColor;
-    canvas.drawPath(path249, paint249fill);
+    paint249fill.color = countryColors.uS ?? defaultColor;
+    worldCanvas.drawPath(path249, paint249fill, onTapDown: (tabdetail) {
+      callback('us', tabdetail);
+    });
 
     Path path250 = Path();
     path250.moveTo(size.width * 0.1180000, size.height * 0.1423571);
@@ -11407,8 +11914,10 @@ class SimpleWorldPainter extends CustomPainter {
     path250.close();
 
     Paint paint250fill = Paint()..style = PaintingStyle.fill;
-    paint250fill.color = countryColors.uS ?? defaultCountryColor;
-    canvas.drawPath(path250, paint250fill);
+    paint250fill.color = countryColors.uS ?? defaultColor;
+    worldCanvas.drawPath(path250, paint250fill, onTapDown: (tabdetail) {
+      callback('us', tabdetail);
+    });
 
     Path path251 = Path();
     path251.moveTo(size.width * 0.1186000, size.height * 0.1162194);
@@ -11426,8 +11935,10 @@ class SimpleWorldPainter extends CustomPainter {
     path251.close();
 
     Paint paint251fill = Paint()..style = PaintingStyle.fill;
-    paint251fill.color = countryColors.uS ?? defaultCountryColor;
-    canvas.drawPath(path251, paint251fill);
+    paint251fill.color = countryColors.uS ?? defaultColor;
+    worldCanvas.drawPath(path251, paint251fill, onTapDown: (tabdetail) {
+      callback('us', tabdetail);
+    });
 
     Path path252 = Path();
     path252.moveTo(size.width * 0.2050000, size.height * 0.07771295);
@@ -11568,8 +12079,10 @@ class SimpleWorldPainter extends CustomPainter {
     path252.close();
 
     Paint paint252fill = Paint()..style = PaintingStyle.fill;
-    paint252fill.color = countryColors.uS ?? defaultCountryColor;
-    canvas.drawPath(path252, paint252fill);
+    paint252fill.color = countryColors.uS ?? defaultColor;
+    worldCanvas.drawPath(path252, paint252fill, onTapDown: (tabdetail) {
+      callback('us', tabdetail);
+    });
 
     Path path253 = Path();
     path253.moveTo(size.width * 0.3386500, size.height * 0.5682614);
@@ -11594,8 +12107,10 @@ class SimpleWorldPainter extends CustomPainter {
     path253.close();
 
     Paint paint253fill = Paint()..style = PaintingStyle.fill;
-    paint253fill.color = countryColors.gF ?? defaultCountryColor;
-    canvas.drawPath(path253, paint253fill);
+    paint253fill.color = countryColors.gF ?? defaultColor;
+    worldCanvas.drawPath(path253, paint253fill, onTapDown: (tabdetail) {
+      callback('gf', tabdetail);
+    });
 
     Path path254 = Path();
     path254.moveTo(size.width * 0.2964500, size.height * 0.4924154);
@@ -11609,8 +12124,10 @@ class SimpleWorldPainter extends CustomPainter {
     path254.close();
 
     Paint paint254fill = Paint()..style = PaintingStyle.fill;
-    paint254fill.color = countryColors.aW ?? defaultCountryColor;
-    canvas.drawPath(path254, paint254fill);
+    paint254fill.color = countryColors.aW ?? defaultColor;
+    worldCanvas.drawPath(path254, paint254fill, onTapDown: (tabdetail) {
+      callback('aw', tabdetail);
+    });
 
     Path path255 = Path();
     path255.moveTo(size.width * 0.3171000, size.height * 0.4491249);
@@ -11622,8 +12139,10 @@ class SimpleWorldPainter extends CustomPainter {
     path255.close();
 
     Paint paint255fill = Paint()..style = PaintingStyle.fill;
-    paint255fill.color = countryColors.aI ?? defaultCountryColor;
-    canvas.drawPath(path255, paint255fill);
+    paint255fill.color = countryColors.aI ?? defaultColor;
+    worldCanvas.drawPath(path255, paint255fill, onTapDown: (tabdetail) {
+      callback('ai', tabdetail);
+    });
 
     Path path256 = Path();
     path256.moveTo(size.width * 0.01385000, size.height * 0.6922987);
@@ -11638,8 +12157,10 @@ class SimpleWorldPainter extends CustomPainter {
     path256.close();
 
     Paint paint256fill = Paint()..style = PaintingStyle.fill;
-    paint256fill.color = countryColors.aS ?? defaultCountryColor;
-    canvas.drawPath(path256, paint256fill);
+    paint256fill.color = countryColors.aS ?? defaultColor;
+    worldCanvas.drawPath(path256, paint256fill, onTapDown: (tabdetail) {
+      callback('as', tabdetail);
+    });
 
     Path path257 = Path();
     path257.moveTo(size.width * 0.01715000, size.height * 0.6922987);
@@ -11650,8 +12171,10 @@ class SimpleWorldPainter extends CustomPainter {
     path257.close();
 
     Paint paint257fill = Paint()..style = PaintingStyle.fill;
-    paint257fill.color = countryColors.aS ?? defaultCountryColor;
-    canvas.drawPath(path257, paint257fill);
+    paint257fill.color = countryColors.aS ?? defaultColor;
+    worldCanvas.drawPath(path257, paint257fill, onTapDown: (tabdetail) {
+      callback('as', tabdetail);
+    });
 
     Path path258 = Path();
     path258.moveTo(size.width * 0.3203500, size.height * 0.4572929);
@@ -11668,8 +12191,10 @@ class SimpleWorldPainter extends CustomPainter {
     path258.close();
 
     Paint paint258fill = Paint()..style = PaintingStyle.fill;
-    paint258fill.color = countryColors.aG ?? defaultCountryColor;
-    canvas.drawPath(path258, paint258fill);
+    paint258fill.color = countryColors.aG ?? defaultColor;
+    worldCanvas.drawPath(path258, paint258fill, onTapDown: (tabdetail) {
+      callback('ag', tabdetail);
+    });
 
     Path path259 = Path();
     path259.moveTo(size.width * 0.3203500, size.height * 0.4529755);
@@ -11685,8 +12210,10 @@ class SimpleWorldPainter extends CustomPainter {
     path259.close();
 
     Paint paint259fill = Paint()..style = PaintingStyle.fill;
-    paint259fill.color = countryColors.aG ?? defaultCountryColor;
-    canvas.drawPath(path259, paint259fill);
+    paint259fill.color = countryColors.aG ?? defaultColor;
+    worldCanvas.drawPath(path259, paint259fill, onTapDown: (tabdetail) {
+      callback('ag', tabdetail);
+    });
 
     Path path260 = Path();
     path260.moveTo(size.width * 0.6320500, size.height * 0.3889148);
@@ -11706,8 +12233,10 @@ class SimpleWorldPainter extends CustomPainter {
     path260.close();
 
     Paint paint260fill = Paint()..style = PaintingStyle.fill;
-    paint260fill.color = countryColors.bH ?? defaultCountryColor;
-    canvas.drawPath(path260, paint260fill);
+    paint260fill.color = countryColors.bH ?? defaultColor;
+    worldCanvas.drawPath(path260, paint260fill, onTapDown: (tabdetail) {
+      callback('bh', tabdetail);
+    });
 
     Path path261 = Path();
     path261.moveTo(size.width * 0.2902000, size.height * 0.4270712);
@@ -11737,8 +12266,10 @@ class SimpleWorldPainter extends CustomPainter {
     path261.close();
 
     Paint paint261fill = Paint()..style = PaintingStyle.fill;
-    paint261fill.color = countryColors.bS ?? defaultCountryColor;
-    canvas.drawPath(path261, paint261fill);
+    paint261fill.color = countryColors.bS ?? defaultColor;
+    worldCanvas.drawPath(path261, paint261fill, onTapDown: (tabdetail) {
+      callback('bs', tabdetail);
+    });
 
     Path path262 = Path();
     path262.moveTo(size.width * 0.2903000, size.height * 0.4250875);
@@ -11751,8 +12282,10 @@ class SimpleWorldPainter extends CustomPainter {
     path262.close();
 
     Paint paint262fill = Paint()..style = PaintingStyle.fill;
-    paint262fill.color = countryColors.bS ?? defaultCountryColor;
-    canvas.drawPath(path262, paint262fill);
+    paint262fill.color = countryColors.bS ?? defaultColor;
+    worldCanvas.drawPath(path262, paint262fill, onTapDown: (tabdetail) {
+      callback('bs', tabdetail);
+    });
 
     Path path263 = Path();
     path263.moveTo(size.width * 0.2905000, size.height * 0.4175029);
@@ -11774,8 +12307,10 @@ class SimpleWorldPainter extends CustomPainter {
     path263.close();
 
     Paint paint263fill = Paint()..style = PaintingStyle.fill;
-    paint263fill.color = countryColors.bS ?? defaultCountryColor;
-    canvas.drawPath(path263, paint263fill);
+    paint263fill.color = countryColors.bS ?? defaultColor;
+    worldCanvas.drawPath(path263, paint263fill, onTapDown: (tabdetail) {
+      callback('bs', tabdetail);
+    });
 
     Path path264 = Path();
     path264.moveTo(size.width * 0.2885500, size.height * 0.4154026);
@@ -11805,8 +12340,10 @@ class SimpleWorldPainter extends CustomPainter {
     path264.close();
 
     Paint paint264fill = Paint()..style = PaintingStyle.fill;
-    paint264fill.color = countryColors.bS ?? defaultCountryColor;
-    canvas.drawPath(path264, paint264fill);
+    paint264fill.color = countryColors.bS ?? defaultColor;
+    worldCanvas.drawPath(path264, paint264fill, onTapDown: (tabdetail) {
+      callback('bs', tabdetail);
+    });
 
     Path path265 = Path();
     path265.moveTo(size.width * 0.2876000, size.height * 0.4150525);
@@ -11825,8 +12362,10 @@ class SimpleWorldPainter extends CustomPainter {
     path265.close();
 
     Paint paint265fill = Paint()..style = PaintingStyle.fill;
-    paint265fill.color = countryColors.bS ?? defaultCountryColor;
-    canvas.drawPath(path265, paint265fill);
+    paint265fill.color = countryColors.bS ?? defaultColor;
+    worldCanvas.drawPath(path265, paint265fill, onTapDown: (tabdetail) {
+      callback('bs', tabdetail);
+    });
 
     Path path266 = Path();
     path266.moveTo(size.width * 0.2830000, size.height * 0.4081680);
@@ -11843,8 +12382,10 @@ class SimpleWorldPainter extends CustomPainter {
     path266.close();
 
     Paint paint266fill = Paint()..style = PaintingStyle.fill;
-    paint266fill.color = countryColors.bS ?? defaultCountryColor;
-    canvas.drawPath(path266, paint266fill);
+    paint266fill.color = countryColors.bS ?? defaultColor;
+    worldCanvas.drawPath(path266, paint266fill, onTapDown: (tabdetail) {
+      callback('bs', tabdetail);
+    });
 
     Path path267 = Path();
     path267.moveTo(size.width * 0.2848500, size.height * 0.4081680);
@@ -11876,8 +12417,10 @@ class SimpleWorldPainter extends CustomPainter {
     path267.close();
 
     Paint paint267fill = Paint()..style = PaintingStyle.fill;
-    paint267fill.color = countryColors.bS ?? defaultCountryColor;
-    canvas.drawPath(path267, paint267fill);
+    paint267fill.color = countryColors.bS ?? defaultColor;
+    worldCanvas.drawPath(path267, paint267fill, onTapDown: (tabdetail) {
+      callback('bs', tabdetail);
+    });
 
     Path path268 = Path();
     path268.moveTo(size.width * 0.2863000, size.height * 0.4081680);
@@ -11889,8 +12432,10 @@ class SimpleWorldPainter extends CustomPainter {
     path268.close();
 
     Paint paint268fill = Paint()..style = PaintingStyle.fill;
-    paint268fill.color = countryColors.bS ?? defaultCountryColor;
-    canvas.drawPath(path268, paint268fill);
+    paint268fill.color = countryColors.bS ?? defaultColor;
+    worldCanvas.drawPath(path268, paint268fill, onTapDown: (tabdetail) {
+      callback('bs', tabdetail);
+    });
 
     Path path269 = Path();
     path269.moveTo(size.width * 0.2822000, size.height * 0.4059510);
@@ -11901,8 +12446,10 @@ class SimpleWorldPainter extends CustomPainter {
     path269.close();
 
     Paint paint269fill = Paint()..style = PaintingStyle.fill;
-    paint269fill.color = countryColors.bS ?? defaultCountryColor;
-    canvas.drawPath(path269, paint269fill);
+    paint269fill.color = countryColors.bS ?? defaultColor;
+    worldCanvas.drawPath(path269, paint269fill, onTapDown: (tabdetail) {
+      callback('bs', tabdetail);
+    });
 
     Path path270 = Path();
     path270.moveTo(size.width * 0.2874500, size.height * 0.4053676);
@@ -11916,8 +12463,10 @@ class SimpleWorldPainter extends CustomPainter {
     path270.close();
 
     Paint paint270fill = Paint()..style = PaintingStyle.fill;
-    paint270fill.color = countryColors.bS ?? defaultCountryColor;
-    canvas.drawPath(path270, paint270fill);
+    paint270fill.color = countryColors.bS ?? defaultColor;
+    worldCanvas.drawPath(path270, paint270fill, onTapDown: (tabdetail) {
+      callback('bs', tabdetail);
+    });
 
     Path path271 = Path();
     path271.moveTo(size.width * 0.2782000, size.height * 0.4039673);
@@ -11929,8 +12478,10 @@ class SimpleWorldPainter extends CustomPainter {
     path271.close();
 
     Paint paint271fill = Paint()..style = PaintingStyle.fill;
-    paint271fill.color = countryColors.bS ?? defaultCountryColor;
-    canvas.drawPath(path271, paint271fill);
+    paint271fill.color = countryColors.bS ?? defaultColor;
+    worldCanvas.drawPath(path271, paint271fill, onTapDown: (tabdetail) {
+      callback('bs', tabdetail);
+    });
 
     Path path272 = Path();
     path272.moveTo(size.width * 0.2783000, size.height * 0.4047841);
@@ -11970,8 +12521,10 @@ class SimpleWorldPainter extends CustomPainter {
     path272.close();
 
     Paint paint272fill = Paint()..style = PaintingStyle.fill;
-    paint272fill.color = countryColors.bS ?? defaultCountryColor;
-    canvas.drawPath(path272, paint272fill);
+    paint272fill.color = countryColors.bS ?? defaultColor;
+    worldCanvas.drawPath(path272, paint272fill, onTapDown: (tabdetail) {
+      callback('bs', tabdetail);
+    });
 
     Path path273 = Path();
     path273.moveTo(size.width * 0.2850500, size.height * 0.4040840);
@@ -12001,8 +12554,10 @@ class SimpleWorldPainter extends CustomPainter {
     path273.close();
 
     Paint paint273fill = Paint()..style = PaintingStyle.fill;
-    paint273fill.color = countryColors.bS ?? defaultCountryColor;
-    canvas.drawPath(path273, paint273fill);
+    paint273fill.color = countryColors.bS ?? defaultColor;
+    worldCanvas.drawPath(path273, paint273fill, onTapDown: (tabdetail) {
+      callback('bs', tabdetail);
+    });
 
     Path path274 = Path();
     path274.moveTo(size.width * 0.2799000, size.height * 0.3976663);
@@ -12017,8 +12572,10 @@ class SimpleWorldPainter extends CustomPainter {
     path274.close();
 
     Paint paint274fill = Paint()..style = PaintingStyle.fill;
-    paint274fill.color = countryColors.bS ?? defaultCountryColor;
-    canvas.drawPath(path274, paint274fill);
+    paint274fill.color = countryColors.bS ?? defaultColor;
+    worldCanvas.drawPath(path274, paint274fill, onTapDown: (tabdetail) {
+      callback('bs', tabdetail);
+    });
 
     Path path275 = Path();
     path275.moveTo(size.width * 0.2778000, size.height * 0.3970828);
@@ -12066,8 +12623,10 @@ class SimpleWorldPainter extends CustomPainter {
     path275.close();
 
     Paint paint275fill = Paint()..style = PaintingStyle.fill;
-    paint275fill.color = countryColors.bS ?? defaultCountryColor;
-    canvas.drawPath(path275, paint275fill);
+    paint275fill.color = countryColors.bS ?? defaultColor;
+    worldCanvas.drawPath(path275, paint275fill, onTapDown: (tabdetail) {
+      callback('bs', tabdetail);
+    });
 
     Path path276 = Path();
     path276.moveTo(size.width * 0.2818500, size.height * 0.3940490);
@@ -12109,8 +12668,10 @@ class SimpleWorldPainter extends CustomPainter {
     path276.close();
 
     Paint paint276fill = Paint()..style = PaintingStyle.fill;
-    paint276fill.color = countryColors.bS ?? defaultCountryColor;
-    canvas.drawPath(path276, paint276fill);
+    paint276fill.color = countryColors.bS ?? defaultColor;
+    worldCanvas.drawPath(path276, paint276fill, onTapDown: (tabdetail) {
+      callback('bs', tabdetail);
+    });
 
     Path path277 = Path();
     path277.moveTo(size.width * 0.2774500, size.height * 0.3852975);
@@ -12147,8 +12708,10 @@ class SimpleWorldPainter extends CustomPainter {
     path277.close();
 
     Paint paint277fill = Paint()..style = PaintingStyle.fill;
-    paint277fill.color = countryColors.bS ?? defaultCountryColor;
-    canvas.drawPath(path277, paint277fill);
+    paint277fill.color = countryColors.bS ?? defaultColor;
+    worldCanvas.drawPath(path277, paint277fill, onTapDown: (tabdetail) {
+      callback('bs', tabdetail);
+    });
 
     Path path278 = Path();
     path278.moveTo(size.width * 0.2796000, size.height * 0.3837806);
@@ -12198,8 +12761,10 @@ class SimpleWorldPainter extends CustomPainter {
     path278.close();
 
     Paint paint278fill = Paint()..style = PaintingStyle.fill;
-    paint278fill.color = countryColors.bS ?? defaultCountryColor;
-    canvas.drawPath(path278, paint278fill);
+    paint278fill.color = countryColors.bS ?? defaultColor;
+    worldCanvas.drawPath(path278, paint278fill, onTapDown: (tabdetail) {
+      callback('bs', tabdetail);
+    });
 
     Path path279 = Path();
     path279.moveTo(size.width * 0.3176000, size.height * 0.4515753);
@@ -12209,8 +12774,10 @@ class SimpleWorldPainter extends CustomPainter {
     path279.close();
 
     Paint paint279fill = Paint()..style = PaintingStyle.fill;
-    paint279fill.color = countryColors.bL ?? defaultCountryColor;
-    canvas.drawPath(path279, paint279fill);
+    paint279fill.color = countryColors.bL ?? defaultColor;
+    worldCanvas.drawPath(path279, paint279fill, onTapDown: (tabdetail) {
+      callback('bl', tabdetail);
+    });
 
     Path path280 = Path();
     path280.moveTo(size.width * 0.3186500, size.height * 0.3430572);
@@ -12227,8 +12794,10 @@ class SimpleWorldPainter extends CustomPainter {
     path280.close();
 
     Paint paint280fill = Paint()..style = PaintingStyle.fill;
-    paint280fill.color = countryColors.bM ?? defaultCountryColor;
-    canvas.drawPath(path280, paint280fill);
+    paint280fill.color = countryColors.bM ?? defaultColor;
+    worldCanvas.drawPath(path280, paint280fill, onTapDown: (tabdetail) {
+      callback('bm', tabdetail);
+    });
 
     Path path281 = Path();
     path281.moveTo(size.width * 0.3257500, size.height * 0.4877480);
@@ -12244,8 +12813,10 @@ class SimpleWorldPainter extends CustomPainter {
     path281.close();
 
     Paint paint281fill = Paint()..style = PaintingStyle.fill;
-    paint281fill.color = countryColors.bB ?? defaultCountryColor;
-    canvas.drawPath(path281, paint281fill);
+    paint281fill.color = countryColors.bB ?? defaultColor;
+    worldCanvas.drawPath(path281, paint281fill, onTapDown: (tabdetail) {
+      callback('bb', tabdetail);
+    });
 
     Path path282 = Path();
     path282.moveTo(size.width * 0.6166000, size.height * 0.6782964);
@@ -12258,8 +12829,10 @@ class SimpleWorldPainter extends CustomPainter {
     path282.close();
 
     Paint paint282fill = Paint()..style = PaintingStyle.fill;
-    paint282fill.color = countryColors.kM ?? defaultCountryColor;
-    canvas.drawPath(path282, paint282fill);
+    paint282fill.color = countryColors.kM ?? defaultColor;
+    worldCanvas.drawPath(path282, paint282fill, onTapDown: (tabdetail) {
+      callback('km', tabdetail);
+    });
 
     Path path283 = Path();
     path283.moveTo(size.width * 0.6184500, size.height * 0.6760793);
@@ -12281,8 +12854,10 @@ class SimpleWorldPainter extends CustomPainter {
     path283.close();
 
     Paint paint283fill = Paint()..style = PaintingStyle.fill;
-    paint283fill.color = countryColors.kM ?? defaultCountryColor;
-    canvas.drawPath(path283, paint283fill);
+    paint283fill.color = countryColors.kM ?? defaultColor;
+    worldCanvas.drawPath(path283, paint283fill, onTapDown: (tabdetail) {
+      callback('km', tabdetail);
+    });
 
     Path path284 = Path();
     path284.moveTo(size.width * 0.6156000, size.height * 0.6749125);
@@ -12306,8 +12881,10 @@ class SimpleWorldPainter extends CustomPainter {
     path284.close();
 
     Paint paint284fill = Paint()..style = PaintingStyle.fill;
-    paint284fill.color = countryColors.kM ?? defaultCountryColor;
-    canvas.drawPath(path284, paint284fill);
+    paint284fill.color = countryColors.kM ?? defaultColor;
+    worldCanvas.drawPath(path284, paint284fill, onTapDown: (tabdetail) {
+      callback('km', tabdetail);
+    });
 
     Path path285 = Path();
     path285.moveTo(size.width * 0.4239000, size.height * 0.4743291);
@@ -12319,8 +12896,10 @@ class SimpleWorldPainter extends CustomPainter {
     path285.close();
 
     Paint paint285fill = Paint()..style = PaintingStyle.fill;
-    paint285fill.color = countryColors.cV ?? defaultCountryColor;
-    canvas.drawPath(path285, paint285fill);
+    paint285fill.color = countryColors.cV ?? defaultColor;
+    worldCanvas.drawPath(path285, paint285fill, onTapDown: (tabdetail) {
+      callback('cv', tabdetail);
+    });
 
     Path path286 = Path();
     path286.moveTo(size.width * 0.4248500, size.height * 0.4744457);
@@ -12337,8 +12916,10 @@ class SimpleWorldPainter extends CustomPainter {
     path286.close();
 
     Paint paint286fill = Paint()..style = PaintingStyle.fill;
-    paint286fill.color = countryColors.cV ?? defaultCountryColor;
-    canvas.drawPath(path286, paint286fill);
+    paint286fill.color = countryColors.cV ?? defaultColor;
+    worldCanvas.drawPath(path286, paint286fill, onTapDown: (tabdetail) {
+      callback('cv', tabdetail);
+    });
 
     Path path287 = Path();
     path287.moveTo(size.width * 0.4266000, size.height * 0.4708285);
@@ -12366,8 +12947,10 @@ class SimpleWorldPainter extends CustomPainter {
     path287.close();
 
     Paint paint287fill = Paint()..style = PaintingStyle.fill;
-    paint287fill.color = countryColors.cV ?? defaultCountryColor;
-    canvas.drawPath(path287, paint287fill);
+    paint287fill.color = countryColors.cV ?? defaultColor;
+    worldCanvas.drawPath(path287, paint287fill, onTapDown: (tabdetail) {
+      callback('cv', tabdetail);
+    });
 
     Path path288 = Path();
     path288.moveTo(size.width * 0.4281500, size.height * 0.4708285);
@@ -12382,8 +12965,10 @@ class SimpleWorldPainter extends CustomPainter {
     path288.close();
 
     Paint paint288fill = Paint()..style = PaintingStyle.fill;
-    paint288fill.color = countryColors.cV ?? defaultCountryColor;
-    canvas.drawPath(path288, paint288fill);
+    paint288fill.color = countryColors.cV ?? defaultColor;
+    worldCanvas.drawPath(path288, paint288fill, onTapDown: (tabdetail) {
+      callback('cv', tabdetail);
+    });
 
     Path path289 = Path();
     path289.moveTo(size.width * 0.4291500, size.height * 0.4641774);
@@ -12403,8 +12988,10 @@ class SimpleWorldPainter extends CustomPainter {
     path289.close();
 
     Paint paint289fill = Paint()..style = PaintingStyle.fill;
-    paint289fill.color = countryColors.cV ?? defaultCountryColor;
-    canvas.drawPath(path289, paint289fill);
+    paint289fill.color = countryColors.cV ?? defaultColor;
+    worldCanvas.drawPath(path289, paint289fill, onTapDown: (tabdetail) {
+      callback('cv', tabdetail);
+    });
 
     Path path290 = Path();
     path290.moveTo(size.width * 0.4251500, size.height * 0.4609102);
@@ -12425,8 +13012,10 @@ class SimpleWorldPainter extends CustomPainter {
     path290.close();
 
     Paint paint290fill = Paint()..style = PaintingStyle.fill;
-    paint290fill.color = countryColors.cV ?? defaultCountryColor;
-    canvas.drawPath(path290, paint290fill);
+    paint290fill.color = countryColors.cV ?? defaultColor;
+    worldCanvas.drawPath(path290, paint290fill, onTapDown: (tabdetail) {
+      callback('cv', tabdetail);
+    });
 
     Path path291 = Path();
     path291.moveTo(size.width * 0.4290500, size.height * 0.4603267);
@@ -12444,8 +13033,10 @@ class SimpleWorldPainter extends CustomPainter {
     path291.close();
 
     Paint paint291fill = Paint()..style = PaintingStyle.fill;
-    paint291fill.color = countryColors.cV ?? defaultCountryColor;
-    canvas.drawPath(path291, paint291fill);
+    paint291fill.color = countryColors.cV ?? defaultColor;
+    worldCanvas.drawPath(path291, paint291fill, onTapDown: (tabdetail) {
+      callback('cv', tabdetail);
+    });
 
     Path path292 = Path();
     path292.moveTo(size.width * 0.4234000, size.height * 0.4588098);
@@ -12459,8 +13050,10 @@ class SimpleWorldPainter extends CustomPainter {
     path292.close();
 
     Paint paint292fill = Paint()..style = PaintingStyle.fill;
-    paint292fill.color = countryColors.cV ?? defaultCountryColor;
-    canvas.drawPath(path292, paint292fill);
+    paint292fill.color = countryColors.cV ?? defaultColor;
+    worldCanvas.drawPath(path292, paint292fill, onTapDown: (tabdetail) {
+      callback('cv', tabdetail);
+    });
 
     Path path293 = Path();
     path293.moveTo(size.width * 0.4230000, size.height * 0.4567095);
@@ -12483,8 +13076,10 @@ class SimpleWorldPainter extends CustomPainter {
     path293.close();
 
     Paint paint293fill = Paint()..style = PaintingStyle.fill;
-    paint293fill.color = countryColors.cV ?? defaultCountryColor;
-    canvas.drawPath(path293, paint293fill);
+    paint293fill.color = countryColors.cV ?? defaultColor;
+    worldCanvas.drawPath(path293, paint293fill, onTapDown: (tabdetail) {
+      callback('cv', tabdetail);
+    });
 
     Path path294 = Path();
     path294.moveTo(size.width * 0.2995000, size.height * 0.4953326);
@@ -12507,8 +13102,10 @@ class SimpleWorldPainter extends CustomPainter {
     path294.close();
 
     Paint paint294fill = Paint()..style = PaintingStyle.fill;
-    paint294fill.color = countryColors.cW ?? defaultCountryColor;
-    canvas.drawPath(path294, paint294fill);
+    paint294fill.color = countryColors.cW ?? defaultColor;
+    worldCanvas.drawPath(path294, paint294fill, onTapDown: (tabdetail) {
+      callback('cw', tabdetail);
+    });
 
     Path path295 = Path();
     path295.moveTo(size.width * 0.2663500, size.height * 0.4408401);
@@ -12526,8 +13123,10 @@ class SimpleWorldPainter extends CustomPainter {
     path295.close();
 
     Paint paint295fill = Paint()..style = PaintingStyle.fill;
-    paint295fill.color = countryColors.kY ?? defaultCountryColor;
-    canvas.drawPath(path295, paint295fill);
+    paint295fill.color = countryColors.kY ?? defaultColor;
+    worldCanvas.drawPath(path295, paint295fill, onTapDown: (tabdetail) {
+      callback('ky', tabdetail);
+    });
 
     Path path296 = Path();
     path296.moveTo(size.width * 0.2704000, size.height * 0.4379230);
@@ -12537,8 +13136,10 @@ class SimpleWorldPainter extends CustomPainter {
     path296.close();
 
     Paint paint296fill = Paint()..style = PaintingStyle.fill;
-    paint296fill.color = countryColors.kY ?? defaultCountryColor;
-    canvas.drawPath(path296, paint296fill);
+    paint296fill.color = countryColors.kY ?? defaultColor;
+    worldCanvas.drawPath(path296, paint296fill, onTapDown: (tabdetail) {
+      callback('ky', tabdetail);
+    });
 
     Path path297 = Path();
     path297.moveTo(size.width * 0.2707000, size.height * 0.4380397);
@@ -12549,8 +13150,10 @@ class SimpleWorldPainter extends CustomPainter {
     path297.close();
 
     Paint paint297fill = Paint()..style = PaintingStyle.fill;
-    paint297fill.color = countryColors.kY ?? defaultCountryColor;
-    canvas.drawPath(path297, paint297fill);
+    paint297fill.color = countryColors.kY ?? defaultColor;
+    worldCanvas.drawPath(path297, paint297fill, onTapDown: (tabdetail) {
+      callback('ky', tabdetail);
+    });
 
     Path path298 = Path();
     path298.moveTo(size.width * 0.5841000, size.height * 0.3228705);
@@ -12567,8 +13170,10 @@ class SimpleWorldPainter extends CustomPainter {
     path298.close();
 
     Paint paint298fill = Paint()..style = PaintingStyle.fill;
-    paint298fill.color = countryColors.cY ?? defaultCountryColor;
-    canvas.drawPath(path298, paint298fill);
+    paint298fill.color = countryColors.cY ?? defaultColor;
+    worldCanvas.drawPath(path298, paint298fill, onTapDown: (tabdetail) {
+      callback('cy', tabdetail);
+    });
 
     Path path299 = Path();
     path299.moveTo(size.width * 0.5832500, size.height * 0.3234539);
@@ -12626,8 +13231,10 @@ class SimpleWorldPainter extends CustomPainter {
     path299.close();
 
     Paint paint299fill = Paint()..style = PaintingStyle.fill;
-    paint299fill.color = countryColors.cY ?? defaultCountryColor;
-    canvas.drawPath(path299, paint299fill);
+    paint299fill.color = countryColors.cY ?? defaultColor;
+    worldCanvas.drawPath(path299, paint299fill, onTapDown: (tabdetail) {
+      callback('cy', tabdetail);
+    });
 
     Path path300 = Path();
     path300.moveTo(size.width * 0.3210000, size.height * 0.4687281);
@@ -12650,8 +13257,10 @@ class SimpleWorldPainter extends CustomPainter {
     path300.close();
 
     Paint paint300fill = Paint()..style = PaintingStyle.fill;
-    paint300fill.color = countryColors.dM ?? defaultCountryColor;
-    canvas.drawPath(path300, paint300fill);
+    paint300fill.color = countryColors.dM ?? defaultColor;
+    worldCanvas.drawPath(path300, paint300fill, onTapDown: (tabdetail) {
+      callback('dm', tabdetail);
+    });
 
     Path path301 = Path();
     path301.moveTo(size.width * 0.3487000, size.height * 0.9757293);
@@ -12664,8 +13273,10 @@ class SimpleWorldPainter extends CustomPainter {
     path301.close();
 
     Paint paint301fill = Paint()..style = PaintingStyle.fill;
-    paint301fill.color = countryColors.fK ?? defaultCountryColor;
-    canvas.drawPath(path301, paint301fill);
+    paint301fill.color = countryColors.fK ?? defaultColor;
+    worldCanvas.drawPath(path301, paint301fill, onTapDown: (tabdetail) {
+      callback('fk', tabdetail);
+    });
 
     Path path302 = Path();
     path302.moveTo(size.width * 0.3483500, size.height * 0.9740957);
@@ -12679,8 +13290,10 @@ class SimpleWorldPainter extends CustomPainter {
     path302.close();
 
     Paint paint302fill = Paint()..style = PaintingStyle.fill;
-    paint302fill.color = countryColors.fK ?? defaultCountryColor;
-    canvas.drawPath(path302, paint302fill);
+    paint302fill.color = countryColors.fK ?? defaultColor;
+    worldCanvas.drawPath(path302, paint302fill, onTapDown: (tabdetail) {
+      callback('fk', tabdetail);
+    });
 
     Path path303 = Path();
     path303.moveTo(size.width * 0.3514500, size.height * 0.9731622);
@@ -12693,8 +13306,10 @@ class SimpleWorldPainter extends CustomPainter {
     path303.close();
 
     Paint paint303fill = Paint()..style = PaintingStyle.fill;
-    paint303fill.color = countryColors.fK ?? defaultCountryColor;
-    canvas.drawPath(path303, paint303fill);
+    paint303fill.color = countryColors.fK ?? defaultColor;
+    worldCanvas.drawPath(path303, paint303fill, onTapDown: (tabdetail) {
+      callback('fk', tabdetail);
+    });
 
     Path path304 = Path();
     path304.moveTo(size.width * 0.3454000, size.height * 0.9721120);
@@ -12716,8 +13331,10 @@ class SimpleWorldPainter extends CustomPainter {
     path304.close();
 
     Paint paint304fill = Paint()..style = PaintingStyle.fill;
-    paint304fill.color = countryColors.fK ?? defaultCountryColor;
-    canvas.drawPath(path304, paint304fill);
+    paint304fill.color = countryColors.fK ?? defaultColor;
+    worldCanvas.drawPath(path304, paint304fill, onTapDown: (tabdetail) {
+      callback('fk', tabdetail);
+    });
 
     Path path305 = Path();
     path305.moveTo(size.width * 0.3468500, size.height * 0.9705951);
@@ -12815,8 +13432,10 @@ class SimpleWorldPainter extends CustomPainter {
     path305.close();
 
     Paint paint305fill = Paint()..style = PaintingStyle.fill;
-    paint305fill.color = countryColors.fK ?? defaultCountryColor;
-    canvas.drawPath(path305, paint305fill);
+    paint305fill.color = countryColors.fK ?? defaultColor;
+    worldCanvas.drawPath(path305, paint305fill, onTapDown: (tabdetail) {
+      callback('fk', tabdetail);
+    });
 
     Path path306 = Path();
     path306.moveTo(size.width * 0.3476500, size.height * 0.9683781);
@@ -12828,8 +13447,10 @@ class SimpleWorldPainter extends CustomPainter {
     path306.close();
 
     Paint paint306fill = Paint()..style = PaintingStyle.fill;
-    paint306fill.color = countryColors.fK ?? defaultCountryColor;
-    canvas.drawPath(path306, paint306fill);
+    paint306fill.color = countryColors.fK ?? defaultColor;
+    worldCanvas.drawPath(path306, paint306fill, onTapDown: (tabdetail) {
+      callback('fk', tabdetail);
+    });
 
     Path path307 = Path();
     path307.moveTo(size.width * 0.3471500, size.height * 0.9683781);
@@ -12840,8 +13461,10 @@ class SimpleWorldPainter extends CustomPainter {
     path307.close();
 
     Paint paint307fill = Paint()..style = PaintingStyle.fill;
-    paint307fill.color = countryColors.fK ?? defaultCountryColor;
-    canvas.drawPath(path307, paint307fill);
+    paint307fill.color = countryColors.fK ?? defaultColor;
+    worldCanvas.drawPath(path307, paint307fill, onTapDown: (tabdetail) {
+      callback('fk', tabdetail);
+    });
 
     Path path308 = Path();
     path308.moveTo(size.width * 0.3464500, size.height * 0.9681447);
@@ -12859,8 +13482,10 @@ class SimpleWorldPainter extends CustomPainter {
     path308.close();
 
     Paint paint308fill = Paint()..style = PaintingStyle.fill;
-    paint308fill.color = countryColors.fK ?? defaultCountryColor;
-    canvas.drawPath(path308, paint308fill);
+    paint308fill.color = countryColors.fK ?? defaultColor;
+    worldCanvas.drawPath(path308, paint308fill, onTapDown: (tabdetail) {
+      callback('fk', tabdetail);
+    });
 
     Path path309 = Path();
     path309.moveTo(size.width * 0.3500500, size.height * 0.9682614);
@@ -12982,8 +13607,10 @@ class SimpleWorldPainter extends CustomPainter {
     path309.close();
 
     Paint paint309fill = Paint()..style = PaintingStyle.fill;
-    paint309fill.color = countryColors.fK ?? defaultCountryColor;
-    canvas.drawPath(path309, paint309fill);
+    paint309fill.color = countryColors.fK ?? defaultColor;
+    worldCanvas.drawPath(path309, paint309fill, onTapDown: (tabdetail) {
+      callback('fk', tabdetail);
+    });
 
     Path path310 = Path();
     path310.moveTo(size.width * 0.3475500, size.height * 0.9677946);
@@ -13001,8 +13628,10 @@ class SimpleWorldPainter extends CustomPainter {
     path310.close();
 
     Paint paint310fill = Paint()..style = PaintingStyle.fill;
-    paint310fill.color = countryColors.fK ?? defaultCountryColor;
-    canvas.drawPath(path310, paint310fill);
+    paint310fill.color = countryColors.fK ?? defaultColor;
+    worldCanvas.drawPath(path310, paint310fill, onTapDown: (tabdetail) {
+      callback('fk', tabdetail);
+    });
 
     Path path311 = Path();
     path311.moveTo(size.width * 0.3441500, size.height * 0.9665111);
@@ -13012,8 +13641,10 @@ class SimpleWorldPainter extends CustomPainter {
     path311.close();
 
     Paint paint311fill = Paint()..style = PaintingStyle.fill;
-    paint311fill.color = countryColors.fK ?? defaultCountryColor;
-    canvas.drawPath(path311, paint311fill);
+    paint311fill.color = countryColors.fK ?? defaultColor;
+    worldCanvas.drawPath(path311, paint311fill, onTapDown: (tabdetail) {
+      callback('fk', tabdetail);
+    });
 
     Path path312 = Path();
     path312.moveTo(size.width * 0.4778000, size.height * 0.1306884);
@@ -13031,8 +13662,10 @@ class SimpleWorldPainter extends CustomPainter {
     path312.close();
 
     Paint paint312fill = Paint()..style = PaintingStyle.fill;
-    paint312fill.color = countryColors.fO ?? defaultCountryColor;
-    canvas.drawPath(path312, paint312fill);
+    paint312fill.color = countryColors.fO ?? defaultColor;
+    worldCanvas.drawPath(path312, paint312fill, onTapDown: (tabdetail) {
+      callback('fo', tabdetail);
+    });
 
     Path path313 = Path();
     path313.moveTo(size.width * 0.4779500, size.height * 0.1288215);
@@ -13047,8 +13680,10 @@ class SimpleWorldPainter extends CustomPainter {
     path313.close();
 
     Paint paint313fill = Paint()..style = PaintingStyle.fill;
-    paint313fill.color = countryColors.fO ?? defaultCountryColor;
-    canvas.drawPath(path313, paint313fill);
+    paint313fill.color = countryColors.fO ?? defaultColor;
+    worldCanvas.drawPath(path313, paint313fill, onTapDown: (tabdetail) {
+      callback('fo', tabdetail);
+    });
 
     Path path314 = Path();
     path314.moveTo(size.width * 0.4773100, size.height * 0.1272345);
@@ -13082,8 +13717,10 @@ class SimpleWorldPainter extends CustomPainter {
     path314.close();
 
     Paint paint314fill = Paint()..style = PaintingStyle.fill;
-    paint314fill.color = countryColors.fO ?? defaultCountryColor;
-    canvas.drawPath(path314, paint314fill);
+    paint314fill.color = countryColors.fO ?? defaultColor;
+    worldCanvas.drawPath(path314, paint314fill, onTapDown: (tabdetail) {
+      callback('fo', tabdetail);
+    });
 
     Path path315 = Path();
     path315.moveTo(size.width * 0.4791500, size.height * 0.1264877);
@@ -13093,8 +13730,10 @@ class SimpleWorldPainter extends CustomPainter {
     path315.close();
 
     Paint paint315fill = Paint()..style = PaintingStyle.fill;
-    paint315fill.color = countryColors.fO ?? defaultCountryColor;
-    canvas.drawPath(path315, paint315fill);
+    paint315fill.color = countryColors.fO ?? defaultColor;
+    worldCanvas.drawPath(path315, paint315fill, onTapDown: (tabdetail) {
+      callback('fo', tabdetail);
+    });
 
     Path path316 = Path();
     path316.moveTo(size.width * 0.4779500, size.height * 0.1270712);
@@ -13114,8 +13753,10 @@ class SimpleWorldPainter extends CustomPainter {
     path316.close();
 
     Paint paint316fill = Paint()..style = PaintingStyle.fill;
-    paint316fill.color = countryColors.fO ?? defaultCountryColor;
-    canvas.drawPath(path316, paint316fill);
+    paint316fill.color = countryColors.fO ?? defaultColor;
+    worldCanvas.drawPath(path316, paint316fill, onTapDown: (tabdetail) {
+      callback('fo', tabdetail);
+    });
 
     Path path317 = Path();
     path317.moveTo(size.width * 0.4790500, size.height * 0.1263711);
@@ -13130,8 +13771,10 @@ class SimpleWorldPainter extends CustomPainter {
     path317.close();
 
     Paint paint317fill = Paint()..style = PaintingStyle.fill;
-    paint317fill.color = countryColors.fO ?? defaultCountryColor;
-    canvas.drawPath(path317, paint317fill);
+    paint317fill.color = countryColors.fO ?? defaultColor;
+    worldCanvas.drawPath(path317, paint317fill, onTapDown: (tabdetail) {
+      callback('fo', tabdetail);
+    });
 
     Path path318 = Path();
     path318.moveTo(size.width * 0.4786000, size.height * 0.1263711);
@@ -13143,8 +13786,10 @@ class SimpleWorldPainter extends CustomPainter {
     path318.close();
 
     Paint paint318fill = Paint()..style = PaintingStyle.fill;
-    paint318fill.color = countryColors.fO ?? defaultCountryColor;
-    canvas.drawPath(path318, paint318fill);
+    paint318fill.color = countryColors.fO ?? defaultColor;
+    worldCanvas.drawPath(path318, paint318fill, onTapDown: (tabdetail) {
+      callback('fo', tabdetail);
+    });
 
     Path path319 = Path();
     path319.moveTo(size.width * 0.9547000, size.height * 0.5457410);
@@ -13156,8 +13801,10 @@ class SimpleWorldPainter extends CustomPainter {
     path319.close();
 
     Paint paint319fill = Paint()..style = PaintingStyle.fill;
-    paint319fill.color = countryColors.fM ?? defaultCountryColor;
-    canvas.drawPath(path319, paint319fill);
+    paint319fill.color = countryColors.fM ?? defaultColor;
+    worldCanvas.drawPath(path319, paint319fill, onTapDown: (tabdetail) {
+      callback('fm', tabdetail);
+    });
 
     Path path320 = Path();
     path320.moveTo(size.width * 0.9406000, size.height * 0.5333722);
@@ -13176,8 +13823,10 @@ class SimpleWorldPainter extends CustomPainter {
     path320.close();
 
     Paint paint320fill = Paint()..style = PaintingStyle.fill;
-    paint320fill.color = countryColors.fM ?? defaultCountryColor;
-    canvas.drawPath(path320, paint320fill);
+    paint320fill.color = countryColors.fM ?? defaultColor;
+    worldCanvas.drawPath(path320, paint320fill, onTapDown: (tabdetail) {
+      callback('fm', tabdetail);
+    });
 
     Path path321 = Path();
     path321.moveTo(size.width * 0.8832500, size.height * 0.5140023);
@@ -13191,8 +13840,10 @@ class SimpleWorldPainter extends CustomPainter {
     path321.close();
 
     Paint paint321fill = Paint()..style = PaintingStyle.fill;
-    paint321fill.color = countryColors.fM ?? defaultCountryColor;
-    canvas.drawPath(path321, paint321fill);
+    paint321fill.color = countryColors.fM ?? defaultColor;
+    worldCanvas.drawPath(path321, paint321fill, onTapDown: (tabdetail) {
+      callback('fm', tabdetail);
+    });
 
     Path path322 = Path();
     path322.moveTo(size.width * 0.3196000, size.height * 0.4953326);
@@ -13208,8 +13859,10 @@ class SimpleWorldPainter extends CustomPainter {
     path322.close();
 
     Paint paint322fill = Paint()..style = PaintingStyle.fill;
-    paint322fill.color = countryColors.gD ?? defaultCountryColor;
-    canvas.drawPath(path322, paint322fill);
+    paint322fill.color = countryColors.gD ?? defaultColor;
+    worldCanvas.drawPath(path322, paint322fill, onTapDown: (tabdetail) {
+      callback('gd', tabdetail);
+    });
 
     Path path323 = Path();
     path323.moveTo(size.width * 0.9004000, size.height * 0.4848308);
@@ -13231,8 +13884,10 @@ class SimpleWorldPainter extends CustomPainter {
     path323.close();
 
     Paint paint323fill = Paint()..style = PaintingStyle.fill;
-    paint323fill.color = countryColors.gU ?? defaultCountryColor;
-    canvas.drawPath(path323, paint323fill);
+    paint323fill.color = countryColors.gU ?? defaultColor;
+    worldCanvas.drawPath(path323, paint323fill, onTapDown: (tabdetail) {
+      callback('gu', tabdetail);
+    });
 
     Path path324 = Path();
     path324.moveTo(size.width * 0.3181500, size.height * 0.4574096);
@@ -13245,8 +13900,10 @@ class SimpleWorldPainter extends CustomPainter {
     path324.close();
 
     Paint paint324fill = Paint()..style = PaintingStyle.fill;
-    paint324fill.color = countryColors.kN ?? defaultCountryColor;
-    canvas.drawPath(path324, paint324fill);
+    paint324fill.color = countryColors.kN ?? defaultColor;
+    worldCanvas.drawPath(path324, paint324fill, onTapDown: (tabdetail) {
+      callback('kn', tabdetail);
+    });
 
     Path path325 = Path();
     path325.moveTo(size.width * 0.3178000, size.height * 0.4556593);
@@ -13260,8 +13917,10 @@ class SimpleWorldPainter extends CustomPainter {
     path325.close();
 
     Paint paint325fill = Paint()..style = PaintingStyle.fill;
-    paint325fill.color = countryColors.kN ?? defaultCountryColor;
-    canvas.drawPath(path325, paint325fill);
+    paint325fill.color = countryColors.kN ?? defaultColor;
+    worldCanvas.drawPath(path325, paint325fill, onTapDown: (tabdetail) {
+      callback('kn', tabdetail);
+    });
 
     Path path326 = Path();
     path326.moveTo(size.width * 0.3218500, size.height * 0.4828471);
@@ -13279,8 +13938,10 @@ class SimpleWorldPainter extends CustomPainter {
     path326.close();
 
     Paint paint326fill = Paint()..style = PaintingStyle.fill;
-    paint326fill.color = countryColors.lC ?? defaultCountryColor;
-    canvas.drawPath(path326, paint326fill);
+    paint326fill.color = countryColors.lC ?? defaultColor;
+    worldCanvas.drawPath(path326, paint326fill, onTapDown: (tabdetail) {
+      callback('lc', tabdetail);
+    });
 
     Path path327 = Path();
     path327.moveTo(size.width * 0.3171000, size.height * 0.4504084);
@@ -13291,8 +13952,10 @@ class SimpleWorldPainter extends CustomPainter {
     path327.close();
 
     Paint paint327fill = Paint()..style = PaintingStyle.fill;
-    paint327fill.color = countryColors.mF ?? defaultCountryColor;
-    canvas.drawPath(path327, paint327fill);
+    paint327fill.color = countryColors.mF ?? defaultColor;
+    worldCanvas.drawPath(path327, paint327fill, onTapDown: (tabdetail) {
+      callback('mf', tabdetail);
+    });
 
     Path path328 = Path();
     path328.moveTo(size.width * 0.7014500, size.height * 0.5540257);
@@ -13303,8 +13966,10 @@ class SimpleWorldPainter extends CustomPainter {
     path328.close();
 
     Paint paint328fill = Paint()..style = PaintingStyle.fill;
-    paint328fill.color = countryColors.mV ?? defaultCountryColor;
-    canvas.drawPath(path328, paint328fill);
+    paint328fill.color = countryColors.mV ?? defaultColor;
+    worldCanvas.drawPath(path328, paint328fill, onTapDown: (tabdetail) {
+      callback('mv', tabdetail);
+    });
 
     Path path329 = Path();
     path329.moveTo(size.width * 0.9769000, size.height * 0.5320887);
@@ -13314,8 +13979,10 @@ class SimpleWorldPainter extends CustomPainter {
     path329.close();
 
     Paint paint329fill = Paint()..style = PaintingStyle.fill;
-    paint329fill.color = countryColors.mH ?? defaultCountryColor;
-    canvas.drawPath(path329, paint329fill);
+    paint329fill.color = countryColors.mH ?? defaultColor;
+    worldCanvas.drawPath(path329, paint329fill, onTapDown: (tabdetail) {
+      callback('mh', tabdetail);
+    });
 
     Path path330 = Path();
     path330.moveTo(size.width * 0.5319500, size.height * 0.3170362);
@@ -13331,8 +13998,10 @@ class SimpleWorldPainter extends CustomPainter {
     path330.close();
 
     Paint paint330fill = Paint()..style = PaintingStyle.fill;
-    paint330fill.color = countryColors.mT ?? defaultCountryColor;
-    canvas.drawPath(path330, paint330fill);
+    paint330fill.color = countryColors.mT ?? defaultColor;
+    worldCanvas.drawPath(path330, paint330fill, onTapDown: (tabdetail) {
+      callback('mt', tabdetail);
+    });
 
     Path path331 = Path();
     path331.moveTo(size.width * 0.5311500, size.height * 0.3157526);
@@ -13344,8 +14013,10 @@ class SimpleWorldPainter extends CustomPainter {
     path331.close();
 
     Paint paint331fill = Paint()..style = PaintingStyle.fill;
-    paint331fill.color = countryColors.mT ?? defaultCountryColor;
-    canvas.drawPath(path331, paint331fill);
+    paint331fill.color = countryColors.mT ?? defaultColor;
+    worldCanvas.drawPath(path331, paint331fill, onTapDown: (tabdetail) {
+      callback('mt', tabdetail);
+    });
 
     Path path332 = Path();
     path332.moveTo(size.width * 0.9012500, size.height * 0.4796966);
@@ -13358,8 +14029,10 @@ class SimpleWorldPainter extends CustomPainter {
     path332.close();
 
     Paint paint332fill = Paint()..style = PaintingStyle.fill;
-    paint332fill.color = countryColors.mP ?? defaultCountryColor;
-    canvas.drawPath(path332, paint332fill);
+    paint332fill.color = countryColors.mP ?? defaultColor;
+    worldCanvas.drawPath(path332, paint332fill, onTapDown: (tabdetail) {
+      callback('mp', tabdetail);
+    });
 
     Path path333 = Path();
     path333.moveTo(size.width * 0.9020000, size.height * 0.4737456);
@@ -13373,8 +14046,10 @@ class SimpleWorldPainter extends CustomPainter {
     path333.close();
 
     Paint paint333fill = Paint()..style = PaintingStyle.fill;
-    paint333fill.color = countryColors.mP ?? defaultCountryColor;
-    canvas.drawPath(path333, paint333fill);
+    paint333fill.color = countryColors.mP ?? defaultColor;
+    worldCanvas.drawPath(path333, paint333fill, onTapDown: (tabdetail) {
+      callback('mp', tabdetail);
+    });
 
     Path path334 = Path();
     path334.moveTo(size.width * 0.9022500, size.height * 0.4718786);
@@ -13389,8 +14064,10 @@ class SimpleWorldPainter extends CustomPainter {
     path334.close();
 
     Paint paint334fill = Paint()..style = PaintingStyle.fill;
-    paint334fill.color = countryColors.mP ?? defaultCountryColor;
-    canvas.drawPath(path334, paint334fill);
+    paint334fill.color = countryColors.mP ?? defaultColor;
+    worldCanvas.drawPath(path334, paint334fill, onTapDown: (tabdetail) {
+      callback('mp', tabdetail);
+    });
 
     Path path335 = Path();
     path335.moveTo(size.width * 0.9013000, size.height * 0.4631272);
@@ -13401,8 +14078,10 @@ class SimpleWorldPainter extends CustomPainter {
     path335.close();
 
     Paint paint335fill = Paint()..style = PaintingStyle.fill;
-    paint335fill.color = countryColors.mP ?? defaultCountryColor;
-    canvas.drawPath(path335, paint335fill);
+    paint335fill.color = countryColors.mP ?? defaultColor;
+    worldCanvas.drawPath(path335, paint335fill, onTapDown: (tabdetail) {
+      callback('mp', tabdetail);
+    });
 
     Path path336 = Path();
     path336.moveTo(size.width * 0.9003500, size.height * 0.4502917);
@@ -13414,8 +14093,10 @@ class SimpleWorldPainter extends CustomPainter {
     path336.close();
 
     Paint paint336fill = Paint()..style = PaintingStyle.fill;
-    paint336fill.color = countryColors.mP ?? defaultCountryColor;
-    canvas.drawPath(path336, paint336fill);
+    paint336fill.color = countryColors.mP ?? defaultColor;
+    worldCanvas.drawPath(path336, paint336fill, onTapDown: (tabdetail) {
+      callback('mp', tabdetail);
+    });
 
     Path path337 = Path();
     path337.moveTo(size.width * 0.8997500, size.height * 0.4452742);
@@ -13427,8 +14108,10 @@ class SimpleWorldPainter extends CustomPainter {
     path337.close();
 
     Paint paint337fill = Paint()..style = PaintingStyle.fill;
-    paint337fill.color = countryColors.mP ?? defaultCountryColor;
-    canvas.drawPath(path337, paint337fill);
+    paint337fill.color = countryColors.mP ?? defaultColor;
+    worldCanvas.drawPath(path337, paint337fill, onTapDown: (tabdetail) {
+      callback('mp', tabdetail);
+    });
 
     Path path338 = Path();
     path338.moveTo(size.width * 0.3191000, size.height * 0.4596266);
@@ -13441,8 +14124,10 @@ class SimpleWorldPainter extends CustomPainter {
     path338.close();
 
     Paint paint338fill = Paint()..style = PaintingStyle.fill;
-    paint338fill.color = countryColors.mS ?? defaultCountryColor;
-    canvas.drawPath(path338, paint338fill);
+    paint338fill.color = countryColors.mS ?? defaultColor;
+    worldCanvas.drawPath(path338, paint338fill, onTapDown: (tabdetail) {
+      callback('ms', tabdetail);
+    });
 
     Path path339 = Path();
     path339.moveTo(size.width * 0.6538500, size.height * 0.7360560);
@@ -13469,8 +14154,10 @@ class SimpleWorldPainter extends CustomPainter {
     path339.close();
 
     Paint paint339fill = Paint()..style = PaintingStyle.fill;
-    paint339fill.color = countryColors.mU ?? defaultCountryColor;
-    canvas.drawPath(path339, paint339fill);
+    paint339fill.color = countryColors.mU ?? defaultColor;
+    worldCanvas.drawPath(path339, paint339fill, onTapDown: (tabdetail) {
+      callback('mu', tabdetail);
+    });
 
     Path path340 = Path();
     path340.moveTo(size.width * 0.6697500, size.height * 0.7336056);
@@ -13483,8 +14170,10 @@ class SimpleWorldPainter extends CustomPainter {
     path340.close();
 
     Paint paint340fill = Paint()..style = PaintingStyle.fill;
-    paint340fill.color = countryColors.mU ?? defaultCountryColor;
-    canvas.drawPath(path340, paint340fill);
+    paint340fill.color = countryColors.mU ?? defaultColor;
+    worldCanvas.drawPath(path340, paint340fill, onTapDown: (tabdetail) {
+      callback('mu', tabdetail);
+    });
 
     Path path341 = Path();
     path341.moveTo(size.width * 0.9576000, size.height * 0.7548425);
@@ -13498,8 +14187,10 @@ class SimpleWorldPainter extends CustomPainter {
     path341.close();
 
     Paint paint341fill = Paint()..style = PaintingStyle.fill;
-    paint341fill.color = countryColors.nC ?? defaultCountryColor;
-    canvas.drawPath(path341, paint341fill);
+    paint341fill.color = countryColors.nC ?? defaultColor;
+    worldCanvas.drawPath(path341, paint341fill, onTapDown: (tabdetail) {
+      callback('nc', tabdetail);
+    });
 
     Path path342 = Path();
     path342.moveTo(size.width * 0.9598000, size.height * 0.7457410);
@@ -13524,8 +14215,10 @@ class SimpleWorldPainter extends CustomPainter {
     path342.close();
 
     Paint paint342fill = Paint()..style = PaintingStyle.fill;
-    paint342fill.color = countryColors.nC ?? defaultCountryColor;
-    canvas.drawPath(path342, paint342fill);
+    paint342fill.color = countryColors.nC ?? defaultColor;
+    worldCanvas.drawPath(path342, paint342fill, onTapDown: (tabdetail) {
+      callback('nc', tabdetail);
+    });
 
     Path path343 = Path();
     path343.moveTo(size.width * 0.9584500, size.height * 0.7407235);
@@ -13561,8 +14254,10 @@ class SimpleWorldPainter extends CustomPainter {
     path343.close();
 
     Paint paint343fill = Paint()..style = PaintingStyle.fill;
-    paint343fill.color = countryColors.nC ?? defaultCountryColor;
-    canvas.drawPath(path343, paint343fill);
+    paint343fill.color = countryColors.nC ?? defaultColor;
+    worldCanvas.drawPath(path343, paint343fill, onTapDown: (tabdetail) {
+      callback('nc', tabdetail);
+    });
 
     Path path344 = Path();
     path344.moveTo(size.width * 0.9567500, size.height * 0.7388565);
@@ -13578,8 +14273,10 @@ class SimpleWorldPainter extends CustomPainter {
     path344.close();
 
     Paint paint344fill = Paint()..style = PaintingStyle.fill;
-    paint344fill.color = countryColors.nC ?? defaultCountryColor;
-    canvas.drawPath(path344, paint344fill);
+    paint344fill.color = countryColors.nC ?? defaultColor;
+    worldCanvas.drawPath(path344, paint344fill, onTapDown: (tabdetail) {
+      callback('nc', tabdetail);
+    });
 
     Path path345 = Path();
     path345.moveTo(size.width * 0.9567500, size.height * 0.7388565);
@@ -13590,8 +14287,10 @@ class SimpleWorldPainter extends CustomPainter {
     path345.close();
 
     Paint paint345fill = Paint()..style = PaintingStyle.fill;
-    paint345fill.color = countryColors.nC ?? defaultCountryColor;
-    canvas.drawPath(path345, paint345fill);
+    paint345fill.color = countryColors.nC ?? defaultColor;
+    worldCanvas.drawPath(path345, paint345fill, onTapDown: (tabdetail) {
+      callback('nc', tabdetail);
+    });
 
     Path path346 = Path();
     path346.moveTo(size.width * 0.9498000, size.height * 0.7360560);
@@ -13704,8 +14403,10 @@ class SimpleWorldPainter extends CustomPainter {
     path346.close();
 
     Paint paint346fill = Paint()..style = PaintingStyle.fill;
-    paint346fill.color = countryColors.nC ?? defaultCountryColor;
-    canvas.drawPath(path346, paint346fill);
+    paint346fill.color = countryColors.nC ?? defaultColor;
+    worldCanvas.drawPath(path346, paint346fill, onTapDown: (tabdetail) {
+      callback('nc', tabdetail);
+    });
 
     Path path347 = Path();
     path347.moveTo(size.width * 0.9503500, size.height * 0.7364061);
@@ -13715,8 +14416,10 @@ class SimpleWorldPainter extends CustomPainter {
     path347.close();
 
     Paint paint347fill = Paint()..style = PaintingStyle.fill;
-    paint347fill.color = countryColors.nC ?? defaultCountryColor;
-    canvas.drawPath(path347, paint347fill);
+    paint347fill.color = countryColors.nC ?? defaultColor;
+    worldCanvas.drawPath(path347, paint347fill, onTapDown: (tabdetail) {
+      callback('nc', tabdetail);
+    });
 
     Path path348 = Path();
     path348.moveTo(size.width * 0.9492000, size.height * 0.7336056);
@@ -13727,8 +14430,10 @@ class SimpleWorldPainter extends CustomPainter {
     path348.close();
 
     Paint paint348fill = Paint()..style = PaintingStyle.fill;
-    paint348fill.color = countryColors.nC ?? defaultCountryColor;
-    canvas.drawPath(path348, paint348fill);
+    paint348fill.color = countryColors.nC ?? defaultColor;
+    worldCanvas.drawPath(path348, paint348fill, onTapDown: (tabdetail) {
+      callback('nc', tabdetail);
+    });
 
     Path path349 = Path();
     path349.moveTo(size.width * 0.9665000, size.height * 0.5896149);
@@ -13739,8 +14444,10 @@ class SimpleWorldPainter extends CustomPainter {
     path349.close();
 
     Paint paint349fill = Paint()..style = PaintingStyle.fill;
-    paint349fill.color = countryColors.nR ?? defaultCountryColor;
-    canvas.drawPath(path349, paint349fill);
+    paint349fill.color = countryColors.nR ?? defaultColor;
+    worldCanvas.drawPath(path349, paint349fill, onTapDown: (tabdetail) {
+      callback('nr', tabdetail);
+    });
 
     Path path350 = Path();
     path350.moveTo(size.width * 0.8738500, size.height * 0.5287048);
@@ -13758,8 +14465,10 @@ class SimpleWorldPainter extends CustomPainter {
     path350.close();
 
     Paint paint350fill = Paint()..style = PaintingStyle.fill;
-    paint350fill.color = countryColors.pW ?? defaultCountryColor;
-    canvas.drawPath(path350, paint350fill);
+    paint350fill.color = countryColors.pW ?? defaultColor;
+    worldCanvas.drawPath(path350, paint350fill, onTapDown: (tabdetail) {
+      callback('pw', tabdetail);
+    });
 
     Path path351 = Path();
     path351.moveTo(size.width * 0.3035500, size.height * 0.4502917);
@@ -13771,8 +14480,10 @@ class SimpleWorldPainter extends CustomPainter {
     path351.close();
 
     Paint paint351fill = Paint()..style = PaintingStyle.fill;
-    paint351fill.color = countryColors.pR ?? defaultCountryColor;
-    canvas.drawPath(path351, paint351fill);
+    paint351fill.color = countryColors.pR ?? defaultColor;
+    worldCanvas.drawPath(path351, paint351fill, onTapDown: (tabdetail) {
+      callback('pr', tabdetail);
+    });
 
     Path path352 = Path();
     path352.moveTo(size.width * 0.3108500, size.height * 0.4497083);
@@ -13787,8 +14498,10 @@ class SimpleWorldPainter extends CustomPainter {
     path352.close();
 
     Paint paint352fill = Paint()..style = PaintingStyle.fill;
-    paint352fill.color = countryColors.pR ?? defaultCountryColor;
-    canvas.drawPath(path352, paint352fill);
+    paint352fill.color = countryColors.pR ?? defaultColor;
+    worldCanvas.drawPath(path352, paint352fill, onTapDown: (tabdetail) {
+      callback('pr', tabdetail);
+    });
 
     Path path353 = Path();
     path353.moveTo(size.width * 0.3061000, size.height * 0.4469078);
@@ -13848,8 +14561,10 @@ class SimpleWorldPainter extends CustomPainter {
     path353.close();
 
     Paint paint353fill = Paint()..style = PaintingStyle.fill;
-    paint353fill.color = countryColors.pR ?? defaultCountryColor;
-    canvas.drawPath(path353, paint353fill);
+    paint353fill.color = countryColors.pR ?? defaultColor;
+    worldCanvas.drawPath(path353, paint353fill, onTapDown: (tabdetail) {
+      callback('pr', tabdetail);
+    });
 
     Path path354 = Path();
     path354.moveTo(size.width * 0.09765000, size.height * 0.7926488);
@@ -13861,8 +14576,10 @@ class SimpleWorldPainter extends CustomPainter {
     path354.close();
 
     Paint paint354fill = Paint()..style = PaintingStyle.fill;
-    paint354fill.color = countryColors.pF ?? defaultCountryColor;
-    canvas.drawPath(path354, paint354fill);
+    paint354fill.color = countryColors.pF ?? defaultColor;
+    worldCanvas.drawPath(path354, paint354fill, onTapDown: (tabdetail) {
+      callback('pf', tabdetail);
+    });
 
     Path path355 = Path();
     path355.moveTo(size.width * 0.1028000, size.height * 0.7481914);
@@ -13873,8 +14590,10 @@ class SimpleWorldPainter extends CustomPainter {
     path355.close();
 
     Paint paint355fill = Paint()..style = PaintingStyle.fill;
-    paint355fill.color = countryColors.pF ?? defaultCountryColor;
-    canvas.drawPath(path355, paint355fill);
+    paint355fill.color = countryColors.pF ?? defaultColor;
+    worldCanvas.drawPath(path355, paint355fill, onTapDown: (tabdetail) {
+      callback('pf', tabdetail);
+    });
 
     Path path356 = Path();
     path356.moveTo(size.width * 0.09970000, size.height * 0.7193699);
@@ -13888,8 +14607,10 @@ class SimpleWorldPainter extends CustomPainter {
     path356.close();
 
     Paint paint356fill = Paint()..style = PaintingStyle.fill;
-    paint356fill.color = countryColors.pF ?? defaultCountryColor;
-    canvas.drawPath(path356, paint356fill);
+    paint356fill.color = countryColors.pF ?? defaultColor;
+    worldCanvas.drawPath(path356, paint356fill, onTapDown: (tabdetail) {
+      callback('pf', tabdetail);
+    });
 
     Path path357 = Path();
     path357.moveTo(size.width * 0.07585000, size.height * 0.7182030);
@@ -13916,8 +14637,10 @@ class SimpleWorldPainter extends CustomPainter {
     path357.close();
 
     Paint paint357fill = Paint()..style = PaintingStyle.fill;
-    paint357fill.color = countryColors.pF ?? defaultCountryColor;
-    canvas.drawPath(path357, paint357fill);
+    paint357fill.color = countryColors.pF ?? defaultColor;
+    worldCanvas.drawPath(path357, paint357fill, onTapDown: (tabdetail) {
+      callback('pf', tabdetail);
+    });
 
     Path path358 = Path();
     path358.moveTo(size.width * 0.07435000, size.height * 0.7164527);
@@ -13929,8 +14652,10 @@ class SimpleWorldPainter extends CustomPainter {
     path358.close();
 
     Paint paint358fill = Paint()..style = PaintingStyle.fill;
-    paint358fill.color = countryColors.pF ?? defaultCountryColor;
-    canvas.drawPath(path358, paint358fill);
+    paint358fill.color = countryColors.pF ?? defaultColor;
+    worldCanvas.drawPath(path358, paint358fill, onTapDown: (tabdetail) {
+      callback('pf', tabdetail);
+    });
 
     Path path359 = Path();
     path359.moveTo(size.width * 0.07055000, size.height * 0.7114352);
@@ -13941,8 +14666,10 @@ class SimpleWorldPainter extends CustomPainter {
     path359.close();
 
     Paint paint359fill = Paint()..style = PaintingStyle.fill;
-    paint359fill.color = countryColors.pF ?? defaultCountryColor;
-    canvas.drawPath(path359, paint359fill);
+    paint359fill.color = countryColors.pF ?? defaultColor;
+    worldCanvas.drawPath(path359, paint359fill, onTapDown: (tabdetail) {
+      callback('pf', tabdetail);
+    });
 
     Path path360 = Path();
     path360.moveTo(size.width * 0.06950000, size.height * 0.7119020);
@@ -13955,8 +14682,10 @@ class SimpleWorldPainter extends CustomPainter {
     path360.close();
 
     Paint paint360fill = Paint()..style = PaintingStyle.fill;
-    paint360fill.color = countryColors.pF ?? defaultCountryColor;
-    canvas.drawPath(path360, paint360fill);
+    paint360fill.color = countryColors.pF ?? defaultColor;
+    worldCanvas.drawPath(path360, paint360fill, onTapDown: (tabdetail) {
+      callback('pf', tabdetail);
+    });
 
     Path path361 = Path();
     path361.moveTo(size.width * 0.06900000, size.height * 0.7098016);
@@ -13968,8 +14697,10 @@ class SimpleWorldPainter extends CustomPainter {
     path361.close();
 
     Paint paint361fill = Paint()..style = PaintingStyle.fill;
-    paint361fill.color = countryColors.pF ?? defaultCountryColor;
-    canvas.drawPath(path361, paint361fill);
+    paint361fill.color = countryColors.pF ?? defaultColor;
+    worldCanvas.drawPath(path361, paint361fill, onTapDown: (tabdetail) {
+      callback('pf', tabdetail);
+    });
 
     Path path362 = Path();
     path362.moveTo(size.width * 0.08315000, size.height * 0.7064177);
@@ -13979,8 +14710,10 @@ class SimpleWorldPainter extends CustomPainter {
     path362.close();
 
     Paint paint362fill = Paint()..style = PaintingStyle.fill;
-    paint362fill.color = countryColors.pF ?? defaultCountryColor;
-    canvas.drawPath(path362, paint362fill);
+    paint362fill.color = countryColors.pF ?? defaultColor;
+    worldCanvas.drawPath(path362, paint362fill, onTapDown: (tabdetail) {
+      callback('pf', tabdetail);
+    });
 
     Path path363 = Path();
     path363.moveTo(size.width * 0.1021500, size.height * 0.6645274);
@@ -13993,8 +14726,10 @@ class SimpleWorldPainter extends CustomPainter {
     path363.close();
 
     Paint paint363fill = Paint()..style = PaintingStyle.fill;
-    paint363fill.color = countryColors.pF ?? defaultCountryColor;
-    canvas.drawPath(path363, paint363fill);
+    paint363fill.color = countryColors.pF ?? defaultColor;
+    worldCanvas.drawPath(path363, paint363fill, onTapDown: (tabdetail) {
+      callback('pf', tabdetail);
+    });
 
     Path path364 = Path();
     path364.moveTo(size.width * 0.1006000, size.height * 0.6604434);
@@ -14007,8 +14742,10 @@ class SimpleWorldPainter extends CustomPainter {
     path364.close();
 
     Paint paint364fill = Paint()..style = PaintingStyle.fill;
-    paint364fill.color = countryColors.pF ?? defaultCountryColor;
-    canvas.drawPath(path364, paint364fill);
+    paint364fill.color = countryColors.pF ?? defaultColor;
+    worldCanvas.drawPath(path364, paint364fill, onTapDown: (tabdetail) {
+      callback('pf', tabdetail);
+    });
 
     Path path365 = Path();
     path365.moveTo(size.width * 0.1012000, size.height * 0.6585764);
@@ -14026,8 +14763,10 @@ class SimpleWorldPainter extends CustomPainter {
     path365.close();
 
     Paint paint365fill = Paint()..style = PaintingStyle.fill;
-    paint365fill.color = countryColors.pF ?? defaultCountryColor;
-    canvas.drawPath(path365, paint365fill);
+    paint365fill.color = countryColors.pF ?? defaultColor;
+    worldCanvas.drawPath(path365, paint365fill, onTapDown: (tabdetail) {
+      callback('pf', tabdetail);
+    });
 
     Path path366 = Path();
     path366.moveTo(size.width * 0.09775000, size.height * 0.6555426);
@@ -14040,8 +14779,10 @@ class SimpleWorldPainter extends CustomPainter {
     path366.close();
 
     Paint paint366fill = Paint()..style = PaintingStyle.fill;
-    paint366fill.color = countryColors.pF ?? defaultCountryColor;
-    canvas.drawPath(path366, paint366fill);
+    paint366fill.color = countryColors.pF ?? defaultColor;
+    worldCanvas.drawPath(path366, paint366fill, onTapDown: (tabdetail) {
+      callback('pf', tabdetail);
+    });
 
     Path path367 = Path();
     path367.moveTo(size.width * 0.09895000, size.height * 0.6520420);
@@ -14053,8 +14794,10 @@ class SimpleWorldPainter extends CustomPainter {
     path367.close();
 
     Paint paint367fill = Paint()..style = PaintingStyle.fill;
-    paint367fill.color = countryColors.pF ?? defaultCountryColor;
-    canvas.drawPath(path367, paint367fill);
+    paint367fill.color = countryColors.pF ?? defaultColor;
+    worldCanvas.drawPath(path367, paint367fill, onTapDown: (tabdetail) {
+      callback('pf', tabdetail);
+    });
 
     Path path368 = Path();
     path368.moveTo(size.width * 0.09710000, size.height * 0.6513419);
@@ -14069,8 +14812,10 @@ class SimpleWorldPainter extends CustomPainter {
     path368.close();
 
     Paint paint368fill = Paint()..style = PaintingStyle.fill;
-    paint368fill.color = countryColors.pF ?? defaultCountryColor;
-    canvas.drawPath(path368, paint368fill);
+    paint368fill.color = countryColors.pF ?? defaultColor;
+    worldCanvas.drawPath(path368, paint368fill, onTapDown: (tabdetail) {
+      callback('pf', tabdetail);
+    });
 
     Path path369 = Path();
     path369.moveTo(size.width * 0.9634000, size.height * 0.6723454);
@@ -14085,8 +14830,10 @@ class SimpleWorldPainter extends CustomPainter {
     path369.close();
 
     Paint paint369fill = Paint()..style = PaintingStyle.fill;
-    paint369fill.color = countryColors.sB ?? defaultCountryColor;
-    canvas.drawPath(path369, paint369fill);
+    paint369fill.color = countryColors.sB ?? defaultColor;
+    worldCanvas.drawPath(path369, paint369fill, onTapDown: (tabdetail) {
+      callback('sb', tabdetail);
+    });
 
     Path path370 = Path();
     path370.moveTo(size.width * 0.9442500, size.height * 0.6716453);
@@ -14113,8 +14860,10 @@ class SimpleWorldPainter extends CustomPainter {
     path370.close();
 
     Paint paint370fill = Paint()..style = PaintingStyle.fill;
-    paint370fill.color = countryColors.sB ?? defaultCountryColor;
-    canvas.drawPath(path370, paint370fill);
+    paint370fill.color = countryColors.sB ?? defaultColor;
+    worldCanvas.drawPath(path370, paint370fill, onTapDown: (tabdetail) {
+      callback('sb', tabdetail);
+    });
 
     Path path371 = Path();
     path371.moveTo(size.width * 0.9627000, size.height * 0.6698950);
@@ -14126,8 +14875,10 @@ class SimpleWorldPainter extends CustomPainter {
     path371.close();
 
     Paint paint371fill = Paint()..style = PaintingStyle.fill;
-    paint371fill.color = countryColors.sB ?? defaultCountryColor;
-    canvas.drawPath(path371, paint371fill);
+    paint371fill.color = countryColors.sB ?? defaultColor;
+    worldCanvas.drawPath(path371, paint371fill, onTapDown: (tabdetail) {
+      callback('sb', tabdetail);
+    });
 
     Path path372 = Path();
     path372.moveTo(size.width * 0.9615500, size.height * 0.6653442);
@@ -14150,8 +14901,10 @@ class SimpleWorldPainter extends CustomPainter {
     path372.close();
 
     Paint paint372fill = Paint()..style = PaintingStyle.fill;
-    paint372fill.color = countryColors.sB ?? defaultCountryColor;
-    canvas.drawPath(path372, paint372fill);
+    paint372fill.color = countryColors.sB ?? defaultColor;
+    worldCanvas.drawPath(path372, paint372fill, onTapDown: (tabdetail) {
+      callback('sb', tabdetail);
+    });
 
     Path path373 = Path();
     path373.moveTo(size.width * 0.9484000, size.height * 0.6620770);
@@ -14199,8 +14952,10 @@ class SimpleWorldPainter extends CustomPainter {
     path373.close();
 
     Paint paint373fill = Paint()..style = PaintingStyle.fill;
-    paint373fill.color = countryColors.sB ?? defaultCountryColor;
-    canvas.drawPath(path373, paint373fill);
+    paint373fill.color = countryColors.sB ?? defaultColor;
+    worldCanvas.drawPath(path373, paint373fill, onTapDown: (tabdetail) {
+      callback('sb', tabdetail);
+    });
 
     Path path374 = Path();
     path374.moveTo(size.width * 0.9504000, size.height * 0.6581097);
@@ -14212,8 +14967,10 @@ class SimpleWorldPainter extends CustomPainter {
     path374.close();
 
     Paint paint374fill = Paint()..style = PaintingStyle.fill;
-    paint374fill.color = countryColors.sB ?? defaultCountryColor;
-    canvas.drawPath(path374, paint374fill);
+    paint374fill.color = countryColors.sB ?? defaultColor;
+    worldCanvas.drawPath(path374, paint374fill, onTapDown: (tabdetail) {
+      callback('sb', tabdetail);
+    });
 
     Path path375 = Path();
     path375.moveTo(size.width * 0.9489500, size.height * 0.6560093);
@@ -14232,8 +14989,10 @@ class SimpleWorldPainter extends CustomPainter {
     path375.close();
 
     Paint paint375fill = Paint()..style = PaintingStyle.fill;
-    paint375fill.color = countryColors.sB ?? defaultCountryColor;
-    canvas.drawPath(path375, paint375fill);
+    paint375fill.color = countryColors.sB ?? defaultColor;
+    worldCanvas.drawPath(path375, paint375fill, onTapDown: (tabdetail) {
+      callback('sb', tabdetail);
+    });
 
     Path path376 = Path();
     path376.moveTo(size.width * 0.9447500, size.height * 0.6562427);
@@ -14284,8 +15043,10 @@ class SimpleWorldPainter extends CustomPainter {
     path376.close();
 
     Paint paint376fill = Paint()..style = PaintingStyle.fill;
-    paint376fill.color = countryColors.sB ?? defaultCountryColor;
-    canvas.drawPath(path376, paint376fill);
+    paint376fill.color = countryColors.sB ?? defaultColor;
+    worldCanvas.drawPath(path376, paint376fill, onTapDown: (tabdetail) {
+      callback('sb', tabdetail);
+    });
 
     Path path377 = Path();
     path377.moveTo(size.width * 0.9459000, size.height * 0.6534422);
@@ -14297,8 +15058,10 @@ class SimpleWorldPainter extends CustomPainter {
     path377.close();
 
     Paint paint377fill = Paint()..style = PaintingStyle.fill;
-    paint377fill.color = countryColors.sB ?? defaultCountryColor;
-    canvas.drawPath(path377, paint377fill);
+    paint377fill.color = countryColors.sB ?? defaultColor;
+    worldCanvas.drawPath(path377, paint377fill, onTapDown: (tabdetail) {
+      callback('sb', tabdetail);
+    });
 
     Path path378 = Path();
     path378.moveTo(size.width * 0.9459000, size.height * 0.6534422);
@@ -14315,8 +15078,10 @@ class SimpleWorldPainter extends CustomPainter {
     path378.close();
 
     Paint paint378fill = Paint()..style = PaintingStyle.fill;
-    paint378fill.color = countryColors.sB ?? defaultCountryColor;
-    canvas.drawPath(path378, paint378fill);
+    paint378fill.color = countryColors.sB ?? defaultColor;
+    worldCanvas.drawPath(path378, paint378fill, onTapDown: (tabdetail) {
+      callback('sb', tabdetail);
+    });
 
     Path path379 = Path();
     path379.moveTo(size.width * 0.9426000, size.height * 0.6528588);
@@ -14329,8 +15094,10 @@ class SimpleWorldPainter extends CustomPainter {
     path379.close();
 
     Paint paint379fill = Paint()..style = PaintingStyle.fill;
-    paint379fill.color = countryColors.sB ?? defaultCountryColor;
-    canvas.drawPath(path379, paint379fill);
+    paint379fill.color = countryColors.sB ?? defaultColor;
+    worldCanvas.drawPath(path379, paint379fill, onTapDown: (tabdetail) {
+      callback('sb', tabdetail);
+    });
 
     Path path380 = Path();
     path380.moveTo(size.width * 0.9383500, size.height * 0.6507585);
@@ -14342,8 +15109,10 @@ class SimpleWorldPainter extends CustomPainter {
     path380.close();
 
     Paint paint380fill = Paint()..style = PaintingStyle.fill;
-    paint380fill.color = countryColors.sB ?? defaultCountryColor;
-    canvas.drawPath(path380, paint380fill);
+    paint380fill.color = countryColors.sB ?? defaultColor;
+    worldCanvas.drawPath(path380, paint380fill, onTapDown: (tabdetail) {
+      callback('sb', tabdetail);
+    });
 
     Path path381 = Path();
     path381.moveTo(size.width * 0.9400500, size.height * 0.6516919);
@@ -14356,8 +15125,10 @@ class SimpleWorldPainter extends CustomPainter {
     path381.close();
 
     Paint paint381fill = Paint()..style = PaintingStyle.fill;
-    paint381fill.color = countryColors.sB ?? defaultCountryColor;
-    canvas.drawPath(path381, paint381fill);
+    paint381fill.color = countryColors.sB ?? defaultColor;
+    worldCanvas.drawPath(path381, paint381fill, onTapDown: (tabdetail) {
+      callback('sb', tabdetail);
+    });
 
     Path path382 = Path();
     path382.moveTo(size.width * 0.9396000, size.height * 0.6495916);
@@ -14379,8 +15150,10 @@ class SimpleWorldPainter extends CustomPainter {
     path382.close();
 
     Paint paint382fill = Paint()..style = PaintingStyle.fill;
-    paint382fill.color = countryColors.sB ?? defaultCountryColor;
-    canvas.drawPath(path382, paint382fill);
+    paint382fill.color = countryColors.sB ?? defaultColor;
+    worldCanvas.drawPath(path382, paint382fill, onTapDown: (tabdetail) {
+      callback('sb', tabdetail);
+    });
 
     Path path383 = Path();
     path383.moveTo(size.width * 0.9378000, size.height * 0.6497083);
@@ -14401,8 +15174,10 @@ class SimpleWorldPainter extends CustomPainter {
     path383.close();
 
     Paint paint383fill = Paint()..style = PaintingStyle.fill;
-    paint383fill.color = countryColors.sB ?? defaultCountryColor;
-    canvas.drawPath(path383, paint383fill);
+    paint383fill.color = countryColors.sB ?? defaultColor;
+    worldCanvas.drawPath(path383, paint383fill, onTapDown: (tabdetail) {
+      callback('sb', tabdetail);
+    });
 
     Path path384 = Path();
     path384.moveTo(size.width * 0.9442500, size.height * 0.6491249);
@@ -14418,8 +15193,10 @@ class SimpleWorldPainter extends CustomPainter {
     path384.close();
 
     Paint paint384fill = Paint()..style = PaintingStyle.fill;
-    paint384fill.color = countryColors.sB ?? defaultCountryColor;
-    canvas.drawPath(path384, paint384fill);
+    paint384fill.color = countryColors.sB ?? defaultColor;
+    worldCanvas.drawPath(path384, paint384fill, onTapDown: (tabdetail) {
+      callback('sb', tabdetail);
+    });
 
     Path path385 = Path();
     path385.moveTo(size.width * 0.9475000, size.height * 0.6481914);
@@ -14471,8 +15248,10 @@ class SimpleWorldPainter extends CustomPainter {
     path385.close();
 
     Paint paint385fill = Paint()..style = PaintingStyle.fill;
-    paint385fill.color = countryColors.sB ?? defaultCountryColor;
-    canvas.drawPath(path385, paint385fill);
+    paint385fill.color = countryColors.sB ?? defaultColor;
+    worldCanvas.drawPath(path385, paint385fill, onTapDown: (tabdetail) {
+      callback('sb', tabdetail);
+    });
 
     Path path386 = Path();
     path386.moveTo(size.width * 0.9371500, size.height * 0.6478413);
@@ -14483,8 +15262,10 @@ class SimpleWorldPainter extends CustomPainter {
     path386.close();
 
     Paint paint386fill = Paint()..style = PaintingStyle.fill;
-    paint386fill.color = countryColors.sB ?? defaultCountryColor;
-    canvas.drawPath(path386, paint386fill);
+    paint386fill.color = countryColors.sB ?? defaultColor;
+    worldCanvas.drawPath(path386, paint386fill, onTapDown: (tabdetail) {
+      callback('sb', tabdetail);
+    });
 
     Path path387 = Path();
     path387.moveTo(size.width * 0.9371000, size.height * 0.6466744);
@@ -14497,8 +15278,10 @@ class SimpleWorldPainter extends CustomPainter {
     path387.close();
 
     Paint paint387fill = Paint()..style = PaintingStyle.fill;
-    paint387fill.color = countryColors.sB ?? defaultCountryColor;
-    canvas.drawPath(path387, paint387fill);
+    paint387fill.color = countryColors.sB ?? defaultColor;
+    worldCanvas.drawPath(path387, paint387fill, onTapDown: (tabdetail) {
+      callback('sb', tabdetail);
+    });
 
     Path path388 = Path();
     path388.moveTo(size.width * 0.9386500, size.height * 0.6469078);
@@ -14539,8 +15322,10 @@ class SimpleWorldPainter extends CustomPainter {
     path388.close();
 
     Paint paint388fill = Paint()..style = PaintingStyle.fill;
-    paint388fill.color = countryColors.sB ?? defaultCountryColor;
-    canvas.drawPath(path388, paint388fill);
+    paint388fill.color = countryColors.sB ?? defaultColor;
+    worldCanvas.drawPath(path388, paint388fill, onTapDown: (tabdetail) {
+      callback('sb', tabdetail);
+    });
 
     Path path389 = Path();
     path389.moveTo(size.width * 0.9357000, size.height * 0.6469078);
@@ -14555,8 +15340,10 @@ class SimpleWorldPainter extends CustomPainter {
     path389.close();
 
     Paint paint389fill = Paint()..style = PaintingStyle.fill;
-    paint389fill.color = countryColors.sB ?? defaultCountryColor;
-    canvas.drawPath(path389, paint389fill);
+    paint389fill.color = countryColors.sB ?? defaultColor;
+    worldCanvas.drawPath(path389, paint389fill, onTapDown: (tabdetail) {
+      callback('sb', tabdetail);
+    });
 
     Path path390 = Path();
     path390.moveTo(size.width * 0.9374000, size.height * 0.6463244);
@@ -14576,8 +15363,10 @@ class SimpleWorldPainter extends CustomPainter {
     path390.close();
 
     Paint paint390fill = Paint()..style = PaintingStyle.fill;
-    paint390fill.color = countryColors.sB ?? defaultCountryColor;
-    canvas.drawPath(path390, paint390fill);
+    paint390fill.color = countryColors.sB ?? defaultColor;
+    worldCanvas.drawPath(path390, paint390fill, onTapDown: (tabdetail) {
+      callback('sb', tabdetail);
+    });
 
     Path path391 = Path();
     path391.moveTo(size.width * 0.9359000, size.height * 0.6422404);
@@ -14601,8 +15390,10 @@ class SimpleWorldPainter extends CustomPainter {
     path391.close();
 
     Paint paint391fill = Paint()..style = PaintingStyle.fill;
-    paint391fill.color = countryColors.sB ?? defaultCountryColor;
-    canvas.drawPath(path391, paint391fill);
+    paint391fill.color = countryColors.sB ?? defaultColor;
+    worldCanvas.drawPath(path391, paint391fill, onTapDown: (tabdetail) {
+      callback('sb', tabdetail);
+    });
 
     Path path392 = Path();
     path392.moveTo(size.width * 0.9410500, size.height * 0.6423571);
@@ -14615,8 +15406,10 @@ class SimpleWorldPainter extends CustomPainter {
     path392.close();
 
     Paint paint392fill = Paint()..style = PaintingStyle.fill;
-    paint392fill.color = countryColors.sB ?? defaultCountryColor;
-    canvas.drawPath(path392, paint392fill);
+    paint392fill.color = countryColors.sB ?? defaultColor;
+    worldCanvas.drawPath(path392, paint392fill, onTapDown: (tabdetail) {
+      callback('sb', tabdetail);
+    });
 
     Path path393 = Path();
     path393.moveTo(size.width * 0.9415000, size.height * 0.6423571);
@@ -14671,8 +15464,10 @@ class SimpleWorldPainter extends CustomPainter {
     path393.close();
 
     Paint paint393fill = Paint()..style = PaintingStyle.fill;
-    paint393fill.color = countryColors.sB ?? defaultCountryColor;
-    canvas.drawPath(path393, paint393fill);
+    paint393fill.color = countryColors.sB ?? defaultColor;
+    worldCanvas.drawPath(path393, paint393fill, onTapDown: (tabdetail) {
+      callback('sb', tabdetail);
+    });
 
     Path path394 = Path();
     path394.moveTo(size.width * 0.9407500, size.height * 0.6416569);
@@ -14685,8 +15480,10 @@ class SimpleWorldPainter extends CustomPainter {
     path394.close();
 
     Paint paint394fill = Paint()..style = PaintingStyle.fill;
-    paint394fill.color = countryColors.sB ?? defaultCountryColor;
-    canvas.drawPath(path394, paint394fill);
+    paint394fill.color = countryColors.sB ?? defaultColor;
+    worldCanvas.drawPath(path394, paint394fill, onTapDown: (tabdetail) {
+      callback('sb', tabdetail);
+    });
 
     Path path395 = Path();
     path395.moveTo(size.width * 0.9385000, size.height * 0.6409568);
@@ -14697,8 +15494,10 @@ class SimpleWorldPainter extends CustomPainter {
     path395.close();
 
     Paint paint395fill = Paint()..style = PaintingStyle.fill;
-    paint395fill.color = countryColors.sB ?? defaultCountryColor;
-    canvas.drawPath(path395, paint395fill);
+    paint395fill.color = countryColors.sB ?? defaultColor;
+    worldCanvas.drawPath(path395, paint395fill, onTapDown: (tabdetail) {
+      callback('sb', tabdetail);
+    });
 
     Path path396 = Path();
     path396.moveTo(size.width * 0.9406500, size.height * 0.6409568);
@@ -14708,8 +15507,10 @@ class SimpleWorldPainter extends CustomPainter {
     path396.close();
 
     Paint paint396fill = Paint()..style = PaintingStyle.fill;
-    paint396fill.color = countryColors.sB ?? defaultCountryColor;
-    canvas.drawPath(path396, paint396fill);
+    paint396fill.color = countryColors.sB ?? defaultColor;
+    worldCanvas.drawPath(path396, paint396fill, onTapDown: (tabdetail) {
+      callback('sb', tabdetail);
+    });
 
     Path path397 = Path();
     path397.moveTo(size.width * 0.9393000, size.height * 0.6414236);
@@ -14721,8 +15522,10 @@ class SimpleWorldPainter extends CustomPainter {
     path397.close();
 
     Paint paint397fill = Paint()..style = PaintingStyle.fill;
-    paint397fill.color = countryColors.sB ?? defaultCountryColor;
-    canvas.drawPath(path397, paint397fill);
+    paint397fill.color = countryColors.sB ?? defaultColor;
+    worldCanvas.drawPath(path397, paint397fill, onTapDown: (tabdetail) {
+      callback('sb', tabdetail);
+    });
 
     Path path398 = Path();
     path398.moveTo(size.width * 0.9330500, size.height * 0.6403734);
@@ -14734,8 +15537,10 @@ class SimpleWorldPainter extends CustomPainter {
     path398.close();
 
     Paint paint398fill = Paint()..style = PaintingStyle.fill;
-    paint398fill.color = countryColors.sB ?? defaultCountryColor;
-    canvas.drawPath(path398, paint398fill);
+    paint398fill.color = countryColors.sB ?? defaultColor;
+    worldCanvas.drawPath(path398, paint398fill, onTapDown: (tabdetail) {
+      callback('sb', tabdetail);
+    });
 
     Path path399 = Path();
     path399.moveTo(size.width * 0.9338000, size.height * 0.6381564);
@@ -14749,8 +15554,10 @@ class SimpleWorldPainter extends CustomPainter {
     path399.close();
 
     Paint paint399fill = Paint()..style = PaintingStyle.fill;
-    paint399fill.color = countryColors.sB ?? defaultCountryColor;
-    canvas.drawPath(path399, paint399fill);
+    paint399fill.color = countryColors.sB ?? defaultColor;
+    worldCanvas.drawPath(path399, paint399fill, onTapDown: (tabdetail) {
+      callback('sb', tabdetail);
+    });
 
     Path path400 = Path();
     path400.moveTo(size.width * 0.9346500, size.height * 0.6371062);
@@ -14761,8 +15568,10 @@ class SimpleWorldPainter extends CustomPainter {
     path400.close();
 
     Paint paint400fill = Paint()..style = PaintingStyle.fill;
-    paint400fill.color = countryColors.sB ?? defaultCountryColor;
-    canvas.drawPath(path400, paint400fill);
+    paint400fill.color = countryColors.sB ?? defaultColor;
+    worldCanvas.drawPath(path400, paint400fill, onTapDown: (tabdetail) {
+      callback('sb', tabdetail);
+    });
 
     Path path401 = Path();
     path401.moveTo(size.width * 0.9361000, size.height * 0.6353559);
@@ -14802,8 +15611,10 @@ class SimpleWorldPainter extends CustomPainter {
     path401.close();
 
     Paint paint401fill = Paint()..style = PaintingStyle.fill;
-    paint401fill.color = countryColors.sB ?? defaultCountryColor;
-    canvas.drawPath(path401, paint401fill);
+    paint401fill.color = countryColors.sB ?? defaultColor;
+    worldCanvas.drawPath(path401, paint401fill, onTapDown: (tabdetail) {
+      callback('sb', tabdetail);
+    });
 
     Path path402 = Path();
     path402.moveTo(size.width * 0.5119500, size.height * 0.5849475);
@@ -14826,8 +15637,10 @@ class SimpleWorldPainter extends CustomPainter {
     path402.close();
 
     Paint paint402fill = Paint()..style = PaintingStyle.fill;
-    paint402fill.color = countryColors.sT ?? defaultCountryColor;
-    canvas.drawPath(path402, paint402fill);
+    paint402fill.color = countryColors.sT ?? defaultColor;
+    worldCanvas.drawPath(path402, paint402fill, onTapDown: (tabdetail) {
+      callback('st', tabdetail);
+    });
 
     Path path403 = Path();
     path403.moveTo(size.width * 0.5142500, size.height * 0.5735123);
@@ -14843,8 +15656,10 @@ class SimpleWorldPainter extends CustomPainter {
     path403.close();
 
     Paint paint403fill = Paint()..style = PaintingStyle.fill;
-    paint403fill.color = countryColors.sT ?? defaultCountryColor;
-    canvas.drawPath(path403, paint403fill);
+    paint403fill.color = countryColors.sT ?? defaultColor;
+    worldCanvas.drawPath(path403, paint403fill, onTapDown: (tabdetail) {
+      callback('st', tabdetail);
+    });
 
     Path path404 = Path();
     path404.moveTo(size.width * 0.3171000, size.height * 0.4504084);
@@ -14855,8 +15670,10 @@ class SimpleWorldPainter extends CustomPainter {
     path404.close();
 
     Paint paint404fill = Paint()..style = PaintingStyle.fill;
-    paint404fill.color = countryColors.sX ?? defaultCountryColor;
-    canvas.drawPath(path404, paint404fill);
+    paint404fill.color = countryColors.sX ?? defaultColor;
+    worldCanvas.drawPath(path404, paint404fill, onTapDown: (tabdetail) {
+      callback('sx', tabdetail);
+    });
 
     Path path405 = Path();
     path405.moveTo(size.width * 0.6245000, size.height * 0.6558926);
@@ -14873,8 +15690,10 @@ class SimpleWorldPainter extends CustomPainter {
     path405.close();
 
     Paint paint405fill = Paint()..style = PaintingStyle.fill;
-    paint405fill.color = countryColors.sC ?? defaultCountryColor;
-    canvas.drawPath(path405, paint405fill);
+    paint405fill.color = countryColors.sC ?? defaultColor;
+    worldCanvas.drawPath(path405, paint405fill, onTapDown: (tabdetail) {
+      callback('sc', tabdetail);
+    });
 
     Path path406 = Path();
     path406.moveTo(size.width * 0.6242500, size.height * 0.6555426);
@@ -14885,8 +15704,10 @@ class SimpleWorldPainter extends CustomPainter {
     path406.close();
 
     Paint paint406fill = Paint()..style = PaintingStyle.fill;
-    paint406fill.color = countryColors.sC ?? defaultCountryColor;
-    canvas.drawPath(path406, paint406fill);
+    paint406fill.color = countryColors.sC ?? defaultColor;
+    worldCanvas.drawPath(path406, paint406fill, onTapDown: (tabdetail) {
+      callback('sc', tabdetail);
+    });
 
     Path path407 = Path();
     path407.moveTo(size.width * 0.6502000, size.height * 0.6201867);
@@ -14899,8 +15720,10 @@ class SimpleWorldPainter extends CustomPainter {
     path407.close();
 
     Paint paint407fill = Paint()..style = PaintingStyle.fill;
-    paint407fill.color = countryColors.sC ?? defaultCountryColor;
-    canvas.drawPath(path407, paint407fill);
+    paint407fill.color = countryColors.sC ?? defaultColor;
+    worldCanvas.drawPath(path407, paint407fill, onTapDown: (tabdetail) {
+      callback('sc', tabdetail);
+    });
 
     Path path408 = Path();
     path408.moveTo(size.width * 0.2938500, size.height * 0.4219370);
@@ -14914,8 +15737,10 @@ class SimpleWorldPainter extends CustomPainter {
     path408.close();
 
     Paint paint408fill = Paint()..style = PaintingStyle.fill;
-    paint408fill.color = countryColors.tC ?? defaultCountryColor;
-    canvas.drawPath(path408, paint408fill);
+    paint408fill.color = countryColors.tC ?? defaultColor;
+    worldCanvas.drawPath(path408, paint408fill, onTapDown: (tabdetail) {
+      callback('tc', tabdetail);
+    });
 
     Path path409 = Path();
     path409.moveTo(size.width * 0.2925000, size.height * 0.4218203);
@@ -14928,8 +15753,10 @@ class SimpleWorldPainter extends CustomPainter {
     path409.close();
 
     Paint paint409fill = Paint()..style = PaintingStyle.fill;
-    paint409fill.color = countryColors.tC ?? defaultCountryColor;
-    canvas.drawPath(path409, paint409fill);
+    paint409fill.color = countryColors.tC ?? defaultColor;
+    worldCanvas.drawPath(path409, paint409fill, onTapDown: (tabdetail) {
+      callback('tc', tabdetail);
+    });
 
     Path path410 = Path();
     path410.moveTo(size.width * 0.2936000, size.height * 0.4211202);
@@ -14941,8 +15768,10 @@ class SimpleWorldPainter extends CustomPainter {
     path410.close();
 
     Paint paint410fill = Paint()..style = PaintingStyle.fill;
-    paint410fill.color = countryColors.tC ?? defaultCountryColor;
-    canvas.drawPath(path410, paint410fill);
+    paint410fill.color = countryColors.tC ?? defaultColor;
+    worldCanvas.drawPath(path410, paint410fill, onTapDown: (tabdetail) {
+      callback('tc', tabdetail);
+    });
 
     Path path411 = Path();
     path411.moveTo(size.width * 0.007350000, size.height * 0.7462077);
@@ -14953,8 +15782,10 @@ class SimpleWorldPainter extends CustomPainter {
     path411.close();
 
     Paint paint411fill = Paint()..style = PaintingStyle.fill;
-    paint411fill.color = countryColors.tO ?? defaultCountryColor;
-    canvas.drawPath(path411, paint411fill);
+    paint411fill.color = countryColors.tO ?? defaultColor;
+    worldCanvas.drawPath(path411, paint411fill, onTapDown: (tabdetail) {
+      callback('to', tabdetail);
+    });
 
     Path path412 = Path();
     path412.moveTo(size.width * 0.005950000, size.height * 0.7437573);
@@ -14973,8 +15804,10 @@ class SimpleWorldPainter extends CustomPainter {
     path412.close();
 
     Paint paint412fill = Paint()..style = PaintingStyle.fill;
-    paint412fill.color = countryColors.tO ?? defaultCountryColor;
-    canvas.drawPath(path412, paint412fill);
+    paint412fill.color = countryColors.tO ?? defaultColor;
+    worldCanvas.drawPath(path412, paint412fill, onTapDown: (tabdetail) {
+      callback('to', tabdetail);
+    });
 
     Path path413 = Path();
     path413.moveTo(size.width * 0.005550000, size.height * 0.7337223);
@@ -14985,8 +15818,10 @@ class SimpleWorldPainter extends CustomPainter {
     path413.close();
 
     Paint paint413fill = Paint()..style = PaintingStyle.fill;
-    paint413fill.color = countryColors.tO ?? defaultCountryColor;
-    canvas.drawPath(path413, paint413fill);
+    paint413fill.color = countryColors.tO ?? defaultColor;
+    worldCanvas.drawPath(path413, paint413fill, onTapDown: (tabdetail) {
+      callback('to', tabdetail);
+    });
 
     Path path414 = Path();
     path414.moveTo(size.width * 0.007750000, size.height * 0.7249708);
@@ -14999,8 +15834,10 @@ class SimpleWorldPainter extends CustomPainter {
     path414.close();
 
     Paint paint414fill = Paint()..style = PaintingStyle.fill;
-    paint414fill.color = countryColors.tO ?? defaultCountryColor;
-    canvas.drawPath(path414, paint414fill);
+    paint414fill.color = countryColors.tO ?? defaultColor;
+    worldCanvas.drawPath(path414, paint414fill, onTapDown: (tabdetail) {
+      callback('to', tabdetail);
+    });
 
     Path path415 = Path();
     path415.moveTo(size.width * 0.0007000000, size.height * 0.7024504);
@@ -15012,8 +15849,10 @@ class SimpleWorldPainter extends CustomPainter {
     path415.close();
 
     Paint paint415fill = Paint()..style = PaintingStyle.fill;
-    paint415fill.color = countryColors.tO ?? defaultCountryColor;
-    canvas.drawPath(path415, paint415fill);
+    paint415fill.color = countryColors.tO ?? defaultColor;
+    worldCanvas.drawPath(path415, paint415fill, onTapDown: (tabdetail) {
+      callback('to', tabdetail);
+    });
 
     Path path416 = Path();
     path416.moveTo(size.width * 0.3214000, size.height * 0.5043174);
@@ -15067,8 +15906,10 @@ class SimpleWorldPainter extends CustomPainter {
     path416.close();
 
     Paint paint416fill = Paint()..style = PaintingStyle.fill;
-    paint416fill.color = countryColors.tT ?? defaultCountryColor;
-    canvas.drawPath(path416, paint416fill);
+    paint416fill.color = countryColors.tT ?? defaultColor;
+    worldCanvas.drawPath(path416, paint416fill, onTapDown: (tabdetail) {
+      callback('tt', tabdetail);
+    });
 
     Path path417 = Path();
     path417.moveTo(size.width * 0.3226000, size.height * 0.5005834);
@@ -15084,8 +15925,10 @@ class SimpleWorldPainter extends CustomPainter {
     path417.close();
 
     Paint paint417fill = Paint()..style = PaintingStyle.fill;
-    paint417fill.color = countryColors.tT ?? defaultCountryColor;
-    canvas.drawPath(path417, paint417fill);
+    paint417fill.color = countryColors.tT ?? defaultColor;
+    worldCanvas.drawPath(path417, paint417fill, onTapDown: (tabdetail) {
+      callback('tt', tabdetail);
+    });
 
     Path path418 = Path();
     path418.moveTo(size.width * 0.9994500, size.height * 0.6494749);
@@ -15096,8 +15939,10 @@ class SimpleWorldPainter extends CustomPainter {
     path418.close();
 
     Paint paint418fill = Paint()..style = PaintingStyle.fill;
-    paint418fill.color = countryColors.tV ?? defaultCountryColor;
-    canvas.drawPath(path418, paint418fill);
+    paint418fill.color = countryColors.tV ?? defaultColor;
+    worldCanvas.drawPath(path418, paint418fill, onTapDown: (tabdetail) {
+      callback('tv', tabdetail);
+    });
 
     Path path419 = Path();
     path419.moveTo(size.width * 0.3211000, size.height * 0.4870478);
@@ -15113,8 +15958,10 @@ class SimpleWorldPainter extends CustomPainter {
     path419.close();
 
     Paint paint419fill = Paint()..style = PaintingStyle.fill;
-    paint419fill.color = countryColors.vC ?? defaultCountryColor;
-    canvas.drawPath(path419, paint419fill);
+    paint419fill.color = countryColors.vC ?? defaultColor;
+    worldCanvas.drawPath(path419, paint419fill, onTapDown: (tabdetail) {
+      callback('vc', tabdetail);
+    });
 
     Path path420 = Path();
     path420.moveTo(size.width * 0.3130500, size.height * 0.4473746);
@@ -15128,8 +15975,10 @@ class SimpleWorldPainter extends CustomPainter {
     path420.close();
 
     Paint paint420fill = Paint()..style = PaintingStyle.fill;
-    paint420fill.color = countryColors.vG ?? defaultCountryColor;
-    canvas.drawPath(path420, paint420fill);
+    paint420fill.color = countryColors.vG ?? defaultColor;
+    worldCanvas.drawPath(path420, paint420fill, onTapDown: (tabdetail) {
+      callback('vg', tabdetail);
+    });
 
     Path path421 = Path();
     path421.moveTo(size.width * 0.3122500, size.height * 0.4525088);
@@ -15141,8 +15990,10 @@ class SimpleWorldPainter extends CustomPainter {
     path421.close();
 
     Paint paint421fill = Paint()..style = PaintingStyle.fill;
-    paint421fill.color = countryColors.vI ?? defaultCountryColor;
-    canvas.drawPath(path421, paint421fill);
+    paint421fill.color = countryColors.vI ?? defaultColor;
+    worldCanvas.drawPath(path421, paint421fill, onTapDown: (tabdetail) {
+      callback('vi', tabdetail);
+    });
 
     Path path422 = Path();
     path422.moveTo(size.width * 0.3126000, size.height * 0.4480747);
@@ -15154,8 +16005,10 @@ class SimpleWorldPainter extends CustomPainter {
     path422.close();
 
     Paint paint422fill = Paint()..style = PaintingStyle.fill;
-    paint422fill.color = countryColors.vI ?? defaultCountryColor;
-    canvas.drawPath(path422, paint422fill);
+    paint422fill.color = countryColors.vI ?? defaultColor;
+    worldCanvas.drawPath(path422, paint422fill, onTapDown: (tabdetail) {
+      callback('vi', tabdetail);
+    });
 
     Path path423 = Path();
     path423.moveTo(size.width * 0.3119000, size.height * 0.4478413);
@@ -15168,8 +16021,10 @@ class SimpleWorldPainter extends CustomPainter {
     path423.close();
 
     Paint paint423fill = Paint()..style = PaintingStyle.fill;
-    paint423fill.color = countryColors.vI ?? defaultCountryColor;
-    canvas.drawPath(path423, paint423fill);
+    paint423fill.color = countryColors.vI ?? defaultColor;
+    worldCanvas.drawPath(path423, paint423fill, onTapDown: (tabdetail) {
+      callback('vi', tabdetail);
+    });
 
     Path path424 = Path();
     path424.moveTo(size.width * 0.9659000, size.height * 0.7372229);
@@ -15182,8 +16037,10 @@ class SimpleWorldPainter extends CustomPainter {
     path424.close();
 
     Paint paint424fill = Paint()..style = PaintingStyle.fill;
-    paint424fill.color = countryColors.vU ?? defaultCountryColor;
-    canvas.drawPath(path424, paint424fill);
+    paint424fill.color = countryColors.vU ?? defaultColor;
+    worldCanvas.drawPath(path424, paint424fill, onTapDown: (tabdetail) {
+      callback('vu', tabdetail);
+    });
 
     Path path425 = Path();
     path425.moveTo(size.width * 0.9653000, size.height * 0.7327888);
@@ -15204,8 +16061,10 @@ class SimpleWorldPainter extends CustomPainter {
     path425.close();
 
     Paint paint425fill = Paint()..style = PaintingStyle.fill;
-    paint425fill.color = countryColors.vU ?? defaultCountryColor;
-    canvas.drawPath(path425, paint425fill);
+    paint425fill.color = countryColors.vU ?? defaultColor;
+    worldCanvas.drawPath(path425, paint425fill, onTapDown: (tabdetail) {
+      callback('vu', tabdetail);
+    });
 
     Path path426 = Path();
     path426.moveTo(size.width * 0.9653000, size.height * 0.7259043);
@@ -15232,8 +16091,10 @@ class SimpleWorldPainter extends CustomPainter {
     path426.close();
 
     Paint paint426fill = Paint()..style = PaintingStyle.fill;
-    paint426fill.color = countryColors.vU ?? defaultCountryColor;
-    canvas.drawPath(path426, paint426fill);
+    paint426fill.color = countryColors.vU ?? defaultColor;
+    worldCanvas.drawPath(path426, paint426fill, onTapDown: (tabdetail) {
+      callback('vu', tabdetail);
+    });
 
     Path path427 = Path();
     path427.moveTo(size.width * 0.9638000, size.height * 0.7170362);
@@ -15256,8 +16117,10 @@ class SimpleWorldPainter extends CustomPainter {
     path427.close();
 
     Paint paint427fill = Paint()..style = PaintingStyle.fill;
-    paint427fill.color = countryColors.vU ?? defaultCountryColor;
-    canvas.drawPath(path427, paint427fill);
+    paint427fill.color = countryColors.vU ?? defaultColor;
+    worldCanvas.drawPath(path427, paint427fill, onTapDown: (tabdetail) {
+      callback('vu', tabdetail);
+    });
 
     Path path428 = Path();
     path428.moveTo(size.width * 0.9649500, size.height * 0.7124854);
@@ -15267,8 +16130,10 @@ class SimpleWorldPainter extends CustomPainter {
     path428.close();
 
     Paint paint428fill = Paint()..style = PaintingStyle.fill;
-    paint428fill.color = countryColors.vU ?? defaultCountryColor;
-    canvas.drawPath(path428, paint428fill);
+    paint428fill.color = countryColors.vU ?? defaultColor;
+    worldCanvas.drawPath(path428, paint428fill, onTapDown: (tabdetail) {
+      callback('vu', tabdetail);
+    });
 
     Path path429 = Path();
     path429.moveTo(size.width * 0.9641500, size.height * 0.7096849);
@@ -15291,8 +16156,10 @@ class SimpleWorldPainter extends CustomPainter {
     path429.close();
 
     Paint paint429fill = Paint()..style = PaintingStyle.fill;
-    paint429fill.color = countryColors.vU ?? defaultCountryColor;
-    canvas.drawPath(path429, paint429fill);
+    paint429fill.color = countryColors.vU ?? defaultColor;
+    worldCanvas.drawPath(path429, paint429fill, onTapDown: (tabdetail) {
+      callback('vu', tabdetail);
+    });
 
     Path path430 = Path();
     path430.moveTo(size.width * 0.9646000, size.height * 0.7094516);
@@ -15303,8 +16170,10 @@ class SimpleWorldPainter extends CustomPainter {
     path430.close();
 
     Paint paint430fill = Paint()..style = PaintingStyle.fill;
-    paint430fill.color = countryColors.vU ?? defaultCountryColor;
-    canvas.drawPath(path430, paint430fill);
+    paint430fill.color = countryColors.vU ?? defaultColor;
+    worldCanvas.drawPath(path430, paint430fill, onTapDown: (tabdetail) {
+      callback('vu', tabdetail);
+    });
 
     Path path431 = Path();
     path431.moveTo(size.width * 0.9647000, size.height * 0.7078180);
@@ -15327,8 +16196,10 @@ class SimpleWorldPainter extends CustomPainter {
     path431.close();
 
     Paint paint431fill = Paint()..style = PaintingStyle.fill;
-    paint431fill.color = countryColors.vU ?? defaultCountryColor;
-    canvas.drawPath(path431, paint431fill);
+    paint431fill.color = countryColors.vU ?? defaultColor;
+    worldCanvas.drawPath(path431, paint431fill, onTapDown: (tabdetail) {
+      callback('vu', tabdetail);
+    });
 
     Path path432 = Path();
     path432.moveTo(size.width * 0.9623500, size.height * 0.7063011);
@@ -15368,8 +16239,10 @@ class SimpleWorldPainter extends CustomPainter {
     path432.close();
 
     Paint paint432fill = Paint()..style = PaintingStyle.fill;
-    paint432fill.color = countryColors.vU ?? defaultCountryColor;
-    canvas.drawPath(path432, paint432fill);
+    paint432fill.color = countryColors.vU ?? defaultColor;
+    worldCanvas.drawPath(path432, paint432fill, onTapDown: (tabdetail) {
+      callback('vu', tabdetail);
+    });
 
     Path path433 = Path();
     path433.moveTo(size.width * 0.9620500, size.height * 0.7035006);
@@ -15384,8 +16257,10 @@ class SimpleWorldPainter extends CustomPainter {
     path433.close();
 
     Paint paint433fill = Paint()..style = PaintingStyle.fill;
-    paint433fill.color = countryColors.vU ?? defaultCountryColor;
-    canvas.drawPath(path433, paint433fill);
+    paint433fill.color = countryColors.vU ?? defaultColor;
+    worldCanvas.drawPath(path433, paint433fill, onTapDown: (tabdetail) {
+      callback('vu', tabdetail);
+    });
 
     Path path434 = Path();
     path434.moveTo(size.width * 0.9618000, size.height * 0.7023337);
@@ -15397,8 +16272,10 @@ class SimpleWorldPainter extends CustomPainter {
     path434.close();
 
     Paint paint434fill = Paint()..style = PaintingStyle.fill;
-    paint434fill.color = countryColors.vU ?? defaultCountryColor;
-    canvas.drawPath(path434, paint434fill);
+    paint434fill.color = countryColors.vU ?? defaultColor;
+    worldCanvas.drawPath(path434, paint434fill, onTapDown: (tabdetail) {
+      callback('vu', tabdetail);
+    });
 
     Path path435 = Path();
     path435.moveTo(size.width * 0.9646500, size.height * 0.7053676);
@@ -15417,8 +16294,10 @@ class SimpleWorldPainter extends CustomPainter {
     path435.close();
 
     Paint paint435fill = Paint()..style = PaintingStyle.fill;
-    paint435fill.color = countryColors.vU ?? defaultCountryColor;
-    canvas.drawPath(path435, paint435fill);
+    paint435fill.color = countryColors.vU ?? defaultColor;
+    worldCanvas.drawPath(path435, paint435fill, onTapDown: (tabdetail) {
+      callback('vu', tabdetail);
+    });
 
     Path path436 = Path();
     path436.moveTo(size.width * 0.9640000, size.height * 0.7015169);
@@ -15435,8 +16314,10 @@ class SimpleWorldPainter extends CustomPainter {
     path436.close();
 
     Paint paint436fill = Paint()..style = PaintingStyle.fill;
-    paint436fill.color = countryColors.vU ?? defaultCountryColor;
-    canvas.drawPath(path436, paint436fill);
+    paint436fill.color = countryColors.vU ?? defaultColor;
+    worldCanvas.drawPath(path436, paint436fill, onTapDown: (tabdetail) {
+      callback('vu', tabdetail);
+    });
 
     Path path437 = Path();
     path437.moveTo(size.width * 0.9649500, size.height * 0.7007001);
@@ -15454,8 +16335,10 @@ class SimpleWorldPainter extends CustomPainter {
     path437.close();
 
     Paint paint437fill = Paint()..style = PaintingStyle.fill;
-    paint437fill.color = countryColors.vU ?? defaultCountryColor;
-    canvas.drawPath(path437, paint437fill);
+    paint437fill.color = countryColors.vU ?? defaultColor;
+    worldCanvas.drawPath(path437, paint437fill, onTapDown: (tabdetail) {
+      callback('vu', tabdetail);
+    });
 
     Path path438 = Path();
     path438.moveTo(size.width * 0.9618000, size.height * 0.7023337);
@@ -15504,8 +16387,10 @@ class SimpleWorldPainter extends CustomPainter {
     path438.close();
 
     Paint paint438fill = Paint()..style = PaintingStyle.fill;
-    paint438fill.color = countryColors.vU ?? defaultCountryColor;
-    canvas.drawPath(path438, paint438fill);
+    paint438fill.color = countryColors.vU ?? defaultColor;
+    worldCanvas.drawPath(path438, paint438fill, onTapDown: (tabdetail) {
+      callback('vu', tabdetail);
+    });
 
     Path path439 = Path();
     path439.moveTo(size.width * 0.9639000, size.height * 0.6914819);
@@ -15521,8 +16406,10 @@ class SimpleWorldPainter extends CustomPainter {
     path439.close();
 
     Paint paint439fill = Paint()..style = PaintingStyle.fill;
-    paint439fill.color = countryColors.vU ?? defaultCountryColor;
-    canvas.drawPath(path439, paint439fill);
+    paint439fill.color = countryColors.vU ?? defaultColor;
+    worldCanvas.drawPath(path439, paint439fill, onTapDown: (tabdetail) {
+      callback('vu', tabdetail);
+    });
 
     Path path440 = Path();
     path440.moveTo(size.width * 0.9642000, size.height * 0.6892649);
@@ -15543,8 +16430,10 @@ class SimpleWorldPainter extends CustomPainter {
     path440.close();
 
     Paint paint440fill = Paint()..style = PaintingStyle.fill;
-    paint440fill.color = countryColors.vU ?? defaultCountryColor;
-    canvas.drawPath(path440, paint440fill);
+    paint440fill.color = countryColors.vU ?? defaultColor;
+    worldCanvas.drawPath(path440, paint440fill, onTapDown: (tabdetail) {
+      callback('vu', tabdetail);
+    });
 
     Path path441 = Path();
     path441.moveTo(size.width * 0.9617000, size.height * 0.6843641);
@@ -15555,8 +16444,10 @@ class SimpleWorldPainter extends CustomPainter {
     path441.close();
 
     Paint paint441fill = Paint()..style = PaintingStyle.fill;
-    paint441fill.color = countryColors.vU ?? defaultCountryColor;
-    canvas.drawPath(path441, paint441fill);
+    paint441fill.color = countryColors.vU ?? defaultColor;
+    worldCanvas.drawPath(path441, paint441fill, onTapDown: (tabdetail) {
+      callback('vu', tabdetail);
+    });
 
     Path path442 = Path();
     path442.moveTo(size.width * 0.01095000, size.height * 0.6899650);
@@ -15583,8 +16474,10 @@ class SimpleWorldPainter extends CustomPainter {
     path442.close();
 
     Paint paint442fill = Paint()..style = PaintingStyle.fill;
-    paint442fill.color = countryColors.wS ?? defaultCountryColor;
-    canvas.drawPath(path442, paint442fill);
+    paint442fill.color = countryColors.wS ?? defaultColor;
+    worldCanvas.drawPath(path442, paint442fill, onTapDown: (tabdetail) {
+      callback('ws', tabdetail);
+    });
 
     Path path443 = Path();
     path443.moveTo(size.width * 0.008700000, size.height * 0.6866978);
@@ -15613,8 +16506,10 @@ class SimpleWorldPainter extends CustomPainter {
     path443.close();
 
     Paint paint443fill = Paint()..style = PaintingStyle.fill;
-    paint443fill.color = countryColors.wS ?? defaultCountryColor;
-    canvas.drawPath(path443, paint443fill);
+    paint443fill.color = countryColors.wS ?? defaultColor;
+    worldCanvas.drawPath(path443, paint443fill, onTapDown: (tabdetail) {
+      callback('ws', tabdetail);
+    });
 
     Path path444 = Path();
     path444.moveTo(size.width * 0.3010000, size.height * 0.4954492);
@@ -15633,8 +16528,10 @@ class SimpleWorldPainter extends CustomPainter {
     path444.close();
 
     Paint paint444fill = Paint()..style = PaintingStyle.fill;
-    paint444fill.color = countryColors.bQ ?? defaultCountryColor;
-    canvas.drawPath(path444, paint444fill);
+    paint444fill.color = countryColors.bQ ?? defaultColor;
+    worldCanvas.drawPath(path444, paint444fill, onTapDown: (tabdetail) {
+      callback('bq', tabdetail);
+    });
 
     Path path445 = Path();
     path445.moveTo(size.width * 0.3171500, size.height * 0.4546091);
@@ -15645,8 +16542,10 @@ class SimpleWorldPainter extends CustomPainter {
     path445.close();
 
     Paint paint445fill = Paint()..style = PaintingStyle.fill;
-    paint445fill.color = countryColors.bQ ?? defaultCountryColor;
-    canvas.drawPath(path445, paint445fill);
+    paint445fill.color = countryColors.bQ ?? defaultColor;
+    worldCanvas.drawPath(path445, paint445fill, onTapDown: (tabdetail) {
+      callback('bq', tabdetail);
+    });
 
     Path path446 = Path();
     path446.moveTo(size.width * 0.3164000, size.height * 0.4535589);
@@ -15657,8 +16556,10 @@ class SimpleWorldPainter extends CustomPainter {
     path446.close();
 
     Paint paint446fill = Paint()..style = PaintingStyle.fill;
-    paint446fill.color = countryColors.bQ ?? defaultCountryColor;
-    canvas.drawPath(path446, paint446fill);
+    paint446fill.color = countryColors.bQ ?? defaultColor;
+    worldCanvas.drawPath(path446, paint446fill, onTapDown: (tabdetail) {
+      callback('bq', tabdetail);
+    });
 
     Path path447 = Path();
     path447.moveTo(size.width * 0.3220000, size.height * 0.4747958);
@@ -15687,8 +16588,10 @@ class SimpleWorldPainter extends CustomPainter {
     path447.close();
 
     Paint paint447fill = Paint()..style = PaintingStyle.fill;
-    paint447fill.color = countryColors.mQ ?? defaultCountryColor;
-    canvas.drawPath(path447, paint447fill);
+    paint447fill.color = countryColors.mQ ?? defaultColor;
+    worldCanvas.drawPath(path447, paint447fill, onTapDown: (tabdetail) {
+      callback('mq', tabdetail);
+    });
 
     Path path448 = Path();
     path448.moveTo(size.width * 0.4442000, size.height * 0.3773629);
@@ -15706,8 +16609,10 @@ class SimpleWorldPainter extends CustomPainter {
     path448.close();
 
     Paint paint448fill = Paint()..style = PaintingStyle.fill;
-    paint448fill.color = countryColors.eS ?? defaultCountryColor;
-    canvas.drawPath(path448, paint448fill);
+    paint448fill.color = countryColors.eS ?? defaultColor;
+    worldCanvas.drawPath(path448, paint448fill, onTapDown: (tabdetail) {
+      callback('es', tabdetail);
+    });
 
     Path path449 = Path();
     path449.moveTo(size.width * 0.4510000, size.height * 0.3746791);
@@ -15732,8 +16637,10 @@ class SimpleWorldPainter extends CustomPainter {
     path449.close();
 
     Paint paint449fill = Paint()..style = PaintingStyle.fill;
-    paint449fill.color = countryColors.eS ?? defaultCountryColor;
-    canvas.drawPath(path449, paint449fill);
+    paint449fill.color = countryColors.eS ?? defaultColor;
+    worldCanvas.drawPath(path449, paint449fill, onTapDown: (tabdetail) {
+      callback('es', tabdetail);
+    });
 
     Path path450 = Path();
     path450.moveTo(size.width * 0.4460500, size.height * 0.3756126);
@@ -15751,8 +16658,10 @@ class SimpleWorldPainter extends CustomPainter {
     path450.close();
 
     Paint paint450fill = Paint()..style = PaintingStyle.fill;
-    paint450fill.color = countryColors.eS ?? defaultCountryColor;
-    canvas.drawPath(path450, paint450fill);
+    paint450fill.color = countryColors.eS ?? defaultColor;
+    worldCanvas.drawPath(path450, paint450fill, onTapDown: (tabdetail) {
+      callback('es', tabdetail);
+    });
 
     Path path451 = Path();
     path451.moveTo(size.width * 0.4491000, size.height * 0.3715286);
@@ -15788,8 +16697,10 @@ class SimpleWorldPainter extends CustomPainter {
     path451.close();
 
     Paint paint451fill = Paint()..style = PaintingStyle.fill;
-    paint451fill.color = countryColors.eS ?? defaultCountryColor;
-    canvas.drawPath(path451, paint451fill);
+    paint451fill.color = countryColors.eS ?? defaultColor;
+    worldCanvas.drawPath(path451, paint451fill, onTapDown: (tabdetail) {
+      callback('es', tabdetail);
+    });
 
     Path path452 = Path();
     path452.moveTo(size.width * 0.4542000, size.height * 0.3747958);
@@ -15824,8 +16735,10 @@ class SimpleWorldPainter extends CustomPainter {
     path452.close();
 
     Paint paint452fill = Paint()..style = PaintingStyle.fill;
-    paint452fill.color = countryColors.eS ?? defaultCountryColor;
-    canvas.drawPath(path452, paint452fill);
+    paint452fill.color = countryColors.eS ?? defaultColor;
+    worldCanvas.drawPath(path452, paint452fill, onTapDown: (tabdetail) {
+      callback('es', tabdetail);
+    });
 
     Path path453 = Path();
     path453.moveTo(size.width * 0.4444000, size.height * 0.3695449);
@@ -15846,8 +16759,10 @@ class SimpleWorldPainter extends CustomPainter {
     path453.close();
 
     Paint paint453fill = Paint()..style = PaintingStyle.fill;
-    paint453fill.color = countryColors.eS ?? defaultCountryColor;
-    canvas.drawPath(path453, paint453fill);
+    paint453fill.color = countryColors.eS ?? defaultColor;
+    worldCanvas.drawPath(path453, paint453fill, onTapDown: (tabdetail) {
+      callback('es', tabdetail);
+    });
 
     Path path454 = Path();
     path454.moveTo(size.width * 0.4564500, size.height * 0.3672112);
@@ -15873,8 +16788,10 @@ class SimpleWorldPainter extends CustomPainter {
     path454.close();
 
     Paint paint454fill = Paint()..style = PaintingStyle.fill;
-    paint454fill.color = countryColors.eS ?? defaultCountryColor;
-    canvas.drawPath(path454, paint454fill);
+    paint454fill.color = countryColors.eS ?? defaultColor;
+    worldCanvas.drawPath(path454, paint454fill, onTapDown: (tabdetail) {
+      callback('es', tabdetail);
+    });
 
     Path path455 = Path();
     path455.moveTo(size.width * 0.6201000, size.height * 0.6803967);
@@ -15896,8 +16813,10 @@ class SimpleWorldPainter extends CustomPainter {
     path455.close();
 
     Paint paint455fill = Paint()..style = PaintingStyle.fill;
-    paint455fill.color = countryColors.yT ?? defaultCountryColor;
-    canvas.drawPath(path455, paint455fill);
+    paint455fill.color = countryColors.yT ?? defaultColor;
+    worldCanvas.drawPath(path455, paint455fill, onTapDown: (tabdetail) {
+      callback('yt', tabdetail);
+    });
 
     Path path456 = Path();
     path456.moveTo(size.width * 0.6475000, size.height * 0.7418903);
@@ -15928,8 +16847,10 @@ class SimpleWorldPainter extends CustomPainter {
     path456.close();
 
     Paint paint456fill = Paint()..style = PaintingStyle.fill;
-    paint456fill.color = countryColors.rE ?? defaultCountryColor;
-    canvas.drawPath(path456, paint456fill);
+    paint456fill.color = countryColors.rE ?? defaultColor;
+    worldCanvas.drawPath(path456, paint456fill, onTapDown: (tabdetail) {
+      callback('re', tabdetail);
+    });
 
     Path path457 = Path();
     path457.moveTo(size.width * 0.3215000, size.height * 0.4666278);
@@ -15944,8 +16865,10 @@ class SimpleWorldPainter extends CustomPainter {
     path457.close();
 
     Paint paint457fill = Paint()..style = PaintingStyle.fill;
-    paint457fill.color = countryColors.gP ?? defaultCountryColor;
-    canvas.drawPath(path457, paint457fill);
+    paint457fill.color = countryColors.gP ?? defaultColor;
+    worldCanvas.drawPath(path457, paint457fill, onTapDown: (tabdetail) {
+      callback('gp', tabdetail);
+    });
 
     Path path458 = Path();
     path458.moveTo(size.width * 0.3206000, size.height * 0.4635939);
@@ -15970,8 +16893,10 @@ class SimpleWorldPainter extends CustomPainter {
     path458.close();
 
     Paint paint458fill = Paint()..style = PaintingStyle.fill;
-    paint458fill.color = countryColors.gP ?? defaultCountryColor;
-    canvas.drawPath(path458, paint458fill);
+    paint458fill.color = countryColors.gP ?? defaultColor;
+    worldCanvas.drawPath(path458, paint458fill, onTapDown: (tabdetail) {
+      callback('gp', tabdetail);
+    });
 
     Path path459 = Path();
     path459.moveTo(size.width * 0.3213000, size.height * 0.4631272);
@@ -15991,8 +16916,10 @@ class SimpleWorldPainter extends CustomPainter {
     path459.close();
 
     Paint paint459fill = Paint()..style = PaintingStyle.fill;
-    paint459fill.color = countryColors.gP ?? defaultCountryColor;
-    canvas.drawPath(path459, paint459fill);
+    paint459fill.color = countryColors.gP ?? defaultColor;
+    worldCanvas.drawPath(path459, paint459fill, onTapDown: (tabdetail) {
+      callback('gp', tabdetail);
+    });
 
     Path path460 = Path();
     path460.moveTo(size.width * 0.9945500, size.height * 0.7291715);
@@ -16002,8 +16929,10 @@ class SimpleWorldPainter extends CustomPainter {
     path460.close();
 
     Paint paint460fill = Paint()..style = PaintingStyle.fill;
-    paint460fill.color = countryColors.fJ ?? defaultCountryColor;
-    canvas.drawPath(path460, paint460fill);
+    paint460fill.color = countryColors.fJ ?? defaultColor;
+    worldCanvas.drawPath(path460, paint460fill, onTapDown: (tabdetail) {
+      callback('fj', tabdetail);
+    });
 
     Path path461 = Path();
     path461.moveTo(size.width * 0.9908000, size.height * 0.7273046);
@@ -16033,8 +16962,10 @@ class SimpleWorldPainter extends CustomPainter {
     path461.close();
 
     Paint paint461fill = Paint()..style = PaintingStyle.fill;
-    paint461fill.color = countryColors.fJ ?? defaultCountryColor;
-    canvas.drawPath(path461, paint461fill);
+    paint461fill.color = countryColors.fJ ?? defaultColor;
+    worldCanvas.drawPath(path461, paint461fill, onTapDown: (tabdetail) {
+      callback('fj', tabdetail);
+    });
 
     Path path462 = Path();
     path462.moveTo(size.width * 0.9912500, size.height * 0.7271879);
@@ -16045,8 +16976,10 @@ class SimpleWorldPainter extends CustomPainter {
     path462.close();
 
     Paint paint462fill = Paint()..style = PaintingStyle.fill;
-    paint462fill.color = countryColors.fJ ?? defaultCountryColor;
-    canvas.drawPath(path462, paint462fill);
+    paint462fill.color = countryColors.fJ ?? defaultColor;
+    worldCanvas.drawPath(path462, paint462fill, onTapDown: (tabdetail) {
+      callback('fj', tabdetail);
+    });
 
     Path path463 = Path();
     path463.moveTo(size.width * 0.9942000, size.height * 0.7200700);
@@ -16061,8 +16994,10 @@ class SimpleWorldPainter extends CustomPainter {
     path463.close();
 
     Paint paint463fill = Paint()..style = PaintingStyle.fill;
-    paint463fill.color = countryColors.fJ ?? defaultCountryColor;
-    canvas.drawPath(path463, paint463fill);
+    paint463fill.color = countryColors.fJ ?? defaultColor;
+    worldCanvas.drawPath(path463, paint463fill, onTapDown: (tabdetail) {
+      callback('fj', tabdetail);
+    });
 
     Path path464 = Path();
     path464.moveTo(size.width * 0.9929000, size.height * 0.7184364);
@@ -16076,8 +17011,10 @@ class SimpleWorldPainter extends CustomPainter {
     path464.close();
 
     Paint paint464fill = Paint()..style = PaintingStyle.fill;
-    paint464fill.color = countryColors.fJ ?? defaultCountryColor;
-    canvas.drawPath(path464, paint464fill);
+    paint464fill.color = countryColors.fJ ?? defaultColor;
+    worldCanvas.drawPath(path464, paint464fill, onTapDown: (tabdetail) {
+      callback('fj', tabdetail);
+    });
 
     Path path465 = Path();
     path465.moveTo(size.width * 0.9918000, size.height * 0.7155193);
@@ -16137,8 +17074,10 @@ class SimpleWorldPainter extends CustomPainter {
     path465.close();
 
     Paint paint465fill = Paint()..style = PaintingStyle.fill;
-    paint465fill.color = countryColors.fJ ?? defaultCountryColor;
-    canvas.drawPath(path465, paint465fill);
+    paint465fill.color = countryColors.fJ ?? defaultColor;
+    worldCanvas.drawPath(path465, paint465fill, onTapDown: (tabdetail) {
+      callback('fj', tabdetail);
+    });
 
     Path path466 = Path();
     path466.moveTo(size.width * 0.9949500, size.height * 0.7157526);
@@ -16150,8 +17089,10 @@ class SimpleWorldPainter extends CustomPainter {
     path466.close();
 
     Paint paint466fill = Paint()..style = PaintingStyle.fill;
-    paint466fill.color = countryColors.fJ ?? defaultCountryColor;
-    canvas.drawPath(path466, paint466fill);
+    paint466fill.color = countryColors.fJ ?? defaultColor;
+    worldCanvas.drawPath(path466, paint466fill, onTapDown: (tabdetail) {
+      callback('fj', tabdetail);
+    });
 
     Path path467 = Path();
     path467.moveTo(size.width * 0.9892500, size.height * 0.7134189);
@@ -16163,8 +17104,10 @@ class SimpleWorldPainter extends CustomPainter {
     path467.close();
 
     Paint paint467fill = Paint()..style = PaintingStyle.fill;
-    paint467fill.color = countryColors.fJ ?? defaultCountryColor;
-    canvas.drawPath(path467, paint467fill);
+    paint467fill.color = countryColors.fJ ?? defaultColor;
+    worldCanvas.drawPath(path467, paint467fill, onTapDown: (tabdetail) {
+      callback('fj', tabdetail);
+    });
 
     Path path468 = Path();
     path468.moveTo(size.width * 0.9967000, size.height * 0.7129522);
@@ -16177,8 +17120,10 @@ class SimpleWorldPainter extends CustomPainter {
     path468.close();
 
     Paint paint468fill = Paint()..style = PaintingStyle.fill;
-    paint468fill.color = countryColors.fJ ?? defaultCountryColor;
-    canvas.drawPath(path468, paint468fill);
+    paint468fill.color = countryColors.fJ ?? defaultColor;
+    worldCanvas.drawPath(path468, paint468fill, onTapDown: (tabdetail) {
+      callback('fj', tabdetail);
+    });
 
     Path path469 = Path();
     path469.moveTo(size.width * 0.9972000, size.height * 0.7071179);
@@ -16266,23 +17211,31 @@ class SimpleWorldPainter extends CustomPainter {
     path469.close();
 
     Paint paint469fill = Paint()..style = PaintingStyle.fill;
-    paint469fill.color = countryColors.fJ ?? defaultCountryColor;
-    canvas.drawPath(path469, paint469fill);
+    paint469fill.color = countryColors.fJ ?? defaultColor;
+    worldCanvas.drawPath(path469, paint469fill, onTapDown: (tabdetail) {
+      callback('fj', tabdetail);
+    });
 
-    Paint paint470fill = Paint()..style = PaintingStyle.fill;
-    paint470fill.color = defaultCountryColor;
-    canvas.drawCircle(Offset(size.width * 0.4989500, size.height * 0.2206534),
-        size.width * double.nan, paint470fill);
+    // Paint paint470fill = Paint()..style = PaintingStyle.fill;
+    // paint470fill.color = defaultColor;
+    // worldCanvas.drawCircle(
+    //     Offset(size.width * 0.4989500, size.height * 0.2206534),
+    //     size.width * double.nan,
+    //     paint470fill);
 
-    Paint paint471fill = Paint()..style = PaintingStyle.fill;
-    paint471fill.color = defaultCountryColor;
-    canvas.drawCircle(Offset(size.width * 0.3367500, size.height * 0.8449242),
-        size.width * double.nan, paint471fill);
+    // Paint paint471fill = Paint()..style = PaintingStyle.fill;
+    // paint471fill.color = defaultColor;
+    // worldCanvas.drawCircle(
+    //     Offset(size.width * 0.3367500, size.height * 0.8449242),
+    //     size.width * double.nan,
+    //     paint471fill);
 
-    Paint paint472fill = Paint()..style = PaintingStyle.fill;
-    paint472fill.color = defaultCountryColor;
-    canvas.drawCircle(Offset(size.width * 0.8991000, size.height * 0.8393232),
-        size.width * double.nan, paint472fill);
+    // Paint paint472fill = Paint()..style = PaintingStyle.fill;
+    // paint472fill.color = defaultColor;
+    // worldCanvas.drawCircle(
+    //     Offset(size.width * 0.8991000, size.height * 0.8393232),
+    //     size.width * double.nan,
+    //     paint472fill);
   }
 
   @override

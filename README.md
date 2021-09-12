@@ -13,26 +13,34 @@ This flutter package draws a map of choice using the CustomPainter. These maps c
 ### Available maps
 | World Maps | Continents | Countries |
 |--|--|--|
-| <ul><li>[ ] Normal World Map </li><li>[x] Simple World Map</li> <li>[ ] Geo World Map</li></ul> | <ul><li>[ ] Africa </li><li>[ ] Asia </li> <li>[ ] Australia/Oceania </li> <li>[ ] Europe </li> <li>[ ] Middle East </li> <li>[ ] North America </li> <li>[ ] South America </li></ul> | <ul><li>[x] Netherlands </li></ul> |
+| <ul><li>[ ] Normal World Map </li><li>[x] Simple World Map</li> <li>[ ] Geo World Map</li></ul> | <ul><li>[ ] Africa </li><li>[ ] Asia </li> <li>[ ] Australia/Oceania </li> <li>[ ] Europe </li> <li>[ ] Middle East </li> <li>[ ] North America </li> <li>[ ] South America </li></ul> | <ul><li>[ ] USA </li><li>[x] Netherlands </li> <li>[ ] Belgium </li> <li>[ ] Colombia </li> <li>[ ] Germany </li> <li>[ ] France </li> <li>[ ] Spain </li></ul> |
+
+#### Need a specific country?
+You can request a specific country by creating a new issue or send an email at hello@simplewidgets.dev 
+Please do keep in mind this is a side project. When I have time I will create the map as soon as possible.
 
 
 
-
-### WorldMapPainter
-If the WorldMap widget does not give the results you would like to see, you can also use the WorldMapPainter in your own defined CustomPainter. This will give you all the paths with the option to custom color each country.
 
 
 ## Tips for UI
-1. Wrap the WorldMap in an InteractiveViewer widget to zoom in and out on specific countries as done in the [online example](https://examples.simplewidgets.dev "World Map Example | simplewidgets.dev"). In the example the InteractiveViewer has a maxScale of 75.
+1. Wrap the WorldMap in an InteractiveViewer widget.
+
+    Using InteractiveView enables you to zoom in and out on specific countries as done in the [online example](https://examples.simplewidgets.dev "World Map Example | simplewidgets.dev"). In the example the InteractiveViewer has a maxScale of 75.
+
 2. Set the WorldMap to 92% of the available width to make it look more centered.
 
+3. Use your own CustomPaint.
+     
+     If the WorldMap/ CountryMap widget does not give the results you would like to see, you can also use the WorldMapPainter/ CountryPainter in your own defined CustomPaint. This will give you all the paths with the option to custom color each country.
 
+Simply add *Countryname*Painter to your CustomPaint widget and you are ready to go.
 
-## Memory usage
-The map is big, so (re)building the widget can be expensive. That's why the WorldMap uses a RepaintBoundry to prevent it from unnecessary repaints. If you change a Country Color and call SetState() the widget will repaint.
+## Performance
+Some of the maps are really big, so (re)building the widget can be expensive. That's why the default Widget uses a RepaintBoundry to prevent it from unnecessary repaints. If you change a Country Color and call SetState() the widget will repaint.
 
-#### ! Warning
-On the iPad Pro 2018 there has been found some memory issues when re-painting the World Map many times in a short time period. If you have memory issues, you might want to limit the possible repaints.
+### ! Warning
+On the iPad Pro 2018 there has been found some memory issues when re-painting the **WorldMap** many times in a short time period. If you have memory issues, you might want to limit the possible repaints.
 
 
 ## Like to contribute?

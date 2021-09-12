@@ -1,5 +1,7 @@
 ## 0.0.5
-In this release the Netherlands has been added as a country map.
+The worldmap got a callback function. Clicking on a country will return the country code and the details of the tap.
+
+The Netherlands has been added as a country map.
 With future releases more and more maps will be added.
 See the README.md to see all available maps at this moment.
 
