@@ -1,7 +1,7 @@
 # Countries_world_map
 ![Example](https://simplewidgets.dev/wp-content/uploads/2021/07/countries_world_map.png)
 
-Online example is available at [example.simplewidgets.dev](https://examples.simplewidgets.dev "World Map Example | simplewidgets.dev")
+Online example is available at [countriesworldmap.simplewidgets.dev](https://countriesworldmap.simplewidgets.dev "World Map Example | simplewidgets.dev")
 
 This package provides an easy to implement World Map (or any other country of choice) which is fully customizable. It started with only a simple world map but the goal is to create a customizable map for each country.
 In this case "customizable" means the ability to change the color of a country/ state.
