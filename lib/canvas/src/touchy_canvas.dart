@@ -37,6 +37,7 @@ class TouchyCanvas {
     HitTestBehavior? hitTestBehavior,
     GestureTapDownCallback? onTapDown,
     PaintingStyle? paintStyleForTouch,
+    GestureTapCallback? onTap,
     GestureTapUpCallback? onTapUp,
     GestureLongPressStartCallback? onLongPressStart,
     GestureLongPressEndCallback? onLongPressEnd,

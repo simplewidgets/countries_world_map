@@ -23,7 +23,7 @@ class SimpleWorldMap extends StatelessWidget {
 
   /// This is the color behind the counties which will fill up all the blank space like oceans.
   final Color? backgroundColor;
-  final Function(String, dynamic)? callback;
+  final Function(String, TapUpDetails)? callback;
 
   const SimpleWorldMap(
       {this.defaultCountryColor,

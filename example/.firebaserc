@@ -1,0 +1,17 @@
+{
+  "projects": {
+    "default": "simplewidgets-dev"
+  },
+  "targets": {
+    "simplewidgets-dev": {
+      "hosting": {
+        "countriesworldmap": [
+          "countriesworldmap"
+        ],
+        "default": [
+          "simplewidgets-dev"
+        ]
+      }
+    }
+  }
+}

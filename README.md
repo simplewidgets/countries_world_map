@@ -11,11 +11,17 @@ This flutter package draws a map of choice using the CustomPainter. These maps c
 
 
 ### Available maps
-| World Maps | Continents | Countries |
-|--|--|--|
-| <ul><li>[ ] Normal World Map </li><li>[x] Simple World Map</li> <li>[ ] Geo World Map</li></ul> | <ul><li>[ ] Africa </li><li>[ ] Asia </li> <li>[ ] Australia/Oceania </li> <li>[ ] Europe </li> <li>[ ] Middle East </li> <li>[ ] North America </li> <li>[ ] South America </li></ul> | <ul><li>[ ] USA </li><li>[x] Netherlands </li> <li>[ ] Belgium </li> <li>[ ] Colombia </li> <li>[ ] Germany </li> <li>[ ] France </li> <li>[ ] Spain </li></ul> |
+#### World & continents
+| World Maps | Continents |
+|--|--|
+| <ul><li>[ ] Normal World Map </li><li>[x] Simple World Map</li> <li>[ ] Geo World Map</li></ul> | <ul><li>[ ] Africa </li><li>[ ] Asia </li> <li>[ ] Australia/Oceania </li> <li>[ ] Europe </li> <li>[ ] Middle East </li> <li>[ ] North America </li> <li>[ ] South America </li></ul> 
 
-#### Need a specific country?
+#### Countries
+| Africa | Asia | Australia/Oceania | Europe | Middle East | North America | South America |
+|--|--|--|--|--|--|--|
+|  |<ul><li>[x] Japan</li></ul>|  |<ul><li>[x] Netherlands</li></ul>|  |  |  |
+
+### Need a specific country?
 You can request a specific country by creating a new issue or send an email at hello@simplewidgets.dev 
 Please do keep in mind this is a side project. When I have time I will create the map as soon as possible.
 
@@ -26,7 +32,7 @@ Please do keep in mind this is a side project. When I have time I will create th
 ## Tips for UI
 1. Wrap the WorldMap in an InteractiveViewer widget.
 
-    Using InteractiveView enables you to zoom in and out on specific countries as done in the [online example](https://examples.simplewidgets.dev "World Map Example | simplewidgets.dev"). In the example the InteractiveViewer has a maxScale of 75.
+    Using InteractiveView enables you to zoom in and out on specific countries as done in the [online example](https://countriesworldmap.simplewidgets.dev "World Map Example | simplewidgets.dev"). In the example the InteractiveViewer has a maxScale of 75.
 
 2. Set the WorldMap to 92% of the available width to make it look more centered.
 

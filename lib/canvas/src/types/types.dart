@@ -19,6 +19,7 @@ class ClipShapeItem {
 }
 
 enum GestureType {
+  onTap,
   onTapDown,
   onTapUp,
   onHorizontalDragDown,

@@ -9,10 +9,10 @@ import 'dart:ui';
 /// - [flevoland]
 /// - [gelderland]
 /// - [utrecht]
-/// - [noordholland]
-/// - [zuidholland]
+/// - [northholland]
+/// - [southholland]
 /// - [zeeland]
-/// - [noordbrabant]
+/// - [northbrabant]
 /// - [limburg]
 class NetherlandsColors {
   /// Groningen
@@ -37,16 +37,16 @@ class NetherlandsColors {
   final Color? utrecht;
 
   /// Noord Holland
-  final Color? noordholland;
+  final Color? northholland;
 
   /// Zuid Holland
-  final Color? zuidholland;
+  final Color? southholland;
 
   /// Zeeland
   final Color? zeeland;
 
   /// Noord Brabant
-  final Color? noordbrabant;
+  final Color? northbrabant;
 
   /// Limburg
   final Color? limburg;
@@ -59,9 +59,9 @@ class NetherlandsColors {
       this.flevoland,
       this.gelderland,
       this.utrecht,
-      this.noordholland,
-      this.zuidholland,
+      this.northholland,
+      this.southholland,
       this.zeeland,
-      this.noordbrabant,
+      this.northbrabant,
       this.limburg});
 }

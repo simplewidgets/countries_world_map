@@ -6,5 +6,8 @@ export 'world/simple_world/simple_world.dart';
 // continent libraries
 // empty
 
-// country libraries
+// Europe country libraries
 export 'countries/europe/netherlands/netherlands.dart';
+
+// Asia country libraries
+export 'countries/asia/japan/japan.dart';

@@ -1,30 +1,30 @@
-import 'package:countries_world_map/canvas/src/canvas_touch_detector.dart';
-import 'package:countries_world_map/countries/europe/netherlands/src/netherlands_colors.dart';
-import 'package:countries_world_map/countries/europe/netherlands/src/netherlands_painter.dart';
+import 'package:countries_world_map/canvas/touchable_canvas.dart';
+import 'package:countries_world_map/countries/asia/japan/src/japan_colors.dart';
+import 'package:countries_world_map/countries/asia/japan/src/japan_painter.dart';
 import 'package:flutter/material.dart';
 
-class NetherlandsMap extends StatelessWidget {
+class JapanMap extends StatelessWidget {
   /// This is the default color for all countries. If not provided the default Color will be grey.
   final Color? defaultColor;
   final Color? backgroundColor;
 
   /// This is basically a list of countries and colors to apply different colors to specific countries.
-  final NetherlandsColors? netherlandsColors;
+  final JapanColors? japanColors;
 
   final Function(String, TapUpDetails)? callback;
 
-  const NetherlandsMap(
+  const JapanMap(
       {this.backgroundColor,
       this.defaultColor,
       this.callback,
-      this.netherlandsColors,
+      this.japanColors,
       Key? key})
       : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return AspectRatio(
-      aspectRatio: 612.54211 / 723.61865,
+      aspectRatio: 437.33432 / 516.01587,
       child: LayoutBuilder(
         builder: (context, constraints) {
           return Container(
@@ -35,15 +35,14 @@ class NetherlandsMap extends StatelessWidget {
               builder: (context) => CustomPaint(
                   isComplex: true,
                   size: Size(constraints.maxWidth, constraints.maxHeight),
-                  painter: NetherlandsPainter(
+                  painter: JapanPainter(
                       callback: (province, details) {
                         if (callback != null) {
                           callback!(province, details);
                         }
                       },
                       context: context,
-                      netherlandsColors:
-                          netherlandsColors ?? NetherlandsColors(),
+                      japanColors: japanColors ?? JapanColors(),
                       defaultColor: defaultColor ?? Colors.grey)),
             ),
           );
