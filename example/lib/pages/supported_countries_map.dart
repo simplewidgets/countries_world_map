@@ -48,7 +48,8 @@ class SupportedCountriesMap extends StatelessWidget {
       case 'nl':
         return NetherlandsMap(callback: (c, d) => print(c));
       default:
-        return Text('This country does not have a map yet...');
+        return Text(
+            'This country does not have a map yet...\nPlease select a green country');
     }
   }
 }
