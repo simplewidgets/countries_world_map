@@ -1,9 +1,14 @@
 import 'package:countries_world_map/countries_world_map.dart';
 import 'package:flutter/material.dart';
 
-class SupportedCountriesMap extends StatelessWidget {
+class SupportedCountriesMap extends StatefulWidget {
   const SupportedCountriesMap({Key? key}) : super(key: key);
 
+  @override
+  _SupportedCountriesMapState createState() => _SupportedCountriesMapState();
+}
+
+class _SupportedCountriesMapState extends State<SupportedCountriesMap> {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
@@ -21,15 +26,15 @@ class SupportedCountriesMap extends StatelessWidget {
                 defaultCountryColor: Colors.grey,
                 // CountryColors takes in 250 different colors that will color each country the color you want. In this example it generates a random color each time SetState({}) is called.
                 callback: (country, details) {
-                  showDialog(
-                      context: context,
-                      builder: (context) => AlertDialog(
-                          title: Text(country),
-                          content: countryBuilder(country)));
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => CountryPage(country: country)));
                 },
                 countryColors: SimpleWorldCountryColors(
                   jP: Colors.green,
                   nL: Colors.green,
+                  uS: Colors.green,
                 ),
               ),
             ),
@@ -40,13 +45,50 @@ class SupportedCountriesMap extends StatelessWidget {
       ),
     );
   }
+}
+
+class CountryPage extends StatefulWidget {
+  final String country;
+
+  const CountryPage({required this.country, Key? key}) : super(key: key);
+
+  @override
+  _CountryPageState createState() => _CountryPageState();
+}
+
+class _CountryPageState extends State<CountryPage> {
+  late String state;
+
+  @override
+  void initState() {
+    state = 'Tap a state, prefecture or province';
+    super.initState();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Colors.grey.shade50,
+        elevation: 0,
+        iconTheme: IconThemeData(color: Colors.blue),
+        title: Text(
+          widget.country.toUpperCase() + ' - ' + state,
+          style: TextStyle(color: Colors.blue),
+        ),
+      ),
+      body: Center(child: countryBuilder(widget.country)),
+    );
+  }
 
   Widget countryBuilder(String country) {
     switch (country) {
       case 'jp':
-        return JapanMap(callback: (c, d) => print(c));
+        return JapanMap(callback: (x, y) => setState(() => state = x));
       case 'nl':
-        return NetherlandsMap(callback: (c, d) => print(c));
+        return NetherlandsMap(callback: (x, y) => setState(() => state = x));
+      case 'us':
+        return USAMap(callback: (x, y) => setState(() => state = x));
       default:
         return Text(
             'This country does not have a map yet...\nPlease select a green country');

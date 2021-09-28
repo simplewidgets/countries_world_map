@@ -11,3 +11,6 @@ export 'countries/europe/netherlands/netherlands.dart';
 
 // Asia country libraries
 export 'countries/asia/japan/japan.dart';
+
+// North America country libraries
+export 'countries/north-america/usa/usa.dart';
