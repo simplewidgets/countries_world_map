@@ -14,7 +14,6 @@ class _RandomWorldMapGenratorState extends State<RandomWorldMapGenrator> {
   List<Color> colors = [
     Colors.indigo.shade900,
     Colors.blue,
-    // Colors.grey.shade300,
     Colors.pink,
     Colors.red.shade900,
     Colors.black,

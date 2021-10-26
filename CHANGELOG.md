@@ -1,3 +1,6 @@
+## 0.0.6
+Added Japan, the Netherlands and the USA to the supported countries 🎉
+
 ## 0.0.5
 The worldmap got a callback function. Clicking on a country will return the country code and the details of the tap.
 
