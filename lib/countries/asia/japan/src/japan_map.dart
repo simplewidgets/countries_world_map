@@ -1,6 +1,7 @@
 import 'package:countries_world_map/canvas/touchable_canvas.dart';
 import 'package:countries_world_map/countries/asia/japan/src/japan_colors.dart';
 import 'package:countries_world_map/countries/asia/japan/src/japan_painter.dart';
+import 'package:countries_world_map/countries_world_map.dart';
 import 'package:flutter/material.dart';
 
 class JapanMap extends StatelessWidget {
