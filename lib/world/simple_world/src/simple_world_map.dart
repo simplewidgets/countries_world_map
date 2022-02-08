@@ -1,6 +1,6 @@
 import 'package:countries_world_map/canvas/src/canvas_touch_detector.dart';
 import 'package:countries_world_map/world/simple_world/src/simple_world_colors.dart';
-import 'package:countries_world_map/world/simple_world/src/simple_world_painter.dart';
+import 'package:countries_world_map/world/simple_world/src/test2.dart';
 import 'package:flutter/material.dart';
 
 /// The WorldMap widget returns a combination of Widgets sutable for most use cases
@@ -25,13 +25,7 @@ class SimpleWorldMap extends StatelessWidget {
   final Color? backgroundColor;
   final Function(String, TapUpDetails)? callback;
 
-  const SimpleWorldMap(
-      {this.defaultCountryColor,
-      this.backgroundColor,
-      this.countryColors,
-      this.callback,
-      Key? key})
-      : super(key: key);
+  const SimpleWorldMap({this.defaultCountryColor, this.backgroundColor, this.countryColors, this.callback, Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -55,9 +49,8 @@ class SimpleWorldMap extends StatelessWidget {
                             callback!(country, tapdetails);
                           }
                         },
-                        countryColors:
-                            countryColors ?? SimpleWorldCountryColors(),
-                        defaultColor: defaultCountryColor ?? Colors.grey),
+                        cC: countryColors ?? SimpleWorldCountryColors(),
+                        dC: defaultCountryColor ?? Colors.grey),
                   ),
                 ),
               ));

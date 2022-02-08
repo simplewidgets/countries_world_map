@@ -14,16 +14,12 @@ class SimpleWorldPainter extends CustomPainter {
   final SimpleWorldCountryColors countryColors;
   final Function(String, TapUpDetails) callback;
 
-  const SimpleWorldPainter(
-      {required this.defaultColor,
-      required this.countryColors,
-      required this.context,
-      required this.callback});
+  const SimpleWorldPainter({required this.defaultColor, required this.countryColors, required this.context, required this.callback});
 
   @override
   void paint(Canvas canvas, Size size) {
     var worldCanvas = TouchyCanvas(context, canvas);
-    print('Repainting simple world map');
+
     Path path0 = Path();
     path0.moveTo(size.width * 0.6915000, size.height * 0.3052509);
     path0.lineTo(size.width * 0.6922500, size.height * 0.3073512);
@@ -17239,6 +17235,5 @@ class SimpleWorldPainter extends CustomPainter {
   }
 
   @override
-  bool shouldRepaint(SimpleWorldPainter oldDelegate) =>
-      oldDelegate.countryColors != countryColors;
+  bool shouldRepaint(SimpleWorldPainter oldDelegate) => oldDelegate.countryColors != countryColors;
 }

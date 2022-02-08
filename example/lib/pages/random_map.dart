@@ -43,6 +43,9 @@ class _RandomWorldMapGenratorState extends State<RandomWorldMapGenrator> {
                 width: MediaQuery.of(context).size.width * 0.92,
                 // Actual widget from the Countries_world_map package.
                 child: SimpleWorldMap(
+                  callback: (c, x) {
+                    print(c);
+                  },
                   countryColors: SimpleWorldCountryColors(
                     aD: colors[_random.nextInt(5)],
                     aE: colors[_random.nextInt(5)],
