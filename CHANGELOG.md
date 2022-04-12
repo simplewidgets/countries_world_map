@@ -1,3 +1,10 @@
+## 0.0.8
+Problem: release build failed, solved.
+See: https://github.com/flutter/flutter/issues/94461 for more info.
+
+Please note: this is a temporary release for fixing the issiue only.
+There will be a release soon which also improves performance.
+
 ## 0.0.6
 Added Japan, the Netherlands and the USA to the supported countries 🎉
 
