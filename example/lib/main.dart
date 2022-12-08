@@ -49,13 +49,6 @@ class _MyHomePageState extends State<MyHomePage>
               ListTile(title: Center(child: Text('Random colors'))),
               ListTile(title: Center(child: Text('Supported countries')))
             ])),
-        // body: Container(
-        //     child: Center(
-        //   child: USAMap(
-        //     usaColors: USAColors(),
-        //     callback: (s, r) => print(s),
-        //   ),
-        // )));
         body: Container(
           height: MediaQuery.of(context).size.height,
           width: MediaQuery.of(context).size.width,

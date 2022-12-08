@@ -21,15 +21,16 @@ class _SupportedCountriesMapState extends State<SupportedCountriesMap> {
             SizedBox(
               width: MediaQuery.of(context).size.width * 0.92,
               // Actual widget from the Countries_world_map package.
-              child: SimpleWorldMap(
+              child: SimpleMap(
                 // If the color of a country is not specified it will take in a default color.
                 defaultCountryColor: Colors.grey,
                 // CountryColors takes in 250 different colors that will color each country the color you want. In this example it generates a random color each time SetState({}) is called.
                 callback: (country, details) {
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => CountryPage(country: country)));
+                  print(country);
+                  // Navigator.push(
+                  //     context,
+                  //     MaterialPageRoute(
+                  //         builder: (context) => CountryPage(country: country)));
                 },
                 countryColors: SimpleWorldCountryColors(
                   jP: Colors.green,
@@ -47,51 +48,51 @@ class _SupportedCountriesMapState extends State<SupportedCountriesMap> {
   }
 }
 
-class CountryPage extends StatefulWidget {
-  final String country;
+// class CountryPage extends StatefulWidget {
+//   final String country;
 
-  const CountryPage({required this.country, Key? key}) : super(key: key);
+//   const CountryPage({required this.country, Key? key}) : super(key: key);
 
-  @override
-  _CountryPageState createState() => _CountryPageState();
-}
+//   @override
+//   _CountryPageState createState() => _CountryPageState();
+// }
 
-class _CountryPageState extends State<CountryPage> {
-  late String state;
+// class _CountryPageState extends State<CountryPage> {
+//   late String state;
 
-  @override
-  void initState() {
-    state = 'Tap a state, prefecture or province';
-    super.initState();
-  }
+//   @override
+//   void initState() {
+//     state = 'Tap a state, prefecture or province';
+//     super.initState();
+//   }
 
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.grey.shade50,
-        elevation: 0,
-        iconTheme: IconThemeData(color: Colors.blue),
-        title: Text(
-          widget.country.toUpperCase() + ' - ' + state,
-          style: TextStyle(color: Colors.blue),
-        ),
-      ),
-      body: Center(child: countryBuilder(widget.country)),
-    );
-  }
+//   @override
+//   Widget build(BuildContext context) {
+//     return Scaffold(
+//       appBar: AppBar(
+//         backgroundColor: Colors.grey.shade50,
+//         elevation: 0,
+//         iconTheme: IconThemeData(color: Colors.blue),
+//         title: Text(
+//           widget.country.toUpperCase() + ' - ' + state,
+//           style: TextStyle(color: Colors.blue),
+//         ),
+//       ),
+//       body: Center(child: countryBuilder(widget.country)),
+//     );
+//   }
 
-  Widget countryBuilder(String country) {
-    switch (country) {
-      case 'jp':
-        return JapanMap(callback: (x, y) => setState(() => state = x));
-      case 'nl':
-        return NetherlandsMap(callback: (x, y) => setState(() => state = x));
-      case 'us':
-        return USAMap(callback: (x, y) => setState(() => state = x));
-      default:
-        return Text(
-            'This country does not have a map yet...\nPlease select a green country');
-    }
-  }
-}
+//   Widget countryBuilder(String country) {
+//     switch (country) {
+//       case 'jp':
+//         return JapanMap(callback: (x, y) => setState(() => state = x));
+//       case 'nl':
+//         return NetherlandsMap(callback: (x, y) => setState(() => state = x));
+//       case 'us':
+//         return USAMap(callback: (x, y) => setState(() => state = x));
+//       default:
+//         return Text(
+//             'This country does not have a map yet...\nPlease select a green country');
+//     }
+//   }
+// }
