@@ -9,6 +9,8 @@ import 'painter.dart';
 class SimpleMap extends StatelessWidget {
   final String instructions;
 
+  final PaintingStyle? paintingStyle;
+
   /// Default color for all countries. If not provided the default Color will be grey.
   final Color? defaultColor;
 
@@ -31,6 +33,7 @@ class SimpleMap extends StatelessWidget {
     this.colors,
     this.callback,
     this.fit,
+    this.paintingStyle,
     Key? key,
   }) : super(key: key);
 
@@ -38,28 +41,30 @@ class SimpleMap extends StatelessWidget {
   Widget build(BuildContext context) {
     Map map = jsonDecode(instructions);
 
-    double width = map['w'];
-    double height = map['h'];
+    double width = double.parse(map['w'].toString());
+    double height = double.parse(map['h'].toString());
     List<Map<String, dynamic>> instruction =
         List<Map<String, dynamic>>.from(map['i']);
 
     return FittedBox(
       fit: fit ?? BoxFit.contain,
-      child: CanvasTouchDetector(
-          builder: (context) => CustomPaint(
-                isComplex: true,
-                size: Size(width, height),
-                painter: SimpleMapPainter(
-                    context: context,
-                    instructions: instruction,
-                    callback: (id, name, tapdetails) {
-                      if (callback != null) {
-                        callback!(id, name, tapdetails);
-                      }
-                    },
-                    colors: colors,
-                    defaultColor: defaultColor ?? Colors.grey),
-              )),
+      child: RepaintBoundary(
+          child: CanvasTouchDetector(
+              builder: (context) => CustomPaint(
+                    isComplex: true,
+                    size: Size(width, height),
+                    painter: SimpleMapPainter(
+                        context: context,
+                        instructions: instruction,
+                        callback: (id, name, tapdetails) {
+                          if (callback != null) {
+                            callback!(id, name, tapdetails);
+                          }
+                        },
+                        paintingStyle: paintingStyle,
+                        colors: colors,
+                        defaultColor: defaultColor ?? Colors.grey),
+                  ))),
     );
   }
 }
