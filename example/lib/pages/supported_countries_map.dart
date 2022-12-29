@@ -1,4 +1,5 @@
 import 'package:countries_world_map/countries_world_map.dart';
+import 'package:countries_world_map/data/maps/world_map.dart';
 import 'package:flutter/material.dart';
 
 class SupportedCountriesMap extends StatefulWidget {
@@ -22,21 +23,19 @@ class _SupportedCountriesMapState extends State<SupportedCountriesMap> {
               width: MediaQuery.of(context).size.width * 0.92,
               // Actual widget from the Countries_world_map package.
               child: SimpleMap(
+                instructions: SMapWorld.instructions,
+
                 // If the color of a country is not specified it will take in a default color.
-                defaultCountryColor: Colors.grey,
+                defaultColor: Colors.grey,
                 // CountryColors takes in 250 different colors that will color each country the color you want. In this example it generates a random color each time SetState({}) is called.
-                callback: (country, details) {
-                  print(country);
-                  // Navigator.push(
-                  //     context,
-                  //     MaterialPageRoute(
-                  //         builder: (context) => CountryPage(country: country)));
+                callback: (id, name, tapdetails) {
+                  print(id + name);
                 },
-                countryColors: SimpleWorldCountryColors(
+                colors: SMapWorldColors(
                   jP: Colors.green,
                   nL: Colors.green,
                   uS: Colors.green,
-                ),
+                ).toMap(),
               ),
             ),
             // Creates 8% from right side so the map looks more centered.

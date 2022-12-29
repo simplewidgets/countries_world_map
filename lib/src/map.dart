@@ -3,34 +3,32 @@ import 'dart:convert';
 
 import '../components/canvas/touch_detector.dart';
 
-import 'country_colors.dart';
-import '../data/maps/world_map.dart';
 import 'painter.dart';
 
 /// This is the main widget that will paint the map based on the given insturctions (json).
 class SimpleMap extends StatelessWidget {
+  final String instructions;
+
   /// Default color for all countries. If not provided the default Color will be grey.
-  final Color? defaultCountryColor;
+  final Color? defaultColor;
 
   /// This is basically a list of countries and colors to apply different colors to specific countries.
-  final SimpleWorldCountryColors? countryColors;
-
-  /// Color behind the counties which will fill up all the blank space like oceans.
-  final Color? backgroundColor;
+  final Map? colors;
 
   /// Triggered when a country is tapped.
   /// The first parameter is the isoCode of the country that was tapped.
   /// The second parameter is the TapUpDetails of the tap.
-  final void Function(String, TapUpDetails)? callback;
+  final void Function(String id, String name, TapUpDetails tapDetails)?
+      callback;
 
   /// This is the BoxFit that will be used to fit the map in the available space.
   /// If not provided the default BoxFit will be BoxFit.contain.
   final BoxFit? fit;
 
   const SimpleMap({
-    this.defaultCountryColor,
-    this.backgroundColor,
-    this.countryColors,
+    required this.instructions,
+    this.defaultColor,
+    this.colors,
     this.callback,
     this.fit,
     Key? key,
@@ -38,12 +36,12 @@ class SimpleMap extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    Map instructions = jsonDecode(WORLD_MAP_INSTRUCTION);
+    Map map = jsonDecode(instructions);
 
-    double width = instructions['width'];
-    double height = instructions['height'];
+    double width = map['w'];
+    double height = map['h'];
     List<Map<String, dynamic>> instruction =
-        List<Map<String, dynamic>>.from(instructions['instructions']);
+        List<Map<String, dynamic>>.from(map['i']);
 
     return FittedBox(
       fit: fit ?? BoxFit.contain,
@@ -54,14 +52,13 @@ class SimpleMap extends StatelessWidget {
                 painter: SimpleMapPainter(
                     context: context,
                     instructions: instruction,
-                    callback: (country, tapdetails) {
+                    callback: (id, name, tapdetails) {
                       if (callback != null) {
-                        callback!(country, tapdetails);
+                        callback!(id, name, tapdetails);
                       }
                     },
-                    countryColors:
-                        countryColors ?? const SimpleWorldCountryColors(),
-                    defaultColors: defaultCountryColor ?? Colors.grey),
+                    colors: colors,
+                    defaultColor: defaultColor ?? Colors.grey),
               )),
     );
   }
