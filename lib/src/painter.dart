@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import '../components/canvas/touchy_canvas.dart';
-import 'country_colors.dart';
 
 /// This painter will paint a world map with all///
 /// Giving countries a different color based on a data set can help visualize data.
@@ -9,20 +8,21 @@ class SimpleMapPainter extends CustomPainter {
   final List<Map<String, dynamic>> instructions;
 
   /// This Color is used for all the countries that have no custom color
-  final Color defaultColors;
+  final Color defaultColor;
   final BuildContext context;
 
   /// The CountryColors is basically a list of Countries and Colors to give a Countrie a color of choice.
-  final SimpleWorldCountryColors countryColors;
-  final void Function(String, TapUpDetails) callback;
+  final Map? colors;
+  final void Function(String id, String name, TapUpDetails tapUpDetails)
+      callback;
 
   final PaintingStyle? paintingStyle;
   final double? borderWidth;
 
   const SimpleMapPainter({
     required this.instructions,
-    required this.defaultColors,
-    required this.countryColors,
+    required this.defaultColor,
+    this.colors,
     required this.context,
     required this.callback,
     this.paintingStyle,
@@ -35,16 +35,14 @@ class SimpleMapPainter extends CustomPainter {
 
     // Get country paths from Json
     // List countryPaths = json.decode(jsonData);
-    List<CountryPath> countryPathList = <CountryPath>[];
+    List<SimpleMapInstruction> countryPathList = <SimpleMapInstruction>[];
     for (var path in instructions) {
-      countryPathList.add(CountryPath.fromJson(path));
+      countryPathList.add(SimpleMapInstruction.fromJson(path));
     }
-
-    Map countryColorsMap = countryColors.toMap();
 
     // Draw paths
     for (int i = 0; i < countryPathList.length; i++) {
-      List<String> paths = countryPathList[i].path;
+      List<String> paths = countryPathList[i].instructions;
       Path path = Path();
 
       // Read path instructions and start drawing
@@ -63,52 +61,57 @@ class SimpleMapPainter extends CustomPainter {
       }
 
       // Add some color
-      String countryCode = countryPathList[i].countryCode[0].toLowerCase() +
-          countryPathList[i].countryCode[1].toUpperCase();
+      String uniqueID = countryPathList[i].uniqueID;
       Paint paint = Paint()..style = paintingStyle ?? PaintingStyle.fill;
       paint.strokeWidth = borderWidth ?? 1;
-      paint.color = countryColorsMap[countryCode] ?? defaultColors;
+      paint.color = colors?[uniqueID] ?? defaultColor;
 
       // Draw to canvas
       canvas.drawPath(path, paint,
-          onTapUp: (tabdetail) =>
-              callback(countryPathList[i].countryCode, tabdetail));
+          onTapUp: (tabdetail) => callback(
+              countryPathList[i].uniqueID, countryPathList[i].name, tabdetail));
     }
   }
 
   @override
   bool shouldRepaint(SimpleMapPainter oldDelegate) =>
-      oldDelegate.countryColors != countryColors;
+      oldDelegate.colors != colors;
 }
 
-class CountryPath {
-  /// ISO code of country (2 Numbers)
-  String countryCode;
+class SimpleMapInstruction {
+  /// uniqueID of the territory being drawn
+  String uniqueID;
 
-  /// List of instructions to draw the country
-  List<String> path;
+  /// Name of the territory being drawn
+  String name;
 
-  CountryPath({required this.countryCode, required this.path});
+  /// List of instructions to draw the territory
+  List<String> instructions;
+
+  SimpleMapInstruction(
+      {required this.uniqueID, required this.instructions, required this.name});
 
   // To Json
   Map<String, dynamic> toJson() {
     final Map<String, dynamic> data = <String, dynamic>{
-      "\"iso\"": "\"$countryCode\"",
-      "\"p\"": path,
+      "\"n\"": "\"$name\"",
+      "\"u\"": "\"$uniqueID\"",
+      "\"i\"": instructions,
     };
     return data;
   }
 
   // From Json
-  factory CountryPath.fromJson(Map<String, dynamic> json) {
+  factory SimpleMapInstruction.fromJson(Map<String, dynamic> json) {
     List<String> paths = <String>[];
 
-    List jsonPaths = json['p'];
+    List jsonPaths = json['i'];
 
     for (int i = 0; i < jsonPaths.length; i++) {
       paths.add(jsonPaths[i]);
     }
 
-    return CountryPath(countryCode: json['iso'], path: paths);
+    return SimpleMapInstruction(
+        uniqueID: json['u'], name: json['n'], instructions: paths);
   }
 }
