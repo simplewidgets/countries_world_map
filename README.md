@@ -6,7 +6,8 @@ This package provides an easy to implement World Map (or any other country of ch
 
 Online example is available at [countriesworldmap.simplewidgets.dev](https://countriesworldmap.simplewidgets.dev "World Map Example | simplewidgets.dev")
 
-
+## Support
+To see which countries are supported, please see the online example or the list below.
 
 ## About this package
 This flutter package draws a map of choice using the CustomPainter. These maps can be quite big so please read "Perfomance" below. When tapping a area on the map (country, state etc.) you will get a callback providing you with the name, id and tapdetails of the area being tapped.
@@ -50,9 +51,9 @@ SimpleMap(
 ID structure might be different between countries. The Color class and the instructions should always match, but there might be differences between different countries. When adding a map check how the ID is returned._ 
 
 ## Use cases
-This packages can be used to visualize data by adding differen shaded of colors. When pressing a region you might want to show a bottomsheet containing more details.
+This packages can be used to visualize data by adding different shades of colors. When pressing a region you might want to show a bottomsheet containing more details.
 
-Although it it possible to add multiple maps to your app. Please read more about the performance before proceeding.
+Although it it possible to add multiple maps to your app, please read more about the performance before proceeding.
 
 ## Tips for UI
 1. Wrap the WorldMap in an InteractiveViewer widget.
@@ -71,7 +72,6 @@ Feel free to help us improve this package by creating issues, pull request etc. 
 
 ## Countries with Maps
 
-<br/>
 
 | COUNTRY                                                    | ISO | SUPPORTED |
 | ---------------------------------------------------------- | --- | --------- |

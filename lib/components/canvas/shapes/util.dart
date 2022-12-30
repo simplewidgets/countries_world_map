@@ -36,7 +36,8 @@ class TouchCanvasUtil {
       // case ForcePressDetails:
       //   return (gestureDetail as ForcePressDetails).localPosition;
       default:
-        throw Exception("gestureDetail.runTimeType = ${gestureDetail.runtimeType} is not recognized ! ");
+        throw Exception(
+            "gestureDetail.runTimeType = ${gestureDetail.runtimeType} is not recognized ! ");
     }
   }
 

@@ -21,7 +21,10 @@ class ShapeHandler {
   }
 
   List<ClipShape> _getClipShapesBelowPosition(int position) {
-    return clipItems.where((element) => element.position <= position).map((e) => e.clipShape).toList();
+    return clipItems
+        .where((element) => element.position <= position)
+        .map((e) => e.clipShape)
+        .toList();
   }
 
   ///returns [true] if point lies inside all the clipShapes
@@ -32,14 +35,17 @@ class ShapeHandler {
     return true;
   }
 
-  Offset _getActualOffsetFromScrollController(Offset touchPoint, ScrollController? controller, AxisDirection direction) {
+  Offset _getActualOffsetFromScrollController(Offset touchPoint,
+      ScrollController? controller, AxisDirection direction) {
     if (controller == null) {
       return touchPoint;
     }
 
     final scrollPosition = controller.position;
     final actualScrollPixels =
-        direction == AxisDirection.left || direction == AxisDirection.up ? scrollPosition.maxScrollExtent - scrollPosition.pixels : scrollPosition.pixels;
+        direction == AxisDirection.left || direction == AxisDirection.up
+            ? scrollPosition.maxScrollExtent - scrollPosition.pixels
+            : scrollPosition.pixels;
 
     if (direction == AxisDirection.left || direction == AxisDirection.right) {
       return Offset(touchPoint.dx + actualScrollPixels, touchPoint.dy);
@@ -56,7 +62,8 @@ class ShapeHandler {
         continue;
       }
       if (shape.isInside(point)) {
-        if (_isPointInsideClipShapes(_getClipShapesBelowPosition(i), point) == false) {
+        if (_isPointInsideClipShapes(_getClipShapesBelowPosition(i), point) ==
+            false) {
           if (shape.hitTestBehavior == HitTestBehavior.opaque) {
             return selectedShapes;
           }
@@ -76,7 +83,10 @@ class ShapeHandler {
     ScrollController? scrollController,
     AxisDirection direction = AxisDirection.down,
   }) async {
-    var touchPoint = _getActualOffsetFromScrollController(TouchCanvasUtil.getPointFromGestureDetail(gesture.gestureDetail), scrollController, direction);
+    var touchPoint = _getActualOffsetFromScrollController(
+        TouchCanvasUtil.getPointFromGestureDetail(gesture.gestureDetail),
+        scrollController,
+        direction);
     if (!_registeredGestures.contains(gesture.gestureType)) return;
 
     var touchedShapes = _getTouchedShapes(touchPoint);
