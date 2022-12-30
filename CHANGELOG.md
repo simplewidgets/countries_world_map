@@ -1,3 +1,6 @@
+## 1.0.1
+Added required changes for 140 pub points.
+
 ## 1.0.0
 🌍🌏🌎  🥳
 In this release 136 countries have been added.

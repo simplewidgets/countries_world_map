@@ -74,5 +74,6 @@ build/
 !**/ios/**/default.pbxuser
 !**/ios/**/default.perspectivev3
 
-example/.firebase
+example/.firebase/**.**
 example/firebase.json
+example/.firebase/hosting.YnVpbGQvd2Vi.cache
