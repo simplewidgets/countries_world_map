@@ -1,3 +1,11 @@
+## 1.0.0
+🌍🌏🌎  🥳
+In this release 136 countries have been added.
+The painter has been replaced with an adaptable one which takes a string of instructions as input.
+Please read the README.md on how the get started.
+
+! Sadly other versions will break with this new release.
+
 ## 0.0.8
 Problem: release build failed, solved.
 See: https://github.com/flutter/flutter/issues/94461 for more info.

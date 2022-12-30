@@ -1,29 +1,58 @@
-# Countries_world_map
-![Example](https://simplewidgets.dev/wp-content/uploads/2021/07/countries_world_map.png)
+# countries_world_map
+This package provides an easy to implement World Map (or any other country of choice) which is fully customizable. In this case "customizable" means the ability to change the color of a country/state/prefecture/province. Additionally when a country is touched the map provides a callback.
+
+![Example](https://simplewidgets.dev/wp-content/uploads/2021/09/countries_world_map-1.png)
+
 
 Online example is available at [countriesworldmap.simplewidgets.dev](https://countriesworldmap.simplewidgets.dev "World Map Example | simplewidgets.dev")
 
-This package provides an easy to implement World Map (or any other country of choice) which is fully customizable. It started with only a simple world map but the goal is to create a customizable map for each country.
-In this case "customizable" means the ability to change the color of a country/ state.
+
 
 ## About this package
-This flutter package draws a map of choice using the CustomPainter. These maps can be quite big so please read "Perfomance" below.
+This flutter package draws a map of choice using the CustomPainter. These maps can be quite big so please read "Perfomance" below. When tapping a area on the map (country, state etc.) you will get a callback providing you with the name, id and tapdetails of the area being tapped.
+
+### How to use the widget
+The main widget is the `SimpleMap()` widget which requires at least the instructions on how to draw the map. For all supported countries there are 2 classes `SMap...()` & `SMap...Colors()`. The first class only contains a static String which has the instructions for the SimpleMap widget. The second class has color properties that match with the ID's given to the area's in the instructions.
+
+For example: 
+- Spain has the following classes: `SMapSpain()` & `SMapSpainColors()`.
+- Mexico has the following classes: `SmapMexico()` &  `SMapMexicoColors()`.
+- The World Map has the following classes: `SMapWorld()` & `SMapWorldColors()`.
 
 
-### Available maps
-#### World & continents
-| World Maps | Continents |
-|--|--|
-| <ul><li>[ ] Normal World Map </li><li>[x] Simple World Map</li> <li>[ ] Geo World Map</li></ul> | <ul><li>[ ] Africa </li><li>[ ] Asia </li> <li>[ ] Australia/Oceania </li> <li>[ ] Europe </li> <li>[ ] Middle East </li> <li>[ ] North America </li> <li>[ ] South America </li></ul> 
+``` 
+SimpleMap(
+    // String of instructions to draw the map.
+    instructions: SMapWorld.instructions, 
 
 
-### Need a specific country?
-You can request a specific country by creating a new issue or send an email at hello@simplewidgets.dev 
-Please do keep in mind this is a side project. When I have time I will create the map as soon as possible.
+    // Default color for all countries.
+    defaultColor: Colors.grey,       
 
 
+    // Matching class to specify custom colors for each area.
+    colors: SMapWorldColors( 
+        uS: Colors.green,   // This makes USA green
+        cN: Colors.green,   // This makes China green
+        ru: Colors.green,   // This makes Russia green
+     ).toMap(), 
 
 
+    // Details of what area is being touched, giving you the ID, name and tapdetails
+    callback: (id, name, tapdetails) {      
+        print(id); 
+    },
+);
+
+```
+
+❗️ _**Please note:** 
+ID structure might be different between countries. The Color class and the instructions should always match, but there might be differences between different countries. When adding a map check how the ID is returned._ 
+
+## Use cases
+This packages can be used to visualize data by adding differen shaded of colors. When pressing a region you might want to show a bottomsheet containing more details.
+
+Although it it possible to add multiple maps to your app. Please read more about the performance before proceeding.
 
 ## Tips for UI
 1. Wrap the WorldMap in an InteractiveViewer widget.
@@ -32,20 +61,17 @@ Please do keep in mind this is a side project. When I have time I will create th
 
 2. Set the WorldMap to 92% of the available width to make it look more centered.
 
-3. Use your own CustomPaint.
-     
-     If the WorldMap/ CountryMap widget does not give the results you would like to see, you can also use the WorldMapPainter/ CountryPainter in your own defined CustomPaint. This will give you all the paths with the option to custom color each country.
-
-Simply add *Countryname*Painter to your CustomPaint widget and you are ready to go.
-
 ## Performance
 Some of the maps are really big, so (re)building the widget can be expensive. That's why the default Widget uses a RepaintBoundry to prevent it from unnecessary repaints. If you change a Country Color and call SetState() the widget will repaint.
 
+In version 0.0.7 and before the size of the map would cause jank and compile errors. In the newer versions this should be fixed. However, if you plan on showing a lot of maps in your app. Please be advised and use Google Maps or Apple Maps.
+
 ## Like to contribute?
-Feel free to help us improve this package by creating issues, pull request etc. Together we can make a great map for data visualization and other use cases. For any questions you can email hello@simplewidgets.dev
+Feel free to help us improve this package by creating issues, pull request etc. For any questions you can email hello@simplewidgets.dev
 
 ## Countries with Maps
 
+<br/>
 
 | COUNTRY                                                    | ISO | SUPPORTED |
 | ---------------------------------------------------------- | --- | --------- |
@@ -58,12 +84,12 @@ Feel free to help us improve this package by creating issues, pull request etc. 
 | Anguilla                                                   | AI  |           |
 | Antarctica                                                 | AQ  |           |
 | Antigua and Barbuda                                        | AG  |           |
-| Argentina                                                  | AR  |           |
+| Argentina                                                  | AR  | ✅         |
 | Armenia                                                    | AM  | ✅         |
 | Aruba                                                      | AW  |           |
-| Australia                                                  | AU  |           |
-| Austria                                                    | AT  |           |
-| Azerbaijan                                                 | AZ  |           |
+| Australia                                                  | AU  | ✅         |
+| Austria                                                    | AT  | ✅         |
+| Azerbaijan                                                 | AZ  | ✅         |
 | Bahamas (the)                                              | BS  | ✅         |
 | Bahrain                                                    | BH  | ✅         |
 | Bangladesh                                                 | BD  | ✅         |
@@ -76,7 +102,7 @@ Feel free to help us improve this package by creating issues, pull request etc. 
 | Bhutan                                                     | BT  | ✅         |
 | Bolivia (Plurinational State of)                           | BO  | ✅         |
 | Bonaire, Sint Eustatius and Saba                           | BQ  |           |
-| Bosnia and Herzegovina                                     | BA  |           |
+| Bosnia and Herzegovina                                     | BA  | ✅         |
 | Botswana                                                   | BW  | ✅         |
 | Bouvet Island                                              | BV  |           |
 | Brazil                                                     | BR  | ✅         |
@@ -92,14 +118,14 @@ Feel free to help us improve this package by creating issues, pull request etc. 
 | Cayman Islands (the)                                       | KY  |           |
 | Central African Republic (the)                             | CF  | ✅         |
 | Chad                                                       | TD  | ✅         |
-| Chile                                                      | CL  |           |
+| Chile                                                      | CL  | ✅         |
 | China                                                      | CN  | ✅         |
 | Christmas Island                                           | CX  |           |
 | Cocos (Keeling) Islands (the)                              | CC  |           |
 | Colombia                                                   | CO  | ✅         |
 | Comoros (the)                                              | KM  |           |
-| Congo (the Democratic Republic of the)                     | CD  |           |
-| Congo (the)                                                | CG  |           |
+| Congo (the Democratic Republic of the)                     | CD  | ✅         |
+| Congo (the)                                                | CG  | ✅         |
 | Cook Islands (the)                                         | CK  |           |
 | Costa Rica                                                 | CR  | ✅         |
 | Croatia                                                    | HR  | ✅         |
@@ -107,7 +133,7 @@ Feel free to help us improve this package by creating issues, pull request etc. 
 | Curaçao                                                    | CW  |           |
 | Cyprus                                                     | CY  | ✅         |
 | Czechia                                                    | CZ  | ✅         |
-| Côte d'Ivoire                                              | CI  |           |
+| Côte d'Ivoire                                              | CI  | ✅         |
 | Denmark                                                    | DK  | ✅         |
 | Djibouti                                                   | DJ  | ✅         |
 | Dominica                                                   | DM  |           |
@@ -119,7 +145,7 @@ Feel free to help us improve this package by creating issues, pull request etc. 
 | Eritrea                                                    | ER  |           |
 | Estonia                                                    | EE  | ✅         |
 | Eswatini                                                   | SZ  |           |
-| Ethiopia                                                   | ET  |           |
+| Ethiopia                                                   | ET  | ✅         |
 | Falkland Islands (the) \[Malvinas\]                        | FK  |           |
 | Faroe Islands (the)                                        | FO  | ✅         |
 | Fiji                                                       | FJ  |           |
@@ -148,17 +174,17 @@ Feel free to help us improve this package by creating issues, pull request etc. 
 | Heard Island and McDonald Islands                          | HM  |           |
 | Holy See (the)                                             | VA  |           |
 | Honduras                                                   | HN  | ✅         |
-| Hong Kong                                                  | HK  |           |
+| Hong Kong                                                  | HK  | ✅         |
 | Hungary                                                    | HU  | ✅         |
 | Iceland                                                    | IS  |           |
-| India                                                      | IN  |           |
-| Indonesia                                                  | ID  |           |
+| India                                                      | IN  | ✅         |
+| Indonesia                                                  | ID  | ✅         |
 | Iran (Islamic Republic of)                                 | IR  | ✅         |
 | Iraq                                                       | IQ  | ✅         |
 | Ireland                                                    | IE  | ✅         |
 | Isle of Man                                                | IM  |           |
-| Israel                                                     | IL  |           |
-| Italy                                                      | IT  |           |
+| Israel                                                     | IL  | ✅         |
+| Italy                                                      | IT  | ✅         |
 | Jamaica                                                    | JM  | ✅         |
 | Japan                                                      | JP  | ✅         |
 | Jersey                                                     | JE  |           |
@@ -168,6 +194,7 @@ Feel free to help us improve this package by creating issues, pull request etc. 
 | Kiribati                                                   | KI  |           |
 | Korea (the Democratic People's Republic of)                | KP  |           |
 | Korea (the Republic of)                                    | KR  | ✅         |
+| Kosovo                                                     | XK  | ✅         |
 | Kuwait                                                     | KW  |           |
 | Kyrgyzstan                                                 | KG  | ✅         |
 | Lao People's Democratic Republic (the)                     | LA  | ✅         |
@@ -182,10 +209,10 @@ Feel free to help us improve this package by creating issues, pull request etc. 
 | Macao                                                      | MO  |           |
 | Madagascar                                                 | MG  |           |
 | Malawi                                                     | MW  |           |
-| Malaysia                                                   | MY  |           |
+| Malaysia                                                   | MY  | ✅         |
 | Maldives                                                   | MV  |           |
 | Mali                                                       | ML  | ✅         |
-| Malta                                                      | MT  |           |
+| Malta                                                      | MT  | ✅         |
 | Marshall Islands (the)                                     | MH  |           |
 | Martinique                                                 | MQ  |           |
 | Mauritania                                                 | MR  |           |
@@ -199,9 +226,9 @@ Feel free to help us improve this package by creating issues, pull request etc. 
 | Montenegro                                                 | ME  | ✅         |
 | Montserrat                                                 | MS  |           |
 | Morocco                                                    | MA  | ✅         |
-| Mozambique                                                 | MZ  |           |
+| Mozambique                                                 | MZ  | ✅         |
 | Myanmar                                                    | MM  | ✅         |
-| Namibia                                                    | NA  |           |
+| Namibia                                                    | NA  | ✅         |
 | Nauru                                                      | NR  |           |
 | Nepal                                                      | NP  | ✅         |
 | Netherlands (the)                                          | NL  | ✅         |
@@ -217,16 +244,16 @@ Feel free to help us improve this package by creating issues, pull request etc. 
 | Oman                                                       | OM  | ✅         |
 | Pakistan                                                   | PK  | ✅         |
 | Palau                                                      | PW  |           |
-| Palestine, State of                                        | PS  |           |
+| Palestine, State of                                        | PS  | ✅         |
 | Panama                                                     | PA  | ✅         |
 | Papua New Guinea                                           | PG  |           |
 | Paraguay                                                   | PY  | ✅         |
-| Peru                                                       | PE  |           |
-| Philippines (the)                                          | PH  |           |
+| Peru                                                       | PE  | ✅         |
+| Philippines (the)                                          | PH  | ✅         |
 | Pitcairn                                                   | PN  |           |
 | Poland                                                     | PL  | ✅         |
 | Portugal                                                   | PT  | ✅         |
-| Puerto Rico                                                | PR  |           |
+| Puerto Rico                                                | PR  | ✅         |
 | Qatar                                                      | QA  | ✅         |
 | Republic of North Macedonia                                | MK  | ✅         |
 | Romania                                                    | RO  | ✅         |
@@ -247,23 +274,23 @@ Feel free to help us improve this package by creating issues, pull request etc. 
 | Senegal                                                    | SN  |           |
 | Serbia                                                     | RS  | ✅         |
 | Seychelles                                                 | SC  |           |
-| Sierra Leone                                               | SL  |           |
+| Sierra Leone                                               | SL  | ✅         |
 | Singapore                                                  | SG  | ✅         |
 | Sint Maarten (Dutch part)                                  | SX  |           |
 | Slovakia                                                   | SK  | ✅         |
 | Slovenia                                                   | SI  | ✅         |
 | Solomon Islands                                            | SB  |           |
 | Somalia                                                    | SO  |           |
-| South Africa                                               | ZA  |           |
+| South Africa                                               | ZA  | ✅         |
 | South Georgia and the South Sandwich Islands               | GS  |           |
 | South Sudan                                                | SS  |           |
-| Spain                                                      | ES  |           |
+| Spain                                                      | ES  | ✅         |
 | Sri Lanka                                                  | LK  | ✅         |
-| Sudan (the)                                                | SD  |           |
+| Sudan (the)                                                | SD  | ✅         |
 | Suriname                                                   | SR  |           |
 | Svalbard and Jan Mayen                                     | SJ  |           |
 | Sweden                                                     | SE  | ✅         |
-| Switzerland                                                | CH  |           |
+| Switzerland                                                | CH  | ✅         |
 | Syrian Arab Republic                                       | SY  | ✅         |
 | Taiwan (Province of China)                                 | TW  | ✅         |
 | Tajikistan                                                 | TJ  | ✅         |
@@ -282,19 +309,19 @@ Feel free to help us improve this package by creating issues, pull request etc. 
 | Uganda                                                     | UG  | ✅         |
 | Ukraine                                                    | UA  | ✅         |
 | United Arab Emirates (the)                                 | AE  | ✅         |
-| United Kingdom of Great Britain and Northern Ireland (the) | GB  |           |
+| United Kingdom of Great Britain and Northern Ireland (the) | GB  | ✅         |
 | United States Minor Outlying Islands (the)                 | UM  |           |
-| United States of America (the)                             | US  |           |
+| United States of America (the)                             | US  | ✅         |
 | Uruguay                                                    | UY  | ✅         |
 | Uzbekistan                                                 | UZ  | ✅         |
 | Vanuatu                                                    | VU  |           |
-| Venezuela (Bolivarian Republic of)                         | VE  |           |
-| Viet Nam                                                   | VN  |           |
+| Venezuela (Bolivarian Republic of)                         | VE  | ✅         |
+| Viet Nam                                                   | VN  | ✅         |
 | Virgin Islands (British)                                   | VG  |           |
 | Virgin Islands (U.S.)                                      | VI  |           |
 | Wallis and Futuna                                          | WF  |           |
 | Western Sahara                                             | EH  |           |
 | Yemen                                                      | YE  | ✅         |
-| Zambia                                                     | ZM  |           |
-| Zimbabwe                                                   | ZW  |           |
+| Zambia                                                     | ZM  | ✅         |
+| Zimbabwe                                                   | ZW  | ✅         |
 | Åland Islands                                              | AX  |           |

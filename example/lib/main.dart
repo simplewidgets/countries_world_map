@@ -4,10 +4,10 @@ import 'package:flutter/material.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
-  runApp(WorldMapExample());
+  runApp(SMapExampleApp());
 }
 
-class WorldMapExample extends StatelessWidget {
+class SMapExampleApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
@@ -33,7 +33,7 @@ class _MyHomePageState extends State<MyHomePage>
 
   @override
   void initState() {
-    controller = TabController(length: 2, initialIndex: 0, vsync: this);
+    controller = TabController(length: 3, initialIndex: 0, vsync: this);
     super.initState();
   }
 
@@ -46,8 +46,9 @@ class _MyHomePageState extends State<MyHomePage>
             backgroundColor: Colors.transparent,
             elevation: 0,
             bottom: TabBar(controller: controller, tabs: [
+              ListTile(title: Center(child: Text('Supported countries'))),
               ListTile(title: Center(child: Text('Random colors'))),
-              ListTile(title: Center(child: Text('Supported countries')))
+              // ListTile(title: Center(child: Text('Africa'))),
             ])),
         body: Container(
           height: MediaQuery.of(context).size.height,
@@ -55,7 +56,11 @@ class _MyHomePageState extends State<MyHomePage>
           child: TabBarView(
               physics: NeverScrollableScrollPhysics(),
               controller: controller,
-              children: [RandomWorldMapGenrator(), SupportedCountriesMap()]),
+              children: [
+                SupportedCountriesMap(),
+                RandomWorldMapGenrator(),
+                // AfricaContinent()
+              ]),
         ));
   }
 }
