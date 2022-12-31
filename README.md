@@ -47,7 +47,7 @@ SimpleMap(
 
 ```
 
-❗️ _**Please note:** 
+❗️ **Please note:** 
 ID structure might be different between countries. The Color class and the instructions should always match, but there might be differences between different countries. When adding a map check how the ID is returned. Or open the [online example](https://countriesworldmap.simplewidgets.dev "World Map Example | simplewidgets.dev") to see the ID's in the right list.
 
 ## Use cases
