@@ -33,7 +33,7 @@ class _MyHomePageState extends State<MyHomePage>
 
   @override
   void initState() {
-    controller = TabController(length: 3, initialIndex: 0, vsync: this);
+    controller = TabController(length: 2, initialIndex: 0, vsync: this);
     super.initState();
   }
 

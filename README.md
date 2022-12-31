@@ -48,7 +48,7 @@ SimpleMap(
 ```
 
 ❗️ _**Please note:** 
-ID structure might be different between countries. The Color class and the instructions should always match, but there might be differences between different countries. When adding a map check how the ID is returned._ 
+ID structure might be different between countries. The Color class and the instructions should always match, but there might be differences between different countries. When adding a map check how the ID is returned. Or open the [online example](https://countriesworldmap.simplewidgets.dev "World Map Example | simplewidgets.dev") to see the ID's in the right list.
 
 ## Use cases
 This packages can be used to visualize data by adding different shades of colors. When pressing a region you might want to show a bottomsheet containing more details.
@@ -65,7 +65,7 @@ Although it it possible to add multiple maps to your app, please read more about
 ## Performance
 Some of the maps are really big, so (re)building the widget can be expensive. That's why the default Widget uses a RepaintBoundry to prevent it from unnecessary repaints. If you change a Country Color and call SetState() the widget will repaint.
 
-In version 0.0.7 and before the size of the map would cause jank and compile errors. In the newer versions this should be fixed. However, if you plan on showing a lot of maps in your app. Please be advised and use Google Maps or Apple Maps.
+In version 0.0.7 and before the size of the map would cause jank and compile errors. In the newer versions this should be fixed. However, if you plan on showing a lot of maps in your app. Please be advised and consider using Google Maps or Apple Maps instead, this because each map added to the app will increase the size of the final build.
 
 ## Like to contribute?
 Feel free to help us improve this package by creating issues, pull request etc. For any questions you can email hello@simplewidgets.dev
