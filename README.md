@@ -1,7 +1,7 @@
 # countries_world_map
 This package provides an easy to implement World Map (or any other country of choice) which is fully customizable. In this case "customizable" means the ability to change the color of a country/state/prefecture/province. Additionally when a country is touched the map provides a callback.
 
-![Example](https://simplewidgets.dev/wp-content/uploads/2021/09/countries_world_map-1.png)
+![Example](https://simplewidgets.dev/wp-content/uploads/2023/01/countries_world_map-1.webp)
 
 
 Online example is available at [countriesworldmap.simplewidgets.dev](https://countriesworldmap.simplewidgets.dev "World Map Example | simplewidgets.dev")
