@@ -1,5 +1,7 @@
+import 'package:example/pages/article_example.dart';
 import 'package:example/pages/random_map.dart';
 import 'package:example/pages/supported_countries_map.dart';
+import 'package:go_router/go_router.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -7,16 +9,31 @@ void main() {
   runApp(SMapExampleApp());
 }
 
+// GoRouter configuration
+final _router = GoRouter(
+  routes: [
+    GoRoute(
+      path: '/',
+      builder: (context, state) => MyHomePage(),
+    ),
+    GoRoute(
+        path: '/article/:country',
+        builder: (context, state) =>
+            ArticleIframeExample(country: state.params['country']!))
+  ],
+);
+
 class SMapExampleApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-        title: 'Worldmap Example',
-        theme: ThemeData(
-            primarySwatch: Colors.blue,
-            visualDensity: VisualDensity.adaptivePlatformDensity),
-        home: MyHomePage());
+    return MaterialApp.router(
+      title: 'Worldmap Example',
+      theme: ThemeData(
+          primarySwatch: Colors.blue,
+          visualDensity: VisualDensity.adaptivePlatformDensity),
+      routerConfig: _router,
+    );
   }
 }
 
