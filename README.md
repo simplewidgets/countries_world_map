@@ -4,7 +4,7 @@ This package provides an easy to implement World Map (or any other country of ch
 ![Example](https://simplewidgets.dev/wp-content/uploads/2023/01/countries_world_map-1.webp)
 
 
-Online example is available at [countriesworldmap.simplewidgets.dev](https://countriesworldmap.simplewidgets.dev "World Map Example | simplewidgets.dev")
+Online example is available at [examples.simplewidgets.dev/#/countries_world_map](https://examples.simplewidgets.dev/#/countries_world_map "World Map Example | simplewidgets.dev")
 
 ## Support
 To see which countries are supported, please see the online example or the list below.
@@ -48,7 +48,7 @@ SimpleMap(
 ```
 
 ❗️ **Please note:** 
-ID structure might be different between countries. The Color class and the instructions should always match, but there might be differences between different countries. When adding a map check how the ID is returned. Or open the [online example](https://countriesworldmap.simplewidgets.dev "World Map Example | simplewidgets.dev") to see the ID's in the right list.
+ID structure might be different between countries. The Color class and the instructions should always match, but there might be differences between different countries. When adding a map check how the ID is returned. Or open the [online example](https://examples.simplewidgets.dev/#/countries_world_map "World Map Example | simplewidgets.dev") to see the ID's in the right list.
 
 ## Use cases
 This packages can be used to visualize data by adding different shades of colors. When pressing a region you might want to show a bottomsheet containing more details.
@@ -58,7 +58,7 @@ Although it it possible to add multiple maps to your app, please read more about
 ## Tips for UI
 1. Wrap the WorldMap in an InteractiveViewer widget.
 
-    Using InteractiveView enables you to zoom in and out on specific countries as done in the [online example](https://countriesworldmap.simplewidgets.dev "World Map Example | simplewidgets.dev"). In the example the InteractiveViewer has a maxScale of 75.
+    Using InteractiveView enables you to zoom in and out on specific countries as done in the [online example](https://examples.simplewidgets.dev/#/countries_world_map "World Map Example | simplewidgets.dev"). In the example the InteractiveViewer has a maxScale of 75.
 
 2. Set the WorldMap to 92% of the available width to make it look more centered.
 
