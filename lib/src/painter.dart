@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '../components/canvas/touchy_canvas.dart';
+import '../countries_world_map.dart';
 
 /// This painter will paint a world map with all///
 /// Giving countries a different color based on a data set can help visualize data.
@@ -16,8 +17,7 @@ class SimpleMapPainter extends CustomPainter {
   final void Function(String id, String name, TapUpDetails tapUpDetails)
       callback;
 
-  final PaintingStyle? paintingStyle;
-  final double? borderWidth;
+  final CountryBorder? countryBorder;
 
   const SimpleMapPainter({
     required this.instructions,
@@ -25,8 +25,7 @@ class SimpleMapPainter extends CustomPainter {
     this.colors,
     required this.context,
     required this.callback,
-    this.paintingStyle,
-    this.borderWidth,
+    this.countryBorder,
   });
 
   @override
@@ -60,16 +59,24 @@ class SimpleMapPainter extends CustomPainter {
         }
       }
 
-      // Add some color
-      String uniqueID = countryPathList[i].uniqueID;
-      Paint paint = Paint()..style = paintingStyle ?? PaintingStyle.fill;
-      paint.strokeWidth = borderWidth ?? 1;
-      paint.color = colors?[uniqueID] ?? defaultColor;
+      final onTapUp = (tabdetail) => callback(
+            countryPathList[i].uniqueID,
+            countryPathList[i].name,
+            tabdetail,
+          );
 
-      // Draw to canvas
-      canvas.drawPath(path, paint,
-          onTapUp: (tabdetail) => callback(
-              countryPathList[i].uniqueID, countryPathList[i].name, tabdetail));
+      // Draw country body
+      String uniqueID = countryPathList[i].uniqueID;
+      Paint paint = Paint()..color = colors?[uniqueID] ?? defaultColor;
+      canvas.drawPath(path, paint, onTapUp: onTapUp);
+
+      // Draw country border
+      if (countryBorder != null) {
+        paint.color = countryBorder!.color;
+        paint.strokeWidth = countryBorder!.width;
+        paint.style = PaintingStyle.stroke;
+        canvas.drawPath(path, paint, onTapUp: onTapUp);
+      }
     }
   }
 
@@ -115,3 +122,5 @@ class SimpleMapInstruction {
         uniqueID: json['u'], name: json['n'], instructions: paths);
   }
 }
+
+

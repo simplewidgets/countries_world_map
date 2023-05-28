@@ -9,7 +9,7 @@ import 'painter.dart';
 class SimpleMap extends StatelessWidget {
   final String instructions;
 
-  final PaintingStyle? paintingStyle;
+  final CountryBorder? countryBorder;
 
   /// Default color for all countries. If not provided the default Color will be grey.
   final Color? defaultColor;
@@ -33,7 +33,7 @@ class SimpleMap extends StatelessWidget {
     this.colors,
     this.callback,
     this.fit,
-    this.paintingStyle,
+    this.countryBorder,
     Key? key,
   }) : super(key: key);
 
@@ -61,10 +61,20 @@ class SimpleMap extends StatelessWidget {
                             callback!(id, name, tapdetails);
                           }
                         },
-                        paintingStyle: paintingStyle,
+                        countryBorder: countryBorder,
                         colors: colors,
                         defaultColor: defaultColor ?? Colors.grey),
                   ))),
     );
   }
+}
+
+class CountryBorder {
+  final Color color;
+  final double width;
+
+  const CountryBorder({
+    required this.color,
+    this.width = 1,
+  });
 }
