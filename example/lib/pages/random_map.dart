@@ -3,14 +3,14 @@ import 'package:countries_world_map/countries_world_map.dart';
 import 'package:countries_world_map/data/maps/world_map.dart';
 import 'package:flutter/material.dart';
 
-class RandomWorldMapGenrator extends StatefulWidget {
-  RandomWorldMapGenrator({Key? key}) : super(key: key);
+class RandomWorldMapGenerator extends StatefulWidget {
+  RandomWorldMapGenerator({Key? key}) : super(key: key);
 
   @override
-  _RandomWorldMapGenratorState createState() => _RandomWorldMapGenratorState();
+  _RandomWorldMapGeneratorState createState() => _RandomWorldMapGeneratorState();
 }
 
-class _RandomWorldMapGenratorState extends State<RandomWorldMapGenrator> {
+class _RandomWorldMapGeneratorState extends State<RandomWorldMapGenerator> {
   List<Color> colors = [
     Colors.indigo.shade900,
     Colors.blue,

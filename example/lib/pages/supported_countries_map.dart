@@ -35,6 +35,7 @@ class _SupportedCountriesMapState extends State<SupportedCountriesMap> {
                     callback: (id, name, tapdetails) {
                       goToCountry(id);
                     },
+                    countryBorder: CountryBorder(color: Colors.white),
                     colors: SMapWorldColors(
                       eT: Colors.green,
                       aR: Colors.green,

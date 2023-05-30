@@ -58,7 +58,7 @@ class _MyHomePageState extends State<MyHomePage>
               controller: controller,
               children: [
                 SupportedCountriesMap(),
-                RandomWorldMapGenrator(),
+                RandomWorldMapGenerator(),
                 // AfricaContinent()
               ]),
         ));
