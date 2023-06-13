@@ -7,7 +7,8 @@ class RandomWorldMapGenerator extends StatefulWidget {
   RandomWorldMapGenerator({Key? key}) : super(key: key);
 
   @override
-  _RandomWorldMapGeneratorState createState() => _RandomWorldMapGeneratorState();
+  _RandomWorldMapGeneratorState createState() =>
+      _RandomWorldMapGeneratorState();
 }
 
 class _RandomWorldMapGeneratorState extends State<RandomWorldMapGenerator> {
@@ -45,7 +46,8 @@ class _RandomWorldMapGeneratorState extends State<RandomWorldMapGenerator> {
                     width: MediaQuery.of(context).size.width * 0.92,
                     // Actual widget from the Countries_world_map package.
                     child: SimpleMap(
-                      instructions: SMapWorld.instructions,
+                      countryBorder: CountryBorder(color: Colors.white),
+                      instructions: SMapWorld.instructionsMercator,
                       callback: (id, name, tabDetails) {
                         print(id + name);
                       },

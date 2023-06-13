@@ -1,3 +1,7 @@
+## 1.1.0
+New mercator world map and the ability to add border colors to each map. 
+Special thanks to [@cgaisl](https://github.com/cgaisl "GitHub") for this contribution.
+
 ## 1.0.1
 Added required changes for 140 pub points.
 
