@@ -1,3 +1,4 @@
+import 'package:countries_world_map/countries_world_map.dart';
 import 'package:example/pages/random_map.dart';
 import 'package:example/pages/supported_countries_map.dart';
 import 'package:flutter/material.dart';
@@ -16,7 +17,105 @@ class SMapExampleApp extends StatelessWidget {
         theme: ThemeData(
             primarySwatch: Colors.blue,
             visualDensity: VisualDensity.adaptivePlatformDensity),
-        home: MyHomePage());
+        // home: MyHomePage());
+        home: Scaffold(
+            body: Center(
+                child: SimpleMap(
+          markers: [
+            // PARIS  1.088   |  9.726    | 51.089
+            // SimpleMapMarker(
+            //     markerSize: Size(16, 16),
+            //     latLong: LatLong(latitude: 48.864716, longitude: 2.349014),
+            //     marker: Icon(
+            //       Icons.circle_outlined,
+            //       color: Colors.green,
+            //       size: 16,
+            //     )),
+
+            // BERLIN  1.04  |   7.788   |  55.057
+            // SimpleMapMarker(
+            //     markerSize: Size(16, 16),
+            //     latLong: LatLong(latitude: 52.520008, longitude: 13.404954),
+            //     marker: Icon(
+            //       Icons.circle_outlined,
+            //       color: Colors.green,
+            //       size: 16,
+            //     )),
+
+            // LONDON  1.02   |   11.683   |   60.846
+            // SimpleMapMarker(
+            //     markerSize: Size(16, 16),
+            //     latLong: LatLong(latitude: 51.507351, longitude: -0.127758),
+            //     marker: Icon(
+            //       Icons.circle_outlined,
+            //       color: Colors.green,
+            //       size: 16,
+            //     )),
+
+            // // BOGOTA
+            // SimpleMapMarker(
+            //     markerSize: Size(16, 16),
+            //     latLong: LatLong(latitude: 4.710989, longitude: -74.072092),
+            //     marker: Icon(
+            //       Icons.circle_outlined,
+            //       color: Colors.green,
+            //       size: 16,
+            //     )),
+
+            // // NEW YORK
+
+            // SimpleMapMarker(
+            //     markerSize: Size(16, 16),
+            //     latLong: LatLong(latitude: 40.730610, longitude: -73.935242),
+            //     marker: Icon(
+            //       Icons.circle_outlined,
+            //       color: Colors.green,
+            //       size: 16,
+            //     )),
+
+            // // TOKYO
+            // SimpleMapMarker(
+            //     markerSize: Size(16, 16),
+            //     latLong: LatLong(latitude: 35.652832, longitude: 139.839478),
+            //     marker: Icon(
+            //       Icons.circle_outlined,
+            //       color: Colors.green,
+            //       size: 16,
+            //     )),
+
+            // // TORONTO
+            SimpleMapMarker(
+                markerSize: Size(16, 16),
+                latLong: LatLong(latitude: 43.651070, longitude: -79.347015),
+                marker: Icon(
+                  Icons.circle_outlined,
+                  color: Colors.green,
+                  size: 16,
+                )),
+          ],
+          defaultColor: Colors.grey.shade300,
+          // key: Key(properties.toString()),
+          // colors: keyValuesPaires,
+          instructions: SMapCanada.instructions,
+          callback: (id, name, tapDetails) {
+            print('id: $id, name: $name');
+          },
+          // callback: (id, name, tapDetails) {
+          //   setState(() {
+          //     state = name;
+
+          //     int i = properties
+          //         .indexWhere((element) => element['id'] == id);
+
+          //     properties[i]['color'] =
+          //         properties[i]['color'] == Colors.green
+          //             ? null
+          //             : Colors.green;
+          //     keyValuesPaires[properties[i]['id']] =
+          //         properties[i]['color'];
+          //   });
+          // },
+        ))));
   }
 }
 

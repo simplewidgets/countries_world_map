@@ -6,7 +6,7 @@ import '../countries_world_map.dart';
 /// Giving countries a different color based on a data set can help visualize data.
 
 class SimpleMapPainter extends CustomPainter {
-  final List<Map<String, dynamic>> instructions;
+  final List<Map<String, dynamic>> drawingInstructions;
 
   /// This Color is used for all the countries that have no custom color
   final Color defaultColor;
@@ -20,7 +20,7 @@ class SimpleMapPainter extends CustomPainter {
   final CountryBorder? countryBorder;
 
   const SimpleMapPainter({
-    required this.instructions,
+    required this.drawingInstructions,
     required this.defaultColor,
     this.colors,
     required this.context,
@@ -47,7 +47,7 @@ class SimpleMapPainter extends CustomPainter {
     // Get country paths from Json
     // List countryPaths = json.decode(jsonData);
     List<SimpleMapInstruction> countryPathList = <SimpleMapInstruction>[];
-    for (var path in instructions) {
+    for (var path in drawingInstructions) {
       countryPathList.add(SimpleMapInstruction.fromJson(path));
     }
 

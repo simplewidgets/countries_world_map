@@ -258,6 +258,17 @@ class _CountryPageState extends State<CountryPage> {
                     Expanded(
                         child: Center(
                             child: SimpleMap(
+                      markers: [
+                        SimpleMapMarker(
+                            markerSize: Size(16, 16),
+                            latLong: LatLong(
+                                latitude: 35.652832, longitude: 139.839478),
+                            marker: Icon(
+                              Icons.circle_outlined,
+                              color: Colors.green,
+                              size: 16,
+                            )),
+                      ],
                       defaultColor: Colors.grey.shade300,
                       key: Key(properties.toString()),
                       colors: keyValuesPaires,

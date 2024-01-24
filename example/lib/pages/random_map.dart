@@ -51,6 +51,17 @@ class _RandomWorldMapGeneratorState extends State<RandomWorldMapGenerator> {
                       callback: (id, name, tabDetails) {
                         print(id + name);
                       },
+                      markers: [
+                        SimpleMapMarker(
+                            markerSize: Size(30, 30),
+                            latLong:
+                                LatLong(latitude: 52.03333, longitude: 5.65833),
+                            marker: Icon(
+                              Icons.location_on,
+                              color: Colors.green,
+                              size: 30,
+                            )),
+                      ],
                       colors: SMapWorldColors(
                         aD: colors[_random.nextInt(8)],
                         aE: colors[_random.nextInt(8)],
