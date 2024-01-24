@@ -1,3 +1,6 @@
+## 1.1.1
+Update README.md to reflect correct example link as mentioned here: [Github Issue: example website is down](https://github.com/simplewidgets/countries_world_map/issues/18)
+
 ## 1.1.0
 New mercator world map and the ability to add border colors to each map. 
 Special thanks to [@cgaisl](https://github.com/cgaisl "GitHub") for this contribution.

@@ -32,6 +32,18 @@ class SimpleMapPainter extends CustomPainter {
   void paint(Canvas c, Size s) {
     TouchyCanvas canvas = TouchyCanvas(context, c);
 
+    // Draw background Path
+    Path backgroundPath = Path();
+    backgroundPath.moveTo(0, 0);
+    backgroundPath.lineTo(s.width, 0);
+    backgroundPath.lineTo(s.width, s.height);
+    backgroundPath.lineTo(0, s.height);
+    canvas.drawPath(
+      backgroundPath,
+      Paint()..color = Colors.transparent,
+      onTapUp: (tabdetail) => callback("", "", tabdetail),
+    );
+
     // Get country paths from Json
     // List countryPaths = json.decode(jsonData);
     List<SimpleMapInstruction> countryPathList = <SimpleMapInstruction>[];
@@ -122,5 +134,3 @@ class SimpleMapInstruction {
         uniqueID: json['u'], name: json['n'], instructions: paths);
   }
 }
-
-

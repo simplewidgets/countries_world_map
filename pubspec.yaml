@@ -1,6 +1,6 @@
 name: countries_world_map
 description: A simple widget for a customizable WorldMap (or any country of choice). Which can all be colored based on the ISO two-letter countrycodes (or state ID).
-version: 1.1.0
+version: 1.1.1
 homepage: https://github.com/simplewidgets/countries_world_map
 
 environment:

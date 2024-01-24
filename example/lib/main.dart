@@ -64,3 +64,129 @@ class _MyHomePageState extends State<MyHomePage>
         ));
   }
 }
+
+// class StackedWidgetTest extends StatelessWidget {
+//   const StackedWidgetTest({Key? key}) : super(key: key);
+
+//   @override
+//   Widget build(BuildContext context) {
+//     Map map = jsonDecode(SMapWorld.instructions);
+
+//     double width = double.parse(map['w'].toString());
+//     double height = double.parse(map['h'].toString());
+//     List<Map<String, dynamic>> instructions =
+//         List<Map<String, dynamic>>.from(map['i']);
+
+//     List<SimpleMapInstruction> countryPathList = <SimpleMapInstruction>[];
+//     for (var path in instructions) {
+//       countryPathList.add(SimpleMapInstruction.fromJson(path));
+//     }
+
+//     return FittedBox(
+//       fit: BoxFit.contain,
+//       child: SizedBox(
+//         width: width,
+//         height: height,
+//         child: Stack(
+//           children: [
+//             for (int i = 0; i < countryPathList.length; i++)
+//               ClipPath(
+//                   clipper: _BuildClipper(countryPathList[i].instructions),
+//                   child: PhysicalModel(
+//                     child: SizedBox(
+//                         width: double.infinity, height: double.infinity),
+//                     color: Colors.green,
+//                     elevation: 4,
+//                     shadowColor: Colors.black,
+//                   )),
+//             // ClipPath(
+//             //     clipper: _BuildClipper(countryPathList[i].instructions),
+//             //     child: Container(
+//             //       decoration: BoxDecoration(
+//             //           image: DecorationImage(
+//             //               fit: BoxFit.cover,
+//             //               image: NetworkImage(
+//             //                   'https://flagcdn.com/w2560/${countryPathList[i].uniqueID.replaceAll('AF-', '').toLowerCase()}.png'))),
+//             //     )),
+//           ],
+//         ),
+//       ),
+//     );
+//   }
+// }
+
+// class _BuildClipper extends CustomClipper<Path> {
+//   final List<String> instructions;
+
+//   _BuildClipper(this.instructions);
+
+//   @override
+//   Path getClip(Size size) {
+//     Path path = Path();
+
+//     // Read path instructions and start drawing
+
+//     // Read path instructions and start drawing
+//     for (int j = 0; j < instructions.length; j++) {
+//       String instruction = instructions[j];
+//       if (instruction == "c") {
+//         path.close();
+//       } else {
+//         List<String> coordinates = instruction.substring(1).split(',');
+//         double x = double.parse(coordinates[0]);
+//         double y = double.parse(coordinates[1]);
+
+//         if (instruction[0] == 'm') path.moveTo(size.width * x, size.height * y);
+//         if (instruction[0] == 'l') path.lineTo(size.width * x, size.height * y);
+//       }
+//     }
+
+//     return path;
+//   }
+
+//   @override
+//   bool shouldReclip(CustomClipper<Path> oldClipper) {
+//     return true;
+//   }
+// }
+
+// class SimpleMapInstruction {
+//   /// uniqueID of the territory being drawn
+//   String uniqueID;
+
+//   /// Name of the territory being drawn
+//   String name;
+
+//   /// List of instructions to draw the territory
+//   List<String> instructions;
+
+//   SimpleMapInstruction({
+//     required this.uniqueID,
+//     required this.instructions,
+//     required this.name,
+//   });
+
+//   // To Json
+//   Map<String, dynamic> toJson() {
+//     final Map<String, dynamic> data = <String, dynamic>{
+//       "\"n\"": "\"$name\"",
+//       "\"u\"": "\"$uniqueID\"",
+//       "\"i\"": instructions,
+//     };
+//     return data;
+//   }
+
+//   // From Json
+//   factory SimpleMapInstruction.fromJson(Map<String, dynamic> json) {
+//     List<String> paths = <String>[];
+
+//     List jsonPaths = json['i'];
+
+//     for (int i = 0; i < jsonPaths.length; i++) {
+//       paths.add(jsonPaths[i]);
+//     }
+
+//     return SimpleMapInstruction(
+//         uniqueID: json['u'], name: json['n'], instructions: paths);
+//   }
+// }
