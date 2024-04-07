@@ -1,7 +1,7 @@
 library countries_world_map;
 
 export 'src/map.dart';
-export 'src/helper.dart';
+export 'src/helpers/map_attributes.dart';
 
 // Export continents
 // export 'data/maps/continents/africa.dart';

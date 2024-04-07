@@ -1,3 +1,18 @@
+## 1.2.0 
+Added mouse hover support to the SimpleMap widget.
+Simply add the onHover parameter to get started!
+```
+onHover: (id, name, isHovering) {
+    setState(() {
+        if (isHovering) {
+            colors[id] = Colors.blue;
+        } else {
+            colors.remove(id);
+        }
+    });
+},
+```
+
 ## 1.1.1
 Update README.md to reflect correct example link as mentioned here: [Github Issue: example website is down](https://github.com/simplewidgets/countries_world_map/issues/18)
 

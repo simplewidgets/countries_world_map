@@ -273,6 +273,18 @@ class _CountryPageState extends State<CountryPage> {
                       key: Key(properties.toString()),
                       colors: keyValuesPaires,
                       instructions: instruction,
+                      onHover: ((id, name, isHovering) {
+                        if (isHovering) {
+                          setState(() {
+                            keyValuesPaires[id] = Colors.blue;
+                          });
+                        } else {
+                          setState(() {
+                            keyValuesPaires[id] = properties.firstWhere(
+                                (element) => element['id'] == id)['color'];
+                          });
+                        }
+                      }),
                       callback: (id, name, tapDetails) {
                         setState(() {
                           state = name;

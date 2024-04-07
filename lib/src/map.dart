@@ -1,4 +1,6 @@
 import 'package:countries_world_map/countries_world_map.dart';
+import 'package:countries_world_map/src/helpers/interactive_map_item.dart';
+import 'package:countries_world_map/src/helpers/map_instructions.dart';
 import 'package:flutter/material.dart';
 import '../components/canvas/touch_detector.dart';
 import 'painter.dart';
@@ -17,6 +19,8 @@ class SimpleMap extends StatelessWidget {
 
   final List<SimpleMapMarker>? markers;
 
+  final void Function(String id, String name, bool isHovering)? onHover;
+
   /// Triggered when a country is tapped.
   /// The first parameter is the isoCode of the country that was tapped.
   /// The second parameter is the TapUpDetails of the tap.
@@ -29,6 +33,7 @@ class SimpleMap extends StatelessWidget {
 
   const SimpleMap({
     required this.instructions,
+    this.onHover,
     this.markers,
     this.defaultColor,
     this.colors,
@@ -44,10 +49,14 @@ class SimpleMap extends StatelessWidget {
 
     MapAttributes attributes = MapAttributes(instructions);
 
-    // double width = double.parse(map['w'].toString());
-    // double height = double.parse(map['h'].toString());
-    // List<Map<String, dynamic>> instruction =
-    //     List<Map<String, dynamic>>.from(map['i']);
+    List<SimpleMapInstruction> countryPathList = <SimpleMapInstruction>[];
+
+    // Only perfom this calculation if onHover is not null
+    if (onHover != null) {
+      for (var path in attributes.drawingInstructions) {
+        countryPathList.add(SimpleMapInstruction.fromJson(path));
+      }
+    }
 
     return FittedBox(
       fit: fit ?? BoxFit.contain,
@@ -55,23 +64,37 @@ class SimpleMap extends StatelessWidget {
         width: attributes.mapWidth,
         height: attributes.mapHeight,
         child: Stack(children: [
-          RepaintBoundary(
-              child: CanvasTouchDetector(
-                  builder: (context) => CustomPaint(
-                        isComplex: true,
-                        size: Size(attributes.mapWidth, attributes.mapHeight),
-                        painter: SimpleMapPainter(
-                            context: context,
-                            drawingInstructions: attributes.drawingInstructions,
-                            callback: (id, name, tapdetails) {
-                              if (callback != null) {
-                                callback!(id, name, tapdetails);
-                              }
-                            },
-                            countryBorder: countryBorder,
-                            colors: colors,
-                            defaultColor: defaultColor ?? Colors.grey),
-                      ))),
+          if (onHover == null)
+            RepaintBoundary(
+                child: CanvasTouchDetector(
+                    builder: (context) => CustomPaint(
+                          isComplex: true,
+                          size: Size(attributes.mapWidth, attributes.mapHeight),
+                          painter: SimpleMapPainter(
+                              context: context,
+                              drawingInstructions:
+                                  attributes.drawingInstructions,
+                              callback: (id, name, tapdetails) {
+                                if (callback != null) {
+                                  callback!(id, name, tapdetails);
+                                }
+                              },
+                              countryBorder: countryBorder,
+                              colors: colors,
+                              defaultColor: defaultColor ?? Colors.grey),
+                        ))),
+          if (onHover != null)
+            for (int i = 0; i < countryPathList.length; i++)
+              InteractiveMapItem(
+                  key: Key(countryPathList[i].uniqueID),
+                  callback: callback,
+                  onHover: onHover,
+                  color: colors?[countryPathList[i].uniqueID],
+                  defaultColor: defaultColor,
+                  countryPathList: countryPathList,
+                  i: i),
+
+          // Add markers to the map
           for (SimpleMapMarker mark in markers ?? [])
             Builder(
               builder: (context) {
