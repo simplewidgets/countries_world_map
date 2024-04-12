@@ -2,118 +2,118 @@ import 'package:flutter/material.dart';
 
 class SMapIndonesiaColors {
   /// Aceh
-  final Color? idAC;
+  Color? idAC;
 
   /// Bali
-  final Color? idBA;
+  Color? idBA;
 
   /// Bangka Belitung
-  final Color? idBB;
+  Color? idBB;
 
   /// Bengkulu
-  final Color? idBE;
+  Color? idBE;
 
   /// Banten
-  final Color? idBT;
+  Color? idBT;
 
   /// Gorontalo
-  final Color? idGO;
+  Color? idGO;
 
   /// Jambi
-  final Color? idJA;
+  Color? idJA;
 
   /// Jawa Barat
-  final Color? idJB;
+  Color? idJB;
 
   /// Jawa Timur
-  final Color? idJI;
+  Color? idJI;
 
   /// Jakarta Raya
-  final Color? idJK;
+  Color? idJK;
 
   /// Jawa Tengah
-  final Color? idJT;
+  Color? idJT;
 
   /// Kalimantan Barat
-  final Color? idKB;
+  Color? idKB;
 
   /// Kalimantan Timur
-  final Color? idKI;
+  Color? idKI;
 
   /// Kepulauan Riau
-  final Color? idKR;
+  Color? idKR;
 
   /// Kalimantan Selatan
-  final Color? idKS;
+  Color? idKS;
 
   /// Kalimantan Tengah
-  final Color? idKT;
+  Color? idKT;
 
   /// Kalimantan Utara
-  final Color? idKU;
+  Color? idKU;
 
   /// Lampung
-  final Color? idLA;
+  Color? idLA;
 
   /// Maluku
-  final Color? idMA;
+  Color? idMA;
 
   /// Maluku Utara
-  final Color? idMU;
+  Color? idMU;
 
   /// Nusa Tenggara Barat
-  final Color? idNB;
+  Color? idNB;
 
   /// Nusa Tenggara Timur
-  final Color? idNT;
+  Color? idNT;
 
   /// Papua
-  final Color? idPA;
+  Color? idPA;
 
   /// Papua Barat
-  final Color? idPB;
+  Color? idPB;
 
   /// Riau
-  final Color? idRI;
+  Color? idRI;
 
   /// Sulawesi Utara
-  final Color? idSA;
+  Color? idSA;
 
   /// Sumatera Barat
-  final Color? idSB;
+  Color? idSB;
 
   /// Sulawesi Tenggara
-  final Color? idSG;
+  Color? idSG;
 
   /// Sulawesi Selatan
-  final Color? idSN;
+  Color? idSN;
 
   /// Sulawesi Barat
-  final Color? idSR;
+  Color? idSR;
 
   /// Sumatera Selatan
-  final Color? idSS;
+  Color? idSS;
 
   /// Sulawesi Tengah
-  final Color? idST;
+  Color? idST;
 
   /// Sumatera Utara
-  final Color? idSU;
+  Color? idSU;
 
   /// Yogyakarta
-  final Color? idYO;
+  Color? idYO;
 
   /// Timor-Leste
-  final Color? tlTL;
+  Color? tlTL;
 
   /// Sabah
-  final Color? my12;
+  Color? my12;
 
   /// Sarawak
-  final Color? my13;
+  Color? my13;
 
   /// Brunei Darussalam
-  final Color? bnBN;
+  Color? bnBN;
   SMapIndonesiaColors({
     this.idAC,
     this.idBA,

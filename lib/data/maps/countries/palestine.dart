@@ -2,55 +2,55 @@ import 'package:flutter/material.dart';
 
 class SMapPalestineColors {
   /// Jericho
-  final Color? psJRH;
+  Color? psJRH;
 
   /// Jenin
-  final Color? psJEN;
+  Color? psJEN;
 
   /// Tulkarm
-  final Color? psTKM;
+  Color? psTKM;
 
   /// Tubas
-  final Color? psTBS;
+  Color? psTBS;
 
   /// Nablus
-  final Color? psNBS;
+  Color? psNBS;
 
   /// Qalqilya
-  final Color? psQQA;
+  Color? psQQA;
 
   /// Salfit
-  final Color? psSLT;
+  Color? psSLT;
 
   /// Ramallah
-  final Color? psRBH;
+  Color? psRBH;
 
   /// Jerusalem
-  final Color? psJEM;
+  Color? psJEM;
 
   /// Bethlehem
-  final Color? psBTH;
+  Color? psBTH;
 
   /// Hebron
-  final Color? psHBN;
+  Color? psHBN;
 
   /// North Gaza
-  final Color? psNGZ;
+  Color? psNGZ;
 
   /// Gaza
-  final Color? psGZA;
+  Color? psGZA;
 
   /// Deir El Balah
-  final Color? psDEB;
+  Color? psDEB;
 
   /// Khan Yunis
-  final Color? psKYS;
+  Color? psKYS;
 
   /// Rafah
-  final Color? psRFH;
+  Color? psRFH;
 
   /// Israel
-  final Color? ilIL;
+  Color? ilIL;
   SMapPalestineColors({
     this.psJRH,
     this.psJEN,

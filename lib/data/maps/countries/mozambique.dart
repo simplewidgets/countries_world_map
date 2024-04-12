@@ -2,37 +2,37 @@ import 'package:flutter/material.dart';
 
 class SMapMozambiqueColors {
   /// Maputo City
-  final Color? mzMPM;
+  Color? mzMPM;
 
   /// Maputo
-  final Color? mzL;
+  Color? mzL;
 
   /// Inhambane
-  final Color? mzI;
+  Color? mzI;
 
   /// Zambezia
-  final Color? mzQ;
+  Color? mzQ;
 
   /// Sofala
-  final Color? mzS;
+  Color? mzS;
 
   /// Gaza
-  final Color? mzG;
+  Color? mzG;
 
   /// Nampula
-  final Color? mzN;
+  Color? mzN;
 
   /// Niassa
-  final Color? mzA;
+  Color? mzA;
 
   /// Cabo Delgado
-  final Color? mzP;
+  Color? mzP;
 
   /// Manica
-  final Color? mzB;
+  Color? mzB;
 
   /// Tete
-  final Color? mzT;
+  Color? mzT;
   SMapMozambiqueColors({
     this.mzMPM,
     this.mzL,

@@ -2,52 +2,52 @@ import 'package:flutter/material.dart';
 
 class SMapUzbekistanColors {
   /// Aral Sea
-  final Color? uzAS;
+  Color? uzAS;
 
   /// Sarvan (Sughd Province, Tajikistan)
-  final Color? tjSU;
+  Color? tjSU;
 
   /// Andijon
-  final Color? uzAN;
+  Color? uzAN;
 
   /// Buxoro
-  final Color? uzBU;
+  Color? uzBU;
 
   /// Farg‘ona
-  final Color? uzFA;
+  Color? uzFA;
 
   /// Jizzax
-  final Color? uzJI;
+  Color? uzJI;
 
   /// Namangan
-  final Color? uzNG;
+  Color? uzNG;
 
   /// Navoiy
-  final Color? uzNW;
+  Color? uzNW;
 
   /// Qashqadaryo
-  final Color? uzQA;
+  Color? uzQA;
 
   /// Qoraqalpog‘iston Respublikasi
-  final Color? uzQR;
+  Color? uzQR;
 
   /// Samarqand
-  final Color? uzSA;
+  Color? uzSA;
 
   /// Sirdaryo
-  final Color? uzSI;
+  Color? uzSI;
 
   /// Surxondaryo
-  final Color? uzSU;
+  Color? uzSU;
 
   /// Toshkent City
-  final Color? uzTK;
+  Color? uzTK;
 
   /// Toshkent
-  final Color? uzTO;
+  Color? uzTO;
 
   /// Xorazm
-  final Color? uzXO;
+  Color? uzXO;
   SMapUzbekistanColors({
     this.uzAS,
     this.tjSU,

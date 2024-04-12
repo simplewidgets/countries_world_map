@@ -2,91 +2,91 @@ import 'package:flutter/material.dart';
 
 class SMapEgyptColors {
   /// Al Iskandarīyah
-  final Color? egALX;
+  Color? egALX;
 
   /// Aswān
-  final Color? egASN;
+  Color? egASN;
 
   /// Asyūţ
-  final Color? egAST;
+  Color? egAST;
 
   /// Al Baḩr al Aḩmar
-  final Color? egBA;
+  Color? egBA;
 
   /// Al Buḩayrah
-  final Color? egBH;
+  Color? egBH;
 
   /// Banī Suwayf
-  final Color? egBNS;
+  Color? egBNS;
 
   /// Al Qāhirah
-  final Color? egC;
+  Color? egC;
 
   /// Ad Daqahlīyah
-  final Color? egDK;
+  Color? egDK;
 
   /// Dumyāţ
-  final Color? egDT;
+  Color? egDT;
 
   /// Al Fayyūm
-  final Color? egFYM;
+  Color? egFYM;
 
   /// Al Gharbīyah
-  final Color? egGH;
+  Color? egGH;
 
   /// Al Jīzah
-  final Color? egGZ;
+  Color? egGZ;
 
   /// Al Ismāٰīlīyah
-  final Color? egIS;
+  Color? egIS;
 
   /// Janūb Sīnā'
-  final Color? egJS;
+  Color? egJS;
 
   /// Al Qalyūbīyah
-  final Color? egKB;
+  Color? egKB;
 
   /// Kafr ash Shaykh
-  final Color? egKFS;
+  Color? egKFS;
 
   /// Qinā
-  final Color? egKN;
+  Color? egKN;
 
   /// Al Uqşur
-  final Color? egLX;
+  Color? egLX;
 
   /// Al Minyā
-  final Color? egMN;
+  Color? egMN;
 
   /// Al Minūfīyah
-  final Color? egMNF;
+  Color? egMNF;
 
   /// Maţrūḩ
-  final Color? egMT;
+  Color? egMT;
 
   /// Būr Saٰīd
-  final Color? egPTS;
+  Color? egPTS;
 
   /// Sūhāj
-  final Color? egSHG;
+  Color? egSHG;
 
   /// Ash Sharqīyah
-  final Color? egSHR;
+  Color? egSHR;
 
   /// Shamāl Sīnā'
-  final Color? egSIN;
+  Color? egSIN;
 
   /// Disputed Territory
-  final Color? egTER;
+  Color? egTER;
 
   /// Hala'Ib Triangle
-  final Color? egHT;
+  Color? egHT;
 
   /// As Suways
-  final Color? egSUZ;
+  Color? egSUZ;
 
   /// Al Wādī al Jadīd
-  final Color? egWAD;
+  Color? egWAD;
   SMapEgyptColors({
     this.egALX,
     this.egASN,

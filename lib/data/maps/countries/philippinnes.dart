@@ -2,247 +2,247 @@ import 'package:flutter/material.dart';
 
 class SMapPhilippinesColors {
   /// Surigao del Sur
-  final Color? phSUR;
+  Color? phSUR;
 
   /// Tarlac
-  final Color? phTAR;
+  Color? phTAR;
 
   /// Tawi-Tawi
-  final Color? phTAW;
+  Color? phTAW;
 
   /// Zambales
-  final Color? phZMB;
+  Color? phZMB;
 
   /// Zamboanga del Norte
-  final Color? phZAN;
+  Color? phZAN;
 
   /// Zamboanga Sibugay
-  final Color? phZSI;
+  Color? phZSI;
 
   /// Abra
-  final Color? phABR;
+  Color? phABR;
 
   /// Agusan del Norte
-  final Color? phAGN;
+  Color? phAGN;
 
   /// Agusan del Sur
-  final Color? phAGS;
+  Color? phAGS;
 
   /// Aklan
-  final Color? phAKL;
+  Color? phAKL;
 
   /// Albay
-  final Color? phALB;
+  Color? phALB;
 
   /// Antique
-  final Color? phANT;
+  Color? phANT;
 
   /// Apayao
-  final Color? phAPA;
+  Color? phAPA;
 
   /// Aurora
-  final Color? phAUR;
+  Color? phAUR;
 
   /// Bataan
-  final Color? phBAN;
+  Color? phBAN;
 
   /// Batanes
-  final Color? phBTN;
+  Color? phBTN;
 
   /// Batangas
-  final Color? phBTG;
+  Color? phBTG;
 
   /// Benguet
-  final Color? phBEN;
+  Color? phBEN;
 
   /// Biliran
-  final Color? phBIL;
+  Color? phBIL;
 
   /// Bohol
-  final Color? phBOH;
+  Color? phBOH;
 
   /// Bukidnon
-  final Color? phBUK;
+  Color? phBUK;
 
   /// Bulacan
-  final Color? phBUL;
+  Color? phBUL;
 
   /// Cagayan
-  final Color? phCAG;
+  Color? phCAG;
 
   /// Camarines Norte
-  final Color? phCAN;
+  Color? phCAN;
 
   /// Camarines Sur
-  final Color? phCAS;
+  Color? phCAS;
 
   /// Camiguin
-  final Color? phCAM;
+  Color? phCAM;
 
   /// Capiz
-  final Color? phCAP;
+  Color? phCAP;
 
   /// Catanduanes
-  final Color? phCAT;
+  Color? phCAT;
 
   /// Cavite
-  final Color? phCAV;
+  Color? phCAV;
 
   /// Cebu
-  final Color? phCEB;
+  Color? phCEB;
 
   /// Compostela Valley
-  final Color? phCOM;
+  Color? phCOM;
 
   /// Davao del Norte
-  final Color? phDAV;
+  Color? phDAV;
 
   /// Davao del Sur
-  final Color? phDAS;
+  Color? phDAS;
 
   /// Davao Oriental
-  final Color? phDAO;
+  Color? phDAO;
 
   /// Dinagat Islands
-  final Color? phDIN;
+  Color? phDIN;
 
   /// Eastern Samar
-  final Color? phEAS;
+  Color? phEAS;
 
   /// Guimaras
-  final Color? phGUI;
+  Color? phGUI;
 
   /// Ifugao
-  final Color? phIFU;
+  Color? phIFU;
 
   /// Ilocos Norte
-  final Color? phILN;
+  Color? phILN;
 
   /// Ilocos Sur
-  final Color? phILS;
+  Color? phILS;
 
   /// Iloilo
-  final Color? phILI;
+  Color? phILI;
 
   /// Isabela
-  final Color? phISA;
+  Color? phISA;
 
   /// Kalinga
-  final Color? phKAL;
+  Color? phKAL;
 
   /// La Union
-  final Color? phLUN;
+  Color? phLUN;
 
   /// Laguna
-  final Color? phLAG;
+  Color? phLAG;
 
   /// Lanao del Norte
-  final Color? phLAN;
+  Color? phLAN;
 
   /// Lanao del Sur
-  final Color? phLAS;
+  Color? phLAS;
 
   /// Leyte
-  final Color? phLEY;
+  Color? phLEY;
 
   /// Maguindanao
-  final Color? phMG;
+  Color? phMG;
 
   /// Marinduque
-  final Color? phMAD;
+  Color? phMAD;
 
   /// Masbate
-  final Color? phMAS;
+  Color? phMAS;
 
   /// Metropolitan Manila
-  final Color? phMNL;
+  Color? phMNL;
 
   /// Misamis Occidental
-  final Color? phMSC;
+  Color? phMSC;
 
   /// Misamis Oriental
-  final Color? phMSR;
+  Color? phMSR;
 
   /// Mountain Province
-  final Color? phMOU;
+  Color? phMOU;
 
   /// Negros Occidental
-  final Color? phNEC;
+  Color? phNEC;
 
   /// Negros Oriental
-  final Color? phNER;
+  Color? phNER;
 
   /// Cotabato
-  final Color? phNCO;
+  Color? phNCO;
 
   /// Northern Samar
-  final Color? phNSA;
+  Color? phNSA;
 
   /// Nueva Ecija
-  final Color? phNUE;
+  Color? phNUE;
 
   /// Nueva Vizcaya
-  final Color? phNUV;
+  Color? phNUV;
 
   /// Mindoro Occidental
-  final Color? phMDC;
+  Color? phMDC;
 
   /// Mindoro Oriental
-  final Color? phMDR;
+  Color? phMDR;
 
   /// Palawan
-  final Color? phPLW;
+  Color? phPLW;
 
   /// Pampanga
-  final Color? phPAM;
+  Color? phPAM;
 
   /// Pangasinan
-  final Color? phPAN;
+  Color? phPAN;
 
   /// Quezon
-  final Color? phQUE;
+  Color? phQUE;
 
   /// Quirino
-  final Color? phQUI;
+  Color? phQUI;
 
   /// Rizal
-  final Color? phRIZ;
+  Color? phRIZ;
 
   /// Romblon
-  final Color? phROM;
+  Color? phROM;
 
   /// Samar
-  final Color? phWSA;
+  Color? phWSA;
 
   /// Sarangani
-  final Color? phSAR;
+  Color? phSAR;
 
   /// Siquijor
-  final Color? phSIG;
+  Color? phSIG;
 
   /// Sorsogon
-  final Color? phSOR;
+  Color? phSOR;
 
   /// South Cotabato
-  final Color? phSCO;
+  Color? phSCO;
 
   /// Southern Leyte
-  final Color? phSLE;
+  Color? phSLE;
 
   /// Sultan Kudarat
-  final Color? phSUK;
+  Color? phSUK;
 
   /// Sulu
-  final Color? phSLU;
+  Color? phSLU;
 
   /// Surigao del Norte
-  final Color? phSUN;
+  Color? phSUN;
 
   /// Basilan
-  final Color? phBAS;
+  Color? phBAS;
 
   /// Zamboanga del Sur
-  final Color? phZAS;
+  Color? phZAS;
   SMapPhilippinesColors({
     this.phSUR,
     this.phTAR,

@@ -2,40 +2,40 @@ import 'package:flutter/material.dart';
 
 class SMapCongoBrazzavilleColors {
   /// Lékoumou
-  final Color? cg2;
+  Color? cg2;
 
   /// Kouilou
-  final Color? cg5;
+  Color? cg5;
 
   /// Likouala
-  final Color? cg7;
+  Color? cg7;
 
   /// Cuvette
-  final Color? cg8;
+  Color? cg8;
 
   /// Niari
-  final Color? cg9;
+  Color? cg9;
 
   /// Bouenza
-  final Color? cg11;
+  Color? cg11;
 
   /// Pool
-  final Color? cg12;
+  Color? cg12;
 
   /// Sangha
-  final Color? cg13;
+  Color? cg13;
 
   /// Plateaux
-  final Color? cg14;
+  Color? cg14;
 
   /// Cuvette-Ouest
-  final Color? cg15;
+  Color? cg15;
 
   /// Pointe-Noire
-  final Color? cg16;
+  Color? cg16;
 
   /// Brazzaville
-  final Color? cgBZV;
+  Color? cgBZV;
   SMapCongoBrazzavilleColors({
     this.cg2,
     this.cg5,

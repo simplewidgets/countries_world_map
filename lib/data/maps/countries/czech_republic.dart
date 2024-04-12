@@ -2,46 +2,46 @@ import 'package:flutter/material.dart';
 
 class SMapCzechRepublicColors {
   /// Jihočeský
-  final Color? czJC;
+  Color? czJC;
 
   /// Jihomoravský
-  final Color? czJM;
+  Color? czJM;
 
   /// Karlovarský
-  final Color? czKA;
+  Color? czKA;
 
   /// Královéhradecký
-  final Color? czKR;
+  Color? czKR;
 
   /// Liberecký
-  final Color? czLI;
+  Color? czLI;
 
   /// Moravskoslezský
-  final Color? czMO;
+  Color? czMO;
 
   /// Olomoucký
-  final Color? czOL;
+  Color? czOL;
 
   /// Pardubický
-  final Color? czPA;
+  Color? czPA;
 
   /// Zlínský
-  final Color? czZL;
+  Color? czZL;
 
   /// Plzeňský
-  final Color? czPL;
+  Color? czPL;
 
   /// Prague
-  final Color? czPR;
+  Color? czPR;
 
   /// Středočeský
-  final Color? czST;
+  Color? czST;
 
   /// Ústecký
-  final Color? czUS;
+  Color? czUS;
 
   /// Vysočina
-  final Color? czVY;
+  Color? czVY;
   SMapCzechRepublicColors({
     this.czJC,
     this.czJM,

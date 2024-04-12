@@ -2,67 +2,67 @@ import 'package:flutter/material.dart';
 
 class SMapYemenColors {
   /// Abyān
-  final Color? yeAB;
+  Color? yeAB;
 
   /// 'Adan
-  final Color? yeAD;
+  Color? yeAD;
 
   /// 'Amrān
-  final Color? yeAM;
+  Color? yeAM;
 
   /// Al Bayḑā'
-  final Color? yeBA;
+  Color? yeBA;
 
   /// Aḑ Ḑāli'
-  final Color? yeDA;
+  Color? yeDA;
 
   /// Dhamār
-  final Color? yeDH;
+  Color? yeDH;
 
   /// Ḩaḑramawt
-  final Color? yeHD;
+  Color? yeHD;
 
   /// Ḩajjah
-  final Color? yeHJ;
+  Color? yeHJ;
 
   /// Al Ḩudaydah
-  final Color? yeHU;
+  Color? yeHU;
 
   /// Ibb
-  final Color? yeIB;
+  Color? yeIB;
 
   /// Al Jawf
-  final Color? yeJA;
+  Color? yeJA;
 
   /// Laḩij
-  final Color? yeLA;
+  Color? yeLA;
 
   /// Ma'rib
-  final Color? yeMA;
+  Color? yeMA;
 
   /// Al Mahrah
-  final Color? yeMR;
+  Color? yeMR;
 
   /// Al Maḩwīt
-  final Color? yeMW;
+  Color? yeMW;
 
   /// Raymah
-  final Color? yeRA;
+  Color? yeRA;
 
   /// Amanat Al Asimah
-  final Color? yeSA;
+  Color? yeSA;
 
   /// Şā‘dah
-  final Color? yeSD;
+  Color? yeSD;
 
   /// Shabwah
-  final Color? yeSH;
+  Color? yeSH;
 
   /// Şan‘ā'
-  final Color? yeSN;
+  Color? yeSN;
 
   /// Tā‘izz
-  final Color? yeTA;
+  Color? yeTA;
   SMapYemenColors({
     this.yeAB,
     this.yeAD,

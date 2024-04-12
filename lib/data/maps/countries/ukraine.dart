@@ -2,85 +2,85 @@ import 'package:flutter/material.dart';
 
 class SMapUkraineColors {
   /// Sevastpol' City
-  final Color? ua40;
+  Color? ua40;
 
   /// Crimea
-  final Color? ua43;
+  Color? ua43;
 
   /// Cherkasy
-  final Color? ua71;
+  Color? ua71;
 
   /// Chernihiv
-  final Color? ua74;
+  Color? ua74;
 
   /// Chernivtsi
-  final Color? ua77;
+  Color? ua77;
 
   /// Dnipropetrovs'k
-  final Color? ua12;
+  Color? ua12;
 
   /// Donets'k
-  final Color? ua14;
+  Color? ua14;
 
   /// Ivano-Frankivs'k
-  final Color? ua26;
+  Color? ua26;
 
   /// Kharkiv
-  final Color? ua63;
+  Color? ua63;
 
   /// Kherson
-  final Color? ua65;
+  Color? ua65;
 
   /// Khmel'nyts'kyy
-  final Color? ua68;
+  Color? ua68;
 
   /// Kiev City 1
-  final Color? ua30;
+  Color? ua30;
 
   /// Kiev
-  final Color? ua32;
+  Color? ua32;
 
   /// Kirovohrad
-  final Color? ua35;
+  Color? ua35;
 
   /// Luhans'k
-  final Color? ua09;
+  Color? ua09;
 
   /// L'viv
-  final Color? ua46;
+  Color? ua46;
 
   /// Mykolayiv
-  final Color? ua48;
+  Color? ua48;
 
   /// Odessa
-  final Color? ua51;
+  Color? ua51;
 
   /// Poltava
-  final Color? ua53;
+  Color? ua53;
 
   /// Rivne
-  final Color? ua56;
+  Color? ua56;
 
   /// Sumy
-  final Color? ua59;
+  Color? ua59;
 
   /// Ternopil'
-  final Color? ua61;
+  Color? ua61;
 
   /// Transcarpathia
-  final Color? ua21;
+  Color? ua21;
 
   /// Vinnytsya
-  final Color? ua05;
+  Color? ua05;
 
   /// Volyn
-  final Color? ua07;
+  Color? ua07;
 
   /// Zaporizhzhya
-  final Color? ua23;
+  Color? ua23;
 
   /// Zhytomyr
-  final Color? ua18;
+  Color? ua18;
   SMapUkraineColors({
     this.ua40,
     this.ua43,

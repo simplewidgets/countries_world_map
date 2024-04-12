@@ -2,124 +2,124 @@ import 'package:flutter/material.dart';
 
 class SMapHungaryColors {
   /// Bács-Kiskun
-  final Color? huBK;
+  Color? huBK;
 
   /// Baranya
-  final Color? huBA;
+  Color? huBA;
 
   /// Békés
-  final Color? huBE;
+  Color? huBE;
 
   /// Békéscsaba
-  final Color? huBC;
+  Color? huBC;
 
   /// Borsod-Abaúj-Zemplén
-  final Color? huBZ;
+  Color? huBZ;
 
   /// Budapest
-  final Color? huBU;
+  Color? huBU;
 
   /// Csongrád
-  final Color? huCS;
+  Color? huCS;
 
   /// Debrecen
-  final Color? huDE;
+  Color? huDE;
 
   /// Dunaújváros
-  final Color? huDU;
+  Color? huDU;
 
   /// Eger
-  final Color? huEG;
+  Color? huEG;
 
   /// Fejér
-  final Color? huFE;
+  Color? huFE;
 
   /// Győr
-  final Color? huGY;
+  Color? huGY;
 
   /// Győr-Moson-Sopron
-  final Color? huGS;
+  Color? huGS;
 
   /// Hajdú-Bihar
-  final Color? huHB;
+  Color? huHB;
 
   /// Heves
-  final Color? huHE;
+  Color? huHE;
 
   /// Hódmezővásárhely
-  final Color? huHV;
+  Color? huHV;
 
   /// Jász-Nagykun-Szolnok
-  final Color? huJN;
+  Color? huJN;
 
   /// Kaposvár
-  final Color? huKV;
+  Color? huKV;
 
   /// Kecskemét
-  final Color? huKM;
+  Color? huKM;
 
   /// Komárom-Esztergom
-  final Color? huKE;
+  Color? huKE;
 
   /// Miskolc
-  final Color? huMI;
+  Color? huMI;
 
   /// Nagykanizsa
-  final Color? huNK;
+  Color? huNK;
 
   /// Nógrád
-  final Color? huNO;
+  Color? huNO;
 
   /// Nyíregyháza
-  final Color? huNY;
+  Color? huNY;
 
   /// Pécs
-  final Color? huPS;
+  Color? huPS;
 
   /// Pest
-  final Color? huPE;
+  Color? huPE;
 
   /// Somogy
-  final Color? huSO;
+  Color? huSO;
 
   /// Sopron
-  final Color? huSN;
+  Color? huSN;
 
   /// Szabolcs-Szatmár-Bereg
-  final Color? huSZ;
+  Color? huSZ;
 
   /// Szeged
-  final Color? huSD;
+  Color? huSD;
 
   /// Székesfehérvár
-  final Color? huSF;
+  Color? huSF;
 
   /// Szolnok
-  final Color? huSK;
+  Color? huSK;
 
   /// Szombathely
-  final Color? huSH;
+  Color? huSH;
 
   /// Tatabánya
-  final Color? huTB;
+  Color? huTB;
 
   /// Tolna
-  final Color? huTO;
+  Color? huTO;
 
   /// Vas
-  final Color? huVA;
+  Color? huVA;
 
   /// Veszprém
-  final Color? huVE;
+  Color? huVE;
 
   /// Veszprém
-  final Color? huVM;
+  Color? huVM;
 
   /// Zala
-  final Color? huZA;
+  Color? huZA;
 
   /// Zalaegerszeg
-  final Color? huZE;
+  Color? huZE;
   SMapHungaryColors({
     this.huBK,
     this.huBA,

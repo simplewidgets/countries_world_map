@@ -2,13 +2,13 @@ import 'package:flutter/material.dart';
 
 class SMapLuxembourgColors {
   /// Diekirch
-  final Color? luD;
+  Color? luD;
 
   /// Grevenmacher
-  final Color? luG;
+  Color? luG;
 
   /// Luxembourg
-  final Color? luL;
+  Color? luL;
   SMapLuxembourgColors({
     this.luD,
     this.luG,

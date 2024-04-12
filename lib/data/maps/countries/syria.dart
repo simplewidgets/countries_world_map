@@ -2,46 +2,46 @@ import 'package:flutter/material.dart';
 
 class SMapSyriaColors {
   /// Al Ḩasakah
-  final Color? syHA;
+  Color? syHA;
 
   /// Dayr az Zawr
-  final Color? syDY;
+  Color? syDY;
 
   /// Idlib
-  final Color? syID;
+  Color? syID;
 
   /// Rīf Dimashq
-  final Color? syRD;
+  Color? syRD;
 
   /// Ḩalab
-  final Color? syHL;
+  Color? syHL;
 
   /// Ar Raqqah
-  final Color? syRA;
+  Color? syRA;
 
   /// Al Lādhiqīyah
-  final Color? syLA;
+  Color? syLA;
 
   /// Ḩamāh
-  final Color? syHM;
+  Color? syHM;
 
   /// Ḩimş
-  final Color? syHI;
+  Color? syHI;
 
   /// Ţarţūs
-  final Color? syTA;
+  Color? syTA;
 
   /// Dimashq
-  final Color? syDI;
+  Color? syDI;
 
   /// Al Qunayţirah
-  final Color? syQU;
+  Color? syQU;
 
   /// Darٰā
-  final Color? syDR;
+  Color? syDR;
 
   /// As Suwaydā'
-  final Color? sySU;
+  Color? sySU;
   SMapSyriaColors({
     this.syHA,
     this.syDY,

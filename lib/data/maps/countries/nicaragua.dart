@@ -2,55 +2,55 @@ import 'package:flutter/material.dart';
 
 class SMapNicaraguaColors {
   /// Atlántico Norte
-  final Color? niAN;
+  Color? niAN;
 
   /// Atlántico Sur
-  final Color? niAS;
+  Color? niAS;
 
   /// Boaco
-  final Color? niBO;
+  Color? niBO;
 
   /// Carazo
-  final Color? niCA;
+  Color? niCA;
 
   /// Chinandega
-  final Color? niCI;
+  Color? niCI;
 
   /// Chontales
-  final Color? niCO;
+  Color? niCO;
 
   /// Estelí
-  final Color? niES;
+  Color? niES;
 
   /// Granada
-  final Color? niGR;
+  Color? niGR;
 
   /// Jinotega
-  final Color? niJI;
+  Color? niJI;
 
   /// León
-  final Color? niLE;
+  Color? niLE;
 
   /// Madriz
-  final Color? niMD;
+  Color? niMD;
 
   /// Managua
-  final Color? niMN;
+  Color? niMN;
 
   /// Masaya
-  final Color? niMS;
+  Color? niMS;
 
   /// Matagalpa
-  final Color? niMT;
+  Color? niMT;
 
   /// Nueva Segovia
-  final Color? niNS;
+  Color? niNS;
 
   /// Rivas
-  final Color? niRI;
+  Color? niRI;
 
   /// Río San Juan
-  final Color? niSJ;
+  Color? niSJ;
   SMapNicaraguaColors({
     this.niAN,
     this.niAS,

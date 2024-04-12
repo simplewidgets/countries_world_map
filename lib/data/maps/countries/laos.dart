@@ -2,55 +2,55 @@ import 'package:flutter/material.dart';
 
 class SMapLaosColors {
   /// Xékong
-  final Color? laXE;
+  Color? laXE;
 
   /// Attapu
-  final Color? laAT;
+  Color? laAT;
 
   /// Khammouan
-  final Color? laKH;
+  Color? laKH;
 
   /// Bolikhamxai
-  final Color? laBL;
+  Color? laBL;
 
   /// Phôngsali
-  final Color? laPH;
+  Color? laPH;
 
   /// Oudômxai
-  final Color? laOU;
+  Color? laOU;
 
   /// Louangphrabang
-  final Color? laLP;
+  Color? laLP;
 
   /// Houaphan
-  final Color? laHO;
+  Color? laHO;
 
   /// Xiangkhoang
-  final Color? laXI;
+  Color? laXI;
 
   /// Vientiane
-  final Color? laVI;
+  Color? laVI;
 
   /// Vientiane [prefecture]
-  final Color? laVT;
+  Color? laVT;
 
   /// Savannakhét
-  final Color? laSV;
+  Color? laSV;
 
   /// Saravan
-  final Color? laSL;
+  Color? laSL;
 
   /// Champasak
-  final Color? laCH;
+  Color? laCH;
 
   /// Xaignabouri
-  final Color? laXA;
+  Color? laXA;
 
   /// Louang Namtha
-  final Color? laLM;
+  Color? laLM;
 
   /// Bokeo
-  final Color? laBK;
+  Color? laBK;
   SMapLaosColors({
     this.laXE,
     this.laAT,

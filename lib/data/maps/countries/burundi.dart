@@ -2,55 +2,55 @@ import 'package:flutter/material.dart';
 
 class SMapBurundiColors {
   /// Bubanza
-  final Color? biBB;
+  Color? biBB;
 
   /// Bujumbura Rural
-  final Color? biBL;
+  Color? biBL;
 
   /// Bujumbura Mairie
-  final Color? biBM;
+  Color? biBM;
 
   /// Bururi
-  final Color? biBR;
+  Color? biBR;
 
   /// Cankuzo
-  final Color? biCA;
+  Color? biCA;
 
   /// Cibitoke
-  final Color? biCI;
+  Color? biCI;
 
   /// Gitega
-  final Color? biGI;
+  Color? biGI;
 
   /// Kirundo
-  final Color? biKI;
+  Color? biKI;
 
   /// Karuzi
-  final Color? biKR;
+  Color? biKR;
 
   /// Kayanza
-  final Color? biKY;
+  Color? biKY;
 
   /// Makamba
-  final Color? biMA;
+  Color? biMA;
 
   /// Muramvya
-  final Color? biMU;
+  Color? biMU;
 
   /// Mwaro
-  final Color? biMW;
+  Color? biMW;
 
   /// Muyinga
-  final Color? biMY;
+  Color? biMY;
 
   /// Ngozi
-  final Color? biNG;
+  Color? biNG;
 
   /// Rutana
-  final Color? biRT;
+  Color? biRT;
 
   /// Ruyigi
-  final Color? biRY;
+  Color? biRY;
   SMapBurundiColors({
     this.biBB,
     this.biBL,

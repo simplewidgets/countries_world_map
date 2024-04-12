@@ -2,55 +2,55 @@ import 'package:flutter/material.dart';
 
 class SMapOmanColors {
   /// Ash Shāriqah
-  final Color? aeSH;
+  Color? aeSH;
 
   /// Dubayy
-  final Color? aeDU;
+  Color? aeDU;
 
   /// Al Fujayrah
-  final Color? aeFU;
+  Color? aeFU;
 
   /// Ra’s al Khaymah
-  final Color? aeRK;
+  Color? aeRK;
 
   /// Neutral Zone
-  final Color? aeNZ1;
+  Color? aeNZ1;
 
   /// Neutral Zone
-  final Color? aeNZ2;
+  Color? aeNZ2;
 
   /// Al Bāţinah North
-  final Color? omBAN;
+  Color? omBAN;
 
   /// Al Bāţinah South
-  final Color? omBAS;
+  Color? omBAS;
 
   /// Al Buraymī
-  final Color? omBU;
+  Color? omBU;
 
   /// Ad Dākhilīyah
-  final Color? omDA;
+  Color? omDA;
 
   /// Masqaţ
-  final Color? omMA;
+  Color? omMA;
 
   /// Musandam
-  final Color? omMU;
+  Color? omMU;
 
   /// Ash Sharqīyah North
-  final Color? omSHN;
+  Color? omSHN;
 
   /// Ash Sharqīyah South
-  final Color? omSHS;
+  Color? omSHS;
 
   /// Al Wusţá
-  final Color? omWU;
+  Color? omWU;
 
   /// Az̧ Z̧āhirah
-  final Color? omZA;
+  Color? omZA;
 
   /// Z̧ufār
-  final Color? omZU;
+  Color? omZU;
   SMapOmanColors({
     this.aeSH,
     this.aeDU,

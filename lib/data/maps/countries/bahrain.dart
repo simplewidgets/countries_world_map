@@ -2,19 +2,19 @@ import 'package:flutter/material.dart';
 
 class SMapBahrainColors {
   /// Al ‘Āşimah
-  final Color? bh13;
+  Color? bh13;
 
   /// Al Janūbīyah
-  final Color? bh14;
+  Color? bh14;
 
   /// Al Muḩarraq
-  final Color? bh15;
+  Color? bh15;
 
   /// Al Wusţá
-  final Color? bh16;
+  Color? bh16;
 
   ///  Ash Shamālīyah
-  final Color? bh17;
+  Color? bh17;
   SMapBahrainColors({
     this.bh13,
     this.bh14,

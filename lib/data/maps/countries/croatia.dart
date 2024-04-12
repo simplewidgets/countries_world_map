@@ -2,67 +2,67 @@ import 'package:flutter/material.dart';
 
 class SMapCroatiaColors {
   /// Zagrebačka županija
-  final Color? hr01;
+  Color? hr01;
 
   /// Krapinsko-zagorska županija
-  final Color? hr02;
+  Color? hr02;
 
   /// Sisačko-moslavačka županija
-  final Color? hr03;
+  Color? hr03;
 
   /// Karlovačka županija
-  final Color? hr04;
+  Color? hr04;
 
   /// Varaždinska županija
-  final Color? hr05;
+  Color? hr05;
 
   /// Koprivničko-križevačka županija
-  final Color? hr06;
+  Color? hr06;
 
   /// Bjelovarsko-bilogorska županija
-  final Color? hr07;
+  Color? hr07;
 
   /// Primorsko-goranska županija
-  final Color? hr08;
+  Color? hr08;
 
   /// Ličko-senjska županija
-  final Color? hr09;
+  Color? hr09;
 
   /// Virovitičko-podravska županija
-  final Color? hr10;
+  Color? hr10;
 
   /// Požeško-slavonska županija
-  final Color? hr11;
+  Color? hr11;
 
   /// Brodsko-posavska županija
-  final Color? hr12;
+  Color? hr12;
 
   /// Zadarska županija
-  final Color? hr13;
+  Color? hr13;
 
   /// Osječko-baranjska županija
-  final Color? hr14;
+  Color? hr14;
 
   /// Šibensko-kninska županija
-  final Color? hr15;
+  Color? hr15;
 
   /// Vukovarsko-srijemska županija
-  final Color? hr16;
+  Color? hr16;
 
   /// Splitsko-dalmatinska županija
-  final Color? hr17;
+  Color? hr17;
 
   /// Istarska županija
-  final Color? hr18;
+  Color? hr18;
 
   /// Dubrovačko-neretvanska županija
-  final Color? hr19;
+  Color? hr19;
 
   /// Međimurska županija
-  final Color? hr20;
+  Color? hr20;
 
   /// Grad Zagreb
-  final Color? hr21;
+  Color? hr21;
   SMapCroatiaColors({
     this.hr01,
     this.hr02,

@@ -2,115 +2,115 @@ import 'package:flutter/material.dart';
 
 class SMapNigeriaColors {
   /// Abia
-  final Color? ngAB;
+  Color? ngAB;
 
   /// Adamawa
-  final Color? ngAD;
+  Color? ngAD;
 
   /// Akwa Ibom
-  final Color? ngAK;
+  Color? ngAK;
 
   /// Anambra
-  final Color? ngAN;
+  Color? ngAN;
 
   /// Bauchi
-  final Color? ngBA;
+  Color? ngBA;
 
   /// Benue
-  final Color? ngBE;
+  Color? ngBE;
 
   /// Borno
-  final Color? ngBO;
+  Color? ngBO;
 
   /// Bayelsa
-  final Color? ngBY;
+  Color? ngBY;
 
   /// Cross River
-  final Color? ngCR;
+  Color? ngCR;
 
   /// Delta
-  final Color? ngDE;
+  Color? ngDE;
 
   /// Ebonyi
-  final Color? ngEB;
+  Color? ngEB;
 
   /// Edo
-  final Color? ngED;
+  Color? ngED;
 
   /// Ekiti
-  final Color? ngEK;
+  Color? ngEK;
 
   /// Enugu
-  final Color? ngEN;
+  Color? ngEN;
 
   /// Federal Capital Territory
-  final Color? ngFC;
+  Color? ngFC;
 
   /// Gombe
-  final Color? ngGO;
+  Color? ngGO;
 
   /// Imo
-  final Color? ngIM;
+  Color? ngIM;
 
   /// Jigawa
-  final Color? ngJI;
+  Color? ngJI;
 
   /// Kaduna
-  final Color? ngKD;
+  Color? ngKD;
 
   /// Kebbi
-  final Color? ngKE;
+  Color? ngKE;
 
   /// Kano
-  final Color? ngKN;
+  Color? ngKN;
 
   /// Kogi
-  final Color? ngKO;
+  Color? ngKO;
 
   /// Katsina
-  final Color? ngKT;
+  Color? ngKT;
 
   /// Kwara
-  final Color? ngKW;
+  Color? ngKW;
 
   /// Lagos
-  final Color? ngLA;
+  Color? ngLA;
 
   /// Nassarawa
-  final Color? ngNA;
+  Color? ngNA;
 
   /// Niger
-  final Color? ngNI;
+  Color? ngNI;
 
   /// Ogun
-  final Color? ngOG;
+  Color? ngOG;
 
   /// Ondo
-  final Color? ngON;
+  Color? ngON;
 
   /// Osun
-  final Color? ngOS;
+  Color? ngOS;
 
   /// Oyo
-  final Color? ngOY;
+  Color? ngOY;
 
   /// Plateau
-  final Color? ngPL;
+  Color? ngPL;
 
   /// Rivers
-  final Color? ngRI;
+  Color? ngRI;
 
   /// Sokoto
-  final Color? ngSO;
+  Color? ngSO;
 
   /// Taraba
-  final Color? ngTA;
+  Color? ngTA;
 
   /// Yobe
-  final Color? ngYO;
+  Color? ngYO;
 
   /// Zamfara
-  final Color? ngZA;
+  Color? ngZA;
   SMapNigeriaColors({
     this.ngAB,
     this.ngAD,

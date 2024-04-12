@@ -2,34 +2,34 @@ import 'package:flutter/material.dart';
 
 class SMapCameroonColors {
   /// Adamaoua
-  final Color? cmAD;
+  Color? cmAD;
 
   /// Centre
-  final Color? cmCE;
+  Color? cmCE;
 
   /// Far North
-  final Color? cmEN;
+  Color? cmEN;
 
   /// East
-  final Color? cmES;
+  Color? cmES;
 
   /// Littoral
-  final Color? cmLT;
+  Color? cmLT;
 
   /// North
-  final Color? cmNO;
+  Color? cmNO;
 
   /// North-West
-  final Color? cmNW;
+  Color? cmNW;
 
   /// West
-  final Color? cmOU;
+  Color? cmOU;
 
   /// South
-  final Color? cmSU;
+  Color? cmSU;
 
   /// South-West
-  final Color? cmSW;
+  Color? cmSW;
   SMapCameroonColors({
     this.cmAD,
     this.cmCE,

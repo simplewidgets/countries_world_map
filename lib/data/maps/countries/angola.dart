@@ -2,58 +2,58 @@ import 'package:flutter/material.dart';
 
 class SMapAngolaColors {
   /// Bengo
-  final Color? aoBGO;
+  Color? aoBGO;
 
   /// Benguela
-  final Color? aoBGU;
+  Color? aoBGU;
 
   /// Bié
-  final Color? aoBIE;
+  Color? aoBIE;
 
   /// Cabinda
-  final Color? aoCAB;
+  Color? aoCAB;
 
   /// Cuando-Cubango
-  final Color? aoCCU;
+  Color? aoCCU;
 
   /// Cuanza Norte
-  final Color? aoCNO;
+  Color? aoCNO;
 
   /// Cuanza Sul
-  final Color? aoCUS;
+  Color? aoCUS;
 
   /// Cunene
-  final Color? aoCNN;
+  Color? aoCNN;
 
   /// Huambo
-  final Color? aoHUA;
+  Color? aoHUA;
 
   /// Huíla
-  final Color? aoHUI;
+  Color? aoHUI;
 
   /// Luanda
-  final Color? aoLUA;
+  Color? aoLUA;
 
   /// Lunda Norte
-  final Color? aoLNO;
+  Color? aoLNO;
 
   /// Lunda Sul
-  final Color? aoLSU;
+  Color? aoLSU;
 
   /// Malange
-  final Color? aoMAL;
+  Color? aoMAL;
 
   /// Moxico
-  final Color? aoMOX;
+  Color? aoMOX;
 
   /// Namibe
-  final Color? aoNAM;
+  Color? aoNAM;
 
   /// Uíge
-  final Color? aoUIG;
+  Color? aoUIG;
 
   /// Zaire
-  final Color? aoZAI;
+  Color? aoZAI;
   SMapAngolaColors({
     this.aoBGO,
     this.aoBGU,

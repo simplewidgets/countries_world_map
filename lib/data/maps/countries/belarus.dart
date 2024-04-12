@@ -2,25 +2,25 @@ import 'package:flutter/material.dart';
 
 class SMapBelarusColors {
   /// Brest
-  final Color? byBR;
+  Color? byBR;
 
   /// Homyel'
-  final Color? byHO;
+  Color? byHO;
 
   /// Hrodzen
-  final Color? byHR;
+  Color? byHR;
 
   /// Mahilyow
-  final Color? byMA;
+  Color? byMA;
 
   /// Vitsyebsk
-  final Color? byVI;
+  Color? byVI;
 
   /// Minsk City
-  final Color? byHM;
+  Color? byHM;
 
   /// Minsk
-  final Color? byMI;
+  Color? byMI;
   SMapBelarusColors({
     this.byBR,
     this.byHO,

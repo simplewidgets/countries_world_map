@@ -2,55 +2,55 @@ import 'package:flutter/material.dart';
 
 class SMapCentralAfricanRepublicColors {
   /// Ouham
-  final Color? cfAC;
+  Color? cfAC;
 
   /// Bamingui-Bangoran
-  final Color? cfBB;
+  Color? cfBB;
 
   /// Bangui
-  final Color? cfBGF;
+  Color? cfBGF;
 
   /// Basse-Kotto
-  final Color? cfBK;
+  Color? cfBK;
 
   /// Haute-Kotto
-  final Color? cfHK;
+  Color? cfHK;
 
   /// Haut-Mbomou
-  final Color? cfHM;
+  Color? cfHM;
 
   /// Haute-Sangha
-  final Color? cfHS;
+  Color? cfHS;
 
   /// Gribingui
-  final Color? cfKB;
+  Color? cfKB;
 
   /// Kémo-Gribingui
-  final Color? cfKG;
+  Color? cfKG;
 
   /// Lobaye
-  final Color? cfLB;
+  Color? cfLB;
 
   /// Mbomou
-  final Color? cfMB;
+  Color? cfMB;
 
   /// Ombella-Mpoko
-  final Color? cfMP;
+  Color? cfMP;
 
   ///  Nana-Mambéré
-  final Color? cfNM;
+  Color? cfNM;
 
   /// Ouham-Pendé
-  final Color? cfOP;
+  Color? cfOP;
 
   /// Sangha
-  final Color? cfSE;
+  Color? cfSE;
 
   /// Ouaka
-  final Color? cfUK;
+  Color? cfUK;
 
   /// Vakaga
-  final Color? cfVK;
+  Color? cfVK;
   SMapCentralAfricanRepublicColors({
     this.cfAC,
     this.cfBB,

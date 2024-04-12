@@ -2,37 +2,37 @@ import 'package:flutter/material.dart';
 
 class SMapArmeniaColors {
   /// Aragac̣otn
-  final Color? amAG;
+  Color? amAG;
 
   /// Ararat
-  final Color? amAR;
+  Color? amAR;
 
   /// Armavir
-  final Color? amAV;
+  Color? amAV;
 
   /// Erevan
-  final Color? amER;
+  Color? amER;
 
   /// Geġark'unik'
-  final Color? amGR;
+  Color? amGR;
 
   /// Kotayk'
-  final Color? amKT;
+  Color? amKT;
 
   /// Loṙy
-  final Color? amLO;
+  Color? amLO;
 
   /// Širak
-  final Color? amSH;
+  Color? amSH;
 
   /// Syunik'
-  final Color? amSU;
+  Color? amSU;
 
   /// Tavuš
-  final Color? amTV;
+  Color? amTV;
 
   /// Vayoc Jor
-  final Color? amVD;
+  Color? amVD;
   SMapArmeniaColors({
     this.amAG,
     this.amAR,

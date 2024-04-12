@@ -2,28 +2,28 @@ import 'package:flutter/material.dart';
 
 class SMapAustraliaColors {
   /// Northern Territory
-  final Color? auNT;
+  Color? auNT;
 
   /// Western Australia
-  final Color? auWA;
+  Color? auWA;
 
   /// Australian Capital Territory
-  final Color? auACT;
+  Color? auACT;
 
   /// New South Wales
-  final Color? auNSW;
+  Color? auNSW;
 
   /// South Australia
-  final Color? auSA;
+  Color? auSA;
 
   /// Victoria
-  final Color? auVIC;
+  Color? auVIC;
 
   /// Queensland
-  final Color? auQLD;
+  Color? auQLD;
 
   /// Tasmania
-  final Color? auTAS;
+  Color? auTAS;
   SMapAustraliaColors({
     this.auNT,
     this.auWA,

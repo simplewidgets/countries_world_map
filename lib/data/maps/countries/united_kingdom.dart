@@ -2,52 +2,52 @@ import 'package:flutter/material.dart';
 
 class SMapUnitedKingdomColors {
   /// North East
-  final Color? gbUKC;
+  Color? gbUKC;
 
   /// North West
-  final Color? gbUKD;
+  Color? gbUKD;
 
   /// Yorkshire and the Humber
-  final Color? gbUKE;
+  Color? gbUKE;
 
   /// East Midlands
-  final Color? gbUKF;
+  Color? gbUKF;
 
   /// West Midlands
-  final Color? gbUKG;
+  Color? gbUKG;
 
   /// East of England
-  final Color? gbUKH;
+  Color? gbUKH;
 
   /// Greater London
-  final Color? gbUKI;
+  Color? gbUKI;
 
   /// South East
-  final Color? gbUKJ;
+  Color? gbUKJ;
 
   /// South West
-  final Color? gbUKK;
+  Color? gbUKK;
 
   /// Wales
-  final Color? gbUKL;
+  Color? gbUKL;
 
   /// Scotland
-  final Color? gbUKM;
+  Color? gbUKM;
 
   /// Northern Ireland
-  final Color? gbUKN;
+  Color? gbUKN;
 
   /// Guernsey
-  final Color? ggGG;
+  Color? ggGG;
 
   /// Jersey
-  final Color? jeJE;
+  Color? jeJE;
 
   /// Isle of Man
-  final Color? imIM;
+  Color? imIM;
 
   /// Ireland
-  final Color? ieIE;
+  Color? ieIE;
   SMapUnitedKingdomColors({
     this.gbUKC,
     this.gbUKD,

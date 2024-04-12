@@ -2,49 +2,49 @@ import 'package:flutter/material.dart';
 
 class SMapMalaysiaColors {
   /// Brunei Darussalam
-  final Color? bnBN;
+  Color? bnBN;
 
   /// Johor
-  final Color? my01;
+  Color? my01;
 
   /// Kedah
-  final Color? my02;
+  Color? my02;
 
   /// Kelantan
-  final Color? my03;
+  Color? my03;
 
   /// Melaka
-  final Color? my04;
+  Color? my04;
 
   /// Negeri Sembilan
-  final Color? my05;
+  Color? my05;
 
   /// Pahang
-  final Color? my06;
+  Color? my06;
 
   /// Pulau Pinang
-  final Color? my07;
+  Color? my07;
 
   /// Perak
-  final Color? my08;
+  Color? my08;
 
   /// Perlis
-  final Color? my09;
+  Color? my09;
 
   /// Selangor
-  final Color? my10;
+  Color? my10;
 
   /// Terengganu
-  final Color? my11;
+  Color? my11;
 
   /// Sabah
-  final Color? my12;
+  Color? my12;
 
   /// Sarawak
-  final Color? my13;
+  Color? my13;
 
   /// Wilayah Persekutuan Labuan
-  final Color? my15;
+  Color? my15;
   SMapMalaysiaColors({
     this.bnBN,
     this.my01,

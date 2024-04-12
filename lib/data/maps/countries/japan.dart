@@ -2,145 +2,145 @@ import 'package:flutter/material.dart';
 
 class SMapJapanColors {
   /// Aichi
-  final Color? jp23;
+  Color? jp23;
 
   /// Akita
-  final Color? jp05;
+  Color? jp05;
 
   /// Aomori
-  final Color? jp02;
+  Color? jp02;
 
   /// Chiba
-  final Color? jp12;
+  Color? jp12;
 
   /// Ehime
-  final Color? jp38;
+  Color? jp38;
 
   /// Fukui
-  final Color? jp18;
+  Color? jp18;
 
   /// Fukuoka
-  final Color? jp40;
+  Color? jp40;
 
   /// Fukushima
-  final Color? jp07;
+  Color? jp07;
 
   /// Gifu
-  final Color? jp21;
+  Color? jp21;
 
   /// Gunma
-  final Color? jp10;
+  Color? jp10;
 
   /// Hyogo
-  final Color? jp28;
+  Color? jp28;
 
   /// Hokkaido
-  final Color? jp01;
+  Color? jp01;
 
   /// Hiroshima
-  final Color? jp34;
+  Color? jp34;
 
   /// Ibaraki
-  final Color? jp08;
+  Color? jp08;
 
   /// Ishikawa
-  final Color? jp17;
+  Color? jp17;
 
   /// Iwate
-  final Color? jp03;
+  Color? jp03;
 
   /// Kochi
-  final Color? jp39;
+  Color? jp39;
 
   /// Kagawa
-  final Color? jp37;
+  Color? jp37;
 
   /// Kumamoto
-  final Color? jp43;
+  Color? jp43;
 
   /// Kanagawa
-  final Color? jp14;
+  Color? jp14;
 
   /// Kagoshima
-  final Color? jp46;
+  Color? jp46;
 
   /// Kyoto
-  final Color? jp26;
+  Color? jp26;
 
   /// Mie
-  final Color? jp24;
+  Color? jp24;
 
   /// Miyagi
-  final Color? jp04;
+  Color? jp04;
 
   /// Miyazaki
-  final Color? jp45;
+  Color? jp45;
 
   /// Niigata
-  final Color? jp15;
+  Color? jp15;
 
   /// Nagano
-  final Color? jp20;
+  Color? jp20;
 
   /// Nara
-  final Color? jp29;
+  Color? jp29;
 
   /// Nagasaki
-  final Color? jp42;
+  Color? jp42;
 
   /// Okinawa
-  final Color? jp47;
+  Color? jp47;
 
   /// Osaka
-  final Color? jp27;
+  Color? jp27;
 
   /// Okayama
-  final Color? jp33;
+  Color? jp33;
 
   /// Oita
-  final Color? jp44;
+  Color? jp44;
 
   /// Saga
-  final Color? jp41;
+  Color? jp41;
 
   /// Shiga
-  final Color? jp25;
+  Color? jp25;
 
   /// Shimane
-  final Color? jp32;
+  Color? jp32;
 
   /// Saitama
-  final Color? jp11;
+  Color? jp11;
 
   /// Shizuoka
-  final Color? jp22;
+  Color? jp22;
 
   /// Tochigi
-  final Color? jp09;
+  Color? jp09;
 
   /// Tokyo
-  final Color? jp13;
+  Color? jp13;
 
   /// Tokushima
-  final Color? jp36;
+  Color? jp36;
 
   /// Tottori
-  final Color? jp31;
+  Color? jp31;
 
   /// Toyama
-  final Color? jp16;
+  Color? jp16;
 
   /// Wakayama
-  final Color? jp30;
+  Color? jp30;
 
   /// Yamaguchi
-  final Color? jp35;
+  Color? jp35;
 
   /// Yamanashi
-  final Color? jp19;
+  Color? jp19;
 
   /// Yamagata
-  final Color? jp06;
+  Color? jp06;
   SMapJapanColors({
     this.jp23,
     this.jp05,

@@ -2,52 +2,52 @@ import 'package:flutter/material.dart';
 
 class SMapGermanyColors {
   /// Baden-Wurttemberg
-  final Color? deBW;
+  Color? deBW;
 
   /// Bavaria
-  final Color? deBY;
+  Color? deBY;
 
   /// Berlin
-  final Color? deBE;
+  Color? deBE;
 
   /// Brandenburg
-  final Color? deBB;
+  Color? deBB;
 
   /// Bremen
-  final Color? deHB;
+  Color? deHB;
 
   /// Hamburg
-  final Color? deHH;
+  Color? deHH;
 
   /// Hesse
-  final Color? deHE;
+  Color? deHE;
 
   /// Mecklenburg-Vorpommern
-  final Color? deMV;
+  Color? deMV;
 
   /// Lower Saxony
-  final Color? deNI;
+  Color? deNI;
 
   /// North Rhine-Westphalia
-  final Color? deNW;
+  Color? deNW;
 
   /// Rhineland-Palatinate
-  final Color? deRP;
+  Color? deRP;
 
   /// Saarland
-  final Color? deSL;
+  Color? deSL;
 
   /// Saxony
-  final Color? deSN;
+  Color? deSN;
 
   /// Saxony-Anhalt
-  final Color? deST;
+  Color? deST;
 
   /// Schleswig-Holstein
-  final Color? deSH;
+  Color? deSH;
 
   /// Thuringia
-  final Color? deTH;
+  Color? deTH;
   SMapGermanyColors({
     this.deBW,
     this.deBY,

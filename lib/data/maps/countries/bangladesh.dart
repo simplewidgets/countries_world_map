@@ -2,25 +2,25 @@ import 'package:flutter/material.dart';
 
 class SMapBangladeshColors {
   /// Barisal
-  final Color? bdA;
+  Color? bdA;
 
   /// Chittagong
-  final Color? bdB;
+  Color? bdB;
 
   /// Dhaka
-  final Color? bdC;
+  Color? bdC;
 
   /// Khulna
-  final Color? bdD;
+  Color? bdD;
 
   /// Rajshahi
-  final Color? bdE;
+  Color? bdE;
 
   /// Rangpur
-  final Color? bdF;
+  Color? bdF;
 
   /// Sylhet
-  final Color? bdG;
+  Color? bdG;
   SMapBangladeshColors({
     this.bdA,
     this.bdB,

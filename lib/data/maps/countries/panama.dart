@@ -2,40 +2,40 @@ import 'package:flutter/material.dart';
 
 class SMapPanamaColors {
   /// Emberá
-  final Color? paEM;
+  Color? paEM;
 
   /// Ngöbe Buglé
-  final Color? paNB;
+  Color? paNB;
 
   /// Bocas del Toro
-  final Color? pa1;
+  Color? pa1;
 
   /// Kuna Yala
-  final Color? paKY;
+  Color? paKY;
 
   /// Darién
-  final Color? pa5;
+  Color? pa5;
 
   /// Veraguas
-  final Color? pa9;
+  Color? pa9;
 
   /// Panama
-  final Color? pa8;
+  Color? pa8;
 
   /// Los Santos
-  final Color? pa7;
+  Color? pa7;
 
   /// Herrera
-  final Color? pa6;
+  Color? pa6;
 
   /// Colón
-  final Color? pa3;
+  Color? pa3;
 
   /// Coclé
-  final Color? pa2;
+  Color? pa2;
 
   /// Chiriquí
-  final Color? pa4;
+  Color? pa4;
   SMapPanamaColors({
     this.paEM,
     this.paNB,

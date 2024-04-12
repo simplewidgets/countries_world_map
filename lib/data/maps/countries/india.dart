@@ -2,112 +2,112 @@ import 'package:flutter/material.dart';
 
 class SMapIndiaColors {
   /// Andaman and Nicobar Islands
-  final Color? inAN;
+  Color? inAN;
 
   /// Andhra Pradesh
-  final Color? inAP;
+  Color? inAP;
 
   /// Arunachal Pradesh
-  final Color? inAR;
+  Color? inAR;
 
   /// Assam
-  final Color? inAS;
+  Color? inAS;
 
   /// Bihar
-  final Color? inBR;
+  Color? inBR;
 
   /// Chandigarh
-  final Color? inCH;
+  Color? inCH;
 
   /// Chhattisgarh
-  final Color? inCT;
+  Color? inCT;
 
   /// Daman and Diu
-  final Color? inDD;
+  Color? inDD;
 
   /// Delhi
-  final Color? inDL;
+  Color? inDL;
 
   /// Dadra and Nagar Haveli
-  final Color? inDN;
+  Color? inDN;
 
   /// Goa
-  final Color? inGA;
+  Color? inGA;
 
   /// Gujarat
-  final Color? inGJ;
+  Color? inGJ;
 
   /// Himachal Pradesh
-  final Color? inHP;
+  Color? inHP;
 
   /// Haryana
-  final Color? inHR;
+  Color? inHR;
 
   /// Jharkhand
-  final Color? inJH;
+  Color? inJH;
 
   /// Jammu and Kashmir
-  final Color? inJK;
+  Color? inJK;
 
   /// Karnataka
-  final Color? inKA;
+  Color? inKA;
 
   /// Kerala
-  final Color? inKL;
+  Color? inKL;
 
   /// Lakshadweep
-  final Color? inLD;
+  Color? inLD;
 
   /// Maharashtra
-  final Color? inMH;
+  Color? inMH;
 
   /// Meghalaya
-  final Color? inML;
+  Color? inML;
 
   /// Manipur
-  final Color? inMN;
+  Color? inMN;
 
   /// Madhya Pradesh
-  final Color? inMP;
+  Color? inMP;
 
   /// Mizoram
-  final Color? inMZ;
+  Color? inMZ;
 
   /// Nagaland
-  final Color? inNL;
+  Color? inNL;
 
   /// Odisha
-  final Color? inOR;
+  Color? inOR;
 
   /// Punjab
-  final Color? inPB;
+  Color? inPB;
 
   /// Puducherry
-  final Color? inPY;
+  Color? inPY;
 
   /// Rajasthan
-  final Color? inRJ;
+  Color? inRJ;
 
   /// Sikkim
-  final Color? inSK;
+  Color? inSK;
 
   /// Telangana
-  final Color? inTG;
+  Color? inTG;
 
   /// Tamil Nadu
-  final Color? inTN;
+  Color? inTN;
 
   /// Tripura
-  final Color? inTR;
+  Color? inTR;
 
   /// Uttar Pradesh
-  final Color? inUP;
+  Color? inUP;
 
   /// Uttarakhand
-  final Color? inUT;
+  Color? inUT;
 
   /// West Bengal
-  final Color? inWB;
+  Color? inWB;
   SMapIndiaColors({
     this.inAN,
     this.inAP,

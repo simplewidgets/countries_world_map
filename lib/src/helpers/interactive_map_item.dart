@@ -34,30 +34,28 @@ class _InteractiveMapItemState extends State<InteractiveMapItem> {
   Widget build(BuildContext context) {
     return ClipPath(
         clipper: _BuildClipper(widget.countryPathList[widget.i].instructions),
-        child: InkWell(
-          splashColor: Colors.transparent,
-          focusColor: Colors.transparent,
-          hoverColor: Colors.transparent,
-          highlightColor: Colors.transparent,
-          onHover: (value) {
-            if (widget.onHover != null) {
-              widget.onHover!(widget.countryPathList[widget.i].uniqueID,
-                  widget.countryPathList[widget.i].name, value);
-            }
-          },
-          onTapUp: (details) {
-            if (widget.callback != null) {
-              widget.callback!(widget.countryPathList[widget.i].uniqueID,
-                  widget.countryPathList[widget.i].name, details);
-            }
-          },
-          child: AnimatedPhysicalModel(
-            duration: Duration(milliseconds: 300),
-            shape: BoxShape.rectangle,
+        child: AnimatedContainer(
+          clipBehavior: Clip.hardEdge,
+          duration: Duration(milliseconds: 200),
+          color: widget.color ?? widget.defaultColor ?? Colors.grey,
+          child: InkWell(
+            splashColor: Colors.transparent,
+            focusColor: Colors.transparent,
+            hoverColor: Colors.transparent,
+            highlightColor: Colors.transparent,
+            onHover: (value) {
+              if (widget.onHover != null) {
+                widget.onHover!(widget.countryPathList[widget.i].uniqueID,
+                    widget.countryPathList[widget.i].name, value);
+              }
+            },
+            onTapUp: (details) {
+              if (widget.callback != null) {
+                widget.callback!(widget.countryPathList[widget.i].uniqueID,
+                    widget.countryPathList[widget.i].name, details);
+              }
+            },
             child: SizedBox(width: double.infinity, height: double.infinity),
-            color: widget.color ?? widget.defaultColor ?? Colors.grey,
-            elevation: 4,
-            shadowColor: Colors.black,
           ),
         ));
   }

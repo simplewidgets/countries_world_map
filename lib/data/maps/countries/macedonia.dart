@@ -2,262 +2,262 @@ import 'package:flutter/material.dart';
 
 class SMapMacedoniaColors {
   /// Aerodrom
-  final Color? mk01;
+  Color? mk01;
 
   /// Aračinovo
-  final Color? mk02;
+  Color? mk02;
 
   /// Berovo
-  final Color? mk03;
+  Color? mk03;
 
   /// Bitola
-  final Color? mk04;
+  Color? mk04;
 
   /// Bogdanci
-  final Color? mk05;
+  Color? mk05;
 
   /// Bogovinje
-  final Color? mk06;
+  Color? mk06;
 
   /// Bosilovo
-  final Color? mk07;
+  Color? mk07;
 
   /// Brvenica
-  final Color? mk08;
+  Color? mk08;
 
   /// Butel
-  final Color? mk09;
+  Color? mk09;
 
   /// Valandovo
-  final Color? mk10;
+  Color? mk10;
 
   /// Vasilevo
-  final Color? mk11;
+  Color? mk11;
 
   /// Vevčani
-  final Color? mk12;
+  Color? mk12;
 
   /// Veles
-  final Color? mk13;
+  Color? mk13;
 
   /// Vinica
-  final Color? mk14;
+  Color? mk14;
 
   ///  Vraneštica
-  final Color? mk15;
+  Color? mk15;
 
   /// Vrapčište
-  final Color? mk16;
+  Color? mk16;
 
   /// Gazi Baba
-  final Color? mk17;
+  Color? mk17;
 
   /// Gevgelija
-  final Color? mk18;
+  Color? mk18;
 
   /// Gostivar
-  final Color? mk19;
+  Color? mk19;
 
   /// Gradsko
-  final Color? mk20;
+  Color? mk20;
 
   /// Debar
-  final Color? mk21;
+  Color? mk21;
 
   /// Debarca
-  final Color? mk22;
+  Color? mk22;
 
   /// Delčevo
-  final Color? mk23;
+  Color? mk23;
 
   /// Demir Kapija
-  final Color? mk24;
+  Color? mk24;
 
   /// Demir Hisar
-  final Color? mk25;
+  Color? mk25;
 
   /// Dojran
-  final Color? mk26;
+  Color? mk26;
 
   /// Dolneni
-  final Color? mk27;
+  Color? mk27;
 
   /// Drugovo
-  final Color? mk28;
+  Color? mk28;
 
   /// Gjorče Petrov
-  final Color? mk29;
+  Color? mk29;
 
   /// Želino
-  final Color? mk30;
+  Color? mk30;
 
   /// Zajas
-  final Color? mk31;
+  Color? mk31;
 
   /// Zelenikovo
-  final Color? mk32;
+  Color? mk32;
 
   /// Zrnovci
-  final Color? mk33;
+  Color? mk33;
 
   /// Ilinden
-  final Color? mk34;
+  Color? mk34;
 
   /// Jegunovce
-  final Color? mk35;
+  Color? mk35;
 
   /// Kavadarci
-  final Color? mk36;
+  Color? mk36;
 
   /// Karbinci
-  final Color? mk37;
+  Color? mk37;
 
   /// Karpoš
-  final Color? mk38;
+  Color? mk38;
 
   /// Kisela Voda
-  final Color? mk39;
+  Color? mk39;
 
   /// Kičevo
-  final Color? mk40;
+  Color? mk40;
 
   /// Konče
-  final Color? mk41;
+  Color? mk41;
 
   /// Kočani
-  final Color? mk42;
+  Color? mk42;
 
   /// Kratovo
-  final Color? mk43;
+  Color? mk43;
 
   /// Kriva Palanka
-  final Color? mk44;
+  Color? mk44;
 
   /// Krivogaštani
-  final Color? mk45;
+  Color? mk45;
 
   /// Kruševo
-  final Color? mk46;
+  Color? mk46;
 
   /// Kumanovo
-  final Color? mk47;
+  Color? mk47;
 
   /// Lipkovo
-  final Color? mk48;
+  Color? mk48;
 
   /// Lozovo
-  final Color? mk49;
+  Color? mk49;
 
   /// Mavrovo i Rostuša
-  final Color? mk50;
+  Color? mk50;
 
   /// Makedonska Kamenica
-  final Color? mk51;
+  Color? mk51;
 
   /// Makedonski Brod
-  final Color? mk52;
+  Color? mk52;
 
   /// Mogila
-  final Color? mk53;
+  Color? mk53;
 
   /// Negotino
-  final Color? mk54;
+  Color? mk54;
 
   /// Novaci
-  final Color? mk55;
+  Color? mk55;
 
   /// Novo Selo
-  final Color? mk56;
+  Color? mk56;
 
   /// Oslomej
-  final Color? mk57;
+  Color? mk57;
 
   /// Ohrid
-  final Color? mk58;
+  Color? mk58;
 
   /// Petrovec
-  final Color? mk59;
+  Color? mk59;
 
   /// Pehčevo
-  final Color? mk60;
+  Color? mk60;
 
   /// Plasnica
-  final Color? mk61;
+  Color? mk61;
 
   /// Prilep
-  final Color? mk62;
+  Color? mk62;
 
   /// Probištip
-  final Color? mk63;
+  Color? mk63;
 
   /// Radoviš
-  final Color? mk64;
+  Color? mk64;
 
   /// Rankovce
-  final Color? mk65;
+  Color? mk65;
 
   /// Resen
-  final Color? mk66;
+  Color? mk66;
 
   /// Rosoman
-  final Color? mk67;
+  Color? mk67;
 
   /// Saraj
-  final Color? mk68;
+  Color? mk68;
 
   /// Sveti Nikole
-  final Color? mk69;
+  Color? mk69;
 
   /// Sopište
-  final Color? mk70;
+  Color? mk70;
 
   /// Staro Nagoričane
-  final Color? mk71;
+  Color? mk71;
 
   /// Struga
-  final Color? mk72;
+  Color? mk72;
 
   /// Strumica
-  final Color? mk73;
+  Color? mk73;
 
   /// Studeničani
-  final Color? mk74;
+  Color? mk74;
 
   /// Tearce
-  final Color? mk75;
+  Color? mk75;
 
   /// Tetovo
-  final Color? mk76;
+  Color? mk76;
 
   /// Centar
-  final Color? mk77;
+  Color? mk77;
 
   /// Centar Župa
-  final Color? mk78;
+  Color? mk78;
 
   ///  Čair
-  final Color? mk79;
+  Color? mk79;
 
   /// Čaška
-  final Color? mk80;
+  Color? mk80;
 
   /// Češinovo-Obleševo
-  final Color? mk81;
+  Color? mk81;
 
   /// Čučer Sandevo
-  final Color? mk82;
+  Color? mk82;
 
   /// Štip
-  final Color? mk83;
+  Color? mk83;
 
   /// Šuto Orizari
-  final Color? mk84;
+  Color? mk84;
 
   /// Lake Dojran
-  final Color? mkLKD;
+  Color? mkLKD;
 
   /// Lake Ohrid
-  final Color? mkLKO;
+  Color? mkLKO;
   SMapMacedoniaColors({
     this.mk01,
     this.mk02,

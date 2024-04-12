@@ -2,361 +2,361 @@ import 'package:flutter/material.dart';
 
 class SMapLatviaColors {
   /// Daugavpils
-  final Color? lvDGV;
+  Color? lvDGV;
 
   /// Jelgava
-  final Color? lvJEL;
+  Color? lvJEL;
 
   /// Jēkabpils
-  final Color? lvJKB;
+  Color? lvJKB;
 
   /// Jūrmala
-  final Color? lvJUR;
+  Color? lvJUR;
 
   /// Liepāja
-  final Color? lvLPX;
+  Color? lvLPX;
 
   /// Rēzekne
-  final Color? lvREZ;
+  Color? lvREZ;
 
   /// Rīga
-  final Color? lvRIX;
+  Color? lvRIX;
 
   /// Ventspils
-  final Color? lvVEN;
+  Color? lvVEN;
 
   /// Valmiera
-  final Color? lvVMR;
+  Color? lvVMR;
 
   /// Aglonas novads
-  final Color? lv001;
+  Color? lv001;
 
   /// Aizkraukles novads
-  final Color? lv002;
+  Color? lv002;
 
   /// Aizputes novads
-  final Color? lv003;
+  Color? lv003;
 
   /// Aknīstes novads
-  final Color? lv004;
+  Color? lv004;
 
   /// Alojas novads
-  final Color? lv005;
+  Color? lv005;
 
   /// Alsungas novads
-  final Color? lv006;
+  Color? lv006;
 
   /// Alūksnes novads
-  final Color? lv007;
+  Color? lv007;
 
   /// Amatas novads
-  final Color? lv008;
+  Color? lv008;
 
   /// Apes novads
-  final Color? lv009;
+  Color? lv009;
 
   /// Auces novads
-  final Color? lv010;
+  Color? lv010;
 
   /// Ādažu novads
-  final Color? lv011;
+  Color? lv011;
 
   /// Babītes novads
-  final Color? lv012;
+  Color? lv012;
 
   /// Baldones novads
-  final Color? lv013;
+  Color? lv013;
 
   /// Baltinavas novads
-  final Color? lv014;
+  Color? lv014;
 
   /// Balvu novads
-  final Color? lv015;
+  Color? lv015;
 
   /// Bauskas novads
-  final Color? lv016;
+  Color? lv016;
 
   /// Beverīnas novads
-  final Color? lv017;
+  Color? lv017;
 
   /// Brocēnu novads
-  final Color? lv018;
+  Color? lv018;
 
   /// Burtnieku novads
-  final Color? lv019;
+  Color? lv019;
 
   /// Carnikavas novads
-  final Color? lv020;
+  Color? lv020;
 
   /// Cesvaines novads
-  final Color? lv021;
+  Color? lv021;
 
   /// Cēsu novads
-  final Color? lv022;
+  Color? lv022;
 
   /// Ciblas novads
-  final Color? lv023;
+  Color? lv023;
 
   /// Dagdas novads
-  final Color? lv024;
+  Color? lv024;
 
   /// Daugavpils novads
-  final Color? lv025;
+  Color? lv025;
 
   /// Dobeles novads
-  final Color? lv026;
+  Color? lv026;
 
   /// Dundagas novads
-  final Color? lv027;
+  Color? lv027;
 
   /// Durbes novads
-  final Color? lv028;
+  Color? lv028;
 
   /// Engures novads
-  final Color? lv029;
+  Color? lv029;
 
   /// Ērgļu novads
-  final Color? lv030;
+  Color? lv030;
 
   /// Garkalnes novads
-  final Color? lv031;
+  Color? lv031;
 
   /// Grobiņas novads
-  final Color? lv032;
+  Color? lv032;
 
   /// Gulbenes novads
-  final Color? lv033;
+  Color? lv033;
 
   /// Iecavas novads
-  final Color? lv034;
+  Color? lv034;
 
   /// Ikšķiles novads
-  final Color? lv035;
+  Color? lv035;
 
   /// Ilūkstes novads
-  final Color? lv036;
+  Color? lv036;
 
   /// Inčukalna novads
-  final Color? lv037;
+  Color? lv037;
 
   /// Jaunjelgavas novads
-  final Color? lv038;
+  Color? lv038;
 
   /// Jaunpiebalgas novads
-  final Color? lv039;
+  Color? lv039;
 
   /// Jaunpils novads
-  final Color? lv040;
+  Color? lv040;
 
   /// Jelgavas novads
-  final Color? lv041;
+  Color? lv041;
 
   /// Jēkabpils novads
-  final Color? lv042;
+  Color? lv042;
 
   /// Kandavas novads
-  final Color? lv043;
+  Color? lv043;
 
   /// Kārsavas novads
-  final Color? lv044;
+  Color? lv044;
 
   /// Kocēnu novads
-  final Color? lv045;
+  Color? lv045;
 
   /// Kokneses novads
-  final Color? lv046;
+  Color? lv046;
 
   /// Krāslavas novads
-  final Color? lv047;
+  Color? lv047;
 
   /// Krimuldas novads
-  final Color? lv048;
+  Color? lv048;
 
   /// Krustpils novads
-  final Color? lv049;
+  Color? lv049;
 
   /// Kuldīgas novads
-  final Color? lv050;
+  Color? lv050;
 
   /// Ķeguma novads
-  final Color? lv051;
+  Color? lv051;
 
   /// Ķekavas novads
-  final Color? lv052;
+  Color? lv052;
 
   /// Lielvārdes novads
-  final Color? lv053;
+  Color? lv053;
 
   /// Limbažu novads
-  final Color? lv054;
+  Color? lv054;
 
   /// Līgatnes novads
-  final Color? lv055;
+  Color? lv055;
 
   /// Līvānu novads
-  final Color? lv056;
+  Color? lv056;
 
   /// Lubānas novads
-  final Color? lv057;
+  Color? lv057;
 
   /// Ludzas novads
-  final Color? lv058;
+  Color? lv058;
 
   /// Madonas novads
-  final Color? lv059;
+  Color? lv059;
 
   /// Mazsalacas novads
-  final Color? lv060;
+  Color? lv060;
 
   /// Mālpils novads
-  final Color? lv061;
+  Color? lv061;
 
   /// Mārupes novads
-  final Color? lv062;
+  Color? lv062;
 
   /// Mērsraga novads
-  final Color? lv063;
+  Color? lv063;
 
   /// Naukšēnu novads
-  final Color? lv064;
+  Color? lv064;
 
   /// Neretas novads
-  final Color? lv065;
+  Color? lv065;
 
   /// Nīcas novads
-  final Color? lv066;
+  Color? lv066;
 
   /// Ogres novads
-  final Color? lv067;
+  Color? lv067;
 
   /// Olaines novads
-  final Color? lv068;
+  Color? lv068;
 
   /// Ozolnieku novads
-  final Color? lv069;
+  Color? lv069;
 
   /// Pārgaujas novads
-  final Color? lv070;
+  Color? lv070;
 
   /// Pāvilostas novads
-  final Color? lv071;
+  Color? lv071;
 
   /// Pļaviņu novads
-  final Color? lv072;
+  Color? lv072;
 
   /// Preiļu novads
-  final Color? lv073;
+  Color? lv073;
 
   /// Priekules novads
-  final Color? lv074;
+  Color? lv074;
 
   /// Priekuļu novads
-  final Color? lv075;
+  Color? lv075;
 
   /// Raunas novads
-  final Color? lv076;
+  Color? lv076;
 
   /// Rēzeknes novads
-  final Color? lv077;
+  Color? lv077;
 
   /// Riebiņu novads
-  final Color? lv078;
+  Color? lv078;
 
   /// Rojas novads
-  final Color? lv079;
+  Color? lv079;
 
   /// Ropažu novads
-  final Color? lv080;
+  Color? lv080;
 
   /// Rucavas novads
-  final Color? lv081;
+  Color? lv081;
 
   /// Rugāju novads
-  final Color? lv082;
+  Color? lv082;
 
   /// Rundāles novads
-  final Color? lv083;
+  Color? lv083;
 
   /// Rūjienas novads
-  final Color? lv084;
+  Color? lv084;
 
   /// Salas novads
-  final Color? lv085;
+  Color? lv085;
 
   /// Salacgrīvas novads
-  final Color? lv086;
+  Color? lv086;
 
   /// Salaspils novads
-  final Color? lv087;
+  Color? lv087;
 
   /// Saldus novads
-  final Color? lv088;
+  Color? lv088;
 
   /// Saulkrastu novads
-  final Color? lv089;
+  Color? lv089;
 
   /// Sējas novads
-  final Color? lv090;
+  Color? lv090;
 
   /// Siguldas novads
-  final Color? lv091;
+  Color? lv091;
 
   /// Skrīveru novads
-  final Color? lv092;
+  Color? lv092;
 
   /// Skrundas novads
-  final Color? lv093;
+  Color? lv093;
 
   /// Smiltenes novads
-  final Color? lv094;
+  Color? lv094;
 
   /// Stopiņu novads
-  final Color? lv095;
+  Color? lv095;
 
   /// Strenču novads
-  final Color? lv096;
+  Color? lv096;
 
   /// Talsu novads
-  final Color? lv097;
+  Color? lv097;
 
   /// Tērvetes novads
-  final Color? lv098;
+  Color? lv098;
 
   /// Tukuma novads
-  final Color? lv099;
+  Color? lv099;
 
   /// Vaiņodes novads
-  final Color? lv100;
+  Color? lv100;
 
   /// Valkas novads
-  final Color? lv101;
+  Color? lv101;
 
   /// Varakļānu novads
-  final Color? lv102;
+  Color? lv102;
 
   /// Vārkavas novads
-  final Color? lv103;
+  Color? lv103;
 
   /// Vecpiebalgas novads
-  final Color? lv104;
+  Color? lv104;
 
   /// Vecumnieku novads
-  final Color? lv105;
+  Color? lv105;
 
   /// Ventspils novads
-  final Color? lv106;
+  Color? lv106;
 
   /// Viesītes novads
-  final Color? lv107;
+  Color? lv107;
 
   /// Viļakas novads
-  final Color? lv108;
+  Color? lv108;
 
   /// Viļānu novads
-  final Color? lv109;
+  Color? lv109;
 
   /// Zilupes novads
-  final Color? lv110;
+  Color? lv110;
   SMapLatviaColors({
     this.lvDGV,
     this.lvJEL,

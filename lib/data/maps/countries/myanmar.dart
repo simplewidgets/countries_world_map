@@ -2,46 +2,46 @@ import 'package:flutter/material.dart';
 
 class SMapMyanmarColors {
   /// Sagaing
-  final Color? mm01;
+  Color? mm01;
 
   /// Kachin
-  final Color? mm11;
+  Color? mm11;
 
   /// Tanintharyi
-  final Color? mm05;
+  Color? mm05;
 
   /// Shan
-  final Color? mm17;
+  Color? mm17;
 
   /// Magway
-  final Color? mm03;
+  Color? mm03;
 
   /// Ayeyarwady
-  final Color? mm07;
+  Color? mm07;
 
   /// Chin
-  final Color? mm14;
+  Color? mm14;
 
   /// Rakhine
-  final Color? mm16;
+  Color? mm16;
 
   /// Mon
-  final Color? mm15;
+  Color? mm15;
 
   /// Yangon
-  final Color? mm06;
+  Color? mm06;
 
   /// Bago
-  final Color? mm02;
+  Color? mm02;
 
   /// Mandalay
-  final Color? mm04;
+  Color? mm04;
 
   /// Kayin
-  final Color? mm13;
+  Color? mm13;
 
   /// Kayah
-  final Color? mm12;
+  Color? mm12;
   SMapMyanmarColors({
     this.mm01,
     this.mm11,

@@ -2,31 +2,31 @@ import 'package:flutter/material.dart';
 
 class SMapBotswanaColors {
   /// Central
-  final Color? bwCE;
+  Color? bwCE;
 
   /// Ghanzi
-  final Color? bwGH;
+  Color? bwGH;
 
   /// Kgalagadi
-  final Color? bwKG;
+  Color? bwKG;
 
   /// Kgatleng
-  final Color? bwKL;
+  Color? bwKL;
 
   /// Kweneng
-  final Color? bwKW;
+  Color? bwKW;
 
   /// North-East
-  final Color? bwNE;
+  Color? bwNE;
 
   /// North-West
-  final Color? bwNW;
+  Color? bwNW;
 
   /// South-East
-  final Color? bwSE;
+  Color? bwSE;
 
   /// Southern
-  final Color? bwSO;
+  Color? bwSO;
   SMapBotswanaColors({
     this.bwCE,
     this.bwGH,

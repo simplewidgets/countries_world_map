@@ -2,130 +2,130 @@ import 'package:flutter/material.dart';
 
 class SMapRomaniaColors {
   /// Alba
-  final Color? roAB;
+  Color? roAB;
 
   /// Argeș
-  final Color? roAG;
+  Color? roAG;
 
   /// Arad
-  final Color? roAR;
+  Color? roAR;
 
   /// Bacău
-  final Color? roBC;
+  Color? roBC;
 
   /// Bihor
-  final Color? roBH;
+  Color? roBH;
 
   /// Bistrița-Năsăud
-  final Color? roBN;
+  Color? roBN;
 
   /// Brăila
-  final Color? roBR;
+  Color? roBR;
 
   /// Botoșani
-  final Color? roBT;
+  Color? roBT;
 
   /// București
-  final Color? roB;
+  Color? roB;
 
   /// Brașov
-  final Color? roBV;
+  Color? roBV;
 
   /// Buzău
-  final Color? roBZ;
+  Color? roBZ;
 
   /// Cluj
-  final Color? roCJ;
+  Color? roCJ;
 
   /// Călărași
-  final Color? roCL;
+  Color? roCL;
 
   /// Caraș-Severin
-  final Color? roCS;
+  Color? roCS;
 
   /// Constanța
-  final Color? roCT;
+  Color? roCT;
 
   /// Covasna
-  final Color? roCV;
+  Color? roCV;
 
   /// Dâmbovița
-  final Color? roDB;
+  Color? roDB;
 
   /// Dolj
-  final Color? roDJ;
+  Color? roDJ;
 
   /// Gorj
-  final Color? roGJ;
+  Color? roGJ;
 
   /// Galați
-  final Color? roGL;
+  Color? roGL;
 
   /// Giurgiu
-  final Color? roGR;
+  Color? roGR;
 
   /// Hunedoara
-  final Color? roHD;
+  Color? roHD;
 
   /// Harghita
-  final Color? roHR;
+  Color? roHR;
 
   /// Ilfov
-  final Color? roIF;
+  Color? roIF;
 
   /// Ialomița
-  final Color? roIL;
+  Color? roIL;
 
   /// Iași
-  final Color? roIS;
+  Color? roIS;
 
   /// Mehedinți
-  final Color? roMH;
+  Color? roMH;
 
   /// Maramureș
-  final Color? roMM;
+  Color? roMM;
 
   /// Mureș
-  final Color? roMS;
+  Color? roMS;
 
   /// Neamț
-  final Color? roNT;
+  Color? roNT;
 
   /// Olt
-  final Color? roOT;
+  Color? roOT;
 
   /// Prahova
-  final Color? roPH;
+  Color? roPH;
 
   /// Sibiu
-  final Color? roSB;
+  Color? roSB;
 
   /// Sălaj
-  final Color? roSJ;
+  Color? roSJ;
 
   /// Satu Mare
-  final Color? roSM;
+  Color? roSM;
 
   /// Suceava
-  final Color? roSV;
+  Color? roSV;
 
   /// Tulcea
-  final Color? roTL;
+  Color? roTL;
 
   /// Timiș
-  final Color? roTM;
+  Color? roTM;
 
   /// Teleorman
-  final Color? roTR;
+  Color? roTR;
 
   /// Vâlcea
-  final Color? roVL;
+  Color? roVL;
 
   /// Vrancea
-  final Color? roVN;
+  Color? roVN;
 
   /// Vaslui
-  final Color? roVS;
+  Color? roVS;
   SMapRomaniaColors({
     this.roAB,
     this.roAG,

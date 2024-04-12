@@ -2,64 +2,64 @@ import 'package:flutter/material.dart';
 
 class SMapBhutanColors {
   /// Paro
-  final Color? bt11;
+  Color? bt11;
 
   /// Chhukha
-  final Color? bt12;
+  Color? bt12;
 
   /// Ha
-  final Color? bt13;
+  Color? bt13;
 
   /// Samtse
-  final Color? bt14;
+  Color? bt14;
 
   /// Thimphu
-  final Color? bt15;
+  Color? bt15;
 
   /// Tsirang
-  final Color? bt21;
+  Color? bt21;
 
   /// Dagana
-  final Color? bt22;
+  Color? bt22;
 
   /// Punakha
-  final Color? bt23;
+  Color? bt23;
 
   /// Wangdue Phodrang
-  final Color? bt24;
+  Color? bt24;
 
   /// Sarpang
-  final Color? bt31;
+  Color? bt31;
 
   /// Trongsa
-  final Color? bt32;
+  Color? bt32;
 
   /// Bumthang
-  final Color? bt33;
+  Color? bt33;
 
   /// Zhemgang
-  final Color? bt34;
+  Color? bt34;
 
   /// Trashigang
-  final Color? bt41;
+  Color? bt41;
 
   /// Monggar
-  final Color? bt42;
+  Color? bt42;
 
   /// Pemagatshel
-  final Color? bt43;
+  Color? bt43;
 
   /// Lhuentse
-  final Color? bt44;
+  Color? bt44;
 
   /// Samdrup Jongkha
-  final Color? bt45;
+  Color? bt45;
 
   /// Gasa
-  final Color? btGA;
+  Color? btGA;
 
   /// Trashi Yangtse
-  final Color? btTY;
+  Color? btTY;
   SMapBhutanColors({
     this.bt11,
     this.bt12,

@@ -2,55 +2,55 @@ import 'package:flutter/material.dart';
 
 class SMapSpainColors {
   /// Andalusia
-  final Color? esAN;
+  Color? esAN;
 
   /// Aragon
-  final Color? esAR;
+  Color? esAR;
 
   /// Asturias
-  final Color? esAS;
+  Color? esAS;
 
   /// Cantabria
-  final Color? esCB;
+  Color? esCB;
 
   /// Castile and Leon
-  final Color? esCL;
+  Color? esCL;
 
   /// Castile-La Mancha
-  final Color? esCM;
+  Color? esCM;
 
   /// Canary Islands
-  final Color? esCN;
+  Color? esCN;
 
   /// Catalonia
-  final Color? esCT;
+  Color? esCT;
 
   /// Extremadura
-  final Color? esEX;
+  Color? esEX;
 
   /// Galicia
-  final Color? esGA;
+  Color? esGA;
 
   /// La Rioja
-  final Color? esRI;
+  Color? esRI;
 
   /// Madrid
-  final Color? esMD;
+  Color? esMD;
 
   /// Murcia
-  final Color? esMC;
+  Color? esMC;
 
   /// Navarra
-  final Color? esNC;
+  Color? esNC;
 
   /// Balearic Islands
-  final Color? esIB;
+  Color? esIB;
 
   /// Basque Country
-  final Color? esPV;
+  Color? esPV;
 
   /// Valencia
-  final Color? esVC;
+  Color? esVC;
   SMapSpainColors({
     this.esAN,
     this.esAR,

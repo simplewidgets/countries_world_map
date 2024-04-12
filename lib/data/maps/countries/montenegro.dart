@@ -2,70 +2,70 @@ import 'package:flutter/material.dart';
 
 class SMapMontenegroColors {
   /// Andrijevica
-  final Color? me01;
+  Color? me01;
 
   /// Bar
-  final Color? me02;
+  Color? me02;
 
   /// Berane
-  final Color? me03;
+  Color? me03;
 
   /// Bijelo Polje
-  final Color? me04;
+  Color? me04;
 
   /// Budva
-  final Color? me05;
+  Color? me05;
 
   /// Cetinje
-  final Color? me06;
+  Color? me06;
 
   /// Danilovgrad
-  final Color? me07;
+  Color? me07;
 
   /// Herceg-Novi
-  final Color? me08;
+  Color? me08;
 
   /// Kolašin
-  final Color? me09;
+  Color? me09;
 
   /// Kotor
-  final Color? me10;
+  Color? me10;
 
   /// Mojkovac
-  final Color? me11;
+  Color? me11;
 
   /// Nikšić
-  final Color? me12;
+  Color? me12;
 
   /// Plav
-  final Color? me13;
+  Color? me13;
 
   /// Pljevlja
-  final Color? me14;
+  Color? me14;
 
   /// Plužine
-  final Color? me15;
+  Color? me15;
 
   /// Podgorica
-  final Color? me16;
+  Color? me16;
 
   ///  Rožaje
-  final Color? me17;
+  Color? me17;
 
   /// Šavnik
-  final Color? me18;
+  Color? me18;
 
   /// Tivat
-  final Color? me19;
+  Color? me19;
 
   /// Ulcinj
-  final Color? me20;
+  Color? me20;
 
   /// Žabljak
-  final Color? me21;
+  Color? me21;
 
   /// Skadar Lake
-  final Color? meSLK;
+  Color? meSLK;
   SMapMontenegroColors({
     this.me01,
     this.me02,

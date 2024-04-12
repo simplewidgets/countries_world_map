@@ -2,28 +2,28 @@ import 'package:flutter/material.dart';
 
 class SMapCostaRicaColors {
   /// Alajuela
-  final Color? crA;
+  Color? crA;
 
   /// Cartago
-  final Color? crC;
+  Color? crC;
 
   /// Guanacaste
-  final Color? crG;
+  Color? crG;
 
   /// Heredia
-  final Color? crH;
+  Color? crH;
 
   /// Limón
-  final Color? crL;
+  Color? crL;
 
   /// Laguna de Arenal
-  final Color? crLA;
+  Color? crLA;
 
   /// Puntarenas
-  final Color? crP;
+  Color? crP;
 
   /// San José
-  final Color? crSJ;
+  Color? crSJ;
   SMapCostaRicaColors({
     this.crA,
     this.crC,

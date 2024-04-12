@@ -2,43 +2,43 @@ import 'package:flutter/material.dart';
 
 class SMapSaudiArabiaColors {
   /// Ar Riyāḑ
-  final Color? sa01;
+  Color? sa01;
 
   /// Makkah
-  final Color? sa02;
+  Color? sa02;
 
   /// Al Madīnah
-  final Color? sa03;
+  Color? sa03;
 
   /// Ash Sharqīyah
-  final Color? sa04;
+  Color? sa04;
 
   /// Al Qaşīm
-  final Color? sa05;
+  Color? sa05;
 
   /// Ḩā'il
-  final Color? sa06;
+  Color? sa06;
 
   /// Tabūk
-  final Color? sa07;
+  Color? sa07;
 
   /// Al Ḩudūd ash Shamālīyah
-  final Color? sa08;
+  Color? sa08;
 
   /// Jīzān
-  final Color? sa09;
+  Color? sa09;
 
   /// Najrān
-  final Color? sa10;
+  Color? sa10;
 
   /// Al Bāḩah
-  final Color? sa11;
+  Color? sa11;
 
   /// Al Jawf
-  final Color? sa12;
+  Color? sa12;
 
   /// 'Asir
-  final Color? sa14;
+  Color? sa14;
   SMapSaudiArabiaColors({
     this.sa01,
     this.sa02,

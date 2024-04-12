@@ -2,22 +2,22 @@ import 'package:flutter/material.dart';
 
 class SMapFaroeIslandsColors {
   /// Østerø
-  final Color? foOS;
+  Color? foOS;
 
   /// Norderøerne
-  final Color? foNO;
+  Color? foNO;
 
   /// Sandø
-  final Color? foSA;
+  Color? foSA;
 
   /// Strømø
-  final Color? foST;
+  Color? foST;
 
   /// Suderø
-  final Color? foSU;
+  Color? foSU;
 
   /// Vågø
-  final Color? foVG;
+  Color? foVG;
   SMapFaroeIslandsColors({
     this.foOS,
     this.foNO,

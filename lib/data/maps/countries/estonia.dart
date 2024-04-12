@@ -2,49 +2,49 @@ import 'package:flutter/material.dart';
 
 class SMapEstoniaColors {
   /// Viljandimaa
-  final Color? ee84;
+  Color? ee84;
 
   /// Põlvamaa
-  final Color? ee65;
+  Color? ee65;
 
   /// Ida-Virumaa
-  final Color? ee44;
+  Color? ee44;
 
   /// Tartumaa
-  final Color? ee78;
+  Color? ee78;
 
   /// Järvamaa
-  final Color? ee51;
+  Color? ee51;
 
   /// Võrumaa
-  final Color? ee86;
+  Color? ee86;
 
   /// Pärnumaa
-  final Color? ee67;
+  Color? ee67;
 
   /// Lääne-Virumaa
-  final Color? ee59;
+  Color? ee59;
 
   /// Hiiumaa
-  final Color? ee39;
+  Color? ee39;
 
   /// Läänemaa
-  final Color? ee57;
+  Color? ee57;
 
   /// Valgamaa
-  final Color? ee82;
+  Color? ee82;
 
   /// Jõgevamaa
-  final Color? ee49;
+  Color? ee49;
 
   /// Raplamaa
-  final Color? ee70;
+  Color? ee70;
 
   /// Saaremaa
-  final Color? ee74;
+  Color? ee74;
 
   /// Harjumaa
-  final Color? ee37;
+  Color? ee37;
   SMapEstoniaColors({
     this.ee84,
     this.ee65,

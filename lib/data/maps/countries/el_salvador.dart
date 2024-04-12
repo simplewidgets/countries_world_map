@@ -2,46 +2,46 @@ import 'package:flutter/material.dart';
 
 class SMapElSalvadorColors {
   /// Ahuachapán
-  final Color? svAH;
+  Color? svAH;
 
   /// Cabañas
-  final Color? svCA;
+  Color? svCA;
 
   /// Chalatenango
-  final Color? svCH;
+  Color? svCH;
 
   /// Cuscatlán
-  final Color? svCU;
+  Color? svCU;
 
   /// La Libertad
-  final Color? svLI;
+  Color? svLI;
 
   /// Morazán
-  final Color? svMO;
+  Color? svMO;
 
   /// La Paz
-  final Color? svPA;
+  Color? svPA;
 
   /// Santa Ana
-  final Color? svSA;
+  Color? svSA;
 
   /// San Miguel
-  final Color? svSM;
+  Color? svSM;
 
   /// Sonsonate
-  final Color? svSO;
+  Color? svSO;
 
   /// San Salvador
-  final Color? svSS;
+  Color? svSS;
 
   /// San Vicente
-  final Color? svSV;
+  Color? svSV;
 
   /// La Unión
-  final Color? svUN;
+  Color? svUN;
 
   /// Usulután
-  final Color? svUS;
+  Color? svUS;
   SMapElSalvadorColors({
     this.svAH,
     this.svCA,

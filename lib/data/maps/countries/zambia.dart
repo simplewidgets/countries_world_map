@@ -2,34 +2,34 @@ import 'package:flutter/material.dart';
 
 class SMapZambiaColors {
   /// Western
-  final Color? zm01;
+  Color? zm01;
 
   /// Central
-  final Color? zm02;
+  Color? zm02;
 
   /// Eastern
-  final Color? zm03;
+  Color? zm03;
 
   /// Luapula
-  final Color? zm04;
+  Color? zm04;
 
   /// Northern
-  final Color? zm05;
+  Color? zm05;
 
   /// North-Western
-  final Color? zm06;
+  Color? zm06;
 
   /// Southern
-  final Color? zm07;
+  Color? zm07;
 
   /// Copperbelt
-  final Color? zm08;
+  Color? zm08;
 
   /// Lusaka
-  final Color? zm09;
+  Color? zm09;
 
   /// Muchinga
-  final Color? zm10;
+  Color? zm10;
   SMapZambiaColors({
     this.zm01,
     this.zm02,

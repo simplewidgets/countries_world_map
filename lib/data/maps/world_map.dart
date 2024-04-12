@@ -7,758 +7,758 @@ import 'package:flutter/material.dart';
 /// For example: uS = United States, nL = Netherlands, jP = Japan.
 class SMapWorldColors {
   /// Andorra
-  final Color? aD;
+  Color? aD;
 
   /// United Arab Emirates (the)
-  final Color? aE;
+  Color? aE;
 
   /// Afghanistan
-  final Color? aF;
+  Color? aF;
 
   /// Antigua and Barbuda
-  final Color? aG;
+  Color? aG;
 
   /// Anguilla
-  final Color? aI;
+  Color? aI;
 
   /// Albania
-  final Color? aL;
+  Color? aL;
 
   /// Armenia
-  final Color? aM;
+  Color? aM;
 
   /// Netherlands Antilles
-  final Color? aN;
+  Color? aN;
 
   /// Angola
-  final Color? aO;
+  Color? aO;
 
   /// Antarctica
-  final Color? aQ;
+  Color? aQ;
 
   /// Argentina
-  final Color? aR;
+  Color? aR;
 
   /// American Samoa
-  final Color? aS;
+  Color? aS;
 
   /// Austria
-  final Color? aT;
+  Color? aT;
 
   /// Australia
-  final Color? aU;
+  Color? aU;
 
   /// Aruba
-  final Color? aW;
+  Color? aW;
 
   /// Åland Islands
-  final Color? aX;
+  Color? aX;
 
   /// Azerbaijan
-  final Color? aZ;
+  Color? aZ;
 
   /// Bosnia and Herzegovina
-  final Color? bA;
+  Color? bA;
 
   /// Barbados
-  final Color? bB;
+  Color? bB;
 
   /// Bangladesh
-  final Color? bD;
+  Color? bD;
 
   /// Belgium
-  final Color? bE;
+  Color? bE;
 
   /// Burkina Faso
-  final Color? bF;
+  Color? bF;
 
   /// Bulgaria
-  final Color? bG;
+  Color? bG;
 
   /// Bahrain
-  final Color? bH;
+  Color? bH;
 
   /// Burundi
-  final Color? bI;
+  Color? bI;
 
   /// Benin
-  final Color? bJ;
+  Color? bJ;
 
   /// Saint Barthélemy
-  final Color? bL;
+  Color? bL;
 
   /// Bermuda
-  final Color? bM;
+  Color? bM;
 
   /// Brunei Darussalam
-  final Color? bN;
+  Color? bN;
 
   /// Bolivia
-  final Color? bO;
+  Color? bO;
 
   /// Bonaire, Sint Eustatius and Saba
-  final Color? bQ;
+  Color? bQ;
 
   /// Brazil
-  final Color? bR;
+  Color? bR;
 
   /// Bahamas
-  final Color? bS;
+  Color? bS;
 
   /// Bhutan
-  final Color? bT;
+  Color? bT;
 
   /// Bouvet Island
-  final Color? bV;
+  Color? bV;
 
   /// Botswana
-  final Color? bW;
+  Color? bW;
 
   /// Belarus
-  final Color? bY;
+  Color? bY;
 
   /// Belize
-  final Color? bZ;
+  Color? bZ;
 
   /// Canada
-  final Color? cA;
+  Color? cA;
 
   /// Cocos (Keeling) Islands
-  final Color? cC;
+  Color? cC;
 
   /// Congo (the Democratic Republuc of the)
-  final Color? cD;
+  Color? cD;
 
   /// Central African Republic
-  final Color? cF;
+  Color? cF;
 
   /// Congo (the)
-  final Color? cG;
+  Color? cG;
 
   /// Switzerland
-  final Color? cH;
+  Color? cH;
 
   /// Côte d'Ivoire
-  final Color? cI;
+  Color? cI;
 
   /// Cook Islands
-  final Color? cK;
+  Color? cK;
 
   /// Chile
-  final Color? cL;
+  Color? cL;
 
   /// Cameroon
-  final Color? cM;
+  Color? cM;
 
   /// China
-  final Color? cN;
+  Color? cN;
 
   /// Colombia
-  final Color? cO;
+  Color? cO;
 
   /// Costa Rica
-  final Color? cR;
+  Color? cR;
 
   /// Cuba
-  final Color? cU;
+  Color? cU;
 
   /// Cabo Verde
-  final Color? cV;
+  Color? cV;
 
   /// Curaçao
-  final Color? cW;
+  Color? cW;
 
   /// Christmas Islands
-  final Color? cX;
+  Color? cX;
 
   /// Cyprus
-  final Color? cY;
+  Color? cY;
 
   /// Czechia
-  final Color? cZ;
+  Color? cZ;
 
   /// Germany
-  final Color? dE;
+  Color? dE;
 
   /// Djibouti
-  final Color? dJ;
+  Color? dJ;
 
   /// Denmark
-  final Color? dK;
+  Color? dK;
 
   /// Dominica
-  final Color? dM;
+  Color? dM;
 
   /// Dominican Republic
-  final Color? dO;
+  Color? dO;
 
   /// Algeria
-  final Color? dZ;
+  Color? dZ;
   // Ecuador
-  final Color? eC;
+  Color? eC;
 
   /// Estonia
-  final Color? eE;
+  Color? eE;
 
   /// Egypt
-  final Color? eG;
+  Color? eG;
 
   /// Western Sahara
-  final Color? eH;
+  Color? eH;
 
   /// Eritrea
-  final Color? eR;
+  Color? eR;
 
   /// Spain
-  final Color? eS;
+  Color? eS;
 
   /// Ethiopia
-  final Color? eT;
+  Color? eT;
 
   /// Finland
-  final Color? fI;
+  Color? fI;
 
   /// Fiji
-  final Color? fJ;
+  Color? fJ;
 
   /// Falkland Islands
-  final Color? fK;
+  Color? fK;
 
   /// Micronesia
-  final Color? fM;
+  Color? fM;
 
   /// Faroe Islands
-  final Color? fO;
+  Color? fO;
 
   /// France
-  final Color? fR;
+  Color? fR;
 
   /// Gabon
-  final Color? gA;
+  Color? gA;
 
   /// United Kingdom of Great Britain and Northern Ireland
-  final Color? gB;
+  Color? gB;
 
   /// Grenade
-  final Color? gD;
+  Color? gD;
 
   /// Georgia
-  final Color? gE;
+  Color? gE;
 
   /// French Guiana
-  final Color? gF;
+  Color? gF;
 
   /// Guernsey
-  final Color? gG;
+  Color? gG;
 
   /// Ghana
-  final Color? gH;
+  Color? gH;
 
   /// Gibraltar
-  final Color? gI;
+  Color? gI;
 
   /// Greenland
-  final Color? gL;
+  Color? gL;
 
   /// Gambia
-  final Color? gM;
+  Color? gM;
 
   /// Guinea
-  final Color? gN;
+  Color? gN;
 
   /// Guadeloupe
-  final Color? gP;
+  Color? gP;
 
   /// Equatorial Guinea
-  final Color? gQ;
+  Color? gQ;
 
   /// Greece
-  final Color? gR;
+  Color? gR;
 
   /// South Georgia and the South Sandwich Islands
-  final Color? gS;
+  Color? gS;
 
   /// Guatemala
-  final Color? gT;
+  Color? gT;
 
   /// Guam
-  final Color? gU;
+  Color? gU;
 
   /// Guinea-Bissau
-  final Color? gW;
+  Color? gW;
 
   /// Guyana
-  final Color? gY;
+  Color? gY;
 
   /// Hong Kong
-  final Color? hK;
+  Color? hK;
 
   /// Heard Island and McDonald Islands
-  final Color? hM;
+  Color? hM;
 
   /// Honduras
-  final Color? hN;
+  Color? hN;
 
   /// Croatia
-  final Color? hR;
+  Color? hR;
 
   /// Haiti
-  final Color? hT;
+  Color? hT;
 
   /// Hungary
-  final Color? hU;
+  Color? hU;
 
   /// Indonesia
-  final Color? iD;
+  Color? iD;
 
   /// Ireland
-  final Color? iE;
+  Color? iE;
 
   /// Israel
-  final Color? iL;
+  Color? iL;
 
   /// Isle of Man
-  final Color? iM;
+  Color? iM;
 
   /// India
-  final Color? iN;
+  Color? iN;
 
   /// British Indian Ocean Territory
-  final Color? iO;
+  Color? iO;
 
   /// Iraq
-  final Color? iQ;
+  Color? iQ;
 
   /// Iran
-  final Color? iR;
+  Color? iR;
 
   /// Iceland
-  final Color? iS;
+  Color? iS;
 
   /// Italy
-  final Color? iT;
+  Color? iT;
 
   /// Jersey
-  final Color? jE;
+  Color? jE;
 
   /// Jamaica
-  final Color? jM;
+  Color? jM;
 
   /// Jordan
-  final Color? jO;
+  Color? jO;
 
   /// Japan
-  final Color? jP;
+  Color? jP;
 
   /// Kenya
-  final Color? kE;
+  Color? kE;
 
   /// Kyrgyzstan
-  final Color? kG;
+  Color? kG;
 
   /// Cambodia
-  final Color? kH;
+  Color? kH;
 
   /// Kiribati
-  final Color? kI;
+  Color? kI;
 
   /// Comors
-  final Color? kM;
+  Color? kM;
 
   /// Saint Kitts and Nevis
-  final Color? kN;
+  Color? kN;
 
   /// Korea (the Democratic People's Republic of)
-  final Color? kP;
+  Color? kP;
 
   /// Korea (the Republic of)
-  final Color? kR;
+  Color? kR;
 
   /// Kuwait
-  final Color? kW;
+  Color? kW;
 
   /// Cayman Islands
-  final Color? kY;
+  Color? kY;
 
   /// Kazakhstan
-  final Color? kZ;
+  Color? kZ;
 
   /// Lao People's Democratic Republic
-  final Color? lA;
+  Color? lA;
 
   /// Lebanon
-  final Color? lB;
+  Color? lB;
 
   /// Saint Lucia
-  final Color? lC;
+  Color? lC;
 
   /// Liechenstein
-  final Color? lI;
+  Color? lI;
 
   /// Sri Lanka
-  final Color? lK;
+  Color? lK;
 
   /// Liberia
-  final Color? lR;
+  Color? lR;
 
   /// Lesotho
-  final Color? lS;
+  Color? lS;
 
   /// Lithuania
-  final Color? lT;
+  Color? lT;
 
   /// Luxembourg
-  final Color? lU;
+  Color? lU;
 
   /// Latvia
-  final Color? lV;
+  Color? lV;
 
   /// Libya
-  final Color? lY;
+  Color? lY;
 
   /// Morocco
-  final Color? mA;
+  Color? mA;
 
   /// Monaco
-  final Color? mC;
+  Color? mC;
 
   /// Moldova
-  final Color? mD;
+  Color? mD;
 
   /// Montenegro
-  final Color? mE;
+  Color? mE;
 
   ///Saint Martin (French Part)
-  final Color? mF;
+  Color? mF;
 
   /// Madagascar
-  final Color? mG;
+  Color? mG;
 
   /// Marshall Islands
-  final Color? mH;
+  Color? mH;
 
   /// North Macedonia
-  final Color? mK;
+  Color? mK;
 
   /// Mali
-  final Color? mL;
+  Color? mL;
 
   /// Myanmar
-  final Color? mM;
+  Color? mM;
 
   /// Mongolia
-  final Color? mN;
+  Color? mN;
 
   /// Macao
-  final Color? mO;
+  Color? mO;
 
   /// Northern Mariana Islands
-  final Color? mP;
+  Color? mP;
 
   /// Martinique
-  final Color? mQ;
+  Color? mQ;
 
   /// Mauritania
-  final Color? mR;
+  Color? mR;
 
   /// Montserrat
-  final Color? mS;
+  Color? mS;
 
   /// Malta
-  final Color? mT;
+  Color? mT;
 
   /// Mauritius
-  final Color? mU;
+  Color? mU;
 
   /// Maldives
-  final Color? mV;
+  Color? mV;
 
   /// Malawi
-  final Color? mW;
+  Color? mW;
 
   /// Mexico
-  final Color? mX;
+  Color? mX;
 
   /// Malaysia
-  final Color? mY;
+  Color? mY;
 
   /// Mozambique
-  final Color? mZ;
+  Color? mZ;
 
   /// Namibia
-  final Color? nA;
+  Color? nA;
 
   /// New Caledonia
-  final Color? nC;
+  Color? nC;
 
   /// Niger
-  final Color? nE;
+  Color? nE;
 
   /// Norfolk Island
-  final Color? nF;
+  Color? nF;
 
   /// Nigeria
-  final Color? nG;
+  Color? nG;
 
   /// Nicaraqua
-  final Color? nI;
+  Color? nI;
 
   /// Netherlands
-  final Color? nL;
+  Color? nL;
 
   /// Norway
-  final Color? nO;
+  Color? nO;
 
   /// Nepal
-  final Color? nP;
+  Color? nP;
 
   /// Nauru
-  final Color? nR;
+  Color? nR;
 
   /// Niue
-  final Color? nU;
+  Color? nU;
 
   /// New Zealand
-  final Color? nZ;
+  Color? nZ;
 
   /// Oman
-  final Color? oM;
+  Color? oM;
 
   /// Panama
-  final Color? pA;
+  Color? pA;
 
   /// Peru
-  final Color? pE;
+  Color? pE;
 
   /// French Polynesia
-  final Color? pF;
+  Color? pF;
 
   /// Papa New Guinea
-  final Color? pG;
+  Color? pG;
 
   /// Philippines
-  final Color? pH;
+  Color? pH;
 
   /// Pakistan
-  final Color? pK;
+  Color? pK;
 
   /// Poland
-  final Color? pL;
+  Color? pL;
 
   /// Saint Pierre and Miquelon
-  final Color? pM;
+  Color? pM;
 
   /// Pitcairn
-  final Color? pN;
+  Color? pN;
 
   /// Puerto Rico
-  final Color? pR;
+  Color? pR;
 
   /// Palestine
-  final Color? pS;
+  Color? pS;
 
   /// Portugal
-  final Color? pT;
+  Color? pT;
 
   /// Palau
-  final Color? pW;
+  Color? pW;
 
   /// Paraguay
-  final Color? pY;
+  Color? pY;
 
   /// Qatar
-  final Color? qA;
+  Color? qA;
 
   /// Réunion
-  final Color? rE;
+  Color? rE;
 
   /// Romania
-  final Color? rO;
+  Color? rO;
 
   /// Serbia
-  final Color? rS;
+  Color? rS;
 
   /// Russian Federation
-  final Color? rU;
+  Color? rU;
 
   /// Rwanda
-  final Color? rW;
+  Color? rW;
 
   /// Saudi Arabia
-  final Color? sA;
+  Color? sA;
 
   /// Solomon Islands
-  final Color? sB;
+  Color? sB;
 
   /// Seychelles
-  final Color? sC;
+  Color? sC;
 
   /// Sudan
-  final Color? sD;
+  Color? sD;
 
   /// Sweden
-  final Color? sE;
+  Color? sE;
 
   /// Singapore
-  final Color? sG;
+  Color? sG;
 
   /// Saint Helena, Ascension and Tristan de Cunha
-  final Color? sH;
+  Color? sH;
 
   /// Slovenia
-  final Color? sI;
+  Color? sI;
 
   /// Svalbard and Jan Mayen
-  final Color? sJ;
+  Color? sJ;
 
   /// Slovakia
-  final Color? sK;
+  Color? sK;
 
   /// Sierra Leone
-  final Color? sL;
+  Color? sL;
 
   /// San Marino
-  final Color? sM;
+  Color? sM;
 
   /// Senegal
-  final Color? sN;
+  Color? sN;
 
   /// Somalia
-  final Color? sO;
+  Color? sO;
 
   /// Suriname
-  final Color? sR;
+  Color? sR;
 
   /// South Sudan
-  final Color? sS;
+  Color? sS;
 
   /// Sao Tome
-  final Color? sT;
+  Color? sT;
 
   ///El Salvador
-  final Color? sV;
+  Color? sV;
 
   /// Sint Maarten (Dutch part)
-  final Color? sX;
+  Color? sX;
 
   /// Syrian Arab Republic
-  final Color? sY;
+  Color? sY;
 
   /// Eswatini
-  final Color? sZ;
+  Color? sZ;
 
   ///Turks and Caicos Islands
-  final Color? tC;
+  Color? tC;
 
   /// Chad
-  final Color? tD;
+  Color? tD;
 
   /// French Southern Territories
-  final Color? tF;
+  Color? tF;
 
   /// Togo
-  final Color? tG;
+  Color? tG;
 
   /// Thailand
-  final Color? tH;
+  Color? tH;
 
   /// Tajikistan
-  final Color? tJ;
+  Color? tJ;
 
   /// Tokelau
-  final Color? tK;
+  Color? tK;
 
   /// Timor-Leste
-  final Color? tL;
+  Color? tL;
 
   /// Turkmenistan
-  final Color? tM;
+  Color? tM;
 
   /// Tunisia
-  final Color? tN;
+  Color? tN;
 
   /// Tonga
-  final Color? tO;
+  Color? tO;
 
   /// Turkey
-  final Color? tR;
+  Color? tR;
 
   /// Trinidad and Tobago
-  final Color? tT;
+  Color? tT;
 
   /// Tuvalu
-  final Color? tV;
+  Color? tV;
 
   /// Taiwan
-  final Color? tW;
+  Color? tW;
 
   /// Tanzania, the United REpublic of
-  final Color? tZ;
+  Color? tZ;
 
   /// Ukraine
-  final Color? uA;
+  Color? uA;
 
   /// Uganda
-  final Color? uG;
+  Color? uG;
 
   /// United States Minor Outlying Islands
-  final Color? uM;
+  Color? uM;
 
   /// United States of America
-  final Color? uS;
+  Color? uS;
 
   /// Uruguay
-  final Color? uY;
+  Color? uY;
 
   /// Uzbekistan
-  final Color? uZ;
+  Color? uZ;
 
   /// Holy See
-  final Color? vA;
+  Color? vA;
 
   /// Saint Vincent and the Grenadines
-  final Color? vC;
+  Color? vC;
 
   /// Venezuela
-  final Color? vE;
+  Color? vE;
 
   /// Virgin Islands (British)
-  final Color? vG;
+  Color? vG;
 
   /// Virgin Islands (U.S.)
-  final Color? vI;
+  Color? vI;
 
   /// Viet Nam
-  final Color? vN;
+  Color? vN;
 
   /// Vanuatu
-  final Color? vU;
+  Color? vU;
 
   /// Wallis and Futuna
-  final Color? wF;
+  Color? wF;
 
   /// Samoa
-  final Color? wS;
+  Color? wS;
 
   /// Kosovo
-  final Color? xK;
+  Color? xK;
 
   /// Yemen
-  final Color? yE;
+  Color? yE;
 
   /// Mayotte
-  final Color? yT;
+  Color? yT;
 
   /// South Africa
-  final Color? zA;
+  Color? zA;
 
   /// Zambia
-  final Color? zM;
+  Color? zM;
 
   /// Zimbabwe
-  final Color? zW;
+  Color? zW;
 
-  const SMapWorldColors({
+  SMapWorldColors({
     this.aD,
     this.aE,
     this.aF,

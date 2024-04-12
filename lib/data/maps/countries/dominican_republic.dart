@@ -2,100 +2,100 @@ import 'package:flutter/material.dart';
 
 class SMapDominicanRepublicColors {
   /// Distrito Nacional
-  final Color? do01;
+  Color? do01;
 
   /// Azua
-  final Color? do02;
+  Color? do02;
 
   /// Baoruco
-  final Color? do03;
+  Color? do03;
 
   /// Barahona
-  final Color? do04;
+  Color? do04;
 
   /// Dajabón
-  final Color? do05;
+  Color? do05;
 
   /// Duarte
-  final Color? do06;
+  Color? do06;
 
   /// El Seibo
-  final Color? do08;
+  Color? do08;
 
   /// Espaillat
-  final Color? do09;
+  Color? do09;
 
   /// Hato Mayor
-  final Color? do30;
+  Color? do30;
 
   /// Independencia
-  final Color? do10;
+  Color? do10;
 
   /// La Altagracia
-  final Color? do11;
+  Color? do11;
 
   /// La Estrelleta
-  final Color? do07;
+  Color? do07;
 
   /// La Romana
-  final Color? do12;
+  Color? do12;
 
   /// La Vega
-  final Color? do13;
+  Color? do13;
 
   /// María Trinidad Sánchez
-  final Color? do14;
+  Color? do14;
 
   /// Monseñor Nouel
-  final Color? do28;
+  Color? do28;
 
   /// Cristi
-  final Color? do15;
+  Color? do15;
 
   /// Monte Plata
-  final Color? do29;
+  Color? do29;
 
   /// Pedernales
-  final Color? do16;
+  Color? do16;
 
   /// Peravia
-  final Color? do17;
+  Color? do17;
 
   /// Puerto Plata
-  final Color? do18;
+  Color? do18;
 
   /// Hermanas Mirabal
-  final Color? do19;
+  Color? do19;
 
   /// Samaná
-  final Color? do20;
+  Color? do20;
 
   /// San Cristóbal
-  final Color? do21;
+  Color? do21;
 
   /// San José de Ocoa
-  final Color? do31;
+  Color? do31;
 
   /// San Juan
-  final Color? do22;
+  Color? do22;
 
   /// San Pedro de Macorís
-  final Color? do23;
+  Color? do23;
 
   /// Sánchez Ramírez
-  final Color? do24;
+  Color? do24;
 
   /// Santiago
-  final Color? do25;
+  Color? do25;
 
   /// Santiago Rodríguez
-  final Color? do26;
+  Color? do26;
 
   /// Santo Domingo
-  final Color? do32;
+  Color? do32;
 
   /// Valverde
-  final Color? do27;
+  Color? do27;
 
   SMapDominicanRepublicColors(
       {this.do01,

@@ -2,16 +2,16 @@ import 'package:flutter/material.dart';
 
 class SMapBruneiColors {
   /// Belait
-  final Color? bnBE;
+  Color? bnBE;
 
   /// Brunei-Muara
-  final Color? bnBM;
+  Color? bnBM;
 
   /// Temburong
-  final Color? bnTE;
+  Color? bnTE;
 
   /// Tutong
-  final Color? bnTU;
+  Color? bnTU;
   SMapBruneiColors({
     this.bnBE,
     this.bnBM,

@@ -2,58 +2,58 @@ import 'package:flutter/material.dart';
 
 class SMapIraqColors {
   /// Babil
-  final Color? iqBB;
+  Color? iqBB;
 
   /// Al-Anbar
-  final Color? iqAN;
+  Color? iqAN;
 
   /// Diyala
-  final Color? iqDI;
+  Color? iqDI;
 
   /// As-Sulaymaniyah
-  final Color? iqSU;
+  Color? iqSU;
 
   /// Wasit
-  final Color? iqWA;
+  Color? iqWA;
 
   /// Maysan
-  final Color? iqMA;
+  Color? iqMA;
 
   /// Dhi-Qar
-  final Color? iqDQ;
+  Color? iqDQ;
 
   /// Al-Qadisiyah
-  final Color? iqQA;
+  Color? iqQA;
 
   /// Al-Muthannia
-  final Color? iqMU;
+  Color? iqMU;
 
   /// Al-Basrah
-  final Color? iqBA;
+  Color? iqBA;
 
   /// Baghdad
-  final Color? iqBG;
+  Color? iqBG;
 
   /// Karbala
-  final Color? iqKA;
+  Color? iqKA;
 
   /// An-Najaf
-  final Color? iqNA;
+  Color? iqNA;
 
   /// Sala ad-Din
-  final Color? iqSD;
+  Color? iqSD;
 
   /// Ninawa
-  final Color? iqNI;
+  Color? iqNI;
 
   /// Arbil
-  final Color? iqAR;
+  Color? iqAR;
 
   /// Kirkuk
-  final Color? iqKI;
+  Color? iqKI;
 
   /// Dohuk
-  final Color? iqDA;
+  Color? iqDA;
   SMapIraqColors({
     this.iqBB,
     this.iqAN,

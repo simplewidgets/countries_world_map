@@ -2,64 +2,64 @@ import 'package:flutter/material.dart';
 
 class SMapPortugalColors {
   /// Aveiro
-  final Color? pt01;
+  Color? pt01;
 
   /// Beja
-  final Color? pt02;
+  Color? pt02;
 
   /// Braga
-  final Color? pt03;
+  Color? pt03;
 
   /// Bragança
-  final Color? pt04;
+  Color? pt04;
 
   /// Castelo Branco
-  final Color? pt05;
+  Color? pt05;
 
   /// Coimbra
-  final Color? pt06;
+  Color? pt06;
 
   ///  Évora
-  final Color? pt07;
+  Color? pt07;
 
   /// Faro
-  final Color? pt08;
+  Color? pt08;
 
   /// Guarda
-  final Color? pt09;
+  Color? pt09;
 
   /// Leiria
-  final Color? pt10;
+  Color? pt10;
 
   /// Lisboa
-  final Color? pt11;
+  Color? pt11;
 
   /// Portalegre
-  final Color? pt12;
+  Color? pt12;
 
   /// Porto
-  final Color? pt13;
+  Color? pt13;
 
   /// Santarém
-  final Color? pt14;
+  Color? pt14;
 
   /// Setúbal
-  final Color? pt15;
+  Color? pt15;
 
   /// Viana do Castelo
-  final Color? pt16;
+  Color? pt16;
 
   /// Vila Real
-  final Color? pt17;
+  Color? pt17;
 
   /// Viseu
-  final Color? pt18;
+  Color? pt18;
 
   /// Açores
-  final Color? pt20;
+  Color? pt20;
 
   /// Madeira
-  final Color? pt30;
+  Color? pt30;
   SMapPortugalColors({
     this.pt01,
     this.pt02,

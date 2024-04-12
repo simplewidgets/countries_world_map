@@ -2,88 +2,88 @@ import 'package:flutter/material.dart';
 
 class SMapBulgariaColors {
   /// Blagoevgrad
-  final Color? bg01;
+  Color? bg01;
 
   /// Burgas
-  final Color? bg02;
+  Color? bg02;
 
   /// Varna
-  final Color? bg03;
+  Color? bg03;
 
   /// Veliko Tarnovo
-  final Color? bg04;
+  Color? bg04;
 
   /// Vidin
-  final Color? bg05;
+  Color? bg05;
 
   /// Vratsa
-  final Color? bg06;
+  Color? bg06;
 
   /// Gabrovo
-  final Color? bg07;
+  Color? bg07;
 
   /// Dobrich
-  final Color? bg08;
+  Color? bg08;
 
   /// Kardzhali
-  final Color? bg09;
+  Color? bg09;
 
   /// Kyustendil
-  final Color? bg10;
+  Color? bg10;
 
   /// Lovech
-  final Color? bg11;
+  Color? bg11;
 
   /// Montana
-  final Color? bg12;
+  Color? bg12;
 
   /// Pazardzhik
-  final Color? bg13;
+  Color? bg13;
 
   /// Pernik
-  final Color? bg14;
+  Color? bg14;
 
   /// Pleven
-  final Color? bg15;
+  Color? bg15;
 
   /// Plovdiv
-  final Color? bg16;
+  Color? bg16;
 
   /// Razgrad
-  final Color? bg17;
+  Color? bg17;
 
   /// Ruse
-  final Color? bg18;
+  Color? bg18;
 
   /// Silistra
-  final Color? bg19;
+  Color? bg19;
 
   /// Sliven
-  final Color? bg20;
+  Color? bg20;
 
   /// Smolyan
-  final Color? bg21;
+  Color? bg21;
 
   /// Sofia-Grad
-  final Color? bg22;
+  Color? bg22;
 
   /// Sofia
-  final Color? bg23;
+  Color? bg23;
 
   /// Stara Zagora
-  final Color? bg24;
+  Color? bg24;
 
   /// Targovishte
-  final Color? bg25;
+  Color? bg25;
 
   /// Haskovo
-  final Color? bg26;
+  Color? bg26;
 
   /// Yambol
-  final Color? bg28;
+  Color? bg28;
 
   /// Shumen
-  final Color? bg27;
+  Color? bg27;
   SMapBulgariaColors({
     this.bg01,
     this.bg02,

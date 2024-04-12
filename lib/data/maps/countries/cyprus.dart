@@ -2,22 +2,22 @@ import 'package:flutter/material.dart';
 
 class SMapCyprusColors {
   /// Nicosia
-  final Color? cy01;
+  Color? cy01;
 
   /// Limassol
-  final Color? cy02;
+  Color? cy02;
 
   /// Larnaca
-  final Color? cy03;
+  Color? cy03;
 
   /// Famagusta
-  final Color? cy04;
+  Color? cy04;
 
   /// Paphos
-  final Color? cy05;
+  Color? cy05;
 
   /// Kyrenia
-  final Color? cy06;
+  Color? cy06;
   SMapCyprusColors({
     this.cy01,
     this.cy02,

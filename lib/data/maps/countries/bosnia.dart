@@ -2,58 +2,58 @@
 
 // class SMapBosniaColors {
 //   /// Unsko-sanski kanton
-//   final Color? ba01;
+//    Color? ba01;
 
 //   /// Posavski kanton
-//   final Color? ba02;
+//    Color? ba02;
 
 //   /// Tuzlanski kanton
-//   final Color? ba03;
+//    Color? ba03;
 
 //   /// Zeničko-dobojski kanton
-//   final Color? ba04;
+//    Color? ba04;
 
 //   /// Bosansko-podrinjski kanton
-//   final Color? ba05;
+//    Color? ba05;
 
 //   /// Srednjobosanski kanton
-//   final Color? ba06;
+//    Color? ba06;
 
 //   /// Hercegovačko-neretvanski kanton
-//   final Color? ba07;
+//    Color? ba07;
 
 //   /// Zapadnohercegovački kanton
-//   final Color? ba08;
+//    Color? ba08;
 
 //   /// Kanton Sarajevo
-//   final Color? ba09;
+//    Color? ba09;
 
 //   /// Kanton br. 10
-//   final Color? ba10;
+//    Color? ba10;
 
 //   /// Brčko
-//   final Color? baBR;
+//    Color? baBR;
 
 //   /// Bijeljina
-//   final Color? baSR;
+//    Color? baSR;
 
 //   /// Banja-Luka
-//   final Color? baSR;
+//    Color? baSR;
 
 //   /// Doboj
-//   final Color? baSR;
+//    Color? baSR;
 
 //   /// Foca
-//   final Color? baSR;
+//    Color? baSR;
 
 //   /// Sarajevo-Romanija
-//   final Color? baSR;
+//    Color? baSR;
 
 //   /// Trebinje
-//   final Color? baSR;
+//    Color? baSR;
 
 //   /// Vlasenica
-//   final Color? baSR;
+//    Color? baSR;
 //   SMapBosniaColors({
 //     this.ba01,
 //     this.ba02,

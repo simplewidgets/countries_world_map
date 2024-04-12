@@ -2,52 +2,52 @@ import 'package:flutter/material.dart';
 
 class SMapPolandColors {
   /// Dolnośląskie
-  final Color? plDS;
+  Color? plDS;
 
   /// Kujawsko-Pomorskie
-  final Color? plKP;
+  Color? plKP;
 
   /// Łódzkie
-  final Color? plLD;
+  Color? plLD;
 
   /// Lubelskie
-  final Color? plLU;
+  Color? plLU;
 
   /// Lubuskie
-  final Color? plLB;
+  Color? plLB;
 
   /// Małopolskie
-  final Color? plMA;
+  Color? plMA;
 
   /// Mazowieckie
-  final Color? plMZ;
+  Color? plMZ;
 
   /// Opolskie
-  final Color? plOP;
+  Color? plOP;
 
   /// Podkarpackie
-  final Color? plPK;
+  Color? plPK;
 
   /// Podlaskie
-  final Color? plPD;
+  Color? plPD;
 
   /// Pomorskie
-  final Color? plPM;
+  Color? plPM;
 
   /// Śląskie
-  final Color? plSL;
+  Color? plSL;
 
   /// Świętokrzyskie
-  final Color? plSK;
+  Color? plSK;
 
   /// Warmińsko-Mazurskie
-  final Color? plWN;
+  Color? plWN;
 
   /// Wielkopolskie
-  final Color? plWP;
+  Color? plWP;
 
   /// Zachodniopomorskie
-  final Color? plZP;
+  Color? plZP;
   SMapPolandColors({
     this.plDS,
     this.plKP,

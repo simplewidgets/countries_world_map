@@ -1,3 +1,7 @@
+## 1.3.0
+Removed all finals from the helper classes.
+Now it can be more easily referenced and used for updating the colors of the map.
+
 ## 1.2.0 
 Added mouse hover support to the SimpleMap widget.
 Simply add the onHover parameter to get started!

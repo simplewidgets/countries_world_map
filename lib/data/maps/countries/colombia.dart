@@ -2,103 +2,103 @@ import 'package:flutter/material.dart';
 
 class SMapColombiaColors {
   /// Amazonas
-  final Color? coAMA;
+  Color? coAMA;
 
   /// Antioquia
-  final Color? coANT;
+  Color? coANT;
 
   /// Arauca
-  final Color? coARA;
+  Color? coARA;
 
   /// Atlántico
-  final Color? coATL;
+  Color? coATL;
 
   /// Bolívar
-  final Color? coBOL;
+  Color? coBOL;
 
   /// Boyacá
-  final Color? coBOY;
+  Color? coBOY;
 
   /// Cauca
-  final Color? coCAU;
+  Color? coCAU;
 
   /// Cesar
-  final Color? coCES;
+  Color? coCES;
 
   /// Chocó
-  final Color? coCHO;
+  Color? coCHO;
 
   /// Caldas
-  final Color? coCAL;
+  Color? coCAL;
 
   /// Córdoba
-  final Color? coCOR;
+  Color? coCOR;
 
   /// Caquetá
-  final Color? coCAQ;
+  Color? coCAQ;
 
   /// Casanare
-  final Color? coCAS;
+  Color? coCAS;
 
   /// Cundinamarca
-  final Color? coCUN;
+  Color? coCUN;
 
   /// Distrito Capital de Bogotá
-  final Color? coDC;
+  Color? coDC;
 
   /// Guainía
-  final Color? coGUA;
+  Color? coGUA;
 
   /// Guaviar
-  final Color? coGUV;
+  Color? coGUV;
 
   /// Huila
-  final Color? coHUI;
+  Color? coHUI;
 
   /// La Guajira
-  final Color? coLAG;
+  Color? coLAG;
 
   /// Magdalena
-  final Color? coMAG;
+  Color? coMAG;
 
   /// Meta
-  final Color? coMET;
+  Color? coMET;
 
   /// Nariño
-  final Color? coNAR;
+  Color? coNAR;
 
   /// Norte de Santander
-  final Color? coNSA;
+  Color? coNSA;
 
   /// Putumayo
-  final Color? coPUT;
+  Color? coPUT;
 
   /// Quindío
-  final Color? coQUI;
+  Color? coQUI;
 
   /// Risaralda
-  final Color? coRIS;
+  Color? coRIS;
 
   /// Santander
-  final Color? coSAN;
+  Color? coSAN;
 
   /// Sucre
-  final Color? coSUC;
+  Color? coSUC;
 
   /// San Andrés, Providencia y Santa Catalina
-  final Color? coSAP;
+  Color? coSAP;
 
   /// Tolima
-  final Color? coTOL;
+  Color? coTOL;
 
   /// Valle del Cauca
-  final Color? coVAC;
+  Color? coVAC;
 
   /// Vichada
-  final Color? coVID;
+  Color? coVID;
 
   /// Vaupés
-  final Color? coVAU;
+  Color? coVAU;
   SMapColombiaColors({
     this.coAMA,
     this.coANT,

@@ -2,52 +2,52 @@ import 'package:flutter/material.dart';
 
 class SMapChileColors {
   /// Aisén del General Carlos Ibáñez del Campo
-  final Color? clAI;
+  Color? clAI;
 
   /// Magallanes y Antártica Chilena
-  final Color? clMA;
+  Color? clMA;
 
   /// Tarapacá
-  final Color? clTA;
+  Color? clTA;
 
   /// Antofagasta
-  final Color? clAN;
+  Color? clAN;
 
   /// Atacama
-  final Color? clAT;
+  Color? clAT;
 
   /// Coquimbo
-  final Color? clCO;
+  Color? clCO;
 
   /// Región Metropolitana de Santiago
-  final Color? clRM;
+  Color? clRM;
 
   /// h     d=
-  final Color? path4156;
+  Color? path4156;
 
   /// Araucanía
-  final Color? clAR;
+  Color? clAR;
 
   /// Biobío
-  final Color? clBI;
+  Color? clBI;
 
   /// Ñuble
-  final Color? clNU;
+  Color? clNU;
 
   /// Libertador General Bernardo O'Higgins
-  final Color? clLI;
+  Color? clLI;
 
   /// Los Lagos
-  final Color? clLL;
+  Color? clLL;
 
   /// Maule
-  final Color? clML;
+  Color? clML;
 
   /// Arica y Parinacota
-  final Color? clAP;
+  Color? clAP;
 
   /// Los Ríos
-  final Color? clLR;
+  Color? clLR;
   SMapChileColors({
     this.clAI,
     this.clMA,

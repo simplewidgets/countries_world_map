@@ -2,37 +2,37 @@ import 'package:flutter/material.dart';
 
 class SMapCongoDRColors {
   /// Bas-Congo
-  final Color? cdBC;
+  Color? cdBC;
 
   /// Bandundu
-  final Color? cdBN;
+  Color? cdBN;
 
   /// Équateur
-  final Color? cdEQ;
+  Color? cdEQ;
 
   /// Katanga
-  final Color? cdKA;
+  Color? cdKA;
 
   /// Kasai-Oriental
-  final Color? cdKE;
+  Color? cdKE;
 
   /// Kinshasa
-  final Color? cdKN;
+  Color? cdKN;
 
   /// Kasai-Occidental
-  final Color? cdKW;
+  Color? cdKW;
 
   /// Maniema
-  final Color? cdMA;
+  Color? cdMA;
 
   /// Nord-Kivu
-  final Color? cdNK;
+  Color? cdNK;
 
   /// Orientale
-  final Color? cdOR;
+  Color? cdOR;
 
   /// Sud-Kivu
-  final Color? cdSK;
+  Color? cdSK;
   SMapCongoDRColors({
     this.cdBC,
     this.cdBN,

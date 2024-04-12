@@ -2,58 +2,58 @@ import 'package:flutter/material.dart';
 
 class SMapParaguayColors {
   /// Itapúa
-  final Color? py7;
+  Color? py7;
 
   /// Canindeyú
-  final Color? py14;
+  Color? py14;
 
   /// Caazapá
-  final Color? py6;
+  Color? py6;
 
   /// Caaguazú
-  final Color? py5;
+  Color? py5;
 
   /// Alto Paraná
-  final Color? py10;
+  Color? py10;
 
   /// Amambay
-  final Color? py13;
+  Color? py13;
 
   /// Paraguarí
-  final Color? py9;
+  Color? py9;
 
   /// Ñeembucú
-  final Color? py12;
+  Color? py12;
 
   /// Misiones
-  final Color? py8;
+  Color? py8;
 
   /// Guairá
-  final Color? py4;
+  Color? py4;
 
   /// Central
-  final Color? py11;
+  Color? py11;
 
   /// San Pedro
-  final Color? py2;
+  Color? py2;
 
   /// Presidente Hayes
-  final Color? py15;
+  Color? py15;
 
   /// Cordillera
-  final Color? py3;
+  Color? py3;
 
   /// Concepción
-  final Color? py1;
+  Color? py1;
 
   /// Boquerón
-  final Color? py19;
+  Color? py19;
 
   /// Alto Paraguay
-  final Color? py16;
+  Color? py16;
 
   /// Asunción
-  final Color? pyASU;
+  Color? pyASU;
   SMapParaguayColors({
     this.py7,
     this.py14,

@@ -2,106 +2,106 @@ import 'package:flutter/material.dart';
 
 class SMapChinaColors {
   /// Anhui
-  final Color? cn34;
+  Color? cn34;
 
   /// Beijing
-  final Color? cn11;
+  Color? cn11;
 
   /// Chongqing
-  final Color? cn50;
+  Color? cn50;
 
   /// Fujian
-  final Color? cn35;
+  Color? cn35;
 
   /// Guangdong
-  final Color? cn44;
+  Color? cn44;
 
   /// Gansu
-  final Color? cn62;
+  Color? cn62;
 
   /// Guangxi Zhuang
-  final Color? cn45;
+  Color? cn45;
 
   /// Guizhou
-  final Color? cn52;
+  Color? cn52;
 
   /// Hainan
-  final Color? cn46;
+  Color? cn46;
 
   /// Hebei
-  final Color? cn13;
+  Color? cn13;
 
   /// Henan
-  final Color? cn41;
+  Color? cn41;
 
   /// Hong Kong
-  final Color? cn91;
+  Color? cn91;
 
   /// Heilongjiang
-  final Color? cn23;
+  Color? cn23;
 
   /// Hunan
-  final Color? cn43;
+  Color? cn43;
 
   /// Hubei
-  final Color? cn42;
+  Color? cn42;
 
   /// Jilin
-  final Color? cn22;
+  Color? cn22;
 
   /// Jiangsu
-  final Color? cn32;
+  Color? cn32;
 
   /// Jiangxi
-  final Color? cn36;
+  Color? cn36;
 
   /// Liaoning
-  final Color? cn21;
+  Color? cn21;
 
   /// Macau
-  final Color? cn92;
+  Color? cn92;
 
   /// Nei Mongol
-  final Color? cn15;
+  Color? cn15;
 
   /// Ningxia Hui
-  final Color? cn64;
+  Color? cn64;
 
   /// Quinghai
-  final Color? cn63;
+  Color? cn63;
 
   /// Shaanxi
-  final Color? cn61;
+  Color? cn61;
 
   /// Sichuan
-  final Color? cn51;
+  Color? cn51;
 
   /// Shandong
-  final Color? cn37;
+  Color? cn37;
 
   /// Shanghai
-  final Color? cn31;
+  Color? cn31;
 
   /// Shanxi
-  final Color? cn14;
+  Color? cn14;
 
   /// Tianjin
-  final Color? cn12;
+  Color? cn12;
 
   /// Taiwan
-  final Color? cn71;
+  Color? cn71;
 
   /// Xinjiang Uygur
-  final Color? cn65;
+  Color? cn65;
 
   /// Xizang (Tibet)
-  final Color? cn54;
+  Color? cn54;
 
   /// Yunnan
-  final Color? cn53;
+  Color? cn53;
 
   /// Zhejiang
-  final Color? cn33;
+  Color? cn33;
   SMapChinaColors({
     this.cn34,
     this.cn11,

@@ -2,31 +2,31 @@ import 'package:flutter/material.dart';
 
 class SMapSanMarinoColors {
   /// Acquaviva
-  final Color? sm01;
+  Color? sm01;
 
   /// Chiesanuova
-  final Color? sm02;
+  Color? sm02;
 
   /// Domagnano
-  final Color? sm03;
+  Color? sm03;
 
   /// Faetano
-  final Color? sm04;
+  Color? sm04;
 
   /// Fiorentino
-  final Color? sm05;
+  Color? sm05;
 
   /// Borgo Maggiore
-  final Color? sm06;
+  Color? sm06;
 
   /// San Marino
-  final Color? sm07;
+  Color? sm07;
 
   /// Montegiardino
-  final Color? sm08;
+  Color? sm08;
 
   /// Serravalle
-  final Color? sm09;
+  Color? sm09;
   SMapSanMarinoColors({
     this.sm01,
     this.sm02,

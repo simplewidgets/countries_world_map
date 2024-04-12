@@ -2,145 +2,145 @@ import 'package:flutter/material.dart';
 
 class SMapKenyaColors {
   /// Mombasa
-  final Color? ke28;
+  Color? ke28;
 
   /// Kwale
-  final Color? ke19;
+  Color? ke19;
 
   /// Taita Taveta
-  final Color? ke39;
+  Color? ke39;
 
   /// Kilifi
-  final Color? ke94;
+  Color? ke94;
 
   /// Lamu
-  final Color? ke21;
+  Color? ke21;
 
   /// Makueni
-  final Color? ke23;
+  Color? ke23;
 
   /// Nairobi
-  final Color? ke30;
+  Color? ke30;
 
   /// Kajiado
-  final Color? ke10;
+  Color? ke10;
 
   /// Machakos
-  final Color? ke22;
+  Color? ke22;
 
   /// Kiambu
-  final Color? ke13;
+  Color? ke13;
 
   /// Migori
-  final Color? ke27;
+  Color? ke27;
 
   /// Murang'a
-  final Color? ke29;
+  Color? ke29;
 
   /// Kisii
-  final Color? ke16;
+  Color? ke16;
 
   /// Narok
-  final Color? ke33;
+  Color? ke33;
 
   /// Nyamira
-  final Color? ke34;
+  Color? ke34;
 
   /// Bomet
-  final Color? ke02;
+  Color? ke02;
 
   /// Homa Bay
-  final Color? ke08;
+  Color? ke08;
 
   /// Embu
-  final Color? ke06;
+  Color? ke06;
 
   /// Kirinyaga
-  final Color? ke15;
+  Color? ke15;
 
   /// Kitui
-  final Color? ke18;
+  Color? ke18;
 
   /// Tana River
-  final Color? ke40;
+  Color? ke40;
 
   /// Nyeri
-  final Color? ke36;
+  Color? ke36;
 
   /// Kisumu
-  final Color? ke17;
+  Color? ke17;
 
   /// Kericho
-  final Color? ke12;
+  Color? ke12;
 
   /// Tharaka
-  final Color? ke41;
+  Color? ke41;
 
   /// Nyandarua
-  final Color? ke35;
+  Color? ke35;
 
   /// Vihiga
-  final Color? ke45;
+  Color? ke45;
 
   /// Nakuru
-  final Color? ke31;
+  Color? ke31;
 
   /// Siaya
-  final Color? ke38;
+  Color? ke38;
 
   /// Nandi
-  final Color? ke32;
+  Color? ke32;
 
   /// Meru
-  final Color? ke26;
+  Color? ke26;
 
   /// Busia
-  final Color? ke04;
+  Color? ke04;
 
   /// Laikipia
-  final Color? ke20;
+  Color? ke20;
 
   /// Kakamega
-  final Color? ke11;
+  Color? ke11;
 
   /// Uasin Gishu
-  final Color? ke44;
+  Color? ke44;
 
   /// Garissa
-  final Color? ke07;
+  Color? ke07;
 
   /// Bungoma
-  final Color? ke03;
+  Color? ke03;
 
   /// Trans Nzoia
-  final Color? ke42;
+  Color? ke42;
 
   /// Keiyo-Marakwet
-  final Color? ke05;
+  Color? ke05;
 
   /// Baringo
-  final Color? ke01;
+  Color? ke01;
 
   /// Isiolo
-  final Color? ke09;
+  Color? ke09;
 
   /// Samburu
-  final Color? ke37;
+  Color? ke37;
 
   /// West Pokot
-  final Color? ke47;
+  Color? ke47;
 
   /// Wajir
-  final Color? ke46;
+  Color? ke46;
 
   /// Mandera
-  final Color? ke24;
+  Color? ke24;
 
   /// Marsabit
-  final Color? ke25;
+  Color? ke25;
 
   /// Turkana
-  final Color? ke43;
+  Color? ke43;
   SMapKenyaColors({
     this.ke28,
     this.ke19,

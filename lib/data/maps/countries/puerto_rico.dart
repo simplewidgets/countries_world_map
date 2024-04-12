@@ -2,241 +2,241 @@ import 'package:flutter/material.dart';
 
 class SMapPuertoRicoColors {
   /// Yauco
-  final Color? prYU;
+  Color? prYU;
 
   /// Yabucoa
-  final Color? prYB;
+  Color? prYB;
 
   /// Villalba
-  final Color? prVL;
+  Color? prVL;
 
   /// Vieques
-  final Color? prVQ;
+  Color? prVQ;
 
   /// Vega Baja
-  final Color? prVB;
+  Color? prVB;
 
   /// Vega Alta
-  final Color? prVA;
+  Color? prVA;
 
   /// Utuado
-  final Color? prUT;
+  Color? prUT;
 
   /// Trujillo Alto
-  final Color? prTJ;
+  Color? prTJ;
 
   /// Toa Baja
-  final Color? prTB;
+  Color? prTB;
 
   /// Toa Alta
-  final Color? prTA;
+  Color? prTA;
 
   /// Santa Isabel
-  final Color? prSI;
+  Color? prSI;
 
   /// San Sebastián
-  final Color? prSS;
+  Color? prSS;
 
   /// San Lorenzo
-  final Color? prSL;
+  Color? prSL;
 
   /// San Juan
-  final Color? prSJ;
+  Color? prSJ;
 
   /// San Germán
-  final Color? prSG;
+  Color? prSG;
 
   /// Salinas
-  final Color? prSA;
+  Color? prSA;
 
   /// Sabana Grande
-  final Color? prSB;
+  Color? prSB;
 
   /// Río Grande
-  final Color? prRG;
+  Color? prRG;
 
   /// Rincón
-  final Color? prRC;
+  Color? prRC;
 
   /// Quebradillas
-  final Color? prQB;
+  Color? prQB;
 
   /// Ponce
-  final Color? prPO;
+  Color? prPO;
 
   /// Peñuelas
-  final Color? prPN;
+  Color? prPN;
 
   /// Patillas
-  final Color? prPT;
+  Color? prPT;
 
   /// Orocovis
-  final Color? prOR;
+  Color? prOR;
 
   /// Naranjito
-  final Color? prNR;
+  Color? prNR;
 
   /// Naguabo
-  final Color? prNG;
+  Color? prNG;
 
   /// Morovis
-  final Color? prMV;
+  Color? prMV;
 
   /// Moca
-  final Color? prMC;
+  Color? prMC;
 
   /// Mayagüez
-  final Color? prMG;
+  Color? prMG;
 
   /// Mayagüez
-  final Color? prMG2;
+  Color? prMG2;
 
   /// Maunabo
-  final Color? prMB;
+  Color? prMB;
 
   /// Maricao
-  final Color? prMR;
+  Color? prMR;
 
   /// Manatí
-  final Color? prMT;
+  Color? prMT;
 
   /// Luquillo
-  final Color? prLQ;
+  Color? prLQ;
 
   /// Loíza
-  final Color? prLZ;
+  Color? prLZ;
 
   /// Las Piedras
-  final Color? prLP;
+  Color? prLP;
 
   /// Las Marías
-  final Color? prLM;
+  Color? prLM;
 
   /// Lares
-  final Color? prLR;
+  Color? prLR;
 
   /// Lajas
-  final Color? prLJ;
+  Color? prLJ;
 
   /// Juncos
-  final Color? prJC;
+  Color? prJC;
 
   /// Juana Díaz
-  final Color? prJD;
+  Color? prJD;
 
   /// Jayuya
-  final Color? prJY;
+  Color? prJY;
 
   /// Isabela
-  final Color? prIS;
+  Color? prIS;
 
   /// Humacao
-  final Color? prHU;
+  Color? prHU;
 
   /// Hormigueros
-  final Color? prHO;
+  Color? prHO;
 
   /// Hatillo
-  final Color? prHA;
+  Color? prHA;
 
   /// Gurabo
-  final Color? prGR;
+  Color? prGR;
 
   /// Guaynabo
-  final Color? prGB;
+  Color? prGB;
 
   /// Guayanilla
-  final Color? prGL;
+  Color? prGL;
 
   /// Guayama
-  final Color? prGM;
+  Color? prGM;
 
   /// Guánica
-  final Color? prGC;
+  Color? prGC;
 
   /// Florida
-  final Color? prFL;
+  Color? prFL;
 
   /// Fajardo
-  final Color? prFJ;
+  Color? prFJ;
 
   /// Dorado
-  final Color? prDO;
+  Color? prDO;
 
   /// Culebra
-  final Color? prCU;
+  Color? prCU;
 
   /// Corozal
-  final Color? prCZ;
+  Color? prCZ;
 
   /// Comerío
-  final Color? prCM;
+  Color? prCM;
 
   /// Coamo
-  final Color? prCO;
+  Color? prCO;
 
   /// Cidra
-  final Color? prCD;
+  Color? prCD;
 
   /// Ciales
-  final Color? prCL;
+  Color? prCL;
 
   /// Ceiba
-  final Color? prCB;
+  Color? prCB;
 
   /// Cayey
-  final Color? prCY;
+  Color? prCY;
 
   /// Cataño
-  final Color? prCT;
+  Color? prCT;
 
   /// Carolina
-  final Color? prCN;
+  Color? prCN;
 
   /// Canóvanas
-  final Color? prCV;
+  Color? prCV;
 
   /// Camuy
-  final Color? prCA;
+  Color? prCA;
 
   /// Caguas
-  final Color? prCG;
+  Color? prCG;
 
   /// Cabo Rojo
-  final Color? prCR;
+  Color? prCR;
 
   /// Bayamón
-  final Color? prBY;
+  Color? prBY;
 
   /// Barranquitas
-  final Color? prBQ;
+  Color? prBQ;
 
   /// Barceloneta
-  final Color? prBC;
+  Color? prBC;
 
   /// Arroyo
-  final Color? prAR;
+  Color? prAR;
 
   /// Arecibo
-  final Color? prAC;
+  Color? prAC;
 
   /// Añasco
-  final Color? prAN;
+  Color? prAN;
 
   /// Aibonito
-  final Color? prAI;
+  Color? prAI;
 
   /// Aguas Buenas
-  final Color? prAB;
+  Color? prAB;
 
   /// Aguadilla
-  final Color? prAL;
+  Color? prAL;
 
   /// Aguada
-  final Color? prAD;
+  Color? prAD;
 
   /// Adjuntas
-  final Color? prAJ;
+  Color? prAJ;
   SMapPuertoRicoColors({
     this.prYU,
     this.prYB,

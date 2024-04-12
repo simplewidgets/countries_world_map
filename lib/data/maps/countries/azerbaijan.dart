@@ -2,235 +2,235 @@ import 'package:flutter/material.dart';
 
 class SMapAzerbaijanColors {
   /// Geġark'unik'
-  final Color? amGR;
+  Color? amGR;
 
   /// Abşeron
-  final Color? azABS;
+  Color? azABS;
 
   /// Ağstafa
-  final Color? azAGA;
+  Color? azAGA;
 
   /// Ağcabədi
-  final Color? azAGC;
+  Color? azAGC;
 
   /// Ağdaş
-  final Color? azAGS;
+  Color? azAGS;
 
   /// Ağdam
-  final Color? azAGM;
+  Color? azAGM;
 
   /// Ağsu
-  final Color? azAGU;
+  Color? azAGU;
 
   /// Astara
-  final Color? azAST;
+  Color? azAST;
 
   /// Bakı
-  final Color? azBA;
+  Color? azBA;
 
   /// Babək
-  final Color? azBAB;
+  Color? azBAB;
 
   /// Balakən
-  final Color? azBAL;
+  Color? azBAL;
 
   /// Bərdə
-  final Color? azBAR;
+  Color? azBAR;
 
   /// Beyləqan
-  final Color? azBEY;
+  Color? azBEY;
 
   /// Biləsuvar
-  final Color? azBIL;
+  Color? azBIL;
 
   /// Cəbrayıl
-  final Color? azCAB;
+  Color? azCAB;
 
   /// Cəlilabab
-  final Color? azCAL;
+  Color? azCAL;
 
   /// Culfa
-  final Color? azCUL;
+  Color? azCUL;
 
   /// Daşkəsən
-  final Color? azDAS;
+  Color? azDAS;
 
   /// Füzuli
-  final Color? azFUZ;
+  Color? azFUZ;
 
   /// Gəncə
-  final Color? azGA;
+  Color? azGA;
 
   /// Gədəbəy
-  final Color? azGAD;
+  Color? azGAD;
 
   /// Goranboy
-  final Color? azGOR;
+  Color? azGOR;
 
   /// Göyçay
-  final Color? azGOY;
+  Color? azGOY;
 
   /// Göygöl
-  final Color? azGYG;
+  Color? azGYG;
 
   /// Hacıqabul
-  final Color? azHAC;
+  Color? azHAC;
 
   /// İmişli
-  final Color? azIMI;
+  Color? azIMI;
 
   /// İsmayıllı
-  final Color? azISM;
+  Color? azISM;
 
   /// Kəlbəcər
-  final Color? azKAL;
+  Color? azKAL;
 
   /// Kǝngǝrli
-  final Color? azKAN;
+  Color? azKAN;
 
   /// Kürdəmir
-  final Color? azKUR;
+  Color? azKUR;
 
   /// Lənkəran City
-  final Color? azLA;
+  Color? azLA;
 
   /// Laçın
-  final Color? azLAC;
+  Color? azLAC;
 
   /// Lənkəran
-  final Color? azLAN;
+  Color? azLAN;
 
   /// Lerik
-  final Color? azLER;
+  Color? azLER;
 
   /// Masallı
-  final Color? azMAS;
+  Color? azMAS;
 
   /// Mingəçevir
-  final Color? azMI;
+  Color? azMI;
 
   /// Naftalan City
-  final Color? azNA;
+  Color? azNA;
 
   /// Neftçala
-  final Color? azNEF;
+  Color? azNEF;
 
   /// Naxçıvan
-  final Color? azNV;
+  Color? azNV;
 
   /// Oğuz
-  final Color? azOGU;
+  Color? azOGU;
 
   /// Ordubad
-  final Color? azORD;
+  Color? azORD;
 
   /// Qəbələ
-  final Color? azQAB;
+  Color? azQAB;
 
   /// Qax
-  final Color? azQAX;
+  Color? azQAX;
 
   /// Qazax
-  final Color? azQAZ;
+  Color? azQAZ;
 
   /// Quba
-  final Color? azQBA;
+  Color? azQBA;
 
   /// Qubadlı
-  final Color? azQBI;
+  Color? azQBI;
 
   /// Qobustan
-  final Color? azQOB;
+  Color? azQOB;
 
   /// Qusar
-  final Color? azQUS;
+  Color? azQUS;
 
   /// Şəki City
-  final Color? azSA;
+  Color? azSA;
 
   /// Sabirabad
-  final Color? azSAB;
+  Color? azSAB;
 
   /// Sədərək
-  final Color? azSAD;
+  Color? azSAD;
 
   /// Şahbuz
-  final Color? azSAH;
+  Color? azSAH;
 
   /// Şəki
-  final Color? azSAK;
+  Color? azSAK;
 
   /// Salyan
-  final Color? azSAL;
+  Color? azSAL;
 
   /// Şərur
-  final Color? azSAR;
+  Color? azSAR;
 
   /// Saatlı
-  final Color? azSAT;
+  Color? azSAT;
 
   /// Şabran
-  final Color? azSBN;
+  Color? azSBN;
 
   /// Siyəzən
-  final Color? azSIY;
+  Color? azSIY;
 
   /// Şəmkir
-  final Color? azSKR;
+  Color? azSKR;
 
   /// Sumqayıt
-  final Color? azSM;
+  Color? azSM;
 
   /// Şamaxı
-  final Color? azSMI;
+  Color? azSMI;
 
   /// Samux
-  final Color? azSMX;
+  Color? azSMX;
 
   /// Şirvan City
-  final Color? azSR;
+  Color? azSR;
 
   /// Şuşa
-  final Color? azSUS;
+  Color? azSUS;
 
   /// Tərtər
-  final Color? azTAR;
+  Color? azTAR;
 
   /// Tovuz
-  final Color? azTOV;
+  Color? azTOV;
 
   /// Ucar
-  final Color? azUCA;
+  Color? azUCA;
 
   /// Xaçmaz
-  final Color? azXAC;
+  Color? azXAC;
 
   /// Xocalı
-  final Color? azXCI;
+  Color? azXCI;
 
   /// Xızı
-  final Color? azXIZ;
+  Color? azXIZ;
 
   /// Xocavənd
-  final Color? azXVD;
+  Color? azXVD;
 
   /// Yardımlı
-  final Color? azYAR;
+  Color? azYAR;
 
   /// Yevlax City
-  final Color? azYE;
+  Color? azYE;
 
   /// Yevlax
-  final Color? azYEV;
+  Color? azYEV;
 
   /// Zəngilan
-  final Color? azZAN;
+  Color? azZAN;
 
   /// Zaqatala
-  final Color? azZAQ;
+  Color? azZAQ;
 
   /// Zərdab
-  final Color? azZAR;
+  Color? azZAR;
   SMapAzerbaijanColors({
     this.amGR,
     this.azABS,

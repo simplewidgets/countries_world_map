@@ -2,100 +2,100 @@ import 'package:flutter/material.dart';
 
 class SMapBahamasColors {
   /// Hope Town
-  final Color? bsHT;
+  Color? bsHT;
 
   /// Bimini
-  final Color? bsBI;
+  Color? bsBI;
 
   /// Inagua
-  final Color? bsIN;
+  Color? bsIN;
 
   /// Mayaguana
-  final Color? bsMG;
+  Color? bsMG;
 
   /// Acklins
-  final Color? bsAK;
+  Color? bsAK;
 
   /// Crooked Island and Long Cay
-  final Color? bsCK;
+  Color? bsCK;
 
   /// Ragged Island
-  final Color? bsRI;
+  Color? bsRI;
 
   /// Long Island
-  final Color? bsLI;
+  Color? bsLI;
 
   /// Rum Cay
-  final Color? bsRC;
+  Color? bsRC;
 
   /// San Salvador
-  final Color? bsSS;
+  Color? bsSS;
 
   /// Cat Island
-  final Color? bsCI;
+  Color? bsCI;
 
   /// South Eleuthera
-  final Color? bsSE;
+  Color? bsSE;
 
   /// Central Eleuthera
-  final Color? bsCE;
+  Color? bsCE;
 
   /// North Eleuthera
-  final Color? bsNE;
+  Color? bsNE;
 
   /// Harbour Island
-  final Color? bsHI;
+  Color? bsHI;
 
   /// Spanish Wells
-  final Color? bs16;
+  Color? bs16;
 
   /// Exuma
-  final Color? bsEX;
+  Color? bsEX;
 
   /// Black Point
-  final Color? bsBP;
+  Color? bsBP;
 
   /// South Andros
-  final Color? bsSA;
+  Color? bsSA;
 
   /// Mangrove Cay
-  final Color? bsMC;
+  Color? bsMC;
 
   /// Central Andros
-  final Color? bsCS;
+  Color? bsCS;
 
   /// North Andros
-  final Color? bsNS;
+  Color? bsNS;
 
   /// Berry Islands
-  final Color? bsBY;
+  Color? bsBY;
 
   /// Moore's Island
-  final Color? bsMI;
+  Color? bsMI;
 
   /// South Abaco
-  final Color? bsSO;
+  Color? bsSO;
 
   /// Central Abaco
-  final Color? bsCO;
+  Color? bsCO;
 
   /// North Abaco
-  final Color? bsNO;
+  Color? bsNO;
 
   /// Grand Cay
-  final Color? bsGC;
+  Color? bsGC;
 
   /// East Grand Bahama
-  final Color? bsEG;
+  Color? bsEG;
 
   /// West Grand Bahama
-  final Color? bsWG;
+  Color? bsWG;
 
   /// City of Freeport
-  final Color? bsFP;
+  Color? bsFP;
 
   /// New Providence
-  final Color? bsNP;
+  Color? bsNP;
   SMapBahamasColors({
     this.bsHT,
     this.bsBI,

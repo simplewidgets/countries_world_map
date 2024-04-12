@@ -2,28 +2,28 @@ import 'package:flutter/material.dart';
 
 class SMapIsraelColors {
   /// Golan Heights
-  final Color? ilGH;
+  Color? ilGH;
 
   /// HaẔafon
-  final Color? ilZ;
+  Color? ilZ;
 
   /// H̱efa
-  final Color? ilHA;
+  Color? ilHA;
 
   /// HaMerkaz
-  final Color? ilM;
+  Color? ilM;
 
   /// Tel-Aviv
-  final Color? ilTA;
+  Color? ilTA;
 
   /// HaDarom
-  final Color? ilD;
+  Color? ilD;
 
   /// Jerusalem
-  final Color? ilJM;
+  Color? ilJM;
 
   /// Palestine
-  final Color? psPS;
+  Color? psPS;
   SMapIsraelColors({
     this.ilGH,
     this.ilZ,

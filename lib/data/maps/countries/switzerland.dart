@@ -2,85 +2,85 @@ import 'package:flutter/material.dart';
 
 class SMapSwitzerlandColors {
   /// Aargau
-  final Color? chAG;
+  Color? chAG;
 
   /// Appenzell Inner-Rhoden
-  final Color? chAI;
+  Color? chAI;
 
   /// Appenzell Ausser-Rhoden
-  final Color? chAR;
+  Color? chAR;
 
   /// Basel-Landschaft
-  final Color? chBL;
+  Color? chBL;
 
   /// Bern
-  final Color? chBE;
+  Color? chBE;
 
   /// Basel-Stadt
-  final Color? chBS;
+  Color? chBS;
 
   /// Fribourg
-  final Color? chFR;
+  Color? chFR;
 
   /// Genève
-  final Color? chGE;
+  Color? chGE;
 
   /// Glarus
-  final Color? chGL;
+  Color? chGL;
 
   /// Graubünden
-  final Color? chGR;
+  Color? chGR;
 
   /// Jura
-  final Color? chJU;
+  Color? chJU;
 
   /// Lucerne
-  final Color? chLU;
+  Color? chLU;
 
   /// Neuchâtel
-  final Color? chNE;
+  Color? chNE;
 
   /// Nidwalden
-  final Color? chNW;
+  Color? chNW;
 
   /// Obwalden
-  final Color? chOW;
+  Color? chOW;
 
   /// Sankt Gallen
-  final Color? chSG;
+  Color? chSG;
 
   /// Schaffhausen
-  final Color? chSH;
+  Color? chSH;
 
   /// Solothurn
-  final Color? chSO;
+  Color? chSO;
 
   /// Schwyz
-  final Color? chSZ;
+  Color? chSZ;
 
   /// Thurgau
-  final Color? chTG;
+  Color? chTG;
 
   /// Ticino
-  final Color? chTI;
+  Color? chTI;
 
   /// Uri
-  final Color? chUR;
+  Color? chUR;
 
   /// Vaud
-  final Color? chVD;
+  Color? chVD;
 
   /// Valais
-  final Color? chVS;
+  Color? chVS;
 
   /// Zug
-  final Color? chZG;
+  Color? chZG;
 
   /// Zürich
-  final Color? chZH;
+  Color? chZH;
 
   /// Campione d'Italia
-  final Color? itIT;
+  Color? itIT;
   SMapSwitzerlandColors({
     this.chAG,
     this.chAI,

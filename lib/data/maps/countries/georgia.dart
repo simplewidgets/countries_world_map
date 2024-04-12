@@ -2,40 +2,40 @@ import 'package:flutter/material.dart';
 
 class SMapGeorgiaColors {
   /// Abkhazia
-  final Color? geAB;
+  Color? geAB;
 
   /// Ajaria
-  final Color? geAJ;
+  Color? geAJ;
 
   /// Guria
-  final Color? geGU;
+  Color? geGU;
 
   /// Imereti
-  final Color? geIM;
+  Color? geIM;
 
   /// K'akheti
-  final Color? geKA;
+  Color? geKA;
 
   /// Kvemo Kartli
-  final Color? geKK;
+  Color? geKK;
 
   /// Mtskheta-Mtianeti
-  final Color? geMM;
+  Color? geMM;
 
   /// Rach'a-Lechkhumi-Kvemo Svaneti
-  final Color? geRL;
+  Color? geRL;
 
   /// Samtskhe-Javakheti
-  final Color? geSJ;
+  Color? geSJ;
 
   /// Shida Kartli
-  final Color? geSK;
+  Color? geSK;
 
   /// Samegrelo-Zemo Svaneti
-  final Color? geSZ;
+  Color? geSZ;
 
   /// Tbilisi
-  final Color? geTB;
+  Color? geTB;
   SMapGeorgiaColors({
     this.geAB,
     this.geAJ,

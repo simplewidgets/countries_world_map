@@ -2,34 +2,34 @@ import 'package:flutter/material.dart';
 
 class SMapLithuaniaColors {
   /// Alytus
-  final Color? ltAL;
+  Color? ltAL;
 
   /// Kaunas
-  final Color? ltKU;
+  Color? ltKU;
 
   /// Klaipėda
-  final Color? ltKL;
+  Color? ltKL;
 
   /// Marijampolė
-  final Color? ltMR;
+  Color? ltMR;
 
   /// Panevėžys
-  final Color? ltPN;
+  Color? ltPN;
 
   /// Šiauliai
-  final Color? ltSA;
+  Color? ltSA;
 
   /// Tauragė
-  final Color? ltTA;
+  Color? ltTA;
 
   /// Telšiai
-  final Color? ltTE;
+  Color? ltTE;
 
   /// Utena
-  final Color? ltUT;
+  Color? ltUT;
 
   /// Vilnius
-  final Color? ltVL;
+  Color? ltVL;
   SMapLithuaniaColors({
     this.ltAL,
     this.ltKU,

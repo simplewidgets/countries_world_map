@@ -2,196 +2,196 @@ import 'package:flutter/material.dart';
 
 class SMapVietnamColors {
   /// Lai Châu
-  final Color? vn01;
+  Color? vn01;
 
   /// Lào Cai
-  final Color? vn02;
+  Color? vn02;
 
   /// Hà Giang
-  final Color? vn03;
+  Color? vn03;
 
   /// Cao Bằng
-  final Color? vn04;
+  Color? vn04;
 
   /// Sơn La
-  final Color? vn05;
+  Color? vn05;
 
   /// Yên Bái
-  final Color? vn06;
+  Color? vn06;
 
   /// Tuyên Quang
-  final Color? vn07;
+  Color? vn07;
 
   /// Lạng Sơn
-  final Color? vn09;
+  Color? vn09;
 
   /// Quảng Ninh
-  final Color? vn13;
+  Color? vn13;
 
   /// Hòa Bình
-  final Color? vn14;
+  Color? vn14;
 
   /// Hà Tây
-  final Color? vn15;
+  Color? vn15;
 
   /// Ninh Bình
-  final Color? vn18;
+  Color? vn18;
 
   /// Thái Bình
-  final Color? vn20;
+  Color? vn20;
 
   /// Thanh Hóa
-  final Color? vn21;
+  Color? vn21;
 
   /// Nghệ An
-  final Color? vn22;
+  Color? vn22;
 
   /// Hà Tĩnh
-  final Color? vn23;
+  Color? vn23;
 
   /// Quảng Bình
-  final Color? vn24;
+  Color? vn24;
 
   /// Quảng Trị
-  final Color? vn25;
+  Color? vn25;
 
   /// Thừa Thiên–Huế
-  final Color? vn26;
+  Color? vn26;
 
   /// Quảng Nam
-  final Color? vn27;
+  Color? vn27;
 
   /// Kon Tum
-  final Color? vn28;
+  Color? vn28;
 
   /// Quảng Ngãi
-  final Color? vn29;
+  Color? vn29;
 
   /// Gia Lai
-  final Color? vn30;
+  Color? vn30;
 
   /// Bình Định
-  final Color? vn31;
+  Color? vn31;
 
   /// Phú Yên
-  final Color? vn32;
+  Color? vn32;
 
   /// Đắk Lắk
-  final Color? vn33;
+  Color? vn33;
 
   /// Khánh Hòa
-  final Color? vn34;
+  Color? vn34;
 
   /// Lâm Đồng
-  final Color? vn35;
+  Color? vn35;
 
   /// Ninh Thuận
-  final Color? vn36;
+  Color? vn36;
 
   /// Tây Ninh
-  final Color? vn37;
+  Color? vn37;
 
   /// Đồng Nai
-  final Color? vn39;
+  Color? vn39;
 
   /// Bình Thuận
-  final Color? vn40;
+  Color? vn40;
 
   /// Long An
-  final Color? vn41;
+  Color? vn41;
 
   /// Bà Rịa–Vũng Tàu
-  final Color? vn43;
+  Color? vn43;
 
   /// An Giang
-  final Color? vn44;
+  Color? vn44;
 
   /// Đồng Tháp
-  final Color? vn45;
+  Color? vn45;
 
   /// Tiền Giang
-  final Color? vn46;
+  Color? vn46;
 
   /// Kiên Giang
-  final Color? vn47;
+  Color? vn47;
 
   /// Vĩnh Long
-  final Color? vn49;
+  Color? vn49;
 
   /// Bến Tre
-  final Color? vn50;
+  Color? vn50;
 
   /// Trà Vinh
-  final Color? vn51;
+  Color? vn51;
 
   /// Sóc Trăng
-  final Color? vn52;
+  Color? vn52;
 
   /// Bắc Kạn
-  final Color? vn53;
+  Color? vn53;
 
   /// Bắc Giang
-  final Color? vn54;
+  Color? vn54;
 
   /// Bạc Liêu
-  final Color? vn55;
+  Color? vn55;
 
   /// Bắc Ninh
-  final Color? vn56;
+  Color? vn56;
 
   /// Bình Dương
-  final Color? vn57;
+  Color? vn57;
 
   /// Bình Phước
-  final Color? vn58;
+  Color? vn58;
 
   /// Cà Mau
-  final Color? vn59;
+  Color? vn59;
 
   /// Hải Dương
-  final Color? vn61;
+  Color? vn61;
 
   /// Hà Nam
-  final Color? vn63;
+  Color? vn63;
 
   /// Hưng Yên
-  final Color? vn66;
+  Color? vn66;
 
   /// Nam Định
-  final Color? vn67;
+  Color? vn67;
 
   /// Phú Thọ
-  final Color? vn68;
+  Color? vn68;
 
   /// Thái Nguyên
-  final Color? vn69;
+  Color? vn69;
 
   /// Vĩnh Phúc
-  final Color? vn70;
+  Color? vn70;
 
   /// Điện Biên
-  final Color? vn71;
+  Color? vn71;
 
   /// Đắk Nông
-  final Color? vn72;
+  Color? vn72;
 
   /// Hậu Giang
-  final Color? vn73;
+  Color? vn73;
 
   /// Cần Thơ
-  final Color? vnCT;
+  Color? vnCT;
 
   /// Đà Nẵng
-  final Color? vnDN;
+  Color? vnDN;
 
   /// Hà Nội
-  final Color? vnHN;
+  Color? vnHN;
 
   /// Hải Phòng
-  final Color? vnHP;
+  Color? vnHP;
 
   /// Hồ Chí Minh
-  final Color? vnSG;
+  Color? vnSG;
   SMapVietnamColors({
     this.vn01,
     this.vn02,

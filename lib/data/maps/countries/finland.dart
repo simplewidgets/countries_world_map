@@ -2,61 +2,61 @@ import 'package:flutter/material.dart';
 
 class SMapFinlandColors {
   /// Åland Islands
-  final Color? fi01;
+  Color? fi01;
 
   /// South Karelia
-  final Color? fi02;
+  Color? fi02;
 
   /// Southern Ostrobothnia
-  final Color? fi03;
+  Color? fi03;
 
   /// Southern Savonia
-  final Color? fi04;
+  Color? fi04;
 
   /// Kainuu
-  final Color? fi05;
+  Color? fi05;
 
   /// Tavastia Proper
-  final Color? fi06;
+  Color? fi06;
 
   /// Central Ostrobothnia
-  final Color? fi07;
+  Color? fi07;
 
   /// Central Finland
-  final Color? fi08;
+  Color? fi08;
 
   /// Kymenlaakso
-  final Color? fi09;
+  Color? fi09;
 
   /// Lapland
-  final Color? fi10;
+  Color? fi10;
 
   /// Pirkanmaa
-  final Color? fi11;
+  Color? fi11;
 
   /// Ostrobothnia
-  final Color? fi12;
+  Color? fi12;
 
   /// North Karelia
-  final Color? fi13;
+  Color? fi13;
 
   /// Northern Ostrobothnia
-  final Color? fi14;
+  Color? fi14;
 
   /// Northern Savonia
-  final Color? fi15;
+  Color? fi15;
 
   /// Päijänne Tavastia
-  final Color? fi16;
+  Color? fi16;
 
   /// Satakunta
-  final Color? fi17;
+  Color? fi17;
 
   /// Uusimaa
-  final Color? fi18;
+  Color? fi18;
 
   /// Finland Proper
-  final Color? fi19;
+  Color? fi19;
   SMapFinlandColors({
     this.fi01,
     this.fi02,

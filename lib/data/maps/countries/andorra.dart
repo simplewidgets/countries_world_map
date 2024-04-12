@@ -2,25 +2,25 @@ import 'package:flutter/material.dart';
 
 class SMapAndorraColors {
   /// Canillo
-  final Color? ad02;
+  Color? ad02;
 
   /// Encamp
-  final Color? ad03;
+  Color? ad03;
 
   /// La Massana
-  final Color? ad04;
+  Color? ad04;
 
   /// Ordino
-  final Color? ad05;
+  Color? ad05;
 
   /// Sant Julià de Lòria
-  final Color? ad06;
+  Color? ad06;
 
   /// Andorra la Vella
-  final Color? ad07;
+  Color? ad07;
 
   /// Escaldes-Engordany
-  final Color? ad08;
+  Color? ad08;
   SMapAndorraColors({
     this.ad02,
     this.ad03,

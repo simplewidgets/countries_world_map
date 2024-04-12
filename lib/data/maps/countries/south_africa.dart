@@ -2,34 +2,34 @@ import 'package:flutter/material.dart';
 
 class SMapSouthAfricaColors {
   /// Lesotho
-  final Color? lsLS;
+  Color? lsLS;
 
   /// Eastern Cape
-  final Color? zaEC;
+  Color? zaEC;
 
   /// Free State
-  final Color? zaFS;
+  Color? zaFS;
 
   /// Gauteng
-  final Color? zaGT;
+  Color? zaGT;
 
   /// Limpopo
-  final Color? zaLP;
+  Color? zaLP;
 
   /// Mpumalanga
-  final Color? zaMP;
+  Color? zaMP;
 
   /// Northern Cape
-  final Color? zaNC;
+  Color? zaNC;
 
   /// KwaZulu-Natal
-  final Color? zaNL;
+  Color? zaNL;
 
   /// North West
-  final Color? zaNW;
+  Color? zaNW;
 
   /// Western Cape
-  final Color? zaWC;
+  Color? zaWC;
   SMapSouthAfricaColors({
     this.lsLS,
     this.zaEC,

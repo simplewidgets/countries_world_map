@@ -2,52 +2,52 @@ import 'package:flutter/material.dart';
 
 class SMapMoroccoColors {
   /// Tanger-Tétouan
-  final Color? ma01;
+  Color? ma01;
 
   /// Gharb-Chrarda-Beni Hssen
-  final Color? ma02;
+  Color? ma02;
 
   /// Taza-Al Hoceima-Taounate
-  final Color? ma03;
+  Color? ma03;
 
   /// L'Oriental
-  final Color? ma04;
+  Color? ma04;
 
   /// Fès-Boulemane
-  final Color? ma05;
+  Color? ma05;
 
   /// Meknès-Tafilalet
-  final Color? ma06;
+  Color? ma06;
 
   /// Rabat-Salé-Zemmour-Zaer
-  final Color? ma07;
+  Color? ma07;
 
   /// Grand Casablanca
-  final Color? ma08;
+  Color? ma08;
 
   /// Chaouia-Ouardigha
-  final Color? ma09;
+  Color? ma09;
 
   /// Doukhala-Abda
-  final Color? ma10;
+  Color? ma10;
 
   /// Marrakech-Tensift-Al Haouz
-  final Color? ma11;
+  Color? ma11;
 
   /// Tadla-Azilal
-  final Color? ma12;
+  Color? ma12;
 
   /// Souss-Massa-Drâa
-  final Color? ma13;
+  Color? ma13;
 
   /// Laâyoune-Boujdour-Sakia el Hamra
-  final Color? ma15;
+  Color? ma15;
 
   /// Guelmim-Es Smara
-  final Color? ma14;
+  Color? ma14;
 
   /// Oued ed Dahab-Lagouira
-  final Color? ma16;
+  Color? ma16;
   SMapMoroccoColors({
     this.ma01,
     this.ma02,

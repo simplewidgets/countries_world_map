@@ -2,16 +2,16 @@ import 'package:flutter/material.dart';
 
 class SMapTajikistanColors {
   /// Gorno-Badakhshan
-  final Color? tjGB;
+  Color? tjGB;
 
   /// Khatlon
-  final Color? tjKT;
+  Color? tjKT;
 
   /// Region of Republican Subordination
-  final Color? tjRR;
+  Color? tjRR;
 
   /// Sughd
-  final Color? tjSU;
+  Color? tjSU;
   SMapTajikistanColors({
     this.tjGB,
     this.tjKT,

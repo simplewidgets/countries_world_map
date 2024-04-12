@@ -2,52 +2,52 @@ import 'package:flutter/material.dart';
 
 class SMapCubaColors {
   /// Mayabeque
-  final Color? cu16;
+  Color? cu16;
 
   /// Villa Clara
-  final Color? cu05;
+  Color? cu05;
 
   /// Matanzas
-  final Color? cu04;
+  Color? cu04;
 
   /// Artemisa
-  final Color? cu15;
+  Color? cu15;
 
   /// Ciudad de la Habana
-  final Color? cu03;
+  Color? cu03;
 
   /// Santiago de Cuba
-  final Color? cu13;
+  Color? cu13;
 
   /// Las Tunas
-  final Color? cu10;
+  Color? cu10;
 
   /// Holguín
-  final Color? cu11;
+  Color? cu11;
 
   /// Granma
-  final Color? cu12;
+  Color? cu12;
 
   /// Guantánamo
-  final Color? cu14;
+  Color? cu14;
 
   /// Camagüey
-  final Color? cu09;
+  Color? cu09;
 
   /// Ciego de Ávila
-  final Color? cu08;
+  Color? cu08;
 
   /// Sancti Spíritus
-  final Color? cu07;
+  Color? cu07;
 
   /// Pinar del Río
-  final Color? cu01;
+  Color? cu01;
 
   /// Isla de la Juventud
-  final Color? cu99;
+  Color? cu99;
 
   /// Cienfuegos
-  final Color? cu06;
+  Color? cu06;
   SMapCubaColors({
     this.cu16,
     this.cu05,

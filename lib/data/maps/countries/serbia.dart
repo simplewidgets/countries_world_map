@@ -2,79 +2,79 @@ import 'package:flutter/material.dart';
 
 class SMapSerbiaColors {
   /// Beograd
-  final Color? rs00;
+  Color? rs00;
 
   /// Severnobački okrug
-  final Color? rs01;
+  Color? rs01;
 
   /// Srednjebanatski okrug
-  final Color? rs02;
+  Color? rs02;
 
   /// Severnobanatski okrug
-  final Color? rs03;
+  Color? rs03;
 
   /// Južnobanatski okrug
-  final Color? rs04;
+  Color? rs04;
 
   /// Zapadnobački okrug
-  final Color? rs05;
+  Color? rs05;
 
   /// Južnobački okrug
-  final Color? rs06;
+  Color? rs06;
 
   /// Sremski okrug
-  final Color? rs07;
+  Color? rs07;
 
   /// Mačvanski okrug
-  final Color? rs08;
+  Color? rs08;
 
   /// Kolubarski okrug
-  final Color? rs09;
+  Color? rs09;
 
   /// Podunavski okrug
-  final Color? rs10;
+  Color? rs10;
 
   /// Braničevski okrug
-  final Color? rs11;
+  Color? rs11;
 
   /// Šumadijski okrug
-  final Color? rs12;
+  Color? rs12;
 
   /// Pomoravski okrug
-  final Color? rs13;
+  Color? rs13;
 
   /// Borski okrug
-  final Color? rs14;
+  Color? rs14;
 
   /// Zaječarski okrug
-  final Color? rs15;
+  Color? rs15;
 
   /// Zlatiborski okrug
-  final Color? rs16;
+  Color? rs16;
 
   /// Moravički okrug
-  final Color? rs17;
+  Color? rs17;
 
   /// Raški okrug
-  final Color? rs18;
+  Color? rs18;
 
   /// Rasinski okrug
-  final Color? rs19;
+  Color? rs19;
 
   /// Nišavski okrug
-  final Color? rs20;
+  Color? rs20;
 
   /// Toplički okrug
-  final Color? rs21;
+  Color? rs21;
 
   /// Pirotski okrug
-  final Color? rs22;
+  Color? rs22;
 
   /// Jablanički okrug
-  final Color? rs23;
+  Color? rs23;
 
   /// Pčinjski okrug
-  final Color? rs24;
+  Color? rs24;
   SMapSerbiaColors({
     this.rs00,
     this.rs01,

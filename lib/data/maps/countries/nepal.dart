@@ -2,46 +2,46 @@ import 'package:flutter/material.dart';
 
 class SMapNepalColors {
   /// Bagmati
-  final Color? npBA;
+  Color? npBA;
 
   /// Bheri
-  final Color? npBH;
+  Color? npBH;
 
   /// Dhawalagiri
-  final Color? npDH;
+  Color? npDH;
 
   /// Gandaki
-  final Color? npGA;
+  Color? npGA;
 
   /// Janakpur
-  final Color? npJA;
+  Color? npJA;
 
   /// Karnali
-  final Color? npKA;
+  Color? npKA;
 
   /// Koshi
-  final Color? npKO;
+  Color? npKO;
 
   /// Lumbini
-  final Color? npLU;
+  Color? npLU;
 
   /// Mahakali
-  final Color? npMA;
+  Color? npMA;
 
   /// Mechi
-  final Color? npME;
+  Color? npME;
 
   /// Narayani
-  final Color? npNA;
+  Color? npNA;
 
   /// Rapti
-  final Color? npRA;
+  Color? npRA;
 
   /// Sagarmatha
-  final Color? npSA;
+  Color? npSA;
 
   /// Seti
-  final Color? npSE;
+  Color? npSE;
   SMapNepalColors({
     this.npBA,
     this.npBH,

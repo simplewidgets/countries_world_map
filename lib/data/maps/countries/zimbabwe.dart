@@ -2,34 +2,34 @@ import 'package:flutter/material.dart';
 
 class SMapZimbabweColors {
   /// Bulawayo
-  final Color? zwBU;
+  Color? zwBU;
 
   /// Harare
-  final Color? zwHA;
+  Color? zwHA;
 
   /// Manicaland
-  final Color? zwMA;
+  Color? zwMA;
 
   /// Mashonaland Central
-  final Color? zwMC;
+  Color? zwMC;
 
   /// Mashonaland East
-  final Color? zwME;
+  Color? zwME;
 
   /// Midlands
-  final Color? zwMI;
+  Color? zwMI;
 
   /// Matabeleland North
-  final Color? zwMN;
+  Color? zwMN;
 
   /// Matabeleland South
-  final Color? zwMS;
+  Color? zwMS;
 
   /// Masvingo
-  final Color? zwMV;
+  Color? zwMV;
 
   /// Mashonaland West
-  final Color? zwMW;
+  Color? zwMW;
   SMapZimbabweColors({
     this.zwBU,
     this.zwHA,

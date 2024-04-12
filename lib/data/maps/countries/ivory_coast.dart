@@ -2,61 +2,61 @@ import 'package:flutter/material.dart';
 
 class SMapIvoryCoastColors {
   /// Sud-Comoé
-  final Color? ciSC;
+  Color? ciSC;
 
   /// Lacs
-  final Color? ciLC;
+  Color? ciLC;
 
   /// Moyen-Comoe
-  final Color? ciMC;
+  Color? ciMC;
 
   /// Moyen-Cavally
-  final Color? ciMV;
+  Color? ciMV;
 
   /// Lagunes
-  final Color? ciLG;
+  Color? ciLG;
 
   /// N'zi-Comoé
-  final Color? ciNC;
+  Color? ciNC;
 
   /// Agnéby
-  final Color? ciAG;
+  Color? ciAG;
 
   /// Vallée du Bandama
-  final Color? ciVB;
+  Color? ciVB;
 
   /// Zanzan
-  final Color? ciZA;
+  Color? ciZA;
 
   /// Bas-Sassandra
-  final Color? ciBS;
+  Color? ciBS;
 
   /// Sud-Bandama
-  final Color? ciSB;
+  Color? ciSB;
 
   /// Haut-Sassandra
-  final Color? ciHT;
+  Color? ciHT;
 
   /// Fromager
-  final Color? ciFR;
+  Color? ciFR;
 
   /// Marahoué
-  final Color? ciMR;
+  Color? ciMR;
 
   /// Worodougou
-  final Color? ciWR;
+  Color? ciWR;
 
   /// Dix-Huit Montagnes
-  final Color? ciDH;
+  Color? ciDH;
 
   /// Bafing
-  final Color? ciBF;
+  Color? ciBF;
 
   /// Denguélé
-  final Color? ciDE;
+  Color? ciDE;
 
   /// Savanes
-  final Color? ciSV;
+  Color? ciSV;
   SMapIvoryCoastColors({
     this.ciSC,
     this.ciLC,

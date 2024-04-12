@@ -2,19 +2,19 @@ import 'package:flutter/material.dart';
 
 class SMapSingaporeColors {
   /// Central Singapore
-  final Color? sg01;
+  Color? sg01;
 
   /// North East
-  final Color? sg02;
+  Color? sg02;
 
   /// North West
-  final Color? sg03;
+  Color? sg03;
 
   /// South East
-  final Color? sg04;
+  Color? sg04;
 
   /// South West
-  final Color? sg05;
+  Color? sg05;
   SMapSingaporeColors({
     this.sg01,
     this.sg02,

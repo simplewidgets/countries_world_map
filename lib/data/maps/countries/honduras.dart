@@ -2,58 +2,58 @@ import 'package:flutter/material.dart';
 
 class SMapHondurasColors {
   /// Atlántida
-  final Color? hnAT;
+  Color? hnAT;
 
   /// Choluteca
-  final Color? hnCH;
+  Color? hnCH;
 
   /// Colón
-  final Color? hnCL;
+  Color? hnCL;
 
   /// Comayagua
-  final Color? hnCM;
+  Color? hnCM;
 
   /// Copán
-  final Color? hnCP;
+  Color? hnCP;
 
   /// Cortés
-  final Color? hnCR;
+  Color? hnCR;
 
   /// El Paraíso
-  final Color? hnEP;
+  Color? hnEP;
 
   /// Francisco Morazán
-  final Color? hnFM;
+  Color? hnFM;
 
   /// Gracias a Dios
-  final Color? hnGD;
+  Color? hnGD;
 
   /// Intibucá
-  final Color? hnIN;
+  Color? hnIN;
 
   /// Islas de la Bahía
-  final Color? hnIB;
+  Color? hnIB;
 
   /// La Paz
-  final Color? hnLP;
+  Color? hnLP;
 
   /// Lempira
-  final Color? hnLE;
+  Color? hnLE;
 
   /// Ocotepeque
-  final Color? hnOC;
+  Color? hnOC;
 
   /// Olancho
-  final Color? hnOL;
+  Color? hnOL;
 
   /// Santa Bárbara
-  final Color? hnSB;
+  Color? hnSB;
 
   /// Valle
-  final Color? hnVA;
+  Color? hnVA;
 
   /// Yoro
-  final Color? hnYO;
+  Color? hnYO;
   SMapHondurasColors({
     this.hnAT,
     this.hnCH,

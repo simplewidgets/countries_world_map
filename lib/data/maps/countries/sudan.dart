@@ -2,58 +2,58 @@ import 'package:flutter/material.dart';
 
 class SMapSudanColors {
   /// Central Darfur
-  final Color? sdDC;
+  Color? sdDC;
 
   /// East Darfur
-  final Color? sdDE;
+  Color? sdDE;
 
   /// North Darfur
-  final Color? sdDN;
+  Color? sdDN;
 
   /// South Darfur
-  final Color? sdDS;
+  Color? sdDS;
 
   /// West Darfur
-  final Color? sdDW;
+  Color? sdDW;
 
   /// Al Qaḑārif
-  final Color? sdGD;
+  Color? sdGD;
 
   /// West Kurdufān
-  final Color? sdGK;
+  Color? sdGK;
 
   /// Al Jazīrah
-  final Color? sdGZ;
+  Color? sdGZ;
 
   /// Kassalā
-  final Color? sdKA;
+  Color? sdKA;
 
   /// Khartoum
-  final Color? sdKH;
+  Color? sdKH;
 
   /// North Kurdufān
-  final Color? sdKN;
+  Color? sdKN;
 
   /// South Kurdufān
-  final Color? sdKS;
+  Color? sdKS;
 
   /// Blue Nile
-  final Color? sdNB;
+  Color? sdNB;
 
   /// Northern
-  final Color? sdNO;
+  Color? sdNO;
 
   /// River Nile
-  final Color? sdNR;
+  Color? sdNR;
 
   /// White Nile
-  final Color? sdNW;
+  Color? sdNW;
 
   /// Red Sea
-  final Color? sdRS;
+  Color? sdRS;
 
   /// Sennar
-  final Color? sdSI;
+  Color? sdSI;
   SMapSudanColors({
     this.sdDC,
     this.sdDE,

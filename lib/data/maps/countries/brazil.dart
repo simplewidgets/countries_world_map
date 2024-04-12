@@ -2,85 +2,85 @@ import 'package:flutter/material.dart';
 
 class SMapBrazilColors {
   /// Acre
-  final Color? brAC;
+  Color? brAC;
 
   /// Alagoas
-  final Color? brAL;
+  Color? brAL;
 
   /// Amazonas
-  final Color? brAM;
+  Color? brAM;
 
   /// Amapá
-  final Color? brAP;
+  Color? brAP;
 
   /// Bahia
-  final Color? brBA;
+  Color? brBA;
 
   /// Ceará
-  final Color? brCE;
+  Color? brCE;
 
   /// Distrito Federal
-  final Color? brDF;
+  Color? brDF;
 
   /// Espírito Santo
-  final Color? brES;
+  Color? brES;
 
   /// Goiás
-  final Color? brGO;
+  Color? brGO;
 
   /// Maranhão
-  final Color? brMA;
+  Color? brMA;
 
   /// Minas Gerais
-  final Color? brMG;
+  Color? brMG;
 
   /// Mato Grosso do Sul
-  final Color? brMS;
+  Color? brMS;
 
   /// Mato Grosso
-  final Color? brMT;
+  Color? brMT;
 
   /// Pará
-  final Color? brPA;
+  Color? brPA;
 
   /// Paraíba
-  final Color? brPB;
+  Color? brPB;
 
   /// Pernambuco
-  final Color? brPE;
+  Color? brPE;
 
   /// Piauí
-  final Color? brPI;
+  Color? brPI;
 
   /// Paraná
-  final Color? brPR;
+  Color? brPR;
 
   /// Rio de Janeiro
-  final Color? brRJ;
+  Color? brRJ;
 
   /// Rio Grande do Norte
-  final Color? brRN;
+  Color? brRN;
 
   /// Rondônia
-  final Color? brRO;
+  Color? brRO;
 
   /// Roraima
-  final Color? brRR;
+  Color? brRR;
 
   /// Rio Grande do Sul
-  final Color? brRS;
+  Color? brRS;
 
   /// Santa Catarina
-  final Color? brSC;
+  Color? brSC;
 
   /// Sergipe
-  final Color? brSE;
+  Color? brSE;
 
   /// São Paulo
-  final Color? brSP;
+  Color? brSP;
 
   /// Tocantins
-  final Color? brTO;
+  Color? brTO;
   SMapBrazilColors({
     this.brAC,
     this.brAL,

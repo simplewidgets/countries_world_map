@@ -2,19 +2,19 @@ import 'package:flutter/material.dart';
 
 class SMapMaltaColors {
   /// Northern
-  final Color? mtNO;
+  Color? mtNO;
 
   /// Central
-  final Color? mtCE;
+  Color? mtCE;
 
   /// Southern
-  final Color? mtSO;
+  Color? mtSO;
 
   /// South Eastern
-  final Color? mtSE;
+  Color? mtSE;
 
   /// Gozo
-  final Color? mtGO;
+  Color? mtGO;
   SMapMaltaColors({
     this.mtNO,
     this.mtCE,

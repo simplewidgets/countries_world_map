@@ -2,88 +2,88 @@ import 'package:flutter/material.dart';
 
 class SMapVenezuelaColors {
   /// Aruba
-  final Color? awAW;
+  Color? awAW;
 
   /// Bonaire, Saint Eustachius and Saba
-  final Color? bqBQ;
+  Color? bqBQ;
 
   /// Curaçao
-  final Color? cwCW;
+  Color? cwCW;
 
   /// Distrito Capital
-  final Color? veA;
+  Color? veA;
 
   /// Anzoátegui
-  final Color? veB;
+  Color? veB;
 
   /// Apure
-  final Color? veC;
+  Color? veC;
 
   /// Aragua
-  final Color? veD;
+  Color? veD;
 
   /// Barinas
-  final Color? veE;
+  Color? veE;
 
   /// Bolívar
-  final Color? veF;
+  Color? veF;
 
   /// Carabobo
-  final Color? veG;
+  Color? veG;
 
   /// Cojedes
-  final Color? veH;
+  Color? veH;
 
   /// Falcón
-  final Color? veI;
+  Color? veI;
 
   ///  Guárico
-  final Color? veJ;
+  Color? veJ;
 
   /// Lara
-  final Color? veK;
+  Color? veK;
 
   /// Mérida
-  final Color? veL;
+  Color? veL;
 
   /// Miranda
-  final Color? veM;
+  Color? veM;
 
   /// Monagas
-  final Color? veN;
+  Color? veN;
 
   /// Nueva Esparta
-  final Color? veO;
+  Color? veO;
 
   /// Portuguesa
-  final Color? veP;
+  Color? veP;
 
   /// Sucre
-  final Color? veR;
+  Color? veR;
 
   /// Táchira
-  final Color? veS;
+  Color? veS;
 
   /// Trujillo
-  final Color? veT;
+  Color? veT;
 
   /// Yaracuy
-  final Color? veU;
+  Color? veU;
 
   /// Zulia
-  final Color? veV;
+  Color? veV;
 
   /// Dependencias Federales
-  final Color? veW;
+  Color? veW;
 
   /// Vargas
-  final Color? veX;
+  Color? veX;
 
   /// Delta Amacuro
-  final Color? veY;
+  Color? veY;
 
   /// Amazonas
-  final Color? veZ;
+  Color? veZ;
   SMapVenezuelaColors({
     this.awAW,
     this.bqBQ,

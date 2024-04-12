@@ -2,58 +2,58 @@ import 'package:flutter/material.dart';
 
 class SMapHongKongColors {
   /// Kwai Tsing
-  final Color? hkKI;
+  Color? hkKI;
 
   /// Wong Tai Sin
-  final Color? hkWT;
+  Color? hkWT;
 
   /// Tsuen Wan
-  final Color? hkTW;
+  Color? hkTW;
 
   /// Sham Shui Po
-  final Color? hkSS;
+  Color? hkSS;
 
   /// Kowloon City
-  final Color? hkKC;
+  Color? hkKC;
 
   /// Tuen Mun
-  final Color? hkTM;
+  Color? hkTM;
 
   /// Kwun Tong
-  final Color? hkKU;
+  Color? hkKU;
 
   /// Yau Tsim Mong
-  final Color? hkYT;
+  Color? hkYT;
 
   /// Islands
-  final Color? hkIS;
+  Color? hkIS;
 
   /// North
-  final Color? hkNO;
+  Color? hkNO;
 
   /// Yuen Long
-  final Color? hkYL;
+  Color? hkYL;
 
   /// Tai Po
-  final Color? hkTP;
+  Color? hkTP;
 
   /// Sha Tin
-  final Color? hkST;
+  Color? hkST;
 
   /// Eastern
-  final Color? hkEA;
+  Color? hkEA;
 
   /// Central and Western
-  final Color? hkCW;
+  Color? hkCW;
 
   /// Wan Chai
-  final Color? hkWC;
+  Color? hkWC;
 
   /// Sai Kung
-  final Color? hkSK;
+  Color? hkSK;
 
   /// Southern
-  final Color? hkSO;
+  Color? hkSO;
   SMapHongKongColors({
     this.hkKI,
     this.hkWT,

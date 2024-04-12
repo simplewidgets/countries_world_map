@@ -2,55 +2,55 @@ import 'package:flutter/material.dart';
 
 class SMapSouthKoreaColors {
   /// Seoul
-  final Color? kr11;
+  Color? kr11;
 
   /// Busan
-  final Color? kr26;
+  Color? kr26;
 
   /// Daegu
-  final Color? kr27;
+  Color? kr27;
 
   /// Incheon
-  final Color? kr28;
+  Color? kr28;
 
   /// Gwangju
-  final Color? kr29;
+  Color? kr29;
 
   /// Daejeon
-  final Color? kr30;
+  Color? kr30;
 
   /// Ulsan
-  final Color? kr31;
+  Color? kr31;
 
   /// Gyeonggi
-  final Color? kr41;
+  Color? kr41;
 
   /// Gangwon
-  final Color? kr42;
+  Color? kr42;
 
   /// North Chungcheong
-  final Color? kr43;
+  Color? kr43;
 
   /// South Chungcheong
-  final Color? kr44;
+  Color? kr44;
 
   /// North Jeolla
-  final Color? kr45;
+  Color? kr45;
 
   /// South Jeolla
-  final Color? kr46;
+  Color? kr46;
 
   /// North Gyeongsang
-  final Color? kr47;
+  Color? kr47;
 
   /// South Gyeongsang
-  final Color? kr48;
+  Color? kr48;
 
   /// Jeju
-  final Color? kr49;
+  Color? kr49;
 
   /// Sejong
-  final Color? kr50;
+  Color? kr50;
   SMapSouthKoreaColors({
     this.kr11,
     this.kr26,

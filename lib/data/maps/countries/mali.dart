@@ -2,31 +2,31 @@ import 'package:flutter/material.dart';
 
 class SMapMaliColors {
   /// Bamako
-  final Color? mlBKO;
+  Color? mlBKO;
 
   /// Kayes
-  final Color? ml1;
+  Color? ml1;
 
   /// Koulikoro
-  final Color? ml2;
+  Color? ml2;
 
   /// Sikasso
-  final Color? ml3;
+  Color? ml3;
 
   /// SÃ©gou
-  final Color? ml4;
+  Color? ml4;
 
   /// Mopti
-  final Color? ml5;
+  Color? ml5;
 
   /// Tombouctou
-  final Color? ml6;
+  Color? ml6;
 
   /// Gao
-  final Color? ml7;
+  Color? ml7;
 
   /// Kidal
-  final Color? ml8;
+  Color? ml8;
   SMapMaliColors({
     this.mlBKO,
     this.ml1,

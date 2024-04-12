@@ -2,31 +2,31 @@ import 'package:flutter/material.dart';
 
 class SMapAustriaColors {
   /// Burgenland
-  final Color? at1;
+  Color? at1;
 
   /// Carinthia
-  final Color? at2;
+  Color? at2;
 
   /// Lower Austria
-  final Color? at3;
+  Color? at3;
 
   /// Upper Austria
-  final Color? at4;
+  Color? at4;
 
   /// Styria
-  final Color? at6;
+  Color? at6;
 
   /// Salzburg
-  final Color? at5;
+  Color? at5;
 
   /// Tyrol
-  final Color? at7;
+  Color? at7;
 
   /// Vorarlberg
-  final Color? at8;
+  Color? at8;
 
   /// Vienna
-  final Color? at9;
+  Color? at9;
   SMapAustriaColors({
     this.at1,
     this.at2,

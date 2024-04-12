@@ -2,40 +2,40 @@ import 'package:flutter/material.dart';
 
 class SMapNetherlandsColors {
   /// Drenthe
-  final Color? nlDR;
+  Color? nlDR;
 
   /// Flevoland
-  final Color? nlFL;
+  Color? nlFL;
 
   /// Friesland
-  final Color? nlFR;
+  Color? nlFR;
 
   /// Gelderland
-  final Color? nlGE;
+  Color? nlGE;
 
   /// Groningen
-  final Color? nlGR;
+  Color? nlGR;
 
   /// Limburg
-  final Color? nlLI;
+  Color? nlLI;
 
   /// Noord-Brabant
-  final Color? nlNB;
+  Color? nlNB;
 
   /// Noord-Holland
-  final Color? nlNH;
+  Color? nlNH;
 
   /// Overijssel
-  final Color? nlOV;
+  Color? nlOV;
 
   /// Utrecht
-  final Color? nlUT;
+  Color? nlUT;
 
   /// Zeeland
-  final Color? nlZE;
+  Color? nlZE;
 
   /// Zuid-Holland
-  final Color? nlZH;
+  Color? nlZH;
   SMapNetherlandsColors({
     this.nlDR,
     this.nlFL,

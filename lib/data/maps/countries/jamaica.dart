@@ -2,46 +2,46 @@ import 'package:flutter/material.dart';
 
 class SMapJamaicaColors {
   /// Saint Thomas
-  final Color? jm03;
+  Color? jm03;
 
   /// Saint Andrew
-  final Color? jm02;
+  Color? jm02;
 
   /// Saint Mary
-  final Color? jm05;
+  Color? jm05;
 
   /// Saint Catherine
-  final Color? jm14;
+  Color? jm14;
 
   /// Saint Ann
-  final Color? jm06;
+  Color? jm06;
 
   /// Portland
-  final Color? jm04;
+  Color? jm04;
 
   /// Kingston
-  final Color? jm01;
+  Color? jm01;
 
   /// Westmoreland
-  final Color? jm10;
+  Color? jm10;
 
   /// Trelawny
-  final Color? jm07;
+  Color? jm07;
 
   /// Saint James
-  final Color? jm08;
+  Color? jm08;
 
   /// Saint Elizabeth
-  final Color? jm11;
+  Color? jm11;
 
   /// Manchester
-  final Color? jm12;
+  Color? jm12;
 
   /// Hanover
-  final Color? jm09;
+  Color? jm09;
 
   /// Clarendon
-  final Color? jm13;
+  Color? jm13;
   SMapJamaicaColors({
     this.jm03,
     this.jm02,

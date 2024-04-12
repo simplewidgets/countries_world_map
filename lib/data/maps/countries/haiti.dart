@@ -2,34 +2,34 @@ import 'package:flutter/material.dart';
 
 class SMapHaitiColors {
   /// Sud-Est
-  final Color? htSE;
+  Color? htSE;
 
   /// Ouest
-  final Color? htOU;
+  Color? htOU;
 
   /// Nord
-  final Color? htND;
+  Color? htND;
 
   /// Nord-Est
-  final Color? htNE;
+  Color? htNE;
 
   /// Centre
-  final Color? htCE;
+  Color? htCE;
 
   /// L'Artibonite
-  final Color? htAR;
+  Color? htAR;
 
   /// Sud
-  final Color? htSD;
+  Color? htSD;
 
   /// Nord-Ouest
-  final Color? htNO;
+  Color? htNO;
 
   /// Nippes
-  final Color? htNI;
+  Color? htNI;
 
   /// Grand'Anse
-  final Color? htGA;
+  Color? htGA;
   SMapHaitiColors({
     this.htSE,
     this.htOU,

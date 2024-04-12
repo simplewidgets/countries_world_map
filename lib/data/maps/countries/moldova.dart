@@ -2,115 +2,115 @@ import 'package:flutter/material.dart';
 
 class SMapMoldovaColors {
   /// Anenii Noi
-  final Color? mdAN;
+  Color? mdAN;
 
   /// Bălţi
-  final Color? mdBA;
+  Color? mdBA;
 
   /// Tighina
-  final Color? mdBD;
+  Color? mdBD;
 
   /// Briceni
-  final Color? mdBR;
+  Color? mdBR;
 
   /// Basarabeasca
-  final Color? mdBS;
+  Color? mdBS;
 
   /// Cahul
-  final Color? mdCA;
+  Color? mdCA;
 
   /// Călăraşi
-  final Color? mdCL;
+  Color? mdCL;
 
   /// Cimişlia
-  final Color? mdCM;
+  Color? mdCM;
 
   /// Criuleni
-  final Color? mdCR;
+  Color? mdCR;
 
   /// Căuşeni
-  final Color? mdCS;
+  Color? mdCS;
 
   /// Cantemir
-  final Color? mdCT;
+  Color? mdCT;
 
   /// Chişinău
-  final Color? mdCU;
+  Color? mdCU;
 
   /// Donduşeni
-  final Color? mdDO;
+  Color? mdDO;
 
   /// Drochia
-  final Color? mdDR;
+  Color? mdDR;
 
   /// Dubăsari
-  final Color? mdDU;
+  Color? mdDU;
 
   /// Edineţ
-  final Color? mdED;
+  Color? mdED;
 
   /// Făleşti
-  final Color? mdFA;
+  Color? mdFA;
 
   /// Floreşti
-  final Color? mdFL;
+  Color? mdFL;
 
   /// Unitatea Teritorială Autonomă Găgăuzia (UTAG)
-  final Color? mdGA;
+  Color? mdGA;
 
   /// Glodeni
-  final Color? mdGL;
+  Color? mdGL;
 
   /// Hînceşti
-  final Color? mdHI;
+  Color? mdHI;
 
   /// Ialoveni
-  final Color? mdIA;
+  Color? mdIA;
 
   /// Leova
-  final Color? mdLE;
+  Color? mdLE;
 
   /// Nisporeni
-  final Color? mdNI;
+  Color? mdNI;
 
   /// Ocniţa
-  final Color? mdOC;
+  Color? mdOC;
 
   /// Orhei
-  final Color? mdOR;
+  Color? mdOR;
 
   /// Rezina
-  final Color? mdRE;
+  Color? mdRE;
 
   /// Rîşcani
-  final Color? mdRI;
+  Color? mdRI;
 
   /// Şoldăneşti
-  final Color? mdSD;
+  Color? mdSD;
 
   /// Sîngerei
-  final Color? mdSI;
+  Color? mdSI;
 
   /// Unitatea Teritorială din Stînga Nistrului
-  final Color? mdSN;
+  Color? mdSN;
 
   /// Soroca
-  final Color? mdSO;
+  Color? mdSO;
 
   /// Străşeni
-  final Color? mdST;
+  Color? mdST;
 
   ///  Ştefan Vodă
-  final Color? mdSV;
+  Color? mdSV;
 
   /// Taraclia
-  final Color? mdTA;
+  Color? mdTA;
 
   /// Teleneşti
-  final Color? mdTE;
+  Color? mdTE;
 
   /// Ungheni
-  final Color? mdUN;
+  Color? mdUN;
   SMapMoldovaColors({
     this.mdAN,
     this.mdBA,

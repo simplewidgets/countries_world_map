@@ -2,97 +2,97 @@ import 'package:flutter/material.dart';
 
 class SMapIranColors {
   /// Alborz
-  final Color? ir32;
+  Color? ir32;
 
   /// Kerman
-  final Color? ir15;
+  Color? ir15;
 
   /// Sistan and Baluchestan
-  final Color? ir13;
+  Color? ir13;
 
   /// North Khorasan
-  final Color? ir31;
+  Color? ir31;
 
   /// Razavi Khorasan
-  final Color? ir30;
+  Color? ir30;
 
   /// South Khorasan
-  final Color? ir29;
+  Color? ir29;
 
   /// Kordestan
-  final Color? ir16;
+  Color? ir16;
 
   /// Gilan
-  final Color? ir19;
+  Color? ir19;
 
   /// Kermanshah
-  final Color? ir17;
+  Color? ir17;
 
   /// East Azarbaijan
-  final Color? ir01;
+  Color? ir01;
 
   /// West Azarbaijan
-  final Color? ir02;
+  Color? ir02;
 
   /// Qazvin
-  final Color? ir28;
+  Color? ir28;
 
   /// Zanjan
-  final Color? ir11;
+  Color? ir11;
 
   /// Hamadan
-  final Color? ir24;
+  Color? ir24;
 
   /// Qom
-  final Color? ir26;
+  Color? ir26;
 
   /// Markazi
-  final Color? ir22;
+  Color? ir22;
 
   /// Ardebil
-  final Color? ir03;
+  Color? ir03;
 
   /// Hormozgan
-  final Color? ir23;
+  Color? ir23;
 
   /// Ilam
-  final Color? ir05;
+  Color? ir05;
 
   /// Lorestan
-  final Color? ir20;
+  Color? ir20;
 
   /// Khuzestan
-  final Color? ir10;
+  Color? ir10;
 
   /// Chahar Mahall and Bakhtiari
-  final Color? ir08;
+  Color? ir08;
 
   /// Yazd
-  final Color? ir25;
+  Color? ir25;
 
   /// Tehran
-  final Color? ir07;
+  Color? ir07;
 
   /// Semnan
-  final Color? ir12;
+  Color? ir12;
 
   /// Mazandaran
-  final Color? ir21;
+  Color? ir21;
 
   /// Golestan
-  final Color? ir27;
+  Color? ir27;
 
   /// Fars
-  final Color? ir14;
+  Color? ir14;
 
   /// Esfahan
-  final Color? ir04;
+  Color? ir04;
 
   /// Bushehr
-  final Color? ir06;
+  Color? ir06;
 
   /// Kohgiluyeh and Buyer Ahmad
-  final Color? ir18;
+  Color? ir18;
   SMapIranColors({
     this.ir32,
     this.ir15,

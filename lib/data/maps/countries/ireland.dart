@@ -2,85 +2,85 @@ import 'package:flutter/material.dart';
 
 class SMapIrelandColors {
   /// Northern Ireland
-  final Color? gbNIR;
+  Color? gbNIR;
 
   /// Carlow
-  final Color? ieCW;
+  Color? ieCW;
 
   /// Cavan
-  final Color? ieCN;
+  Color? ieCN;
 
   /// Clare
-  final Color? ieCE;
+  Color? ieCE;
 
   /// Cork
-  final Color? ieCO;
+  Color? ieCO;
 
   /// Donegal
-  final Color? ieDL;
+  Color? ieDL;
 
   /// Dublin
-  final Color? ieD;
+  Color? ieD;
 
   /// Galway
-  final Color? ieG;
+  Color? ieG;
 
   /// Kildare
-  final Color? ieKE;
+  Color? ieKE;
 
   /// Kilkenny
-  final Color? ieKK;
+  Color? ieKK;
 
   /// Kerry
-  final Color? ieKY;
+  Color? ieKY;
 
   /// Longford
-  final Color? ieLD;
+  Color? ieLD;
 
   /// Louth
-  final Color? ieLH;
+  Color? ieLH;
 
   /// Limerick
-  final Color? ieLK;
+  Color? ieLK;
 
   /// Leitrim
-  final Color? ieLM;
+  Color? ieLM;
 
   /// Laois
-  final Color? ieLS;
+  Color? ieLS;
 
   /// Meath
-  final Color? ieMH;
+  Color? ieMH;
 
   /// Monaghan
-  final Color? ieMN;
+  Color? ieMN;
 
   /// Mayo
-  final Color? ieMO;
+  Color? ieMO;
 
   /// Offaly
-  final Color? ieOY;
+  Color? ieOY;
 
   /// Roscommon
-  final Color? ieRN;
+  Color? ieRN;
 
   /// Sligo
-  final Color? ieSO;
+  Color? ieSO;
 
   /// Tipperary
-  final Color? ieTA;
+  Color? ieTA;
 
   /// Waterford
-  final Color? ieWD;
+  Color? ieWD;
 
   /// Westmeath
-  final Color? ieWH;
+  Color? ieWH;
 
   /// Wexford
-  final Color? ieWX;
+  Color? ieWX;
 
   /// Wicklow
-  final Color? ieWW;
+  Color? ieWW;
   SMapIrelandColors({
     this.gbNIR,
     this.ieCW,

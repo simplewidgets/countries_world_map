@@ -2,16 +2,16 @@ import 'package:flutter/material.dart';
 
 class SMapTaiwanColors {
   /// Taipei
-  final Color? twTP;
+  Color? twTP;
 
   /// Taiwan
-  final Color? twTW;
+  Color? twTW;
 
   /// Kaohsiung
-  final Color? twKH;
+  Color? twKH;
 
   /// Fukien
-  final Color? twFK;
+  Color? twFK;
   SMapTaiwanColors({
     this.twTP,
     this.twTW,

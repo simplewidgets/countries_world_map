@@ -2,28 +2,28 @@ import 'package:flutter/material.dart';
 
 class SMapSlovakiaColors {
   /// Banskobystrický
-  final Color? skBC;
+  Color? skBC;
 
   /// Bratislavský
-  final Color? skBL;
+  Color? skBL;
 
   /// Košický
-  final Color? skKI;
+  Color? skKI;
 
   /// Nitriansky
-  final Color? skNI;
+  Color? skNI;
 
   /// Prešovský
-  final Color? skPV;
+  Color? skPV;
 
   /// Trnavský
-  final Color? skTA;
+  Color? skTA;
 
   /// Trenčiansky
-  final Color? skTC;
+  Color? skTC;
 
   /// Žilinský
-  final Color? skZI;
+  Color? skZI;
   SMapSlovakiaColors({
     this.skBC,
     this.skBL,

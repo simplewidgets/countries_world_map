@@ -86,7 +86,7 @@ class SimpleMap extends StatelessWidget {
           if (onHover != null)
             for (int i = 0; i < countryPathList.length; i++)
               InteractiveMapItem(
-                  key: Key(countryPathList[i].uniqueID),
+                  key: Key(countryPathList[i].uniqueID + "-" + i.toString()),
                   callback: callback,
                   onHover: onHover,
                   color: colors?[countryPathList[i].uniqueID],

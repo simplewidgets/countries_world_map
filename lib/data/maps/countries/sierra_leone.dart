@@ -2,16 +2,16 @@ import 'package:flutter/material.dart';
 
 class SMapSierraLeoneColors {
   /// Eastern
-  final Color? slE;
+  Color? slE;
 
   /// Northern
-  final Color? slN;
+  Color? slN;
 
   /// Western
-  final Color? slW;
+  Color? slW;
 
   /// Southern
-  final Color? slS;
+  Color? slS;
   SMapSierraLeoneColors({
     this.slE,
     this.slN,

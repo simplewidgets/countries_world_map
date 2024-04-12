@@ -2,100 +2,100 @@ import 'package:flutter/material.dart';
 
 class SMapMexicoColors {
   /// Aguascalientes
-  final Color? mxAGU;
+  Color? mxAGU;
 
   /// Baja California
-  final Color? mxBCN;
+  Color? mxBCN;
 
   /// Baja California Sur
-  final Color? mxBCS;
+  Color? mxBCS;
 
   /// Campeche
-  final Color? mxCAM;
+  Color? mxCAM;
 
   /// Chiapas
-  final Color? mxCHP;
+  Color? mxCHP;
 
   /// Chihuahua
-  final Color? mxCHH;
+  Color? mxCHH;
 
   /// Coahuila
-  final Color? mxCOA;
+  Color? mxCOA;
 
   /// Colima
-  final Color? mxCOL;
+  Color? mxCOL;
 
   /// Distrito Federal
-  final Color? mxDIF;
+  Color? mxDIF;
 
   /// Durango
-  final Color? mxDUR;
+  Color? mxDUR;
 
   /// Guanajuato
-  final Color? mxGUA;
+  Color? mxGUA;
 
   /// Guerrero
-  final Color? mxGRO;
+  Color? mxGRO;
 
   /// Hidalgo
-  final Color? mxHID;
+  Color? mxHID;
 
   /// Jalisco
-  final Color? mxJAL;
+  Color? mxJAL;
 
   /// México
-  final Color? mxMEX;
+  Color? mxMEX;
 
   /// Michoacán
-  final Color? mxMIC;
+  Color? mxMIC;
 
   /// Morelos
-  final Color? mxMOR;
+  Color? mxMOR;
 
   /// Nayarit
-  final Color? mxNAY;
+  Color? mxNAY;
 
   /// Nuevo León
-  final Color? mxNEL;
+  Color? mxNEL;
 
   /// Oaxaca
-  final Color? mxOAX;
+  Color? mxOAX;
 
   /// Puebla
-  final Color? mxPUE;
+  Color? mxPUE;
 
   /// Querétaro
-  final Color? mxQUE;
+  Color? mxQUE;
 
   /// Quintana Roo
-  final Color? mxROO;
+  Color? mxROO;
 
   /// San Luis Potosí
-  final Color? mxSLP;
+  Color? mxSLP;
 
   /// Sinaloa
-  final Color? mxSIN;
+  Color? mxSIN;
 
   /// Sonora
-  final Color? mxSON;
+  Color? mxSON;
 
   /// Tabasco
-  final Color? mxTAB;
+  Color? mxTAB;
 
   /// Tamaulipas
-  final Color? mxTAM;
+  Color? mxTAM;
 
   /// Tlaxcala
-  final Color? mxTLA;
+  Color? mxTLA;
 
   /// Veracruz
-  final Color? mxVER;
+  Color? mxVER;
 
   /// Yucatán
-  final Color? mxYUC;
+  Color? mxYUC;
 
   /// Zacatecas
-  final Color? mxZAC;
+  Color? mxZAC;
   SMapMexicoColors({
     this.mxAGU,
     this.mxBCN,

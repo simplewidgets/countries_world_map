@@ -2,49 +2,49 @@ import 'package:flutter/material.dart';
 
 class SMapKazakhstanColors {
   /// Aqmola oblysy
-  final Color? kzAKM;
+  Color? kzAKM;
 
   /// Aqtöbe oblysy
-  final Color? kzAKT;
+  Color? kzAKT;
 
   /// Almaty oblysy
-  final Color? kzALM;
+  Color? kzALM;
 
   /// Atyraū oblysy
-  final Color? kzATY;
+  Color? kzATY;
 
   /// Qaraghandy oblysy
-  final Color? kzKAR;
+  Color? kzKAR;
 
   /// Qostanay oblysy
-  final Color? kzKUS;
+  Color? kzKUS;
 
   /// Qyzylorda oblysy
-  final Color? kzKZY;
+  Color? kzKZY;
 
   /// Mangghystaū oblysy
-  final Color? kzMAN;
+  Color? kzMAN;
 
   /// Pavlodar oblysy
-  final Color? kzPAV;
+  Color? kzPAV;
 
   /// Soltüstik Qazaqstan oblysy
-  final Color? kzSEV;
+  Color? kzSEV;
 
   /// Shyghys Qazaqstan oblysy
-  final Color? kzVOS;
+  Color? kzVOS;
 
   /// Ongtüstik Qazaqstan oblysy
-  final Color? kzYUZ;
+  Color? kzYUZ;
 
   /// Batys Qazaqstan oblysy
-  final Color? kzZAP;
+  Color? kzZAP;
 
   /// Zhambyl oblysy
-  final Color? kzZHA;
+  Color? kzZHA;
 
   /// Aral Sea
-  final Color? kzAS;
+  Color? kzAS;
   SMapKazakhstanColors({
     this.kzAKM,
     this.kzAKT,

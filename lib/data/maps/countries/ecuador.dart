@@ -2,76 +2,76 @@ import 'package:flutter/material.dart';
 
 class SMapEcuadorColors {
   /// Azuay
-  final Color? ecA;
+  Color? ecA;
 
   /// Bolívar
-  final Color? ecB;
+  Color? ecB;
 
   /// Carchi
-  final Color? ecC;
+  Color? ecC;
 
   /// Orellana
-  final Color? ecD;
+  Color? ecD;
 
   /// Esmeraldas
-  final Color? ecE;
+  Color? ecE;
 
   /// Cañar
-  final Color? ecF;
+  Color? ecF;
 
   /// Guayas
-  final Color? ecG;
+  Color? ecG;
 
   /// Chimborazo
-  final Color? ecH;
+  Color? ecH;
 
   /// Imbabura
-  final Color? ecI;
+  Color? ecI;
 
   /// Loja
-  final Color? ecL;
+  Color? ecL;
 
   ///  Manabí
-  final Color? ecM;
+  Color? ecM;
 
   /// Napo
-  final Color? ecN;
+  Color? ecN;
 
   /// El Oro
-  final Color? ecO;
+  Color? ecO;
 
   /// Pichincha
-  final Color? ecP;
+  Color? ecP;
 
   /// Los Ríos
-  final Color? ecR;
+  Color? ecR;
 
   /// Morona-Santiago
-  final Color? ecS;
+  Color? ecS;
 
   /// Santo Domingo de los Tsáchilas
-  final Color? ecSD;
+  Color? ecSD;
 
   /// Santa Elena
-  final Color? ecSE;
+  Color? ecSE;
 
   /// Tungurahua
-  final Color? ecT;
+  Color? ecT;
 
   /// Sucumbíos
-  final Color? ecU;
+  Color? ecU;
 
   /// Galápagos
-  final Color? ecW;
+  Color? ecW;
 
   /// Cotopaxi
-  final Color? ecX;
+  Color? ecX;
 
   /// Pastaza
-  final Color? ecY;
+  Color? ecY;
 
   /// Zamora-Chinchipe
-  final Color? ecZ;
+  Color? ecZ;
   SMapEcuadorColors({
     this.ecA,
     this.ecB,

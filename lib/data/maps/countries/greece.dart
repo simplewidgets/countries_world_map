@@ -2,46 +2,46 @@ import 'package:flutter/material.dart';
 
 class SMapGreeceColors {
   /// East Macedonia and Thrace
-  final Color? grA;
+  Color? grA;
 
   /// Central Macedonia
-  final Color? grB;
+  Color? grB;
 
   /// West Macedonia
-  final Color? grC;
+  Color? grC;
 
   /// Epirus
-  final Color? grD;
+  Color? grD;
 
   /// Thessaly
-  final Color? grE;
+  Color? grE;
 
   /// Ionian Islands
-  final Color? grF;
+  Color? grF;
 
   /// West Greece
-  final Color? grG;
+  Color? grG;
 
   /// Central Greece
-  final Color? grH;
+  Color? grH;
 
   /// Attica
-  final Color? grI;
+  Color? grI;
 
   /// Peloponnese
-  final Color? grJ;
+  Color? grJ;
 
   /// North Aegean
-  final Color? grK;
+  Color? grK;
 
   /// South Aegean
-  final Color? grL;
+  Color? grL;
 
   /// Crete
-  final Color? grM;
+  Color? grM;
 
   /// Mount Athos
-  final Color? gr69;
+  Color? gr69;
   SMapGreeceColors({
     this.grA,
     this.grB,

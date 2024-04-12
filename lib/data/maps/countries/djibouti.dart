@@ -2,22 +2,22 @@ import 'package:flutter/material.dart';
 
 class SMapDjiboutiColors {
   /// Arta
-  final Color? djAR;
+  Color? djAR;
 
   /// Ali Sabieh
-  final Color? djAS;
+  Color? djAS;
 
   /// Dikhil
-  final Color? djDI;
+  Color? djDI;
 
   /// Djibouti
-  final Color? djDJ;
+  Color? djDJ;
 
   /// Obock
-  final Color? djOB;
+  Color? djOB;
 
   /// Tadjourah
-  final Color? djTA;
+  Color? djTA;
   SMapDjiboutiColors({
     this.djAR,
     this.djAS,

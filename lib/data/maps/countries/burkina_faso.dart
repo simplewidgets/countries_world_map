@@ -2,43 +2,43 @@ import 'package:flutter/material.dart';
 
 class SMapBurkinaFasoColors {
   /// Boucle du Mouhoun
-  final Color? bf01;
+  Color? bf01;
 
   /// Cascades
-  final Color? bf02;
+  Color? bf02;
 
   /// Centre
-  final Color? bf03;
+  Color? bf03;
 
   /// Centre-Est
-  final Color? bf04;
+  Color? bf04;
 
   /// Centre-Nord
-  final Color? bf05;
+  Color? bf05;
 
   /// Centre-Ouest
-  final Color? bf06;
+  Color? bf06;
 
   /// Centre-Sud
-  final Color? bf07;
+  Color? bf07;
 
   /// Est
-  final Color? bf08;
+  Color? bf08;
 
   /// Hauts-Bassins
-  final Color? bf09;
+  Color? bf09;
 
   /// Nord
-  final Color? bf10;
+  Color? bf10;
 
   /// Plateau-Central
-  final Color? bf11;
+  Color? bf11;
 
   /// Sahel
-  final Color? bf12;
+  Color? bf12;
 
   /// Sud-Ouest
-  final Color? bf13;
+  Color? bf13;
   SMapBurkinaFasoColors({
     this.bf01,
     this.bf02,

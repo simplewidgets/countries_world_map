@@ -2,157 +2,157 @@ import 'package:flutter/material.dart';
 
 class SMapUnitedStatesColors {
   /// Alaska
-  final Color? usAK;
+  Color? usAK;
 
   /// Alabama
-  final Color? usAL;
+  Color? usAL;
 
   /// Arkansas
-  final Color? usAR;
+  Color? usAR;
 
   /// Arizona
-  final Color? usAZ;
+  Color? usAZ;
 
   /// California
-  final Color? usCA;
+  Color? usCA;
 
   /// Colorado
-  final Color? usCO;
+  Color? usCO;
 
   /// Connecticut
-  final Color? usCT;
+  Color? usCT;
 
   /// Washington, DC
-  final Color? usDC;
+  Color? usDC;
 
   /// Delaware
-  final Color? usDE;
+  Color? usDE;
 
   /// Florida
-  final Color? usFL;
+  Color? usFL;
 
   /// Georgia
-  final Color? usGA;
+  Color? usGA;
 
   /// Hawaii
-  final Color? usHI;
+  Color? usHI;
 
   /// Iowa
-  final Color? usIA;
+  Color? usIA;
 
   /// Idaho
-  final Color? usID;
+  Color? usID;
 
   /// Illinois
-  final Color? usIL;
+  Color? usIL;
 
   /// Indiana
-  final Color? usIN;
+  Color? usIN;
 
   /// Kansas
-  final Color? usKS;
+  Color? usKS;
 
   /// Kentucky
-  final Color? usKY;
+  Color? usKY;
 
   /// Louisiana
-  final Color? usLA;
+  Color? usLA;
 
   /// Massachusetts
-  final Color? usMA;
+  Color? usMA;
 
   /// Maryland
-  final Color? usMD;
+  Color? usMD;
 
   /// Maine
-  final Color? usME;
+  Color? usME;
 
   /// Michigan
-  final Color? usMI;
+  Color? usMI;
 
   /// Minnesota
-  final Color? usMN;
+  Color? usMN;
 
   /// Missouri
-  final Color? usMO;
+  Color? usMO;
 
   /// Mississippi
-  final Color? usMS;
+  Color? usMS;
 
   /// Montana
-  final Color? usMT;
+  Color? usMT;
 
   /// North Carolina
-  final Color? usNC;
+  Color? usNC;
 
   /// North Dakota
-  final Color? usND;
+  Color? usND;
 
   /// Nebraska
-  final Color? usNE;
+  Color? usNE;
 
   /// New Hampshire
-  final Color? usNH;
+  Color? usNH;
 
   /// New Jersey
-  final Color? usNJ;
+  Color? usNJ;
 
   /// New Mexico
-  final Color? usNM;
+  Color? usNM;
 
   /// Nevada
-  final Color? usNV;
+  Color? usNV;
 
   /// New York
-  final Color? usNY;
+  Color? usNY;
 
   /// Ohio
-  final Color? usOH;
+  Color? usOH;
 
   /// Oklahoma
-  final Color? usOK;
+  Color? usOK;
 
   /// Oregon
-  final Color? usOR;
+  Color? usOR;
 
   /// Pennsylvania
-  final Color? usPA;
+  Color? usPA;
 
   /// Rhode Island
-  final Color? usRI;
+  Color? usRI;
 
   /// South Carolina
-  final Color? usSC;
+  Color? usSC;
 
   /// South Dakota
-  final Color? usSD;
+  Color? usSD;
 
   /// Tennessee
-  final Color? usTN;
+  Color? usTN;
 
   /// Texas
-  final Color? usTX;
+  Color? usTX;
 
   /// Utah
-  final Color? usUT;
+  Color? usUT;
 
   /// Virginia
-  final Color? usVA;
+  Color? usVA;
 
   /// Vermont
-  final Color? usVT;
+  Color? usVT;
 
   /// Washington
-  final Color? usWA;
+  Color? usWA;
 
   /// Wisconsin
-  final Color? usWI;
+  Color? usWI;
 
   /// West Virginia
-  final Color? usWV;
+  Color? usWV;
 
   /// Wyoming
-  final Color? usWY;
+  Color? usWY;
   SMapUnitedStatesColors({
     this.usAK,
     this.usAL,

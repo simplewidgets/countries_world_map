@@ -2,46 +2,46 @@ import 'package:flutter/material.dart';
 
 class SMapNamibiaColors {
   /// Zambezi
-  final Color? naCA;
+  Color? naCA;
 
   /// Erongo
-  final Color? naER;
+  Color? naER;
 
   /// Hardap
-  final Color? naHA;
+  Color? naHA;
 
   /// Karas
-  final Color? naKA;
+  Color? naKA;
 
   /// Kavango East
-  final Color? naKE;
+  Color? naKE;
 
   /// Khomas
-  final Color? naKH;
+  Color? naKH;
 
   /// Kunene
-  final Color? naKU;
+  Color? naKU;
 
   /// Kavango West
-  final Color? naKW;
+  Color? naKW;
 
   /// Otjozondjupa
-  final Color? naOD;
+  Color? naOD;
 
   /// Omaheke
-  final Color? naOH;
+  Color? naOH;
 
   /// Oshana
-  final Color? naON;
+  Color? naON;
 
   /// Omusati
-  final Color? naOS;
+  Color? naOS;
 
   /// Oshikoto
-  final Color? naOT;
+  Color? naOT;
 
   /// Ohangwena
-  final Color? naOW;
+  Color? naOW;
   SMapNamibiaColors({
     this.naCA,
     this.naER,

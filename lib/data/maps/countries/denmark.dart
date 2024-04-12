@@ -2,19 +2,19 @@ import 'package:flutter/material.dart';
 
 class SMapDenmarkColors {
   /// Hovedstaden
-  final Color? dk84;
+  Color? dk84;
 
   /// Midtjylland
-  final Color? dk82;
+  Color? dk82;
 
   /// Nordjylland
-  final Color? dk81;
+  Color? dk81;
 
   /// Sjælland
-  final Color? dk85;
+  Color? dk85;
 
   /// Syddanmark
-  final Color? dk83;
+  Color? dk83;
   SMapDenmarkColors({
     this.dk84,
     this.dk82,

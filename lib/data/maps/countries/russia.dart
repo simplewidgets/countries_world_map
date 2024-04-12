@@ -2,253 +2,253 @@ import 'package:flutter/material.dart';
 
 class SMapRussiaColors {
   /// Республика Адыгея
-  final Color? ruAD;
+  Color? ruAD;
 
   /// Республика Алтай
-  final Color? ruALT;
+  Color? ruALT;
 
   /// Амурская область
-  final Color? ruAMU;
+  Color? ruAMU;
 
   /// Архангельская область
-  final Color? ruARK;
+  Color? ruARK;
 
   /// Астраханская область
-  final Color? ruAST;
+  Color? ruAST;
 
   /// Республика Башкортостан
-  final Color? ruBA;
+  Color? ruBA;
 
   /// Белгородская область
-  final Color? ruBEL;
+  Color? ruBEL;
 
   /// Брянская область
-  final Color? ruBRY;
+  Color? ruBRY;
 
   /// Республика Бурятия
-  final Color? ruBU;
+  Color? ruBU;
 
   /// Чеченская республика
-  final Color? ruCE;
+  Color? ruCE;
 
   /// Челябинская область
-  final Color? ruCHE;
+  Color? ruCHE;
 
   /// Чукотский автономный округ
-  final Color? ruCHU;
+  Color? ruCHU;
 
   /// Чувашская республика
-  final Color? ruCU;
+  Color? ruCU;
 
   /// Республика Дагестан
-  final Color? ruDA;
+  Color? ruDA;
 
   /// Республика Алтай
-  final Color? ruAL;
+  Color? ruAL;
 
   /// Республика Ингушетия
-  final Color? ruIN;
+  Color? ruIN;
 
   /// Иркутская область
-  final Color? ruIRK;
+  Color? ruIRK;
 
   /// Ивановская область
-  final Color? ruIVA;
+  Color? ruIVA;
 
   /// Кабардино-Балкарская республика
-  final Color? ruKB;
+  Color? ruKB;
 
   /// Карачаево-Черкесская республика
-  final Color? ruKC;
+  Color? ruKC;
 
   /// Краснодарский край
-  final Color? ruKDA;
+  Color? ruKDA;
 
   /// Кемеровская область
-  final Color? ruKEM;
+  Color? ruKEM;
 
   /// Калужская область
-  final Color? ruKLU;
+  Color? ruKLU;
 
   /// Хабаровский край
-  final Color? ruKHA;
+  Color? ruKHA;
 
   /// Республика Карелия
-  final Color? ruKR;
+  Color? ruKR;
 
   /// Республика Хакасия
-  final Color? ruKK;
+  Color? ruKK;
 
   /// Республика Калмыкия
-  final Color? ruKL;
+  Color? ruKL;
 
   /// Ханты-Мансийский автономный округ
-  final Color? ruKHM;
+  Color? ruKHM;
 
   /// Калининградская область
-  final Color? ruKGD;
+  Color? ruKGD;
 
   /// Республика Коми
-  final Color? ruKO;
+  Color? ruKO;
 
   /// Камчатский край
-  final Color? ruKAM;
+  Color? ruKAM;
 
   /// Курская область
-  final Color? ruKRS;
+  Color? ruKRS;
 
   /// Костромская область
-  final Color? ruKOS;
+  Color? ruKOS;
 
   /// Курганская область
-  final Color? ruKGN;
+  Color? ruKGN;
 
   /// Кировская область
-  final Color? ruKIR;
+  Color? ruKIR;
 
   /// Красноярский край
-  final Color? ruKYA;
+  Color? ruKYA;
 
   /// Ленинградская область
-  final Color? ruLEN;
+  Color? ruLEN;
 
   /// Липецкая область
-  final Color? ruLIP;
+  Color? ruLIP;
 
   /// Москва
-  final Color? ruMOW;
+  Color? ruMOW;
 
   /// Республика Марий Эл
-  final Color? ruME;
+  Color? ruME;
 
   /// Магаданская область
-  final Color? ruMAG;
+  Color? ruMAG;
 
   /// Мурманская область
-  final Color? ruMUR;
+  Color? ruMUR;
 
   /// Республика Мордовия
-  final Color? ruMO;
+  Color? ruMO;
 
   /// Московская область
-  final Color? ruMOS;
+  Color? ruMOS;
 
   /// Новгородская область
-  final Color? ruNGR;
+  Color? ruNGR;
 
   /// Ненецкий автономный округ
-  final Color? ruNEN;
+  Color? ruNEN;
 
   /// Республика Северная Осетия — Алания
-  final Color? ruSE;
+  Color? ruSE;
 
   /// Новосибирская область
-  final Color? ruNVS;
+  Color? ruNVS;
 
   /// Нижегородская область
-  final Color? ruNIZ;
+  Color? ruNIZ;
 
   /// Оренбургская область
-  final Color? ruORE;
+  Color? ruORE;
 
   /// Орловская область
-  final Color? ruORL;
+  Color? ruORL;
 
   /// Омская область
-  final Color? ruOMS;
+  Color? ruOMS;
 
   /// Пермский край'
-  final Color? ruPER;
+  Color? ruPER;
 
   /// Приморский край
-  final Color? ruPRI;
+  Color? ruPRI;
 
   /// Псковская область
-  final Color? ruPSK;
+  Color? ruPSK;
 
   /// Пензенская область
-  final Color? ruPNZ;
+  Color? ruPNZ;
 
   /// Ростовская область
-  final Color? ruROS;
+  Color? ruROS;
 
   /// Рязанская область
-  final Color? ruRYA;
+  Color? ruRYA;
 
   /// Самарская область
-  final Color? ruSAM;
+  Color? ruSAM;
 
   /// Республика Саха (Якутия)
-  final Color? ruSA;
+  Color? ruSA;
 
   /// Сахалинская область
-  final Color? ruSAK;
+  Color? ruSAK;
 
   /// Смоленская область
-  final Color? ruSMO;
+  Color? ruSMO;
 
   /// Санкт-Петербург
-  final Color? ruSPE;
+  Color? ruSPE;
 
   /// Саратовская область
-  final Color? ruSAR;
+  Color? ruSAR;
 
   /// Ставропольский край
-  final Color? ruSTA;
+  Color? ruSTA;
 
   /// Свердловская область
-  final Color? ruSVE;
+  Color? ruSVE;
 
   /// Тамбовская область
-  final Color? ruTAM;
+  Color? ruTAM;
 
   /// Томская область
-  final Color? ruTOM;
+  Color? ruTOM;
 
   /// Тульская область
-  final Color? ruTUL;
+  Color? ruTUL;
 
   /// Республика Татарстан
-  final Color? ruTA;
+  Color? ruTA;
 
   /// Республика Тыва
-  final Color? ruTY;
+  Color? ruTY;
 
   /// Тверская область
-  final Color? ruTVE;
+  Color? ruTVE;
 
   /// Тюменская область
-  final Color? ruTYU;
+  Color? ruTYU;
 
   /// Удмуртская республика
-  final Color? ruUD;
+  Color? ruUD;
 
   /// Ульяновская область
-  final Color? ruULY;
+  Color? ruULY;
 
   /// Волгоградская область
-  final Color? ruVGG;
+  Color? ruVGG;
 
   /// Владимирская область
-  final Color? ruVLA;
+  Color? ruVLA;
 
   /// Ямало-Ненецкий автономный округ
-  final Color? ruYAN;
+  Color? ruYAN;
 
   /// Вологодская область
-  final Color? ruVLG;
+  Color? ruVLG;
 
   /// Воронежская область
-  final Color? ruVOR;
+  Color? ruVOR;
 
   /// Ярославская область
-  final Color? ruYAR;
+  Color? ruYAR;
 
   /// Еврейская автономная область
-  final Color? ruYEV;
+  Color? ruYEV;
 
   /// Забайкальский край
-  final Color? ruZAB;
+  Color? ruZAB;
   SMapRussiaColors({
     this.ruAD,
     this.ruALT,

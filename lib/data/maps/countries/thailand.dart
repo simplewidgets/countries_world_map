@@ -2,238 +2,238 @@ import 'package:flutter/material.dart';
 
 class SMapThailandColors {
   /// Krung Thep Maha Nakhon (Bangkok)
-  final Color? th10;
+  Color? th10;
 
   /// Samut Prakan
-  final Color? th11;
+  Color? th11;
 
   /// Nonthaburi
-  final Color? th12;
+  Color? th12;
 
   /// Pathum Thani
-  final Color? th13;
+  Color? th13;
 
   /// Phra Nakhon Si Ayutthaya
-  final Color? th14;
+  Color? th14;
 
   /// Ang Thong
-  final Color? th15;
+  Color? th15;
 
   /// Lop Buri
-  final Color? th16;
+  Color? th16;
 
   /// Sing Buri
-  final Color? th17;
+  Color? th17;
 
   /// Chai Nat
-  final Color? th18;
+  Color? th18;
 
   /// Saraburi
-  final Color? th19;
+  Color? th19;
 
   /// Chon Buri
-  final Color? th20;
+  Color? th20;
 
   /// Rayong
-  final Color? th21;
+  Color? th21;
 
   /// Chanthaburi
-  final Color? th22;
+  Color? th22;
 
   /// Trat
-  final Color? th23;
+  Color? th23;
 
   /// Chachoengsao
-  final Color? th24;
+  Color? th24;
 
   /// Prachin Buri
-  final Color? th25;
+  Color? th25;
 
   /// Nakhon Nayok
-  final Color? th26;
+  Color? th26;
 
   /// Sa Kaeo
-  final Color? th27;
+  Color? th27;
 
   /// Nakhon Ratchasima
-  final Color? th30;
+  Color? th30;
 
   /// Buri Ram
-  final Color? th31;
+  Color? th31;
 
   /// Surin
-  final Color? th32;
+  Color? th32;
 
   /// Si Sa Ket
-  final Color? th33;
+  Color? th33;
 
   /// Ubon Ratchathani
-  final Color? th34;
+  Color? th34;
 
   /// Yasothon
-  final Color? th35;
+  Color? th35;
 
   /// Chaiyaphum
-  final Color? th36;
+  Color? th36;
 
   /// Amnat Charoen
-  final Color? th37;
+  Color? th37;
 
   /// Bueng Kan
-  final Color? th38;
+  Color? th38;
 
   /// Nong Bua Lam Phu
-  final Color? th39;
+  Color? th39;
 
   /// Khon Kaen
-  final Color? th40;
+  Color? th40;
 
   /// Udon Thani
-  final Color? th41;
+  Color? th41;
 
   /// Loei
-  final Color? th42;
+  Color? th42;
 
   /// Nong Khai
-  final Color? th43;
+  Color? th43;
 
   /// Maha Sarakham
-  final Color? th44;
+  Color? th44;
 
   /// Roi Et
-  final Color? th45;
+  Color? th45;
 
   /// Kalasin
-  final Color? th46;
+  Color? th46;
 
   /// Sakon Nakhon
-  final Color? th47;
+  Color? th47;
 
   /// Nakhon Phanom
-  final Color? th48;
+  Color? th48;
 
   /// Mukdahan
-  final Color? th49;
+  Color? th49;
 
   /// Chiang Mai
-  final Color? th50;
+  Color? th50;
 
   /// Lamphun
-  final Color? th51;
+  Color? th51;
 
   /// Lampang
-  final Color? th52;
+  Color? th52;
 
   /// Uttaradit
-  final Color? th53;
+  Color? th53;
 
   /// Phrae
-  final Color? th54;
+  Color? th54;
 
   /// Nan
-  final Color? th55;
+  Color? th55;
 
   /// Phayao
-  final Color? th56;
+  Color? th56;
 
   /// Chiang Rai
-  final Color? th57;
+  Color? th57;
 
   /// Mae Hong Son
-  final Color? th58;
+  Color? th58;
 
   /// Nakhon Sawan
-  final Color? th60;
+  Color? th60;
 
   /// Uthai Thani
-  final Color? th61;
+  Color? th61;
 
   /// Kamphaeng Phet
-  final Color? th62;
+  Color? th62;
 
   /// Tak
-  final Color? th63;
+  Color? th63;
 
   /// Sukhothai
-  final Color? th64;
+  Color? th64;
 
   /// Phitsanulok
-  final Color? th65;
+  Color? th65;
 
   /// Phichit
-  final Color? th66;
+  Color? th66;
 
   /// Phetchabun
-  final Color? th67;
+  Color? th67;
 
   /// Ratchaburi
-  final Color? th70;
+  Color? th70;
 
   /// Kanchanaburi
-  final Color? th71;
+  Color? th71;
 
   /// Suphan Buri
-  final Color? th72;
+  Color? th72;
 
   /// Nakhon Pathom
-  final Color? th73;
+  Color? th73;
 
   /// Samut Sakhon
-  final Color? th74;
+  Color? th74;
 
   /// Samut Songkhram
-  final Color? th75;
+  Color? th75;
 
   /// Phetchaburi
-  final Color? th76;
+  Color? th76;
 
   /// Prachuap Khiri Khan
-  final Color? th77;
+  Color? th77;
 
   /// Nakhon Si Thammarat
-  final Color? th80;
+  Color? th80;
 
   /// Krabi
-  final Color? th81;
+  Color? th81;
 
   /// Phangnga
-  final Color? th82;
+  Color? th82;
 
   /// Phuket
-  final Color? th83;
+  Color? th83;
 
   /// Surat Thani
-  final Color? th84;
+  Color? th84;
 
   /// Ranong
-  final Color? th85;
+  Color? th85;
 
   /// Chumphon
-  final Color? th86;
+  Color? th86;
 
   /// Songkhla
-  final Color? th90;
+  Color? th90;
 
   /// Satun
-  final Color? th91;
+  Color? th91;
 
   /// Trang
-  final Color? th92;
+  Color? th92;
 
   /// Phatthalung
-  final Color? th93;
+  Color? th93;
 
   /// Pattani
-  final Color? th94;
+  Color? th94;
 
   /// Yala
-  final Color? th95;
+  Color? th95;
 
   /// Narathiwat
-  final Color? th96;
+  Color? th96;
 
   /// Lake Songkhla
-  final Color? thLKSG;
+  Color? thLKSG;
   SMapThailandColors({
     this.th10,
     this.th11,

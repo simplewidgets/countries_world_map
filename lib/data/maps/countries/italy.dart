@@ -2,76 +2,76 @@ import 'package:flutter/material.dart';
 
 class SMapItalyColors {
   /// Vatican City
-  final Color? vaVA;
+  Color? vaVA;
 
   /// San Marino
-  final Color? smSM;
+  Color? smSM;
 
   /// Corsica, France
-  final Color? frH;
+  Color? frH;
 
   /// Malta
-  final Color? mtMT;
+  Color? mtMT;
 
   /// Abruzzo
-  final Color? it65;
+  Color? it65;
 
   /// Basilicata
-  final Color? it77;
+  Color? it77;
 
   /// Calabria
-  final Color? it78;
+  Color? it78;
 
   /// Campania
-  final Color? it72;
+  Color? it72;
 
   /// Emilia-Romagna
-  final Color? it45;
+  Color? it45;
 
   /// Friuli-Venezia Giulia
-  final Color? it36;
+  Color? it36;
 
   /// Lazio
-  final Color? it62;
+  Color? it62;
 
   /// Liguria
-  final Color? it42;
+  Color? it42;
 
   /// Lombardia
-  final Color? it25;
+  Color? it25;
 
   /// Marche
-  final Color? it57;
+  Color? it57;
 
   /// Molise
-  final Color? it67;
+  Color? it67;
 
   /// Piemonte
-  final Color? it21;
+  Color? it21;
 
   /// Puglia
-  final Color? it75;
+  Color? it75;
 
   /// Sardegna
-  final Color? it88;
+  Color? it88;
 
   /// Sicilia
-  final Color? it82;
+  Color? it82;
 
   /// Toscana
-  final Color? it52;
+  Color? it52;
 
   /// Trentino-Alto Adige
-  final Color? it32;
+  Color? it32;
 
   /// Umbria
-  final Color? it55;
+  Color? it55;
 
   /// Valle d'Aosta
-  final Color? it23;
+  Color? it23;
 
   /// Veneto
-  final Color? it34;
+  Color? it34;
   SMapItalyColors({
     this.vaVA,
     this.smSM,

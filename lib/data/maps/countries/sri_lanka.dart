@@ -2,79 +2,79 @@ import 'package:flutter/material.dart';
 
 class SMapSriLankaColors {
   /// Colombo
-  final Color? lk11;
+  Color? lk11;
 
   /// Gampaha
-  final Color? lk12;
+  Color? lk12;
 
   /// Kaḷutara
-  final Color? lk13;
+  Color? lk13;
 
   /// Mahanuvara
-  final Color? lk21;
+  Color? lk21;
 
   /// Matale
-  final Color? lk22;
+  Color? lk22;
 
   /// Nuwara Eliya
-  final Color? lk23;
+  Color? lk23;
 
   /// Galle
-  final Color? lk31;
+  Color? lk31;
 
   /// Matara
-  final Color? lk32;
+  Color? lk32;
 
   /// Hambantota
-  final Color? lk33;
+  Color? lk33;
 
   /// Jaffna
-  final Color? lk41;
+  Color? lk41;
 
   /// Kilinochchi
-  final Color? lk42;
+  Color? lk42;
 
   /// Mannar
-  final Color? lk43;
+  Color? lk43;
 
   /// Vavuniya
-  final Color? lk44;
+  Color? lk44;
 
   /// Mullaitivu
-  final Color? lk45;
+  Color? lk45;
 
   /// Batticaloa
-  final Color? lk51;
+  Color? lk51;
 
   /// Ampara
-  final Color? lk52;
+  Color? lk52;
 
   /// Trincomalee
-  final Color? lk53;
+  Color? lk53;
 
   /// Kurunegala
-  final Color? lk61;
+  Color? lk61;
 
   /// Puttalam
-  final Color? lk62;
+  Color? lk62;
 
   /// Anuradhapura
-  final Color? lk71;
+  Color? lk71;
 
   /// Polonnaruwa
-  final Color? lk72;
+  Color? lk72;
 
   /// Badulla
-  final Color? lk81;
+  Color? lk81;
 
   /// Moneragala
-  final Color? lk82;
+  Color? lk82;
 
   /// Ratnapura
-  final Color? lk91;
+  Color? lk91;
 
   /// Kegalle
-  final Color? lk92;
+  Color? lk92;
   SMapSriLankaColors({
     this.lk11,
     this.lk12,

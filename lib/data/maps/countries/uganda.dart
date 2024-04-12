@@ -2,340 +2,340 @@ import 'package:flutter/material.dart';
 
 class SMapUgandaColors {
   /// Bududa
-  final Color? ug223;
+  Color? ug223;
 
   /// Nwoya
-  final Color? ug329;
+  Color? ug329;
 
   /// Buhweju
-  final Color? ug325;
+  Color? ug325;
 
   /// Sheema
-  final Color? ug425;
+  Color? ug425;
 
   /// Mitooma
-  final Color? ug422;
+  Color? ug422;
 
   /// Rubirizi
-  final Color? ug424;
+  Color? ug424;
 
   /// Kalungu
-  final Color? ug122;
+  Color? ug122;
 
   /// Bukomansimbi
-  final Color? ug118;
+  Color? ug118;
 
   /// Lyantonde
-  final Color? ug116;
+  Color? ug116;
 
   /// Lwengo
-  final Color? ug124;
+  Color? ug124;
 
   /// Amudat
-  final Color? ug324;
+  Color? ug324;
 
   /// Napak
-  final Color? ug328;
+  Color? ug328;
 
   /// Namayingo
-  final Color? ug230;
+  Color? ug230;
 
   /// Bulambuli
-  final Color? ug225;
+  Color? ug225;
 
   /// Kween
-  final Color? ug228;
+  Color? ug228;
 
   /// Kyegegwa
-  final Color? ug421;
+  Color? ug421;
 
   /// Ntoroko
-  final Color? ug423;
+  Color? ug423;
 
   /// Kiryandongo
-  final Color? ug420;
+  Color? ug420;
 
   /// Agago
-  final Color? ug322;
+  Color? ug322;
 
   /// Otuke
-  final Color? ug330;
+  Color? ug330;
 
   /// Alebtong
-  final Color? ug323;
+  Color? ug323;
 
   /// Kole
-  final Color? ug326;
+  Color? ug326;
 
   /// Apac
-  final Color? ug302;
+  Color? ug302;
 
   /// Lamwo
-  final Color? ug327;
+  Color? ug327;
 
   /// Kyankwanzi
-  final Color? ug123;
+  Color? ug123;
 
   /// Amuru
-  final Color? ug319;
+  Color? ug319;
 
   /// Gomba
-  final Color? ug121;
+  Color? ug121;
 
   /// Butambala
-  final Color? ug119;
+  Color? ug119;
 
   /// Buvuma
-  final Color? ug120;
+  Color? ug120;
 
   /// Buikwe
-  final Color? ug117;
+  Color? ug117;
 
   /// Serere
-  final Color? ug232;
+  Color? ug232;
 
   /// Kibuku
-  final Color? ug227;
+  Color? ug227;
 
   /// Budaka
-  final Color? ug217;
+  Color? ug217;
 
   /// Buyende
-  final Color? ug226;
+  Color? ug226;
 
   /// Luuka
-  final Color? ug229;
+  Color? ug229;
 
   /// Bukedea
-  final Color? ug224;
+  Color? ug224;
 
   /// Ngora
-  final Color? ug231;
+  Color? ug231;
 
   /// Zombo
-  final Color? ug331;
+  Color? ug331;
 
   /// Kanungu
-  final Color? ug414;
+  Color? ug414;
 
   /// Kisoro
-  final Color? ug408;
+  Color? ug408;
 
   /// Kabale
-  final Color? ug404;
+  Color? ug404;
 
   /// Mbarara
-  final Color? ug410;
+  Color? ug410;
 
   /// Rukungiri
-  final Color? ug412;
+  Color? ug412;
 
   /// Ntungamo
-  final Color? ug411;
+  Color? ug411;
 
   /// Kiruhura
-  final Color? ug418;
+  Color? ug418;
 
   /// Isingiro
-  final Color? ug417;
+  Color? ug417;
 
   /// Ibanda
-  final Color? ug416;
+  Color? ug416;
 
   /// Kamwenge
-  final Color? ug413;
+  Color? ug413;
 
   /// Kasese
-  final Color? ug406;
+  Color? ug406;
 
   /// Bushenyi
-  final Color? ug402;
+  Color? ug402;
 
   /// Masaka
-  final Color? ug105;
+  Color? ug105;
 
   /// Rakai
-  final Color? ug110;
+  Color? ug110;
 
   /// Nakapiripirit
-  final Color? ug311;
+  Color? ug311;
 
   /// Moroto
-  final Color? ug308;
+  Color? ug308;
 
   /// Abim
-  final Color? ug317;
+  Color? ug317;
 
   /// Kaabong
-  final Color? ug315;
+  Color? ug315;
 
   /// Amuria
-  final Color? ug216;
+  Color? ug216;
 
   /// Kotido
-  final Color? ug306;
+  Color? ug306;
 
   /// Katakwi
-  final Color? ug207;
+  Color? ug207;
 
   /// Tororo
-  final Color? ug212;
+  Color? ug212;
 
   /// Mayuge
-  final Color? ug214;
+  Color? ug214;
 
   /// Butaleja
-  final Color? ug219;
+  Color? ug219;
 
   /// Busia
-  final Color? ug202;
+  Color? ug202;
 
   /// Bugiri
-  final Color? ug201;
+  Color? ug201;
 
   /// Manafwa
-  final Color? ug221;
+  Color? ug221;
 
   /// Mbale
-  final Color? ug209;
+  Color? ug209;
 
   /// Sironko
-  final Color? ug215;
+  Color? ug215;
 
   /// Bukwa
-  final Color? ug218;
+  Color? ug218;
 
   /// Kapchorwa
-  final Color? ug206;
+  Color? ug206;
 
   /// Kibale
-  final Color? ug407;
+  Color? ug407;
 
   /// Kyenjojo
-  final Color? ug415;
+  Color? ug415;
 
   /// Kabarole
-  final Color? ug405;
+  Color? ug405;
 
   /// Hoima
-  final Color? ug403;
+  Color? ug403;
 
   /// Bundibugyo
-  final Color? ug401;
+  Color? ug401;
 
   /// Oyam
-  final Color? ug321;
+  Color? ug321;
 
   /// Masindi
-  final Color? ug409;
+  Color? ug409;
 
   /// Pader
-  final Color? ug312;
+  Color? ug312;
 
   /// Dokolo
-  final Color? ug318;
+  Color? ug318;
 
   /// Lira
-  final Color? ug307;
+  Color? ug307;
 
   /// Gulu
-  final Color? ug304;
+  Color? ug304;
 
   /// Kitgum
-  final Color? ug305;
+  Color? ug305;
 
   /// Nakaseke
-  final Color? ug115;
+  Color? ug115;
 
   /// Mityana
-  final Color? ug114;
+  Color? ug114;
 
   /// Mubende
-  final Color? ug107;
+  Color? ug107;
 
   /// Luweero
-  final Color? ug104;
+  Color? ug104;
 
   /// Wakiso
-  final Color? ug113;
+  Color? ug113;
 
   /// Nakasongola
-  final Color? ug109;
+  Color? ug109;
 
   /// Kiboga
-  final Color? ug103;
+  Color? ug103;
 
   /// Kampala
-  final Color? ug102;
+  Color? ug102;
 
   /// Maracha
-  final Color? ug320;
+  Color? ug320;
 
   /// Yumbe
-  final Color? ug313;
+  Color? ug313;
 
   /// Moyo
-  final Color? ug309;
+  Color? ug309;
 
   /// Nebbi
-  final Color? ug310;
+  Color? ug310;
 
   /// Buliisa
-  final Color? ug419;
+  Color? ug419;
 
   /// Koboko
-  final Color? ug316;
+  Color? ug316;
 
   /// Arua
-  final Color? ug303;
+  Color? ug303;
 
   /// Adjumani
-  final Color? ug301;
+  Color? ug301;
 
   /// Mpigi
-  final Color? ug106;
+  Color? ug106;
 
   /// Sembabule
-  final Color? ug111;
+  Color? ug111;
 
   /// Pallisa
-  final Color? ug210;
+  Color? ug210;
 
   /// Mukono
-  final Color? ug108;
+  Color? ug108;
 
   /// Soroti
-  final Color? ug211;
+  Color? ug211;
 
   /// Namutumba
-  final Color? ug222;
+  Color? ug222;
 
   /// Kaliro
-  final Color? ug220;
+  Color? ug220;
 
   /// Amolatar
-  final Color? ug314;
+  Color? ug314;
 
   /// Kamuli
-  final Color? ug205;
+  Color? ug205;
 
   /// Iganga
-  final Color? ug203;
+  Color? ug203;
 
   /// Kayunga
-  final Color? ug112;
+  Color? ug112;
 
   /// Kaberamaido
-  final Color? ug213;
+  Color? ug213;
 
   /// Kumi
-  final Color? ug208;
+  Color? ug208;
 
   /// Jinja
-  final Color? ug204;
+  Color? ug204;
 
   /// Kalangala
-  final Color? ug101;
+  Color? ug101;
   SMapUgandaColors({
     this.ug223,
     this.ug329,

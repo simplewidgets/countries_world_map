@@ -2,55 +2,55 @@ import 'package:flutter/material.dart';
 
 class SMapNewZealandColors {
   /// Auckland
-  final Color? nzAUK;
+  Color? nzAUK;
 
   /// Bay of Plenty
-  final Color? nzBOP;
+  Color? nzBOP;
 
   /// Canterbury
-  final Color? nzCAN;
+  Color? nzCAN;
 
   /// Chatham Islands Territory
-  final Color? nzCIT;
+  Color? nzCIT;
 
   /// Gisborne District
-  final Color? nzGIS;
+  Color? nzGIS;
 
   /// Hawke's Bay
-  final Color? nzHKB;
+  Color? nzHKB;
 
   /// Marlborough District
-  final Color? nzMBH;
+  Color? nzMBH;
 
   /// Manawatu-Wanganui
-  final Color? nzMWT;
+  Color? nzMWT;
 
   /// Nelson City
-  final Color? nzNSN;
+  Color? nzNSN;
 
   /// Northland
-  final Color? nzNTL;
+  Color? nzNTL;
 
   /// Otago
-  final Color? nzOTA;
+  Color? nzOTA;
 
   /// Southland
-  final Color? nzSTL;
+  Color? nzSTL;
 
   /// Tasman District
-  final Color? nzTAS;
+  Color? nzTAS;
 
   /// Taranaki
-  final Color? nzTKI;
+  Color? nzTKI;
 
   /// Waikato
-  final Color? nzWKO;
+  Color? nzWKO;
 
   /// Wellington
-  final Color? nzWGN;
+  Color? nzWGN;
 
   /// West Coast
-  final Color? nzWTC;
+  Color? nzWTC;
   SMapNewZealandColors({
     this.nzAUK,
     this.nzBOP,

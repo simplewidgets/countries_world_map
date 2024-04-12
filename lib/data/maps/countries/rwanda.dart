@@ -2,19 +2,19 @@ import 'package:flutter/material.dart';
 
 class SMapRwandaColors {
   /// Kigali City
-  final Color? rw01;
+  Color? rw01;
 
   /// Northern
-  final Color? rw03;
+  Color? rw03;
 
   /// Eastern
-  final Color? rw02;
+  Color? rw02;
 
   /// Western
-  final Color? rw04;
+  Color? rw04;
 
   /// Southern
-  final Color? rw05;
+  Color? rw05;
   SMapRwandaColors({
     this.rw01,
     this.rw03,

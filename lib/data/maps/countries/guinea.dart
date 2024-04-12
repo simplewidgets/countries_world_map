@@ -2,28 +2,28 @@ import 'package:flutter/material.dart';
 
 class SMapGuineaColors {
   /// Boké
-  final Color? gnB;
+  Color? gnB;
 
   /// Conakry
-  final Color? gnC;
+  Color? gnC;
 
   /// Kindia
-  final Color? gnD;
+  Color? gnD;
 
   /// Faranah
-  final Color? gnF;
+  Color? gnF;
 
   /// Kankan
-  final Color? gnK;
+  Color? gnK;
 
   /// Labé
-  final Color? gnL;
+  Color? gnL;
 
   /// Mamou
-  final Color? gnM;
+  Color? gnM;
 
   /// Nzérékoré
-  final Color? gnN3;
+  Color? gnN3;
   SMapGuineaColors({
     this.gnB,
     this.gnC,

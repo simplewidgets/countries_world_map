@@ -2,70 +2,70 @@ import 'package:flutter/material.dart';
 
 class SMapFranceColors {
   /// Alsace
-  final Color? frA;
+  Color? frA;
 
   /// Aquitaine
-  final Color? frB;
+  Color? frB;
 
   /// Auvergne
-  final Color? frC;
+  Color? frC;
 
   /// Bourgogne
-  final Color? frD;
+  Color? frD;
 
   /// Bretagne
-  final Color? frE;
+  Color? frE;
 
   /// Centre
-  final Color? frF;
+  Color? frF;
 
   /// Champagne-Ardenne
-  final Color? frG;
+  Color? frG;
 
   /// Corse
-  final Color? frH;
+  Color? frH;
 
   /// Franche-Comté
-  final Color? frI;
+  Color? frI;
 
   /// Île-de-France
-  final Color? frJ;
+  Color? frJ;
 
   /// Languedoc-Roussillon
-  final Color? frK;
+  Color? frK;
 
   /// Limousin
-  final Color? frL;
+  Color? frL;
 
   /// Lorraine
-  final Color? frM;
+  Color? frM;
 
   /// Midi-Pyrénées
-  final Color? frN;
+  Color? frN;
 
   /// Nord-Pas-de-Calais
-  final Color? frO;
+  Color? frO;
 
   /// Basse-Normandie
-  final Color? frP;
+  Color? frP;
 
   /// Haute-Normandie
-  final Color? frQ;
+  Color? frQ;
 
   /// Pays de la Loire
-  final Color? frR;
+  Color? frR;
 
   /// Picardie
-  final Color? frS;
+  Color? frS;
 
   /// Poitou-Charentes
-  final Color? frT;
+  Color? frT;
 
   /// Provence-Alpes-Côte d'Azur
-  final Color? frU;
+  Color? frU;
 
   /// Rhône-Alpes
-  final Color? frV;
+  Color? frV;
   SMapFranceColors({
     this.frA,
     this.frB,

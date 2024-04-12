@@ -2,85 +2,85 @@ import 'package:flutter/material.dart';
 
 class SMapPeruColors {
   /// Amazonas
-  final Color? peAMA;
+  Color? peAMA;
 
   /// Ancash
-  final Color? peANC;
+  Color? peANC;
 
   /// Apurímac
-  final Color? peAPU;
+  Color? peAPU;
 
   /// Arequipa
-  final Color? peARE;
+  Color? peARE;
 
   /// Ayacucho
-  final Color? peAYA;
+  Color? peAYA;
 
   /// Cajamarca
-  final Color? peCAJ;
+  Color? peCAJ;
 
   /// El Callao
-  final Color? peCAL;
+  Color? peCAL;
 
   /// Cusco
-  final Color? peCUS;
+  Color? peCUS;
 
   /// Huánuco
-  final Color? peHUC;
+  Color? peHUC;
 
   /// Huancavelica
-  final Color? peHUV;
+  Color? peHUV;
 
   /// Ica
-  final Color? peICA;
+  Color? peICA;
 
   /// Junín
-  final Color? peJUN;
+  Color? peJUN;
 
   /// La Libertad
-  final Color? peLAL;
+  Color? peLAL;
 
   /// Lambayeque
-  final Color? peLAM;
+  Color? peLAM;
 
   /// Lima
-  final Color? peLIM;
+  Color? peLIM;
 
   /// Municipalidad Metropolitana de Lima
-  final Color? peLMA;
+  Color? peLMA;
 
   /// Loreto
-  final Color? peLOR;
+  Color? peLOR;
 
   /// Madre de Dios
-  final Color? peMDD;
+  Color? peMDD;
 
   /// Moquegua
-  final Color? peMOQ;
+  Color? peMOQ;
 
   /// Pasco
-  final Color? pePAS;
+  Color? pePAS;
 
   /// Piura
-  final Color? pePIU;
+  Color? pePIU;
 
   /// Puno
-  final Color? pePUN;
+  Color? pePUN;
 
   /// San Martín
-  final Color? peSAM;
+  Color? peSAM;
 
   /// Tacna
-  final Color? peTAC;
+  Color? peTAC;
 
   /// Tumbes
-  final Color? peTUM;
+  Color? peTUM;
 
   /// Ucayali
-  final Color? peUCA;
+  Color? peUCA;
 
   /// Lake Titicaca
-  final Color? peLKT;
+  Color? peLKT;
   SMapPeruColors({
     this.peAMA,
     this.peANC,

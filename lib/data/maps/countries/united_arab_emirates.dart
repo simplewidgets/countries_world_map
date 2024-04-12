@@ -2,34 +2,34 @@ import 'package:flutter/material.dart';
 
 class SMapUnitedArabEmiratesColors {
   /// 'Ajmān
-  final Color? aeAJ;
+  Color? aeAJ;
 
   /// Abū Z̧aby
-  final Color? aeAZ;
+  Color? aeAZ;
 
   /// Dubayy
-  final Color? aeDU;
+  Color? aeDU;
 
   /// Al Fujayrah
-  final Color? aeFU;
+  Color? aeFU;
 
   /// Ra’s al Khaymah
-  final Color? aeRK;
+  Color? aeRK;
 
   /// Ash Shāriqah
-  final Color? aeSH;
+  Color? aeSH;
 
   /// Umm al Qaywayn
-  final Color? aeUQ;
+  Color? aeUQ;
 
   /// Musandam, Oman
-  final Color? omMU;
+  Color? omMU;
 
   /// Neutral Zone
-  final Color? aeNZ1;
+  Color? aeNZ1;
 
   /// Neutral Zone
-  final Color? aeNZ2;
+  Color? aeNZ2;
   SMapUnitedArabEmiratesColors({
     this.aeAJ,
     this.aeAZ,

@@ -2,37 +2,37 @@ import 'package:flutter/material.dart';
 
 class SMapLiechtensteinColors {
   /// Balzers
-  final Color? li01;
+  Color? li01;
 
   /// Eschen
-  final Color? li02;
+  Color? li02;
 
   /// Gamprin
-  final Color? li03;
+  Color? li03;
 
   /// Mauren
-  final Color? li04;
+  Color? li04;
 
   /// Planken
-  final Color? li05;
+  Color? li05;
 
   /// Ruggell
-  final Color? li06;
+  Color? li06;
 
   /// Schaan
-  final Color? li07;
+  Color? li07;
 
   /// Schellenberg
-  final Color? li08;
+  Color? li08;
 
   /// Triesen
-  final Color? li09;
+  Color? li09;
 
   /// Triesenberg
-  final Color? li10;
+  Color? li10;
 
   /// Vaduz
-  final Color? li11;
+  Color? li11;
   SMapLiechtensteinColors({
     this.li01,
     this.li02,

@@ -2,61 +2,61 @@ import 'package:flutter/material.dart';
 
 class SMapUruguayColors {
   /// Río Negro
-  final Color? uyRN;
+  Color? uyRN;
 
   /// Paysandú
-  final Color? uyPA;
+  Color? uyPA;
 
   /// Flores
-  final Color? uyFS;
+  Color? uyFS;
 
   /// Artigas
-  final Color? uyAR;
+  Color? uyAR;
 
   /// San José
-  final Color? uySJ;
+  Color? uySJ;
 
   /// Colonia
-  final Color? uyCO;
+  Color? uyCO;
 
   /// Rocha
-  final Color? uyRO;
+  Color? uyRO;
 
   /// Montevideo
-  final Color? uyMO;
+  Color? uyMO;
 
   /// Maldonado
-  final Color? uyMA;
+  Color? uyMA;
 
   /// Lavalleja
-  final Color? uyLA;
+  Color? uyLA;
 
   /// Florida
-  final Color? uyFD;
+  Color? uyFD;
 
   /// Canelones
-  final Color? uyCA;
+  Color? uyCA;
 
   /// Treinta y Tres
-  final Color? uyTT;
+  Color? uyTT;
 
   /// Tacuarembó
-  final Color? uyTA;
+  Color? uyTA;
 
   /// Rivera
-  final Color? uyRV;
+  Color? uyRV;
 
   /// Durazno
-  final Color? uyDU;
+  Color? uyDU;
 
   /// Cerro Largo
-  final Color? uyCL;
+  Color? uyCL;
 
   /// Soriano
-  final Color? uySO;
+  Color? uySO;
 
   /// Salto
-  final Color? uySA;
+  Color? uySA;
   SMapUruguayColors({
     this.uyRN,
     this.uyPA,

@@ -2,25 +2,25 @@ import 'package:flutter/material.dart';
 
 class SMapKyrgyzstanColors {
   /// Batken
-  final Color? kgB;
+  Color? kgB;
 
   /// Chü
-  final Color? kgC;
+  Color? kgC;
 
   /// Jalal-Abad
-  final Color? kgJ;
+  Color? kgJ;
 
   /// Naryn
-  final Color? kgN;
+  Color? kgN;
 
   /// Osh
-  final Color? kgO;
+  Color? kgO;
 
   /// Talas
-  final Color? kgT;
+  Color? kgT;
 
   /// Ysyk-Köl
-  final Color? kgY;
+  Color? kgY;
   SMapKyrgyzstanColors({
     this.kgB,
     this.kgC,

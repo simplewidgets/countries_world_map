@@ -2,31 +2,31 @@ import 'package:flutter/material.dart';
 
 class SMapBoliviaColors {
   /// El Beni
-  final Color? boB;
+  Color? boB;
 
   /// Cochabamba
-  final Color? boC;
+  Color? boC;
 
   /// Chuquisaca
-  final Color? boH;
+  Color? boH;
 
   /// La Paz
-  final Color? boL;
+  Color? boL;
 
   /// Pando
-  final Color? boN;
+  Color? boN;
 
   /// Oruro
-  final Color? boO;
+  Color? boO;
 
   /// Potosí
-  final Color? boP;
+  Color? boP;
 
   /// Santa Cruz
-  final Color? boS;
+  Color? boS;
 
   /// Tarija
-  final Color? boT;
+  Color? boT;
   SMapBoliviaColors({
     this.boB,
     this.boC,

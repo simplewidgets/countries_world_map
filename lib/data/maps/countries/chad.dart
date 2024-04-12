@@ -2,70 +2,70 @@ import 'package:flutter/material.dart';
 
 class SMapChadColors {
   /// Batha
-  final Color? tdBA;
+  Color? tdBA;
 
   /// Bahr el Gazel
-  final Color? tdBG;
+  Color? tdBG;
 
   /// Borkou
-  final Color? tdBO;
+  Color? tdBO;
 
   /// Chari-Baguirmi
-  final Color? tdCB;
+  Color? tdCB;
 
   /// Ennedi
-  final Color? tdEN;
+  Color? tdEN;
 
   /// Guéra
-  final Color? tdGR;
+  Color? tdGR;
 
   /// Hadjer Lamis
-  final Color? tdHL;
+  Color? tdHL;
 
   /// Kanem
-  final Color? tdKA;
+  Color? tdKA;
 
   /// Lac
-  final Color? tdLC;
+  Color? tdLC;
 
   /// Logone-Occidental
-  final Color? tdLO;
+  Color? tdLO;
 
   /// Logone-Oriental
-  final Color? tdLR;
+  Color? tdLR;
 
   /// Mandoul
-  final Color? tdMA;
+  Color? tdMA;
 
   /// Moyen-Chari
-  final Color? tdMC;
+  Color? tdMC;
 
   /// Mayo-Kébbi-Est
-  final Color? tdME;
+  Color? tdME;
 
   /// Mayo-Kébbi-Ouest
-  final Color? tdMO;
+  Color? tdMO;
 
   /// Ville de Ndjamena
-  final Color? tdND;
+  Color? tdND;
 
   /// Ouaddaï
-  final Color? tdOD;
+  Color? tdOD;
 
   /// Salamat
-  final Color? tdSA;
+  Color? tdSA;
 
   /// Sila
-  final Color? tdSI;
+  Color? tdSI;
 
   /// Tandjilé
-  final Color? tdTA;
+  Color? tdTA;
 
   /// Tibesti
-  final Color? tdTI;
+  Color? tdTI;
 
   /// Wadi Fira
-  final Color? tdWF;
+  Color? tdWF;
   SMapChadColors({
     this.tdBA,
     this.tdBG,

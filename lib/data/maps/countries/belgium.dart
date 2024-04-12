@@ -2,37 +2,37 @@ import 'package:flutter/material.dart';
 
 class SMapBelgiumColors {
   /// Antwerp
-  final Color? beVAN;
+  Color? beVAN;
 
   /// Walloon Brabant
-  final Color? beWBR;
+  Color? beWBR;
 
   /// Brussels Capital Region
-  final Color? beBRU;
+  Color? beBRU;
 
   /// Hainaut
-  final Color? beWHT;
+  Color? beWHT;
 
   /// Liege
-  final Color? beWLG;
+  Color? beWLG;
 
   /// Limburg
-  final Color? beVLI;
+  Color? beVLI;
 
   /// Luxembourg
-  final Color? beWLX;
+  Color? beWLX;
 
   /// Namur
-  final Color? beWNA;
+  Color? beWNA;
 
   /// East Flanders
-  final Color? beVOV;
+  Color? beVOV;
 
   /// Flemish Brabant
-  final Color? beVBR;
+  Color? beVBR;
 
   /// West Flanders
-  final Color? beVWV;
+  Color? beVWV;
   SMapBelgiumColors({
     this.beVAN,
     this.beWBR,

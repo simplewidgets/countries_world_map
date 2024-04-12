@@ -2,70 +2,70 @@ import 'package:flutter/material.dart';
 
 class SMapGuatemalaColors {
   /// Quiché
-  final Color? gtQC;
+  Color? gtQC;
 
   /// Zacapa
-  final Color? gtZA;
+  Color? gtZA;
 
   /// Jutiapa
-  final Color? gtJU;
+  Color? gtJU;
 
   /// Jalapa
-  final Color? gtJA;
+  Color? gtJA;
 
   /// Chiquimula
-  final Color? gtCQ;
+  Color? gtCQ;
 
   /// Izabal
-  final Color? gtIZ;
+  Color? gtIZ;
 
   /// Santa Rosa
-  final Color? gtSR;
+  Color? gtSR;
 
   /// El Progreso
-  final Color? gtPR;
+  Color? gtPR;
 
   /// Totonicapán
-  final Color? gtTO;
+  Color? gtTO;
 
   /// Sololá
-  final Color? gtSO;
+  Color? gtSO;
 
   /// Sacatepéquez
-  final Color? gtSA;
+  Color? gtSA;
 
   /// Suchitepéquez
-  final Color? gtSU;
+  Color? gtSU;
 
   /// Guatemala
-  final Color? gtGU;
+  Color? gtGU;
 
   /// Escuintla
-  final Color? gtES;
+  Color? gtES;
 
   /// Chimaltenango
-  final Color? gtCM;
+  Color? gtCM;
 
   /// Alta Verapaz
-  final Color? gtAV;
+  Color? gtAV;
 
   /// San Marcos
-  final Color? gtSM;
+  Color? gtSM;
 
   /// Retalhuleu
-  final Color? gtRE;
+  Color? gtRE;
 
   /// Quezaltenango
-  final Color? gtQZ;
+  Color? gtQZ;
 
   /// Petén
-  final Color? gtPE;
+  Color? gtPE;
 
   /// Huehuetenango
-  final Color? gtHU;
+  Color? gtHU;
 
   /// Baja Verapaz
-  final Color? gtBV;
+  Color? gtBV;
   SMapGuatemalaColors({
     this.gtQC,
     this.gtZA,

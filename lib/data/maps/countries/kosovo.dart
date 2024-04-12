@@ -2,25 +2,25 @@ import 'package:flutter/material.dart';
 
 class SMapKosovoColors {
   /// Pristina
-  final Color? xkPR;
+  Color? xkPR;
 
   /// Kosovska Mitrovica
-  final Color? xkKM;
+  Color? xkKM;
 
   /// Đakovica
-  final Color? xkDA;
+  Color? xkDA;
 
   /// Gnjilane
-  final Color? xkGN;
+  Color? xkGN;
 
   /// Peć
-  final Color? xkPE;
+  Color? xkPE;
 
   /// Uroševac
-  final Color? xkUR;
+  Color? xkUR;
 
   /// Prizren
-  final Color? xkPZ;
+  Color? xkPZ;
   SMapKosovoColors({
     this.xkPR,
     this.xkKM,

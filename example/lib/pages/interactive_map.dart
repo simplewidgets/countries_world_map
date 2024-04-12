@@ -10,7 +10,9 @@ class InteractiveMap extends StatefulWidget {
 }
 
 class _InteractiveMapState extends State<InteractiveMap> {
-  Map colors = {};
+  // Map colors = {};
+
+  SMapWorldColors colors = SMapWorldColors();
 
   @override
   void initState() {
@@ -39,9 +41,11 @@ class _InteractiveMapState extends State<InteractiveMap> {
                       onHover: ((id, name, isHovering) {
                         setState(() {
                           if (isHovering) {
-                            colors[id] = Colors.blue;
+                            colors.uS = Colors.blue;
+                            // colors[id] = Colors.blue;
                           } else {
-                            colors.remove(id);
+                            // colors.remove(id);
+                            colors.uS = Colors.red;
                           }
                         });
                       }),
@@ -59,7 +63,7 @@ class _InteractiveMapState extends State<InteractiveMap> {
                               size: 30,
                             )),
                       ],
-                      colors: colors,
+                      colors: colors.toMap(),
                     ),
                   ),
                   // Creates 8% from right side so the map looks more centered.

@@ -2,70 +2,70 @@ import 'package:flutter/material.dart';
 
 class SMapCapeVerdeColors {
   /// Brava
-  final Color? cvBR;
+  Color? cvBR;
 
   /// Boa Vista
-  final Color? cvBV;
+  Color? cvBV;
 
   /// Santa Catarina
-  final Color? cvCA;
+  Color? cvCA;
 
   /// Santa Catarina do Fogo
-  final Color? cvCF;
+  Color? cvCF;
 
   /// Santa Cruz
-  final Color? cvCR;
+  Color? cvCR;
 
   /// Maio
-  final Color? cvMA;
+  Color? cvMA;
 
   /// Mosteiros
-  final Color? cvMO;
+  Color? cvMO;
 
   /// Paul
-  final Color? cvPA;
+  Color? cvPA;
 
   /// Porto Novo
-  final Color? cvPN;
+  Color? cvPN;
 
   /// Praia
-  final Color? cvPR;
+  Color? cvPR;
 
   /// Ribeira Brava
-  final Color? cvRB;
+  Color? cvRB;
 
   /// Ribeira Grande
-  final Color? cvRG;
+  Color? cvRG;
 
   /// Ribeira Grande de Santiago
-  final Color? cvRS;
+  Color? cvRS;
 
   /// São Domingos
-  final Color? cvSD;
+  Color? cvSD;
 
   /// São Filipe
-  final Color? cvSF;
+  Color? cvSF;
 
   /// Sal
-  final Color? cvSL;
+  Color? cvSL;
 
   /// São Miguel
-  final Color? cvSM;
+  Color? cvSM;
 
   /// São Lourenço dos Órgãos
-  final Color? cvSO;
+  Color? cvSO;
 
   /// São Salvador do Mundo
-  final Color? cvSS;
+  Color? cvSS;
 
   /// São Vicente
-  final Color? cvSV;
+  Color? cvSV;
 
   /// Tarrafal
-  final Color? cvTA;
+  Color? cvTA;
 
   /// Tarrafal de São Nicolau
-  final Color? cvTS;
+  Color? cvTS;
   SMapCapeVerdeColors({
     this.cvBR,
     this.cvBV,

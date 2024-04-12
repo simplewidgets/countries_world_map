@@ -2,43 +2,43 @@ import 'package:flutter/material.dart';
 
 class SMapCanadaColors {
   /// Alberta
-  final Color? caAB;
+  Color? caAB;
 
   /// British Columbia
-  final Color? caBC;
+  Color? caBC;
 
   /// Manitoba
-  final Color? caMB;
+  Color? caMB;
 
   /// New Brunswick
-  final Color? caNB;
+  Color? caNB;
 
   /// Newfoundland and Labrador
-  final Color? caNL;
+  Color? caNL;
 
   /// Nova Scotia
-  final Color? caNS;
+  Color? caNS;
 
   /// Northwest Territories
-  final Color? caNT;
+  Color? caNT;
 
   /// Nunavut
-  final Color? caNU;
+  Color? caNU;
 
   /// Ontario
-  final Color? caON;
+  Color? caON;
 
   /// Prince Edward Island
-  final Color? caPE;
+  Color? caPE;
 
   /// Quebec
-  final Color? caQC;
+  Color? caQC;
 
   /// Saskatchewan
-  final Color? caSK;
+  Color? caSK;
 
   /// Yukon
-  final Color? caYT;
+  Color? caYT;
   SMapCanadaColors({
     this.caAB,
     this.caBC,

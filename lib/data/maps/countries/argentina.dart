@@ -2,76 +2,76 @@ import 'package:flutter/material.dart';
 
 class SMapArgentinaColors {
   /// Buenos Aires
-  final Color? arB;
+  Color? arB;
 
   /// Catamarca
-  final Color? arK;
+  Color? arK;
 
   /// Chaco
-  final Color? arH;
+  Color? arH;
 
   /// Chubut
-  final Color? arU;
+  Color? arU;
 
   /// Ciudad de Buenos Aires
-  final Color? arC;
+  Color? arC;
 
   /// Córdoba
-  final Color? arX;
+  Color? arX;
 
   /// Corrientes
-  final Color? arW;
+  Color? arW;
 
   /// Entre Ríos
-  final Color? arE;
+  Color? arE;
 
   /// Formosa
-  final Color? arP;
+  Color? arP;
 
   /// Jujuy
-  final Color? arY;
+  Color? arY;
 
   /// La Pampa
-  final Color? arL;
+  Color? arL;
 
   /// La Rioja
-  final Color? arF;
+  Color? arF;
 
   /// Mendoza
-  final Color? arM;
+  Color? arM;
 
   /// Misiones
-  final Color? arN;
+  Color? arN;
 
   /// Neuquén
-  final Color? arQ;
+  Color? arQ;
 
   /// Río Negro
-  final Color? arR;
+  Color? arR;
 
   /// Salta
-  final Color? arA;
+  Color? arA;
 
   /// Santa Cruz
-  final Color? arZ;
+  Color? arZ;
 
   /// Santiago del Estero
-  final Color? arG;
+  Color? arG;
 
   /// Santa Fe
-  final Color? arS;
+  Color? arS;
 
   /// San Juan
-  final Color? arJ;
+  Color? arJ;
 
   /// San Luis
-  final Color? arD;
+  Color? arD;
 
   /// Tierra del Fuego
-  final Color? arV;
+  Color? arV;
 
   /// Tucumán
-  final Color? arT;
+  Color? arT;
   SMapArgentinaColors({
     this.arB,
     this.arK,

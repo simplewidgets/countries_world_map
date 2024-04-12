@@ -2,25 +2,25 @@ import 'package:flutter/material.dart';
 
 class SMapQatarColors {
   /// Ad Dawḩah
-  final Color? qaDA;
+  Color? qaDA;
 
   /// Al Khawr wa adh Dhakhīrah
-  final Color? qaKH;
+  Color? qaKH;
 
   /// Ash Shamāl
-  final Color? qaMS;
+  Color? qaMS;
 
   /// Ar Rayyān
-  final Color? qaRA;
+  Color? qaRA;
 
   /// Umm Şalāl
-  final Color? qaUS;
+  Color? qaUS;
 
   /// Al Wakrah
-  final Color? qaWA;
+  Color? qaWA;
 
   /// Az̧ Za̧`āyin
-  final Color? qaZA;
+  Color? qaZA;
   SMapQatarColors({
     this.qaDA,
     this.qaKH,

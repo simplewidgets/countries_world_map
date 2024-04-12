@@ -2,61 +2,61 @@ import 'package:flutter/material.dart';
 
 class SMapNorwayColors {
   /// Akershus
-  final Color? no02;
+  Color? no02;
 
   /// Aust-Agder
-  final Color? no09;
+  Color? no09;
 
   /// Buskerud
-  final Color? no06;
+  Color? no06;
 
   /// Finnmark
-  final Color? no20;
+  Color? no20;
 
   /// Hedmark
-  final Color? no04;
+  Color? no04;
 
   /// Hordaland
-  final Color? no12;
+  Color? no12;
 
   /// Møre og Romsdal
-  final Color? no15;
+  Color? no15;
 
   /// Nordland
-  final Color? no18;
+  Color? no18;
 
   /// Nord-Trøndelag
-  final Color? no17;
+  Color? no17;
 
   /// Østfold
-  final Color? no01;
+  Color? no01;
 
   /// Oppland
-  final Color? no05;
+  Color? no05;
 
   /// Oslo
-  final Color? no03;
+  Color? no03;
 
   /// Rogaland
-  final Color? no11;
+  Color? no11;
 
   /// Sogn og Fjordane
-  final Color? no14;
+  Color? no14;
 
   /// Sør-Trøndelag
-  final Color? no16;
+  Color? no16;
 
   /// Telemark
-  final Color? no08;
+  Color? no08;
 
   /// Troms
-  final Color? no19;
+  Color? no19;
 
   /// Vest-Agder
-  final Color? no10;
+  Color? no10;
 
   /// Vestfold
-  final Color? no07;
+  Color? no07;
   SMapNorwayColors({
     this.no02,
     this.no09,

@@ -2,67 +2,67 @@ import 'package:flutter/material.dart';
 
 class SMapSwedenColors {
   /// Blekinge
-  final Color? seK;
+  Color? seK;
 
   /// Gotland
-  final Color? seI;
+  Color? seI;
 
   /// Gävleborg
-  final Color? seX;
+  Color? seX;
 
   /// Halland
-  final Color? seN;
+  Color? seN;
 
   /// Jämtland
-  final Color? seZ;
+  Color? seZ;
 
   /// Jönköping
-  final Color? seF;
+  Color? seF;
 
   /// Kalmar
-  final Color? seH;
+  Color? seH;
 
   /// Dalarna
-  final Color? seW;
+  Color? seW;
 
   /// Kronoberg
-  final Color? seG;
+  Color? seG;
 
   /// Norrbotten
-  final Color? seBD;
+  Color? seBD;
 
   /// Östergötland
-  final Color? seE;
+  Color? seE;
 
   /// Örebro
-  final Color? seT;
+  Color? seT;
 
   /// Södermanland
-  final Color? seD;
+  Color? seD;
 
   /// Skåne
-  final Color? seM;
+  Color? seM;
 
   /// Stockholm
-  final Color? seAB;
+  Color? seAB;
 
   /// Uppsala
-  final Color? seC;
+  Color? seC;
 
   /// Västerbotten
-  final Color? seAC;
+  Color? seAC;
 
   /// Västra Götaland
-  final Color? seO;
+  Color? seO;
 
   /// Värmland
-  final Color? seS;
+  Color? seS;
 
   /// Västernorrland
-  final Color? seY;
+  Color? seY;
 
   /// Västmanland
-  final Color? seU;
+  Color? seU;
   SMapSwedenColors({
     this.seK,
     this.seI,

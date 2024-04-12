@@ -2,40 +2,40 @@ import 'package:flutter/material.dart';
 
 class SMapSloveniaColors {
   /// Obalno-kraška
-  final Color? siJP;
+  Color? siJP;
 
   /// Notranjsko-kraška
-  final Color? siNO;
+  Color? siNO;
 
   /// Goriška
-  final Color? siSP;
+  Color? siSP;
 
   /// Gorenjska
-  final Color? siGO;
+  Color? siGO;
 
   /// Osrednjeslovenska
-  final Color? siLJ;
+  Color? siLJ;
 
   /// Jugovzhodna Slovenija
-  final Color? siJS;
+  Color? siJS;
 
   /// Zasavska
-  final Color? siZS;
+  Color? siZS;
 
   /// Savinjska
-  final Color? siSA;
+  Color? siSA;
 
   /// Koroška
-  final Color? siKO;
+  Color? siKO;
 
   /// Spodnjeposavska
-  final Color? siPS;
+  Color? siPS;
 
   /// Podravska
-  final Color? siPD;
+  Color? siPD;
 
   /// Pomurska
-  final Color? siPM;
+  Color? siPM;
   SMapSloveniaColors({
     this.siJP,
     this.siNO,

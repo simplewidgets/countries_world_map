@@ -2,247 +2,247 @@ import 'package:flutter/material.dart';
 
 class SMapTurkeyColors {
   /// Adana
-  final Color? tr01;
+  Color? tr01;
 
   /// Adıyaman
-  final Color? tr02;
+  Color? tr02;
 
   /// Afyonkarahisar
-  final Color? tr03;
+  Color? tr03;
 
   /// Ağri
-  final Color? tr04;
+  Color? tr04;
 
   /// Aksaray
-  final Color? tr68;
+  Color? tr68;
 
   /// Amasya
-  final Color? tr05;
+  Color? tr05;
 
   /// Ankara
-  final Color? tr06;
+  Color? tr06;
 
   /// Antalya
-  final Color? tr07;
+  Color? tr07;
 
   /// Ardahan
-  final Color? tr75;
+  Color? tr75;
 
   /// Artvin
-  final Color? tr08;
+  Color? tr08;
 
   /// Aydın
-  final Color? tr09;
+  Color? tr09;
 
   /// Balıkesir
-  final Color? tr10;
+  Color? tr10;
 
   /// Bartın
-  final Color? tr74;
+  Color? tr74;
 
   /// Batman
-  final Color? tr72;
+  Color? tr72;
 
   /// Bayburt
-  final Color? tr69;
+  Color? tr69;
 
   /// Bilecik
-  final Color? tr11;
+  Color? tr11;
 
   /// Bingöl
-  final Color? tr12;
+  Color? tr12;
 
   /// Bitlis
-  final Color? tr13;
+  Color? tr13;
 
   /// Bolu
-  final Color? tr14;
+  Color? tr14;
 
   /// Burdur
-  final Color? tr15;
+  Color? tr15;
 
   /// Bursa
-  final Color? tr16;
+  Color? tr16;
 
   /// Çanakkale
-  final Color? tr17;
+  Color? tr17;
 
   /// Çankırı
-  final Color? tr18;
+  Color? tr18;
 
   /// Çorum
-  final Color? tr19;
+  Color? tr19;
 
   /// Denizli
-  final Color? tr20;
+  Color? tr20;
 
   /// Diyarbakır
-  final Color? tr21;
+  Color? tr21;
 
   /// Düzce
-  final Color? tr81;
+  Color? tr81;
 
   /// Edirne
-  final Color? tr22;
+  Color? tr22;
 
   /// Elazığ
-  final Color? tr23;
+  Color? tr23;
 
   /// Erzincan
-  final Color? tr24;
+  Color? tr24;
 
   /// Erzurum
-  final Color? tr25;
+  Color? tr25;
 
   /// Eskişehir
-  final Color? tr26;
+  Color? tr26;
 
   /// Gaziantep
-  final Color? tr27;
+  Color? tr27;
 
   /// Giresun
-  final Color? tr28;
+  Color? tr28;
 
   /// Gümüşhane
-  final Color? tr29;
+  Color? tr29;
 
   /// Hakkari
-  final Color? tr30;
+  Color? tr30;
 
   /// Hatay
-  final Color? tr31;
+  Color? tr31;
 
   /// Mersin
-  final Color? tr33;
+  Color? tr33;
 
   /// Iğdir
-  final Color? tr76;
+  Color? tr76;
 
   /// Isparta
-  final Color? tr32;
+  Color? tr32;
 
   /// İstanbul
-  final Color? tr34;
+  Color? tr34;
 
   /// İzmir
-  final Color? tr35;
+  Color? tr35;
 
   /// Kahramanmaraş
-  final Color? tr46;
+  Color? tr46;
 
   /// Karabük
-  final Color? tr78;
+  Color? tr78;
 
   /// Karaman
-  final Color? tr70;
+  Color? tr70;
 
   /// Kars
-  final Color? tr36;
+  Color? tr36;
 
   /// Kastamonu
-  final Color? tr37;
+  Color? tr37;
 
   /// Kayseri
-  final Color? tr38;
+  Color? tr38;
 
   /// Kilis
-  final Color? tr79;
+  Color? tr79;
 
   /// Kırıkkale
-  final Color? tr71;
+  Color? tr71;
 
   /// Kırklareli
-  final Color? tr39;
+  Color? tr39;
 
   /// Kırşehir
-  final Color? tr40;
+  Color? tr40;
 
   /// Kocaeli
-  final Color? tr41;
+  Color? tr41;
 
   /// Konya
-  final Color? tr42;
+  Color? tr42;
 
   /// Kütahya
-  final Color? tr43;
+  Color? tr43;
 
   /// Malatya
-  final Color? tr44;
+  Color? tr44;
 
   /// Manisa
-  final Color? tr45;
+  Color? tr45;
 
   /// Mardin
-  final Color? tr47;
+  Color? tr47;
 
   /// Muğla
-  final Color? tr48;
+  Color? tr48;
 
   /// Muş
-  final Color? tr49;
+  Color? tr49;
 
   /// Nevşehir
-  final Color? tr50;
+  Color? tr50;
 
   /// Niğde
-  final Color? tr51;
+  Color? tr51;
 
   /// Ordu
-  final Color? tr52;
+  Color? tr52;
 
   /// Osmaniye
-  final Color? tr80;
+  Color? tr80;
 
   /// Rize
-  final Color? tr53;
+  Color? tr53;
 
   /// Sakarya
-  final Color? tr54;
+  Color? tr54;
 
   /// Samsun
-  final Color? tr55;
+  Color? tr55;
 
   /// Şanlıurfa
-  final Color? tr63;
+  Color? tr63;
 
   /// Siirt
-  final Color? tr56;
+  Color? tr56;
 
   /// Sinop
-  final Color? tr57;
+  Color? tr57;
 
   /// Şırnak
-  final Color? tr73;
+  Color? tr73;
 
   /// Sivas
-  final Color? tr58;
+  Color? tr58;
 
   /// Tekirdağ
-  final Color? tr59;
+  Color? tr59;
 
   /// Tokat
-  final Color? tr60;
+  Color? tr60;
 
   /// Trabzon
-  final Color? tr61;
+  Color? tr61;
 
   /// Tunceli
-  final Color? tr62;
+  Color? tr62;
 
   /// Uşak
-  final Color? tr64;
+  Color? tr64;
 
   /// Van
-  final Color? tr65;
+  Color? tr65;
 
   /// Yalova
-  final Color? tr77;
+  Color? tr77;
 
   /// Yozgat
-  final Color? tr66;
+  Color? tr66;
 
   /// Zonguldak
-  final Color? tr67;
+  Color? tr67;
   SMapTurkeyColors({
     this.tr01,
     this.tr02,

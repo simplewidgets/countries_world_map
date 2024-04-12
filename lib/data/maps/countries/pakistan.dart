@@ -2,28 +2,28 @@ import 'package:flutter/material.dart';
 
 class SMapPakistanColors {
   /// Balochistan
-  final Color? pkBA;
+  Color? pkBA;
 
   /// Gilgit-Baltistan
-  final Color? pkGB;
+  Color? pkGB;
 
   /// Islamabad
-  final Color? pkIS;
+  Color? pkIS;
 
   /// Azad Kashmir
-  final Color? pkJK;
+  Color? pkJK;
 
   /// Khyber Pakhtunkhwa
-  final Color? pkKP;
+  Color? pkKP;
 
   /// Punjab
-  final Color? pkPB;
+  Color? pkPB;
 
   /// Sindh
-  final Color? pkSD;
+  Color? pkSD;
 
   /// Federally Administered Tribal Areas
-  final Color? pkTA;
+  Color? pkTA;
   SMapPakistanColors({
     this.pkBA,
     this.pkGB,

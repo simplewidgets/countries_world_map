@@ -2,37 +2,37 @@ import 'package:flutter/material.dart';
 
 class SMapEthiopiaColors {
   /// Harari People
-  final Color? etHA;
+  Color? etHA;
 
   /// Dire Dawa
-  final Color? etDD;
+  Color? etDD;
 
   /// Somali
-  final Color? etSO;
+  Color? etSO;
 
   /// Addis Ababa
-  final Color? etAA;
+  Color? etAA;
 
   /// Benshangul-Gumaz
-  final Color? etBE;
+  Color? etBE;
 
   /// Oromiya
-  final Color? etOR;
+  Color? etOR;
 
   /// Gambela Peoples
-  final Color? etGA;
+  Color? etGA;
 
   /// Southern Nations, Nationalities and Peoples
-  final Color? etSN;
+  Color? etSN;
 
   /// Afar
-  final Color? etAF;
+  Color? etAF;
 
   /// Tigray
-  final Color? etTI;
+  Color? etTI;
 
   /// Amhara
-  final Color? etAM;
+  Color? etAM;
   SMapEthiopiaColors({
     this.etHA,
     this.etDD,
