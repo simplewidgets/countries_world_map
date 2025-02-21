@@ -752,7 +752,7 @@ class _CountryPageState extends State<CountryPage> {
         return SMapUnitedArabEmirates.instructions;
 
       case 'us':
-        return SMapUnitedStates.instructions;
+        return SMapUnitedStates.instructions2;
 
       case 'uy':
         return SMapUruguay.instructions;
