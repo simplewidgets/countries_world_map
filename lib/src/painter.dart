@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 
 import '../components/canvas/shapes/shape.dart';
@@ -22,9 +24,13 @@ class SimpleMapPainter extends CustomPainter {
     required this.rippleCenter,
     required this.rippleRadiusPercentage,
     required this.rippleTargetId,
+    required this.hoverTargetId,
     required this.lastTouchedShapes,
     required this.saveTouchedShapes,
+    required this.onHover,
+    required this.onHoverEnd,
     this.splashColor,
+    this.hoverColor,
   });
 
   final List<Map<String, dynamic>> drawingInstructions;
@@ -42,13 +48,18 @@ class SimpleMapPainter extends CustomPainter {
       onLongPressEnd;
 
   final void Function(String id) onLongPressCancel;
+  final void Function(String id, Offset localPosition) onHover;
+  final void Function(String id) onHoverEnd;
 
   final CountryBorder? countryBorder;
 
   final Color? splashColor;
+  final Color? hoverColor;
+
   final Offset? rippleCenter;
   final double rippleRadiusPercentage;
   final String? rippleTargetId;
+  final String? hoverTargetId;
   final List<Shape> lastTouchedShapes;
   final void Function(List<Shape> shapes) saveTouchedShapes;
 
@@ -67,10 +78,18 @@ class SimpleMapPainter extends CustomPainter {
     backgroundPath.lineTo(s.width, 0);
     backgroundPath.lineTo(s.width, s.height);
     backgroundPath.lineTo(0, s.height);
+    final Paint paint = Paint()..color = Colors.transparent;
     canvas.drawPath(
       backgroundPath,
-      Paint()..color = Colors.transparent,
+      paint,
+    );
+    canvas.drawShape(
+      backgroundPath,
+      paint,
       onTapUp: (TapUpDetails details) => onTapUp('', '', details),
+      onHover: (Offset localPosition) {
+        onHover('', localPosition);
+      },
     );
 
     // Get country paths from Json
@@ -104,14 +123,18 @@ class SimpleMapPainter extends CustomPainter {
       final String uniqueID = countryPathList[i].uniqueID;
       final String name = countryPathList[i].name;
       final Paint paint = Paint()..color = colors?[uniqueID] ?? defaultColor;
-      canvas.drawPath(path, paint);
 
       // Draw country border
       if (countryBorder != null) {
         paint.color = countryBorder!.color;
         paint.strokeWidth = countryBorder!.width;
         paint.style = PaintingStyle.stroke;
-        canvas.drawPath(
+        canvas.drawPath(path, paint);
+
+        c.save();
+        c.clipPath(path);
+
+        canvas.drawShape(
           path,
           paint,
           onTapUp: (TapUpDetails details) => onTapUp(uniqueID, name, details),
@@ -119,32 +142,51 @@ class SimpleMapPainter extends CustomPainter {
           onLongPressEnd: (LongPressEndDetails details) =>
               onLongPressEnd(uniqueID, name, details),
           onLongPressCancel: () => onLongPressCancel(uniqueID),
+          onHover: (Offset localPosition) => onHover(uniqueID, localPosition),
+          onHoverEnd: () => onHoverEnd(uniqueID),
+          onLongPress: (Offset localPosition) {
+            if (uniqueID != rippleTargetId) {
+              onLongPressCancel(uniqueID);
+            }
+          },
         );
 
         if (rippleCenter != null &&
             rippleRadiusPercentage > 0 &&
             rippleTargetId == uniqueID) {
-          c.save(); // Sauvegarde l'état du canvas
-          c.clipPath(path); // Limite le dessin au pays
-
-          // Exemple : calcule le bounding box de la shape
           final Rect bounds = path.getBounds();
           final Offset center = bounds.center;
 
-          // Rayon max : distance du centre au coin le plus éloigné
           final double maxRadius = (center - bounds.topLeft).distance;
           final Color effectSplashColor =
               splashColor ?? Theme.of(context).splashColor;
 
-          canvas.drawRippleCircle(
+          canvas.drawCircle(
             rippleCenter!,
             rippleRadiusPercentage * (2 * maxRadius),
             effectSplashColor.withValues(
-              alpha: (1 - rippleRadiusPercentage).clamp(0, 1),
+              alpha: min(effectSplashColor.a, rippleRadiusPercentage),
             ),
           );
-          c.restore();
         }
+
+        if (hoverTargetId == uniqueID) {
+          final Rect bounds = path.getBounds();
+          final Offset center = bounds.center;
+
+          final double maxRadius = (center - bounds.topLeft).distance;
+          final Color effectiveHoverColor =
+              hoverColor ?? Theme.of(context).hoverColor;
+
+          canvas.drawCircle(
+            center,
+            2 * maxRadius,
+            effectiveHoverColor,
+          );
+        }
+        c.restore();
+      } else {
+        canvas.drawPath(path, paint);
       }
     }
   }
@@ -157,7 +199,9 @@ class SimpleMapPainter extends CustomPainter {
       oldDelegate.countryBorder != countryBorder ||
       oldDelegate.colors != colors ||
       oldDelegate.splashColor != splashColor ||
+      oldDelegate.hoverColor != hoverColor ||
       oldDelegate.rippleRadiusPercentage != rippleRadiusPercentage ||
       oldDelegate.rippleCenter != rippleCenter ||
-      oldDelegate.rippleTargetId != rippleTargetId;
+      oldDelegate.rippleTargetId != rippleTargetId ||
+      oldDelegate.hoverTargetId != hoverTargetId;
 }

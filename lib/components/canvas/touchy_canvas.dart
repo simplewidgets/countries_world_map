@@ -38,27 +38,31 @@ class TouchyCanvas {
   final List<Shape> _lastTouchedShapes;
   final Function(List<Shape> shapes) _saveTouchedShapes;
 
-  late final ShapeHandler _shapeHandler =
-      ShapeHandler(_lastTouchedShapes, _saveTouchedShapes);
+  late final ShapeHandler _shapeHandler = ShapeHandler(
+    _lastTouchedShapes,
+    _saveTouchedShapes,
+  );
 
-  void drawRippleCircle(Offset center, double radius, Color color) {
+  void drawCircle(Offset center, double radius, Color color) {
     final Paint paint = Paint()
       ..color = color
       ..style = PaintingStyle.fill;
     _canvas.drawCircle(center, radius, paint);
   }
 
-  void drawPath(
+  void drawShape(
     Path path,
     Paint paint, {
     HitTestBehavior? hitTestBehavior,
     GestureTapCallback? onTap,
     GestureTapUpCallback? onTapUp,
     GestureTapDownCallback? onTapDown,
+    GestureCustomLongPressCallback? onLongPress,
     GestureLongPressEndCallback? onLongPressEnd,
     GestureLongPressCancelCallback? onLongPressCancel,
+    GestureHoverCallback? onHover,
+    GestureHoverEndCallback? onHoverEnd,
   }) {
-    _canvas.drawPath(path, paint);
     _shapeHandler.addShape(
       PathShape(
         path,
@@ -67,10 +71,17 @@ class TouchyCanvas {
         gestureMap: TouchCanvasUtil.getGestureCallbackMap(
           onTapDown: onTapDown,
           onTapUp: onTapUp,
+          onLongPress: onLongPress,
           onLongPressEnd: onLongPressEnd,
           onLongPressCancel: onLongPressCancel,
+          onHover: onHover,
+          onHoverEnd: onHoverEnd,
         ),
       ),
     );
+  }
+
+  void drawPath(Path path, Paint paint) {
+    _canvas.drawPath(path, paint);
   }
 }

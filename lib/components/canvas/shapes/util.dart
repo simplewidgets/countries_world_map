@@ -11,16 +11,23 @@ class ShapeUtil {
 }
 
 typedef GestureCallbackFunction = void Function();
+typedef GestureHoverCallback = void Function(Offset localPosition);
+typedef GestureHoverEndCallback = void Function();
+typedef GestureCustomLongPressCallback = void Function(Offset localPosition);
 
 class TouchCanvasUtil {
   static Offset getPointFromGestureDetail(dynamic gestureDetail) {
     switch (gestureDetail.runtimeType) {
+      case Offset:
+        return gestureDetail as Offset;
       case TapDownDetails:
         return (gestureDetail as TapDownDetails).localPosition;
       case TapUpDetails:
         return (gestureDetail as TapUpDetails).localPosition;
       case LongPressStartDetails:
         return (gestureDetail as LongPressStartDetails).localPosition;
+      case LongPressMoveUpdateDetails:
+        return (gestureDetail as LongPressMoveUpdateDetails).localPosition;
       case LongPressEndDetails:
         return (gestureDetail as LongPressEndDetails).localPosition;
       default:
@@ -33,8 +40,11 @@ class TouchCanvasUtil {
   static Map<GestureType, Function> getGestureCallbackMap({
     required GestureTapDownCallback? onTapDown,
     required GestureTapUpCallback? onTapUp,
+    required GestureCustomLongPressCallback? onLongPress,
     required GestureLongPressEndCallback? onLongPressEnd,
     required GestureLongPressCancelCallback? onLongPressCancel,
+    required GestureHoverCallback? onHover,
+    required GestureHoverEndCallback? onHoverEnd,
   }) {
     final Map<GestureType, Function> map = <GestureType, Function>{};
 
@@ -42,7 +52,13 @@ class TouchCanvasUtil {
       map.putIfAbsent(GestureType.onTapDown, () => onTapDown);
     }
 
-    if (onTapUp != null) map.putIfAbsent(GestureType.onTapUp, () => onTapUp);
+    if (onTapUp != null) {
+      map.putIfAbsent(GestureType.onTapUp, () => onTapUp);
+    }
+
+    if (onLongPress != null) {
+      map.putIfAbsent(GestureType.onLongPress, () => onLongPress);
+    }
 
     if (onLongPressEnd != null) {
       map.putIfAbsent(GestureType.onLongPressEnd, () => onLongPressEnd);
@@ -50,6 +66,14 @@ class TouchCanvasUtil {
 
     if (onLongPressCancel != null) {
       map.putIfAbsent(GestureType.onLongPressCancel, () => onLongPressCancel);
+    }
+
+    if (onHover != null) {
+      map.putIfAbsent(GestureType.onHover, () => onHover);
+    }
+
+    if (onHoverEnd != null) {
+      map.putIfAbsent(GestureType.onHoverEnd, () => onHoverEnd);
     }
 
     return map;

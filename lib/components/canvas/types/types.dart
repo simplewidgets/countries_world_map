@@ -23,7 +23,9 @@ enum GestureType {
   onTap,
   onTapDown,
   onTapUp,
-  onTapCancel,
+  onLongPress,
   onLongPressEnd,
   onLongPressCancel,
+  onHover,
+  onHoverEnd,
 }

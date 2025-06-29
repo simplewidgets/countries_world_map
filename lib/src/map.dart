@@ -15,6 +15,7 @@ class SimpleMap extends StatefulWidget {
     this.markers,
     this.defaultColor,
     this.splashColor,
+    this.hoverColor,
     this.splashDuration,
     this.colors,
     this.callback,
@@ -27,6 +28,7 @@ class SimpleMap extends StatefulWidget {
   final CountryBorder? countryBorder;
   final Color? defaultColor;
   final Color? splashColor;
+  final Color? hoverColor;
   final Duration? splashDuration;
   final Map<String, Color?>? colors;
   final List<SimpleMapMarker>? markers;
@@ -43,7 +45,8 @@ class _SimpleMapState extends State<SimpleMap> with TickerProviderStateMixin {
   late AnimationController _controller;
   late Animation<double> _radiusAnimation;
   Offset? rippleCenter;
-  String? departmentId;
+  String? rippleTargetId;
+  String? hoverTargetId;
   List<Shape> lastTouchedShapes = <Shape>[];
 
   void saveTouchedShapes(List<Shape> shapes) {
@@ -55,7 +58,7 @@ class _SimpleMapState extends State<SimpleMap> with TickerProviderStateMixin {
   void initState() {
     super.initState();
     _controller = AnimationController(
-      duration: widget.splashDuration ?? kThemeAnimationDuration,
+      duration: widget.splashDuration ?? const Duration(milliseconds: 375),
       vsync: this,
     );
     _radiusAnimation = Tween<double>(begin: 0, end: 1).animate(_controller)
@@ -67,15 +70,16 @@ class _SimpleMapState extends State<SimpleMap> with TickerProviderStateMixin {
     _controller.forward();
 
     rippleCenter = position;
-    departmentId = id;
+    rippleTargetId = id;
   }
 
-  void _stopRipple(String id) {
+  void _stopRipple(String id, {bool force = false}) {
     // An other ripple is ongoing
-    if (_controller.isAnimating) return;
+    if (!force && _controller.isAnimating) return;
     _controller.reset();
 
-    departmentId = null;
+    rippleTargetId = null;
+    hoverTargetId = null;
     rippleCenter = null;
     lastTouchedShapes = <Shape>[];
     if (mounted) setState(() {});
@@ -114,21 +118,23 @@ class _SimpleMapState extends State<SimpleMap> with TickerProviderStateMixin {
                     painter: SimpleMapPainter(
                       context: context,
                       drawingInstructions: attributes.drawingInstructions,
+                      onHover: (String id, Offset localPosition) {
+                        hoverTargetId = id;
+                        if (mounted) setState(() {});
+                      },
+                      onHoverEnd: (String id) {
+                        hoverTargetId = null;
+                        if (mounted) setState(() {});
+                      },
                       onLongPressCancel: (String id) {
-                        _stopRipple(id);
+                        _stopRipple(id, force: true);
                       },
                       onLongPressEnd: (
                         String id,
                         String name,
                         LongPressEndDetails details,
                       ) {
-                        _stopRipple(id);
-                      },
-                      onTapDown: (String id, TapDownDetails details) {
-                        _startRipple(details.localPosition, id);
-                      },
-                      onTapUp: (String id, String name, TapUpDetails details) {
-                        if (widget.callback != null && id == departmentId) {
+                        if (widget.callback != null && id == rippleTargetId) {
                           widget.callback!(
                             id,
                             name,
@@ -138,16 +144,35 @@ class _SimpleMapState extends State<SimpleMap> with TickerProviderStateMixin {
                             ),
                           );
                         }
+                        _stopRipple(id);
+                      },
+                      onTapDown: (String id, TapDownDetails details) {
+                        _startRipple(details.localPosition, id);
+                      },
+                      onTapUp: (String id, String name, TapUpDetails details) {
+                        if (widget.callback != null && id == rippleTargetId) {
+                          widget.callback!(
+                            id,
+                            name,
+                            TouchDetails(
+                              globalPosition: details.globalPosition,
+                              localPosition: details.localPosition,
+                            ),
+                          );
+                        }
+                        _stopRipple(id, force: true);
                       },
                       rippleCenter: rippleCenter,
                       rippleRadiusPercentage: _radiusAnimation.value,
                       countryBorder: widget.countryBorder,
-                      rippleTargetId: departmentId,
+                      rippleTargetId: rippleTargetId,
+                      hoverTargetId: hoverTargetId,
                       lastTouchedShapes: lastTouchedShapes,
                       saveTouchedShapes: saveTouchedShapes,
                       colors: widget.colors,
                       defaultColor: widget.defaultColor ?? Colors.grey,
                       splashColor: widget.splashColor,
+                      hoverColor: widget.hoverColor,
                     ),
                   ),
                 ),
@@ -167,8 +192,9 @@ class _SimpleMapState extends State<SimpleMap> with TickerProviderStateMixin {
                 in widget.markers ?? <SimpleMapMarker>[])
               Builder(
                 builder: (BuildContext context) {
-                  final Size position =
-                      attributes.latLongToPixels(mark.latLong);
+                  final Size position = attributes.latLongToPixels(
+                    mark.latLong,
+                  );
                   return Positioned(
                     left: position.width - (mark.markerSize.width / 2),
                     top: position.height - (mark.markerSize.height / 2),
@@ -188,10 +214,7 @@ class _SimpleMapState extends State<SimpleMap> with TickerProviderStateMixin {
 }
 
 class CountryBorder {
-  const CountryBorder({
-    required this.color,
-    this.width = 1,
-  });
+  const CountryBorder({required this.color, this.width = 1});
 
   final Color color;
   final double width;
@@ -221,10 +244,8 @@ class SimpleMapMarker {
 }
 
 class TouchDetails {
-  const TouchDetails({
-    this.globalPosition = Offset.zero,
-    Offset? localPosition,
-  }) : localPosition = localPosition ?? globalPosition;
+  const TouchDetails({this.globalPosition = Offset.zero, Offset? localPosition})
+      : localPosition = localPosition ?? globalPosition;
 
   final Offset globalPosition;
 
