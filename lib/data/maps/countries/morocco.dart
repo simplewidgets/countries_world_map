@@ -1,6 +1,25 @@
 import 'package:flutter/material.dart';
 
 class SMapMoroccoColors {
+  const SMapMoroccoColors({
+    this.ma01,
+    this.ma02,
+    this.ma03,
+    this.ma04,
+    this.ma05,
+    this.ma06,
+    this.ma07,
+    this.ma08,
+    this.ma09,
+    this.ma10,
+    this.ma11,
+    this.ma12,
+    this.ma13,
+    this.ma15,
+    this.ma14,
+    this.ma16,
+  });
+
   /// Tanger-Tétouan
   final Color? ma01;
 
@@ -48,63 +67,45 @@ class SMapMoroccoColors {
 
   /// Oued ed Dahab-Lagouira
   final Color? ma16;
-  SMapMoroccoColors({
-    this.ma01,
-    this.ma02,
-    this.ma03,
-    this.ma04,
-    this.ma05,
-    this.ma06,
-    this.ma07,
-    this.ma08,
-    this.ma09,
-    this.ma10,
-    this.ma11,
-    this.ma12,
-    this.ma13,
-    this.ma15,
-    this.ma14,
-    this.ma16,
-  });
   Map<String, Color?> toMap() {
-    return {
-      "MA-01": ma01,
-      "MA-02": ma02,
-      "MA-03": ma03,
-      "MA-04": ma04,
-      "MA-05": ma05,
-      "MA-06": ma06,
-      "MA-07": ma07,
-      "MA-08": ma08,
-      "MA-09": ma09,
-      "MA-10": ma10,
-      "MA-11": ma11,
-      "MA-12": ma12,
-      "MA-13": ma13,
-      "MA-15": ma15,
-      "MA-14": ma14,
-      "MA-16": ma16,
+    return <String, Color?>{
+      'MA-01': ma01,
+      'MA-02': ma02,
+      'MA-03': ma03,
+      'MA-04': ma04,
+      'MA-05': ma05,
+      'MA-06': ma06,
+      'MA-07': ma07,
+      'MA-08': ma08,
+      'MA-09': ma09,
+      'MA-10': ma10,
+      'MA-11': ma11,
+      'MA-12': ma12,
+      'MA-13': ma13,
+      'MA-15': ma15,
+      'MA-14': ma14,
+      'MA-16': ma16,
     };
   }
 
   static SMapMoroccoColors fromMap(Map<String, Color?> map) {
     return SMapMoroccoColors(
-      ma01: map["MA-01"],
-      ma02: map["MA-02"],
-      ma03: map["MA-03"],
-      ma04: map["MA-04"],
-      ma05: map["MA-05"],
-      ma06: map["MA-06"],
-      ma07: map["MA-07"],
-      ma08: map["MA-08"],
-      ma09: map["MA-09"],
-      ma10: map["MA-10"],
-      ma11: map["MA-11"],
-      ma12: map["MA-12"],
-      ma13: map["MA-13"],
-      ma15: map["MA-15"],
-      ma14: map["MA-14"],
-      ma16: map["MA-16"],
+      ma01: map['MA-01'],
+      ma02: map['MA-02'],
+      ma03: map['MA-03'],
+      ma04: map['MA-04'],
+      ma05: map['MA-05'],
+      ma06: map['MA-06'],
+      ma07: map['MA-07'],
+      ma08: map['MA-08'],
+      ma09: map['MA-09'],
+      ma10: map['MA-10'],
+      ma11: map['MA-11'],
+      ma12: map['MA-12'],
+      ma13: map['MA-13'],
+      ma15: map['MA-15'],
+      ma14: map['MA-14'],
+      ma16: map['MA-16'],
     );
   }
 }

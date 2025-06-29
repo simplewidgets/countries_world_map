@@ -1,74 +1,76 @@
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'touch_detector.dart';
+
 import 'shape_handler.dart';
 import 'shapes/path.dart';
+import 'shapes/shape.dart';
 import 'shapes/util.dart';
+import 'touch_detector.dart';
+import 'types/types.dart';
 
 class TouchyCanvas {
-  final Canvas _canvas;
-
-  final ShapeHandler _shapeHandler = ShapeHandler();
-
   ///[TouchyCanvas] helps you add gesture callbacks to the shapes you draw.
   ///
   /// [context] is the BuildContext that is obtained from the [CanvasTouchDetector] widget's builder function.
   /// The parameter [canvas] is the [Canvas] object that you get in your [paint] method inside [CustomPainter]
-  TouchyCanvas(
-    BuildContext context,
-    this._canvas, {
+  TouchyCanvas({
+    required BuildContext context,
+    required Canvas canvas,
+    required List<Shape> lastTouchedShapes,
+    required final Function(List<Shape> shapes) saveTouchedShapes,
     ScrollController? scrollController,
     AxisDirection scrollDirection = AxisDirection.down,
-  }) {
-    var touchController = TouchDetectionController.of(context);
-    touchController?.addListener((event) {
-      _shapeHandler.handleGestureEvent(
+  })  : _canvas = canvas,
+        _lastTouchedShapes = lastTouchedShapes,
+        _saveTouchedShapes = saveTouchedShapes {
+    final TouchDetectionController? touchController =
+        TouchDetectionController.of(context);
+    touchController?.addListener(
+      (Gesture event) => _shapeHandler.handleGestureEvent(
         event,
         scrollController: scrollController,
         direction: scrollDirection,
-      );
-    });
+      ),
+    );
+  }
+
+  final Canvas _canvas;
+  final List<Shape> _lastTouchedShapes;
+  final Function(List<Shape> shapes) _saveTouchedShapes;
+
+  late final ShapeHandler _shapeHandler =
+      ShapeHandler(_lastTouchedShapes, _saveTouchedShapes);
+
+  void drawRippleCircle(Offset center, double radius, Color color) {
+    final Paint paint = Paint()
+      ..color = color
+      ..style = PaintingStyle.fill;
+    _canvas.drawCircle(center, radius, paint);
   }
 
   void drawPath(
     Path path,
     Paint paint, {
     HitTestBehavior? hitTestBehavior,
-    // GestureTapDownCallback? onTapDown,
-    // PaintingStyle? paintStyleForTouch,
     GestureTapCallback? onTap,
     GestureTapUpCallback? onTapUp,
-    // GestureLongPressStartCallback? onLongPressStart,
-    // GestureLongPressEndCallback? onLongPressEnd,
-    // GestureLongPressMoveUpdateCallback? onLongPressMoveUpdate,
-    // GestureForcePressStartCallback? onForcePressStart,
-    // GestureForcePressEndCallback? onForcePressEnd,
-    // GestureForcePressPeakCallback? onForcePressPeak,
-    // GestureForcePressUpdateCallback? onForcePressUpdate,
-    // GestureDragStartCallback? onPanStart,
-    // GestureDragUpdateCallback? onPanUpdate,
-    // GestureDragDownCallback? onPanDown,
-    // GestureTapDownCallback? onSecondaryTapDown,
-    // GestureTapUpCallback? onSecondaryTapUp,
+    GestureTapDownCallback? onTapDown,
+    GestureLongPressEndCallback? onLongPressEnd,
+    GestureLongPressCancelCallback? onLongPressCancel,
   }) {
     _canvas.drawPath(path, paint);
-    _shapeHandler.addShape(PathShape(path,
+    _shapeHandler.addShape(
+      PathShape(
+        path,
         paint: paint,
         hitTestBehavior: hitTestBehavior,
         gestureMap: TouchCanvasUtil.getGestureCallbackMap(
-          // onTapDown: onTapDown,
+          onTapDown: onTapDown,
           onTapUp: onTapUp,
-          // onLongPressStart: onLongPressStart,
-          // onLongPressEnd: onLongPressEnd,
-          // onLongPressMoveUpdate: onLongPressMoveUpdate,
-          // onForcePressStart: onForcePressStart,
-          // onForcePressEnd: onForcePressEnd,
-          // onForcePressPeak: onForcePressPeak,
-          // onForcePressUpdate: onForcePressUpdate,
-          // onPanStart: onPanStart,
-          // onPanUpdate: onPanUpdate,
-          // onPanDown: onPanDown,
-          // onSecondaryTapDown: onSecondaryTapDown,
-          // onSecondaryTapUp: onSecondaryTapUp,
-        )));
+          onLongPressEnd: onLongPressEnd,
+          onLongPressCancel: onLongPressCancel,
+        ),
+      ),
+    );
   }
 }

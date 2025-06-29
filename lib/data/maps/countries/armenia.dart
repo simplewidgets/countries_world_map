@@ -1,6 +1,20 @@
 import 'package:flutter/material.dart';
 
 class SMapArmeniaColors {
+  const SMapArmeniaColors({
+    this.amAG,
+    this.amAR,
+    this.amAV,
+    this.amER,
+    this.amGR,
+    this.amKT,
+    this.amLO,
+    this.amSH,
+    this.amSU,
+    this.amTV,
+    this.amVD,
+  });
+
   /// Aragac̣otn
   final Color? amAG;
 
@@ -33,48 +47,35 @@ class SMapArmeniaColors {
 
   /// Vayoc Jor
   final Color? amVD;
-  SMapArmeniaColors({
-    this.amAG,
-    this.amAR,
-    this.amAV,
-    this.amER,
-    this.amGR,
-    this.amKT,
-    this.amLO,
-    this.amSH,
-    this.amSU,
-    this.amTV,
-    this.amVD,
-  });
   Map<String, Color?> toMap() {
-    return {
-      "AM-AG": amAG,
-      "AM-AR": amAR,
-      "AM-AV": amAV,
-      "AM-ER": amER,
-      "AM-GR": amGR,
-      "AM-KT": amKT,
-      "AM-LO": amLO,
-      "AM-SH": amSH,
-      "AM-SU": amSU,
-      "AM-TV": amTV,
-      "AM-VD": amVD,
+    return <String, Color?>{
+      'AM-AG': amAG,
+      'AM-AR': amAR,
+      'AM-AV': amAV,
+      'AM-ER': amER,
+      'AM-GR': amGR,
+      'AM-KT': amKT,
+      'AM-LO': amLO,
+      'AM-SH': amSH,
+      'AM-SU': amSU,
+      'AM-TV': amTV,
+      'AM-VD': amVD,
     };
   }
 
   static SMapArmeniaColors fromMap(Map<String, Color?> map) {
     return SMapArmeniaColors(
-      amAG: map["AM-AG"],
-      amAR: map["AM-AR"],
-      amAV: map["AM-AV"],
-      amER: map["AM-ER"],
-      amGR: map["AM-GR"],
-      amKT: map["AM-KT"],
-      amLO: map["AM-LO"],
-      amSH: map["AM-SH"],
-      amSU: map["AM-SU"],
-      amTV: map["AM-TV"],
-      amVD: map["AM-VD"],
+      amAG: map['AM-AG'],
+      amAR: map['AM-AR'],
+      amAV: map['AM-AV'],
+      amER: map['AM-ER'],
+      amGR: map['AM-GR'],
+      amKT: map['AM-KT'],
+      amLO: map['AM-LO'],
+      amSH: map['AM-SH'],
+      amSU: map['AM-SU'],
+      amTV: map['AM-TV'],
+      amVD: map['AM-VD'],
     );
   }
 }

@@ -1,6 +1,19 @@
 import 'package:flutter/material.dart';
 
 class SMapUnitedArabEmiratesColors {
+  const SMapUnitedArabEmiratesColors({
+    this.aeAJ,
+    this.aeAZ,
+    this.aeDU,
+    this.aeFU,
+    this.aeRK,
+    this.aeSH,
+    this.aeUQ,
+    this.omMU,
+    this.aeNZ1,
+    this.aeNZ2,
+  });
+
   /// 'Ajmān
   final Color? aeAJ;
 
@@ -30,45 +43,33 @@ class SMapUnitedArabEmiratesColors {
 
   /// Neutral Zone
   final Color? aeNZ2;
-  SMapUnitedArabEmiratesColors({
-    this.aeAJ,
-    this.aeAZ,
-    this.aeDU,
-    this.aeFU,
-    this.aeRK,
-    this.aeSH,
-    this.aeUQ,
-    this.omMU,
-    this.aeNZ1,
-    this.aeNZ2,
-  });
   Map<String, Color?> toMap() {
-    return {
-      "AE-AJ": aeAJ,
-      "AE-AZ": aeAZ,
-      "AE-DU": aeDU,
-      "AE-FU": aeFU,
-      "AE-RK": aeRK,
-      "AE-SH": aeSH,
-      "AE-UQ": aeUQ,
-      "OM-MU": omMU,
-      "AE-NZ1": aeNZ1,
-      "AE-NZ2": aeNZ2,
+    return <String, Color?>{
+      'AE-AJ': aeAJ,
+      'AE-AZ': aeAZ,
+      'AE-DU': aeDU,
+      'AE-FU': aeFU,
+      'AE-RK': aeRK,
+      'AE-SH': aeSH,
+      'AE-UQ': aeUQ,
+      'OM-MU': omMU,
+      'AE-NZ1': aeNZ1,
+      'AE-NZ2': aeNZ2,
     };
   }
 
   static SMapUnitedArabEmiratesColors fromMap(Map<String, Color?> map) {
     return SMapUnitedArabEmiratesColors(
-      aeAJ: map["AE-AJ"],
-      aeAZ: map["AE-AZ"],
-      aeDU: map["AE-DU"],
-      aeFU: map["AE-FU"],
-      aeRK: map["AE-RK"],
-      aeSH: map["AE-SH"],
-      aeUQ: map["AE-UQ"],
-      omMU: map["OM-MU"],
-      aeNZ1: map["AE-NZ1"],
-      aeNZ2: map["AE-NZ2"],
+      aeAJ: map['AE-AJ'],
+      aeAZ: map['AE-AZ'],
+      aeDU: map['AE-DU'],
+      aeFU: map['AE-FU'],
+      aeRK: map['AE-RK'],
+      aeSH: map['AE-SH'],
+      aeUQ: map['AE-UQ'],
+      omMU: map['OM-MU'],
+      aeNZ1: map['AE-NZ1'],
+      aeNZ2: map['AE-NZ2'],
     );
   }
 }

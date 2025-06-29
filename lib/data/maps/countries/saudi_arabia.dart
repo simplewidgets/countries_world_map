@@ -1,6 +1,22 @@
 import 'package:flutter/material.dart';
 
 class SMapSaudiArabiaColors {
+  const SMapSaudiArabiaColors({
+    this.sa01,
+    this.sa02,
+    this.sa03,
+    this.sa04,
+    this.sa05,
+    this.sa06,
+    this.sa07,
+    this.sa08,
+    this.sa09,
+    this.sa10,
+    this.sa11,
+    this.sa12,
+    this.sa14,
+  });
+
   /// Ar Riyāḑ
   final Color? sa01;
 
@@ -39,54 +55,39 @@ class SMapSaudiArabiaColors {
 
   /// 'Asir
   final Color? sa14;
-  SMapSaudiArabiaColors({
-    this.sa01,
-    this.sa02,
-    this.sa03,
-    this.sa04,
-    this.sa05,
-    this.sa06,
-    this.sa07,
-    this.sa08,
-    this.sa09,
-    this.sa10,
-    this.sa11,
-    this.sa12,
-    this.sa14,
-  });
   Map<String, Color?> toMap() {
-    return {
-      "SA-01": sa01,
-      "SA-02": sa02,
-      "SA-03": sa03,
-      "SA-04": sa04,
-      "SA-05": sa05,
-      "SA-06": sa06,
-      "SA-07": sa07,
-      "SA-08": sa08,
-      "SA-09": sa09,
-      "SA-10": sa10,
-      "SA-11": sa11,
-      "SA-12": sa12,
-      "SA-14": sa14,
+    return <String, Color?>{
+      'SA-01': sa01,
+      'SA-02': sa02,
+      'SA-03': sa03,
+      'SA-04': sa04,
+      'SA-05': sa05,
+      'SA-06': sa06,
+      'SA-07': sa07,
+      'SA-08': sa08,
+      'SA-09': sa09,
+      'SA-10': sa10,
+      'SA-11': sa11,
+      'SA-12': sa12,
+      'SA-14': sa14,
     };
   }
 
   static SMapSaudiArabiaColors fromMap(Map<String, Color?> map) {
     return SMapSaudiArabiaColors(
-      sa01: map["SA-01"],
-      sa02: map["SA-02"],
-      sa03: map["SA-03"],
-      sa04: map["SA-04"],
-      sa05: map["SA-05"],
-      sa06: map["SA-06"],
-      sa07: map["SA-07"],
-      sa08: map["SA-08"],
-      sa09: map["SA-09"],
-      sa10: map["SA-10"],
-      sa11: map["SA-11"],
-      sa12: map["SA-12"],
-      sa14: map["SA-14"],
+      sa01: map['SA-01'],
+      sa02: map['SA-02'],
+      sa03: map['SA-03'],
+      sa04: map['SA-04'],
+      sa05: map['SA-05'],
+      sa06: map['SA-06'],
+      sa07: map['SA-07'],
+      sa08: map['SA-08'],
+      sa09: map['SA-09'],
+      sa10: map['SA-10'],
+      sa11: map['SA-11'],
+      sa12: map['SA-12'],
+      sa14: map['SA-14'],
     );
   }
 }

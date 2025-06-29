@@ -1,6 +1,26 @@
 import 'package:flutter/material.dart';
 
 class SMapNewZealandColors {
+  const SMapNewZealandColors({
+    this.nzAUK,
+    this.nzBOP,
+    this.nzCAN,
+    this.nzCIT,
+    this.nzGIS,
+    this.nzHKB,
+    this.nzMBH,
+    this.nzMWT,
+    this.nzNSN,
+    this.nzNTL,
+    this.nzOTA,
+    this.nzSTL,
+    this.nzTAS,
+    this.nzTKI,
+    this.nzWKO,
+    this.nzWGN,
+    this.nzWTC,
+  });
+
   /// Auckland
   final Color? nzAUK;
 
@@ -51,66 +71,47 @@ class SMapNewZealandColors {
 
   /// West Coast
   final Color? nzWTC;
-  SMapNewZealandColors({
-    this.nzAUK,
-    this.nzBOP,
-    this.nzCAN,
-    this.nzCIT,
-    this.nzGIS,
-    this.nzHKB,
-    this.nzMBH,
-    this.nzMWT,
-    this.nzNSN,
-    this.nzNTL,
-    this.nzOTA,
-    this.nzSTL,
-    this.nzTAS,
-    this.nzTKI,
-    this.nzWKO,
-    this.nzWGN,
-    this.nzWTC,
-  });
   Map<String, Color?> toMap() {
-    return {
-      "NZ-AUK": nzAUK,
-      "NZ-BOP": nzBOP,
-      "NZ-CAN": nzCAN,
-      "NZ-CIT": nzCIT,
-      "NZ-GIS": nzGIS,
-      "NZ-HKB": nzHKB,
-      "NZ-MBH": nzMBH,
-      "NZ-MWT": nzMWT,
-      "NZ-NSN": nzNSN,
-      "NZ-NTL": nzNTL,
-      "NZ-OTA": nzOTA,
-      "NZ-STL": nzSTL,
-      "NZ-TAS": nzTAS,
-      "NZ-TKI": nzTKI,
-      "NZ-WKO": nzWKO,
-      "NZ-WGN": nzWGN,
-      "NZ-WTC": nzWTC,
+    return <String, Color?>{
+      'NZ-AUK': nzAUK,
+      'NZ-BOP': nzBOP,
+      'NZ-CAN': nzCAN,
+      'NZ-CIT': nzCIT,
+      'NZ-GIS': nzGIS,
+      'NZ-HKB': nzHKB,
+      'NZ-MBH': nzMBH,
+      'NZ-MWT': nzMWT,
+      'NZ-NSN': nzNSN,
+      'NZ-NTL': nzNTL,
+      'NZ-OTA': nzOTA,
+      'NZ-STL': nzSTL,
+      'NZ-TAS': nzTAS,
+      'NZ-TKI': nzTKI,
+      'NZ-WKO': nzWKO,
+      'NZ-WGN': nzWGN,
+      'NZ-WTC': nzWTC,
     };
   }
 
   static SMapNewZealandColors fromMap(Map<String, Color?> map) {
     return SMapNewZealandColors(
-      nzAUK: map["NZ-AUK"],
-      nzBOP: map["NZ-BOP"],
-      nzCAN: map["NZ-CAN"],
-      nzCIT: map["NZ-CIT"],
-      nzGIS: map["NZ-GIS"],
-      nzHKB: map["NZ-HKB"],
-      nzMBH: map["NZ-MBH"],
-      nzMWT: map["NZ-MWT"],
-      nzNSN: map["NZ-NSN"],
-      nzNTL: map["NZ-NTL"],
-      nzOTA: map["NZ-OTA"],
-      nzSTL: map["NZ-STL"],
-      nzTAS: map["NZ-TAS"],
-      nzTKI: map["NZ-TKI"],
-      nzWKO: map["NZ-WKO"],
-      nzWGN: map["NZ-WGN"],
-      nzWTC: map["NZ-WTC"],
+      nzAUK: map['NZ-AUK'],
+      nzBOP: map['NZ-BOP'],
+      nzCAN: map['NZ-CAN'],
+      nzCIT: map['NZ-CIT'],
+      nzGIS: map['NZ-GIS'],
+      nzHKB: map['NZ-HKB'],
+      nzMBH: map['NZ-MBH'],
+      nzMWT: map['NZ-MWT'],
+      nzNSN: map['NZ-NSN'],
+      nzNTL: map['NZ-NTL'],
+      nzOTA: map['NZ-OTA'],
+      nzSTL: map['NZ-STL'],
+      nzTAS: map['NZ-TAS'],
+      nzTKI: map['NZ-TKI'],
+      nzWKO: map['NZ-WKO'],
+      nzWGN: map['NZ-WGN'],
+      nzWTC: map['NZ-WTC'],
     );
   }
 }

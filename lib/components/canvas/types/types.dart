@@ -1,45 +1,29 @@
-import '../shapes/clip.dart';
 import 'package:flutter/material.dart';
+
+import '../shapes/clip.dart';
 
 typedef CustomTouchPaintBuilder = CustomPaint Function(BuildContext context);
 
 class Gesture {
+  const Gesture(this.gestureType, this.gestureDetail);
+
   final dynamic gestureDetail;
 
   final GestureType gestureType;
-
-  Gesture(this.gestureType, this.gestureDetail);
 }
 
 class ClipShapeItem {
+  const ClipShapeItem(this.clipShape, this.position);
+
   final ClipShape clipShape;
   final int position;
-
-  ClipShapeItem(this.clipShape, this.position);
 }
 
 enum GestureType {
   onTap,
-  // onTapDown,
+  onTapDown,
   onTapUp,
-  // onHorizontalDragDown,
-  // onHorizontalDragStart,
-  // onHorizontalDragUpdate,
-  // onVerticalDragDown,
-  // onVerticalDragStart,
-  // onVerticalDragUpdate,
-  // onLongPressStart,
-  // onLongPressEnd,
-  // onLongPressMoveUpdate,
-  // onScaleStart,
-  // onScaleUpdate,
-  // onForcePressStart,
-  // onForcePressEnd,
-  // onForcePressPeak,
-  // onForcePressUpdate,
-  // onPanStart,
-  // onPanUpdate,
-  // onPanDown,
-  // onSecondaryTapDown,
-  // onSecondaryTapUp,
+  onTapCancel,
+  onLongPressEnd,
+  onLongPressCancel,
 }

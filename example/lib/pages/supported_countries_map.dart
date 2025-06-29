@@ -8,21 +8,21 @@ class SupportedCountriesMap extends StatefulWidget {
   const SupportedCountriesMap({Key? key}) : super(key: key);
 
   @override
-  _SupportedCountriesMapState createState() => _SupportedCountriesMapState();
+  State<SupportedCountriesMap> createState() => _SupportedCountriesMapState();
 }
 
 class _SupportedCountriesMapState extends State<SupportedCountriesMap> {
   @override
   Widget build(BuildContext context) {
     return Stack(
-      children: [
+      children: <Widget>[
         SizedBox(
           height: MediaQuery.of(context).size.height,
           width: MediaQuery.of(context).size.width,
           child: InteractiveViewer(
-            maxScale: 75.0,
+            maxScale: 75,
             child: Row(
-              children: [
+              children: <Widget>[
                 SizedBox(
                   width: MediaQuery.of(context).size.width * 0.92,
                   // Actual widget from the Countries_world_map package.
@@ -32,11 +32,12 @@ class _SupportedCountriesMapState extends State<SupportedCountriesMap> {
                     // If the color of a country is not specified it will take in a default color.
                     defaultColor: Colors.grey,
                     // CountryColors takes in 250 different colors that will color each country the color you want. In this example it generates a random color each time SetState({}) is called.
-                    callback: (id, name, tapdetails) {
+                    callback:
+                        (String id, String name, TouchDetails tapdetails) {
                       goToCountry(id);
                     },
-                    countryBorder: CountryBorder(color: Colors.white),
-                    colors: SMapWorldColors(
+                    countryBorder: const CountryBorder(color: Colors.white),
+                    colors: const SMapWorldColors(
                       eT: Colors.green,
                       aR: Colors.green,
                       aT: Colors.green,
@@ -182,12 +183,16 @@ class _SupportedCountriesMapState extends State<SupportedCountriesMap> {
             ),
           ),
         ),
-        Positioned(
-            bottom: 36,
-            left: 0,
-            right: 0,
-            child: Text('Tap / click a country to see its map',
-                style: TextStyle(fontSize: 18), textAlign: TextAlign.center)),
+        const Positioned(
+          bottom: 36,
+          left: 0,
+          right: 0,
+          child: Text(
+            'Tap / click a country to see its map',
+            style: TextStyle(fontSize: 18),
+            textAlign: TextAlign.center,
+          ),
+        ),
       ],
     );
   }
@@ -195,20 +200,19 @@ class _SupportedCountriesMapState extends State<SupportedCountriesMap> {
   void goToCountry(String country) {
     Navigator.push(
       context,
-      MaterialPageRoute(
-        builder: (context) => CountryPage(country: country),
+      MaterialPageRoute<void>(
+        builder: (BuildContext context) => CountryPage(country: country),
       ),
     );
   }
 }
 
 class CountryPage extends StatefulWidget {
+  const CountryPage({required this.country, Key? key}) : super(key: key);
   final String country;
 
-  const CountryPage({required this.country, Key? key}) : super(key: key);
-
   @override
-  _CountryPageState createState() => _CountryPageState();
+  State<CountryPage> createState() => _CountryPageState();
 }
 
 class _CountryPageState extends State<CountryPage> {
@@ -222,13 +226,17 @@ class _CountryPageState extends State<CountryPage> {
   @override
   void initState() {
     instruction = getInstructions(widget.country);
-    if (instruction != "NOT SUPPORTED") {
+    if (instruction != 'NOT SUPPORTED') {
       properties = getProperties(instruction);
-      properties.sort((a, b) => a['name'].compareTo(b['name']));
-      keyValuesPaires = {};
-      properties.forEach((element) {
-        keyValuesPaires.addAll({element['id']: element['color']});
-      });
+      properties.sort(
+        (Map<String, dynamic> a, Map<String, dynamic> b) =>
+            a['name'].compareTo(b['name']),
+      );
+      keyValuesPaires = <String, Color?>{};
+      for (final Map<String, dynamic> element in properties) {
+        keyValuesPaires
+            .addAll(<String, Color?>{element['id']: element['color']});
+      }
 
       state = 'Tap a state, prefecture or province';
     } else {
@@ -243,55 +251,64 @@ class _CountryPageState extends State<CountryPage> {
       appBar: AppBar(
         backgroundColor: Colors.grey.shade50,
         elevation: 0,
-        iconTheme: IconThemeData(color: Colors.blue),
+        iconTheme: const IconThemeData(color: Colors.blue),
         title: Text(
-          widget.country.toUpperCase() + ' - ' + state,
-          style: TextStyle(color: Colors.blue),
+          '${widget.country.toUpperCase()} - $state',
+          style: const TextStyle(color: Colors.blue),
         ),
       ),
-      body: instruction == "NOT SUPPORTED"
-          ? Center(child: Text("This country is not supported"))
+      body: instruction == 'NOT SUPPORTED'
+          ? const Center(child: Text('This country is not supported'))
           : Column(
-              children: [
+              children: <Widget>[
                 Expanded(
-                  child: Row(children: [
-                    Expanded(
+                  child: Row(
+                    children: <Widget>[
+                      Expanded(
                         child: Center(
-                            child: SimpleMap(
-                      defaultColor: Colors.grey.shade300,
-                      key: Key(properties.toString()),
-                      colors: keyValuesPaires,
-                      instructions: instruction,
-                      callback: (id, name, tapDetails) {
-                        setState(() {
-                          state = name;
+                          child: SimpleMap(
+                            defaultColor: Colors.grey.shade300,
+                            key: Key(properties.toString()),
+                            colors: keyValuesPaires,
+                            instructions: instruction,
+                            callback: (
+                              String id,
+                              String name,
+                              TouchDetails tapDetails,
+                            ) {
+                              setState(() {
+                                state = name;
 
-                          int i = properties
-                              .indexWhere((element) => element['id'] == id);
+                                final int i = properties.indexWhere(
+                                  (Map<String, dynamic> element) =>
+                                      element['id'] == id,
+                                );
 
-                          properties[i]['color'] =
-                              properties[i]['color'] == Colors.green
-                                  ? null
-                                  : Colors.green;
-                          keyValuesPaires[properties[i]['id']] =
-                              properties[i]['color'];
-                        });
-                      },
-                    ))),
-                    if (MediaQuery.of(context).size.width > 800)
-                      SizedBox(
+                                properties[i]['color'] =
+                                    properties[i]['color'] == Colors.green
+                                        ? null
+                                        : Colors.green;
+                                keyValuesPaires[properties[i]['id']] =
+                                    properties[i]['color'];
+                              });
+                            },
+                          ),
+                        ),
+                      ),
+                      if (MediaQuery.of(context).size.width > 800)
+                        SizedBox(
                           width: 320,
                           height: MediaQuery.of(context).size.height,
                           child: Card(
-                            margin: EdgeInsets.all(16),
+                            margin: const EdgeInsets.all(16),
                             elevation: 8,
                             child: ListView(
-                              children: [
+                              children: <Widget>[
                                 for (int i = 0; i < properties.length; i++)
                                   ListTile(
                                     title: Text(properties[i]['name']),
                                     leading: Container(
-                                      margin: EdgeInsets.only(top: 8),
+                                      margin: const EdgeInsets.only(top: 8),
                                       width: 20,
                                       height: 20,
                                       color: properties[i]['color'] ??
@@ -309,64 +326,67 @@ class _CountryPageState extends State<CountryPage> {
                                             properties[i]['color'];
                                       });
                                     },
-                                  )
+                                  ),
                               ],
                             ),
-                          )),
-                  ]),
+                          ),
+                        ),
+                    ],
+                  ),
                 ),
                 if (MediaQuery.of(context).size.width < 800)
                   SizedBox(
-                      height: MediaQuery.of(context).size.height * 0.5,
-                      child: Card(
-                        margin: EdgeInsets.all(16),
-                        elevation: 8,
-                        child: ListView(
-                          children: [
-                            for (int i = 0; i < properties.length; i++)
-                              ListTile(
-                                title: Text(properties[i]['name']),
-                                leading: Container(
-                                  margin: EdgeInsets.only(top: 8),
-                                  width: 20,
-                                  height: 20,
-                                  color: properties[i]['color'] ??
-                                      Colors.grey.shade300,
-                                ),
-                                subtitle: Text(properties[i]['id']),
-                                onTap: () {
-                                  setState(() {
-                                    properties[i]['color'] =
-                                        properties[i]['color'] == Colors.green
-                                            ? null
-                                            : Colors.green;
-                                    keyValuesPaires[properties[i]['id']] =
-                                        properties[i]['color'];
-                                  });
-                                },
-                              )
-                          ],
-                        ),
-                      )),
+                    height: MediaQuery.of(context).size.height * 0.5,
+                    child: Card(
+                      margin: const EdgeInsets.all(16),
+                      elevation: 8,
+                      child: ListView(
+                        children: <Widget>[
+                          for (int i = 0; i < properties.length; i++)
+                            ListTile(
+                              title: Text(properties[i]['name']),
+                              leading: Container(
+                                margin: const EdgeInsets.only(top: 8),
+                                width: 20,
+                                height: 20,
+                                color: properties[i]['color'] ??
+                                    Colors.grey.shade300,
+                              ),
+                              subtitle: Text(properties[i]['id']),
+                              onTap: () {
+                                setState(() {
+                                  properties[i]['color'] =
+                                      properties[i]['color'] == Colors.green
+                                          ? null
+                                          : Colors.green;
+                                  keyValuesPaires[properties[i]['id']] =
+                                      properties[i]['color'];
+                                });
+                              },
+                            ),
+                        ],
+                      ),
+                    ),
+                  ),
               ],
             ),
     );
   }
 
   List<Map<String, dynamic>> getProperties(String input) {
-    Map<String, dynamic> instructions = json.decode(input);
+    final Map<String, dynamic> instructions = json.decode(input);
 
-    List paths = instructions['i'];
+    final List<dynamic> paths = instructions['i'];
 
-    List<Map<String, dynamic>> properties = [];
+    final List<Map<String, dynamic>> properties = <Map<String, dynamic>>[];
 
-    paths.forEach((element) {
-      properties.add({
+    for (final dynamic element in paths) {
+      properties.add(<String, dynamic>{
         'name': element['n'],
         'id': element['u'],
         'color': null,
       });
-    });
+    }
 
     return properties;
   }
@@ -752,7 +772,7 @@ class _CountryPageState extends State<CountryPage> {
         return SMapUnitedArabEmirates.instructions;
 
       case 'us':
-        return SMapUnitedStates.instructions2;
+        return SMapUnitedStates.instructions;
 
       case 'uy':
         return SMapUruguay.instructions;

@@ -1,6 +1,19 @@
 import 'package:flutter/material.dart';
 
 class SMapHaitiColors {
+  const SMapHaitiColors({
+    this.htSE,
+    this.htOU,
+    this.htND,
+    this.htNE,
+    this.htCE,
+    this.htAR,
+    this.htSD,
+    this.htNO,
+    this.htNI,
+    this.htGA,
+  });
+
   /// Sud-Est
   final Color? htSE;
 
@@ -30,45 +43,33 @@ class SMapHaitiColors {
 
   /// Grand'Anse
   final Color? htGA;
-  SMapHaitiColors({
-    this.htSE,
-    this.htOU,
-    this.htND,
-    this.htNE,
-    this.htCE,
-    this.htAR,
-    this.htSD,
-    this.htNO,
-    this.htNI,
-    this.htGA,
-  });
   Map<String, Color?> toMap() {
-    return {
-      "HT-SE": htSE,
-      "HT-OU": htOU,
-      "HT-ND": htND,
-      "HT-NE": htNE,
-      "HT-CE": htCE,
-      "HT-AR": htAR,
-      "HT-SD": htSD,
-      "HT-NO": htNO,
-      "HT-NI": htNI,
-      "HT-GA": htGA,
+    return <String, Color?>{
+      'HT-SE': htSE,
+      'HT-OU': htOU,
+      'HT-ND': htND,
+      'HT-NE': htNE,
+      'HT-CE': htCE,
+      'HT-AR': htAR,
+      'HT-SD': htSD,
+      'HT-NO': htNO,
+      'HT-NI': htNI,
+      'HT-GA': htGA,
     };
   }
 
   static SMapHaitiColors fromMap(Map<String, Color?> map) {
     return SMapHaitiColors(
-      htSE: map["HT-SE"],
-      htOU: map["HT-OU"],
-      htND: map["HT-ND"],
-      htNE: map["HT-NE"],
-      htCE: map["HT-CE"],
-      htAR: map["HT-AR"],
-      htSD: map["HT-SD"],
-      htNO: map["HT-NO"],
-      htNI: map["HT-NI"],
-      htGA: map["HT-GA"],
+      htSE: map['HT-SE'],
+      htOU: map['HT-OU'],
+      htND: map['HT-ND'],
+      htNE: map['HT-NE'],
+      htCE: map['HT-CE'],
+      htAR: map['HT-AR'],
+      htSD: map['HT-SD'],
+      htNO: map['HT-NO'],
+      htNI: map['HT-NI'],
+      htGA: map['HT-GA'],
     );
   }
 }

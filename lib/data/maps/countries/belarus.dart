@@ -1,6 +1,16 @@
 import 'package:flutter/material.dart';
 
 class SMapBelarusColors {
+  const SMapBelarusColors({
+    this.byBR,
+    this.byHO,
+    this.byHR,
+    this.byMA,
+    this.byVI,
+    this.byHM,
+    this.byMI,
+  });
+
   /// Brest
   final Color? byBR;
 
@@ -21,36 +31,27 @@ class SMapBelarusColors {
 
   /// Minsk
   final Color? byMI;
-  SMapBelarusColors({
-    this.byBR,
-    this.byHO,
-    this.byHR,
-    this.byMA,
-    this.byVI,
-    this.byHM,
-    this.byMI,
-  });
   Map<String, Color?> toMap() {
-    return {
-      "BY-BR": byBR,
-      "BY-HO": byHO,
-      "BY-HR": byHR,
-      "BY-MA": byMA,
-      "BY-VI": byVI,
-      "BY-HM": byHM,
-      "BY-MI": byMI,
+    return <String, Color?>{
+      'BY-BR': byBR,
+      'BY-HO': byHO,
+      'BY-HR': byHR,
+      'BY-MA': byMA,
+      'BY-VI': byVI,
+      'BY-HM': byHM,
+      'BY-MI': byMI,
     };
   }
 
   static SMapBelarusColors fromMap(Map<String, Color?> map) {
     return SMapBelarusColors(
-      byBR: map["BY-BR"],
-      byHO: map["BY-HO"],
-      byHR: map["BY-HR"],
-      byMA: map["BY-MA"],
-      byVI: map["BY-VI"],
-      byHM: map["BY-HM"],
-      byMI: map["BY-MI"],
+      byBR: map['BY-BR'],
+      byHO: map['BY-HO'],
+      byHR: map['BY-HR'],
+      byMA: map['BY-MA'],
+      byVI: map['BY-VI'],
+      byHM: map['BY-HM'],
+      byMI: map['BY-MI'],
     );
   }
 }

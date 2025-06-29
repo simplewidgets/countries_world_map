@@ -1,13 +1,18 @@
+import 'package:flutter/cupertino.dart';
+
 import 'shapes/clip.dart';
 import 'shapes/shape.dart';
 import 'shapes/util.dart';
 import 'types/types.dart';
-import 'package:flutter/cupertino.dart';
 
 class ShapeHandler {
-  final List<Shape> _shapeStack = [];
-  final List<ClipShapeItem> clipItems = [];
-  final Set<GestureType> _registeredGestures = {};
+  ShapeHandler(this._lastTouchedShapes, this._saveTouchedShapes);
+
+  final List<Shape> _shapeStack = <Shape>[];
+  final List<ClipShapeItem> clipItems = <ClipShapeItem>[];
+  final Set<GestureType> _registeredGestures = <GestureType>{};
+  List<Shape> _lastTouchedShapes;
+  final void Function(List<Shape> shapes) _saveTouchedShapes;
 
   Set<GestureType> get registeredGestures => _registeredGestures;
 
@@ -22,8 +27,8 @@ class ShapeHandler {
 
   List<ClipShape> _getClipShapesBelowPosition(int position) {
     return clipItems
-        .where((element) => element.position <= position)
-        .map((e) => e.clipShape)
+        .where((ClipShapeItem element) => element.position <= position)
+        .map((ClipShapeItem e) => e.clipShape)
         .toList();
   }
 
@@ -35,14 +40,17 @@ class ShapeHandler {
     return true;
   }
 
-  Offset _getActualOffsetFromScrollController(Offset touchPoint,
-      ScrollController? controller, AxisDirection direction) {
+  Offset _getActualOffsetFromScrollController(
+    Offset touchPoint,
+    ScrollController? controller,
+    AxisDirection direction,
+  ) {
     if (controller == null) {
       return touchPoint;
     }
 
-    final scrollPosition = controller.position;
-    final actualScrollPixels =
+    final ScrollPosition scrollPosition = controller.position;
+    final double actualScrollPixels =
         direction == AxisDirection.left || direction == AxisDirection.up
             ? scrollPosition.maxScrollExtent - scrollPosition.pixels
             : scrollPosition.pixels;
@@ -55,9 +63,9 @@ class ShapeHandler {
   }
 
   List<Shape> _getTouchedShapes(Offset point) {
-    var selectedShapes = <Shape>[];
+    final List<Shape> selectedShapes = <Shape>[];
     for (int i = _shapeStack.length - 1; i >= 0; i--) {
-      var shape = _shapeStack[i];
+      final Shape shape = _shapeStack[i];
       if (shape.hitTestBehavior == HitTestBehavior.deferToChild) {
         continue;
       }
@@ -83,17 +91,31 @@ class ShapeHandler {
     ScrollController? scrollController,
     AxisDirection direction = AxisDirection.down,
   }) async {
-    var touchPoint = _getActualOffsetFromScrollController(
-        TouchCanvasUtil.getPointFromGestureDetail(gesture.gestureDetail),
-        scrollController,
-        direction);
+    final Offset? touchPoint = gesture.gestureDetail == null
+        ? null
+        : _getActualOffsetFromScrollController(
+            TouchCanvasUtil.getPointFromGestureDetail(gesture.gestureDetail),
+            scrollController,
+            direction,
+          );
+
     if (!_registeredGestures.contains(gesture.gestureType)) return;
 
-    var touchedShapes = _getTouchedShapes(touchPoint);
+    List<Shape>? touchedShapes =
+        touchPoint == null ? null : _getTouchedShapes(touchPoint);
+
+    if (touchedShapes == null || touchedShapes.isEmpty) {
+      touchedShapes = _lastTouchedShapes;
+    } else {
+      _lastTouchedShapes = touchedShapes;
+    }
+
     if (touchedShapes.isEmpty) return;
-    for (var touchedShape in touchedShapes) {
+    _saveTouchedShapes(touchedShapes);
+
+    for (final Shape touchedShape in touchedShapes) {
       if (touchedShape.registeredGestures.contains(gesture.gestureType)) {
-        var callback = touchedShape.getCallbackFromGesture(gesture);
+        final Function callback = touchedShape.getCallbackFromGesture(gesture);
         callback();
       }
     }

@@ -1,6 +1,21 @@
 import 'package:flutter/material.dart';
 
 class SMapGeorgiaColors {
+  const SMapGeorgiaColors({
+    this.geAB,
+    this.geAJ,
+    this.geGU,
+    this.geIM,
+    this.geKA,
+    this.geKK,
+    this.geMM,
+    this.geRL,
+    this.geSJ,
+    this.geSK,
+    this.geSZ,
+    this.geTB,
+  });
+
   /// Abkhazia
   final Color? geAB;
 
@@ -36,51 +51,37 @@ class SMapGeorgiaColors {
 
   /// Tbilisi
   final Color? geTB;
-  SMapGeorgiaColors({
-    this.geAB,
-    this.geAJ,
-    this.geGU,
-    this.geIM,
-    this.geKA,
-    this.geKK,
-    this.geMM,
-    this.geRL,
-    this.geSJ,
-    this.geSK,
-    this.geSZ,
-    this.geTB,
-  });
   Map<String, Color?> toMap() {
-    return {
-      "GE-AB": geAB,
-      "GE-AJ": geAJ,
-      "GE-GU": geGU,
-      "GE-IM": geIM,
-      "GE-KA": geKA,
-      "GE-KK": geKK,
-      "GE-MM": geMM,
-      "GE-RL": geRL,
-      "GE-SJ": geSJ,
-      "GE-SK": geSK,
-      "GE-SZ": geSZ,
-      "GE-TB": geTB,
+    return <String, Color?>{
+      'GE-AB': geAB,
+      'GE-AJ': geAJ,
+      'GE-GU': geGU,
+      'GE-IM': geIM,
+      'GE-KA': geKA,
+      'GE-KK': geKK,
+      'GE-MM': geMM,
+      'GE-RL': geRL,
+      'GE-SJ': geSJ,
+      'GE-SK': geSK,
+      'GE-SZ': geSZ,
+      'GE-TB': geTB,
     };
   }
 
   static SMapGeorgiaColors fromMap(Map<String, Color?> map) {
     return SMapGeorgiaColors(
-      geAB: map["GE-AB"],
-      geAJ: map["GE-AJ"],
-      geGU: map["GE-GU"],
-      geIM: map["GE-IM"],
-      geKA: map["GE-KA"],
-      geKK: map["GE-KK"],
-      geMM: map["GE-MM"],
-      geRL: map["GE-RL"],
-      geSJ: map["GE-SJ"],
-      geSK: map["GE-SK"],
-      geSZ: map["GE-SZ"],
-      geTB: map["GE-TB"],
+      geAB: map['GE-AB'],
+      geAJ: map['GE-AJ'],
+      geGU: map['GE-GU'],
+      geIM: map['GE-IM'],
+      geKA: map['GE-KA'],
+      geKK: map['GE-KK'],
+      geMM: map['GE-MM'],
+      geRL: map['GE-RL'],
+      geSJ: map['GE-SJ'],
+      geSK: map['GE-SK'],
+      geSZ: map['GE-SZ'],
+      geTB: map['GE-TB'],
     );
   }
 }

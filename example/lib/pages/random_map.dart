@@ -1,18 +1,19 @@
 import 'dart:math';
+
 import 'package:countries_world_map/countries_world_map.dart';
 import 'package:countries_world_map/data/maps/world_map.dart';
 import 'package:flutter/material.dart';
 
 class RandomWorldMapGenerator extends StatefulWidget {
-  RandomWorldMapGenerator({Key? key}) : super(key: key);
+  const RandomWorldMapGenerator({Key? key}) : super(key: key);
 
   @override
-  _RandomWorldMapGeneratorState createState() =>
+  State<RandomWorldMapGenerator> createState() =>
       _RandomWorldMapGeneratorState();
 }
 
 class _RandomWorldMapGeneratorState extends State<RandomWorldMapGenerator> {
-  List<Color> colors = [
+  List<Color> colors = <Color>[
     Colors.indigo.shade900,
     Colors.blue,
     Colors.pink,
@@ -23,7 +24,7 @@ class _RandomWorldMapGeneratorState extends State<RandomWorldMapGenerator> {
     Colors.black,
   ];
 
-  final _random = Random();
+  final Random _random = Random();
 
   @override
   void initState() {
@@ -36,19 +37,20 @@ class _RandomWorldMapGeneratorState extends State<RandomWorldMapGenerator> {
       height: MediaQuery.of(context).size.height,
       width: MediaQuery.of(context).size.width,
       child: Stack(
-        children: [
+        children: <Widget>[
           InteractiveViewer(
-            maxScale: 75.0,
+            maxScale: 75,
             child: Center(
               child: Row(
-                children: [
+                children: <Widget>[
                   SizedBox(
                     width: MediaQuery.of(context).size.width * 0.92,
                     // Actual widget from the Countries_world_map package.
                     child: SimpleMap(
-                      countryBorder: CountryBorder(color: Colors.white),
+                      countryBorder: const CountryBorder(color: Colors.white),
                       instructions: SMapWorld.instructionsMercator,
-                      callback: (id, name, tabDetails) {
+                      callback:
+                          (String id, String name, TouchDetails tabDetails) {
                         print(id + name);
                       },
                       colors: SMapWorldColors(
@@ -312,21 +314,26 @@ class _RandomWorldMapGeneratorState extends State<RandomWorldMapGenerator> {
               ),
             ),
           ),
-          Positioned(
-              bottom: 36,
-              left: 0,
-              right: 0,
-              child: Text('Tap / click the dice to change the colors',
-                  style: TextStyle(fontSize: 18), textAlign: TextAlign.center)),
+          const Positioned(
+            bottom: 36,
+            left: 0,
+            right: 0,
+            child: Text(
+              'Tap / click the dice to change the colors',
+              style: TextStyle(fontSize: 18),
+              textAlign: TextAlign.center,
+            ),
+          ),
           Positioned(
             bottom: 36,
             right: 36,
             child: FloatingActionButton(
-                tooltip: 'Randomize',
-                onPressed: () {
-                  setState(() {});
-                },
-                child: Icon(Icons.casino)),
+              tooltip: 'Randomize',
+              onPressed: () {
+                setState(() {});
+              },
+              child: const Icon(Icons.casino),
+            ),
           ),
         ],
       ),

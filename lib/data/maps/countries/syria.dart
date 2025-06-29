@@ -1,6 +1,23 @@
 import 'package:flutter/material.dart';
 
 class SMapSyriaColors {
+  const SMapSyriaColors({
+    this.syHA,
+    this.syDY,
+    this.syID,
+    this.syRD,
+    this.syHL,
+    this.syRA,
+    this.syLA,
+    this.syHM,
+    this.syHI,
+    this.syTA,
+    this.syDI,
+    this.syQU,
+    this.syDR,
+    this.sySU,
+  });
+
   /// Al Ḩasakah
   final Color? syHA;
 
@@ -42,57 +59,41 @@ class SMapSyriaColors {
 
   /// As Suwaydā'
   final Color? sySU;
-  SMapSyriaColors({
-    this.syHA,
-    this.syDY,
-    this.syID,
-    this.syRD,
-    this.syHL,
-    this.syRA,
-    this.syLA,
-    this.syHM,
-    this.syHI,
-    this.syTA,
-    this.syDI,
-    this.syQU,
-    this.syDR,
-    this.sySU,
-  });
   Map<String, Color?> toMap() {
-    return {
-      "SY-HA": syHA,
-      "SY-DY": syDY,
-      "SY-ID": syID,
-      "SY-RD": syRD,
-      "SY-HL": syHL,
-      "SY-RA": syRA,
-      "SY-LA": syLA,
-      "SY-HM": syHM,
-      "SY-HI": syHI,
-      "SY-TA": syTA,
-      "SY-DI": syDI,
-      "SY-QU": syQU,
-      "SY-DR": syDR,
-      "SY-SU": sySU,
+    return <String, Color?>{
+      'SY-HA': syHA,
+      'SY-DY': syDY,
+      'SY-ID': syID,
+      'SY-RD': syRD,
+      'SY-HL': syHL,
+      'SY-RA': syRA,
+      'SY-LA': syLA,
+      'SY-HM': syHM,
+      'SY-HI': syHI,
+      'SY-TA': syTA,
+      'SY-DI': syDI,
+      'SY-QU': syQU,
+      'SY-DR': syDR,
+      'SY-SU': sySU,
     };
   }
 
   static SMapSyriaColors fromMap(Map<String, Color?> map) {
     return SMapSyriaColors(
-      syHA: map["SY-HA"],
-      syDY: map["SY-DY"],
-      syID: map["SY-ID"],
-      syRD: map["SY-RD"],
-      syHL: map["SY-HL"],
-      syRA: map["SY-RA"],
-      syLA: map["SY-LA"],
-      syHM: map["SY-HM"],
-      syHI: map["SY-HI"],
-      syTA: map["SY-TA"],
-      syDI: map["SY-DI"],
-      syQU: map["SY-QU"],
-      syDR: map["SY-DR"],
-      sySU: map["SY-SU"],
+      syHA: map['SY-HA'],
+      syDY: map['SY-DY'],
+      syID: map['SY-ID'],
+      syRD: map['SY-RD'],
+      syHL: map['SY-HL'],
+      syRA: map['SY-RA'],
+      syLA: map['SY-LA'],
+      syHM: map['SY-HM'],
+      syHI: map['SY-HI'],
+      syTA: map['SY-TA'],
+      syDI: map['SY-DI'],
+      syQU: map['SY-QU'],
+      syDR: map['SY-DR'],
+      sySU: map['SY-SU'],
     );
   }
 }

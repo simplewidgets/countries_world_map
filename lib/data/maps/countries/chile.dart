@@ -1,6 +1,25 @@
 import 'package:flutter/material.dart';
 
 class SMapChileColors {
+  const SMapChileColors({
+    this.clAI,
+    this.clMA,
+    this.clTA,
+    this.clAN,
+    this.clAT,
+    this.clCO,
+    this.clRM,
+    this.path4156,
+    this.clAR,
+    this.clBI,
+    this.clNU,
+    this.clLI,
+    this.clLL,
+    this.clML,
+    this.clAP,
+    this.clLR,
+  });
+
   /// Aisén del General Carlos Ibáñez del Campo
   final Color? clAI;
 
@@ -48,63 +67,45 @@ class SMapChileColors {
 
   /// Los Ríos
   final Color? clLR;
-  SMapChileColors({
-    this.clAI,
-    this.clMA,
-    this.clTA,
-    this.clAN,
-    this.clAT,
-    this.clCO,
-    this.clRM,
-    this.path4156,
-    this.clAR,
-    this.clBI,
-    this.clNU,
-    this.clLI,
-    this.clLL,
-    this.clML,
-    this.clAP,
-    this.clLR,
-  });
   Map<String, Color?> toMap() {
-    return {
-      "CL-AI": clAI,
-      "CL-MA": clMA,
-      "CL-TA": clTA,
-      "CL-AN": clAN,
-      "CL-AT": clAT,
-      "CL-CO": clCO,
-      "CL-RM": clRM,
-      "path-4156": path4156,
-      "CL-AR": clAR,
-      "CL-BI": clBI,
-      "CL-NU": clNU,
-      "CL-LI": clLI,
-      "CL-LL": clLL,
-      "CL-ML": clML,
-      "CL-AP": clAP,
-      "CL-LR": clLR,
+    return <String, Color?>{
+      'CL-AI': clAI,
+      'CL-MA': clMA,
+      'CL-TA': clTA,
+      'CL-AN': clAN,
+      'CL-AT': clAT,
+      'CL-CO': clCO,
+      'CL-RM': clRM,
+      'path-4156': path4156,
+      'CL-AR': clAR,
+      'CL-BI': clBI,
+      'CL-NU': clNU,
+      'CL-LI': clLI,
+      'CL-LL': clLL,
+      'CL-ML': clML,
+      'CL-AP': clAP,
+      'CL-LR': clLR,
     };
   }
 
   static SMapChileColors fromMap(Map<String, Color?> map) {
     return SMapChileColors(
-      clAI: map["CL-AI"],
-      clMA: map["CL-MA"],
-      clTA: map["CL-TA"],
-      clAN: map["CL-AN"],
-      clAT: map["CL-AT"],
-      clCO: map["CL-CO"],
-      clRM: map["CL-RM"],
-      path4156: map["path-4156"],
-      clAR: map["CL-AR"],
-      clBI: map["CL-BI"],
-      clNU: map["CL-NU"],
-      clLI: map["CL-LI"],
-      clLL: map["CL-LL"],
-      clML: map["CL-ML"],
-      clAP: map["CL-AP"],
-      clLR: map["CL-LR"],
+      clAI: map['CL-AI'],
+      clMA: map['CL-MA'],
+      clTA: map['CL-TA'],
+      clAN: map['CL-AN'],
+      clAT: map['CL-AT'],
+      clCO: map['CL-CO'],
+      clRM: map['CL-RM'],
+      path4156: map['path-4156'],
+      clAR: map['CL-AR'],
+      clBI: map['CL-BI'],
+      clNU: map['CL-NU'],
+      clLI: map['CL-LI'],
+      clLL: map['CL-LL'],
+      clML: map['CL-ML'],
+      clAP: map['CL-AP'],
+      clLR: map['CL-LR'],
     );
   }
 }
