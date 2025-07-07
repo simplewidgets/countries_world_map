@@ -1,11 +1,10 @@
 class SimpleMapInstruction {
-  SimpleMapInstruction({
+  const SimpleMapInstruction({
     required this.uniqueID,
     required this.instructions,
     required this.name,
   });
 
-  // From Json
   factory SimpleMapInstruction.fromJson(Map<String, dynamic> json) {
     final List<String> paths = <String>[];
 
@@ -23,13 +22,13 @@ class SimpleMapInstruction {
   }
 
   /// uniqueID of the territory being drawn
-  String uniqueID;
+  final String uniqueID;
 
   /// Name of the territory being drawn
-  String name;
+  final String name;
 
   /// List of instructions to draw the territory
-  List<String> instructions;
+  final List<String> instructions;
 
   // To Json
   Map<String, dynamic> toJson() {

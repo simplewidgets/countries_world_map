@@ -5,6 +5,8 @@ import 'package:flutter/gestures.dart';
 import '../types/types.dart';
 
 class ShapeUtil {
+  const ShapeUtil._();
+
   static double distance(Offset p1, Offset p2) {
     return sqrt(pow(p2.dy - p1.dy, 2) + pow(p2.dx - p1.dx, 2));
   }
@@ -16,6 +18,8 @@ typedef GestureHoverEndCallback = void Function();
 typedef GestureCustomLongPressCallback = void Function(Offset localPosition);
 
 class TouchCanvasUtil {
+  const TouchCanvasUtil._();
+
   static Offset getPointFromGestureDetail(dynamic gestureDetail) {
     switch (gestureDetail.runtimeType) {
       case Offset:

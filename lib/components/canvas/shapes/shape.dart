@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import '../types/types.dart';
 
 class ShapeConstant {
+  const ShapeConstant._();
+
   static const double floatPrecision = 0.001;
   static const double infinity = 9999999;
 }
