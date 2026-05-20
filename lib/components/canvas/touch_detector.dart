@@ -1,5 +1,8 @@
 import 'dart:async';
+
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+
 import 'types/types.dart';
 
 ///[CanvasTouchDetector] widget detects the gestures on your [CustomPaint] widget.
@@ -7,19 +10,18 @@ import 'types/types.dart';
 /// Wrap your [CustomPaint] widget with [CanvasTouchDetector]
 /// The [builder] function passes the [BuildContext] and expects a [CustomPaint] object as its return value.
 class CanvasTouchDetector extends StatefulWidget {
-  final CustomTouchPaintBuilder builder;
-
   const CanvasTouchDetector({Key? key, required this.builder})
       : super(key: key);
+  final CustomTouchPaintBuilder builder;
 
   @override
-  _CanvasTouchDetectorState createState() => _CanvasTouchDetectorState();
+  State<CanvasTouchDetector> createState() => _CanvasTouchDetectorState();
 }
 
 class _CanvasTouchDetectorState extends State<CanvasTouchDetector> {
   final StreamController<Gesture> touchController =
-      StreamController.broadcast();
-  StreamSubscription? streamSubscription;
+      StreamController<Gesture>.broadcast();
+  StreamSubscription<void>? streamSubscription;
 
   Future<void> addStreamListener(Function(Gesture) callBack) async {
     await streamSubscription?.cancel();
@@ -28,21 +30,49 @@ class _CanvasTouchDetectorState extends State<CanvasTouchDetector> {
 
   @override
   Widget build(BuildContext context) {
-    return TouchDetectionController(touchController, addStreamListener,
+    return TouchDetectionController(
+      touchController,
+      addStreamListener,
+      child: MouseRegion(
+        opaque: false,
+        hitTestBehavior: HitTestBehavior.translucent,
+        onHover: (PointerHoverEvent event) {
+          touchController.add(
+            Gesture(GestureType.onHover, event.localPosition),
+          );
+        },
+        onExit: (PointerExitEvent event) {
+          touchController.add(const Gesture(GestureType.onHoverEnd, null));
+        },
         child: GestureDetector(
           behavior: HitTestBehavior.translucent,
           child: Builder(
-            builder: (context) {
-              return widget.builder(context);
-            },
+            builder: (BuildContext context) => widget.builder(context),
           ),
-          // onTapDown: (tapDetail) {
-          //   touchController.add(Gesture(GestureType.onTapDown, tapDetail));
-          // },
-          onTapUp: (tapDetail) {
+          onTapDown: (TapDownDetails tapDetail) {
+            touchController.add(Gesture(GestureType.onTapDown, tapDetail));
+          },
+          onTapUp: (TapUpDetails tapDetail) {
             touchController.add(Gesture(GestureType.onTapUp, tapDetail));
           },
-        ));
+          onLongPressStart: (LongPressStartDetails tapDetail) {
+            touchController
+                .add(Gesture(GestureType.onLongPress, tapDetail.localPosition));
+          },
+          onLongPressEnd: (LongPressEndDetails tapDetail) {
+            touchController.add(Gesture(GestureType.onLongPressEnd, tapDetail));
+          },
+          onLongPressCancel: () {
+            touchController
+                .add(const Gesture(GestureType.onLongPressCancel, null));
+          },
+          onLongPressMoveUpdate: (LongPressMoveUpdateDetails tapDetail) {
+            touchController
+                .add(Gesture(GestureType.onLongPress, tapDetail.localPosition));
+          },
+        ),
+      ),
+    );
   }
 
   @override
@@ -53,6 +83,13 @@ class _CanvasTouchDetectorState extends State<CanvasTouchDetector> {
 }
 
 class TouchDetectionController extends InheritedWidget {
+  const TouchDetectionController(
+    this._controller,
+    this.addListener, {
+    Key? key,
+    required Widget child,
+  }) : super(key: key, child: child);
+
   final StreamController<Gesture> _controller;
   final Function addListener;
 
@@ -60,15 +97,9 @@ class TouchDetectionController extends InheritedWidget {
 
   StreamController<Gesture> get controller => _controller;
 
-  const TouchDetectionController(this._controller, this.addListener,
-      {Key? key, required Widget child})
-      : super(key: key, child: child);
-
   static TouchDetectionController? of(BuildContext context) =>
       context.dependOnInheritedWidgetOfExactType<TouchDetectionController>();
 
   @override
-  bool updateShouldNotify(InheritedWidget oldWidget) {
-    return false;
-  }
+  bool updateShouldNotify(InheritedWidget oldWidget) => false;
 }

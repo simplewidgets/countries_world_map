@@ -1,35 +1,22 @@
 import 'package:flutter/material.dart';
-import 'dart:convert';
 
+import '../components/canvas/shapes/shape.dart';
 import '../components/canvas/touch_detector.dart';
-
+import '../countries_world_map.dart';
+import 'helpers/interactive_map_item.dart';
+import 'helpers/map_instructions.dart';
 import 'painter.dart';
 
 /// This is the main widget that will paint the map based on the given insturctions (json).
-class SimpleMap extends StatelessWidget {
-  final String instructions;
-
-  final CountryBorder? countryBorder;
-
-  /// Default color for all countries. If not provided the default Color will be grey.
-  final Color? defaultColor;
-
-  /// This is basically a list of countries and colors to apply different colors to specific countries.
-  final Map? colors;
-
-  /// Triggered when a country is tapped.
-  /// The first parameter is the isoCode of the country that was tapped.
-  /// The second parameter is the TapUpDetails of the tap.
-  final void Function(String id, String name, TapUpDetails tapDetails)?
-      callback;
-
-  /// This is the BoxFit that will be used to fit the map in the available space.
-  /// If not provided the default BoxFit will be BoxFit.contain.
-  final BoxFit? fit;
-
+class SimpleMap extends StatefulWidget {
   const SimpleMap({
     required this.instructions,
+    this.onHover,
+    this.markers,
     this.defaultColor,
+    this.splashColor,
+    this.hoverColor,
+    this.splashDuration,
     this.colors,
     this.callback,
     this.fit,
@@ -37,44 +24,230 @@ class SimpleMap extends StatelessWidget {
     Key? key,
   }) : super(key: key);
 
+  final String instructions;
+  final CountryBorder? countryBorder;
+  final Color? defaultColor;
+  final Color? splashColor;
+  final Color? hoverColor;
+  final Duration? splashDuration;
+  final Map<String, Color?>? colors;
+  final List<SimpleMapMarker>? markers;
+  final void Function(String id, String name, bool isHovering)? onHover;
+  final void Function(String id, String name, TouchDetails tapDetails)?
+      callback;
+  final BoxFit? fit;
+
+  @override
+  State<SimpleMap> createState() => _SimpleMapState();
+}
+
+class _SimpleMapState extends State<SimpleMap> with TickerProviderStateMixin {
+  late AnimationController _controller;
+  late Animation<double> _radiusAnimation;
+  Offset? rippleCenter;
+  String? rippleTargetId;
+  String? hoverTargetId;
+  List<Shape> lastTouchedShapes = <Shape>[];
+
+  void saveTouchedShapes(List<Shape> shapes) {
+    lastTouchedShapes = shapes;
+    if (mounted) setState(() {});
+  }
+
+  @override
+  void initState() {
+    super.initState();
+    _controller = AnimationController(
+      duration: widget.splashDuration ?? const Duration(milliseconds: 375),
+      vsync: this,
+    );
+    _radiusAnimation = Tween<double>(begin: 0, end: 1).animate(_controller)
+      ..addListener(() => setState(() {}));
+  }
+
+  void _startRipple(Offset position, String id) {
+    _controller.reset();
+    _controller.forward();
+
+    rippleCenter = position;
+    rippleTargetId = id;
+  }
+
+  void _stopRipple(String id, {bool force = false}) {
+    // An other ripple is ongoing
+    if (!force && _controller.isAnimating) return;
+    _controller.reset();
+
+    rippleTargetId = null;
+    hoverTargetId = null;
+    rippleCenter = null;
+    lastTouchedShapes = <Shape>[];
+    if (mounted) setState(() {});
+  }
+
+  @override
+  void dispose() {
+    _controller.dispose();
+    super.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
-    Map map = jsonDecode(instructions);
+    final MapAttributes attributes = MapAttributes(widget.instructions);
+    final List<SimpleMapInstruction> countryPathList = <SimpleMapInstruction>[];
 
-    double width = double.parse(map['w'].toString());
-    double height = double.parse(map['h'].toString());
-    List<Map<String, dynamic>> instruction =
-        List<Map<String, dynamic>>.from(map['i']);
+    if (widget.onHover != null) {
+      for (final Map<String, dynamic> path in attributes.drawingInstructions) {
+        countryPathList.add(SimpleMapInstruction.fromJson(path));
+      }
+    }
 
     return FittedBox(
-      fit: fit ?? BoxFit.contain,
-      child: RepaintBoundary(
-          child: CanvasTouchDetector(
-              builder: (context) => CustomPaint(
+      fit: widget.fit ?? BoxFit.contain,
+      child: SizedBox(
+        width: attributes.mapWidth,
+        height: attributes.mapHeight,
+        child: Stack(
+          children: <Widget>[
+            if (widget.onHover == null)
+              RepaintBoundary(
+                child: CanvasTouchDetector(
+                  builder: (BuildContext context) => CustomPaint(
                     isComplex: true,
-                    size: Size(width, height),
+                    size: Size(attributes.mapWidth, attributes.mapHeight),
                     painter: SimpleMapPainter(
-                        context: context,
-                        instructions: instruction,
-                        callback: (id, name, tapdetails) {
-                          if (callback != null) {
-                            callback!(id, name, tapdetails);
-                          }
-                        },
-                        countryBorder: countryBorder,
-                        colors: colors,
-                        defaultColor: defaultColor ?? Colors.grey),
-                  ))),
+                      context: context,
+                      drawingInstructions: attributes.drawingInstructions,
+                      onHover: (String id, Offset localPosition) {
+                        hoverTargetId = id;
+                        if (mounted) setState(() {});
+                      },
+                      onHoverEnd: (String id) {
+                        hoverTargetId = null;
+                        if (mounted) setState(() {});
+                      },
+                      onLongPressCancel: (String id) {
+                        _stopRipple(id, force: true);
+                      },
+                      onLongPressEnd: (
+                        String id,
+                        String name,
+                        LongPressEndDetails details,
+                      ) {
+                        if (widget.callback != null && id == rippleTargetId) {
+                          widget.callback!(
+                            id,
+                            name,
+                            TouchDetails(
+                              globalPosition: details.globalPosition,
+                              localPosition: details.localPosition,
+                            ),
+                          );
+                        }
+                        _stopRipple(id);
+                      },
+                      onTapDown: (String id, TapDownDetails details) {
+                        _startRipple(details.localPosition, id);
+                      },
+                      onTapUp: (String id, String name, TapUpDetails details) {
+                        if (widget.callback != null && id == rippleTargetId) {
+                          widget.callback!(
+                            id,
+                            name,
+                            TouchDetails(
+                              globalPosition: details.globalPosition,
+                              localPosition: details.localPosition,
+                            ),
+                          );
+                        }
+                        _stopRipple(id, force: true);
+                      },
+                      rippleCenter: rippleCenter,
+                      rippleRadiusPercentage: _radiusAnimation.value,
+                      countryBorder: widget.countryBorder,
+                      rippleTargetId: rippleTargetId,
+                      hoverTargetId: hoverTargetId,
+                      lastTouchedShapes: lastTouchedShapes,
+                      saveTouchedShapes: saveTouchedShapes,
+                      colors: widget.colors,
+                      defaultColor: widget.defaultColor ?? Colors.grey,
+                      splashColor: widget.splashColor,
+                      hoverColor: widget.hoverColor,
+                    ),
+                  ),
+                ),
+              ),
+            if (widget.onHover != null)
+              for (int i = 0; i < countryPathList.length; i++)
+                InteractiveMapItem(
+                  key: Key('${countryPathList[i].uniqueID}-$i'),
+                  callback: widget.callback,
+                  onHover: widget.onHover,
+                  color: widget.colors?[countryPathList[i].uniqueID],
+                  defaultColor: widget.defaultColor,
+                  countryPathList: countryPathList,
+                  i: i,
+                ),
+            for (final SimpleMapMarker mark
+                in widget.markers ?? <SimpleMapMarker>[])
+              Builder(
+                builder: (BuildContext context) {
+                  final Size position = attributes.latLongToPixels(
+                    mark.latLong,
+                  );
+                  return Positioned(
+                    left: position.width - (mark.markerSize.width / 2),
+                    top: position.height - (mark.markerSize.height / 2),
+                    child: SizedBox(
+                      width: mark.markerSize.width,
+                      height: mark.markerSize.height,
+                      child: mark.marker,
+                    ),
+                  );
+                },
+              ),
+          ],
+        ),
+      ),
     );
   }
 }
 
 class CountryBorder {
+  const CountryBorder({required this.color, this.width = 1});
+
   final Color color;
   final double width;
 
-  const CountryBorder({
-    required this.color,
-    this.width = 1,
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      other is CountryBorder &&
+          runtimeType == other.runtimeType &&
+          color == other.color &&
+          width == other.width;
+
+  @override
+  int get hashCode => Object.hash(color, width);
+}
+
+class SimpleMapMarker {
+  const SimpleMapMarker({
+    required this.markerSize,
+    required this.latLong,
+    required this.marker,
   });
+
+  final Size markerSize;
+  final LatLong latLong;
+  final Widget marker;
+}
+
+class TouchDetails {
+  const TouchDetails({this.globalPosition = Offset.zero, Offset? localPosition})
+      : localPosition = localPosition ?? globalPosition;
+
+  final Offset globalPosition;
+
+  final Offset localPosition;
 }

@@ -1,108 +1,84 @@
 import 'dart:math';
+
+import 'package:flutter/gestures.dart';
+
 import '../types/types.dart';
-import 'package:flutter/material.dart';
 
 class ShapeUtil {
+  const ShapeUtil._();
+
   static double distance(Offset p1, Offset p2) {
     return sqrt(pow(p2.dy - p1.dy, 2) + pow(p2.dx - p1.dx, 2));
   }
 }
 
 typedef GestureCallbackFunction = void Function();
+typedef GestureHoverCallback = void Function(Offset localPosition);
+typedef GestureHoverEndCallback = void Function();
+typedef GestureCustomLongPressCallback = void Function(Offset localPosition);
 
 class TouchCanvasUtil {
+  const TouchCanvasUtil._();
+
   static Offset getPointFromGestureDetail(dynamic gestureDetail) {
     switch (gestureDetail.runtimeType) {
-      // case TapDownDetails:
-      //   return (gestureDetail as TapDownDetails).localPosition;
+      case Offset:
+        return gestureDetail as Offset;
+      case TapDownDetails:
+        return (gestureDetail as TapDownDetails).localPosition;
       case TapUpDetails:
         return (gestureDetail as TapUpDetails).localPosition;
-      // case DragDownDetails:
-      //   return (gestureDetail as DragDownDetails).localPosition;
-      // case DragStartDetails:
-      //   return (gestureDetail as DragStartDetails).localPosition;
-      // case DragUpdateDetails:
-      //   return (gestureDetail as DragUpdateDetails).localPosition;
-      // case LongPressStartDetails:
-      //   return (gestureDetail as LongPressStartDetails).localPosition;
-      // case LongPressEndDetails:
-      //   return (gestureDetail as LongPressEndDetails).localPosition;
-      // case LongPressMoveUpdateDetails:
-      //   return (gestureDetail as LongPressMoveUpdateDetails).localPosition;
-      // case ScaleStartDetails:
-      //   return (gestureDetail as ScaleStartDetails).localFocalPoint;
-      // case ScaleUpdateDetails:
-      //   return (gestureDetail as ScaleUpdateDetails).localFocalPoint;
-      // case ForcePressDetails:
-      //   return (gestureDetail as ForcePressDetails).localPosition;
+      case LongPressStartDetails:
+        return (gestureDetail as LongPressStartDetails).localPosition;
+      case LongPressMoveUpdateDetails:
+        return (gestureDetail as LongPressMoveUpdateDetails).localPosition;
+      case LongPressEndDetails:
+        return (gestureDetail as LongPressEndDetails).localPosition;
       default:
         throw Exception(
-            "gestureDetail.runTimeType = ${gestureDetail.runtimeType} is not recognized ! ");
+          'gestureDetail.runTimeType = ${gestureDetail.runtimeType} is not recognized ! ',
+        );
     }
   }
 
   static Map<GestureType, Function> getGestureCallbackMap({
-    // required GestureTapDownCallback? onTapDown,
+    required GestureTapDownCallback? onTapDown,
     required GestureTapUpCallback? onTapUp,
-    // required GestureLongPressStartCallback? onLongPressStart,
-    // required GestureLongPressEndCallback? onLongPressEnd,
-    // required GestureLongPressMoveUpdateCallback? onLongPressMoveUpdate,
-    // required GestureForcePressStartCallback? onForcePressStart,
-    // required GestureForcePressEndCallback? onForcePressEnd,
-    // required GestureForcePressPeakCallback? onForcePressPeak,
-    // required GestureForcePressUpdateCallback? onForcePressUpdate,
-    // required GestureDragStartCallback? onPanStart,
-    // required GestureDragUpdateCallback? onPanUpdate,
-    // required GestureDragDownCallback? onPanDown,
-    // required GestureTapDownCallback? onSecondaryTapDown,
-    // required GestureTapUpCallback? onSecondaryTapUp,
+    required GestureCustomLongPressCallback? onLongPress,
+    required GestureLongPressEndCallback? onLongPressEnd,
+    required GestureLongPressCancelCallback? onLongPressCancel,
+    required GestureHoverCallback? onHover,
+    required GestureHoverEndCallback? onHoverEnd,
   }) {
-    var map = <GestureType, Function>{};
+    final Map<GestureType, Function> map = <GestureType, Function>{};
 
-    // if (onTapDown != null) {
-    //   map.putIfAbsent(GestureType.onTapDown, () => onTapDown);
-    // }
-    if (onTapUp != null) map.putIfAbsent(GestureType.onTapUp, () => onTapUp);
+    if (onTapDown != null) {
+      map.putIfAbsent(GestureType.onTapDown, () => onTapDown);
+    }
 
-    // if (onLongPressStart != null) {
-    //   map.putIfAbsent(GestureType.onLongPressStart, () => onLongPressStart);
-    // }
-    // if (onLongPressMoveUpdate != null) {
-    //   map.putIfAbsent(GestureType.onLongPressMoveUpdate, () => onLongPressMoveUpdate);
-    // }
-    // if (onLongPressEnd != null) {
-    //   map.putIfAbsent(GestureType.onLongPressEnd, () => onLongPressEnd);
-    // }
+    if (onTapUp != null) {
+      map.putIfAbsent(GestureType.onTapUp, () => onTapUp);
+    }
 
-    // if (onForcePressStart != null) {
-    //   map.putIfAbsent(GestureType.onForcePressStart, () => onForcePressStart);
-    // }
-    // if (onForcePressEnd != null) {
-    //   map.putIfAbsent(GestureType.onForcePressEnd, () => onForcePressEnd);
-    // }
-    // if (onForcePressUpdate != null) {
-    //   map.putIfAbsent(GestureType.onForcePressUpdate, () => onForcePressUpdate);
-    // }
-    // if (onForcePressPeak != null) {
-    //   map.putIfAbsent(GestureType.onForcePressPeak, () => onForcePressPeak);
-    // }
+    if (onLongPress != null) {
+      map.putIfAbsent(GestureType.onLongPress, () => onLongPress);
+    }
 
-    // if (onPanStart != null) {
-    //   map.putIfAbsent(GestureType.onPanStart, () => onPanStart);
-    // }
-    // if (onPanUpdate != null) {
-    //   map.putIfAbsent(GestureType.onPanUpdate, () => onPanUpdate);
-    // }
-    // if (onPanDown != null) {
-    //   map.putIfAbsent(GestureType.onPanDown, () => onPanDown);
-    // }
+    if (onLongPressEnd != null) {
+      map.putIfAbsent(GestureType.onLongPressEnd, () => onLongPressEnd);
+    }
 
-    // if (onSecondaryTapDown != null) {
-    //   map.putIfAbsent(GestureType.onSecondaryTapDown, () => onSecondaryTapDown);
-    // }
-    // if (onSecondaryTapUp != null) {
-    //   map.putIfAbsent(GestureType.onSecondaryTapUp, () => onSecondaryTapUp);
-    // }
+    if (onLongPressCancel != null) {
+      map.putIfAbsent(GestureType.onLongPressCancel, () => onLongPressCancel);
+    }
+
+    if (onHover != null) {
+      map.putIfAbsent(GestureType.onHover, () => onHover);
+    }
+
+    if (onHoverEnd != null) {
+      map.putIfAbsent(GestureType.onHoverEnd, () => onHoverEnd);
+    }
 
     return map;
   }
